@@ -1,0 +1,73 @@
+<Type Name="ITransformerConfigurationControl" FullName="System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl">
+  <TypeSignature Language="C#" Value="public interface ITransformerConfigurationControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransformerConfigurationControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o contrato que implementa um controle para atuar como um controle de configuração para um transformador em uma conexão de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de configuração pode ser exibido quando um transformador requer que um usuário para configurá-lo. O controle de configuração fornece uma interface de usuário (UI) que permite que o usuário selecione quais valores serão transformados. Ela é processada em uma zona de conexões. O <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer.CreateConfigurationControl%2A?displayProperty=nameWithType> método retorna um controle de configuração.  
+  
+ Você pode substituir o <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer.CreateConfigurationControl%2A> método quando o transformador requer uma interface do usuário personalizada. O controle de configuração deve implementar o <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl> interface, que inclui o <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Cancelled> e <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Succeeded> eventos. Esses eventos ocorrem quando um controle de transformador não foi configurado ou configurado com êxito, respectivamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancelled">
+      <MemberSignature Language="C#" Value="public event EventHandler Cancelled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Cancelled" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Cancelled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a configuração de transformador não foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle de Web Parts que implementa <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl> gera esse evento quando uma configuração de transformador não for concluída, porque o usuário cancelou a configuração ou porque não foi possível executar a configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public event EventHandler Succeeded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Succeeded" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Succeeded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a configuração de transformador for concluída com êxito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle de Web Parts que implementa <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl> gera esse evento quando uma configuração de transformador for concluída com êxito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

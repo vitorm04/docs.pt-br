@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition.Hosting">
+  <Docs>
+    <summary>O namespace <see cref="N:System.ComponentModel.Composition.Hosting" /> fornece tipos de MEF (Managed Extensibility Framework), que são úteis para desenvolvedores de aplicativos extensíveis ou para hosts.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

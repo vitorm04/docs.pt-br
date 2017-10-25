@@ -1,0 +1,232 @@
+<Type Name="BufferedGraphics" FullName="System.Drawing.BufferedGraphics">
+  <TypeSignature Language="C#" Value="public sealed class BufferedGraphics : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BufferedGraphics extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.BufferedGraphics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um buffer de gráficos para buffer duplo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.BufferedGraphics> classe permite que você implemente o buffer duplo personalizado para seus elementos gráficos. Ele fornece um wrapper para um buffer de gráficos, junto com os métodos que você pode usar para gravar no buffer e processar seu conteúdo para um dispositivo de saída.  
+  
+ Elementos gráficos que usam o buffer duplo podem reduzir ou eliminar a cintilação causado redesenhando uma superfície de exibição. Quando você usa o buffer duplo, gráfico atualizado é desenhado primeiro em um buffer na memória e o conteúdo desse buffer rapidamente, em seguida, é gravado para alguns ou todos da superfície exibida. Essa substituição relativamente breve dos gráficos exibidos normalmente reduz ou elimina a cintilação que às vezes acontece quando os gráficos são atualizados.  
+  
+> [!NOTE]
+>  A maneira mais simples de usar buffer duplo é definir o <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> controlar o sinalizador de estilo em um controle usando o <xref:System.Windows.Forms.Control.SetStyle%2A> método. Definindo o <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> sinalizador para um controle redireciona toda a pintura para o controle por meio de um buffer de gráfico padrão, sem a necessidade de qualquer código adicional. Este sinalizador é definido como `true` por padrão.  
+  
+ O <xref:System.Drawing.BufferedGraphics> classe não tem construtor público e deve ser criada pelo <xref:System.Drawing.BufferedGraphicsContext> para um domínio de aplicativo usando sua <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método. Você pode recuperar o <xref:System.Drawing.BufferedGraphicsContext> para o domínio de aplicativo atual de estático <xref:System.Drawing.BufferedGraphicsManager.Current%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Drawing.BufferedGraphics.Graphics%2A> propriedade pode ser usada para desenhar o buffer de gráficos. Esta propriedade fornece acesso para o <xref:System.Drawing.Graphics> que leva para o buffer de gráficos alocado para este objeto <xref:System.Drawing.BufferedGraphics> objeto.  
+  
+ O <xref:System.Drawing.BufferedGraphics.Render%2A> método com desenhos sem argumentos buffer o conteúdo dos elementos gráficos à superfície de especificado quando o buffer alocado. Outras sobrecargas do <xref:System.Drawing.BufferedGraphics.Render%2A> método permitem que você especifique um <xref:System.Drawing.Graphics> objeto ou uma <xref:System.IntPtr> objeto que aponta para um contexto de dispositivo para o qual desenhar o conteúdo do buffer de gráficos.  
+  
+ Para obter mais informações sobre o desenho de elementos gráficos em buffer duplo, consulte [gráficos em buffer duplo](~/docs/framework/winforms/advanced/double-buffered-graphics.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Drawing.BufferedGraphics> objeto ao desenhar gráficos usando vários tipos de implementações de buffer. Como alternativa clicando no formulário inicia e interrompe um temporizador que faz com que desenha atualizações. As atualizações de desenho permitem que você observar o efeito de buffer duplo. Clicando duas vezes os ciclos de formulário por meio de modos de desenho a seguir:  
+  
+-   Desenhando diretamente para o <xref:System.Windows.Forms.Control.Handle%2A> para um <xref:System.Windows.Forms.Form>.  
+  
+-   Desenhando, substituindo o <xref:System.Windows.Forms.Form.OnPaint%2A> usando o método de <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> estilo de controle.  
+  
+-   Desenhando, substituindo o <xref:System.Windows.Forms.Form.OnPaint%2A> método para o método de formulário sem usar o <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> estilo de controle.  
+  
+ Em cada modo, o texto é desenhado que identifica o modo atual e descreve o comportamento que ocorre quando cada botão do mouse é pressionado.  
+  
+ [!code-cpp[BufferedGraphicsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferedGraphicsExample/CPP/bufferingtest.cpp#1)]
+ [!code-csharp[BufferedGraphicsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferedGraphicsExample/CS/bufferingtest.cs#1)]
+ [!code-vb[BufferedGraphicsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferedGraphicsExample/VB/bufferingtest.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>A classe <see cref="T:System.Drawing.BufferedGraphics" /> não é segura para threads. Ao acessar um buffer de gráficos de threads separados, é importante usar um mecanismo de controle de acesso de thread para evitar conflitos.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphics.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo objeto <see cref="T:System.Drawing.BufferedGraphics" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Drawing.BufferedGraphics.Dispose%2A> quando tiver terminado de usar o <xref:System.Drawing.BufferedGraphics> objeto. O <xref:System.Drawing.BufferedGraphics.Dispose%2A> método deixa o <xref:System.Drawing.BufferedGraphics> objeto em um estado inutilizável. Depois de chamar <xref:System.Drawing.BufferedGraphics.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Drawing.BufferedGraphics> do objeto para o coletor de lixo possa recuperar a memória que o <xref:System.Drawing.BufferedGraphics> objeto estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Drawing.BufferedGraphics.Dispose%2A> antes de liberar sua última referência para o <xref:System.Drawing.BufferedGraphics> objeto. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Drawing.BufferedGraphics> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~BufferedGraphics ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphics.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.BufferedGraphics.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Drawing.Graphics" /> objeto saídas para o buffer de gráficos.</summary>
+        <value>Um <see cref="T:System.Drawing.Graphics" /> objeto saídas para o buffer de gráficos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece uma <xref:System.Drawing.Graphics> que leva para o buffer de gráficos alocado para este objeto <xref:System.Drawing.BufferedGraphics> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public void Render ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Render() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphics.Render" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava o conteúdo do buffer de gráfico padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o conteúdo do buffer de gráfico para o dispositivo especificado chamando o <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método o <xref:System.Drawing.BufferedGraphicsContext> usadas para criar este <xref:System.Drawing.BufferedGraphics> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public void Render (System.Drawing.Graphics target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Render(class System.Drawing.Graphics target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphics.Render(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="target">Um objeto <see cref="T:System.Drawing.Graphics" /> no qual gravar o conteúdo do buffer gráfico.</param>
+        <summary>Grava o conteúdo do buffer gráfico no objeto <see cref="T:System.Drawing.Graphics" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o conteúdo do buffer de gráfico especificado <xref:System.Drawing.Graphics> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a renderizar o conteúdo do buffer de gráficos para determinado <xref:System.Drawing.Graphics> objeto. Esse código é parte de um exemplo maior fornecido para a <xref:System.Drawing.BufferedGraphics> classe.  
+  
+ [!code-cpp[BufferingExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#5)]
+ [!code-csharp[BufferingExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#5)]
+ [!code-vb[BufferingExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public void Render (IntPtr targetDC);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Render(native int targetDC) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphics.Render(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDC" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="targetDC">Um <see cref="T:System.IntPtr" /> que aponta para o contexto de dispositivo no qual gravar o conteúdo do buffer de gráficos.</param>
+        <summary>Grava o conteúdo do buffer de gráficos para o contexto de dispositivo associado especificado <see cref="T:System.IntPtr" /> tratar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o conteúdo do buffer de gráfico para o contexto de dispositivo associado especificado <xref:System.IntPtr> tratar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como renderizar o conteúdo do buffer de gráficos `grafx` em um contexto de dispositivo especificado. Esse código é parte de um exemplo maior fornecido para a <xref:System.Drawing.BufferedGraphics> classe.  
+  
+ [!code-cpp[BufferingExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#6)]
+ [!code-csharp[BufferingExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#6)]
+ [!code-vb[BufferingExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração de relacionados: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

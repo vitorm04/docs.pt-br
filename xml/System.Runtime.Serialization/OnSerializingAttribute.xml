@@ -1,0 +1,93 @@
+<Type Name="OnSerializingAttribute" FullName="System.Runtime.Serialization.OnSerializingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OnSerializingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OnSerializingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.OnSerializingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Quando aplicado a um método, especifica que o método é chamado durante a serialização de um objeto em um grafo de objeto. A ordem de serialização em relação a outros objetos no gráfico é não determinística.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.Serialization.OnSerializingAttribute> para manipular o objeto antes da ocorrência de serialização.  
+  
+ Para usar o <xref:System.Runtime.Serialization.OnSerializingAttribute>, o método deve conter um <xref:System.Runtime.Serialization.StreamingContext> parâmetro. O atributo marcar o método a ser chamado pela infraestrutura de serialização e o <xref:System.Runtime.Serialization.StreamingContext> fornece dados adicionais sobre o tipo de serialização ocorrendo.  O uso é mostrado no código a seguir:  
+  
+ [!code-csharp[System.Runtime.Serialization.OnSerialization#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/CS/OnSerializationOnDeserializationExample.cs#2)]
+ [!code-vb[System.Runtime.Serialization.OnSerialization#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/VB/OnSerializationOnDeserializationExample.vb#2)]  
+  
+> [!NOTE]
+>  No seu código, você pode usar a palavra `OnSerializing` em vez do mais <xref:System.Runtime.Serialization.OnSerializingAttribute>.  
+  
+ Ao usar a serialização binária, o processo de serialização binária omite a chamada para o `onSerializing` método quando os objetos serializados são iguais. Portanto, ao usar o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> tipo com o `equals` método (ou `Object.GetHashCode`), por exemplo, o resultado pode ser um comportamento indefinido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a <xref:System.Runtime.Serialization.OnDeserializedAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, <xref:System.Runtime.Serialization.OnSerializedAttribute>, e <xref:System.Runtime.Serialization.OnDeserializingAttribute> métodos em uma classe de atributos.  
+  
+ [!code-csharp[System.Runtime.Serialization.OnSerialization#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/CS/OnSerializationOnDeserializationExample.cs#1)]
+ [!code-vb[System.Runtime.Serialization.OnSerialization#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/VB/OnSerializationOnDeserializationExample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OnSerializingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.OnSerializingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.OnSerializingAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

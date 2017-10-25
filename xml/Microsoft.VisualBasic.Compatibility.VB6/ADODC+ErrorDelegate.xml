@@ -1,0 +1,49 @@
+<Type Name="ADODC+ErrorDelegate" FullName="Microsoft.VisualBasic.Compatibility.VB6.ADODC+ErrorDelegate">
+  <TypeSignature Language="C#" Value="public delegate void ADODC.ErrorDelegate(int errorNumber, ref string description, int scode, string source, string helpFile, int helpContext, ref bool cancelDisplay);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ADODC/ErrorDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.ErrorDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="errorNumber" Type="System.Int32" />
+    <Parameter Name="description" Type="System.String&amp;" RefType="ref" />
+    <Parameter Name="scode" Type="System.Int32" />
+    <Parameter Name="source" Type="System.String" />
+    <Parameter Name="helpFile" Type="System.String" />
+    <Parameter Name="helpContext" Type="System.Int32" />
+    <Parameter Name="cancelDisplay" Type="System.Boolean&amp;" RefType="ref" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="errorNumber">Um <see langword="Integer" /> que representa o número do erro.</param>
+    <param name="description">Um <see langword="String" /> que contém a mensagem de erro.</param>
+    <param name="scode">Um <see langword="Integer" /> que representa a origem do erro.</param>
+    <param name="source">Um <see langword="String" /> que representa o nome de origem.</param>
+    <param name="helpFile">Um <see langword="String" /> que representa o arquivo de ajuda para o erro.</param>
+    <param name="helpContext">Um <see langword="Integer" /> que representa a ID do contexto para um tópico da Ajuda.</param>
+    <param name="cancelDisplay">Um <see langword="Boolean" /> que determina se o usuário pode cancelar a caixa de diálogo de erro.</param>
+    <summary>Representa o método que tratará um <see langword="Error" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

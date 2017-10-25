@@ -1,0 +1,395 @@
+<Type Name="XamlTypeInvoker" FullName="System.Xaml.Schema.XamlTypeInvoker">
+  <TypeSignature Language="C#" Value="public class XamlTypeInvoker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlTypeInvoker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.Schema.XamlTypeInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um ponto de extensão que pode construir instâncias de um tipo XAML por meio de técnicas diferentes de reflexão e construtores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade de <xref:System.Xaml.Schema.XamlTypeInvoker> é habilitar um trabalho que não depende de como totalmente os recursos CLR como atributos CLR, informações de reflexão por meio de tempo de execução de um sistema de tipo XAML extensível e esquemas <xref:System.Type> e <xref:System.Reflection.MemberInfo>, e assim por diante. As subclasses de <xref:System.Xaml.Schema.XamlTypeInvoker> são usados como parâmetros de entrada para os construtores alternativos de classes de esquema XAML como <xref:System.Xaml.XamlType>. Você subclasse <xref:System.Xaml.XamlType> e passar o <xref:System.Xaml.Schema.XamlTypeInvoker> por meio do construtor base. Junto com a definição de um <xref:System.Xaml.Schema.XamlTypeInvoker> para o construtor, você também deve fornecer substituições para pelo menos alguns do `Lookup` métodos de <xref:System.Xaml.XamlType>.  
+  
+ <xref:System.Xaml.Schema.XamlTypeInvoker>tem uma implementação padrão. A implementação padrão segue um modelo semelhante para a implementação padrão de tipos de esquema XAML <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>: o sistema de tipos CLR é usado para instanciação, valores e pesquisas, incluindo o uso de atributos CLR, <xref:System.Type> e <xref:System.Reflection.MemberInfo>, e assim por diante.  
+  
+ <xref:System.Xaml.Schema.XamlTypeInvoker>fornece métodos para instanciação básica (<xref:System.Xaml.Schema.XamlTypeInvoker.CreateInstance%2A>) e métodos que são relevantes para os tipos de onde o <xref:System.Xaml.XamlType> representa uma coleção, um dicionário ou uma matriz (<xref:System.Xaml.Schema.XamlTypeInvoker.AddToCollection%2A>; <xref:System.Xaml.Schema.XamlTypeInvoker.AddToDictionary%2A>; <xref:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod%2A>; <xref:System.Xaml.Schema.XamlTypeInvoker.GetEnumeratorMethod%2A>; <xref:System.Xaml.Schema.XamlTypeInvoker.GetItems%2A>).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlTypeInvoker ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão está vazia.  
+  
+ Este construtor é chamado internamente para fornecer um valor para <xref:System.Xaml.Schema.XamlTypeInvoker.UnknownInvoker%2A>. Para uma <xref:System.Xaml.Schema.XamlTypeInvoker> subclasse, espera-se que você use o <xref:System.Xaml.Schema.XamlTypeInvoker.%23ctor%28System.Xaml.XamlType%29> assinatura para a construção ou fornecer uma substituição que chama <xref:System.Xaml.Schema.XamlTypeInvoker.%23ctor%28System.Xaml.XamlType%29> como base. Fornecendo o <xref:System.Xaml.XamlType> implementa uma padrão padrão onde <xref:System.Xaml.Schema.XamlTypeInvoker> é imutável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlTypeInvoker (System.Xaml.XamlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.#ctor(System.Xaml.XamlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Xaml.XamlType" /> valor para o tipo específico de XAML relevante a este <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> classe, com base em um fornecido <see cref="T:System.Xaml.XamlType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado internamente com base no <xref:System.Xaml.XamlType> onde o <xref:System.Xaml.Schema.XamlTypeInvoker> é usado para a construção. O `type` fornecidos aqui são relevantes para as chamadas para todos os outros método <xref:System.Xaml.Schema.XamlTypeInvoker>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToCollection">
+      <MemberSignature Language="C#" Value="public virtual void AddToCollection (object instance, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToCollection(object instance, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.AddToCollection(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Uma instância do tipo especificado pelo <see cref="T:System.Xaml.XamlType" /> usado para construir esse <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</param>
+        <param name="item">O item a ser adicionado.</param>
+        <summary>Adiciona o item fornecido a uma instância do tipo que é relevante para esse <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você só deve chamar esse método em um <xref:System.Xaml.XamlType> que representa uma coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Chamado esse método em um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> que se baseia no desconhecido <see cref="T:System.Xaml.XamlType" />.  
+  
+ **- ou -**  
+  
+ Chamado esse método em um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> onde o tipo relevante não é uma coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xaml.XamlSchemaException">
+          <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" />para este <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> retorna <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>A implementação base inclui uma chamada para o auxiliar interno <c>ThrowIfUnknown</c>. Sempre gera este auxiliar para casos em que um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> baseia desconhecido <see cref="T:System.Xaml.XamlType" />, que inclui casos onde o <see cref="P:System.Xaml.XamlType.UnderlyingType" /> do <see cref="T:System.Xaml.XamlType" /> é <see langword="null" />.  
+  
+ Internamente, as chamadas de implementação de base <see cref="P:System.Xaml.XamlType.IsCollection" />e gera se o resultado for <see langword="false" />.  
+  
+ A implementação base não precisa necessariamente usar seu próprio <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" /> implementação. Primeiro, uma conversão de <paramref name="instance" /> para <see cref="T:System.Collections.IList" /> é tentada. Se isso tiver êxito, uma chamada para <see cref="M:System.Collections.IList.Add(System.Object)" /> é feita e o método retorna. Caso contrário, a implementação base usa CLR <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> invocar subjacente <see langword="Add" /> método, conforme obtidas de uma chamada para <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" /> para este <paramref name="" /> <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.  
+  
+ A implementação base nenhuma exceção é gerada nesse nível se <paramref name="item" /> é <see langword="null" />. Ainda é possível que subjacente <see langword="Add" /> método gerará uma exceção quando invocado. Outras exceções de tempo de execução são possíveis se <see cref="P:System.Xaml.XamlType.ItemType" /> não retornar um resultado válido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToDictionary">
+      <MemberSignature Language="C#" Value="public virtual void AddToDictionary (object instance, object key, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToDictionary(object instance, object key, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.AddToDictionary(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Uma instância do tipo especificado pelo <see cref="T:System.Xaml.XamlType" /> usado para construir esse <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</param>
+        <param name="key">Chave de dicionário de item a ser adicionado.</param>
+        <param name="item">O valor do item para adicionar.</param>
+        <summary>Adiciona o valor de chave e o item fornecido a uma instância do tipo que é relevante para esse <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você só deve chamar esse método em um <xref:System.Xaml.XamlType> que representa um dicionário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Chamado esse método em um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> que se baseia no desconhecido <see cref="T:System.Xaml.XamlType" />.  
+  
+ **- ou -**  
+  
+ Chamado esse método em um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> onde o tipo relevante não é um dicionário.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xaml.XamlSchemaException">
+          <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" />para este <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> retorna <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>A implementação base inclui uma chamada para o auxiliar interno <c>ThrowIfUnknown</c>. Sempre gera este auxiliar para casos em que um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> baseia desconhecido <see cref="T:System.Xaml.XamlType" />, que inclui casos onde o <see cref="P:System.Xaml.XamlType.UnderlyingType" /> do <see cref="T:System.Xaml.XamlType" /> é <see langword="null" />.  
+  
+ Internamente, as chamadas de implementação de base <see cref="P:System.Xaml.XamlType.IsDictionary" />e gera se o resultado for <see langword="false" />.  
+  
+ A implementação base não precisa necessariamente usar seu próprio <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" /> implementação. Primeiro, uma conversão de <paramref name="instance" /> para <see cref="T:System.Collections.IDictionary" /> é tentada. Se isso tiver êxito, uma chamada para <see cref="M:System.Collections.IDictionary.Add(System.Object,System.Object)" /> é feita e o método retorna. Caso contrário, a implementação base usa CLR <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> invocar subjacente <see langword="Add" /> método, conforme obtidas de uma chamada para <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" /> para este <paramref name="" /> <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.  
+  
+ A implementação base nenhuma exceção é gerada nesse nível se <paramref name="item" /> ou <paramref name="key" /> são <see langword="null" />. Ainda é possível que subjacente <see langword="Add" /> método gerará uma exceção quando invocado. Outras exceções de tempo de execução são possíveis se <see cref="P:System.Xaml.XamlType.ItemType" /> não retornar um resultado válido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public virtual object CreateInstance (object[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(object[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.CreateInstance(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Uma matriz de objetos que fornecem o <see langword="x:ConstructorArgs" /> para a instância. Pode ser <see langword="null" /> para tipos que não exigem nem usam <see langword="x:ConstructorArgs" />.</param>
+        <summary>Cria uma instância do objeto com base em iniciou a construção <see cref="T:System.Xaml.XamlType" /> para este <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</summary>
+        <returns>A instância criada com base em iniciou a construção <see cref="T:System.Xaml.XamlType" /> para este <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MissingMethodException">Não foi possível resolver um construtor.</exception>
+        <block subset="none" type="overrides">
+          <para>A implementação base inclui uma chamada para o auxiliar interno <c>ThrowIfUnknown</c>. Sempre gera este auxiliar para casos em que um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> baseia desconhecido <see cref="T:System.Xaml.XamlType" />, que inclui casos onde o <see cref="P:System.Xaml.XamlType.UnderlyingType" /> do <see cref="T:System.Xaml.XamlType" /> é <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo GetAddMethod (System.Xaml.XamlType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetAddMethod(class System.Xaml.XamlType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod(System.Xaml.XamlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">
+          <see cref="T:System.Xaml.XamlType" />para o tipo de item que é usado pelo <see langword="Add" /> método.</param>
+        <summary>Retorna o relevantes <see langword="Add" /> método para um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> que são relevante para uma coleção ou dicionário.</summary>
+        <returns>CLR <see cref="T:System.Reflection.MethodInfo" /> informações para o <see langword="Add" /> método ou null.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve retornar `null` para casos onde o <xref:System.Xaml.XamlType> para este <xref:System.Xaml.Schema.XamlTypeInvoker> não é uma coleção gravável ou dicionário. Especificamente, deve retornar `null` para casos onde <xref:System.Xaml.XamlType.LookupCollectionKind%2A?displayProperty=nameWithType> retorna `None`.  
+  
+> [!IMPORTANT]
+>  Se você não estiver acessando um sistema de tipo XAML totalmente confiável, esse método tem o potencial de falso relatório <xref:System.Reflection.MethodInfo> informações para chamadores.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentType" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Retorna a implementação base <see langword="null" /> para casos em que um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> baseia desconhecido <see cref="T:System.Xaml.XamlType" />, que inclui casos onde o <see cref="P:System.Xaml.XamlType.UnderlyingType" /> do <see cref="T:System.Xaml.XamlType" /> é <see langword="null" />. Ele também retorna <see langword="null" /> se <see cref="P:System.Xaml.XamlType.ItemType" /> é <see langword="null" />.  
+  
+ Coleções XAML podem tem mais de um <see langword="Add" /> método, como uma coleção de XAML potencialmente pode dar suporte a mais de um tipo de conteúdo (consulte <see cref="P:System.Xaml.XamlType.AllowedContentTypes" />, ou consulte <see cref="T:System.Windows.Markup.ContentWrapperAttribute" /> para obter informações sobre uma implementação desse conceito no WPF). A implementação padrão usa a lógica interna para retornar a melhor correspondência com base em assinaturas e o tipo de fornecido <paramref name="contentType" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumeratorMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo GetEnumeratorMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetEnumeratorMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.GetEnumeratorMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto que representa um método que pode enumerar itens.</summary>
+        <returns>
+          <see cref="T:System.Reflection.MethodInfo" />para um método de enumerador, ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deve retornar `null` para casos onde <xref:System.Xaml.XamlType.LookupCollectionKind%2A?displayProperty=nameWithType> retorna `None`.  
+  
+> [!IMPORTANT]
+>  Se você não estiver acessando um sistema de tipo XAML totalmente confiável, esse método tem o potencial de falso relatório <xref:System.Reflection.MethodInfo> informações para chamadores.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A implementação base chama um método auxiliar interno. Auxiliar retorna <see langword="null" /> para casos em que um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> baseia desconhecido <see cref="T:System.Xaml.XamlType" />, que inclui casos onde o <see cref="P:System.Xaml.XamlType.UnderlyingType" /> do <see cref="T:System.Xaml.XamlType" /> é <see langword="null" />. Ele também retorna <see langword="null" /> para casos onde <see cref="M:System.Xaml.XamlType.LookupCollectionKind" /> retorna <see langword="None" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetItems (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetItems(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeInvoker.GetItems(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Uma instância do tipo especificado pelo <see cref="T:System.Xaml.XamlType" /> usado para construir esse <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</param>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> objeto que representa o conjunto de itens.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> objeto, ou <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Chamado esse método em um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> que se baseia no desconhecido <see cref="T:System.Xaml.XamlType" />.  
+  
+ **- ou -**  
+  
+ Chamado esse método em um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> onde o tipo relevante não é uma coleção ou dicionário.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>A implementação base inclui uma chamada para o auxiliar interno <c>ThrowIfUnknown</c>. Sempre gera este auxiliar para casos em que um <see cref="T:System.Xaml.Schema.XamlTypeInvoker" /> baseia desconhecido <see cref="T:System.Xaml.XamlType" />, que inclui casos onde o <see cref="P:System.Xaml.XamlType.UnderlyingType" /> do <see cref="T:System.Xaml.XamlType" /> é <see langword="null" />.  
+  
+ A implementação base não precisa necessariamente usar seu próprio <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetEnumeratorMethod" /> implementação. Primeiro, uma conversão de <paramref name="instance" /> para <see cref="T:System.Collections.IEnumerable" /> é tentada. Se isso tiver êxito, uma chamada para <see cref="M:System.Collections.IEnumerable.GetEnumerator" /> é feita e o método retorna que o valor de retorno. Caso contrário, a implementação base usa CLR <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> invocar subjacente <see langword="GetEnumerator" /> método, conforme obtidas de uma chamada para <see cref="M:System.Xaml.Schema.XamlTypeInvoker.GetEnumeratorMethod" /> para este <paramref name="" /> <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarkupExtensionHandler">
+      <MemberSignature Language="C#" Value="public EventHandler&lt;System.Windows.Markup.XamlSetMarkupExtensionEventArgs&gt; SetMarkupExtensionHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventHandler`1&lt;class System.Windows.Markup.XamlSetMarkupExtensionEventArgs&gt; SetMarkupExtensionHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlTypeInvoker.SetMarkupExtensionHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Markup.XamlSetMarkupExtensionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o manipulador a ser usado quando um <see cref="T:System.Xaml.XamlObjectWriter" /> chama um implementado <see cref="T:System.Windows.Markup.MarkupExtension" />.</summary>
+        <value>Uma implementação do manipulador que manipula nesse caso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O manipulador de eventos é baseado no <xref:System.EventHandler%601> restrita com <xref:System.Windows.Markup.XamlSetMarkupExtensionEventArgs> dados de evento.  
+  
+ O valor retornado invoca o <xref:System.Xaml.XamlType.LookupSetMarkupExtensionHandler%2A> comportamento do <xref:System.Xaml.XamlType> que o <xref:System.Xaml.Schema.XamlTypeInvoker> se baseia.  
+  
+ O valor de retorno é `null` para um <xref:System.Xaml.Schema.XamlTypeInvoker> que se baseia no desconhecido <xref:System.Xaml.XamlType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTypeConverterHandler">
+      <MemberSignature Language="C#" Value="public EventHandler&lt;System.Windows.Markup.XamlSetTypeConverterEventArgs&gt; SetTypeConverterHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventHandler`1&lt;class System.Windows.Markup.XamlSetTypeConverterEventArgs&gt; SetTypeConverterHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlTypeInvoker.SetTypeConverterHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Markup.XamlSetTypeConverterEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o manipulador a ser usado quando um <see cref="T:System.Xaml.XamlObjectWriter" /> chama um CLR implementado <see cref="T:System.ComponentModel.TypeConverter" />.</summary>
+        <value>Uma implementação do manipulador que manipula nesse caso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O manipulador de eventos é baseado no <xref:System.EventHandler%601> restrita com <xref:System.Windows.Markup.XamlSetMarkupExtensionEventArgs> dados de evento.  
+  
+ O valor retornado invoca o <xref:System.Xaml.XamlType.LookupSetTypeConverterHandler%2A> comportamento do <xref:System.Xaml.XamlType> que o <xref:System.Xaml.Schema.XamlTypeInvoker> se baseia.  
+  
+ O valor de retorno é `null` para um <xref:System.Xaml.Schema.XamlTypeInvoker> que se baseia no desconhecido <xref:System.Xaml.XamlType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownInvoker">
+      <MemberSignature Language="C#" Value="public static System.Xaml.Schema.XamlTypeInvoker UnknownInvoker { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.Schema.XamlTypeInvoker UnknownInvoker" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlTypeInvoker.UnknownInvoker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlTypeInvoker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um valor estático que representa desconhecido, não é totalmente implementado <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</summary>
+        <value>Um valor estático que representa desconhecido, não é totalmente implementado <see cref="T:System.Xaml.Schema.XamlTypeInvoker" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecer esse valor para um <xref:System.Xaml.Schema.XamlTypeInvoker> parâmetro de System. XAML definido API geralmente fará com que o código de chamada a gerar exceções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

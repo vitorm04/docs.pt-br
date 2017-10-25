@@ -1,0 +1,227 @@
+<Type Name="EncoderExceptionFallback" FullName="System.Text.EncoderExceptionFallback">
+  <TypeSignature Language="C#" Value="public sealed class EncoderExceptionFallback : System.Text.EncoderFallback" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EncoderExceptionFallback extends System.Text.EncoderFallback" />
+  <TypeSignature Language="DocId" Value="T:System.Text.EncoderExceptionFallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.EncoderFallback</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo de tratamento de falha chamado fallback, para um caractere de entrada que não pode ser convertido em uma sequência de bytes de saída. O fallback lança uma exceção se um caractere de entrada não pode ser convertido em uma sequência de bytes de saída. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma codificação mapeia um caractere Unicode para uma sequência codificada de bytes, que posteriormente pode ser transferido para um meio físico, como um disco ou em um link de comunicação. Caracteres podem ser mapeados de várias maneiras, e uma codificação específica é representada por um tipo derivado de <xref:System.Text.Encoding> classe. Do especificamente, o tipo de codificação `GetBytes` método codifica um caractere em uma sequência de bytes e o `GetChars` método decodifica uma sequência de bytes em um caractere.  
+  
+ Uma operação de codificação pode falhar se o caractere de entrada não pode ser representado pela codificação. Por exemplo, um <xref:System.Text.ASCIIEncoding> objeto não é possível codificar um caractere que gera um valor de ponto de código Unicode que está fora do intervalo de U + 0000 a U + 007F.  
+  
+ Em casos em que uma conversão de codificação ou decodificação não pode ser executada, o .NET Framework fornece um mecanismo de tratamento de falha chamado fallback. Seu aplicativo pode usar o codificador do .NET Framework predefinido fallback, ou pode criar um fallback de codificador personalizado derivado de <xref:System.Text.EncoderFallback> e <xref:System.Text.EncoderFallbackBuffer> classes.  
+  
+ O .NET Framework fornece duas classes predefinidas que implementam diferentes estratégias alternativas para lidar com falhas de conversão de codificação. O <xref:System.Text.EncoderReplacementFallback> classe substitui uma cadeia de caracteres fornecida para qualquer caractere que não pode ser convertido de entrada. A cadeia de caracteres de substituição é codificada em vez do caractere inválido, e, em seguida, a operação de codificação continua convertendo o restante da entrada. Em contraste, o <xref:System.Text.EncoderExceptionFallback> classe lança um <xref:System.Text.EncoderFallbackException> quando um caractere inválido é encontrado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Text.EncoderExceptionFallback> e <xref:System.Text.EncoderFallbackException> classes.  
+  
+ [!code-cpp[sys.txt.fallbackEncExc#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.txt.fallbackEncExc/cpp/fallEncExc.cpp#1)]
+ [!code-csharp[sys.txt.fallbackEncExc#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.txt.fallbackEncExc/cs/fallEncExc.cs#1)]
+ [!code-vb[sys.txt.fallbackEncExc#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.txt.fallbackEncExc/vb/fallEncExc.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderExceptionFallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallback.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.EncoderExceptionFallback" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFallbackBuffer">
+      <MemberSignature Language="C#" Value="public override System.Text.EncoderFallbackBuffer CreateFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Text.EncoderFallbackBuffer CreateFallbackBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallback.CreateFallbackBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.EncoderFallbackBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um codificador fallback buffer que lança uma exceção se ele não é possível converter uma sequência de caracteres em uma sequência de bytes.</summary>
+        <returns>Um buffer de fallback do codificador que gera uma exceção quando ele não é possível codificar uma sequência de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um buffer de fallback do codificador é responsável por receber e tratamento de caracteres que não é possível converter um codificador em uma sequência de bytes. Esse método retorna uma instância do <xref:System.Text.EncoderExceptionFallbackBuffer> classe, que é uma subclasse do <xref:System.Text.EncoderFallbackBuffer> classe. Um <xref:System.Text.EncoderExceptionFallbackBuffer> objeto lança um <xref:System.Text.EncoderFallbackException> exceção sempre que os caracteres são passados para o <xref:System.Text.EncoderExceptionFallbackBuffer.Fallback%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallback.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto que deriva de <see cref="T:System.Text.EncoderExceptionFallback" /> classe.</param>
+        <summary>Indica se o atual <see cref="T:System.Text.EncoderExceptionFallback" /> objeto e um objeto especificado são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> não é <see langword="null" /> (<see langword="Nothing" /> no Visual Basic .NET) e é um <see cref="T:System.Text.EncoderExceptionFallback" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallback.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o código hash para essa instância.</summary>
+        <returns>O valor de retorno é sempre o mesmo valor arbitrário e não tem nenhum significado especial.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Text.EncoderExceptionFallback.GetHashCode%2A> método sempre retorna o mesmo valor, o aplicativo não deve usar esse valor para distinguir uma instância do <xref:System.Text.EncoderExceptionFallback> classe a partir de outro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCharCount">
+      <MemberSignature Language="C#" Value="public override int MaxCharCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCharCount" />
+      <MemberSignature Language="DocId" Value="P:System.Text.EncoderExceptionFallback.MaxCharCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de caracteres que pode retornar a esta instância.</summary>
+        <value>O valor de retorno sempre será zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

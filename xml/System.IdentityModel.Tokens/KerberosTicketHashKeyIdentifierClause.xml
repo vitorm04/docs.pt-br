@@ -1,0 +1,124 @@
+<Type Name="KerberosTicketHashKeyIdentifierClause" FullName="System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public sealed class KerberosTicketHashKeyIdentifierClause : System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit KerberosTicketHashKeyIdentifierClause extends System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.BinaryKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma cláusula de identificador de chave que identifica um <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> ou <see cref="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" /> token de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause> a referência de classe um <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> ou <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken> usando um hash SHA-1 do tíquete Kerberos do token de segurança. O hash de SHA-1 do tíquete Kerberos pode ser obtido chamando o <xref:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause.GetKerberosTicketHash%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosTicketHashKeyIdentifierClause (byte[] ticketHash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] ticketHash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ticketHash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="ticketHash">Uma matriz de <see cref="T:System.Byte" /> que contém o hash SHA-1 de um tíquete de serviço Kerberos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" /> classe usando o hash SHA-1 especificado de um tíquete de serviço Kerberos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ticketHash" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosTicketHashKeyIdentifierClause (byte[] ticketHash, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] ticketHash, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause.#ctor(System.Byte[],System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ticketHash" Type="System.Byte[]" />
+        <Parameter Name="derivationNonce" Type="System.Byte[]" />
+        <Parameter Name="derivationLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ticketHash">Uma matriz de <see cref="T:System.Byte" /> que contém o hash SHA-1 de um tíquete de serviço Kerberos.</param>
+        <param name="derivationNonce">Uma matriz de <see cref="T:System.Byte" /> que contém o valor de uso único que foi usado para criar uma chave derivada.</param>
+        <param name="derivationLength">O tamanho da chave derivada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" /> classe usando o tíquete do Kerberos especificado, nonce e comprimento de chave.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] não oferece suporte à criação de identificadores de chave derivadas implícitas.  No entanto, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] processa e consumir mensagens SOAP de entrada que contêm identificadores de chave derivados implícitos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ticketHash" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="ticketHash" /> tem tamanho zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKerberosTicketHash">
+      <MemberSignature Language="C#" Value="public byte[] GetKerberosTicketHash ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetKerberosTicketHash() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause.GetKerberosTicketHash" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o SHA-1 hash de um tíquete de serviço Kerberos.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém o hash SHA-1 de um tíquete de serviço Kerberos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o objeto atual.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o objeto atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause.ToString%2A> método retorna o SHA-1 hash de um tíquete de serviço Kerberos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

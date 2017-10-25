@@ -1,0 +1,143 @@
+<Type Name="DataProviderNameConverter" FullName="System.Web.UI.Design.WebControls.DataProviderNameConverter">
+  <TypeSignature Language="C#" Value="public class DataProviderNameConverter : System.ComponentModel.StringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataProviderNameConverter extends System.ComponentModel.StringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataProviderNameConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.StringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria uma lista selecionáveis pelo usuário do ActiveX® Data Objects (ADO) para os nomes de provedor do .NET Framework (ADO.NET).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter> classe é um <xref:System.ComponentModel.TypeConverter> que normalmente é referenciado pelo objeto de <xref:System.ComponentModel.TypeConverterAttribute> atributo.  
+  
+ Os nomes que são retornados pelo <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValues%2A> método são de provedores ADO.NET, do <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> método, que criam objetos de dados.  
+  
+ O <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesExclusive%2A> método obtém um valor que indica se os nomes de provedor retornados são uma lista exclusiva de valores possíveis. O <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesSupported%2A> método obtém um valor que indica se os nomes de provedor retornados são um conjunto padrão de valores que podem ser escolhidos em uma lista.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProviderNameConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataProviderNameConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.DataProviderNameConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter> classe quando a classe é referenciada por um <xref:System.ComponentModel.TypeConverterAttribute> atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto que implementa o <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece informações sobre um contexto de um conversor de tipo para que o conversor de tipo pode executar uma conversão.</param>
+        <summary>Retorna uma lista da disponíveis ActiveX® Data Objects (ADO) para os nomes de provedor do .NET Framework (ADO.NET).</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém os nomes dos provedores ADO.NET disponíveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValues%2A> método usa o <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> método para retornar um <xref:System.Data.DataTable> objeto que contém os nomes de provedor ADO.NET. Ele converte essa <xref:System.Data.DataTable> para uma matriz de cadeia de caracteres e, em seguida, converte essa matriz para um <xref:System.ComponentModel.TypeConverter.StandardValuesCollection> objeto.  
+  
+ O `context` parâmetro não for usado o <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValues%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto que implementa o <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece informações sobre um contexto de um conversor de tipo para que o conversor de tipo pode executar uma conversão.</param>
+        <summary>Obtém um valor que indica se o retornado ActiveX® Data Objects (ADO) para os nomes de provedor do .NET Framework (ADO.NET) são uma lista exclusiva de valores possíveis.</summary>
+        <returns>Sempre <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você derivar uma classe a partir o <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter> classe e substituir o <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValues%2A> também substituir o método para retornar uma lista exclusiva de nomes de provedor ADO.NET, o <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesExclusive%2A> método para retornar `true` quando a lista de nomes de provedor é exclusiva.  
+  
+ O `context` parâmetro não for usado o <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesExclusive%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto que implementa o <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece informações sobre um contexto de um conversor de tipo para que o conversor de tipo pode executar uma conversão.</param>
+        <summary>Obtém um valor que indica se esse objeto retorna um conjunto padrão de ActiveX® Data Objects (ADO) para os nomes de provedor do .NET Framework (ADO.NET) que podem ser escolhidos em uma lista.</summary>
+        <returns>Sempre <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `context` parâmetro não for usado o <xref:System.Web.UI.Design.WebControls.DataProviderNameConverter.GetStandardValuesSupported%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,171 @@
+<Type Name="NamespaceMapEntry" FullName="System.Windows.Markup.NamespaceMapEntry">
+  <TypeSignature Language="C#" Value="public class NamespaceMapEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamespaceMapEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.NamespaceMapEntry" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("'{_xmlNamespace}'={_clrNamespace}:{_assemblyName}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações que o <see cref="T:System.Windows.Markup.XamlTypeMapper" /> usa para o mapeamento entre um namespace XML, um namespace CLR e o assembly que contém os tipos de relevantes para esse namespace CLR.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo é específico para a implementação do WPF XAML. Se você usá-lo em uma implementação de XAML geral, você deve incluir os assemblies do WPF.  
+  
+ Técnicas alternativas que não exigem incluindo assemblies WPF incluem fazendo referência ao contexto de esquema XAML (disponível em um contexto de provedor de serviço de <xref:System.Xaml.IXamlSchemaContextProvider>, ou de <xref:System.Xaml.XamlObjectWriter.SchemaContext%2A?displayProperty=nameWithType> de um loop de nó XAML ou geral XAML gravador quadro de referência.) O contexto do esquema XAML inclui API para retornar seus assemblies, mapeamentos de prefixo preferido e informações de namespace do XAML.  
+  
+<a name="xamlTextUsage_NamespaceMapEntry"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceMapEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NamespaceMapEntry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.NamespaceMapEntry" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceMapEntry (string xmlNamespace, string assemblyName, string clrNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xmlNamespace, string assemblyName, string clrNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NamespaceMapEntry.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="clrNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNamespace">O prefixo de mapeamento para o namespace XML.</param>
+        <param name="assemblyName">O assembly que contém o namespace CLR e tipos para mapear para o namespace XML.</param>
+        <param name="clrNamespace">O namespace CLR no assembly que contém os tipos relevantes.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.NamespaceMapEntry" /> classe usando o namespace XML fornecido, o namespace CLR e informações de assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o formato "nome simples" para `assemblyName`. Em particular, não especificar caminhos e não inclua a extensão de arquivo. Isso é análogo ao formulário que pode ser informado por <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Caminhos são especificados separadamente; see <xref:System.Windows.Markup.XamlTypeMapper.SetAssemblyPath%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlNamespace" /> é <see langword="null" />  
+  
+ -ou-  
+  
+ <paramref name="assemblyName" /> é <see langword="null" />  
+  
+ -ou-  
+  
+ <paramref name="clrNamespace" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NamespaceMapEntry.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do assembly que contém os tipos no namespace CLR.</summary>
+        <value>O nome do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o formato "nome simples" para <xref:System.Windows.Markup.NamespaceMapEntry.AssemblyName%2A>. Em particular, não especifique o caminho completo e não inclua a extensão de arquivo. Isso é análogo ao formulário que pode ser informado por <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>.  
+  
+<a name="xamlTextUsage_AssemblyName"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor <see cref="P:System.Windows.Markup.NamespaceMapEntry.AssemblyName" /> está sendo definido para <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrNamespace">
+      <MemberSignature Language="C#" Value="public string ClrNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClrNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NamespaceMapEntry.ClrNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace CLR que contém os tipos que está sendo mapeados.</summary>
+        <value>O namespace do CLR.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ClrNamespace"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor <see cref="P:System.Windows.Markup.NamespaceMapEntry.ClrNamespace" /> está sendo definido para <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespace">
+      <MemberSignature Language="C#" Value="public string XmlNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NamespaceMapEntry.XmlNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o prefixo de mapeamento para o namespace XML que está sendo mapeado para.</summary>
+        <value>O prefixo de mapeamento para o namespace XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_XmlNamespace"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor <see cref="P:System.Windows.Markup.NamespaceMapEntry.XmlNamespace" /> está sendo definido para <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

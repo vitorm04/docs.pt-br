@@ -1,0 +1,1276 @@
+<Type Name="XamlLanguage" FullName="System.Xaml.XamlLanguage">
+  <TypeSignature Language="C#" Value="public static class XamlLanguage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit XamlLanguage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlLanguage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define constantes que fornecem cadeias de caracteres ou objetos que são úteis para marcação XAML ou para programação com tipos XAML. Essas cadeias de caracteres ou objetos são relevantes para conceitos de linguagem XAML, para a implementação de conceitos de linguagem XAML em serviços XAML do .NET Framework, ou para ambos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xaml.XamlLanguage> API retorna resultados de pesquisa com base em um contexto de esquema XAML que permanece interno. Neste contexto de esquema, <xref:System.Xaml.XamlSchemaContext.SupportMarkupExtensionsWithDuplicateArity%2A> é `true`. Caso contrário, o contexto do esquema XAML que será relatado como o padrão para serviços XAML do .NET Framework e seus leitores XAML definidos e gravadores XAML usa as configurações padrão. Em geral, o contexto do esquema XAML que é usado para leitores XAML predefinidos e gravadores XAML baseia-se no mesmo <xref:System.Xaml.XamlSchemaContext> instância disponível de APIs que definir ou retornar um <xref:System.Xaml.XamlSchemaContext>. O contexto do esquema padrão XAML para serviços XAML do .NET Framework é baseado em reflexão e conceitos do CLR. Evidência de backup padrão no CLR pode ser encontrada ao obter certa <xref:System.Xaml.XamlLanguage> propriedades que são um <xref:System.Xaml.XamlType> e ao verificar <xref:System.Xaml.XamlType.UnderlyingType%2A>. Da mesma forma, <xref:System.Xaml.XamlLanguage> propriedades que são um <xref:System.Xaml.XamlMember> têm valores de reflexão do CLR para <xref:System.Xaml.XamlMember.UnderlyingMember%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllDirectives">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Xaml.XamlDirective&gt; AllDirectives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Xaml.XamlDirective&gt; AllDirectives" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.AllDirectives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Xaml.XamlDirective&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura genérica de cada <see cref="T:System.Xaml.XamlDirective" /> identificador definido por serviços XAML do .NET Framework.</summary>
+        <value>Uma coleção somente leitura genérica de cada <see cref="T:System.Xaml.XamlDirective" /> identificador definido por serviços XAML do .NET Framework.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllTypes">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Xaml.XamlType&gt; AllTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Xaml.XamlType&gt; AllTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.AllTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Xaml.XamlType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura genérica de indivíduo <see cref="T:System.Xaml.XamlType" /> valores correspondentes, ou alias, uma linguagem XAML intrínseca que é definida por serviços XAML do .NET Framework.</summary>
+        <value>Uma coleção somente leitura genérica de cada <see cref="T:System.Xaml.XamlType" /> que corresponde a uma linguagem XAML intrínseca.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2](http://go.microsoft.com/fwlink/?LinkId=114525) para obter uma lista de itens de informações de linguagem XAML intrínsecos. Observe que nem todos os itens que são listados como subseções 5.2 são implementados como um <xref:System.Xaml.XamlType>. Por exemplo, `x:Code` não é um tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Arguments" /> de um método de fábrica ou um uso genérico.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Arguments" /> de um método de fábrica ou uso genérico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um método de fábrica é um [!INCLUDE[xaml2009](~/includes/xaml2009-md.md)] recurso para identificar uma técnica alternativa que constrói o tipo subjacente de um tipo XAML. O `Arguments` especifique a entrada de um método de fábrica e habilitar a especificação de informações na marcação. São as técnicas padrão, na ausência de um método de fábrica, a tentativa de encontrar um construtor padrão e, em seguida, tentar encontrar um conversor de tipo identificado para o tipo, membro ou tipo de destino.  
+  
+ O uso de genéricos, o `Arguments` encapsular os objetos ou o texto de inicialização de todas as entradas de construção que são especificados conforme necessário para o `TypeArguments`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Array">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Array { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Array" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Array" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Array" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Array" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.18](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncRecords">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective AsyncRecords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective AsyncRecords" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.AsyncRecords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="AsyncRecords" /> pseudomember.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="AsyncRecords" /> pseudomember.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `AsyncRecords` conceito é parte de [!INCLUDE[xaml2009](~/includes/xaml2009-md.md)]. Consulte [recursos de linguagem XAML 2009](~/docs/framework/xaml-services/xaml-2009-language-features.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Base">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Base { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Base" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Base" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="base" /> diretiva do XML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="base" /> diretiva do XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.15](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Boolean">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Boolean { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Boolean" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Boolean" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Boolean" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Boolean" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.17](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Byte">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Byte { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Byte" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Byte" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Byte" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Byte" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.10](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Char">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Char { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Char" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Char" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Char" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Char" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.7](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Class">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Class { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Class" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Class" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Class" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Class" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.7](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassAttributes">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective ClassAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective ClassAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.ClassAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="ClassAttributes" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="ClassAttributes" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa diretiva é parte de [!INCLUDE[xaml2009](~/includes/xaml2009-md.md)]. Consulte [recursos de linguagem XAML 2009](~/docs/framework/xaml-services/xaml-2009-language-features.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassModifier">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective ClassModifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective ClassModifier" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.ClassModifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="ClassModifier" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="ClassModifier" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.9](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Code" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para <see langword="Code" /> conforme detalhado no [MS-XAML].</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para <see langword="Code" /> conforme detalhado no [MS-XAML].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.22](http://go.microsoft.com/fwlink/?LinkId=114525), onde `Code` é indicado como um tipo; no entanto, `Code` é fornecido como um <xref:System.Xaml.XamlDirective> por essa API.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionId">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective ConnectionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective ConnectionId" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.ConnectionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> que identifica um ponto de conexão para conectar eventos a manipuladores.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> que identifica um ponto de conexão para conectar eventos a manipuladores.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decimal">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Decimal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Decimal" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Decimal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Decimal" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Decimal" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.14](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Double">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Double { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Double" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Double" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Double" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Double" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.9](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FactoryMethod">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective FactoryMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective FactoryMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.FactoryMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> que identifica um método de fábrica para XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> que identifica um método de fábrica para XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um método de fábrica é um [!INCLUDE[xaml2009](~/includes/xaml2009-md.md)] recurso para identificar uma técnica alternativa que constrói o tipo subjacente de um tipo XAML. A técnica padrão, se não estiver disponível, um método de fábrica é tentar localizar um construtor padrão e, em seguida, tenta encontrar um conversor de tipo identificado no tipo, membro ou tipo de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldModifier">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective FieldModifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective FieldModifier" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.FieldModifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="FieldModifier" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="FieldModifier" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.10](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialization">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Initialization { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Initialization" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Initialization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Initialization" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Initialization" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa diretiva representa o nó XAML ou informações de XAML defina representação de texto de inicialização, em que uma cadeia de caracteres dentro de um elemento de objeto fornece as informações de construção de tipo para o elemento ao redor do objeto.  
+  
+ Se você está observando interpretações de nó bruto ou visualizações, `Initialization` , às vezes, é exibida no formulário de cadeia de caracteres como `_Initialization` (Observe o sublinhado à esquerda) e está dentro do namespace XAML de linguagem XAML (como indicado pelo precedidos `Namespace` nó). [MS-XAML] esse conceito é descrito sob o título `x:InitializationText`. Consulte [&#91; MS-XAML &#93; Seção 5.3.3](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int16">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Int16 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Int16" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Int16" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Int16" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Int16" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.11](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int32">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Int32 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Int32" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Int32" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Int32" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Int32" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.12](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int64">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Int64 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Int64" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Int64" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Int64" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Int64" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.13](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Items" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Items" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Items" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `Items` diretiva é um wrapper de representação de nó em vários valores de objeto dentro de um objeto ao redor. Consulte [&#91; MS-XAML &#93; Seção 5.3.1](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ Se você examinar interpretações de fluxo do nó XAML brutas ou visualizações, `Items` , às vezes, é exibida no formulário de cadeia de caracteres como `_Items` (Observe o sublinhado à esquerda) e está dentro do namespace XAML de linguagem XAML (como indicado pelo precedidos `Namespace` nó).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Key" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Key" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Key" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A `Key` diretiva é usada para objetos em um dicionário. Consulte [&#91; MS-XAML &#93; Seção 5.3.5](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lang">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Lang { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Lang" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Lang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="lang" /> diretiva do XML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="lang" /> diretiva do XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.13](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Member" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o tipo que é o tipo de item de <see cref="P:System.Xaml.XamlLanguage.Members" />.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o tipo que é o tipo de item de <see cref="P:System.Xaml.XamlLanguage.Members" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de serviços XAML do .NET Framework, o `Member` <xref:System.Xaml.XamlType> é apoiado por <xref:System.Windows.Markup.MemberDefinition?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Members">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Members { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Members" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Members" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Members" /> conceito em XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Members" /> conceito em XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Members` conceito especificamente não está definido em [MS-XAML]. `Members`é um conceito para definir os membros de tipos na marcação, em vez de referenciar tipos de backup. Para obter mais informações, consulte <xref:System.Windows.Markup.PropertyDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Name" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Name" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A `Name` diretiva é usada para os identificadores de objetos na marcação. Consulte [&#91; MS-XAML &#93; Seção 5.3.4](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ Embora esse conceito de `Name` não é totalmente consistente com o uso especificado em [MS-XAML], normalmente você pode usar o `Name` diretiva ou `Name` atributo para fornecer uma conexão conceitual entre objetos XAML na marcação e as representações de tempo de execução que são criadas pelo XAML processamento da marcação. Esse uso depende em estruturas específicas como implementar seus modelos de programação para integrar o XAML em seus modelos de objeto geral. Para obter mais informações, consulte [diretiva X:Name](~/docs/framework/xaml-services/x-name-directive.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Null { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Null" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Null" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Null" /> ou <see langword="NullExtension" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Null" /> / <see langword="NullExtension" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo XAML fornece valores nulos para valores de objeto na marcação. O tipo de XAML é (ou deve ser) pode ser atribuído a `MarkupExtension`. Consulte [&#91; MS-XAML &#93; Seção 5.2.4](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Object { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Object" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Object" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Object" /> conceito de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Object" /> conceito de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O XAML especifica `x:Object` como um conceito de linguagem especiais. Consulte [&#91; MS-XAML &#93; Seção 5.2.5](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionalParameters">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective PositionalParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective PositionalParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.PositionalParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="PositionalParameters" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="PositionalParameters" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `PositionalParameters`é uma diretiva que encapsula os vários objetos que podem ser especificados como um conjunto de nós de objeto para a entrada de uma extensão de marcação. Consulte [&#91; MS-XAML &#93; Seção 6.6.7](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ Se você está observando interpretações de nó bruto ou visualizações, `PositionalParameters` , às vezes, é exibida no formulário de cadeia de caracteres como `_PositionalParameters` (Observe o sublinhado à esquerda) e está dentro do namespace XAML de linguagem XAML (como indicado pelo precedidos `Namespace` nó).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Property" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Property" /> conceito em XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Property" /> conceito em XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Property`é uma forma especializada do tipo de XAML que é identificado como <xref:System.Xaml.XamlLanguage.Member%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reference">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Reference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Reference" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Reference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> que representa um <see langword="Reference" /> para XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> que representa um <see langword="Reference" /> para XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Reference`é um [!INCLUDE[xaml2009](~/includes/xaml2009-md.md)] recurso para fazer referência a outro nó de objeto na marcação. A implementação de serviços XAML do .NET Framework foi encontrada no <xref:System.Windows.Markup.Reference?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Shared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Shared" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Shared" /> diretiva para XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Shared" /> diretiva para XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `Shared` diretiva (quando ele é definido como `true`) Especifica que, quando um item é encontrado em um dicionário, referências ao objeto sempre devem retornar o singleton em vez de uma nova instância. Esse comportamento está relacionado ao conceito que um dicionário pode ser usado como uma fonte para um mecanismo de modelo ou conteúdo compartilhado por determinadas estruturas que usam XAML. `Shared`não é especificado em [MS-XAML], mas faz parte do `x` comportamento namespace definido para XAML em WPF e do .NET Framework versão 3.0 e 3.5.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Single { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Single" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Single" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Single" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Single" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.8](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Space">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Space { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Space" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Space" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="space" /> diretiva do XML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="space" /> diretiva do XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.14](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Static { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Static" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Static" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Static" /> / <see langword="StaticExtension" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Static" /> / <see langword="StaticExtension" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo XAML fornece valores para o qual o membro de backup é um membro estático de marcação. O tipo de XAML é (ou deve ser) pode ser atribuído a `MarkupExtension`. Consulte [&#91; MS-XAML &#93; Seção 5.2.2](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType String { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType String" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.String" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="String" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="String" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subclass">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Subclass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Subclass" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Subclass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Subclass" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Subclass" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.3.8](http://go.microsoft.com/fwlink/?LinkId=114525)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronousMode">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective SynchronousMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective SynchronousMode" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.SynchronousMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> que permite o carregamento XAML de forma assíncrona se o processador XAML suporta tal um modo.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> que permite o carregamento XAML de forma assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `SynchronousMode` diretiva (quando definido como `Async`) é usado para especificar que, quando um arquivo XAML é carregado, o nó raiz é processado primeiro. O objeto resultante pode ser inserido, embora seu conteúdo ainda está processando. Nesse modo, você pode ignorar o comportamento de processamento de XAML padrão de trabalho do nó de nível mais profundo para a raiz. No padrão de lógica de processamento de XAML, qualquer chamador que está aguardando o objeto raiz é bloqueada até que a análise completa seja concluída. `SynchronousMode`não é especificado em [MS-XAML], mas faz parte do `x` comportamento namespace definido para XAML no início do WPF no .NET Framework versão 3.5 com SP1 (ou qualquer subsequentes service pack).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSpan">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType TimeSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType TimeSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.TimeSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="TimeSpan" /> conceito em linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="TimeSpan" /> conceito de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.16](http://go.microsoft.com/fwlink/?LinkId=114525). `TimeSpan`não é um verdadeiro intrínseco, mas foi especificado na especificação do XAML porque ele é um tipo de uso geral. Os autores de especificação de XAML considerado útil para padronizar a representação de XAML no vocabulários derivadas. Consulte também [tipos internos para primitivos de linguagem XAML comuns](~/docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Type" /> / <see langword="TypeExtension" /> intrínseco de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Type" /> / <see langword="TypeExtension" /> intrínseco de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo XAML fornece <xref:System.Xaml.XamlType> valores que usam as associações do e pesquisas para um sistema de tipo de backup. O tipo de XAML é (ou deve ser) pode ser atribuído a `MarkupExtension`. Consulte [&#91; MS-XAML &#93; Seção 5.2.3](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeArguments">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective TypeArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective TypeArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.TypeArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="TypeArguments" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="TypeArguments" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A `TypeArguments` diretiva especifica as restrições de tipo de um genérico quando um genérico é especificado como um objeto XAML. Consulte [&#91; MS-XAML &#93; Seção 5.3.11](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uid">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective Uid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective Uid" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Uid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Uid" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="Uid" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A `Uid` diretiva especifica um identificador exclusivo para um elemento de marcação XAML. Estritamente falando, esse é um identificador exclusivo podia ser aplicado para várias finalidades dentro de uma estrutura de implementação de XAML. `Uid`difere `Name` que `Name` tem uma função específica na definição de [MS-XAML] para declarar os identificadores que existem em um gráfico de objeto de saída de uma fonte XAML, enquanto `Uid` não tem nenhuma função específica. Na implementação de XAML estruturas existentes que usam serviços XAML do .NET Framework, `Uid` normalmente é usado para fins de localização. Consulte [&#91; MS-XAML &#93; Seção 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownContent">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlDirective UnknownContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlDirective UnknownContent" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.UnknownContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="UnknownContent" /> diretiva do XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlDirective" /> para o <see langword="UnknownContent" /> diretiva do XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `UnknownContent`é uma diretiva que é um espaço reservado para usar em um nó XAML definido se um leitor encontrar conteúdo desconhecido para um nó de valor ou texto de inicialização (nenhuma sintaxe disponível intrínseco ou texto poderá convertê-lo).  
+  
+ Se você está observando interpretações de nó bruto ou visualizações, `UnknownContent` , às vezes, é exibida no formulário de cadeia de caracteres como `_UnknownContent` (Observe o sublinhado à esquerda) e está dentro do namespace XAML de linguagem XAML (como indicado pelo precedidos `Namespace` nó).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Uri" /> conceito de linguagem XAML.</summary>
+        <value>Um <see cref="T:System.Xaml.XamlType" /> para o <see langword="Uri" /> conceito de linguagem XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [&#91; MS-XAML &#93; Seção 5.2.15](http://go.microsoft.com/fwlink/?LinkId=114525). `Uri`não é um verdadeiro mas intrínseco foi especificado na especificação do XAML porque ele é um tipo usado com frequência. Os autores de especificação de XAML considerado útil para padronizar a representação de XAML no vocabulários derivadas. Consulte também [tipos internos para primitivos de linguagem XAML comuns](~/docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xaml2006Namespace">
+      <MemberSignature Language="C#" Value="public const string Xaml2006Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Xaml2006Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Xaml.XamlLanguage.Xaml2006Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de cadeia de caracteres para a cadeia de caracteres que identifica o namespace do XAML idioma (2006). Esse namespace corresponde ao XAML (2006) "x" namespace prefixado conforme definido em [seção [MS-XAML] 5.1.1](http://go.microsoft.com/fwlink/?LinkId=114525).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlNamespaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; XamlNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IList`1&lt;string&gt; XamlNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.XamlNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de identificadores de namespace de XAML.</summary>
+        <value>Uma coleção de identificadores de namespace de XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No momento essa coleção contém apenas o <xref:System.Xaml.XamlLanguage.Xaml2006Namespace> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XData">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlType XData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.XamlType XData" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.XData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xaml.XamlType" /> para o tipo XAML que faz um <see langword="XData" /> bloquear em XAML.</summary>
+        <value>O <see cref="T:System.Xaml.XamlType" /> para o tipo XAML que faz um <see langword="XData" /> bloco. Consulte [seção [MS-XAML] 5.2.23](http://go.microsoft.com/fwlink/?LinkId=114525).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml1998Namespace">
+      <MemberSignature Language="C#" Value="public const string Xml1998Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Xml1998Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Xaml.XamlLanguage.Xml1998Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de cadeia de caracteres para a cadeia de caracteres que identifica o namespace XML do idioma (1998). Esse namespace corresponde ao namespace XML "xml" prefixado referenciado no [seção [MS-XAML] 5.1.2](http://go.microsoft.com/fwlink/?LinkId=114525).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; XmlNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IList`1&lt;string&gt; XmlNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlLanguage.XmlNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de identificadores de namespace de XML.</summary>
+        <value>Uma coleção de identificadores de namespace para XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No momento essa coleção contém apenas o <xref:System.Xaml.XamlLanguage.Xml1998Namespace> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

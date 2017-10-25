@@ -1,0 +1,358 @@
+<Type Name="KeysConverter" FullName="System.Windows.Forms.KeysConverter">
+  <TypeSignature Language="C#" Value="public class KeysConverter : System.ComponentModel.TypeConverter, System.Collections.IComparer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeysConverter extends System.ComponentModel.TypeConverter implements class System.Collections.IComparer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.KeysConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IComparer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um <see cref="T:System.ComponentModel.TypeConverter" /> para converter objetos <see cref="T:System.Windows.Forms.Keys" /> em e de outras representações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Windows.Forms.KeysConverter> conversor de tipo é usado para converter <xref:System.Windows.Forms.Keys> instâncias para e de seus correspondente localizada <xref:System.String> representações.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.KeysConverter> classe para converter um <xref:System.Windows.Forms.Keys.KeyCode> para um <xref:System.String>. Este exemplo pressupõe que você tenha um <xref:System.Windows.Forms.TextBox> chamado `TextBox1` em uma <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-csharp[SystemWindowsFormsKeys#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemWindowsFormsKeys/CS/Form1.cs#1)]
+ [!code-vb[SystemWindowsFormsKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemWindowsFormsKeys/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeysConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Windows.Forms.KeysConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o padrão fornecido pelo compilador construtor para o <xref:System.Windows.Forms.KeysConverter> classe.  
+  
+ Normalmente, você não criar diretamente uma instância de um <xref:System.Windows.Forms.KeysConverter>. Em vez disso, chame o <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> método <xref:System.ComponentModel.TypeDescriptor> classe. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <param name="sourceType">O <see cref="T:System.Type" /> para converter.</param>
+        <summary>Retorna um valor que indica se esse conversor pode converter um objeto no tipo de origem especificado para o tipo nativo do conversor usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se a conversão pode ser executada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.KeysConverter.CanConvertFrom%2A> método é especializado para retornar `true` se o `sourceType` parâmetro é do tipo <xref:System.String> ou <xref:System.Enum> matriz; caso contrário, ele passa a avaliação para a implementação base deste método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ O contexto pode ser usado para extrair informações adicionais sobre o ambiente de que está sendo invocado este conversor. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <param name="destinationType">O <see cref="T:System.Type" /> para converter.</param>
+        <summary>Retorna um valor que indica se esse conversor pode converter um objeto no tipo de origem especificado para o tipo nativo do conversor usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se a conversão pode ser executada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.KeysConverter.CanConvertTo%2A> método é especializado para retornar `true` se o `destinationType` parâmetro é do tipo <xref:System.Enum> matriz; caso contrário, ele passa a avaliação para a implementação base deste método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ O contexto pode ser usado para extrair informações adicionais sobre o ambiente de que está sendo invocado este conversor. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public int Compare (object a, object b);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Compare(object a, object b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.Compare(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Object" />
+        <Parameter Name="b" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="a">Um <see cref="T:System.Object" /> que representa a primeira chave a ser comparado.</param>
+        <param name="b">Um <see cref="T:System.Object" /> que representa a segunda chave a ser comparado.</param>
+        <summary>Compara dois valores de chave para equivalência.</summary>
+        <returns>Um inteiro que indica a relação entre os dois parâmetros.  
+  
+ <list type="table"><listheader><term>Tipo de valor  
+  
+ </term><description>Condição  
+  
+ </description></listheader><item><term>Um inteiro negativo.  
+  
+ </term><description><paramref name="a" />é menor que <paramref name="b" />.  
+  
+ </description></item><item><term>zero  
+  
+ </term><description><paramref name="a" />é igual a <paramref name="b" />.  
+  
+ </description></item><item><term>Um inteiro positivo.  
+  
+ </term><description><paramref name="a" />é maior do que <paramref name="b" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa <xref:System.String.Compare%2A?displayProperty=nameWithType> para comparar os dois objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see langword="ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Este parâmetro ou propriedades desse parâmetro podem ser nulas.</param>
+        <param name="culture">Um <see langword="CultureInfo" /> objeto para fornecer informações de localidade.</param>
+        <param name="value">O objeto a ser convertido.</param>
+        <summary>Converte o objeto especificado em tipo nativo do conversor.</summary>
+        <returns>Um objeto que representa o objeto <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.KeysConverter.ConvertFrom%2A> método é especializado para converter objetos do tipo <xref:System.String> ou <xref:System.Enum> matriz. Nesse caso, ela retornará um objeto do tipo <xref:System.Windows.Forms.Keys>. Caso contrário, ele passa a avaliação para a implementação base deste método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Uma combinação de chave inválida foi fornecida.  
+  
+ -ou-  
+  
+ Um nome de chave inválido foi fornecido.</exception>
+        <block subset="none" type="overrides">
+          <para>O <paramref name="context" /> parâmetro pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> para fornecer informações de localidade.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <param name="destinationType">O <see cref="T:System.Type" /> para converter o objeto.</param>
+        <summary>Converte o objeto especificado para o tipo de destino especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o objeto <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.KeysConverter.ConvertTo%2A> método é especializado para converter objetos do tipo <xref:System.Windows.Forms.Keys> ou <xref:System.Int32>. Nesse caso, ela retornará um objeto do tipo <xref:System.String>. Caso contrário, ele passa a avaliação para a implementação base deste método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destinationType" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ O parâmetro de contexto pode ser usado para extrair informações adicionais sobre o ambiente de que está sendo invocado este conversor. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar esse valor de retorno. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de valores padrão para o tipo de dados que este conversor de tipo é criado quando é fornecido com um contexto de formato.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto padrão de valores válidos, que pode ser vazio se o tipo de dados não der suporte a um conjunto de valores padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção retornada contém os valores das chaves que podem ser convertidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador. Esse objeto pode ser usado para extrair informações adicionais sobre o ambiente de que está sendo invocado este conversor. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</param>
+        <summary>Determina se a lista de valores padrão retornada de <see langword="GetStandardValues" /> é uma lista exclusiva usando especificado <see cref="T:System.ComponentModel.ITypeDescriptorContext" />.</summary>
+        <returns>
+          <see langword="true" />Se a coleção retornada de <see cref="Overload:System.Windows.Forms.KeysConverter.GetStandardValues" /> é uma lista completa de valores possíveis; caso contrário, <see langword="false" /> se outros valores são possíveis. A implementação padrão para esse método sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `context` parâmetro não for usado na implementação padrão desse método.  
+  
+ Se a lista for exclusiva, não há outros valores são inválidos, como em um <xref:System.Enum> tipo de dados. Se a lista não é exclusiva, há outros valores válidos além da lista de valores padrão <xref:System.Windows.Forms.KeysConverter.GetStandardValues%2A> fornece.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeysConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Obtém um valor que indica se esse objeto oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `context` parâmetro não for usado na implementação padrão desse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

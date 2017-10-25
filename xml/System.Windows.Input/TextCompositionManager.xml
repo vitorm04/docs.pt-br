@@ -1,0 +1,564 @@
+<Type Name="TextCompositionManager" FullName="System.Windows.Input.TextCompositionManager">
+  <TypeSignature Language="C#" Value="public sealed class TextCompositionManager : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextCompositionManager extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TextCompositionManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece recursos para gerenciar eventos relacionados à entrada e às composições de texto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPreviewTextInputHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewTextInputHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewTextInputHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.AddPreviewTextInputHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência ao qual o manipulador de eventos será adicionado.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInput" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um manipulador para a versão de túnel desse evento.  Para obter informações sobre a versão bolha desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.TextInput>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewTextInputStartHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewTextInputStartHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewTextInputStartHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.AddPreviewTextInputStartHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência ao qual o manipulador de eventos será adicionado.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInputStart" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um manipulador para a versão de túnel desse evento.  Para obter informações sobre a versão bolha desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.TextInputStart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewTextInputUpdateHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewTextInputUpdateHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewTextInputUpdateHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.AddPreviewTextInputUpdateHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência ao qual o manipulador de eventos será adicionado.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um manipulador para a versão de túnel desse evento.  Para obter informações sobre a versão bolha desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.TextInputUpdate>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTextInputHandler">
+      <MemberSignature Language="C#" Value="public static void AddTextInputHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddTextInputHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.AddTextInputHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência ao qual o manipulador de eventos será adicionado.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInput" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um manipulador para a versão bolha desse evento.  Para obter informações sobre a versão de túnel desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.PreviewTextInput>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTextInputStartHandler">
+      <MemberSignature Language="C#" Value="public static void AddTextInputStartHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddTextInputStartHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.AddTextInputStartHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência ao qual o manipulador de eventos será adicionado.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputStart" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um manipulador para a versão bolha desse evento.  Para obter informações sobre a versão de túnel desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.PreviewTextInputStart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTextInputUpdateHandler">
+      <MemberSignature Language="C#" Value="public static void AddTextInputUpdateHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddTextInputUpdateHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.AddTextInputUpdateHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência ao qual o manipulador de eventos será adicionado.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputUpdate" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um manipulador para a versão bolha desse evento.  Para obter informações sobre a versão de túnel desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteComposition">
+      <MemberSignature Language="C#" Value="public static bool CompleteComposition (System.Windows.Input.TextComposition composition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CompleteComposition(class System.Windows.Input.TextComposition composition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.CompleteComposition(System.Windows.Input.TextComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="composition" Type="System.Windows.Input.TextComposition" />
+      </Parameters>
+      <Docs>
+        <param name="composition">Um <see cref="T:System.Windows.Input.TextComposition" /> objeto para concluir.</param>
+        <summary>Conclui uma composição de texto especificado.</summary>
+        <returns>**True** se a composição de texto com êxito concluída; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Gerado quando *composição* é **nulo**.</exception>
+        <exception cref="T:System.ArgumentException">Gerado quando não há nenhum Gerenciador de entrada associado *composição*, ou quando a composição de texto já está marcada como concluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewTextInputEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewTextInputEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewTextInputEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TextCompositionManager.PreviewTextInputEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInput" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewTextInputStartEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewTextInputStartEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewTextInputStartEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TextCompositionManager.PreviewTextInputStartEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInputStart" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewTextInputUpdateEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewTextInputUpdateEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewTextInputUpdateEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdateEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewTextInputHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewTextInputHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewTextInputHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.RemovePreviewTextInputHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência do qual o manipulador de eventos será removido.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInput" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Remove um manipulador para a versão de túnel desse evento.  Para obter informações sobre a versão bolha desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.TextInput>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewTextInputStartHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewTextInputStartHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewTextInputStartHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.RemovePreviewTextInputStartHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência do qual o manipulador de eventos será removido.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputStart" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Remove um manipulador para a versão de túnel desse evento.  Para obter informações sobre a versão bolha desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.TextInputStart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewTextInputUpdateHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewTextInputUpdateHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewTextInputUpdateHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.RemovePreviewTextInputUpdateHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência do qual o manipulador de eventos será removido.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Remove um manipulador para a versão de túnel desse evento.  Para obter informações sobre a versão bolha desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.TextInputUpdate>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTextInputHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveTextInputHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveTextInputHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.RemoveTextInputHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência do qual o manipulador de eventos será removido.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInput" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Remove um manipulador para a versão bolha desse evento.  Para obter informações sobre a versão de túnel desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.PreviewTextInput>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTextInputStartHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveTextInputStartHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveTextInputStartHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.RemoveTextInputStartHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência do qual o manipulador de eventos será removido.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputStart" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Remove um manipulador para a versão bolha desse evento.  Para obter informações sobre a versão de túnel desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.PreviewTextInputStart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTextInputUpdateHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveTextInputUpdateHandler (System.Windows.DependencyObject element, System.Windows.Input.TextCompositionEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveTextInputUpdateHandler(class System.Windows.DependencyObject element, class System.Windows.Input.TextCompositionEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.RemoveTextInputUpdateHandler(System.Windows.DependencyObject,System.Windows.Input.TextCompositionEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.TextCompositionEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência do qual o manipulador de eventos será removido.  O objeto de dependência deve ser um <see cref="T:System.Windows.UIElement" /> ou um <see cref="T:System.Windows.ContentElement" />.</param>
+        <param name="handler">Um delegado que designa o manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputUpdate" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Remove um manipulador para a versão bolha desse evento.  Para obter informações sobre a versão de túnel desse evento, consulte <xref:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartComposition">
+      <MemberSignature Language="C#" Value="public static bool StartComposition (System.Windows.Input.TextComposition composition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool StartComposition(class System.Windows.Input.TextComposition composition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.StartComposition(System.Windows.Input.TextComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="composition" Type="System.Windows.Input.TextComposition" />
+      </Parameters>
+      <Docs>
+        <param name="composition">Um <see cref="T:System.Windows.Input.TextComposition" /> objeto para começar.</param>
+        <summary>Inicia uma composição de texto especificado.</summary>
+        <returns>**True** se a composição de texto com êxito iniciada; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextInputEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent TextInputEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent TextInputEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TextCompositionManager.TextInputEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.TextCompositionManager.TextInput" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextInputStartEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent TextInputStartEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent TextInputStartEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TextCompositionManager.TextInputStartEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputStart" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextInputUpdateEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent TextInputUpdateEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent TextInputUpdateEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TextCompositionManager.TextInputUpdateEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.TextCompositionManager.TextInputUpdate" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateComposition">
+      <MemberSignature Language="C#" Value="public static bool UpdateComposition (System.Windows.Input.TextComposition composition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool UpdateComposition(class System.Windows.Input.TextComposition composition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TextCompositionManager.UpdateComposition(System.Windows.Input.TextComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="composition" Type="System.Windows.Input.TextComposition" />
+      </Parameters>
+      <Docs>
+        <param name="composition">Um <see cref="T:System.Windows.Input.TextComposition" /> objeto para atualizar.</param>
+        <summary>Atualiza uma composição de texto especificado.</summary>
+        <returns>**True** se a composição de texto com êxito atualizada; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

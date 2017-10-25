@@ -1,0 +1,98 @@
+<Type Name="Table+RowControlCollection" FullName="System.Web.UI.WebControls.Table+RowControlCollection">
+  <TypeSignature Language="C#" Value="protected class Table.RowControlCollection : System.Web.UI.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit Table/RowControlCollection extends System.Web.UI.ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Table.RowControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a coleção de <see cref="T:System.Web.UI.WebControls.TableRow" /> objetos em um <see cref="T:System.Web.UI.WebControls.Table" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.Table.RowControlCollection> coleção é retornada pelo <xref:System.Web.UI.Control.Controls%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle. Somente <xref:System.Web.UI.WebControls.TableRow> objetos podem ser adicionados a este <xref:System.Web.UI.WebControls.Table.RowControlCollection>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Table.RowControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">O <see cref="T:System.Web.UI.Control" /> para adicionar ao <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" />.</param>
+        <summary>Adiciona o <see cref="T:System.Web.UI.Control" /> o objeto para o <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Table.RowControlCollection.Add%2A> método para adicionar um novo controle para o <xref:System.Web.UI.WebControls.Table.RowControlCollection> coleção. O controle especificado é adicionado ao final da matriz. O controle pode ser apenas uma instância de um <xref:System.Web.UI.WebControls.TableRow> controle.  
+  
+ Para adicionar um controle para o <xref:System.Web.UI.WebControls.Table.RowControlCollection> coleção em um local de índice específico, use o <xref:System.Web.UI.WebControls.Table.RowControlCollection.AddAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O objeto especificado pelo <paramref name="child" /> não é um <see cref="T:System.Web.UI.WebControls.TableRow" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public override void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Table.RowControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na matriz à qual você deseja adicionar o controle filho.</param>
+        <param name="child">O objeto <see langword="Control" /> a ser adicionado ao <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" />.</param>
+        <summary>Adiciona o <see cref="T:System.Web.UI.Control" /> o objeto para o <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" /> coleção. O novo controle é adicionado para a matriz no local do índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Table.RowControlCollection.AddAt%2A> método para adicionar um novo controle para o <xref:System.Web.UI.WebControls.Table.RowControlCollection> coleção em um local especificado. O controle pode ser apenas uma instância de um <xref:System.Web.UI.WebControls.TableRow> controle.  
+  
+ Para adicionar um controle para o <xref:System.Web.UI.WebControls.Table.RowControlCollection> no final o <xref:System.Web.UI.WebControls.Table.RowControlCollection>, use o <xref:System.Web.UI.WebControls.Table.RowControlCollection.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O controle não permite controles filho.</exception>
+        <exception cref="T:System.ArgumentException">O valor do filho é <see langword="null" />.  
+  
+ -ou-  
+  
+ O objeto não é um <see cref="T:System.Web.UI.WebControls.TableRow" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

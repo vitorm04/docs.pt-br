@@ -1,0 +1,13 @@
+<Namespace Name="System.Resources.Tools">
+  <Docs>
+    <summary>O <see cref="N:System.Resources.Tools" /> namespace contém o <see cref="T:System.Resources.Tools.StronglyTypedResourceBuilder" /> classe, que oferece suporte para recursos fortemente tipados. Começando com o .NET Framework versão 2.0, esse recurso de tempo de compilação encapsula o acesso aos recursos criando classes que contêm um conjunto de estática somente leitura (<see langword="get" />) propriedades, tornando mais fácil de consumir recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre recursos fortemente tipados, consulte <xref:System.Resources.Tools.StronglyTypedResourceBuilder>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

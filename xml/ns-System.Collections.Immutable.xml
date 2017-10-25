@@ -1,0 +1,34 @@
+<Namespace Name="System.Collections.Immutable">
+  <Docs>
+    <summary>O <see cref="N:System.Collections.Immutable" /> namespace contém interfaces e classes que definem coleções imutáveis. Há suporte para essas classes começando com [!INCLUDE[net_v45](~/includes/net-v45-md.md)]. Usá-los para criar aplicativos que se destinam a área de trabalho, [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)], [!INCLUDE[net_portable](~/includes/net-portable-md.md)] e Windows Phone 8.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+## Remarks  
+Com coleções imutáveis, você pode:
+
+- Compartilhe uma coleção de forma que o consumidor pode ter certeza de que a coleção nunca é alterado.
+
+- Oferecer acesso thread-safe implícito em aplicativos com multithread (sem bloqueios necessários para acessar coleções).
+
+- Seguir práticas de programação funcionais.
+
+- Modificar uma coleção durante a enumeração, ao mesmo tempo em que assegura que a coleção original não será alterada.
+
+As classes de coleção imutável estão disponíveis com o núcleo do .NET, no entanto, eles não são parte da biblioteca de classes principal distribuída com o .NET Framework. Eles estão disponíveis a partir do .NET Framework 4.5 por meio do NuGet.
+
+Para instalar as coleções imutáveis por meio do NuGet:
+
+1. Abra seu projeto no Visual Studio e escolha **gerenciar pacotes NuGet** do **projeto** menu.
+
+2. Opcionalmente, selecione o **incluir pré-lançamento** caixa de seleção. Essa opção oferece acesso a novas versões de pré-lançamento das classes imutáveis, conforme elas forem disponibilizadas.
+
+3. Use o **pesquisa** para localizar o **System.Collections.Immutable** pacote.
+
+4. No painel esquerdo, selecione o **System.Collections.Immutable** pacote. No painel direito, selecione a versão desejada e clique em instalar.
+
+As etapas de instalação descritas acima são para Visual Studio 2015. Para outras versões do Visual Studio, as etapas podem ser ligeiramente diferentes devido a diferenças na interface do usuário (IU).
+  
+ ]]></format>      
+    </remarks>
+  </Docs>
+</Namespace>

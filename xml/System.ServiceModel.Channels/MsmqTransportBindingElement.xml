@@ -1,0 +1,365 @@
+<Type Name="MsmqTransportBindingElement" FullName="System.ServiceModel.Channels.MsmqTransportBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class MsmqTransportBindingElement : System.ServiceModel.Channels.MsmqBindingElementBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsmqTransportBindingElement extends System.ServiceModel.Channels.MsmqBindingElementBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MsmqTransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.MsmqBindingElementBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento de associação usado para especificar as propriedades de comunicação de enfileiramento de mensagens para um serviço do Windows Communication Foundation (WCF) que usa o protocolo nativo do enfileiramento de mensagens (MSMQ).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.MsmqTransportBindingElement> permite que o usuário definir as propriedades do canal de comunicação em fila. O canal de comunicação em fila utiliza o enfileiramento de mensagens para o transporte.  
+  
+ Essa associação é o elemento de associação padrão usado pela associação de padrão do serviço de enfileiramento de mensagens (<xref:System.ServiceModel.NetMsmqBinding>).  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/service.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqTransportBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.MsmqTransportBindingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/service.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqTransportBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Um <see cref="T:System.ServiceModel.Channels.IOutputSessionChannel" /> ou um <see cref="T:System.ServiceModel.Channels.IOutputChannel" /> classe.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> com a qual criar a fábrica de canais.</param>
+        <summary>Cria uma fábrica de canais usando o contexto fornecido.</summary>
+        <returns>Uma fábrica de canais de enfileiramento de mensagens (MSMQ) que pode ser usada para criar canais para enviar mensagens para aplicativos de enfileiramento de mensagens existentes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma fábrica de canais é criada e inicializada usando as propriedades que foram definidas no elemento de associação. A fábrica de canais inicializado, em seguida, é usada para criar canais de saída que podem ser usados para enviar mensagens para uma fila de mensagens.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de contexto é nulo.</exception>
+        <exception cref="T:System.ArgumentException">O TChannel não é IOutputChannel ou IOutputSessionChannel.</exception>
+        <exception cref="T:System.InvalidOperationException">MsmqTransportSecurity.MsmqProtectionLevel é EncryptAndSign e UseActiveDirectory é false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqTransportBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal a ser usado para criar o ouvinte de canal. Tipos de canal permitidos são <see cref="T:System.ServiceModel.Channels.IInputSessionChannel" /> ou um <see cref="T:System.ServiceModel.Channels.IInputChannel" /> classe.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> com a qual criar o ouvinte de canal.</param>
+        <summary>Cria um ouvinte de canal usando o contexto fornecido.</summary>
+        <returns>Um ouvinte de canal de enfileiramento de mensagens (MSMQ) que pode ser usado para criar canais para receber mensagens de aplicativos existentes do MSMQ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de contexto é nulo.</exception>
+        <exception cref="T:System.ArgumentException">O TChannel não é IInputChannel ou IInputSessionChannel.</exception>
+        <exception cref="T:System.InvalidOperationException">MsmqTransportSecurity.MsmqAuthenticationMode é certificado ou WindowsDomain e MsmqTransportSecurity.MsmqProtectionLevel é None.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqTransportBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal a ser usado para criar o ouvinte de canal. Tipos de canal permitidos são <see cref="T:System.ServiceModel.Channels.IOutputSessionChannel" /> ou um <see cref="T:System.ServiceModel.Channels.IOutputChannel" /> classe.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> com a qual criar a fábrica de canais.</param>
+        <summary>Retorna um valor booliano que indica se você pode criar uma fábrica de canais com o contexto fornecido.</summary>
+        <returns>
+          <see langword="true" />Se você pode criar uma fábrica de canais com o contexto fornecido; Caso contrário, <see langword="false" />. Retorna o elemento de associação <see langword="true" /> somente quando <paramref name="TChannel" /> é <see cref="T:System.ServiceModel.Channels.IOutputChannel" /> ou <see cref="T:System.ServiceModel.Channels.IOutputSessionChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqTransportBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal a ser usado para criar o ouvinte de canal. Tipos de canal permitidos são <see cref="T:System.ServiceModel.Channels.IInputSessionChannel" /> ou um <see cref="T:System.ServiceModel.Channels.IInputChannel" /> classe.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> com a qual criar o ouvinte de canal.</param>
+        <summary>Retorna um valor booliano que indica se você pode criar um ouvinte de canal com o contexto fornecido.</summary>
+        <returns>
+          <see langword="true" />Se você pode criar um ouvinte de canal com o contexto fornecido; Caso contrário, <see langword="false" />.  
+  
+ Retorna a associação <see langword="true" /> somente quando <paramref name="TChannel" /> é <see cref="T:System.ServiceModel.Channels.IInputChannel" /> ou <see cref="T:System.ServiceModel.Channels.IInputSessionChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqTransportBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um clone do elemento de associação.</summary>
+        <returns>Um clone do elemento de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPoolSize">
+      <MemberSignature Language="C#" Value="public int MaxPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqTransportBindingElement.MaxPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um inteiro que especifica o tamanho máximo do pool que contém objetos de mensagem interno do Message Queuing (MSMQ).</summary>
+        <value>Um inteiro que especifica o tamanho máximo do pool que contém objetos de mensagem internos do Message Queuing.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O pool de objetos de mensagem enfileiramento interno é usado para evitar alocações desses objetos ao enviar e receber mensagens. O tamanho máximo do pool é um parâmetro de ajuste de desempenho. O valor padrão é 8.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueTransferProtocol">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.QueueTransferProtocol QueueTransferProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.QueueTransferProtocol QueueTransferProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqTransportBindingElement.QueueTransferProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueueTransferProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de enumeração que indica o transporte de canal de comunicação em fila que esta associação usa.</summary>
+        <value>Um <see cref="T:System.ServiceModel.QueueTransferProtocol" /> valor de enumeração que indica o transporte usado para entrega de mensagens entre os gerentes de fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagem de enfileiramento de mensagens (MSMQ) não oferece suporte a endereçamento de Active Directory ao usar confiável de mensagens protocolo SRMP (SOAP), portanto, não defina <xref:System.ServiceModel.Channels.MsmqTransportBindingElement.QueueTransferProtocol%2A> para <xref:System.ServiceModel.QueueTransferProtocol.Srmp> ou <xref:System.ServiceModel.QueueTransferProtocol.Srmp> quando <xref:System.ServiceModel.Channels.MsmqTransportBindingElement.UseActiveDirectory%2A> é definido como `true`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.ServiceModel.QueueTransferProtocol" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqTransportBindingElement.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que contém o esquema de endereçamento que é usado por este elemento de associação de transporte.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o esquema de endereçamento que é usado por este elemento de associação de transporte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.MsmqTransportBindingElement.Scheme%2A> propriedade retorna a cadeia de caracteres "NET. MSMQ".  
+  
+ O enfileiramento de mensagens (MSMQ) na fila transporte der suporte a vários esquemas de endereçamento, incluindo NET. MSMQ.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseActiveDirectory">
+      <MemberSignature Language="C#" Value="public bool UseActiveDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseActiveDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqTransportBindingElement.UseActiveDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor booliano que indica se os endereços de fila devem ser convertidos usando o Active Directory.</summary>
+        <value>
+          <see langword="true" />Se os endereços de fila devem ser convertidos usando o Active Directory Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Endereços de fila do enfileiramento de mensagens (MSMQ) de mensagem podem consistir em nomes de caminho ou nomes de formato direto. Com um nome de formato direto, MSMQ resolve o nome da fila usando o IP, NetBIOS ou DNS. Com um nome de caminho, MSMQ resolve o nome da fila usando o Active Directory.  
+  
+ Por padrão, o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] transporte em fila converte o URI de uma fila de mensagens para um nome de formato direto. Definindo o <xref:System.ServiceModel.Channels.MsmqTransportBindingElement.UseActiveDirectory%2A> propriedade `true`, um aplicativo pode especificar que o transporte em fila deve resolver o nome do computador usando o Active Directory em vez de DNS, NetBIOS ou IP.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ImperativeNetMsmq#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_imperativenetmsmq/cs/snippets.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

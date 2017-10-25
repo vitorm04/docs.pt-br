@@ -1,0 +1,279 @@
+<Type Name="StorePermissionFlags" FullName="System.Security.Permissions.StorePermissionFlags">
+  <TypeSignature Language="C#" Value="public enum StorePermissionFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed StorePermissionFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.StorePermissionFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o acesso permitido aos repositórios de certificados X.509.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitas dessas permissões de acesso representam potencial ameaças de segurança e privacidade. Excelente cuidado ao conceder acesso a repositórios. Uma breve descrição do tipo de ameaça exposta por um acesso pode ser encontrada no resumo para o acesso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.StorePermissionFlags> enumeração.  
+  
+ [!code-cpp[System.Security.Permissions.StorePermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StorePermission/CPP/storepermission.cpp#2)]
+ [!code-csharp[System.Security.Permissions.StorePermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StorePermission/CS/storepermission.cs#2)]
+ [!code-vb[System.Security.Permissions.StorePermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StorePermission/VB/program.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddToStore">
+      <MemberSignature Language="C#" Value="AddToStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags AddToStore = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.AddToStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de adicionar um certificado a um repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por motivos de segurança, essa capacidade deve ser concedida somente a código altamente confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags AllFlags = int32(247)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de executar todas as operações de certificado e repositório.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStore">
+      <MemberSignature Language="C#" Value="CreateStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags CreateStore = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.CreateStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de criar um novo repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novas lojas são criadas chamando o <xref:System.Security.Cryptography.X509Certificates.X509Store.Open%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteStore">
+      <MemberSignature Language="C#" Value="DeleteStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags DeleteStore = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.DeleteStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de excluir um repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade não é exposta pelo <xref:System.Security.Cryptography.X509Certificates.X509Store> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateCertificates">
+      <MemberSignature Language="C#" Value="EnumerateCertificates" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags EnumerateCertificates = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de enumerar os certificados em um repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por motivos de privacidade, esse recurso deve ser concedido somente a código totalmente confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateStores">
+      <MemberSignature Language="C#" Value="EnumerateStores" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags EnumerateStores = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.EnumerateStores" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de enumerar os repositórios em um computador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade não é exposta pelo <xref:System.Security.Cryptography.X509Certificates.X509Store> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não foi concedida a permissão para executar operações de certificado e de repositório.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStore">
+      <MemberSignature Language="C#" Value="OpenStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags OpenStore = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.OpenStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de abrir um repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de abrir um repositório não inclui a capacidade para enumerar certificados (que gera problemas de privacidade) ou para adicionar ou remover certificados (o que gera a questões de segurança).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFromStore">
+      <MemberSignature Language="C#" Value="RemoveFromStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags RemoveFromStore = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.RemoveFromStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de remover um certificado de um repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa capacidade deve ser concedida somente a código altamente confiável porque a remoção de um certificado pode resultar em uma negação de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

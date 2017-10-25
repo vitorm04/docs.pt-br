@@ -1,0 +1,543 @@
+<Type Name="ListView+CheckedIndexCollection" FullName="System.Windows.Forms.ListView+CheckedIndexCollection">
+  <TypeSignature Language="C#" Value="public class ListView.CheckedIndexCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ListView/CheckedIndexCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListView.CheckedIndexCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção que contém os índices para os itens marcados em um controle de exibição de lista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.ListView.CheckedIndexCollection> armazena os índices para os itens selecionados em um <xref:System.Windows.Forms.ListView> controle. Itens podem ser verificados apenas se o <xref:System.Windows.Forms.ListView.CheckBoxes%2A> propriedade o <xref:System.Windows.Forms.ListView> controle é definido como `true`. Os índices são armazenados no <xref:System.Windows.Forms.ListView.CheckedIndexCollection> são as posições de índice dentro do <xref:System.Windows.Forms.ListView.ListViewItemCollection>. O <xref:System.Windows.Forms.ListView.ListViewItemCollection> armazena todos os itens exibidos no <xref:System.Windows.Forms.ListView> controle.  
+  
+ A tabela a seguir é um exemplo de como o <xref:System.Windows.Forms.ListView.ListViewItemCollection> armazena os itens do <xref:System.Windows.Forms.ListView> , bem como seus estados marcados em um exemplo <xref:System.Windows.Forms.ListView> controle.  
+  
+|Índice|Item|Estado em ListView selecionado|  
+|-----------|----------|-----------------------------------|  
+|0|Item1|Não Selecionado|  
+|1|Item2|Selecionado|  
+|2|Item3|Não Selecionado|  
+|3|Item4|Selecionado|  
+|4|Item5|Selecionado|  
+  
+ Com base no <xref:System.Windows.Forms.ListView.ListViewItemCollection> exemplo na tabela anterior, a tabela a seguir demonstra como o <xref:System.Windows.Forms.ListView.CheckedIndexCollection> seria exibido.  
+  
+|Índice|Índice do item selecionado no ListViewItemCollection|  
+|-----------|-----------------------------------------------------|  
+|0|1|  
+|1|3|  
+|2|4|  
+  
+ Você pode usar as propriedades e métodos dessa classe para executar uma variedade de tarefas com a coleção. O <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains%2A> método permite que você determine se uma posição de índice do <xref:System.Windows.Forms.ListView.ListViewItemCollection> é um dos índices armazenados no <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. Quando você sabe que o item na coleção, você pode usar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf%2A> método para determinar a posição do índice de <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckedIndexCollection (System.Windows.Forms.ListView owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListView owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.#ctor(System.Windows.Forms.ListView)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListView" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Um controle <see cref="T:System.Windows.Forms.ListView" /> que é o proprietário da coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância dessa classe sem associá-lo com um <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (int checkedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(int32 checkedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.Contains(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="checkedIndex">O índice a ser localizado na coleção.</param>
+        <summary>Determina se o índice especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o índice especificado a partir de <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> para o <see cref="T:System.Windows.Forms.ListView" /> é um item na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains%2A> método permite que você determine se uma posição de índice do <xref:System.Windows.Forms.ListView.ListViewItemCollection> é um dos índices check armazenados no <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. Quando você sabe que um item na coleção de índice marcada, você pode usar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf%2A> método para determinar a posição do índice de <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>Número de itens na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o número de itens verificados no <xref:System.Windows.Forms.ListView>. Você pode usar esse valor quando são percorrer os valores da coleção e precisa fornecer um número de iterações para executar o loop.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar na coleção de índice marcada.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de índices marcada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (int checkedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(int32 checkedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="checkedIndex">O índice de base zero do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> localizar na coleção.</param>
+        <summary>Retorna o índice dentro de <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" /> do índice especificado do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> do controle de exibição de lista.</summary>
+        <returns>O índice baseado em zero na coleção onde o índice especificado do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> está localizado dentro a <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />; caso contrário, -1 se o índice não está localizado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que você sabe que um item está na coleção de índice checked (usando o <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains%2A> método), você pode usar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf%2A> método para determinar a posição do índice no <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é sempre `true` para esta coleção. Os itens na coleção só podem ser modificados pelo <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item na coleção a ser obtida.</param>
+        <summary>Obtém o valor do índice especificado nesta coleção.</summary>
+        <value>O valor de índice do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> que é armazenado na localização especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse indexador permite obter um índice específico a partir de <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. O armazenados na coleção é um índice no <xref:System.Windows.Forms.ListView.ListViewItemCollection> do <xref:System.Windows.Forms.ListView> que representa um item de check-na <xref:System.Windows.Forms.ListView>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor que 0 ou maior ou igual ao valor da propriedade <see cref="P:System.Windows.Forms.ListView.CheckedIndexCollection.Count" /> de <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Uma matriz do tipo <see cref="T:System.Int32" />.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia a coleção de índices de check-item em uma matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz deve conter inteiros com sinal de 32 bits ou deve ser um <xref:System.Object> matriz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArrayTypeMismatchException">O tipo de matriz não pode ser convertido em um <see cref="T:System.Int32" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção de controles.</summary>
+        <value>O objeto usado para sincronizar a coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser adicionado ao <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</param>
+        <summary>Adiciona um item à coleção.</summary>
+        <returns>O índice de base zero onde <paramref name="value" /> está localizado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> classe diretamente. Para adicionar um item para o <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Checked%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection> classe diretamente. Para limpar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, defina o <xref:System.Windows.Forms.ListViewItem.Checked%2A> propriedade `false` para cada <xref:System.Windows.Forms.ListViewItem> no <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object checkedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object checkedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkedIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="checkedIndex">Um índice para localizar no <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</param>
+        <summary>Verifica se o índice correspondente com o <see cref="T:System.Windows.Forms.ListViewItem" /> é verificada.</summary>
+        <returns>
+          <see langword="true" />Se o índice é encontrado na <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object checkedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object checkedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkedIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="checkedIndex">O índice de base zero do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> localizar na coleção.</param>
+        <summary>Retorna o índice do objeto especificado no <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</summary>
+        <returns>O índice baseado em zero na coleção onde o índice especificado do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> está localizado, se ele estiver no <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />; caso contrário, -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O objeto a ser adicionado ao <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
+        <summary>Insere um item na coleção em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection> classe diretamente. Para adicionar um item para o <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Checked%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define um objeto de <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</summary>
+        <value>O objeto a partir de <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> que é armazenado no local especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser removido do <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</param>
+        <summary>Remove a primeira ocorrência de um item da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection> classe diretamente. Para remover um item do <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Checked%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.CheckedIndexCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove um item da coleção em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.CheckedIndexCollection> classe diretamente. Para remover um item do <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Checked%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

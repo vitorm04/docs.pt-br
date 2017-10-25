@@ -1,0 +1,114 @@
+<Type Name="XmlXapResolver" FullName="System.Xml.XmlXapResolver">
+  <TypeSignature Language="C#" Value="public class XmlXapResolver : System.Xml.XmlResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlXapResolver extends System.Xml.XmlResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlXapResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O tipo XmlXapResolver é usado para resolver os recursos no pacote XAP do aplicativo do Silverlight.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlXapResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlXapResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.XmlXapResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntity">
+      <MemberSignature Language="C#" Value="public override object GetEntity (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetEntity(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlXapResolver.GetEntity(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">O URI retornado de <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" />.</param>
+        <param name="role">A versão atual não usa esse parâmetro durante a resolução de URIs. Isso é fornecido para fins de extensibilidade futura. Por exemplo, isso pode ser mapeado para o xlink: função e usado como um argumento específico da implementação em outros cenários.</param>
+        <param name="ofObjectToReturn">O tipo de objeto a ser retornado. A versão atual somente retorna <see cref="T:System.IO.Stream" /> objetos.</param>
+        <summary>Mapeia um URI para um objeto que contém o recurso real.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" />. Se o fluxo não for encontrado, uma exceção será lançada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterApplicationResourceStreamResolver">
+      <MemberSignature Language="C#" Value="public static void RegisterApplicationResourceStreamResolver (System.Xml.IApplicationResourceStreamResolver appStreamResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterApplicationResourceStreamResolver(class System.Xml.IApplicationResourceStreamResolver appStreamResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlXapResolver.RegisterApplicationResourceStreamResolver(System.Xml.IApplicationResourceStreamResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appStreamResolver" Type="System.Xml.IApplicationResourceStreamResolver" />
+      </Parameters>
+      <Docs>
+        <param name="appStreamResolver">Um resolvedor de recursos do aplicativo para registrar.</param>
+        <summary>Registra um resolvedor de fluxo de recurso para o aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

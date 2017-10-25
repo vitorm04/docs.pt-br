@@ -1,0 +1,143 @@
+<Type Name="TimeSpanSecondsConverter" FullName="System.Configuration.TimeSpanSecondsConverter">
+  <TypeSignature Language="C#" Value="public class TimeSpanSecondsConverter : System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TimeSpanSecondsConverter extends System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.TimeSpanSecondsConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationConverterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte um período de tempo, expressado em segundos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este tipo, como todos os outros conversor tipos de configuração, converte cadeias de caracteres encontradas no arquivo de configuração de e para as propriedades com rigidez de tipos relacionadas.  
+  
+ Em particular, o <xref:System.Configuration.TimeSpanSecondsConverter> converte <xref:System.String> segundos, atribuídos a uma propriedade de configuração, a <xref:System.TimeSpan> segundos e vice-versa.  
+  
+ O <xref:System.Configuration.TimeSpanMinutesConverter> persistir os valores do tipo `long` que representam um número de segundos.  
+  
+   
+  
+## Examples  
+ Consulte os exemplos de código em <xref:System.Configuration.InfiniteTimeSpanConverter> e <xref:System.Configuration.TimeSpanMinutesConverter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimeSpanSecondsConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.TimeSpanSecondsConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa os tipos de conversor fornecidos pelo sistema. A única vez em que você precisa usar o <xref:System.Configuration.TimeSpanSecondsConverter.%23ctor%2A> construtor é quando você cria seu próprio tipo de conversão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="data">O <see cref="T:System.String" /> objeto converter.</param>
+        <summary>Converte uma <see cref="T:System.String" /> em uma <see cref="T:System.TimeSpan" />.</summary>
+        <returns>O <see cref="T:System.TimeSpan" /> que representa o <paramref name="data" /> parâmetro em segundos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.TimeSpanSecondsConverter.ConvertFrom%2A> método quando ele lê a partir de um arquivo de configuração para converter um <xref:System.String> valor <xref:System.TimeSpan>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="data" />não pode ser analisado como um valor inteiro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="value">O valor a converter.</param>
+        <param name="type">O tipo para o qual converter.</param>
+        <summary>Converte uma <see cref="T:System.TimeSpan" /> em uma <see cref="T:System.String" />.</summary>
+        <returns>O <see cref="T:System.String" /> que representa o <paramref name="value" /> parâmetro em minutos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.TimeSpanSecondsConverter.ConvertTo%2A> método ao gravar em um arquivo de configuração para converter um <xref:System.TimeSpan> para um <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

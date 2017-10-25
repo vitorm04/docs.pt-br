@@ -1,0 +1,322 @@
+<Type Name="CookieParameter" FullName="System.Web.UI.WebControls.CookieParameter">
+  <TypeSignature Language="C#" Value="public class CookieParameter : System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CookieParameter extends System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CookieParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Parameter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("CookieName")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Vincula o valor de um cookie HTTP do lado do cliente a um objeto de parâmetro. O parâmetro pode ser usado em uma consulta parametrizada ou em um comando com parâmetros para selecionar, filtrar ou atualizar dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.CookieParameter> classe para associar o valor de um cookie HTTP do cliente passado como parte de uma solicitação HTTP para um parâmetro usado por controles de fonte de dados do ASP.NET.  
+  
+ O <xref:System.Web.UI.WebControls.CookieParameter> classe fornece a <xref:System.Web.UI.WebControls.CookieParameter.CookieName%2A> propriedade, que identifica o nome do <xref:System.Web.HttpCookie> objeto ao qual associar, além daqueles herdado da <xref:System.Web.UI.WebControls.Parameter> classe. O <xref:System.Web.UI.WebControls.CookieParameter> classe tenta associar o cookie nomeado toda vez que o <xref:System.Web.UI.WebControls.CookieParameter.Evaluate%2A> método é chamado.  
+  
+> [!IMPORTANT]
+>  Controles que associam os dados para o parâmetro podem lançar uma exceção se uma <xref:System.Web.UI.WebControls.CookieParameter> objeto for especificado, mas nenhum cookie correspondente é passado com a solicitação HTTP. Da mesma forma, eles podem não exibe dados se o cookie é passado com `null`. Definir o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade para evitar essas situações onde apropriado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.SqlDataSource> controle e <xref:System.Web.UI.WebControls.CookieParameter> objeto associado a um cookie HTTP para exibir dados do banco de dados Northwind Traders em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.CookieParameter_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_1/CS/cp1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.CookieParameter_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_1/VB/cp1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância não nomeada da classe <see cref="T:System.Web.UI.WebControls.CookieParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.CookieParameter> objeto criado com o <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor é inicializada com valores padrão para todas as suas propriedades. A propriedade <xref:System.Web.UI.WebControls.CookieParameter.CookieName%2A> é inicializada com <xref:System.String.Empty?displayProperty=nameWithType>. Além disso, o <xref:System.Web.UI.WebControls.Parameter.Name%2A> propriedade é inicializada para <xref:System.String.Empty?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.Parameter.Type%2A> propriedade é inicializada para <xref:System.TypeCode?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.Parameter.Direction%2A> propriedade é inicializada para <xref:System.Data.ParameterDirection.Input>e o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade é inicializada para `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.CookieParameter> objeto usando o <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor, defina seu <xref:System.Web.UI.WebControls.Parameter.Name%2A>, <xref:System.Web.UI.WebControls.Parameter.Type%2A>, e <xref:System.Web.UI.WebControls.CookieParameter.CookieName%2A> propriedades e, em seguida, adicioná-lo para um <xref:System.Web.UI.WebControls.SqlDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.CookieParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_2/CS/cookieparam2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.CookieParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_2/VB/cookieparam2vb.aspx#1)]  
+  
+ O módulo de lógica a seguir é usado com a página de Web Forms anterior.  
+  
+ [!code-csharp[System.Web.UI.WebControls.CookieParameter_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_2/CS/cookieparam2cs.aspx.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.CookieParameter_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_2/VB/cookieparam2vb.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CookieParameter (System.Web.UI.WebControls.CookieParameter original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.CookieParameter original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.#ctor(System.Web.UI.WebControls.CookieParameter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Web.UI.WebControls.CookieParameter" />
+      </Parameters>
+      <Docs>
+        <param name="original">Um <see cref="T:System.Web.UI.WebControls.CookieParameter" /> do qual a instância atual é inicializada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.CookieParameter" /> classe com os valores da instância especificada pelo <paramref name="original" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor é um `protected` construtor usado para clonar um <xref:System.Web.UI.WebControls.CookieParameter> instância. Os valores de propriedade de <xref:System.Web.UI.WebControls.CookieParameter> do objeto, incluindo <xref:System.Web.UI.WebControls.CookieParameter.CookieName%2A>, <xref:System.Web.UI.WebControls.Parameter.Name%2A>, e <xref:System.Web.UI.WebControls.Parameter.Type%2A>, são transferidos para a nova instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieParameter (string name, string cookieName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string cookieName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="cookieName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="cookieName">O nome do cookie HTTP associado para o objeto de parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.CookieParameter" /> de classe, usando a cadeia de caracteres especificada para identificar qual cookie HTTP para associar a.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.CookieParameter> objeto criado com o <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado e a cadeia de caracteres que identifica o cookie que associa o parâmetro para. Outras propriedades, incluindo <xref:System.Web.UI.WebControls.Parameter.Type%2A> e <xref:System.Web.UI.WebControls.Parameter.Direction%2A>, são inicializadas com valores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.CookieParameter> objeto usando o <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor e adicione-o a um <xref:System.Web.UI.WebControls.SqlDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção.  
+  
+ [!code-csharp[System.Web.UI.WebControls.CookieParameter_4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_4/CS/cp4cs.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.CookieParameter_4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_4/VB/cp4vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieParameter (string name, System.Data.DbType dbType, string cookieName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.DbType dbType, string cookieName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.#ctor(System.String,System.Data.DbType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="cookieName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="dbType">O tipo de banco de dados que representa o parâmetro.</param>
+        <param name="cookieName">O nome do cookie HTTP associado para o objeto de parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.CookieParameter" /> classe que tem o nome especificado e o tipo de banco de dados e que está associado ao cookie HTTP especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieParameter (string name, TypeCode type, string cookieName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.TypeCode type, string cookieName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.#ctor(System.String,System.TypeCode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.TypeCode" />
+        <Parameter Name="cookieName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">O tipo que representa o parâmetro. O padrão é <see cref="F:System.TypeCode.Object" />.</param>
+        <param name="cookieName">O nome do cookie HTTP associado para o objeto de parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada e fortemente tipada do <see cref="T:System.Web.UI.WebControls.CookieParameter" /> de classe, usando a cadeia de caracteres especificada para identificar qual cookie HTTP para associar a.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.CookieParameter> objeto criado com o <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado, <xref:System.Web.UI.WebControls.Parameter.Type%2A>e a cadeia de caracteres que identifica o cookie que associa o parâmetro para. Somente o <xref:System.Web.UI.WebControls.Parameter.Direction%2A> e <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> propriedades são inicializadas com os valores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.CookieParameter> objeto usando o <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor e adicione-o a um <xref:System.Web.UI.WebControls.SqlDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção.  
+  
+ [!code-csharp[System.Web.UI.WebControls.CookieParameter_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_3/CS/cp3cs.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.CookieParameter_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_3/VB/cp3vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Parameter Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Parameter Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma duplicata do atual <see cref="T:System.Web.UI.WebControls.CookieParameter" /> instância.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.CookieParameter" /> que é uma cópia exata do atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CookieParameter.Clone%2A> chamadas de método de <xref:System.Web.UI.WebControls.CookieParameter.%23ctor%2A> construtor cópia para inicializar uma nova instância do <xref:System.Web.UI.WebControls.CookieParameter> classe com os valores da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieName">
+      <MemberSignature Language="C#" Value="public string CookieName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookieName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CookieParameter.CookieName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do cookie HTTP ao qual o parâmetro está associado.</summary>
+        <value>Uma cadeia de caracteres que identifica o cookie HTTP do lado do cliente ao qual o parâmetro está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CookieParameter.CookieName%2A> propriedade identifica um cookie HTTP, que é representado por um <xref:System.Web.HttpCookie> de objeto e está disponível por meio do atual <xref:System.Web.HttpRequest> objeto. Se o cookie HTTP não está disponível no atual <xref:System.Web.HttpRequest> objeto, o <xref:System.Web.UI.WebControls.CookieParameter.Evaluate%2A> método associa o parâmetro para o valor da <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade, se ele está definido. Se o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade não for definida, o <xref:System.Web.UI.WebControls.CookieParameter.Evaluate%2A> método falhar associar o parâmetro para um valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar declarativamente uma <xref:System.Web.UI.WebControls.SqlDataSource> controle e um <xref:System.Web.UI.WebControls.CookieParameter> objeto associado a um cookie HTTP para exibir dados do banco de dados Northwind Traders em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.CookieParameter_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_1/CS/cp1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.CookieParameter_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_1/VB/cp1vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como criar programaticamente um <xref:System.Web.UI.WebControls.CookieParameter> do objeto, defina suas propriedades e adicioná-lo para um <xref:System.Web.UI.WebControls.SqlDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção.  
+  
+ [!code-csharp[System.Web.UI.WebControls.CookieParameter_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_2/CS/cookieparam2cs.aspx.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.CookieParameter_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CookieParameter_2/VB/cookieparam2vb.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="protected override object Evaluate (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object Evaluate(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CookieParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Atual <see cref="T:System.Web.HttpContext" /> da solicitação.</param>
+        <param name="control">Um <see cref="T:System.Web.UI.Control" /> que é associado à página de Web Forms onde o <see cref="T:System.Web.UI.WebControls.CookieParameter" /> é usado.</param>
+        <summary>Atualiza e retorna o valor da <see cref="T:System.Web.UI.WebControls.CookieParameter" /> objeto.</summary>
+        <returns>Um objeto que representa o valor atualizado do parâmetro. Se o contexto ou a solicitação é <see langword="null" />, o <see cref="M:System.Web.UI.WebControls.CookieParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" /> método retornará nulo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `context` parâmetro é usado pelo <xref:System.Web.UI.WebControls.CookieParameter.Evaluate%2A> método para recuperar a coleção de cookies e o valor do cookie que o <xref:System.Web.UI.WebControls.CookieParameter> objeto associa a. O `control` parâmetro é ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInput">
+      <MemberSignature Language="C#" Value="public bool ValidateInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateInput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CookieParameter.ValidateInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o valor do parâmetro é validado.</summary>
+        <value>
+          <see langword="true" />Se o valor do parâmetro for validado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

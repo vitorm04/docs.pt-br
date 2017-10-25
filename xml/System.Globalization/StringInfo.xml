@@ -1,0 +1,712 @@
+<Type Name="StringInfo" FullName="System.Globalization.StringInfo">
+  <TypeSignature Language="C#" Value="public class StringInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StringInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.StringInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a funcionalidade para dividir uma cadeia de caracteres em elementos de texto e percorrê-los.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework define um elemento de texto como uma unidade de texto que é exibido como um caractere único, ou seja, um grafemas. Um elemento de texto pode ser um caractere base, um par substituto ou um caractere de combinação sequência. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define um par substituto como uma representação de caracteres codificada para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. O padrão Unicode define um combinando sequência como uma combinação de um caractere base e um ou mais caracteres de combinação de caracteres. Um par substituto pode representar um caractere base ou um caractere de combinação.  
+  
+ O <xref:System.Globalization.StringInfo> classe permite que você trabalhe com uma cadeia de caracteres como uma série de elementos textuais em vez de um indivíduo <xref:System.Char> objetos.  
+  
+ Para criar uma instância de um <xref:System.Globalization.StringInfo> objeto que representa uma cadeia de caracteres especificada, você pode fazer o seguinte:  
+  
+-   Chamar o <xref:System.Globalization.StringInfo.%23ctor%28System.String%29> construtor e passe a cadeia de caracteres que o <xref:System.Globalization.StringInfo> objeto é representar como um argumento.  
+  
+-   Chame o padrão <xref:System.Globalization.StringInfo.%23ctor> construtor e atribuir a cadeia de caracteres que o <xref:System.Globalization.StringInfo> objeto é representar o <xref:System.Globalization.StringInfo.String%2A> propriedade.  
+  
+ Você pode trabalhar com os elementos de texto individual em uma cadeia de caracteres de duas maneiras:  
+  
+-   Enumerando cada elemento de texto. Para fazer isso, você deve chamar o <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A> método e, em seguida, chamar repetidamente o <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> método retornado <xref:System.Globalization.TextElementEnumerator> objeto até que o método retornará `false`.  
+  
+-   Chamando o <xref:System.Globalization.StringInfo.ParseCombiningCharacters%2A> método para recuperar uma matriz que contém o índice inicial de cada elemento de texto. Você pode recuperar os elementos de texto individuais passando esses índices para o <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> método.  
+  
+ O exemplo a seguir ilustra as duas formas de trabalhar com os elementos de texto em uma cadeia de caracteres. Ele cria duas cadeias de caracteres:  
+  
+-   `strCombining`, que é uma cadeia de caracteres árabes inclui três elementos de texto com vários <xref:System.Char> objetos. O primeiro elemento de texto é o caractere base árabe LETRA ALEF (U +-627) seguido por HAMZA árabe abaixo (U +-655) e KASRA árabe (U + 0650). O segundo elemento de texto é árabe LETRA HEH (U + 0647) seguido por FATHA árabe (U +-64E). O terceiro elemento de texto é árabe BEH de LETTTER (U + 0628) seguido por Dammatan árabe forma (U + 064C).  
+  
+-   `strSurrogates`, que é uma cadeia de caracteres que contém três pares substitutos: GREGA ACROPHONIC cinco TALENTOS (U + 10148) do suplementares plano multilíngue, U + 20026 do plano ideográfico suplementar e U + F1001 da área de dados particulares do usuário. A codificação UTF-16 de cada caractere é um par substituto que consiste em um substituto alto seguido por um substituto baixo.  
+  
+ Cada cadeia de caracteres é analisada uma vez pelo <xref:System.Globalization.StringInfo.ParseCombiningCharacters%2A> método e, em seguida, o <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A> método. Ambos os métodos corretamente analisar os elementos de texto em duas cadeias de caracteres e exibem os resultados da operação de análise.  
+  
+ [!code-csharp[System.Globalization.StringInfo.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.stringinfo.class/cs/indexing1.cs#1)]
+ [!code-vb[System.Globalization.StringInfo.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.stringinfo.class/vb/indexing1.vb#1)]  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A> e <xref:System.Globalization.StringInfo.ParseCombiningCharacters%2A> métodos de <xref:System.Globalization.StringInfo> classe para manipular uma cadeia de caracteres que contém o substituto e caracteres de combinação.  
+  
+ [!code-cpp[stringinfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/StringInfo/cpp/StringInfo.cpp#1)]
+ [!code-csharp[stringinfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/StringInfo/CS/StringInfo.cs#1)]
+ [!code-vb[stringinfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StringInfo/vb/stringinfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="usage">
+      <para>Internamente, os métodos do <see cref="T:System.Globalization.StringInfo" /> classe chamar os métodos do <see cref="T:System.Globalization.CharUnicodeInfo" /> classe para determinar as categorias de caracteres. Começando com o [!INCLUDE[net_v462](~/includes/net-v462-md.md)], classificação de caractere é baseada em [The Unicode Standard, versão 8.0.0](http://unicode.org/versions/Unicode8.0.0). Para o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] por meio de [!INCLUDE[net_v461](~/includes/net-v461-md.md)], ele se baseia [The Unicode Standard, versão 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Globalization.StringInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do novo <xref:System.Globalization.StringInfo> objeto é inicializado para a cadeia de caracteres vazia (""). Você pode atribuir outra cadeia de caracteres a ele usando o <xref:System.Globalization.StringInfo.String%2A> propriedade.  Você também pode instanciar uma <xref:System.Globalization.StringInfo> objeto que representa uma cadeia de caracteres especificada em uma única etapa chamando o <xref:System.Globalization.StringInfo.%23ctor%28System.String%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringInfo (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para inicializar esse <see cref="T:System.Globalization.StringInfo" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Globalization.StringInfo" /> classe para uma cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor atribui o argumento de valor para o objeto <xref:System.Globalization.StringInfo.String%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto.</param>
+        <summary>Indica se o objeto <see cref="T:System.Globalization.StringInfo" /> atual é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="value" /> parâmetro é um <see cref="T:System.Globalization.StringInfo" /> objeto e seu <see cref="P:System.Globalization.StringInfo.String" /> propriedade igual a <see cref="P:System.Globalization.StringInfo.String" /> propriedade deste <see cref="T:System.Globalization.StringInfo" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Calcula um código hash para o valor atual <see cref="T:System.Globalization.StringInfo" /> objeto.</summary>
+        <returns>Um código de hash inteiro assinado de 32 bits com base no valor da cadeia de caracteres deste <see cref="T:System.Globalization.StringInfo" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento de <xref:System.Globalization.StringInfo.GetHashCode%2A> depende de sua implementação, o que pode ser alterado de uma versão do common language runtime para outro. Isso pode acontecer melhorar o desempenho de <xref:System.Globalization.StringInfo.GetHashCode%2A>. Para tornar o comportamento de <xref:System.Globalization.StringInfo.GetHashCode%2A> constante, o aplicativo deve substituir a implementação de tempo de execução de <xref:System.Globalization.StringInfo.GetHashCode%2A> com uma implementação conhecida nunca alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextTextElement">
+      <MemberSignature Language="C#" Value="public static string GetNextTextElement (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetNextTextElement(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.GetNextTextElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres da qual o elemento de texto será obtido.</param>
+        <summary>Obtém o primeiro elemento de texto de uma cadeia de caracteres especificada.</summary>
+        <returns>Uma cadeia de caracteres que contém o primeiro elemento de texto da cadeia de caracteres especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework define um elemento de texto como uma unidade de texto que é exibido como um caractere único, ou seja, um grafemas. Um elemento de texto pode ser um caractere base, um par substituto ou um caractere de combinação sequência. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define um par substituto como uma representação de caracteres codificada para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define uma combinação sequência como uma combinação de um caractere base e um ou mais caracteres de combinação de caracteres. Um par substituto pode representar um caractere base ou um caractere de combinação.  
+  
+ Esse método só retorna o primeiro elemento de texto. Para percorrer os elementos de texto da cadeia de caracteres, o aplicativo deve usar o <xref:System.Globalization.TextElementEnumerator> objeto gerado pelo <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextTextElement">
+      <MemberSignature Language="C#" Value="public static string GetNextTextElement (string str, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetNextTextElement(string str, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.GetNextTextElement(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres da qual o elemento de texto será obtido.</param>
+        <param name="index">O índice de base zero no qual o elemento de texto começa.</param>
+        <summary>Obtém o elemento de texto no índice especificado da cadeia de caracteres especificada.</summary>
+        <returns>Uma cadeia de caracteres que contém o elemento de texto no índice especificado da cadeia de caracteres especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework define um elemento de texto como uma unidade de texto que é exibido como um caractere único, ou seja, um grafemas. Um elemento de texto pode ser um caractere base, um par substituto ou um caractere de combinação sequência. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define um par substituto como uma representação de caracteres codificada para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. O padrão Unicode define um combinando sequência como uma combinação de um caractere base e um ou mais caracteres de combinação de caracteres. Um par substituto pode representar um caractere base ou um caractere de combinação.  
+  
+ Esse método só retorna o primeiro elemento de texto da subcadeia de caracteres que começa no índice especificado. Para percorrer os elementos de texto da cadeia de caracteres, o aplicativo deve usar o <xref:System.Globalization.TextElementEnumerator> gerado pelo <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo de índices válidos para <paramref name="str" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextElementEnumerator">
+      <MemberSignature Language="C#" Value="public static System.Globalization.TextElementEnumerator GetTextElementEnumerator (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Globalization.TextElementEnumerator GetTextElementEnumerator(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.GetTextElementEnumerator(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.TextElementEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres a iterar.</param>
+        <summary>Retorna um enumerador que itera pelos elementos de texto de toda a cadeia de caracteres.</summary>
+        <returns>Um <see cref="T:System.Globalization.TextElementEnumerator" /> para toda a cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework define um elemento de texto como uma unidade de texto que é exibido como um caractere único, ou seja, um grafemas. Um elemento de texto pode ser um caractere base, um par substituto ou um caractere de combinação sequência. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define um par substituto como uma representação de caracteres codificada para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. O padrão Unicode define um combinando sequência como uma combinação de um caractere base e um ou mais caracteres de combinação de caracteres. Um par substituto pode representar um caractere base ou um caractere de combinação.  
+  
+ O enumerador de elemento de texto é usado somente para leitura de dados na cadeia de caracteres; ele não é possível modificar a cadeia de caracteres subjacente. O enumerador não tem acesso exclusivo para a cadeia de caracteres.  
+  
+ O enumerador está em um estado inválido, se ele está posicionado antes do primeiro elemento de texto na cadeia de caracteres ou depois do último elemento de texto na cadeia de caracteres. Quando o enumerador está em um estado inválido, chamando <xref:System.Globalization.TextElementEnumerator.Current%2A> lança uma exceção.  
+  
+ Inicialmente, o enumerador está posicionado antes do primeiro elemento de texto na cadeia de caracteres. <xref:System.Globalization.TextElementEnumerator.Reset%2A> também traz o enumerador de volta para essa posição. Portanto, após a criação de um enumerador ou depois de <xref:System.Globalization.TextElementEnumerator.Reset%2A> é chamado, <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> deve ser chamado para avançar o enumerador para o primeiro elemento de texto da cadeia de caracteres antes de ler o valor de <xref:System.Globalization.TextElementEnumerator.Current%2A>.  
+  
+ <xref:System.Globalization.TextElementEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> ou <xref:System.Globalization.TextElementEnumerator.Reset%2A> ser chamado.  
+  
+ Após o fim da cadeia de caracteres for passado, o enumerador está novamente em estado e chamado inválido <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> retorna `false`. Chamando <xref:System.Globalization.TextElementEnumerator.Current%2A> lança uma exceção se a última chamada <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> retornou `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a chamar o <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Globalization.StringInfo> classe.  
+  
+ [!code-cpp[stringinfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/StringInfo/cpp/StringInfo.cpp#1)]
+ [!code-csharp[stringinfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/StringInfo/CS/StringInfo.cs#1)]
+ [!code-vb[stringinfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StringInfo/vb/stringinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextElementEnumerator">
+      <MemberSignature Language="C#" Value="public static System.Globalization.TextElementEnumerator GetTextElementEnumerator (string str, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Globalization.TextElementEnumerator GetTextElementEnumerator(string str, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.GetTextElementEnumerator(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.TextElementEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres a iterar.</param>
+        <param name="index">O índice de base zero no qual iniciar a iteração.</param>
+        <summary>Retorna um enumerador que itera por meio dos elementos de texto da cadeia de caracteres, começando no índice especificado.</summary>
+        <returns>Um <see cref="T:System.Globalization.TextElementEnumerator" /> para a cadeia de caracteres começando em <paramref name="index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework define um elemento de texto como uma unidade de texto que é exibido como um caractere único, ou seja, um grafemas. Um elemento de texto pode ser um caractere base, um par substituto ou um caractere de combinação sequência. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define um par substituto como uma representação de caracteres codificada para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. O padrão Unicode define um combinando sequência como uma combinação de um caractere base e um ou mais caracteres de combinação de caracteres. Um par substituto pode representar um caractere base ou um caractere de combinação.  
+  
+ O enumerador de elemento de texto é usado somente para leitura de dados na cadeia de caracteres; ele não é possível modificar a cadeia de caracteres subjacente. O enumerador não tem acesso exclusivo para a cadeia de caracteres.  
+  
+ O enumerador está em um estado inválido, se ele está posicionado antes do primeiro elemento de texto na cadeia de caracteres ou depois do último elemento de texto na cadeia de caracteres. Quando o enumerador está em um estado inválido, chamando <xref:System.Globalization.TextElementEnumerator.Current%2A> lança uma exceção.  
+  
+ Inicialmente, o enumerador está posicionado antes do primeiro elemento de texto na cadeia de caracteres. <xref:System.Globalization.TextElementEnumerator.Reset%2A> também traz o enumerador de volta para essa posição. Portanto, após a criação de um enumerador ou depois de <xref:System.Globalization.TextElementEnumerator.Reset%2A> é chamado, <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> deve ser chamado para avançar o enumerador para o primeiro elemento de texto da cadeia de caracteres antes de ler o valor de <xref:System.Globalization.TextElementEnumerator.Current%2A>.  
+  
+ <xref:System.Globalization.TextElementEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> ou <xref:System.Globalization.TextElementEnumerator.Reset%2A> ser chamado.  
+  
+ Após o fim da cadeia de caracteres for passado, o enumerador está novamente em estado e chamado inválido <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> retorna `false`. Chamando <xref:System.Globalization.TextElementEnumerator.Current%2A> lança uma exceção se a última chamada <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> retornou `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo de índices válidos para <paramref name="str" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LengthInTextElements">
+      <MemberSignature Language="C#" Value="public int LengthInTextElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LengthInTextElements" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.StringInfo.LengthInTextElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos de texto no objeto <see cref="T:System.Globalization.StringInfo" /> atual.</summary>
+        <value>O número de caracteres de base, pares substitutos e sequências de caracteres sem espaçamento neste objeto <see cref="T:System.Globalization.StringInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseCombiningCharacters">
+      <MemberSignature Language="C#" Value="public static int[] ParseCombiningCharacters (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32[] ParseCombiningCharacters(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.ParseCombiningCharacters(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres a ser pesquisada.</param>
+        <summary>Retorna os índices de cada caractere base, substituto alto ou caractere de controle dentro da cadeia de caracteres especificada.</summary>
+        <returns>Uma matriz de inteiros que contém os índices com base em zero de cada caractere base, o substituto alto ou o caractere de controle dentro de cadeia de caracteres especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define um par substituto como uma representação de caracteres codificada para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. Um substituto alto é um ponto de código Unicode no intervalo de U + D800 a U + DBFF e um substituto baixo é um ponto de código Unicode no intervalo de U + DC00 a U + DFFF.  
+  
+ Um caractere de controle é um caractere para o qual o valor Unicode U + 007F ou o intervalo de U + 0000 a U + 001F ou U + 0080 por meio de U + 009F.  
+  
+ O .NET Framework define um elemento de texto como uma unidade de texto que é exibido como um caractere único, ou seja, um grafemas. Um elemento de texto pode ser um caractere base, um par substituto ou um caractere de combinação sequência. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define uma combinação sequência como uma combinação de um caractere base e um ou mais caracteres de combinação de caracteres. Um par substituto pode representar um caractere base ou um caractere de combinação.  
+  
+ Se uma combinação sequência de caracteres for inválida, cada caractere de combinar essa sequência também é retornado.  
+  
+ Cada índice na matriz resultante é o início de um elemento de texto, ou seja, o índice do caractere base ou o substituto alto.  
+  
+ O comprimento de cada elemento facilmente é calculado como a diferença entre índices sucessivas. O comprimento da matriz sempre será menor que ou igual ao comprimento da cadeia de caracteres. Por exemplo, dada a cadeia de caracteres "\u4f00\u302a\ud800\udc00\u4f01", esse método retorna os índices de 0, 2 e 4.  
+  
+## <a name="equivalent-members"></a>Membros equivalentes  
+ Iniciando na versão 2.0 do .NET Framework, o <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> método e <xref:System.Globalization.StringInfo.LengthInTextElements%2A> propriedade fornecer uma implementação fácil de usar a funcionalidade oferecida pelo <xref:System.Globalization.StringInfo.ParseCombiningCharacters%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a chamar o <xref:System.Globalization.StringInfo.ParseCombiningCharacters%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Globalization.StringInfo> classe.  
+  
+ [!code-cpp[stringinfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/StringInfo/cpp/StringInfo.cpp#1)]
+ [!code-csharp[stringinfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/StringInfo/CS/StringInfo.cs#1)]
+ [!code-vb[stringinfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StringInfo/vb/stringinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="public string String { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string String" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.StringInfo.String" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do atual <see cref="T:System.Globalization.StringInfo" /> objeto.</summary>
+        <value>A cadeia de caracteres que é o valor do atual <see cref="T:System.Globalization.StringInfo" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Globalization.StringInfo> objeto é instanciado, sua <xref:System.Globalization.StringInfo.String%2A> propriedade é definida como um dos seguintes valores:  
+  
+-   <xref:System.String?displayProperty=nameWithType>Se o padrão <xref:System.Globalization.StringInfo.%23ctor> é chamado. Em seguida, você deve usar o <xref:System.Globalization.StringInfo.String%2A> propriedade para atribuir a cadeia de caracteres que esse <xref:System.Globalization.StringInfo> rperesents do objeto.  
+  
+-   A cadeia de caracteres fornecida como o `value` argumento para o <xref:System.Globalization.StringInfo.%23ctor%28System.String%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor em uma operação de definição é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubstringByTextElements">
+      <MemberSignature Language="C#" Value="public string SubstringByTextElements (int startingTextElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string SubstringByTextElements(int32 startingTextElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.SubstringByTextElements(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startingTextElement" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startingTextElement">O índice baseado em zero de um elemento de texto nesse objeto <see cref="T:System.Globalization.StringInfo" />.</param>
+        <summary>Recupera uma subcadeia de caracteres dos elementos de texto do atual <see cref="T:System.Globalization.StringInfo" /> a partir de um elemento de texto especificado e continuar com o último elemento de texto do objeto.</summary>
+        <returns>Uma subcadeia de caracteres dos elementos de texto neste <see cref="T:System.Globalization.StringInfo" /> objeto, a partir do índice de elemento de texto especificado o <paramref name="startingTextElement" /> parâmetro e continuar com o último elemento de texto no objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Considere a possibilidade de uma cadeia de caracteres que consiste em cinco elementos de texto, indexados de 0 a 4. Se o `startingTextElement` parâmetro é 1, o <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> método retorna uma subcadeia de caracteres que consiste nos elementos de texto para o qual os índices são 1, 2, 3 e 4.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startingTextElement" /> é menor que zero.  
+  
+ -ou-  
+  
+ A cadeia de caracteres que é o valor do objeto <see cref="T:System.Globalization.StringInfo" /> atual é a cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubstringByTextElements">
+      <MemberSignature Language="C#" Value="public string SubstringByTextElements (int startingTextElement, int lengthInTextElements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string SubstringByTextElements(int32 startingTextElement, int32 lengthInTextElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.StringInfo.SubstringByTextElements(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startingTextElement" Type="System.Int32" />
+        <Parameter Name="lengthInTextElements" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startingTextElement">O índice baseado em zero de um elemento de texto nesse objeto <see cref="T:System.Globalization.StringInfo" />.</param>
+        <param name="lengthInTextElements">O número de elementos de texto a serem recuperados.</param>
+        <summary>Recupera uma subcadeia de caracteres dos elementos de texto objeto <see cref="T:System.Globalization.StringInfo" /> atual começando em um elemento de texto especificado e continuando pelo número de elementos de texto especificado.</summary>
+        <returns>Uma subcadeia de caracteres de elementos de texto nesse objeto <see cref="T:System.Globalization.StringInfo" />. A subcadeia de caracteres consiste no número de elementos de texto especificado pelo parâmetro <paramref name="lengthInTextElements" /> começa no índice de elemento de texto especificado pelo parâmetro <paramref name="startingTextElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Considere a possibilidade de uma cadeia de caracteres que consiste em cinco elementos de texto, indexados de 0 a 4. Se o `startingTextElement` parâmetro é 1 e o `lengthInTextElements` parâmetro é 3, o <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> método retorna uma subcadeia de caracteres que consiste nos elementos de texto para o qual os índices são 1, 2 e 3.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startingTextElement" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="startingTextElement" /> é maior que ou igual ao comprimento da cadeia de caracteres que é o valor do objeto <see cref="T:System.Globalization.StringInfo" /> atual.  
+  
+ -ou-  
+  
+ <paramref name="lengthInTextElements" /> é menor que zero.  
+  
+ -ou-  
+  
+ A cadeia de caracteres que é o valor do objeto <see cref="T:System.Globalization.StringInfo" /> atual é a cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="startingTextElement" /> + <paramref name="lengthInTextElements" />Especifique um índice que é maior do que o número de elementos de texto neste <see cref="T:System.Globalization.StringInfo" /> objeto.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

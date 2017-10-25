@@ -1,0 +1,263 @@
+<Type Name="ProviderConnectionPointCollection" FullName="System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection">
+  <TypeSignature Language="C#" Value="public sealed class ProviderConnectionPointCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProviderConnectionPointCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de todos os <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> objetos associados a um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> ou controle de servidor que atua como um provedor em uma conexão. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.WebParts.WebPart> ou controle de servidor agindo como um provedor em uma conexão de Web Parts pode ter vários pontos de conexão do provedor. Um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto em um provedor atua como o ponto de conexão para qualquer conexão determinado, que serve como a instância principal interface para passar para um ou mais consumidores.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> classe contém a coleção de todos os pontos de conexão associado a um controle de provedor. Várias classes no conjunto de controle de Web Parts precisam determinar quais pontos de conexão estão disponíveis em um controle de provedor, e quando eles fazem eles normalmente chamam o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> método, que retorna um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> coleção.  
+  
+> [!NOTE]
+>  Essa classe herda o <xref:System.Collections.ReadOnlyCollectionBase> classe, tornando esta coleção uma coleção fortemente tipada não genéricas, somente leitura. Você não pode adicionar ou remover membros após uma instância foi criada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível criar uma nova instância do <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> classe diretamente no seu código, mas porque a classe herda o <xref:System.Collections.ReadOnlyCollectionBase> classe, a nova coleção é somente leitura e você não pode adicionar ou remover membros depois que você criou.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderConnectionPointCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância vazia do <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma nova instância do <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> classe sem itens na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderConnectionPointCollection (System.Collections.ICollection connectionPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection connectionPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionPoints" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoints">Um <see cref="T:System.Collections.ICollection" /> de <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> usados para criar a coleção de objetos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection" /> usando a coleção especificada de pontos de conexão do provedor de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma nova instância do <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> classe e adiciona os pontos de conexão dentro do `connectionPoints` parâmetro.  
+  
+ Você pode usar esse construtor para criar seu próprio objeto de coleção do provedor de pontos de conexão, criando um <xref:System.Collections.ICollection> coleção de existente <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objetos e, em seguida, passando essa coleção para o <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.%23ctor%28System.Collections.ICollection%29> construtor. No entanto, raramente é necessário criar sua própria coleção, a menos que você estiver estendendo controles, porque o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle fornece os métodos necessários para as operações mais comuns que envolvem pontos de conexão do provedor, incluindo o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="connectionPoints" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A coleção contém um ponto de conexão nula.  
+  
+ \- ou -  
+  
+ A coleção contém um objeto que não é do tipo <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />.  
+  
+ \- ou -  
+  
+ Há IDs duplicadas na coleção de pontos de conexão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.ProviderConnectionPoint connectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint connectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.Contains(System.Web.UI.WebControls.WebParts.ProviderConnectionPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionPoint" Type="System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoint">O <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> a ser pesquisado.</param>
+        <summary>Retorna um valor que indica se um determinado <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> objeto existe na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o ponto de conexão do provedor está contido na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.ProviderConnectionPoint[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.CopyTo(System.Web.UI.WebControls.WebParts.ProviderConnectionPoint[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.ProviderConnectionPoint[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> objetos que recebe os itens copiados da coleção.</param>
+        <param name="index">O ponto de partida na matriz na qual inserir o conteúdo da coleção.</param>
+        <summary>Copia a coleção para uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.CopyTo%2A> método copia todos os membros de um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> coleção para uma matriz unidimensional compatível de <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objetos, começando na posição na matriz que é especificada pelo `index` parâmetro.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.CopyTo%2A> método é útil quando você deseja combinar objetos de coleções diferentes em uma única matriz compatível e, em seguida, ser capaz de acessar os itens na matriz usando métodos de matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ProviderConnectionPoint Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint Default" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ProviderConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ponto de conexão padrão da coleção de pontos de conexão do provedor associado a um controle específico.</summary>
+        <value>O padrão <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> de um <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece acesso rápido ao ponto de conexão de provedor que é o ponto de conexão padrão dentro de um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection> coleção. O ponto de conexão do provedor padrão é a principal interface usada para estabelecer e manter uma conexão com os consumidores. Quaisquer outros pontos de conexão de provedor na coleção fornecem interfaces secundárias para consumidores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.ProviderConnectionPoint connectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint connectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.IndexOf(System.Web.UI.WebControls.WebParts.ProviderConnectionPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionPoint" Type="System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoint">O <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> a ser localizado.</param>
+        <summary>Retorna a posição de um determinado <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> objeto dentro de uma coleção.</summary>
+        <returns>Um inteiro que indica a posição de índice de base zero especificado <paramref name="connectionPoint" /> dentro de um <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.IndexOf%2A> método é útil quando há várias instâncias de <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objetos em uma página e seu código precisa saber o local (ou índice) do objeto de ponto de conexão de um em relação a outros usuários na coleção.  
+  
+ Se o objeto de ponto de conexão do provedor especificado aparece várias vezes na coleção, o índice da primeira ocorrência será retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ProviderConnectionPoint this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ProviderConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um determinado <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> na coleção.</param>
+        <summary>Obtém um membro da coleção com base em sua posição na coleção.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ProviderConnectionPoint this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProviderConnectionPointCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ProviderConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Um <see cref="T:System.String" /> que serve como o identificador exclusivo para um determinado <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> na coleção.</param>
+        <summary>Obtém um membro da coleção com base em um identificador de cadeia de caracteres exclusiva.</summary>
+        <value>A primeira <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> cuja ID é igual ao valor de <paramref name="id" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

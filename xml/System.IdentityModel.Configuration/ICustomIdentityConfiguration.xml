@@ -1,0 +1,53 @@
+<Type Name="ICustomIdentityConfiguration" FullName="System.IdentityModel.Configuration.ICustomIdentityConfiguration">
+  <TypeSignature Language="C#" Value="public interface ICustomIdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomIdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos que permitem que uma classe para carregar a configuração personalizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes que implementam o <xref:System.IdentityModel.Configuration.ICustomIdentityConfiguration> interface pode carregar a configuração personalizada do XML.  
+  
+ Várias classes de Windows Identity Foundation (WIF) implementam a <xref:System.IdentityModel.Configuration.ICustomIdentityConfiguration> derivado de interface para fornecer a capacidade de definir uma configuração personalizada de classes de um arquivo de configuração. Muitas das classes WIF fornecem uma implementação de base deste método para fornecer a configuração padrão para os objetos que eles representam.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public void LoadCustomConfiguration (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.ICustomIdentityConfiguration.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Os nós XML que contêm a configuração personalizada. Cada nó na lista é do tipo <see cref="T:System.Xml.XmlElement" />.</param>
+        <summary>Configuração personalizada de cargas de XML. Substitua este método para fornecer manipulação personalizada de elementos de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Configuration.ICustomIdentityConfiguration.LoadCustomConfiguration%2A> método é chamado pela infraestrutura de configuração. Quando este método é chamado, o `nodelist` parâmetro contém os elementos filho de nível superior do elemento pai que define a classe de objeto do arquivo de configuração. Por exemplo, uma classe derivada de <xref:System.IdentityModel.Tokens.IssuerNameRegistry>, terá os elementos filho do [ &lt;issuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) elemento passado a `nodelist` parâmetro. O `nodelist` é composta inteiramente de <xref:System.Xml.XmlElement> objetos. Cada um deles pode ter atributos e elementos filho dependendo do esquema de configuração definida para a classe que está sendo configurada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,79 @@
+<Type Name="ICloneable" FullName="System.ICloneable">
+  <TypeSignature Language="C#" Value="public interface ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.ICloneable" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dá suporte à clonagem, que cria uma nova instância de uma classe com o mesmo valor de uma instância existente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ICloneable> interface permite que você forneça uma implementação personalizada que cria uma cópia de um objeto existente. O <xref:System.ICloneable> interface contém um membro, o <xref:System.ICloneable.Clone%2A> método, que destina-se para oferecer suporte a clonagem além dos fornecidos pelo <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType>.  Para obter mais informações sobre a clonagem, profundidade versus cópias superficiais e exemplos, consulte o <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O <see cref="T:System.ICloneable" /> interface requer apenas que a implementação do <see cref="M:System.ICloneable.Clone" /> uma cópia da instância atual do objeto de retorno do método. Ele não especifica se a operação de clonagem executa uma cópia em profundidade, uma cópia superficial ou algo entre. Nem requer todos os valores de propriedade da instância original a ser copiado para a nova instância. Por exemplo, o <see cref="M:System.Globalization.NumberFormatInfo.Clone" /> método executa uma cópia superficial de todas as propriedades, exceto o <see cref="P:System.Globalization.NumberFormatInfo.IsReadOnly" /> propriedade; ele sempre define o valor da propriedade <see langword="false" /> no objeto clonado. Porque os chamadores de <see cref="M:System.ICloneable.Clone" /> não pode depender do método executar previsível operação de clonagem, recomendamos que <see cref="T:System.ICloneable" /> não implementado em APIs públicas.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ICloneable.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto que é uma cópia da instância atual.</summary>
+        <returns>Um novo objeto que é uma cópia dessa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O clone resultante deve ser do mesmo tipo, ou compatível com a instância original.  
+  
+ Uma implementação de <xref:System.ICloneable.Clone%2A> pode executar uma cópia em profundidade ou uma cópia superficial. Uma cópia em profundidade, todos os objetos são repetidos; em uma cópia superficial, apenas os objetos de nível superior são duplicados e os níveis inferiores contêm referências. Porque os chamadores de <xref:System.ICloneable.Clone%2A> não pode depender do método executar previsível operação de clonagem, recomendamos que <xref:System.ICloneable> não implementado em APIs públicas.  
+  
+ Consulte <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> para obter mais informações na clonagem, profundidade versus cópias superficiais e exemplos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,42 @@
+<Type Name="RuntimeHelpers+CleanupCode" FullName="System.Runtime.CompilerServices.RuntimeHelpers+CleanupCode">
+  <TypeSignature Language="C#" Value="public delegate void RuntimeHelpers.CleanupCode(object userData, bool exceptionThrown);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed RuntimeHelpers/CleanupCode extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="userData" Type="System.Object" />
+    <Parameter Name="exceptionThrown" Type="System.Boolean" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="userData">Dados a serem passados para o delegado.</param>
+    <param name="exceptionThrown">
+      <see langword="true" />para expressar que foi lançada uma exceção; Caso contrário, <see langword="false" />.</param>
+    <summary>Representa um método a ser executado quando ocorre uma exceção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode> delegar com o <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

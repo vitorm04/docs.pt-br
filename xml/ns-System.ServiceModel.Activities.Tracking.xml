@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Tracking">
+  <Docs>
+    <summary>O namespace System.ServiceModel.Activities.Tracking contém classes usadas para criar registros de rastreamento para uma instância de serviço de fluxo de trabalho. Registros de rastreamento são criados por criado pelo tempo de execução de fluxo de trabalho durante a execução de uma instância de fluxo de trabalho e são enviados para os participantes de rastreamento registrados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

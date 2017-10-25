@@ -1,0 +1,405 @@
+<Type Name="MenuAdapter" FullName="System.Web.UI.WebControls.Adapters.MenuAdapter">
+  <TypeSignature Language="C#" Value="public class MenuAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.MenuAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece os meios para modificar o comportamento de <see cref="T:System.Web.UI.WebControls.Menu" /> controle para navegadores específicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> modifica a marcação ou o comportamento de um <xref:System.Web.UI.WebControls.Menu> controle para uma classe de navegadores ou atua como um filtro ou um navegador específico em algum recurso.  
+  
+ Por padrão, o <xref:System.Web.UI.WebControls.MenuItem> objetos no <xref:System.Web.UI.WebControls.Menu> controle são renderizados como hiperlinks para acomodar a navegação de menu. O <xref:System.Web.UI.WebControls.Menu> classe mantém o estado Implementando o <xref:System.Web.UI.IPostBackEventHandler> interface para que ele pode responder e gerar eventos específicos durante um postback. Você pode estender o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> classe para personalizar ainda mais o processamento ou o comportamento do <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+ A solicitação inicial de um adaptador faz com que o .NET Framework procurar um adaptador mapeado para o controle, dadas as características do navegador solicitante. O <xref:System.Web.HttpBrowserCapabilities> classe usa arquivos de definição de navegador para identificar as características do navegador do cliente e para mapear o adaptador para o tipo de navegador.  
+  
+ Para obter mais informações sobre processamento adaptável no ASP.NET, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A solicitação inicial de um adaptador faz com que o .NET Framework procurar um adaptador mapeado para o controle, dadas as características do navegador solicitante. Depois que o adaptador for encontrado, o controle contém uma referência para a instância do adaptador mapeado no seu <xref:System.Web.UI.Control.Adapter%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.Menu Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Menu Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.MenuAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Menu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera uma referência com rigidez de tipos para o <see cref="T:System.Web.UI.WebControls.Menu" /> controle associado a esta <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" /> objeto.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.Menu" /> controle associado atual <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.Control%2A> propriedade fornece uma maneira de fazer referência a controle correspondente do adaptador. Quando um adaptador é associado um controle específico, o .NET Framework chamará os métodos de ciclo de vida do adaptador no lugar de ou além dos métodos de ciclo de vida do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.Control%2A> propriedade para recuperar o <xref:System.Web.UI.WebControls.Menu> controle da classe pai. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.MenuAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.MenuAdapter/CS/contosomenuadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.MenuAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.MenuAdapter/VB/contosomenuadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdapterControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadAdapterControlState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadAdapterControlState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.LoadAdapterControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> na forma de um dicionário que contém informações sobre o estado do adaptador.</param>
+        <summary>Carrega quaisquer informações de estado de controle que foi salvo pelo <see cref="M:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState" /> método durante uma solicitação anterior para a página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um adaptador precisa manter informações de estado particular, pode anular o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.LoadAdapterControlState%2A> e <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> métodos. No caso do <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> classe, onde a hierarquia de menu exibido é dependente de selecionado anteriormente <xref:System.Web.UI.WebControls.MenuItem> objeto `state` fornece um dicionário de pares nome/valor que contém o caminho do item selecionado na hierarquia do menu. O `state` parâmetro é um <xref:System.Web.UI.Pair> objeto salvo pelo <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> durante uma solicitação anterior para a página.  
+  
+ Se o controle não está registrado para participar do estado de controle, o adaptador deve registrar para estado de controle. Estado de controle do adaptador é mantido além do estado do controle, ao contrário de outros métodos de ciclo de vida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.EventArgs" /> dados associados ao evento.</param>
+        <summary>Registra o associado <see cref="T:System.Web.UI.WebControls.Menu" /> controle como requer o estado do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit%2A> método registra o controle associado como requer o estado do controle. Por padrão, o .NET Framework chama o controle de servidor Web próprio <xref:System.Web.UI.Control.OnInit%2A> método. No entanto, após o <xref:System.Web.UI.Control.Adapter%2A> propriedade do controle do servidor é definida, o .NET Framework chamará a implementação do adaptador do <xref:System.Web.UI.Control.OnInit%2A> método em vez de implementação do controle.  
+  
+ Use o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit%2A> método para inicializar as configurações no controle. Durante um postback, esta é uma fase importante para gerenciar a interação com os dados de estado de exibição existentes. Para obter mais informações, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se o adaptador substitui o <see cref="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit(System.EventArgs)" /> método, ele deverá chamar o método correspondente na classe base. Caso contrário, do controle próprio <see cref="E:System.Web.UI.Control.Init" /> evento não será gerado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.EventArgs" /> dados associados ao evento.</param>
+        <summary>Manipula o <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método associados <see cref="T:System.Web.UI.WebControls.Menu" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender%2A> chamadas de método interno `OnPreRender` método o <xref:System.Web.UI.WebControls.Menu> classe. Todas as outras funções de pré-processamento das classes pai, como associação de dados, aplicar estilos e atribuições de eventos sejam executados como esperado.  
+  
+ Por padrão, o .NET Framework chama o <xref:System.Web.UI.WebControls.Menu> do controle <xref:System.Web.UI.WebControls.Menu.OnPreRender%2A> método. No entanto, após o <xref:System.Web.UI.Control.Adapter%2A> propriedade do controle é definida, o .NET Framework chamará a implementação do adaptador do <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender%2A> método em vez de implementação do controle.  
+  
+ Use o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender%2A> método para finalizar as configurações no controle. As alterações feitas em Propriedades de controle nesta fase serão salvo para o estado de exibição, mas as alterações feitas no <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> método não são salvas. Para obter mais informações, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se o adaptador substitui o <see cref="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender(System.EventArgs)" /> método, ele deverá chamar o método correspondente na classe base. Caso contrário, do controle próprio <see cref="M:System.Web.UI.WebControls.Menu.OnPreRender(System.EventArgs)" /> método não será gerado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Um <see cref="T:System.String" /> que representa o caminho do nó atual na hierarquia de menu.</param>
+        <summary>Usado para manter o caminho do menu quando ocorre um evento de postback.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RaisePostBackEvent%2A> método é chamado quando o <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> evento é gerado e é usado para manter o caminho de navegação do menu. O `eventArgument` parâmetro contém uma cadeia de caracteres delimitada de itens de menu que identificam o local atual na hierarquia de menu.  
+  
+ A página passa o valor de `eventArgument` para o controle associado <xref:System.Web.UI.WebControls.Menu.RaisePostBackEvent%2A> método. O associado <xref:System.Web.UI.WebControls.Menu> controle também renderiza o elemento de marcação que faz com que o postback ocorra. Se o controle processa o script do lado do cliente para postagem, o argumento do script é passado a `eventArgument` parâmetro. Se a postagem é causada por um envio simple, `eventArgument` é `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A profundidade do nó atual mais do que é permitida. Isso pode ser causado por uma declaração inválida, por uma alteração desde a última solicitação ou por um pedido forjado de (FALSO).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="protected override void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> instância que contém métodos para criar e processar a saída específica do dispositivo.</param>
+        <summary>Adiciona os atributos de marca e grava a marcação para a marca de abertura do controle de fluxo de saída emitido para o navegador ou dispositivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> método adiciona atributos da marca e grava a marcação para a marca de abertura do controle de fluxo de saída emitido para o fluxo de resposta para o navegador do cliente. O <xref:System.Web.UI.WebControls.MenuItem> objetos serão renderizados em individualmente a <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> método e o controle serão fechados com uma chamada para o subsequente <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> método.  
+  
+ Substituir <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> quando você deseja implementar o comportamento personalizado. Por exemplo, substitua o método para várias marcas de gravação no fluxo de resposta antes de qualquer controle de conteúdo, como `<table><tr><td>`. Use o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> método junto com o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> método para garantir a abertura e fechamento de consistência de marca na saída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para criar e processar a saída específica do dispositivo.</param>
+        <summary>Grava os itens de menu associado a ele associada <see cref="T:System.Web.UI.WebControls.Menu" /> controle o fluxo de saída como uma série de hiperlinks.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> método grava o <xref:System.Web.UI.WebControls.MenuItem> objetos associados <xref:System.Web.UI.WebControls.Menu> controle o fluxo de saída como hiperlinks. O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> método é chamado a partir de <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> método e é usada para executar modificações no código de marcação que é renderizado em um navegador de dispositivo.  
+  
+ Propriedades de controle devem ser definidas antes desta fase do ciclo de vida e apenas a criação de marcação real para o controle aqui. As alterações feitas ao controle neste estágio do ciclo de vida não são salvas em estado de exibição. Para salvar as alterações feitas ao controle, substituir o <xref:System.Web.UI.Control.OnPreRender%2A> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A profundidade do item atual mais do que é permitida.  
+  
+ -ou-  
+  
+ O item atual está desabilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected override void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> instância que contém métodos para criar e processar a saída específica do dispositivo.</param>
+        <summary>Cria uma marcação final e grava a marcação para a marca de fechamento do controle o fluxo de saída emitido para o navegador ou dispositivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> método grava a marcação para a marca de fechamento do controle de fluxo de saída emitida para o fluxo de resposta para o navegador do cliente. Marca de abertura, atributos e os atributos de estilo são renderizados no <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> método. O <xref:System.Web.UI.WebControls.MenuItem> objetos são renderizados em individualmente o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> método.  
+  
+ Substituir <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> quando você deseja implementar o comportamento personalizado. Por exemplo, substitua o método para gravar várias marcas de fechamento para o fluxo de resposta após qualquer controle de conteúdo, como `</td></tr></table>`. Use o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> método junto com o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> método para garantir a abertura e fechamento de consistência de marca na saída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItem">
+      <MemberSignature Language="C#" Value="protected virtual void RenderItem (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.MenuItem item, int position);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void RenderItem(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.MenuItem item, int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderItem(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.MenuItem,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="item" Type="System.Web.UI.WebControls.MenuItem" />
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> instância que contém métodos para criar e processar a saída específica do dispositivo.</param>
+        <param name="item">O <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto que contém as propriedades a serem gravados no fluxo de resposta.</param>
+        <param name="position">A posição especificada <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto na hierarquia de menu.</param>
+        <summary>Renderiza um item de menu único como um hiperlink.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderItem%2A> método é chamado da <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> método para recuperar os estilos e atributos de espaçamento do <xref:System.Web.UI.WebControls.MenuItem> de objeto e aplicá-las a um elemento de hiperlink recém-criado. A hierarquia de menu é atravessada no <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> método e chamará o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderItem%2A> método para processar cada item. Cada item é processado como um hiperlink e herda as propriedades e os estilos de especificado <xref:System.Web.UI.WebControls.MenuItem> controle. O hiperlink processado para a página é um dos seguintes:  
+  
+-   Um evento de postback para abrir ou selecione o item.  
+  
+-   Um link para navegar até o destino especificado no <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade o <xref:System.Web.UI.WebControls.MenuItem> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdapterControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveAdapterControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveAdapterControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações para o estado de controle privado de adaptador que ocorreram desde que a página foi postada no servidor.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém informações de estado de controle do adaptador como um <see cref="T:System.Web.UI.StateBag" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> método usa o <xref:System.Web.UI.WebControls.Menu> controlar o estado para manter o caminho de navegação atual do menu. Quando um adaptador precisa manter informações de estado particular, pode anular o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.LoadAdapterControlState%2A> e <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> métodos. Um adaptador pode manter o estado de controle particular quando há recursos complexos que precisa para manter o estado em solicitações, separadas do estado do controle associado. O adaptador precisar registrar o estado de controle durante a <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit%2A> chamada de método em cada solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Um <see cref="T:System.String" /> que contém um argumento de evento opcionais para passar para o manipulador de eventos.</param>
+        <summary>Permite que o <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" /> classe para processar um evento gerado quando uma página é postada para o servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> método habilita o <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> classe para processar um evento que é gerado quando uma página é postada para o servidor. A página passa `eventArgument` para o <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

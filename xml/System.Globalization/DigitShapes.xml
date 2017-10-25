@@ -1,0 +1,118 @@
+<Type Name="DigitShapes" FullName="System.Globalization.DigitShapes">
+  <TypeSignature Language="C#" Value="public enum DigitShapes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed DigitShapes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.DigitShapes" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a exibição específica à cultura de dígitos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Globalization.DigitShapes> valor Especifica que nenhuma forma de dígito é substituída para a entrada de Unicode, uma forma de dígito é substituída com base no contexto, ou uma forma de dígitos nacionais nativo é substituída para a entrada.  
+  
+ Os idiomas árabes, índicos e tailandeses tem formas clássicas para números diferentes de dígitos de 0 a 9 (Unicode U + 0030 por meio de U + 0039), que geralmente são usados nos computadores. O aplicativo usa o <xref:System.Globalization.DigitShapes> enumeração com o <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A> propriedade para especificar como exibir dígitos U + 0030 por meio de U + 0039 na ausência de outras informações de formatação.  
+  
+ O <xref:System.Globalization.DigitShapes> enumeração é usada principalmente por aplicativos destinados a culturas que usam scripts bidirecional. Por exemplo, a ordem de leitura de scripts árabes e índicos é bidirecional.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="Context" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DigitShapes Context = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DigitShapes.Context" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DigitShapes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A forma do dígito depende do texto anterior na mesma saída. Dígitos europeus seguem os scripts latinos; dígitos indo-arábicos seguem o texto em árabe e dígitos tailandeses seguem o texto em tailandês.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeNational">
+      <MemberSignature Language="C#" Value="NativeNational" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DigitShapes NativeNational = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DigitShapes.NativeNational" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DigitShapes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A forma do dígito é o equivalente nativo dos dígitos de 0 a 9. Dígitos ASCII de 0 a 9 são substituídos por dígitos nacionais nativos equivalentes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DigitShapes None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DigitShapes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DigitShapes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A forma do dígito não é alterada. A compatibilidade total do Unicode é mantida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

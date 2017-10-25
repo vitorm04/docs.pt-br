@@ -1,0 +1,188 @@
+<Type Name="ProcessInputEventArgs" FullName="System.Windows.Input.ProcessInputEventArgs">
+  <TypeSignature Language="C#" Value="public class ProcessInputEventArgs : System.Windows.Input.NotifyInputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProcessInputEventArgs extends System.Windows.Input.NotifyInputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ProcessInputEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.NotifyInputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para eventos de entrada postprocess.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Habilitar o acesso a eventos de entrada do processo de <xref:System.Windows.Input.InputManager> área de preparação.  
+  
+ A área de preparação de entrada processa a entrada bruta em [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] eventos.  
+  
+ <xref:System.Windows.Input.ProcessInputEventArgs>é usado com o <xref:System.Windows.Input.InputManager.PostProcessInput> evento.  
+  
+ Entrada é processada em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] nos estágios a seguir:  
+  
+1.  Pré-processe estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PreProcessInput> evento.  
+  
+2.  Pré-notificar estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PreNotifyInput> evento.  
+  
+3.  O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] evento de entrada ou de eventos são gerados.  
+  
+4.  Pós-notificar estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PostNotifyInput> evento.  
+  
+5.  Estágio de pós-processamento.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PostProcessInput> evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeekInput">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StagingAreaInputItem PeekInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StagingAreaInputItem PeekInput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ProcessInputEventArgs.PeekInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StagingAreaInputItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém, mas não remove o evento de entrada na parte superior da pilha de área de preparação.</summary>
+        <returns>O evento de entrada que está no topo da pilha de área de preparação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno será `null` se a área de preparo está vazia.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para obter a entrada superior.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PopInput">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StagingAreaInputItem PopInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StagingAreaInputItem PopInput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ProcessInputEventArgs.PopInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StagingAreaInputItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o evento de entrada da parte superior da pilha de área de preparação.</summary>
+        <returns>O evento de entrada que estava no topo da pilha de área de preparação. Isso será <see langword="null" /> se a área de preparo está vazia.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para exibir um evento de entrada.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="PushInput">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Coloca um evento de entrada na parte superior da pilha de área de preparação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A entrada para colocar na área de preparação não pode ser `null` e não pode já existir na área de preparação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="PushInput">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StagingAreaInputItem PushInput (System.Windows.Input.StagingAreaInputItem input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StagingAreaInputItem PushInput(class System.Windows.Input.StagingAreaInputItem input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ProcessInputEventArgs.PushInput(System.Windows.Input.StagingAreaInputItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StagingAreaInputItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Windows.Input.StagingAreaInputItem" />
+      </Parameters>
+      <Docs>
+        <param name="input">O evento de entrada para colocar na pilha de área de preparação.</param>
+        <summary>Coloca o evento de entrada especificado na parte superior da pilha de área de preparação.</summary>
+        <returns>O item de área de preparação de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `input`não pode ser `null` e não pode já existir na área de preparação.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para enviar um evento de entrada.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PushInput">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StagingAreaInputItem PushInput (System.Windows.Input.InputEventArgs input, System.Windows.Input.StagingAreaInputItem promote);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StagingAreaInputItem PushInput(class System.Windows.Input.InputEventArgs input, class System.Windows.Input.StagingAreaInputItem promote) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ProcessInputEventArgs.PushInput(System.Windows.Input.InputEventArgs,System.Windows.Input.StagingAreaInputItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StagingAreaInputItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Windows.Input.InputEventArgs" />
+        <Parameter Name="promote" Type="System.Windows.Input.StagingAreaInputItem" />
+      </Parameters>
+      <Docs>
+        <param name="input">O evento de entrada para colocar na pilha de área de preparação.</param>
+        <param name="promote">Um item de área de preparação existente para promover o estado do.</param>
+        <summary>Coloca o evento de entrada especificado na parte superior da pilha da área de transferência especificado.</summary>
+        <returns>O item de área de preparação de entrada que encapsula a entrada especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `input`não pode ser `null` e não pode já existir na área de preparação.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para enviar um evento de entrada. Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

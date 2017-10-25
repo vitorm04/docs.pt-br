@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Policy">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Policy" /> namespace contém grupos de código, condições de associação e evidência. Esses três tipos de classes são usados para criar as regras aplicadas pelo sistema de política de segurança de tempo de execução linguagem comum. Classes de evidência são a entrada para a política de segurança e as condições de associação são as opções; juntos, esses criar declarações de política e determinam o conjunto de permissões concedido. Grupos de códigos e níveis de política são a estrutura da hierarquia de política. Grupos de código são o encapsulamento de uma regra e são organizados hierarquicamente em um nível de política.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

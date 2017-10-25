@@ -1,0 +1,309 @@
+<Type Name="SqlWorkflowInstanceStoreBehavior" FullName="System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior">
+  <TypeSignature Language="C#" Value="public class SqlWorkflowInstanceStoreBehavior : System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlWorkflowInstanceStoreBehavior extends System.Object implements class System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IServiceBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Um comportamento de serviço que permite que você configure o <see cref="T:System.Activities.DurableInstancing.SqlWorkflowInstanceStore" /> recurso, que oferece suporte a informações de estado persistentes para instâncias do serviço de fluxo de trabalho em um banco de dados do SQL Server 2005 ou SQL Server 2008.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlWorkflowInstanceStoreBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlWorkflowInstanceStoreBehavior (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão que se refere a um banco de dados de persistência do SQL Server.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior" /> usando a cadeia de conexão passada como um parâmetro de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa internamente uma instância do <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> usando a cadeia de caracteres de conexão do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">A descrição do serviço.</param>
+        <param name="serviceHostBase">O host do serviço.</param>
+        <param name="endpoints">Os pontos de extremidade de serviço.</param>
+        <param name="bindingParameters">Objetos personalizados aos quais os elementos de associação têm acesso.</param>
+        <summary>Uma implementação do <see langword="AddBindingParameters" /> método o <see cref="T:System.ServiceModel.Description.IServiceBehavior" /> interface, que permite que você transmita dados personalizados para elementos de associação para dar suporte à implementação do contrato.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Descrição do serviço.</param>
+        <param name="serviceHostBase">O host do serviço.</param>
+        <summary>Uma implementação do <see langword="ApplyDispatchBehavior" /> método o <see cref="T:System.ServiceModel.Description.IServiceBehavior" /> interface que permite que você altere os valores de propriedade de tempo de execução ou inserir objetos de extensão personalizada, como manipuladores de erro, inspetores de mensagem ou parâmetro, extensões de segurança e outros objetos de extensão personalizada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de conexão usada para se conectar ao banco de dados de persistência.</summary>
+        <value>A cadeia de conexão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostLockRenewalPeriod">
+      <MemberSignature Language="C#" Value="public TimeSpan HostLockRenewalPeriod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan HostLockRenewalPeriod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.HostLockRenewalPeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="P:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.HostLockRenewalPeriod" />. Essa propriedade especifica o intervalo no qual um host deve renovar seu bloqueio em uma instância antes de expira o bloqueio. Se o host não renovar o bloqueio no período de tempo especificado, a instância está desbloqueada e outro host pode obter o bloqueio na instância.</summary>
+        <value>O período de tempo especificado antes da instância está desbloqueado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceCompletionAction">
+      <MemberSignature Language="C#" Value="public System.Activities.DurableInstancing.InstanceCompletionAction InstanceCompletionAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.DurableInstancing.InstanceCompletionAction InstanceCompletionAction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceCompletionAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DurableInstancing.InstanceCompletionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceCompletionAction" />. Essa propriedade especifica se as informações de estado de instância são mantidas no banco de dados de persistência depois que a instância for concluída.</summary>
+        <value>
+          <see langword="true" />Se as informações de estado de instância são mantidas no banco de dados de persistência; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manter instâncias após conclusão faz com que o banco de dados de persistência crescer rapidamente e isso afeta o desempenho do banco de dados. Você deve configurar uma política de limpeza do banco de dados para excluir esses registros periodicamente para garantir que o desempenho do banco de dados está no nível que atender às suas necessidades de desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceEncodingOption">
+      <MemberSignature Language="C#" Value="public System.Activities.DurableInstancing.InstanceEncodingOption InstanceEncodingOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.DurableInstancing.InstanceEncodingOption InstanceEncodingOption" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceEncodingOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DurableInstancing.InstanceEncodingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceEncodingOption" />. Essa propriedade especifica se as informações de estado de instância são compactadas usando o algoritmo GZip antes que as informações são salvas no repositório de persistência.</summary>
+        <value>
+          <see langword="true" />Se a instância de informações de estado são compactadas usando o algoritmo GZip; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceLockedExceptionAction">
+      <MemberSignature Language="C#" Value="public System.Activities.DurableInstancing.InstanceLockedExceptionAction InstanceLockedExceptionAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.DurableInstancing.InstanceLockedExceptionAction InstanceLockedExceptionAction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DurableInstancing.InstanceLockedExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction" />. Essa propriedade especifica a ação que um host de serviço deve tomar quando ele recebe um <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" /> quando o host tenta bloquear uma instância porque a instância está bloqueada por outro host.</summary>
+        <value>A ação de um host de serviço deve ser executada quando receber um <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As opções permitidas para este campo são: None, repetição básica e repita agressiva. O valor padrão é None. A lista a seguir fornece descrições para esses três opções:  
+  
+-   Nenhum. O host de serviço não tenta bloquear a instância e passa o <xref:System.Runtime.DurableInstancing.InstanceLockedException> ao chamador.  
+  
+-   Repetição básica. O host de serviço reattempts bloquear a instância com um intervalo de repetição linear e passa a exceção para o chamador no final da sequência.  
+  
+-   Repetição agressiva. Reattempts de host do serviço bloquear a instância com um atraso cresce exponencialmente e passa o <xref:System.Runtime.DurableInstancing.InstanceLockedException> ao chamador no final da sequência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnectionRetries">
+      <MemberSignature Language="C#" Value="public int MaxConnectionRetries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConnectionRetries" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.MaxConnectionRetries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de tentativas de conexão SQL.  O valor padrão é 4.</summary>
+        <value>Um inteiro que representa o número máximo de tentativas de conexão SQL.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Promote">
+      <MemberSignature Language="C#" Value="public void Promote (string name, System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XName&gt; promoteAsSqlVariant, System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XName&gt; promoteAsBinary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Promote(string name, class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.Linq.XName&gt; promoteAsSqlVariant, class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.Linq.XName&gt; promoteAsBinary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.Promote(System.String,System.Collections.Generic.IEnumerable{System.Xml.Linq.XName},System.Collections.Generic.IEnumerable{System.Xml.Linq.XName})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="promoteAsSqlVariant" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XName&gt;" />
+        <Parameter Name="promoteAsBinary" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XName&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome da promoção.</param>
+        <param name="promoteAsSqlVariant">Os nomes de variáveis que devem ser promovidos como variantes.</param>
+        <param name="promoteAsBinary">Os nomes de variáveis que devem ser promovidos como dados binários. Dados binários normalmente são usados para armazenar informações de rastreamento.</param>
+        <summary>Promove as propriedades que podem ser usadas em consultas. As propriedades promovidas são as propriedades que você pode usar em consultas para recuperar instâncias. Essas propriedades podem ser de tipo simples (int32, string, bool e assim por diante), que é representado por uma variante ou binário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunnableInstancesDetectionPeriod">
+      <MemberSignature Language="C#" Value="public TimeSpan RunnableInstancesDetectionPeriod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RunnableInstancesDetectionPeriod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.RunnableInstancesDetectionPeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod" />. Especifica o período de tempo após o qual o armazenamento de instância de fluxo de trabalho do SQL executa uma tarefa de detecção para detectar qualquer instância de fluxo de trabalho executável ou ativável no banco de dados de persistência após o ciclo de detecção anterior.</summary>
+        <value>Retorna o valor do intervalo de tempo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">A descrição do serviço.</param>
+        <param name="serviceHostBase">O host para o serviço.</param>
+        <summary>Verifica se o host de serviço e a descrição do serviço para confirmar que o serviço pode ser executado com êxito.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

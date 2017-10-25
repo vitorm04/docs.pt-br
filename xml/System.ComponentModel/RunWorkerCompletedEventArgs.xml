@@ -1,0 +1,164 @@
+<Type Name="RunWorkerCompletedEventArgs" FullName="System.ComponentModel.RunWorkerCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class RunWorkerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RunWorkerCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.RunWorkerCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento *MethodName*<see langword="Completed" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver usando uma classe que implementa o [baseado em evento visão geral do padrão assíncrono](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md), a classe fornece um *MethodName* `Completed` eventos. *MethodName* é um espaço reservado para a primeira parte do nome do método. <xref:System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted%2A?displayProperty=nameWithType>é um exemplo de nome de tal método. Se você adicionar uma instância do <xref:System.ComponentModel.RunWorkerCompletedEventArgs> delegar para o evento, você receberá informações sobre o resultado de operações assíncronas no <xref:System.ComponentModel.RunWorkerCompletedEventArgs> parâmetro do manipulador de eventos correspondente.  
+  
+> [!NOTE]
+>  O <xref:System.Security.Permissions.HostProtectionAttribute> atributo aplicado a essa classe tem as seguintes <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> o valor da propriedade: <xref:System.Security.Permissions.HostProtectionResource.SharedState>. <xref:System.Security.Permissions.HostProtectionAttribute> não afeta aplicativos de área de trabalho (que são normalmente iniciados com o clique duplo em um ícone, a digitação de um comando ou a inserção de uma URL em um navegador). Para obter mais informações, consulte o <xref:System.Security.Permissions.HostProtectionAttribute> classe ou [programação do SQL Server e atributos de proteção de Host](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.ComponentModel.RunWorkerCompletedEventArgs>. Este exemplo é parte de um exemplo maior para o <xref:System.ComponentModel.BackgroundWorker> classe.  
+  
+ [!code-cpp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
+ [!code-csharp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
+ [!code-vb[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RunWorkerCompletedEventArgs (object result, Exception error, bool cancelled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object result, class System.Exception error, bool cancelled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RunWorkerCompletedEventArgs.#ctor(System.Object,System.Exception,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="result" Type="System.Object" />
+        <Parameter Name="error" Type="System.Exception" />
+        <Parameter Name="cancelled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="result">O resultado de uma operação assíncrona.</param>
+        <param name="error">Qualquer erro que ocorreu durante a operação assíncrona.</param>
+        <param name="cancelled">Um valor que indica se a operação assíncrona foi cancelada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.RunWorkerCompletedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public object Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Result" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.RunWorkerCompletedEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o resultado de uma operação assíncrona.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o resultado de uma operação assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos deve sempre verificar o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> e <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> propriedades antes de acessar o <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A> propriedade. Se uma exceção foi gerada ou se a operação foi cancelada, acessando o <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A> propriedade gera uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> evento para manipular o resultado de uma operação assíncrona. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.BackgroundWorker> classe.  
+  
+ [!code-cpp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
+ [!code-csharp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
+ [!code-vb[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">
+          <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> não é <see langword="null" />. A propriedade <see cref="P:System.Exception.InnerException" /> contém uma referência a <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Cancelled" /> é <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserState">
+      <MemberSignature Language="C#" Value="public object UserState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UserState" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.RunWorkerCompletedEventArgs.UserState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o estado do usuário.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o estado de usuário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

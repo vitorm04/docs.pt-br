@@ -1,0 +1,118 @@
+<Type Name="IAnchorInfo" FullName="System.Windows.Annotations.IAnchorInfo">
+  <TypeSignature Language="C#" Value="public interface IAnchorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAnchorInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.IAnchorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece os recursos para anotações correspondentes com os respectivos objetos anotados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Considere um aplicativo de leitor de documento simples que tem um painel de comentários. O painel de comentários pode ser uma caixa de listagem que exiba texto de uma lista de anotações ancoradas a um documento. Se o usuário selecionar um item na caixa de listagem, o aplicativo trará para a exibição o parágrafo no documento ao qual o objeto de anotação correspondente está ancorado.  
+  
+ O exemplo a seguir demonstra como implementar o manipulador de eventos de tal caixa de listagem que serve como o painel de comentários:  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anchor">
+      <MemberSignature Language="C#" Value="public System.Windows.Annotations.AnnotationResource Anchor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Annotations.AnnotationResource Anchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.IAnchorInfo.Anchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a âncora de anotação.</summary>
+        <value>A âncora que foi resolvida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo.Anchor%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotation">
+      <MemberSignature Language="C#" Value="public System.Windows.Annotations.Annotation Annotation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Annotations.Annotation Annotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.IAnchorInfo.Annotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de anotação.</summary>
+        <value>O objeto de anotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo.Annotation%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedAnchor">
+      <MemberSignature Language="C#" Value="public object ResolvedAnchor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ResolvedAnchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.IAnchorInfo.ResolvedAnchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que representa o local na árvore de onde o <see cref="P:System.Windows.Annotations.IAnchorInfo.Anchor" /> seja resolvido.</summary>
+        <value>O objeto que representa o local na árvore de onde o <see cref="P:System.Windows.Annotations.IAnchorInfo.Anchor" /> seja resolvido. O tipo é especificado pelo tipo de objeto anotado. Adesivo notas e destaques no fluxo ou documentos fixos sempre resolver para um <see cref="T:System.Windows.Annotations.TextAnchor" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo.ResolvedAnchor%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Considere um aplicativo de leitor de documento simples que tem um painel de comentários. O painel de comentários pode ser uma caixa de listagem que exiba texto de uma lista de anotações ancoradas a um documento. Se o usuário selecionar um item na caixa de listagem, o aplicativo trará para a exibição o parágrafo no documento ao qual o objeto de anotação correspondente está ancorado.  
+  
+ O exemplo a seguir demonstra como implementar o manipulador de eventos de tal caixa de listagem que serve como o painel de comentários:  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

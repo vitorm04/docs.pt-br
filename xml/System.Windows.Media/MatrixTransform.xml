@@ -1,0 +1,297 @@
+<Type Name="MatrixTransform" FullName="System.Windows.Media.MatrixTransform">
+  <TypeSignature Language="C#" Value="public sealed class MatrixTransform : System.Windows.Media.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MatrixTransform extends System.Windows.Media.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.MatrixTransform" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria uma transformação de matriz afim arbitrário que é usada para manipular objetos ou sistemas de coordenadas em um plano 2D.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.MatrixTransform> classe para criar transformações personalizadas que não são fornecidas pelo <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.SkewTransform>, <xref:System.Windows.Media.ScaleTransform>, ou <xref:System.Windows.Media.TranslateTransform> classes.  
+  
+ Uma matriz 3 x 3 é usada para transformações em um [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] plano x-y. Você pode multiplicar afim transformações de matriz para transformações lineares do formulário, como rotação e distorção (distorcer) que são seguidas por tradução.  
+  
+ Uma transformação afim de matriz tem sua coluna final igual a (0, 0, 1); Portanto, você terá de especificar apenas os membros nas duas primeiras colunas.  
+  
+ Um [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Matrix> tem a seguinte estrutura:  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+ Os membros da última linha, <xref:System.Windows.Media.Matrix.OffsetX%2A> e <xref:System.Windows.Media.Matrix.OffsetY%2A>, representam os valores de tradução.  
+  
+ Métodos e propriedades normalmente especificam a matriz de transformação como um vetor que tem apenas seis membros; os membros são os seguintes:  
+  
+ (<xref:System.Windows.Media.Matrix.M11%2A>, <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.M22%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, <xref:System.Windows.Media.Matrix.OffsetY%2A>)  
+  
+<a name="xamlAttributeUsage_MatrixTransform"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="m11, m12, m21, m22, offsetX, offsetY"/>  
+- or -  
+<object property="Identity"/>  
+```  
+  
+<a name="xamlValues_MatrixTransform"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *M11*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O valor na posição (1, 1) da transformação <xref:System.Windows.Media.MatrixTransform.Matrix%2A>.  
+  
+ *M12*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O valor na posição (1, 2) da transformação <xref:System.Windows.Media.MatrixTransform.Matrix%2A>.  
+  
+ *m21*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O valor na posição (2, 1) da transformação <xref:System.Windows.Media.MatrixTransform.Matrix%2A>.  
+  
+ *m22*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O valor na posição (2, 2) da transformação <xref:System.Windows.Media.MatrixTransform.Matrix%2A>.  
+  
+ *offsetX*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O valor na posição (3, 1) da transformação <xref:System.Windows.Media.MatrixTransform.Matrix%2A>.  
+  
+ *offsetY*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O valor na posição (3, 2) da transformação <xref:System.Windows.Media.MatrixTransform.Matrix%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatrixTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MatrixTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.MatrixTransform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatrixTransform (System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MatrixTransform.#ctor(System.Windows.Media.Matrix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">A matriz de transformação do novo <see cref="T:System.Windows.Media.MatrixTransform" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.MatrixTransform" /> classe com a matriz de transformação especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatrixTransform (double m11, double m12, double m21, double m22, double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 m11, float64 m12, float64 m21, float64 m22, float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MatrixTransform.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m11" Type="System.Double" />
+        <Parameter Name="m12" Type="System.Double" />
+        <Parameter Name="m21" Type="System.Double" />
+        <Parameter Name="m22" Type="System.Double" />
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="m11">O valor na posição (1, 1) na matriz de transformação.</param>
+        <param name="m12">O valor na posição (1, 2) na matriz de transformação.</param>
+        <param name="m21">O valor na posição (2, 1) na matriz de transformação.</param>
+        <param name="m22">O valor na posição (2, 2) na matriz de transformação.</param>
+        <param name="offsetX">O fator de conversão de eixo x, que está localizado na posição (3,1) na matriz de transformação.</param>
+        <param name="offsetY">O fator de translação do eixo Y, que está localizado na posição (3,2) na matriz de transformação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.MatrixTransform" /> com os valores da matriz de transformação especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MatrixTransform Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.MatrixTransform Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MatrixTransform.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MatrixTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia modificável <see cref="T:System.Windows.Media.MatrixTransform" /> fazendo cópias profundas de seus valores.</summary>
+        <returns>Uma cópia profunda modificável do objeto atual. O <see cref="P:System.Windows.Freezable.IsFrozen" /> retorna de propriedade do objeto clonado <see langword="false" /> mesmo se o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade da fonte<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir cópias modificáveis de somente leitura <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Quando esse método copia as propriedades de dependência, ele copia associações de dados e as referências de recurso embora eles não podem resolver. Ele não copie animações ou seus valores atuais.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MatrixTransform CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.MatrixTransform CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MatrixTransform.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MatrixTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia modificável <see cref="T:System.Windows.Media.MatrixTransform" /> objeto fazendo cópias profundas de seus valores. Esse método não copiar referências de recurso, associações de dados ou animações, embora ele copia os valores atuais.</summary>
+        <returns>Uma cópia profunda modificável do objeto atual. O <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade do objeto clonado <see langword="false" /> mesmo se o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade da fonte de <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir cópias modificáveis de somente leitura <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MatrixTransform.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Matrix Matrix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix Matrix" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MatrixTransform.Matrix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a estrutura <see cref="T:System.Windows.Media.Matrix" /> que define essa transformação.</summary>
+        <value>A estrutura <see cref="T:System.Windows.Media.Matrix" /> que define essa transformação. O valor padrão é um <see cref="T:System.Windows.Media.Matrix" /> de identidade. Uma matriz de identidade tem um valor de <c>1</c> em coeficientes <c>[1,1]</c>, <c>[2,2]</c>, e <c>[3,3]</c>; e um valor de <c>0</c>no restante dos coeficientes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Matrix"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.MatrixTransform.MatrixProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatrixProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MatrixProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MatrixProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.MatrixTransform.MatrixProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.MatrixTransform.Matrix" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MatrixTransform.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Media.MatrixTransform.Matrix" /> que representa esta <see cref="T:System.Windows.Media.MatrixTransform" />.</summary>
+        <value>A matriz que representa esta <see cref="T:System.Windows.Media.MatrixTransform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para modificar a matriz dessa transformação, use seu <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

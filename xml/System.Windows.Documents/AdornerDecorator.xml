@@ -1,0 +1,194 @@
+<Type Name="AdornerDecorator" FullName="System.Windows.Documents.AdornerDecorator">
+  <TypeSignature Language="C#" Value="public class AdornerDecorator : System.Windows.Controls.Decorator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdornerDecorator extends System.Windows.Controls.Decorator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.AdornerDecorator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Decorator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um <see cref="T:System.Windows.Documents.AdornerLayer" /> para os elementos filho na árvore visual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.AdornerDecorator>pode conter apenas um elemento filho. Esse elemento pode conter vários elementos que podem ser adornados.  
+  
+ O <xref:System.Windows.Documents.AdornerDecorator> Especifica a posição do <xref:System.Windows.Documents.AdornerLayer> na árvore visual.  Ele é normalmente usado em uma <xref:System.Windows.Controls.ControlTemplate> para um controle que pode hospedar <xref:System.Windows.Documents.Adorner> objetos. Por exemplo, o <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Window> contém um <xref:System.Windows.Documents.AdornerDecorator> para que os elementos filho da janela podem ser adornados. O <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> método `null` se você passar um elemento que não tem um <xref:System.Windows.Documents.AdornerDecorator> como um ancestral na árvore visual.  
+  
+ Para obter mais informações sobre os adornos e árvores visuais, consulte [visão geral de adornos](~/docs/framework/wpf/controls/adorners-overview.md) e [árvores no WPF](~/docs/framework/wpf/advanced/trees-in-wpf.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Window>.  O exemplo adiciona um <xref:System.Windows.Controls.ContentPresenter> como o elemento filho de um <xref:System.Windows.Documents.AdornerDecorator>. Os elementos filho lógico da janela podem ser adornados porque o <xref:System.Windows.Documents.AdornerDecorator> está em sua árvore visual.  
+  
+ [!code-xaml[ControlTemplateExamples#Window](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/window.xaml#window)]  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.ArgumentException">É feita uma tentativa de adicionar mais de um único filho ao <see cref="T:System.Windows.Documents.AdornerDecorator" />.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdornerDecorator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerDecorator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.AdornerDecorator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornerLayer">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.AdornerLayer AdornerLayer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.AdornerLayer AdornerLayer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AdornerDecorator.AdornerLayer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.AdornerLayer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Documents.AdornerLayer" /> associado a este <see cref="T:System.Windows.Documents.AdornerDecorator" />.</summary>
+        <value>O <see cref="T:System.Windows.Documents.AdornerLayer" /> associado a este decorador de adorno.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerDecorator.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">O espaço reservado para o elemento por seu pai.</param>
+        <summary>Posiciona elementos filho e determina um tamanho para o <see cref="T:System.Windows.Documents.AdornerDecorator" />.</summary>
+        <returns>O tamanho real necessário para o elemento.  Esse valor de retorno é normalmente o mesmo que o valor passado para *finalSize*.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public override System.Windows.UIElement Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AdornerDecorator.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o único filho de um <see cref="T:System.Windows.Documents.AdornerDecorator" />.</summary>
+        <value>O único filho de um <see cref="T:System.Windows.Documents.AdornerDecorator" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Documents.AdornerDecorator> pode conter apenas um filho, que é o elemento pai da árvore visual abaixo o <xref:System.Windows.Documents.AdornerDecorator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerDecorator.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice da questão <see cref="T:System.Windows.Media.Visual" /> filho.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Media.Visual" /> filho no local especificado <paramref name="index" /> posição.</summary>
+        <returns>Um filho <see cref="T:System.Windows.Media.Visual" /> do elemento pai <see cref="T:System.Windows.Controls.Viewbox" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerDecorator.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Um tamanho para restringir o <see cref="T:System.Windows.Documents.AdornerDecorator" /> para.</param>
+        <summary>Mede o tamanho necessário para elementos filho e determina um tamanho para o <see cref="T:System.Windows.Documents.AdornerDecorator" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Size" /> objeto que representa a quantidade de espaço de layout necessária para o <see cref="T:System.Windows.Documents.AdornerDecorator" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.FrameworkElement.MeasureOverride%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AdornerDecorator.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de objetos <see cref="T:System.Windows.Media.Visual" /> filho nesta instância do <see cref="T:System.Windows.Documents.AdornerDecorator" />.</summary>
+        <value>Retorna <c>2</c> (uma para o <see cref="T:System.Windows.Documents.AdornerLayer" /> e outro para o <see cref="P:System.Windows.Documents.AdornerDecorator.Child" />) ou a propriedade retorna <c>0</c> se o <see cref="T:System.Windows.Documents.AdornerDecorator" /> não tem nenhum filho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,33 @@
+<Type Name="VisualStyleElement+TaskBand" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TaskBand">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TaskBand" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TaskBand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém classes que fornecem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para partes da barra de tarefas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand> classe fornece uma base na qual as classes a seguir são definidas:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand.FlashButton>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand.FlashButtonGroupMenu>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand.GroupCount>  
+  
+ Cada uma dessas classes fornece uma propriedade que retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para a parte da barra de tarefas especificada pelo nome da classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

@@ -1,0 +1,146 @@
+<Type Name="GridViewSortEventArgs" FullName="System.Web.UI.WebControls.GridViewSortEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewSortEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewSortEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewSortEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.GridView.Sorting" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.GridView> controlar gera o <xref:System.Web.UI.WebControls.GridView.Sorting> evento quando um botão de classificação (um botão com sua `CommandName` propriedade definida como "Classificar") é clicado, mas antes de <xref:System.Web.UI.WebControls.GridView> controle manipula a operação de classificação. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como cancelar a operação de classificação, sempre que esse evento ocorre.  
+  
+> [!NOTE]
+>  Embora qualquer botão dentro de um <xref:System.Web.UI.WebControls.GridView> controlar com seu `CommandName` propriedade definida como "Classificar" irá gerar o <xref:System.Web.UI.WebControls.GridView.Sorting> eventos, geralmente aparecem botões de classificação na linha de cabeçalho de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ Um <xref:System.Web.UI.WebControls.GridViewSortEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você especificar ou determinar a classificação de direção de classificação e de expressão na qual classificar o <xref:System.Web.UI.WebControls.GridView> controle. Para determinar a expressão de classificação, use o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A> propriedade. Para determinar a direção de classificação, use o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> propriedade. Você também pode cancelar uma operação de classificação, definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewSortEventArgs>, consulte o <xref:System.Web.UI.WebControls.GridViewSelectEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewSortEventArgs> objeto passado para o método de manipulação de eventos para cancelar a operação de classificação quando o usuário tentar classificar a coluna de endereço em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[GridViewSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSorting/CS/gridviewsortingcs.aspx#1)]
+ [!code-aspx-vb[GridViewSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSorting/VB/gridviewsortingvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewSortEventArgs (string sortExpression, System.Web.UI.WebControls.SortDirection sortDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression, valuetype System.Web.UI.WebControls.SortDirection sortDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewSortEventArgs.#ctor(System.String,System.Web.UI.WebControls.SortDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+        <Parameter Name="sortDirection" Type="System.Web.UI.WebControls.SortDirection" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">A expressão de classificação usada para classificar os itens no controle.</param>
+        <param name="sortDirection">Um <see cref="T:System.Web.UI.WebControls.SortDirection" /> que indica a direção na qual classificar os itens no controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.GridViewSortEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.GridViewSortEventArgs> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Web.UI.WebControls.GridViewSortEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A>|O valor de `sortDirection` parâmetro.|  
+|<xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A>|O valor de `sortExpression` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDirection">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SortDirection SortDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.SortDirection SortDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção na qual o controle <see cref="T:System.Web.UI.WebControls.GridView" /> será classificado.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.SortDirection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.GridView.Sorting> evento é gerado, você pode usar o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> propriedade para determinar a ordem na qual o <xref:System.Web.UI.WebControls.GridView> controle classificará os itens (com base na expressão de classificação) quando a operação de classificação é executada. Porque o <xref:System.Web.UI.WebControls.GridView.Sorting> evento ocorre antes da operação de classificação, você também pode usar o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> propriedade para definir a direção de classificação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> propriedade para determinar a direção na qual classificar uma <xref:System.Web.UI.WebControls.GridView> controle. Se o usuário tentar classificar em ordem decrescente, a operação de classificação é cancelada.  
+  
+ [!code-aspx-csharp[GridViewSortEventArgsSortDirection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSortEventArgsSortDirection/CS/gridviewsorteventargssortdirectioncs.aspx#1)]
+ [!code-aspx-vb[GridViewSortEventArgsSortDirection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSortEventArgsSortDirection/VB/gridviewsorteventargssortdirectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão usada para classificar os itens no controle <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+        <value>A expressão usada para classificar os itens no controle <see cref="T:System.Web.UI.WebControls.GridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.GridView.Sorting> evento é gerado, você pode usar o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A> propriedade para determinar a expressão de classificação que será usada para classificar o <xref:System.Web.UI.WebControls.GridView> controlar quando a operação de classificação é executada. Por padrão, o <xref:System.Web.UI.WebControls.GridView> controle classifica uma única coluna por vez. A expressão de classificação simplesmente contém o nome do campo de classificação. Você também pode classificar várias colunas em um momento programaticamente definindo essa propriedade para uma lista separada por vírgulas de nomes de campos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A> propriedade para determinar qual coluna em um <xref:System.Web.UI.WebControls.GridView> controle está sendo classificado. Se o usuário tentar classificar a coluna de endereço, a operação de classificação é cancelada.  
+  
+ [!code-aspx-csharp[GridViewSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSorting/CS/gridviewsortingcs.aspx#1)]
+ [!code-aspx-vb[GridViewSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSorting/VB/gridviewsortingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

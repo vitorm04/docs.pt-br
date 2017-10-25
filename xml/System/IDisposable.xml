@@ -1,0 +1,203 @@
+<Type Name="IDisposable" FullName="System.IDisposable">
+  <TypeSignature Language="C#" Value="public interface IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um mecanismo para liberar recursos não gerenciados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/idisposable.cs#1f55292c3174123d). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ O principal uso dessa interface é liberar recursos não gerenciados. O coletor de lixo automaticamente libera a memória alocada para um objeto gerenciado quando esse objeto não é mais usado. No entanto, não é possível prever quando ocorrerá a coleta de lixo. Além disso, o coletor de lixo não tem conhecimento de recursos não gerenciados, como identificadores de janela, ou abrir arquivos e fluxos.  
+  
+ Use o <xref:System.IDisposable.Dispose%2A> método desta interface explicitamente liberar recursos não gerenciados em conjunto com o coletor de lixo. O consumidor de um objeto pode chamar esse método quando o objeto não for mais necessário.  
+  
+> [!WARNING]
+>  É uma alteração significativa para adicionar o <xref:System.IDisposable> interface para uma classe existente. Porque pré-existente consumidores do seu tipo não é possível chamar <xref:System.IDisposable.Dispose%2A>, você não pode ter certeza de que recursos não gerenciados mantidos pelo seu tipo serão lançados.  
+  
+ Porque o <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação é chamada pelo consumidor de um tipo quando os recursos pertencentes a uma instância não são mais necessários, ou você deve quebrar o objeto gerenciado em um <xref:System.Runtime.InteropServices.SafeHandle> (a alternativa recomendada), ou você deve substituir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> para liberar recursos não gerenciados que o consumidor esquece de chamar <xref:System.IDisposable.Dispose%2A>.  
+  
+> [!IMPORTANT]
+>  No .NET Framework, o compilador do C++ dá suporte à disposição determinística de recursos e não permite a implementação direta do <xref:System.IDisposable.Dispose%2A> método.  
+  
+ Para obter uma discussão detalhada sobre como essa interface e o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> método são usadas, consulte o [coleta de lixo](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md) tópicos.  
+  
+## <a name="using-an-object-that-implements-idisposable"></a>Usando um objeto que implementa IDisposable  
+ Se seu aplicativo simplesmente usa um objeto que implementa o <xref:System.IDisposable> interface, você deve chamar o objeto <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação quando tiver terminado de usá-lo. Dependendo da linguagem de programação, você pode fazer isso de duas maneiras:  
+  
+-   Usando uma linguagem, como construir o `using` instrução em c# e Visual Basic.  
+  
+-   Encapsulando a chamada para o <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação em um `try` / `finally` bloco.  
+  
+> [!NOTE]
+>  Documentação para tipos que implementam <xref:System.IDisposable> Observe esse fato e incluir um lembrete para chamar sua <xref:System.IDisposable.Dispose%2A> implementação.  
+  
+<a name="Using"></a>   
+### <a name="the-c-and-visual-basic-using-statement"></a>A instrução c# e Visual Basic usando  
+ Se o seu idioma oferece suporte a uma construção, como o [usando](~/docs/csharp/language-reference/keywords/using.md) instrução em c# e o [usando](~/docs/visual-basic/language-reference/statements/using-statement.md) instrução no Visual Basic, você pode usá-lo em vez de chamar explicitamente <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> por conta própria. O exemplo a seguir usa essa abordagem para definir um `WordCount` classe que preserva as informações sobre um arquivo e o número de palavras nele.  
+  
+ [!code-csharp[System.IDisposable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/calling1.cs#1)]
+ [!code-vb[System.IDisposable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/calling1.vb#1)]  
+  
+ O `using` instrução é realmente uma conveniência sintática. Em tempo de compilação, o compilador de linguagem implementa a linguagem intermediária (IL) para um `try` / `finally` bloco.  
+  
+ Para obter mais informações sobre o `using` instrução, consulte o [instrução Using](~/docs/visual-basic/language-reference/statements/using-statement.md) ou [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) tópicos.  
+  
+### <a name="the-tryfinally-block"></a>O bloco Try/Finally  
+ Se a linguagem de programação não dá suporte a uma construção como o `using` instrução em c# ou Visual Basic, ou se você preferir não usá-lo, você pode chamar o <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação do `finally` block de um `try` / `finally` instrução. O exemplo a seguir substitui o `using` bloquear no exemplo anterior, com um `try` / `finally` bloco.  
+  
+ [!code-csharp[System.IDisposable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/calling2.cs#2)]
+ [!code-vb[System.IDisposable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/calling2.vb#2)]  
+  
+ Para obter mais informações sobre o `try` / `finally` padrão, consulte [tente... Catch... Instrução Finally](~/docs/visual-basic/language-reference/statements/try-catch-finally-statement.md), [try-finally](~/docs/csharp/language-reference/keywords/try-finally.md), ou [instrução try-finally](http://msdn.microsoft.com/library/514400c1-c322-4bf3-9e48-3047240b8a82).  
+  
+## <a name="implementing-idisposable"></a>Implementando IDisposable  
+ Você deve implementar <xref:System.IDisposable> somente se o tipo usa recursos não gerenciados diretamente. Os consumidores de seu tipo podem chamar seu <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação para liberar recursos quando a instância não é mais necessário. Para lidar com casos em que eles não chamar <xref:System.IDisposable.Dispose%2A>, você deve usar uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> incluir os recursos não gerenciados, ou você deve substituir o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> método para um tipo de referência. Em ambos os casos, você deve usar o <xref:System.IDisposable.Dispose%2A> método para executar qualquer limpeza é necessária depois de usar os recursos não gerenciados, como à liberação ou redefinir os recursos não gerenciados.  
+  
+> [!IMPORTANT]
+>  Se você estiver definindo uma classe base que usa recursos não gerenciados e que tem, ou deve ter subclasses que devem ser descartadas, você deve implementar o <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> método e fornecer uma segunda sobrecarga de `Dispose`, conforme descrito na próxima seção.  
+  
+<a name="BaseClasses"></a>   
+## <a name="idisposable-and-the-inheritance-hierarchy"></a>A hierarquia de herança e IDisposable  
+ Uma classe base com subclasses que devem ser descartáveis deve implementar <xref:System.IDisposable> da seguinte maneira. Você deve usar esse padrão sempre que você implementar <xref:System.IDisposable> em qualquer tipo que não seja `sealed` (`NotInheritable` no Visual Basic).  
+  
+-   Ele deve fornecer um público, não virtual <xref:System.IDisposable.Dispose> um protegidos e método virtual `Dispose(Boolean disposing)` método.  
+  
+-   O <xref:System.IDisposable.Dispose> método deve chamar `Dispose(true)` e deve suprimir a finalização de desempenho.  
+  
+-   O tipo base não deve incluir qualquer finalizadores.  
+  
+ O fragmento de código a seguir reflete o padrão dispose para classes de base. Ele pressupõe que seu tipo não substitui o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> método.  
+  
+ [!code-csharp[System.IDisposable#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base1.cs#3)]
+ [!code-vb[System.IDisposable#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
+  
+ Se você substituir o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> método, sua classe deve implementar o padrão a seguir.  
+  
+ [!code-csharp[System.IDisposable#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base2.cs#5)]
+ [!code-vb[System.IDisposable#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
+  
+ As subclasses devem implementar o padrão descartável da seguinte maneira:  
+  
+-   Eles devem substituir `Dispose(Boolean)` e chame a classe base `Dispose(Boolean)` implementação.  
+  
+-   Eles podem fornecer um finalizador, se necessário. Deve chamar o finalizador `Dispose(false)`.  
+  
+ Observe que as classes derivadas não se implementar a <xref:System.IDisposable> interface e não incluem um sem parâmetros <xref:System.IDisposable.Dispose%2A> método. Eles apenas substituem a classe base `Dispose(Boolean)` método.  
+  
+ O fragmento de código a seguir reflete o padrão dispose para classes derivadas. Ele pressupõe que seu tipo não substitui o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> método.  
+  
+ [!code-csharp[System.IDisposable#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived1.cs#4)]
+ [!code-vb[System.IDisposable#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma classe de recurso que implementa o <xref:System.IDisposable> interface.  
+  
+ [!code-cpp[System.IDisposable.Dispose Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IDisposable.Dispose Example/CPP/idisposabledispose.cpp#1)]
+ [!code-csharp[System.IDisposable.Dispose Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IDisposable.Dispose Example/CS/idisposabledispose.cs#1)]
+ [!code-vb[System.IDisposable.Dispose Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IDisposable.Dispose Example/VB/idisposabledispose.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IDisposable.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Realiza tarefas definidas pelo aplicativo associadas à liberação ou à redefinição de recursos não gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para fechar ou liberar recursos não gerenciados, como arquivos, fluxos e identificadores mantidos por uma instância da classe que implementa essa interface. Por convenção, este método é usado para todas as tarefas associadas ao liberar os recursos mantidos por um objeto, ou preparar um objeto para reutilização.  
+  
+> [!WARNING]
+>  Se você estiver usando uma classe que implementa o <xref:System.IDisposable> interface, você deve chamar seu <xref:System.IDisposable.Dispose%2A> quando terminar de usar a classe de implementação. Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico.  
+  
+ Ao implementar esse método, certifique-se de que todos são recursos são liberados propagando a chamada por meio da hierarquia de confinamento. Por exemplo, se um objeto um aloca um objeto B e o objeto B aloca um objeto C, então A <xref:System.IDisposable.Dispose%2A> implementação deve chamar <xref:System.IDisposable.Dispose%2A> no B, que por sua vez deve chamar <xref:System.IDisposable.Dispose%2A> em C.  
+  
+> [!IMPORTANT]
+>  O compilador do C++ oferece suporte à disposição determinística de recursos e não permite a implementação direta do <xref:System.IDisposable.Dispose%2A> método.  
+  
+ Um objeto também deve chamar o <xref:System.IDisposable.Dispose%2A> método de sua classe base se implementa a classe base <xref:System.IDisposable>. Para obter mais informações sobre como implementar <xref:System.IDisposable> em uma classe base e suas subclasses, consulte a seção "IDisposable e a hierarquia de herança" o <xref:System.IDisposable> tópico.  
+  
+ Se um objeto <xref:System.IDisposable.Dispose%2A> método é chamado mais de uma vez, o objeto deve ignorar todas as chamadas feitas após o primeiro. O objeto não deve lançar uma exceção se seu <xref:System.IDisposable.Dispose%2A> método for chamado várias vezes. Métodos de instância diferente de <xref:System.IDisposable.Dispose%2A> pode lançar um <xref:System.ObjectDisposedException> quando os recursos já são descartados.  
+  
+ Os usuários podem esperar um tipo de recurso para usar uma convenção específica para indicar um estado alocado versus estado liberado. Um exemplo disso é a classes de fluxo, que tradicionalmente pensados como aberta ou fechadas. O implementador de uma classe que tem uma convenção tal pode optar por implementar um método público com um nome personalizado, como `Close`, que chama o <xref:System.IDisposable.Dispose%2A> método.  
+  
+ Porque o <xref:System.IDisposable.Dispose%2A> método deve ser chamado explicitamente, sempre há um risco de que os recursos não gerenciados não será liberada, porque o consumidor de um objeto Falha ao chamar seu <xref:System.IDisposable.Dispose%2A> método. Há duas maneiras de evitar isso:  
+  
+-   Encapsular o recurso gerenciado em um objeto derivado de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. O <xref:System.IDisposable.Dispose%2A> implementação, em seguida, chama o <xref:System.IDisposable.Dispose%2A> método o <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> instâncias. Para obter mais informações, consulte a seção "A alternativa de SafeHandle" o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> tópico.  
+  
+-   Implemente um finalizador para liberar recursos quando <xref:System.IDisposable.Dispose%2A> não for chamado. Por padrão, o coletor de lixo chama automaticamente finalizador de um objeto antes da recuperação de sua memória. No entanto, se o <xref:System.IDisposable.Dispose%2A> método foi chamado, geralmente é desnecessário para o coletor de lixo chamar o finalizador do objeto descartado. Para evitar a finalização automática, <xref:System.IDisposable.Dispose%2A> implementações podem chamar o <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> método.  
+  
+ Quando você usa um objeto que acessa os recursos não gerenciados, como um <xref:System.IO.StreamWriter>, uma prática recomendada é criar a instância com um `using` instrução. O `using` instrução fecha automaticamente o fluxo e chamadas <xref:System.IDisposable.Dispose%2A> no objeto quando o código que ele está em uso foi concluída. Para obter um exemplo, consulte o <xref:System.IO.StreamWriter> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como você pode implementar o <xref:System.IDisposable.Dispose%2A> método.  
+  
+ [!code-cpp[System.IDisposable.Dispose Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IDisposable.Dispose Example/CPP/idisposabledispose.cpp#1)]
+ [!code-csharp[System.IDisposable.Dispose Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IDisposable.Dispose Example/CS/idisposabledispose.cs#1)]
+ [!code-vb[System.IDisposable.Dispose Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IDisposable.Dispose Example/VB/idisposabledispose.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,129 @@
+<Type Name="FlatStyle" FullName="System.Windows.Forms.FlatStyle">
+  <TypeSignature Language="C#" Value="public enum FlatStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FlatStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FlatStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a aparência de um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por membros como <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.GroupBox.FlatStyle%2A?displayProperty=nameWithType>, e <xref:System.Windows.Forms.Label.FlatStyle%2A?displayProperty=nameWithType>.  
+  
+ No caso do botão de estilo pop-up, esta enumeração controla algum comportamento e aparência. O controle de estilo pop-up é exibido inicialmente simples até que o ponteiro do mouse se move sobre ele. Quando o ponteiro do mouse se move sobre o controle de pop-up, ele aparecerá como um controle de estilo padrão até que o ponteiro do mouse é movido logoff-lo novamente.  
+  
+ Se o estilo do sistema for usado, a aparência do controle é determinada pelo sistema operacional do usuário e os seguintes valores de propriedade serão ignorados: <xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=nameWithType>, `ImageAlign`, `Image`, `ImageIndex`, `ImageList`, e `TextAlign`. Além disso, o <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> propriedade será ignorada para controles de botão. Se houver suporte, os usuários podem alterar a aparência dos controles, ajustando as configurações de aparência do seu sistema operacional.  
+  
+> [!NOTE]
+>  Quando o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> propriedade o <xref:System.Windows.Forms.RadioButton> e <xref:System.Windows.Forms.CheckBox> classes está definido para o sistema, o controle é desenhado pelo sistema operacional do usuário e o alinhamento de verificação baseia-se a `CheckAlign` e <xref:System.Windows.Forms.ButtonBase.TextAlign%2A?displayProperty=nameWithType> valores de propriedade. O `CheckAlign` o valor da propriedade não é alterado, mas a aparência do controle pode ser afetada. A caixa de seleção horizontal está alinhada com a borda esquerda ou direita do controle (um alinhamento à esquerda ou center aparece esquerdo permanece alinhado, à direita inalterado) e alinhado verticalmente o mesmo que o texto descritivo. Por exemplo, se você tiver um <xref:System.Windows.Forms.CheckBox> controlar com um `CheckAlign` valor da propriedade <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> e um <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> valor da propriedade <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType>e o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> o valor da propriedade for definido como System, o alinhamento da caixa de seleção aparecerá ser <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> enquanto o alinhamento do texto permanece inalterado.  
+  
+> [!CAUTION]
+>  Definindo o `FlatStyle` propriedade para o sistema não é aconselhável, se necessário para exibir uma imagem em um controle, exibir uma imagem como plano de fundo do controle ou executar o alinhamento do texto exato.  
+  
+   
+  
+## Examples  
+ Este é um exemplo de um manifesto para permitir que seu aplicativo para suportar os estilos visuais disponíveis no Windows XP, se você estiver usando a versão 1.0 do .NET Framework. O manifesto pode ser adicionado ao seu aplicativo como um recurso ou como um arquivo de texto autônomas. O arquivo de manifesto reside no mesmo diretório que o arquivo executável e o nome do arquivo de texto deve ser o nome completo do arquivo executável com um of.manifest de extensão de nome de arquivo adicional. Por exemplo, o arquivo de manifesto para MyApp.exe seria MyApp.exe.manifest. Este exemplo supõe que o `FlatStyle` propriedades dos controles em seu aplicativo são definidas para o sistema.  
+  
+```  
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
+ <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+ <assemblyIdentity  
+     version="1.0.0.0"  
+     processorArchitecture="X86"  
+     name="CompanyName.ProductName.YourApplication"  
+     type="win32"  
+ />  
+ <description>Your application description here.</description>  
+ <dependency>  
+     <dependentAssembly>  
+         <assemblyIdentity  
+             type="win32"  
+             name="Microsoft.Windows.Common-Controls"  
+             version="6.0.0.0"  
+             processorArchitecture="X86"  
+             publicKeyToken="6595b64144ccf1df"  
+             language="*"  
+         />  
+     </dependentAssembly>  
+ </dependency>  
+ </assembly>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle Flat = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle aparece plano.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="Popup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle Popup = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.Popup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle aparece plano até que o ponteiro do mouse se mova sobre ele, momento em que ele aparece tridimensional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle Standard = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle aparece tridimensional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle System = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A aparência do controle é determinada pelo sistema operacional do usuário.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

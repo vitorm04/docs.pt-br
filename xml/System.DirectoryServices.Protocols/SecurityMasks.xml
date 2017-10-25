@@ -1,0 +1,109 @@
+<Type Name="SecurityMasks" FullName="System.DirectoryServices.Protocols.SecurityMasks">
+  <TypeSignature Language="C#" Value="public enum SecurityMasks" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityMasks extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SecurityMasks" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.SecurityMasks" /> enumeração especifica várias opções de descritor de segurança.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dacl">
+      <MemberSignature Language="C#" Value="Dacl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SecurityMasks Dacl = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SecurityMasks.Dacl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O acesso discricionário (DACL) lista segurança descritor sinalizador de controle de. O valor é igual a 4 ou 0x4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="Group" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SecurityMasks Group = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SecurityMasks.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sinalizador de descritor de segurança de grupo primário. O valor é igual a 2 ou 0x2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SecurityMasks None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SecurityMasks.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum sinalizador de descritor de segurança é definido. O valor é igual a 0 ou 0x0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="Owner" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SecurityMasks Owner = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SecurityMasks.Owner" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sinalizador de descritor de segurança do proprietário. O valor é igual a 1 ou 0x1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sacl">
+      <MemberSignature Language="C#" Value="Sacl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SecurityMasks Sacl = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SecurityMasks.Sacl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema controle lista (SACL) segurança descritor sinalizador de acesso.  O valor é igual a 8 ou 0x8.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

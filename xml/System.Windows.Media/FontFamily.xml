@@ -1,0 +1,556 @@
+<Type Name="FontFamily" FullName="System.Windows.Media.FontFamily">
+  <TypeSignature Language="C#" Value="public class FontFamily" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontFamily extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FontFamily" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.FontFamilyConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Font)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.FontFamilyValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma família de fontes relacionadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma família de fontes é um conjunto de tipos que compartilham o mesmo nome de família, como "Times New Roman", mas que diferem em recursos. Essas diferenças incluem <xref:System.Windows.Media.Typeface.Style%2A>, como itálico, e <xref:System.Windows.Media.Typeface.Weight%2A>, como negrito.  
+  
+ ![Fontes](~/add/media/fonts.PNG "fontes")  
+Exemplo de tipos que são membros da família de fonte "Times New Roman"  
+  
+ A maioria dos [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] elementos, como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBlock>, forneça um <xref:System.Windows.Controls.Control.FontFamily%2A> propriedade que pode ser usada para especificar uma fonte para o conteúdo do texto de um controle. Definir a fonte definindo essa propriedade com um <xref:System.Windows.Media.FontFamily> valor. Os exemplos a seguir mostram como fazer referência a uma fonte, no [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] e no código.  
+  
+ [!code-csharp[FontSnippets#FontFallbackSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontfallbacksnippet3)]
+ [!code-vb[FontSnippets#FontFallbackSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontfallbacksnippet3)]
+ [!code-xaml[FontSnippets#FontFallbackSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml#fontfallbacksnippet3)]  
+  
+ No exemplo anterior, a fonte que é referenciada, "Cartum Sans MS" é referenciada por seu *nome amigável*. Além disso, neste exemplo de fonte é considerada na coleção de fontes de sistema.  
+  
+## <a name="specifying-fonts-in-alternate-directories"></a>Especificar fontes em diretórios alternativos  
+ Um [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] aplicativo pode especificar um diretório, que não seja o diretório que contém a coleção de fontes de sistemas para resolver referências de fonte. O nome amigável da fonte pode especificar um absoluto [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] valor para resolver a referência da fonte, conforme mostrado no seguinte [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] e exemplos de código.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet6)]
+ [!code-vb[FontSnippets#FontPackageSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet6)]
+ [!code-xaml[FontSnippets#FontPackageSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet6)]  
+  
+ O nome amigável da fonte também pode especificar um parente [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor, o que exige uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para resolver a referência da fonte. O <xref:System.Windows.Media.FontFamily.BaseUri%2A> propriedade o <xref:System.Windows.Media.FontFamily> objeto corresponde à base [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor. O exemplo de código a seguir mostra como criar uma referência de fonte que é composta de uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor e relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet7)]
+ [!code-vb[FontSnippets#FontPackageSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet7)]  
+  
+ Você pode usar uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor ao fazer referência a uma fonte que é fornecida como parte do aplicativo. Por exemplo, a base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor pode ser "//aplicativo" [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], que permite a você fazer referência a fontes que são empacotadas como recursos do aplicativo. O exemplo de código a seguir mostra uma referência de fonte que é composta de uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor e relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
+ [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
+  
+ Quando um <xref:System.Windows.Media.FontFamily> é especificado como um atributo na marcação, a base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor sempre é inferido — seu valor é o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] página. A base de implícita [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor é usado com relativa [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor na cadeia de caracteres de nome amigável para obter o local da fonte. A seguir [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] exemplo, observe que o relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor usa a ". /" notação, o que significa "na pasta atual" da base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor.  
+  
+ [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
+  
+ Um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] aplicativo pode empacotar fontes como um item de conteúdo, um item de recurso ou um item de recurso de biblioteca. Para obter mais informações, consulte [Empacotando fontes com aplicativos](~/docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+  
+## <a name="font-fallback"></a>Fallback de fonte  
+ Fonte de fallback refere-se a substituição automática de uma fonte que não seja a fonte selecionada pelo aplicativo cliente. Há dois motivos principais por fallback da fonte é chamado:  
+  
+-   A fonte que é especificada pelo aplicativo cliente não existe no sistema.  
+  
+-   A fonte que é especificada pelo aplicativo cliente não contém os glifos que são necessários para processar texto.  
+  
+ Em[!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], o mecanismo de fallback de fonte usa a família de fonte de fallback padrão, "Interface de usuário Global", como a fonte substituta. Essa fonte é definida como uma fonte composta, cujo nome de arquivo é "GlobalUserInterface.CompositeFont". Para obter mais informações sobre fontes compostas, consulte a seção de fontes compostas neste tópico.  
+  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] mecanismo de fallback de fonte substitui anterior [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] tecnologias de substituição de fonte.  
+  
+## <a name="defining-a-font-fallback-sequence-in-code"></a>Definindo uma sequência de Fallback de fonte em código  
+ Você pode definir uma sequência de fallback de fonte em seu código, que permite que você defina uma fonte alternativa. Quando você cria um <xref:System.Windows.Media.FontFamily> do objeto, forneça fonte vários nomes de família, separados por vírgulas, para o <xref:System.String> parâmetro, como "Cartum Sans MS, Verdana". Nesse caso, se os glifos da face de tipos "Cartum Sans MS" não estão disponíveis, glifos da face de tipos "Verdana" são usados. Se nem "Cartum Sans MS" nem "Verdana" tiver os glifos necessários, a família de fontes de fallback do tipo de letra é usada, que é "Interface de usuário Global" por padrão.  
+  
+ Os exemplos a seguir mostram como definir uma sequência de fallback de fonte, no [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] e no código.  
+  
+ [!code-csharp[FontSnippets#FontFallbackSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontfallbacksnippet1)]
+ [!code-vb[FontSnippets#FontFallbackSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontfallbacksnippet1)]
+ [!code-xaml[FontSnippets#FontFallbackSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml#fontfallbacksnippet1)]  
+  
+ Qualquer uma das fontes na sequência de fallback pode especificar locais de fonte. Nos exemplos a seguir, "Pericles Light" é referenciado como um recurso do aplicativo e "Verdana" é referenciado como um membro de coleção de fontes de sistema.  
+  
+ [!code-csharp[FontSnippets#FontFallbackSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontfallbacksnippet2)]
+ [!code-vb[FontSnippets#FontFallbackSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontfallbacksnippet2)]
+ [!code-xaml[FontSnippets#FontFallbackSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml#fontfallbacksnippet2)]  
+  
+## <a name="composite-fonts"></a>Fontes compostas  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] plataforma fornece um recurso de fonte composta para permitir a construção do intervalo completo de fontes multilíngues e evitar a exibição de glifos ausentes. Substituir fontes compostas de [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] vinculação de fontes, fallback de fonte, associação de fonte, associação de fontes e mecanismos de end-user-defined EUDC (caracteres).  
+  
+ Uma família de fonte composta está disponível para aplicativos por meio de <xref:System.Windows.Media.FontFamily> e <xref:System.Windows.Media.Typeface> construtores assim como qualquer outra família de fontes. Cada família de fonte composta é chamada e, como com outras fontes, pode fornecer localizadas variantes de seu nome em vários idiomas.  
+  
+ O exemplo de marcação a seguir mostra como uma família de fonte composta pode ser definida como um arquivo de disco. Esse arquivo pode ser armazenado no padrão [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] diretório de fonte como com qualquer outra fonte de instalado, ou pode ser referenciado em qualquer local, incluindo seu [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] ao fazer referência a família de produtos por nome.  
+  
+ O exemplo a seguir mostra a marcação de família de fonte em um ". Arquivo CompositeFont".  
+  
+ [!code-xaml[CompositeFontMarkup#CF](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositeFontMarkup/CS/comp.xaml#cf)]  
+  
+ As seguintes fontes de composição quatro aparecem no padrão [!INCLUDE[TLA2#tla_win](~/includes/tla2sharptla-win-md.md)] diretório de fonte como parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] instalação.  
+  
+|Fonte|Observações|  
+|----------|-----------|  
+|GlobalMonospace.CompositeFont|Renderiza o texto usando uma fonte de espaçamento uniforme, por exemplo, "Courier New" para caracteres latinos.|  
+|GlobalSanSerif.CompositeFont|Renderiza o texto usando uma fonte sans serif, por exemplo, "Arial" para caracteres latinos.|  
+|GlobalSerif.CompositeFont|Renderiza o texto usando uma fonte serif, por exemplo, "Times New Roman" para caracteres latinos.|  
+|GlobalUserInterface.CompositeFont|Renderiza o texto usando uma fonte padrão, por exemplo, "Times New Roman" para caracteres latinos.|  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontFamily="fontFamilyName"/>  
+- or -  
+<object FontFamily="fontFamilyNamesList"/>  
+- or -  
+<object FontFamily="fontFamilyFolderReference"/>  
+- or -  
+<object FontFamily="fontFamilyUriReference"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *fontFamilyName*  
+ Uma cadeia de caracteres especificando um nome de família de fonte.  Por exemplo `"Arial"` ou `"Century Gothic"`.  
+  
+ *fontFamilyNamesList*  
+ Uma cadeia de caracteres especificando vários nomes de família de fonte, cada um separado por uma vírgula (qualquer espaço em branco após uma vírgula é ignorado).  A primeira família de fontes especificada serve como a família de fonte principal. famílias de fontes subsequentes servem como famílias de fallbacks a ser usado em casos em que a família de fontes primário está indisponível ou não aplicável.  Por exemplo, `"Arial, Century Gothic"` Especifica Arial como a família de fontes primária, com século Gótica como a família de fontes de fallback.  
+  
+ *fontFamilyFolderReference*  
+ Uma cadeia de caracteres especificando uma pasta que contém a fonte, junto com um nome de família de fonte.  A pasta e o nome de família de fonte são delimitadas por um caractere #.  A referência da pasta pode ser absoluta ou relativa.  Por exemplo, `"Custom Fonts\#My Custom Font"`.  
+  
+ *fontFamilyUriReference*  
+ Uma cadeia de caracteres que especifica um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para a fonte, junto com um nome de família de fonte.  O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] e o nome de família de fonte são delimitadas por um caractere #.  Por exemplo, `"http://MyFontServer/Fonts/#My Custom Font"`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de uma classe <see cref="T:System.Windows.Media.FontFamily" /> anônima.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o construtor padrão quando você deseja criar uma fonte composta por meio de programação. Isso significa que você não precisa especificar um nome de família de fonte para o construtor, mas é necessário preencher as coleções de <xref:System.Windows.Media.FontFamily.FamilyMaps%2A> e <xref:System.Windows.Media.FontFamily.FamilyNames%2A> coleções antes de usar a instância construída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (string familyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">O nome ou nomes da família que compõem o novo <see cref="T:System.Windows.Media.FontFamily" />. Vários nomes de família devem ser separados por vírgulas.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.FontFamily" /> do nome da família de fontes especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada nome de família que é especificado no `familyName` parâmetro pode ser precedido por uma referência de local para um diretório ou um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)]. A referência de local é separada do nome de família por um sustenido (`#`) caracteres. Vários nomes de família que são especificados no `familyName` parâmetro deve ser separado por vírgulas.  
+  
+ Cada família pode ser uma fonte real que representa diretamente a um conjunto de arquivos de fonte que compartilham o mesmo nome de família, ou pode ser uma referência a um nome de família que é definido em um arquivo de fonte composta.  
+  
+ Quando várias famílias são identificadas, famílias de fontes segunda e as subsequentes servem como fallbacks famílias de lidar com pontos de código que não há suporte para a família de fonte primeiro. Para cada ponto de código que não há suporte para a família de fontes primeiro, cada família subsequente é verificada por sua vez.  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#103](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[FontSnippets#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="familyName" /> não pode ser <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (Uri baseUri, string familyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUri, string familyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="familyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Especifica a base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] que é usado para resolver <c>familyName</c>.</param>
+        <param name="familyName">O nome ou nomes da família que compõem o novo <see cref="T:System.Windows.Media.FontFamily" />. Vários nomes de família devem ser separados por vírgulas.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.FontFamily" /> de um valor [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] base opcional e do nome da família de fontes especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `familyName` valor pode especificar relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor, o que exige uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para resolver a referência da fonte. O `baseUri` valor pode ser `null`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra uma referência de fonte que é composta de uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor e relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
+ [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public double Baseline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância entre a linha de base e a parte superior da célula de caractere.</summary>
+        <value>Um <see cref="T:System.Double" /> que indica a distância entre a linha de base e a parte superior da célula de caractere, expresso como uma fração do tamanho da fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a base de [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] que é usado para resolver um nome de família de fonte.</summary>
+        <value>Um valor do tipo <see cref="T:System.Uri" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno é `null` se o nome de família de fonte não se baseia em uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para resolver a referência da fonte. Para recuperar o nome de família de fonte que é usado para construir o <xref:System.Windows.Media.FontFamily> de objeto, use o <xref:System.Windows.Media.FontFamily.Source%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra os resultados de recuperar o <xref:System.Windows.Media.FontFamily.BaseUri%2A> propriedade de um <xref:System.Windows.Media.FontFamily> objeto.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet9](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet9)]
+ [!code-vb[FontSnippets#FontPackageSnippet9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Windows.Media.FontFamily" /> objeto a ser comparado.</param>
+        <summary>Obtém um valor que indica se o objeto de família de fonte atual e o objeto da família de fonte especificados são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é igual à atual <see cref="T:System.Windows.Media.FontFamily" /> objeto; caso contrário, <see langword="false" />. Se <paramref name="o" /> não é um <see cref="T:System.Windows.Media.FontFamily" /> objeto <see langword="false" /> é retornado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyMaps">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamilyMapCollection FamilyMaps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamilyMapCollection FamilyMaps" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.FamilyMaps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamilyMapCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos <see cref="T:System.Windows.Media.FontFamilyMap" />.</summary>
+        <value><see cref="T:System.Windows.Media.FontFamilyMapCollection" /> que contém objetos de <see cref="T:System.Windows.Media.FontFamilyMap" /> .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para <xref:System.Windows.Media.FontFamily> objetos que são criados usando um nome de família de fonte, o <xref:System.Windows.Media.FontFamily.FamilyMaps%2A> propriedade retorna uma coleção vazia, somente leitura.  
+  
+ O <xref:System.Windows.Media.FontFamilyMap> objeto define a fonte a ser usada para exibir um conjunto especificado de caracteres Unicode de uma cultura específica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyNames">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.LanguageSpecificStringDictionary FamilyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.LanguageSpecificStringDictionary FamilyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.FamilyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.LanguageSpecificStringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres e valores <see cref="T:System.Globalization.CultureInfo" /> que representam os nomes das famílias de fontes do objeto <see cref="T:System.Windows.Media.FontFamily" />.</summary>
+        <value>Um <see cref="T:System.Windows.Media.LanguageSpecificStringDictionary" /> que representa os nomes de família de fontes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[FontSnippets#106](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#106)]
+ [!code-vb[FontSnippets#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyTypefaces">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FamilyTypefaceCollection FamilyTypefaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FamilyTypefaceCollection FamilyTypefaces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.FamilyTypefaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FamilyTypefaceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de tipos para o <see cref="T:System.Windows.Media.FontFamily" /> objeto.</summary>
+        <value>Um <see cref="T:System.Windows.Media.FamilyTypefaceCollection" /> que representa uma coleção de tipos para o <see cref="T:System.Windows.Media.FontFamily" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_FamilyTypefaces"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.FamilyTypefaces>  
+    <OneOrMoreFontFamilyTypefaces/>  
+  </object.FamilyTypefaces>  
+</object>  
+```  
+  
+<a name="xamlValues_FamilyTypefaces"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *OneOrMoreFontFamilyTypefaces*  
+ Um ou mais tipos para o <xref:System.Windows.Media.FontFamily> objeto.  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#107](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#107)]
+ [!code-vb[FontSnippets#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para <see cref="T:System.Windows.Media.FontFamily" />. Ele é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um <see cref="T:System.Int32" /> valor que representa o código hash para o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypefaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt; GetTypefaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Typeface&gt; GetTypefaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.GetTypefaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de <see cref="T:System.Windows.Media.Typeface" /> objetos que representam as faces de tipo no local de fonte de sistema padrão.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.Typeface" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[FontSnippets#104](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#104)]
+ [!code-vb[FontSnippets#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineSpacing">
+      <MemberSignature Language="C#" Value="public double LineSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.LineSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de espaçamento de linha para o objeto <see cref="T:System.Windows.Media.FontFamily" />. O espaçamento é a distância da linha de base a linha de base recomendada para o texto nesta fonte em relação o tamanho em.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o espaçamento de linha do objeto <see cref="T:System.Windows.Media.FontFamily" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de família de fonte que é usado para construir o <see cref="T:System.Windows.Media.FontFamily" /> objeto.</summary>
+        <value>O nome de família da fonte de <see cref="T:System.Windows.Media.FontFamily" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para retornar a base de [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] valor de um <xref:System.Windows.Media.FontFamily> de objeto, use o <xref:System.Windows.Media.FontFamily.BaseUri%2A>.  
+  
+ Se o <xref:System.Windows.Media.FontFamily> objeto foi criado sem especificar um nome de família de fonte, o valor de retorno é <xref:System.String.Empty>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra os resultados de recuperar o <xref:System.Windows.Media.FontFamily.BaseUri%2A> e <xref:System.Windows.Media.FontFamily.Source%2A> valores de propriedade de um <xref:System.Windows.Media.FontFamily> objeto.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet10)]
+ [!code-vb[FontSnippets#FontPackageSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.Windows.Media.FontFamily.Source" />.</summary>
+        <returns>O local de origem do <see cref="T:System.Windows.Media.FontFamily" /> objeto, incluindo o diretório ou [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] referência de local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Media.FontFamily> objeto foi criado sem especificar um nome de família de fonte, o valor de retorno é <xref:System.String.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

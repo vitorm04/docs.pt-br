@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Design" /> namespace contém classes que podem ser usados para gerar um personalizado dataset tipado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

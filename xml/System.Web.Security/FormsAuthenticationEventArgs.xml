@@ -1,0 +1,127 @@
+<Type Name="FormsAuthenticationEventArgs" FullName="System.Web.Security.FormsAuthenticationEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class FormsAuthenticationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FormsAuthenticationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.FormsAuthenticationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o **FormsAuthentication_OnAuthenticate** eventos. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.FormsAuthenticationEventArgs> classe é usada para fornecer valores de evento para o **FormsAuthentication_OnAuthenticate** eventos e permitem que você especifique uma identidade personalizada para a solicitação atual.  
+  
+ O <xref:System.Web.Security.FormsAuthenticationModule> constrói um <xref:System.Web.Security.FormsAuthenticationEventArgs> usando atual do objeto <xref:System.Web.HttpContext> e o transmite para o **FormsAuthentication_OnAuthenticate** eventos.  
+  
+ Você pode usar o <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> propriedade para definir o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para um personalizado <xref:System.Security.Principal.IPrincipal> objeto.  
+  
+ Se você não especificar um valor para o <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> propriedade durante o **FormsAuthentication_OnAuthenticate** evento, a identidade fornecida pelo tíquete de autenticação de formulários no cookie ou URL é usada.  
+  
+ O **FormsAuthentication_OnAuthenticate** evento só é gerado quando a autenticação <xref:System.Web.Configuration.AuthenticationSection.Mode%2A> é definido como <xref:System.Web.Configuration.AuthenticationMode.Forms> e o <xref:System.Web.Security.FormsAuthenticationModule> é um módulo HTTP ativado para o aplicativo.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o **FormsAuthentication_OnAuthenticate** evento para definir o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para um <xref:System.Security.Principal.GenericPrincipal> objeto com um personalizado <xref:System.Security.Principal.IPrincipal.Identity%2A>.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormsAuthenticationEventArgs (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsAuthenticationEventArgs.#ctor(System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto para o evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Security.FormsAuthenticationEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.FormsAuthenticationModule> constrói um <xref:System.Web.Security.FormsAuthenticationEventArgs> objeto usando fornecido `context` como o valor para o <xref:System.Web.Security.FormsAuthenticationEventArgs.Context%2A> propriedade. Ele passa a <xref:System.Web.Security.FormsAuthenticationEventArgs> o objeto para o **FormsAuthentication_OnAuthenticate** eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsAuthenticationEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.HttpContext" /> para a solicitação HTTP atual.</summary>
+        <value>O objeto <see cref="T:System.Web.HttpContext" /> para a solicitação HTTP atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpContext> fornece acesso a <xref:System.Web.HttpContext.Request%2A>, <xref:System.Web.HttpContext.Response%2A>, e <xref:System.Web.HttpContext.User%2A> objetos para a solicitação atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsAuthenticationEventArgs.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Security.Principal.IPrincipal" /> objeto a ser associado à solicitação atual.</summary>
+        <value>O <see cref="T:System.Security.Principal.IPrincipal" /> objeto a ser associado à solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> propriedade para definir o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para um personalizado <xref:System.Security.Principal.IPrincipal> objeto.  
+  
+ Se você não especificar um valor para o <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> propriedade durante o **FormsAuthentication_OnAuthenticate** evento, a identidade fornecida pelo tíquete de autenticação de formulários no cookie ou URL é usada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o **FormsAuthentication_OnAuthenticate** evento para definir o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para um <xref:System.Security.Principal.GenericPrincipal> objeto com um personalizado <xref:System.Security.Principal.IPrincipal.Identity%2A>.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

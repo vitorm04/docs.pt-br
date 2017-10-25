@@ -1,0 +1,114 @@
+<Type Name="ClientIDMode" FullName="System.Web.UI.ClientIDMode">
+  <TypeSignature Language="C#" Value="public enum ClientIDMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClientIDMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ClientIDMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como o ASP.NET gera o <see cref="P:System.Web.UI.Control.ClientID" /> para um controle que pode ser acessado no script de cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.ClientIDMode> enumeração ao definir o <xref:System.Web.UI.Control.ClientIDMode%2A> propriedade para um controle. O valor que você atribui para a <xref:System.Web.UI.Control.ClientIDMode%2A> propriedade determina como o <xref:System.Web.UI.Control.ClientID%2A> propriedade é gerada. O valor da <xref:System.Web.UI.Control.ClientID%2A> propriedade é processada como o `id` atributo na marcação e é o valor que você usa para acessar o controle de script de cliente. O valor que você atribui ao <xref:System.Web.UI.Control.ClientIDMode%2A> propriedade não afeta a <xref:System.Web.UI.Control.ID%2A> propriedade do controle do servidor, somente o `id` atributo do elemento HTML correspondente.  
+  
+ O valor padrão de <xref:System.Web.UI.Control.ClientIDMode%2A> para uma página é previsível. O valor padrão de <xref:System.Web.UI.Control.ClientIDMode%2A> para um controle é herdado.  
+  
+ Como o padrão de controles é herdado, o modo de geração de padrão é previsível. (No entanto, se você usar o Visual Studio para converter um projeto da Web em ASP.NET 4 de uma versão anterior, o Visual Studio automaticamente define o padrão do site para AutoID no arquivo Web. config).  
+  
+ Você pode definir o `ClientIDMode` valor para todas as páginas em um site da Web, definindo o elemento no arquivo. config do site. Você pode definir o `ClientIDMode` valor para uma página na diretiva.  
+  
+ Para obter mais informações, consulte [ASP.NET Web Server Control Identification](http://msdn.microsoft.com/library/45a8c3ef-5ac7-48f1-862a-0cd5073742e7) (Identificação de controles do servidor Web do ASP.NET).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra <xref:System.Web.UI.WebControls.Label> controles que estão contidos em um <xref:System.Web.UI.WebControls.ListView> controle. No <xref:System.Web.UI.WebControls.ListView> controle, o <xref:System.Web.UI.Control.ClientIDMode%2A> está definida como previsível e o <xref:System.Web.UI.WebControls.ListView.ClientIDRowSuffix%2A> está definida como `ProductID`. Script de cliente, você pode acessar uma instância específica de um <xref:System.Web.UI.WebControls.Label> com base no `ProductID` valor da instância que você está tentando acessar.  
+  
+ Este exemplo cria o HTML com três `ProductIDLabel` controles. Quando a página é executada, as IDs dos controles será o seguinte:  
+  
+-   `ListView1_ProductIDLabel_1`  
+  
+-   `ListView1_ProductIDLabel_34`  
+  
+-   `ListView1_ProductIDLabel_43`  
+  
+ Para obter mais informações, consulte [identificação do controle do servidor Web ASP.NET](http://msdn.microsoft.com/library/45a8c3ef-5ac7-48f1-862a-0cd5073742e7)  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoID">
+      <MemberSignature Language="C#" Value="AutoID" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode AutoID = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.AutoID" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor <see cref="P:System.Web.UI.Control.ClientID" /> é gerado concatenando os valores <see cref="P:System.Web.UI.Control.ID" /> de cada contêiner de nomenclatura pai com o valor <see cref="P:System.Web.UI.Control.ID" /> do controle. Em cenários de associação de dados em que várias instâncias de um controle são processadas, um valor incrementado é inserido na frente do controle <see cref="P:System.Web.UI.Control.ID" /> valor. Cada segmento é separado por um caractere de sublinhado (_). Esse algoritmo é o único que estava disponível em versões anteriores do ASP.NET que o ASP.NET 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode Inherit = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle herda a configuração <see cref="T:System.Web.UI.ClientIDMode" /> de seu controle <see cref="P:System.Web.UI.Control.NamingContainer" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Predictable">
+      <MemberSignature Language="C#" Value="Predictable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode Predictable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.Predictable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse algoritmo é usado para controles que estão em controles com associação de dados. O <see cref="P:System.Web.UI.Control.ClientID" /> valor é gerado pela concatenação do <see cref="P:System.Web.UI.Control.ClientID" /> valor do contêiner de nomenclatura pai com o <see cref="P:System.Web.UI.Control.ID" /> valor do controle. Se o controle for um controle associado a dados que gera várias linhas, o valor do campo de dados especificado no <see cref="P:System.Web.UI.WebControls.IDataBoundListControl.ClientIDRowSuffix" /> propriedade é adicionada ao final. Para o <see cref="T:System.Web.UI.WebControls.GridView" /> controlar dados de vários campos podem ser especificados. Se o <see cref="P:System.Web.UI.WebControls.IDataBoundListControl.ClientIDRowSuffix" /> propriedade estiver em branco, um número sequencial é adicionado ao final, em vez de um valor de campo de dados. Cada segmento é separado por um caractere de sublinhado (_).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode Static = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor <see cref="P:System.Web.UI.Control.ClientID" /> é definido como o valor da propriedade <see cref="P:System.Web.UI.Control.ID" />. Se o controle for um contêiner de nomenclatura, ele será usado como a parte superior da hierarquia de contêineres de nomenclatura para todos os controles que contiver.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

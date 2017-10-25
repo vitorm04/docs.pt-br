@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.ComIntegration">
+  <Docs>
+    <summary>Define as classes necessárias para a integração com aplicativos COM.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

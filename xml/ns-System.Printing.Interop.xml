@@ -1,0 +1,13 @@
+<Namespace Name="System.Printing.Interop">
+  <Docs>
+    <summary>Fornece interconversão de gerenciado <see cref="T:System.Printing.PrintTicket" /> objetos e não gerenciados Interface GDI (Graphics Device) <see href="http://msdn.microsoft.com/library/windows/desktop/dd183565">DEVMODE</see> estruturas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace é parte dos serviços de impressão aprimorados fornecidos com [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]. Os desenvolvedores de código gerenciado usando [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] devem usar o [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

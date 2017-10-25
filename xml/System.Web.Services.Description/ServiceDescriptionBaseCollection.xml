@@ -1,0 +1,241 @@
+<Type Name="ServiceDescriptionBaseCollection" FullName="System.Web.Services.Description.ServiceDescriptionBaseCollection">
+  <TypeSignature Language="C#" Value="public abstract class ServiceDescriptionBaseCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceDescriptionBaseCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Constitui a base para as coleções fortemente tipadas que são membros de <see cref="N:System.Web.Services.Description" /> namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionBaseCollection#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionBaseCollection/CPP/servicedescriptionbasecollection.cpp#1)]
+ [!code-csharp[ServiceDescriptionBaseCollection#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionBaseCollection/CS/servicedescriptionbasecollection.cs#1)]
+ [!code-vb[ServiceDescriptionBaseCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionBaseCollection/VB/servicedescriptionbasecollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="protected virtual string GetKey (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetKey(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionBaseCollection.GetKey(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto para o qual retornar o nome da chave.</param>
+        <summary>Retorna o nome da chave associada com o valor passado por referência.</summary>
+        <returns>Uma referência nula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método se destina a ser substituído por uma classe derivada para retornar o nome da chave associada a `value` parâmetro. A implementação padrão retorna null (`Nothing` no Visual Basic). Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionBaseCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o conteúdo da instância <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método destina-se a ser substituído para executar processos adicionais ao limpar o conteúdo de uma coleção derivada. Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionBaseCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o <c>valor</c> parâmetro.</param>
+        <param name="value">O elemento a ser inserido na coleção.</param>
+        <summary>Executa processos personalizados adicionais depois de inserir um novo elemento para o <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação quando o elemento especificado é inserido. Por exemplo, uma classe derivada pode precisar validação adicional.  
+  
+ Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionBaseCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <c>valor</c> parâmetro a ser removido.</param>
+        <param name="value">O elemento a ser removido da coleção.</param>
+        <summary>Remove um elemento do <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método destina-se a ser substituído para executar processos adicionais, como a validação, quando um elemento é removido da coleção.  
+  
+ Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionBaseCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero onde o <c>oldValue</c> parâmetro pode ser encontrado.</param>
+        <param name="oldValue">O objeto para substituir o <c>newValue</c> parâmetro.</param>
+        <param name="newValue">O objeto que substitui o <c>oldValue</c> parâmetro.</param>
+        <summary>Substitui um valor com outro dentro do <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído para executar processos adicionais, como a validação, ao definir o valor de um elemento na coleção. Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="protected virtual void SetParent (object value, object parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetParent(object value, object parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionBaseCollection.SetParent(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para o qual definir o objeto pai.</param>
+        <param name="parent">O objeto a ser definido como pai.</param>
+        <summary>Define o objeto pai do <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para definir um pai de uma classe apropriada, com base na especificação de WSDL Web Services Description Language (). A implementação padrão não realiza nenhuma ação. Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IDictionary Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionBaseCollection.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma interface que implementa a associação de chaves e valores de <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />.</summary>
+        <value>Uma interface que implementa a associação de chaves e valores de <see cref="T:System.Web.Services.Description.ServiceDescriptionBaseCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão retorna um <xref:System.Collections.Hashtable> para associar as chaves e valores. Esse método protegido é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

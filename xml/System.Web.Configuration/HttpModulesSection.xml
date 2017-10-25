@@ -1,0 +1,129 @@
+<Type Name="HttpModulesSection" FullName="System.Web.Configuration.HttpModulesSection">
+  <TypeSignature Language="C#" Value="public sealed class HttpModulesSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpModulesSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpModulesSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura um módulo HTTP para um aplicativo Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpModulesSection> classe fornece uma maneira de acessar e modificar programaticamente o `httpModules` seção de um arquivo de configuração.  
+  
+ Esse tipo é parte de um grupo que inclui o <xref:System.Web.Configuration.HttpModuleAction> e <xref:System.Web.Configuration.HttpModuleActionCollection> tipos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.HttpModulesSection> pode ler e gravar informações de e para a seção correspondente do arquivo de configuração de acordo com a propriedade de seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como especificar valores declarativamente para atributos do `add` elemento dentro do `httpModules` seção, que também pode ser acessada como membros do <xref:System.Web.Configuration.HttpModulesSection> classe.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar valores declarativamente para o [httpModules Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/5e28e921-ab9b-4584-a2f9-0f9aa08372e3) seção.  
+  
+```  
+<httpModules>  
+    <add name="TimerModule"   
+      type="Samples.Aspnet.Configuration.RequestTimeInterval, RequestTimeInterval Version=1.0.1557.23158, Culture=neutral,  
+      PublicKeyToken=7bfb33146a87b52e, processorArchitecture=MSIL"/>  
+</httpModules>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.HttpModulesSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HttpModulesSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpModulesSection/CS/httpmodulessection.cs#1)]
+ [!code-vb[System.Web.Configuration.HttpModulesSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpModulesSection/VB/httpmodulessection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpModulesSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpModulesSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.HttpModulesSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpModulesSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.HttpModulesSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modules">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.HttpModuleActionCollection Modules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.HttpModuleActionCollection Modules" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpModulesSection.Modules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.HttpModuleActionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.HttpModuleActionCollection" /> de <see cref="T:System.Web.Configuration.HttpModuleAction" /> módulos contidos pelo <see cref="T:System.Web.Configuration.HttpModulesSection" />.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.HttpModuleActionCollection" /> que contém o <see cref="T:System.Web.Configuration.HttpModuleAction" /> objetos ou módulos, definidos pelo <see cref="T:System.Web.Configuration.HttpModulesSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção retornada por este método não faz referência a qualquer elemento no arquivo de configuração subjacentes. É uma construção de infraestrutura do ASP.NET que permite o fácil acesso para os módulos que ele contém. Este é um padrão comum para lidar com os elementos de um arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.HttpModuleAction> módulos.  
+  
+ [!code-csharp[System.Web.Configuration.HttpModulesSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpModulesSection/CS/httpmodulessection.cs#3)]
+ [!code-vb[System.Web.Configuration.HttpModulesSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpModulesSection/VB/httpmodulessection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpModulesSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

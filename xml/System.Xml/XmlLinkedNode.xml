@@ -1,0 +1,116 @@
+<Type Name="XmlLinkedNode" FullName="System.Xml.XmlLinkedNode">
+  <TypeSignature Language="C#" Value="public abstract class XmlLinkedNode : System.Xml.XmlNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlLinkedNode extends System.Xml.XmlNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlLinkedNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Obtém o nó imediatamente anterior ou posterior a este nó.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NextSibling">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode NextSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode NextSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlLinkedNode.NextSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó imediatamente posterior a este nó.</summary>
+        <value>O <see cref="T:System.Xml.XmlNode" /> imediatamente após esse nó ou <see langword="null" /> se não existir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe os nós de dois catálogo primeiro.  
+  
+ [!code-cpp[Classic WebData XmlLinkedNode.NextSibling Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlLinkedNode.NextSibling Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlLinkedNode.NextSibling Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlLinkedNode.NextSibling Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlLinkedNode.NextSibling Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlLinkedNode.NextSibling Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousSibling">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode PreviousSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode PreviousSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlLinkedNode.PreviousSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó imediatamente anterior a este nó.</summary>
+        <value>Anterior <see cref="T:System.Xml.XmlNode" /> ou <see langword="null" /> se não existir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe os dois últimos manuais.  
+  
+ [!code-cpp[Classic WebData XmlLinkedNode.PreviousSibling Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlLinkedNode.PreviousSibling Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlLinkedNode.PreviousSibling Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlLinkedNode.PreviousSibling Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlLinkedNode.PreviousSibling Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlLinkedNode.PreviousSibling Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,25 @@
+<Namespace Name="System.Xml.Serialization.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Xml.Serialization.Configuration" /> namespace contém classes usadas para ler os valores encontrados nos arquivos de configuração de aplicativo sob o [ &lt;Serialization&gt; elemento](~/docs/standard/serialization/system-xml-serialization-element.md) seção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes neste namespace são usadas pela infraestrutura de serialização para lidar com os elementos de configuração e não podem ser usadas diretamente. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](~/docs/framework/configure-apps/file-schema/index.md).  
+  
+ Em vez disso, para configurar o <xref:System.Xml.Serialization.XmlSerializer> ou <xref:System.Xml.Serialization.XmlSchemaImporter>, crie um arquivo de configuração do aplicativo e usar os seguintes elementos XML:  
+  
+-   [&lt;Serialization&gt; elemento](~/docs/standard/serialization/system-xml-serialization-element.md)  
+  
+-   [&lt;schemaImporterExtensions&gt; elemento](~/docs/standard/serialization/schemaimporterextensions-element.md)  
+  
+-   [&lt;Adicionar&gt; elemento para &lt;xmlSchemaImporterExtensions&gt;](~/docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+  
+-   [&lt;dateTimeSerialization&gt; elemento](~/docs/standard/serialization/datetimeserialization-element.md)  
+  
+-   [&lt;xmlSerializer&gt; elemento](~/docs/standard/serialization/xmlserializer-element.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

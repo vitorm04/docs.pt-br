@@ -1,0 +1,293 @@
+<Type Name="ObfuscationAttribute" FullName="System.Reflection.ObfuscationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ObfuscationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObfuscationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ObfuscationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Event | System.AttributeTargets.Interface | System.AttributeTargets.Parameter | System.AttributeTargets.Delegate, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Instrui as ferramentas de ofuscação a realizar as ações especificadas para um assembly, tipo ou membro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.ObfuscationAttribute> e <xref:System.Reflection.ObfuscateAssemblyAttribute> atributos permitem que os autores de assembly anotar seus binários, para que as ferramentas de obscurecimento podem processá-las corretamente com a configuração mínima de externa.  
+  
+> [!IMPORTANT]
+>  Aplicar esse atributo não ofuscar a entidade de código para o qual você aplicá-lo automaticamente. Aplicando o atributo é uma alternativa para criar um arquivo de configuração para a ferramenta de ofuscação. Ou seja, ele simplesmente fornece instruções para uma ferramenta de obscurecimento. A Microsoft recomenda que os fornecedores de ferramentas de obscurecimento sigam a semântica descrita aqui. No entanto, não há nenhuma garantia de que uma determinada ferramenta segue as recomendações da Microsoft.  
+  
+ O <xref:System.Reflection.ObfuscationAttribute> atributo tem uma cadeia de caracteres <xref:System.Reflection.ObfuscationAttribute.Feature%2A> propriedade. Ferramentas de ofuscação podem mapear os valores de cadeia de caracteres dessa propriedade para recursos que eles implementem, preferencialmente usando um arquivo de configuração XML que os usuários podem acessar. O <xref:System.Reflection.ObfuscationAttribute> define cadeias de caracteres de dois recursos, "padrão" e "all". A cadeia de caracteres "default" deve ser mapeado para os recursos de ofuscação de padrão de uma ferramenta e "all" deve ser mapeado para o conjunto completo de recursos de ofuscação suportados por uma ferramenta. O valor padrão de <xref:System.Reflection.ObfuscationAttribute.Feature%2A> propriedade é "todas", permitindo que o conjunto completo de recursos de ofuscação.  
+  
+ Quando aplicado a um assembly, <xref:System.Reflection.ObfuscationAttribute> também se aplica a todos os tipos no assembly. Se o <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> propriedade não for especificada ou é definida como `true`, o atributo se aplica a todos os membros também. <xref:System.Reflection.ObfuscationAttribute>não especifique se um assembly é público ou privado. Para especificar se um assembly é público ou privado, use o <xref:System.Reflection.ObfuscateAssemblyAttribute> atributo.  
+  
+ Quando aplicado a classes e estruturas, <xref:System.Reflection.ObfuscationAttribute> também se aplica a todos os membros do tipo se o <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> propriedade não for especificada ou é definida como `true`.  
+  
+ Quando aplicado a métodos e propriedades, campos e parâmetros, o atributo afeta somente a entidade à qual ela é aplicada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um assembly público com dois tipos: `Type1` e `Type2`. O assembly está marcado para ofuscamento com o <xref:System.Reflection.ObfuscateAssemblyAttribute>, que marca o assembly deve ser tratado como público (ou seja, o <xref:System.Reflection.ObfuscateAssemblyAttribute.AssemblyIsPrivate%2A> é de propriedade `false`).  
+  
+ `Type1`é marcado para ofuscamento porque o assembly está marcado para ofuscação. Um membro de `Type1` é excluído do ofuscamento, usando o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> propriedade.  
+  
+ `Type2`é excluído do ofuscamento, mas seus membros são marcados para ofuscamento porque o <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> é de propriedade `false`.  
+  
+ O `MethodA` método `Type2` está marcado com o valor `"default"` para o <xref:System.Reflection.ObfuscationAttribute.Feature%2A> propriedade. É necessário especificar `false` para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> propriedade para evitar a exclusão de `MethodA` de ofuscação, porque o padrão para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> é de propriedade `true`. A ferramenta de ofuscação não deve remover o atributo depois de ofuscação porque o <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> é de propriedade `false`. Todos os outros atributos neste exemplo de código são removidos após ofuscamento, porque o <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> propriedade não for especificada e, portanto, os padrões para `true`.  
+  
+ O exemplo de código inclui o código para exibir os atributos e suas propriedades. Você também pode examinar os atributos abrindo o DLL com o [Ildasm.exe (IL Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md).  
+  
+ [!code-csharp[ObfuscationAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#1)]
+ [!code-vb[ObfuscationAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObfuscationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ObfuscationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.ObfuscationAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.ObfuscationAttribute>não especifique se um assembly é público ou privado. Para especificar se um assembly é público ou privado, use <xref:System.Reflection.ObfuscateAssemblyAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyToMembers">
+      <MemberSignature Language="C#" Value="public bool ApplyToMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyToMembers" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.ApplyToMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Boolean" /> valor que indica se o atributo de tipo aplicar aos membros do tipo.</summary>
+        <value>
+          <see langword="true" />Se o atributo for aplicar aos membros do tipo; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é ignorado quando o atributo é aplicado a um membro.  
+  
+> [!IMPORTANT]
+>  Aplicar esse atributo não ofuscar a entidade de código para o qual você aplicá-lo automaticamente. Aplicando o atributo é uma alternativa para criar um arquivo de configuração para a ferramenta de ofuscação. Ou seja, ele simplesmente fornece instruções para uma ferramenta de obscurecimento. A Microsoft recomenda que os fornecedores de ferramentas de obscurecimento sigam a semântica descrita aqui. No entanto, não há nenhuma garantia de que uma determinada ferramenta segue as recomendações da Microsoft.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um tipo que é excluído de ofuscação, mas a exclusão não se aplicam a seus membros porque o <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> é de propriedade `false`.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte a classe <xref:System.Reflection.ObfuscationAttribute>.  
+  
+ [!code-csharp[ObfuscationAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#2)]
+ [!code-vb[ObfuscationAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public bool Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Exclude" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor <see cref="T:System.Boolean" /> que indica se a ferramenta de ofuscação deve excluir o tipo ou membro da ofuscação.</summary>
+        <value>
+          <see langword="true" /> se o tipo ou membro ao qual esse atributo é aplicado deve ser excluído da ofuscação; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Aplicar esse atributo não ofuscar a entidade de código para o qual você aplicá-lo automaticamente. Aplicando o atributo é uma alternativa para criar um arquivo de configuração para a ferramenta de ofuscação. Ou seja, ele simplesmente fornece instruções para uma ferramenta de obscurecimento. A Microsoft recomenda que os fornecedores de ferramentas de obscurecimento sigam a semântica descrita aqui. No entanto, não há nenhuma garantia de que uma determinada ferramenta segue as recomendações da Microsoft.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um tipo que está marcado para ser excluídas do perturbador. Não é necessário especificar o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> propriedade, porque o padrão é `true`, mas especificando explicitamente torna sua intenção clear. O <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> é definido como `false`, de modo que a exclusão de ofuscação não se aplica a membros da classe. Ou seja, o nome da classe está visível, mas os membros são ofuscados.  
+  
+ O `MethodA` método está marcado com o valor `"default"` para o <xref:System.Reflection.ObfuscationAttribute.Feature%2A> propriedade. É necessário especificar `false` para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> propriedade para evitar a exclusão de `MethodA` de ofuscação, porque o padrão para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> é de propriedade `true`. O <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> é de propriedade `false` para que a ferramenta de ofuscação não removeremos o atributo depois de ofuscação.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte a classe <xref:System.Reflection.ObfuscationAttribute>.  
+  
+ [!code-csharp[ObfuscationAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#4)]
+ [!code-vb[ObfuscationAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feature">
+      <MemberSignature Language="C#" Value="public string Feature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Feature" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.Feature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de cadeia de caracteres que é reconhecido pela ferramenta de ofuscação e que especifica as opções de processamento.</summary>
+        <value>Um valor de cadeia de caracteres que é reconhecido pela ferramenta de ofuscação e que especifica as opções de processamento. O padrão é "todos".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor passado para esta propriedade depende da ferramenta de ofuscação usada. É recomendável que fornecedores de ofuscação ferramentas oferecem suporte a pelo menos "padrão" e "all". Fornecedores podem usar essas configurações em conjunto com o arquivo de configuração XML.  
+  
+> [!IMPORTANT]
+>  Aplicar esse atributo não ofuscar a entidade de código para o qual você aplicá-lo automaticamente. Aplicando o atributo é uma alternativa para criar um arquivo de configuração para a ferramenta de ofuscação. Ou seja, ele simplesmente fornece instruções para uma ferramenta de obscurecimento. A Microsoft recomenda que os fornecedores de ferramentas de obscurecimento sigam a semântica descrita aqui. No entanto, não há nenhuma garantia de que uma determinada ferramenta segue as recomendações da Microsoft.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um método marcado com o valor `"default"` para o <xref:System.Reflection.ObfuscationAttribute.Feature%2A> propriedade. É necessário especificar `false` para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> propriedade para evitar a exclusão de `MethodA` de ofuscação, porque o padrão para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> é de propriedade `true`. O <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> é de propriedade `false` para que a ferramenta de ofuscação não removeremos o atributo depois de ofuscação.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte a classe <xref:System.Reflection.ObfuscationAttribute>.  
+  
+ [!code-csharp[ObfuscationAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#3)]
+ [!code-vb[ObfuscationAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripAfterObfuscation">
+      <MemberSignature Language="C#" Value="public bool StripAfterObfuscation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StripAfterObfuscation" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.StripAfterObfuscation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Boolean" /> valor que indica se a ferramenta de ofuscação deve remover esse atributo após o processamento.</summary>
+        <value>
+          <see langword="true" />Se uma ferramenta de ofuscação deve remover o atributo após o processamento; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atributos não devem ser removidos se sua biblioteca será incluída como parte de outro aplicativo e ofuscada como parte do aplicativo.  
+  
+> [!IMPORTANT]
+>  Aplicar esse atributo não ofuscar a entidade de código para o qual você aplicá-lo automaticamente. Aplicando o atributo é uma alternativa para criar um arquivo de configuração para a ferramenta de ofuscação. Ou seja, ele simplesmente fornece instruções para uma ferramenta de obscurecimento. A Microsoft recomenda que os fornecedores de ferramentas de obscurecimento sigam a semântica descrita aqui. No entanto, não há nenhuma garantia de que uma determinada ferramenta segue as recomendações da Microsoft.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.Reflection.ObfuscationAttribute> cujo <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> é de propriedade `false` para que a ferramenta de ofuscação não removeremos o atributo depois de ofuscação. É necessário especificar `false` para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> propriedade para evitar a exclusão de `MethodA` de ofuscação, porque o padrão para o <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> é de propriedade `true`.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte a classe <xref:System.Reflection.ObfuscationAttribute>.  
+  
+ [!code-csharp[ObfuscationAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#4)]
+ [!code-vb[ObfuscationAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,59 @@
+<Type Name="ServiceReferenceCollection" FullName="System.Web.UI.ServiceReferenceCollection">
+  <TypeSignature Language="C#" Value="public class ServiceReferenceCollection : System.Collections.ObjectModel.Collection&lt;System.Web.UI.ServiceReference&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceReferenceCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Web.UI.ServiceReference&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ServiceReferenceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Web.UI.ServiceReference&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Web.UI.ServiceReference</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém um conjunto de objetos <see cref="T:System.Web.UI.ServiceReference" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ServiceReferenceCollection> objeto contém um <xref:System.Web.UI.ServiceReference> objeto para cada serviço Web que é registrado em uma página ASP.NET AJAX habilitado. Serviços Web podem ser definidos no <xref:System.Web.UI.ScriptManager> controle ou em um associado <xref:System.Web.UI.ScriptManagerProxy> controle.  
+  
+ Você pode adicionar serviços da Web para o <xref:System.Web.UI.ServiceReferenceCollection> objeto declarativamente adicionando um ou mais `<asp:ServiceReference>` elementos para um `<Services>` elemento dentro do `<asp:ScriptManager>` elemento na página, conforme mostrado no exemplo a seguir.  
+  
+```  
+<asp:ScriptManager ID="SM1" runat="server">  
+  <Services>  
+    <asp:ServiceReference Path="Service1.asmx" />  
+    <asp:ServiceReference Path="Service2.asmx" />  
+  </Services>  
+</asp:ScriptManager>  
+```  
+  
+ Também programaticamente, você pode adicionar um <xref:System.Web.UI.ServiceReference> do objeto para o <xref:System.Web.UI.ScriptManager.Services%2A> coleção usando o <xref:System.Collections.ObjectModel.Collection%601.Add%2A> método o <xref:System.Web.UI.ServiceReferenceCollection> classe.  
+  
+ Serviços Web estão registrados com o <xref:System.Web.UI.ScriptManager> controle durante a página <xref:System.Web.UI.Control.PreRender> estágio do ciclo de vida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceReferenceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ServiceReferenceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ServiceReferenceCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

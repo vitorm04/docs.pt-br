@@ -1,0 +1,50 @@
+<Type Name="PropertyPosition" FullName="Microsoft.Build.BuildEngine.PropertyPosition">
+  <TypeSignature Language="C#" Value="public enum PropertyPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyPosition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.PropertyPosition" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica constantes que definem o local do projeto para inserir uma propriedade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="UseExistingOrCreateAfterLastImport">
+      <MemberSignature Language="C#" Value="UseExistingOrCreateAfterLastImport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.BuildEngine.PropertyPosition UseExistingOrCreateAfterLastImport = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.BuildEngine.PropertyPosition.UseExistingOrCreateAfterLastImport" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.PropertyPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substituir o [propriedade](http://msdn.microsoft.com/library/69ab08ab-3e76-41dd-a01b-49aa1d2e0cac) elemento se ele existir. Caso contrário, crie o <c>propriedade</c> após a última [importação](http://msdn.microsoft.com/library/3bfecaf1-69fd-4008-b651-c9dafd4389d9) elemento no projeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseExistingOrCreateAfterLastPropertyGroup">
+      <MemberSignature Language="C#" Value="UseExistingOrCreateAfterLastPropertyGroup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.BuildEngine.PropertyPosition UseExistingOrCreateAfterLastPropertyGroup = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.BuildEngine.PropertyPosition.UseExistingOrCreateAfterLastPropertyGroup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.PropertyPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substituir o [propriedade](http://msdn.microsoft.com/library/69ab08ab-3e76-41dd-a01b-49aa1d2e0cac) elemento se ele existir. Caso contrário, se possível, crie um novo <c>propriedade</c> elemento como um filho de um existente compatível [PropertyGroup](http://msdn.microsoft.com/library/ff1e6c68-b9a1-4263-a1ce-dc3b829a64d4) elemento. Se necessário, crie um novo monitor compatível <c>PropertyGroup</c> elemento imediatamente após a última <c>PropertyGroup</c> no projeto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

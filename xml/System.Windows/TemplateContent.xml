@@ -1,0 +1,30 @@
+<Type Name="TemplateContent" FullName="System.Windows.TemplateContent">
+  <TypeSignature Language="C#" Value="public class TemplateContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateContent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateContent" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XamlDeferLoad(typeof(System.Windows.TemplateContentLoader), typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa a lógica de gravação e reprodução que os modelos usam para adiar o conteúdo ao interagirem com leitores e gravadores XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não tem nenhuma API pública na versão Beta do .NET Framework 4.5. Ele fornece um valor de propriedade para <xref:System.Windows.FrameworkTemplate.Template%2A>. O construtor é interno. Há um caminho de instanciação, mas é complexa. Criando um modelo se baseia em <xref:System.Windows.TemplateContentLoader>, que requer um <xref:System.Xaml.XamlReader> que representa uma instância do leitor adiada e um <xref:System.Xaml.IXamlObjectWriterFactory> serviço. Essas considerações sobre geralmente só é relevantes para aqueles que não estiver usando o XAML padrão para o comportamento de processamento do WPF, que inclui adiado processamento de conteúdo de modelos como parte de sua infraestrutura e não exige que o autor do aplicativo WPF típico acessar APIs mencionadas anteriormente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

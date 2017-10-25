@@ -1,0 +1,198 @@
+<Type Name="TimerEventSubscription" FullName="System.Workflow.Runtime.TimerEventSubscription">
+  <TypeSignature Language="C#" Value="public class TimerEventSubscription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TimerEventSubscription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.TimerEventSubscription" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma assinatura a um evento do timer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.TimerEventSubscription>os objetos são adicionados à fila de timer associada a uma instância de fluxo de trabalho para enviar uma mensagem para um determinado <xref:System.Workflow.Runtime.WorkflowQueue> em um horário especificado. Quando o tempo especificado por <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A> for atingido, o fluxo de trabalho mecanismo de tempo de execução envia uma mensagem que contém o <xref:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId%2A> para o <xref:System.Workflow.Runtime.WorkflowQueue> especificado por <xref:System.Workflow.Runtime.TimerEventSubscription.QueueName%2A>. A fila de timer associada a uma instância de fluxo de trabalho está contida no <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.TimerCollectionProperty>. Você pode examinar <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.TimerCollectionProperty> e <xref:System.Workflow.Runtime.WorkflowQueueInfo> objetos retornados pelo <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A?displayProperty=nameWithType> para determinar quais atividades estão esperando um determinado <xref:System.Workflow.Runtime.TimerEventSubscription>. O <xref:System.Workflow.Activities.DelayActivity> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> usam assinaturas de evento de timer para fornecer a parte de sua funcionalidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimerEventSubscription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscription.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimerEventSubscription (Guid workflowInstanceId, DateTime expiresAt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid workflowInstanceId, valuetype System.DateTime expiresAt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscription.#ctor(System.Guid,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+        <Parameter Name="expiresAt" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="workflowInstanceId">O <see cref="T:System.Guid" /> da instância do fluxo de trabalho associada com esta assinatura.</param>
+        <param name="expiresAt">Um <see cref="T:System.DateTime" /> que representa o tempo em Horário Coordenado Universal (UTC) em que o temporizador associado com essa assinatura deve expirar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> classe usando especificado <see cref="T:System.Guid" /> de uma instância de fluxo de trabalho e de vencimento especificada <see cref="T:System.DateTime" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Workflow.Runtime.TimerEventSubscription>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.QueueName%2A>|Uma representação de cadeia de caracteres do que a fornecida pelo sistema <xref:System.Guid> para <xref:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId%2A>.|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId%2A>|Um fornecido pelo sistema <xref:System.Guid>.|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.WorkflowInstanceId%2A>|O <xref:System.Guid> da instância de fluxo de trabalho, especificada pelo `workflowInstanceId`.|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A>|O <xref:System.DateTime> especificado por `expiresAt`.|  
+  
+ <xref:System.Workflow.Runtime.TimerEventSubscription.QueueName%2A>é inicializada com uma representação de cadeia de caracteres de <xref:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId%2A> por este construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimerEventSubscription (Guid timerId, Guid workflowInstanceId, DateTime expiresAt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid timerId, valuetype System.Guid workflowInstanceId, valuetype System.DateTime expiresAt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscription.#ctor(System.Guid,System.Guid,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timerId" Type="System.Guid" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+        <Parameter Name="expiresAt" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="timerId">O <see cref="T:System.Guid" /> para essa assinatura.</param>
+        <param name="workflowInstanceId">O <see cref="T:System.Guid" /> da instância do fluxo de trabalho para o qual esta assinatura foi criada.</param>
+        <param name="expiresAt">Um <see cref="T:System.DateTime" /> que representa a hora em tempo Universal Coordenado (UTC) em que o timer para essa assinatura deve expirar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> classe usando a Id especificada de assinatura especificada <see cref="T:System.Guid" /> de uma instância de fluxo de trabalho e de vencimento especificada <see cref="T:System.DateTime" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Workflow.Runtime.TimerEventSubscription>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.QueueName%2A>|Uma representação de cadeia de caracteres da <xref:System.Guid> especificado por `timerId`.|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId%2A>|O <xref:System.Guid> especificado por `timerId`.|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.WorkflowInstanceId%2A>|O <xref:System.Guid> da instância de fluxo de trabalho, especificada pelo `workflowInstanceId`.|  
+|<xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A>|O <xref:System.DateTime> especificado por `expiresAt`.|  
+  
+ <xref:System.Workflow.Runtime.TimerEventSubscription.QueueName%2A>é inicializada com uma representação de cadeia de caracteres de `timerId` por este construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiresAt">
+      <MemberSignature Language="C#" Value="public virtual DateTime ExpiresAt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpiresAt" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora de expiração esperado do temporizador associado com esta assinatura.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o tempo em Horário Coordenado Universal (UTC) em que o temporizador associado com essa assinatura deve expirar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueName">
+      <MemberSignature Language="C#" Value="public virtual IComparable QueueName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IComparable QueueName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscription.QueueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IComparable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o nome do <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> que o <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> envia uma mensagem para quando a assinatura de timer expira.</summary>
+        <value>O <see cref="T:System.IComparable" /> a interface para um <see cref="T:System.Guid" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionId">
+      <MemberSignature Language="C#" Value="public virtual Guid SubscriptionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid SubscriptionId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identificador exclusivo que representa um evento do timer</summary>
+        <value>
+          <see cref="T:System.Guid" />que representa o identificador exclusivo de um evento do timer</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowInstanceId">
+      <MemberSignature Language="C#" Value="public virtual Guid WorkflowInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid WorkflowInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscription.WorkflowInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identificador do fluxo de trabalho associado à assinatura do timer</summary>
+        <value>
+          <see cref="T:System.Guid" />que representa o identificador exclusivo para o fluxo de trabalho associado à assinatura do timer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

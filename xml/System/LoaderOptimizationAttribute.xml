@@ -1,0 +1,131 @@
+<Type Name="LoaderOptimizationAttribute" FullName="System.LoaderOptimizationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LoaderOptimizationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LoaderOptimizationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.LoaderOptimizationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Usado para definir a política de otimização do carregador padrão para o método principal de um aplicativo executável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.LoaderOptimizationAttribute> só pode ser definida no método principal de um aplicativo executável e é ignorada em todos os outros métodos.  
+  
+ O <xref:System.LoaderOptimizationAttribute> atributo é especificado com um <xref:System.LoaderOptimization> valor de enumeração, que informa o carregador de que tipo de aplicativo para otimizar para: `SingleDomain`, `MultiDomain`, ou `MultiDomainHost`.  
+  
+ Este atributo é apenas uma dica para o carregador e não afeta o comportamento do programa.  
+  
+> [!NOTE]
+>  Se a política de segurança de acesso do código personalizado é definida para o <xref:System.AppDomain>, usando o <xref:System.AppDomain.SetAppDomainPolicy%2A> propriedade e o <xref:System.AppDomain> é criado usando o <xref:System.LoaderOptimization.MultiDomain> sinalizador, o efeito é o mesmo que especificar o <xref:System.LoaderOptimization.MultiDomainHost> sinalizador; ou seja, apenas os assemblies no GAC são compartilhados. Quando isso ocorre, o carregador não gerará uma exceção e o aplicativo não apresenta os ganhos de desempenho associados a <xref:System.LoaderOptimization.MultiDomain> sinalizador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoaderOptimizationAttribute (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.LoaderOptimizationAttribute.#ctor(System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor equivalente a um <see cref="T:System.LoaderOptimization" /> constante.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.LoaderOptimizationAttribute" /> classe ao valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoaderOptimizationAttribute (LoaderOptimization value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.LoaderOptimization value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.LoaderOptimizationAttribute.#ctor(System.LoaderOptimization)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.LoaderOptimization" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.LoaderOptimization" /> constante.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.LoaderOptimizationAttribute" /> classe ao valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public LoaderOptimization Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.LoaderOptimization Value" />
+      <MemberSignature Language="DocId" Value="P:System.LoaderOptimizationAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.LoaderOptimization</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.LoaderOptimization" /> valor para essa instância.</summary>
+        <value>Um <see cref="T:System.LoaderOptimization" /> constante.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,144 @@
+<Type Name="PipeAuditRule" FullName="System.IO.Pipes.PipeAuditRule">
+  <TypeSignature Language="C#" Value="public sealed class PipeAuditRule : System.Security.AccessControl.AuditRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PipeAuditRule extends System.Security.AccessControl.AuditRule" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.PipeAuditRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AuditRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma abstração de uma entrada de controle de acesso (ACE) que define uma regra de auditoria para um pipe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Regras de auditoria determinam quando e como as ações executadas em objetos do sistema são registradas.  
+  
+ O <xref:System.IO.Pipes.PipeAuditRule> classe representa uma abstração de uma base controle entrada de acesso (ACE) que especifica uma conta de usuário, o tipo de acesso para fornecer (leitura, gravação e assim por diante) e se deseja executar a auditoria. Essa classe pode especificar como as regras de auditoria são herdadas do e propagadas para objetos.  
+  
+ Para permitir que o arquivo de auditoria em computadores que executam o Windows NT ou sistemas operacionais posteriores, a política de auditoria de segurança de acesso deve ser habilitada; Por padrão, essa política está definida como **sem auditoria**.  
+  
+ Para habilitar a política de auditoria de segurança de acesso, execute as seguintes etapas:  
+  
+1.  Clique o **iniciar** botão e, em seguida, aponte para **todos os programas**. Aponte para **ferramentas administrativas** e, em seguida, clique em **política de segurança Local**.  
+  
+2.  Na janela de configurações de segurança Local, expanda a pasta Diretivas locais e clique na pasta de política de auditoria.  
+  
+3.  Clique duas vezes o **auditar acesso ao objeto** entrada no painel direito da janela de configurações de segurança Local para exibir o **auditar acesso ao objeto propriedades** caixa de diálogo.  
+  
+4.  Selecione o **êxito** ou **falha** caixas para registrar êxitos ou falhas.  
+  
+ Observe que uma regra de auditoria para uma conta de usuário requer uma regra de acesso correspondente para a mesma conta de usuário.  
+  
+ Use o <xref:System.IO.Pipes.PipeAuditRule> classe para criar uma nova regra de auditoria. Você pode manter essa regra usando o <xref:System.IO.Pipes.PipeSecurity> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipeAuditRule (System.Security.Principal.IdentityReference identity, System.IO.Pipes.PipeAccessRights rights, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.IO.Pipes.PipeAccessRights rights, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeAuditRule.#ctor(System.Security.Principal.IdentityReference,System.IO.Pipes.PipeAccessRights,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="rights" Type="System.IO.Pipes.PipeAccessRights" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que encapsula uma referência a uma conta de usuário.</param>
+        <param name="rights">Uma da <see cref="T:System.IO.Pipes.PipeAccessRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especifica quando executar a auditoria.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.PipeAuditRule" /> classe para uma conta de usuário especificada em uma <see cref="T:System.Security.Principal.IdentityReference" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de auditoria que pode ser persistente usando o <xref:System.IO.Pipes.PipeSecurity> classe. Regras de auditoria determinam quando e como as ações executadas em objetos do sistema são registradas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipeAuditRule (string identity, System.IO.Pipes.PipeAccessRights rights, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.IO.Pipes.PipeAccessRights rights, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeAuditRule.#ctor(System.String,System.IO.Pipes.PipeAccessRights,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="rights" Type="System.IO.Pipes.PipeAccessRights" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome da conta de usuário.</param>
+        <param name="rights">Uma da <see cref="T:System.IO.Pipes.PipeAccessRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especifica quando executar a auditoria.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.PipeAuditRule" /> classe para uma conta de usuário nomeado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de auditoria que pode ser persistente usando o <xref:System.IO.Pipes.PipeSecurity> classe. Regras de auditoria determinam quando e como as ações executadas em objetos do sistema são registradas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipeAccessRights">
+      <MemberSignature Language="C#" Value="public System.IO.Pipes.PipeAccessRights PipeAccessRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeAccessRights PipeAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeAuditRule.PipeAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.IO.Pipes.PipeAccessRights" /> sinalizadores que estão associados com a atual <see cref="T:System.IO.Pipes.PipeAuditRule" /> objeto.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.IO.Pipes.PipeAccessRights" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,157 @@
+<Type Name="RefreshEventArgs" FullName="System.ComponentModel.RefreshEventArgs">
+  <TypeSignature Language="C#" Value="public class RefreshEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RefreshEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.RefreshEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.ComponentModel.TypeDescriptor.Refreshed" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, informações de componente não serão alteradas durante a vida útil de um processo. Durante o tempo de design, no entanto, você pode alterar propriedades ou eventos do componente. Como resultado, informações do componente <xref:System.ComponentModel.TypeDescriptor> torna-se desatualizados e um <xref:System.ComponentModel.TypeDescriptor.Refreshed> é gerado. Um <xref:System.ComponentModel.TypeDescriptor.Refreshed> também o evento é gerado quando um <xref:System.Type> é alterado durante o tempo de design.  
+  
+ Um <xref:System.ComponentModel.RefreshEventArgs> objeto Especifica os dados associados a <xref:System.ComponentModel.TypeDescriptor.Refreshed> evento; ou seja, o componente e o tipo de componente que foram alteradas.  
+  
+ O <xref:System.ComponentModel.RefreshEventArgs> classe fornece <xref:System.ComponentModel.RefreshEventArgs.ComponentChanged%2A> e <xref:System.ComponentModel.RefreshEventArgs.TypeChanged%2A> propriedades para obter o componente ou digite que geraram o evento.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de <xref:System.ComponentModel.RefreshEventArgs> classe, consulte o código de exemplo o <xref:System.ComponentModel.RefreshEventHandler> delegar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshEventArgs (object componentChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object componentChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RefreshEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="componentChanged" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="componentChanged">O componente que foram alteradas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.RefreshEventArgs" /> classe com o componente que foi alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshEventArgs (Type typeChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type typeChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RefreshEventArgs.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeChanged" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeChanged">O <see cref="T:System.Type" /> que foram alteradas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.RefreshEventArgs" /> classe com o tipo de componente que foi alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentChanged">
+      <MemberSignature Language="C#" Value="public object ComponentChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ComponentChanged" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.RefreshEventArgs.ComponentChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente que alterou suas propriedades, eventos ou extensores.</summary>
+        <value>O componente que alterou suas propriedades, eventos ou extensores, ou <see langword="null" /> se todos os componentes do mesmo tipo foram alterados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeChanged">
+      <MemberSignature Language="C#" Value="public Type TypeChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeChanged" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.RefreshEventArgs.TypeChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> que alterar suas propriedades ou eventos.</summary>
+        <value>O <see cref="T:System.Type" /> que alterar suas propriedades ou eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,181 @@
+<Type Name="IRawElementProviderSimple" FullName="System.Windows.Automation.Provider.IRawElementProviderSimple">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderSimple" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d6dd68d1-86fd-4332-8666-9abedea2d24c")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos e propriedades que expõem informações básicas sobre um elemento de interface do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface pode ser implementada em provedores de automação de interface do usuário para elementos simples como botões. Ele também pode ser implementado em provedores que contribuem propriedades adicionais ou padrões de controle, ou substituam as propriedades existentes ou padrões de controle, em um elemento que já tenha um provedor padrão.  
+  
+ Provedores de elementos complexos devem implementar <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ou <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPatternProvider">
+      <MemberSignature Language="C#" Value="public object GetPatternProvider (int patternId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPatternProvider(int32 patternId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="patternId">Identificador do padrão.</param>
+        <summary>Recupera um objeto que fornece suporte para um padrão de controle em um [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento.</summary>
+        <returns>Objeto que implementa a interface padrão, ou <see langword="null" /> se não há suporte para o padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> para um provedor que dá suporte apenas à <xref:System.Windows.Automation.InvokePattern>.  
+  
+ [!code-csharp[UIAProvider_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#101)]
+ [!code-vb[UIAProvider_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public object GetPropertyValue (int propertyId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyValue(int32 propertyId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="propertyId">O identificador de propriedade.</param>
+        <summary>Recupera o valor de uma propriedade com suporte pelo provedor de automação de interface do usuário.</summary>
+        <returns>O valor da propriedade, ou um <see langword="null" /> se a propriedade não é suportada por esse provedor, ou <see cref="F:System.Windows.Automation.AutomationElementIdentifiers.NotSupported" /> se não há suporte em todos os.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor deve retornar <xref:System.Windows.Automation.AutomationElementIdentifiers.NotSupported> somente se ele está ocultando explicitamente o valor da propriedade e a solicitação não é deve ser passado para outros provedores.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> para um controle de botão personalizado.  
+  
+ [!code-csharp[UIAProvider_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#102)]
+ [!code-vb[UIAProvider_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostRawElementProvider">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple HostRawElementProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderSimple HostRawElementProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um provedor de base para esse elemento.</summary>
+        <value>O provedor de base, ou <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é o provedor de automação de interface do usuário para a janela de um controle personalizado. [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]usa esse provedor em combinação com a implementação de provedor para um controle hospedado em uma janela. Por exemplo, o identificador de tempo de execução do elemento é obtido do provedor de host.  
+  
+ Um provedor de host deve ser retornado em qualquer um dos seguintes casos:  
+  
+-   Esse elemento é a raiz de um fragmento.  
+  
+-   O elemento é um elemento simple, como um botão de ação.  
+  
+-   O provedor é um espaço reservado repositioning.  
+  
+ Em outros casos, a propriedade deve retornar `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> para uma raiz de fragmento hospedado em um formulário do Windows.  
+  
+ [!code-csharp[UIAProvider_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#103)]
+ [!code-vb[UIAProvider_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderOptions">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ProviderOptions ProviderOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.Provider.ProviderOptions ProviderOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ProviderOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica as características do provedor de automação de interface do usuário; Por exemplo, se ele é um provedor do lado do cliente ou do servidor.</summary>
+        <value>O <see cref="F:System.Windows.Automation.Provider.ProviderOptions.ClientSideProvider" /> ou <see cref="F:System.Windows.Automation.Provider.ProviderOptions.ServerSideProvider" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]trata tipos diferentes de provedores de forma diferente. Por exemplo, eventos de provedores do lado do servidor são transmitidos para escutando todos os processos de clientes de automação de interface do usuário, mas eventos de provedores do lado do cliente permaneçam no processo cliente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions%2A> para um provedor de automação de interface do usuário do lado do servidor.  
+  
+ [!code-csharp[UIAProvider_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#104)]
+ [!code-vb[UIAProvider_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

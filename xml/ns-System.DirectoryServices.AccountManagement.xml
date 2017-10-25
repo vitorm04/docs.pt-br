@@ -1,0 +1,33 @@
+<Namespace Name="System.DirectoryServices.AccountManagement">
+  <Docs>
+    <summary>O <see cref="N:System.DirectoryServices.AccountManagement" /> namespace fornece acesso uniforme e manipulação de entidades de segurança do grupo, computador e usuário em vários repositórios de entidade de segurança: serviços de domínio Active Directory (AD DS), Active Directory Lightweight Directory Services (AD LDS) e máquina SAM (MSAM). <see cref="N:System.DirectoryServices.AccountManagement" />gerencia objetos de diretório, independentemente do <see cref="N:System.DirectoryServices" /> namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos de serviços de diretório gerenciado podem aproveitar o <xref:System.DirectoryServices.AccountManagement> API para simplificar o gerenciamento de usuário, computador e grupo de entidades. Soluções que previamente necessitaram de conhecimento profundo do armazenamento ou código longo, como localizar todos os grupos aos quais um usuário pertence, são realizadas em algumas linhas de código com o <xref:System.DirectoryServices.AccountManagement> API.  
+  
+ Os seguintes recursos estão disponíveis no <xref:System.DirectoryServices.AccountManagement> API:  
+  
+-   Operações básicas do diretório, como criação e atualização de entidades de segurança é simplificado. O aplicativo requer menos conhecimento das lojas subjacentes para executar essas operações.  
+  
+-   Aplicativos podem estender o modelo de objeto para incluir novos tipos de objetos de diretório.  
+  
+-   Tarefas de gerenciamento de conta, como habilitar e desabilitar uma conta de usuário são simplificadas.  
+  
+-   Suporte entre armazenamentos permite que os objetos de grupo nos serviços de domínio Active Directory (AD DS), Active Directory Lightweight Directory Services (AD LDS) e bancos de dados do SAM do computador (MSAM) para conter membros de diferentes tipos de armazenamentos.  
+  
+-   Consulta por meio de pesquisa de exemplo, disponível na <xref:System.DirectoryServices.AccountManagement.PrincipalSearcher> classe permite que os aplicativos para definir propriedades em um objeto principal e procure outros objetos que contêm valores de propriedade correspondentes na loja selecionada.  
+  
+-   Pesquisa avançada no computador, usuário e objetos de grupo permite que os aplicativos procurar o repositório selecionado para correspondência de objetos.  
+  
+-   Pesquisa recursiva, disponível no objeto principal do grupo, permite que os aplicativos pesquisar uma grupo de forma recursiva e retornar apenas os objetos principais que são nós folha.  
+  
+-   Validação de credenciais contra os repositórios de computador SAM, AD DS e AD LS é simplificada.  
+  
+-   Velocidades de conexões são aumentadas usando o recurso Fast simultâneas associar (frontal) quando disponível. Conexão de cache diminui o número de portas usadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

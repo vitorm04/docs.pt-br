@@ -1,0 +1,284 @@
+<Type Name="NestedContainer" FullName="System.ComponentModel.NestedContainer">
+  <TypeSignature Language="C#" Value="public class NestedContainer : System.ComponentModel.Container, IDisposable, System.ComponentModel.INestedContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NestedContainer extends System.ComponentModel.Container implements class System.ComponentModel.IContainer, class System.ComponentModel.INestedContainer, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.NestedContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Container</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INestedContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a implementação base para a <see cref="T:System.ComponentModel.INestedContainer" /> interface, que permite que os contêineres para ter um componente de propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.NestedContainer> classe é uma implementação simples do <xref:System.ComponentModel.INestedContainer> interface, que define um componente que contém zero ou mais componentes logicamente e pertence a um componente pai. O comportamento de contêineres aninhados difere de um padrão <xref:System.ComponentModel.Container> de várias maneiras, incluindo o seguinte:  
+  
+-   Características do site, como <xref:System.ComponentModel.Component.DesignMode%2A> e <xref:System.ComponentModel.Component.GetService%2A> são roteadas por meio do site do componente proprietário.  
+  
+-   O site <xref:System.ComponentModel.ISite.Name%2A> propriedade é um nome qualificado que inclui o nome do componente proprietário seguido por um ponto (.) e o nome do componente filho.  
+  
+-   <xref:System.ComponentModel.NestedContainer.GetService%2A>fornece suporte para o <xref:System.ComponentModel.INestedContainer> como um serviço.  
+  
+-   Quando o componente proprietário for descartado, o contêiner é descartado também.  
+  
+ Além disso, designers de tratam contêineres aninhados de forma diferente. Um host designer só está interessado em um contêiner — associado com o host. Portanto, o componente de adicionar e remover eventos não são disparados quando um componente é adicionado ou removido de um contêiner aninhado. No entanto, como serviços fluem para o contêiner aninhado, eventos de alteração de componente são gerados quando um componente em um contêiner aninhado é alterado.  
+  
+ Essa diferença no acompanhamento de evento também afeta a funcionalidade de desfazer, que está diretamente ligada à serialização. O mecanismo de desfazer padrão usa <xref:System.ComponentModel.Design.IReferenceService> para rastrear as alterações feitas nos componentes. Se o mecanismo de desfazer não pode identificar o nome de um componente por meio do serviço de referência, o mecanismo irá ignorar as alterações para esse componente. Este serviço reconhece automaticamente alterações nos componentes independentes somente se eles são expostos como propriedades públicas de somente leitura do mesmo nome nos seus proprietários. Caso contrário, o desenvolvedor deve passar em eventos de alteração até o proprietário de componente. Por exemplo, se um componente aninhado `Text` propriedade é resurfaced em seu componente de propriedade como um `Address` propriedade, quando o `Text` propriedade é alterada, uma alteração de propriedade deve ser feita programaticamente para o correspondente `Address` propriedade ou então que as alterações não serão controladas por Desfazer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NestedContainer (System.ComponentModel.IComponent owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.#ctor(System.ComponentModel.IComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.ComponentModel.IComponent" /> que possui este contêiner aninhado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.NestedContainer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inscreve no seu proprietário <xref:System.ComponentModel.IComponent.Disposed> evento para que o contêiner aninhado <xref:System.ComponentModel.NestedContainer.Dispose%2A> método será chamado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSite">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.ISite CreateSite (System.ComponentModel.IComponent component, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.ISite CreateSite(class System.ComponentModel.IComponent component, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.CreateSite(System.ComponentModel.IComponent,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> para criar um site.</param>
+        <param name="name">O nome a ser atribuído ao <c>componente</c>, ou <see langword="null" /> para ignorar a atribuição de nome.</param>
+        <summary>Cria um site para o componente dentro do contêiner.</summary>
+        <returns>O <see cref="T:System.ComponentModel.ISite" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `name` parâmetro é `null`, o <xref:System.ComponentModel.IComponent> é adicionado ao contêiner aninhado sem um nome de identificação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos usados pelo contêiner aninhado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.ComponentModel.NestedContainer> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected override object GetService (Type service);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetService(class System.Type service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="service">O <see cref="T:System.Type" /> do serviço a ser recuperado.</param>
+        <summary>Obtém o objeto de serviço do tipo especificado, se estiver disponível.</summary>
+        <returns>Um <see cref="T:System.Object" /> que implementa o serviço solicitado, ou <see langword="null" /> se o serviço não pode ser resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.ComponentModel.Container.GetService%2A?displayProperty=nameWithType> método. Essa implementação apenas resolve solicitações para o <xref:System.ComponentModel.INestedContainer> e <xref:System.ComponentModel.IContainer> serviços.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.NestedContainer.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente proprietário para este contêiner aninhado.</summary>
+        <value>O <see cref="T:System.ComponentModel.IComponent" /> que possui este contêiner aninhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O componente proprietário é a característica que diferencia contêineres aninhados de contêineres comuns.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerName">
+      <MemberSignature Language="C#" Value="protected virtual string OwnerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.NestedContainer.OwnerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do componente de propriedade.</summary>
+        <value>O nome do componente de propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser substituída para fornecer um nome de proprietário personalizado. A implementação padrão de pesquisa de site do proprietário para <xref:System.ComponentModel.INestedSite> e chamadas <xref:System.ComponentModel.INestedSite.FullName%2A>, ou <xref:System.ComponentModel.ISite.Name%2A> se não houver nenhum site aninhada. Se não estiver disponível, essa propriedade retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,84 @@
+<Type Name="OleDbRowUpdatedEventArgs" FullName="System.Data.OleDb.OleDbRowUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class OleDbRowUpdatedEventArgs : System.Data.Common.RowUpdatedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbRowUpdatedEventArgs extends System.Data.Common.RowUpdatedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbRowUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.RowUpdatedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Data.OleDb.OleDbDataAdapter.RowUpdated" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdated> é gerado quando um <xref:System.Data.Common.DbDataAdapter.Update%2A> para uma linha é concluída.  
+  
+ Ao usar <xref:System.Data.Common.DbDataAdapter.Update%2A>, há dois eventos que ocorrem para cada linha de dados atualizada. A ordem de execução é o seguinte:  
+  
+1.  Os valores no <xref:System.Data.DataRow> são movidos para os valores de parâmetro.  
+  
+2.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A> é gerado.  
+  
+3.  O comando é executado.  
+  
+4.  Se o comando é definido como FirstReturnedRecord, o primeiro resultado retornado é colocado no <xref:System.Data.DataRow>.  
+  
+5.  Se não houver parâmetros de saída, eles são colocados no <xref:System.Data.DataRow>.  
+  
+6.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A> é gerado.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> é chamado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbRowUpdatedEventArgs (System.Data.DataRow dataRow, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataRow dataRow, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbRowUpdatedEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataRow" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="dataRow">O <see cref="T:System.Data.DataRow" /> enviadas por meio de um <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <param name="command">O <see cref="T:System.Data.IDbCommand" /> executado quando <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> é chamado.</param>
+        <param name="statementType">Uma da <see cref="T:System.Data.StatementType" /> valores que especifica o tipo de consulta executada.</param>
+        <param name="tableMapping">O <see cref="T:System.Data.Common.DataTableMapping" /> enviadas por meio de um <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.OleDb.OleDbRowUpdatedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbRowUpdatedEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.OleDb.OleDbCommand" /> executado quando <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> é chamado.</summary>
+        <value>O <see cref="T:System.Data.OleDb.OleDbCommand" /> executado quando <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> é chamado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

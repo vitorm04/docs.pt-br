@@ -1,0 +1,241 @@
+<Type Name="DataSourceConverter" FullName="System.Web.UI.Design.DataSourceConverter">
+  <TypeSignature Language="C#" Value="public class DataSourceConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataSourceConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataSourceConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo que pode recuperar uma lista de fontes de dados acessíveis do componente atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.DataSourceConverter>fornece métodos que podem ser usados para recuperar uma lista de fontes de dados acessíveis para o componente de tempo de design atual.  
+  
+ Este conversor de tipo é usado pelo [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] para fornecer os valores que aparecem na lista de dados de fontes no **propriedades** janela.  
+  
+> [!CAUTION]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando <xref:System.ComponentModel.TypeDescriptor>. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ Para obter mais informações sobre conversores de tipo, consulte o <xref:System.ComponentModel.TypeConverter> classe base e [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+   
+  
+## Examples  
+ [!code-cpp[DataSourceTypeConverterExamples#4](~/samples/snippets/cpp/VS_Snippets_WebNet/DataSourceTypeConverterExamples/CPP/datasourcetypeconverterexamples.cpp#4)]
+ [!code-csharp[DataSourceTypeConverterExamples#4](~/samples/snippets/csharp/VS_Snippets_WebNet/DataSourceTypeConverterExamples/CS/datasourcetypeconverterexamples.cs#4)]
+ [!code-vb[DataSourceTypeConverterExamples#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataSourceTypeConverterExamples/VB/datasourcetypeconverterexamples.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.DataSourceConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="sourceType">Um <see cref="T:System.Type" /> que representa o tipo do qual você deseja converter.</param>
+        <summary>Obtém um valor que indica se o conversor pode converter um objeto do tipo de origem especificado para o tipo nativo do conversor.</summary>
+        <returns>
+          <see langword="true" />Se o conversor pode realizar a conversão; Caso contrário, <see langword="false" />.  
+  
+ Conforme implementado nesta classe, esse método sempre retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ O <paramref name="context" /> pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="culture">O <see cref="T:System.Globalization.CultureInfo" /> que pode ser usado para dar suporte a recursos de localização.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o objeto especificado para o tipo nativo do conversor.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o objeto especificado após a conversão.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não foi possível executar a conversão.</exception>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para atender a seus requisitos de conversão.  
+  
+ O <paramref name="context" /> parâmetro pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado o conversor de. Ele pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades do objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> indicando que o componente ou controle para obter valores para.</param>
+        <summary>Obtém as fontes de dados padrão acessível para o controle.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> listando as fontes de dados acessível padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes de dados que são acessíveis para o componente são determinadas, recuperando uma lista de componentes do designer, teste cada componente com o <xref:System.Web.UI.Design.DataSourceConverter.IsValidDataSource%2A> método e, em seguida, retornar os componentes que são fontes de dados válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém um valor que indica se a coleção de valores padrão retornada de <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> é uma lista de todos os valores possíveis.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> retornado de <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> é uma lista exclusiva de todos os valores possíveis; <see langword="false" /> se outros valores são possíveis.  
+  
+ Conforme implementado nesta classe, esse método sempre retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a lista for exclusiva, como em um tipo de dados de enumeração, não há outros valores são válidos. Se a lista não é exclusiva, há outros valores válidos, além de valores de lista padrão que <xref:System.ComponentModel.TypeConverter.GetStandardValues%2A> fornece.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.  
+  
+ O <paramref name="context" /> parâmetro pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de. Ele pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades do objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém um valor que indica se o conversor oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> deve ser chamado para localizar um conjunto comum de valores que o objeto suporta; caso contrário, <see langword="false" />. Essa implementação sempre retorna <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidDataSource">
+      <MemberSignature Language="C#" Value="protected virtual bool IsValidDataSource (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsValidDataSource(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSourceConverter.IsValidDataSource(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente de verificação como uma fonte de dados válido.</param>
+        <summary>Indica se o componente especificado é uma fonte de dados válido para esse conversor.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="component" /> implementa <see cref="T:System.Collections.IEnumerable" /> ou <see cref="T:System.ComponentModel.IListSource" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSourceConverter.GetStandardValues%2A> método usa o <xref:System.Web.UI.Design.DataSourceConverter.IsValidDataSource%2A> método para determinar os componentes que estão disponíveis como fontes de dados acessível padrão. Para o <xref:System.Web.UI.Design.DataSourceConverter> classe, uma fonte de dados válido é um componente que implementa o <xref:System.Collections.IEnumerable> ou <xref:System.ComponentModel.IListSource> interface.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Conversores de fonte de dados personalizados podem derivar de <see cref="T:System.Web.UI.Design.DataSourceConverter" /> classe e substituir o <see cref="M:System.Web.UI.Design.DataSourceConverter.IsValidDataSource(System.ComponentModel.IComponent)" /> método para testar as implementações de interface que são necessárias para usar um componente como uma fonte de dados.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

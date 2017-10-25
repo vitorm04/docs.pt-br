@@ -1,0 +1,56 @@
+<Type Name="OpenWriteCompletedEventHandler" FullName="System.Net.OpenWriteCompletedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void OpenWriteCompletedEventHandler(object sender, OpenWriteCompletedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OpenWriteCompletedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.OpenWriteCompletedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Net.OpenWriteCompletedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Net.OpenWriteCompletedEventArgs" /> que contém dados de evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Net.WebClient.OpenWriteCompleted" /> de <see cref="T:System.Net.WebClient" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Net.OpenWriteCompletedEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como abrir um fluxo para gravar os dados a serem carregados.  
+  
+ [!code-cpp[NCLWebClientAsync#16](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#16)]
+ [!code-csharp[NCLWebClientAsync#16](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#16)]
+ [!code-vb[NCLWebClientAsync#16](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#16)]  
+  
+ O seguinte método é chamado quando o fluxo está disponível.  
+  
+ [!code-cpp[NCLWebClientAsync#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#15)]
+ [!code-csharp[NCLWebClientAsync#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#15)]
+ [!code-vb[NCLWebClientAsync#15](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#15)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

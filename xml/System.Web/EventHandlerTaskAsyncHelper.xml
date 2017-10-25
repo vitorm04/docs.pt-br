@@ -1,0 +1,80 @@
+<Type Name="EventHandlerTaskAsyncHelper" FullName="System.Web.EventHandlerTaskAsyncHelper">
+  <TypeSignature Language="C#" Value="public sealed class EventHandlerTaskAsyncHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventHandlerTaskAsyncHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.EventHandlerTaskAsyncHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte os métodos assíncronos de retorno de tarefa em métodos que usam o modelo de programação assíncrono usado em versões anteriores do ASP.NET e que se baseia nos eventos de início e de término.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para lidar com tarefas assíncronas no ASP.NET 4.5, você implementa a lógica para retornar uma tarefa como uma <xref:System.Web.TaskEventHandler> delegate. Esse modelo de programação assíncrona com base em tarefa substitui o modelo usado em versões anteriores do ASP.NET, quais bases de todos os eventos manipulação de início e término de eventos. Depois de implementar um <xref:System.Web.TaskEventHandler> delegado, você pode passar para o <xref:System.Web.EventHandlerTaskAsyncHelper.%23ctor%2A> construtor, que encapsula a lógica de retorno e converte o manipulador para o modelo que usa começam e terminam eventos. O <xref:System.Web.EventHandlerTaskAsyncHelper> classe permite que seu <xref:System.Web.TaskEventHandler> objeto para ser compatível com a estrutura de página ASP.NET. Quando você chama o <xref:System.Web.UI.Page.AddOnPreRenderCompleteAsync%2A> método para a tarefa de processo para uma página assíncrona, você pode usar o <xref:System.Web.EventHandlerTaskAsyncHelper.BeginEventHandler%2A> e <xref:System.Web.EventHandlerTaskAsyncHelper.EndEventHandler%2A> propriedades para passar os manipuladores de eventos e begin convertidos para o método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventHandlerTaskAsyncHelper (System.Web.TaskEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.TaskEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.EventHandlerTaskAsyncHelper.#ctor(System.Web.TaskEventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.TaskEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">A tarefa assíncrona.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.EventHandlerTaskAsyncHelper" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEventHandler">
+      <MemberSignature Language="C#" Value="public System.Web.BeginEventHandler BeginEventHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.BeginEventHandler BeginEventHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.EventHandlerTaskAsyncHelper.BeginEventHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.BeginEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Web.BeginEventHandler" /> método para uma tarefa assíncrona.</summary>
+        <value>O método que manipula o evento de início para a tarefa assíncrona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEventHandler">
+      <MemberSignature Language="C#" Value="public System.Web.EndEventHandler EndEventHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.EndEventHandler EndEventHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.EventHandlerTaskAsyncHelper.EndEventHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.EndEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Web.EndEventHandler" /> método para uma tarefa assíncrona.</summary>
+        <value>O método que manipula o evento de término para a tarefa assíncrona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

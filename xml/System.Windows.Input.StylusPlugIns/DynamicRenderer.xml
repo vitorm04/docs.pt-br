@@ -1,0 +1,582 @@
+<Type Name="DynamicRenderer" FullName="System.Windows.Input.StylusPlugIns.DynamicRenderer">
+  <TypeSignature Language="C#" Value="public class DynamicRenderer : System.Windows.Input.StylusPlugIns.StylusPlugIn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicRenderer extends System.Windows.Input.StylusPlugIns.StylusPlugIn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.StylusPlugIns.StylusPlugIn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Desenha tinta em uma superfície conforme o usuário move a caneta eletrônica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> classe herda o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe e permite tinta seja convertido em uma superfície como o usuário move o ponteiro do mouse com uma caneta ou outro dispositivo apontador. Você pode usar o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> para renderizar tinta em um controle personalizado, ou dinamicamente herdam <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> para executar o processamento personalizado em tempo real em um elemento de tinta, como o <xref:System.Windows.Controls.InkCanvas>.  
+  
+ Processamento dinâmico é feito em um thread separado do thread de interface do usuário do aplicativo quando o usuário insere tinta com uma caneta. Quando é usado um mouse, processamento dinâmico é feito no thread da interface do usuário.  
+  
+> [!NOTE]
+>  Para fazer referência a essa classe como um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] elemento, você deve mapear o <xref:System.Windows.Input.StylusPlugIns?displayProperty=nameWithType> namespace CLR para um prefixo e o uso do prefixo para qualificar o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> elemento. Para obter detalhes, consulte [Namespaces XAML e o mapeamento de Namespace para WPF XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+<a name="xamlTextUsage_DynamicRenderer"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Essa classe não é usada normalmente em XAML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como anexar um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> para um <xref:System.Windows.Controls.InkPresenter>. Para criar um controle que processa dinamicamente tinta, consulte [criando um controle de entrada de tinta](~/docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
+  
+ [!code-csharp[StylusPluginSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/StylusControl.cs#3)]
+ [!code-vb[StylusPluginSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/StylusControl.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicRenderer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawingAttributes">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.DrawingAttributes DrawingAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.DrawingAttributes DrawingAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.DrawingAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Ink.DrawingAttributes" /> que especifica a aparência da tinta renderizada.</summary>
+        <value>O <see cref="T:System.Windows.Ink.DrawingAttributes" /> que especifica a aparência da tinta renderizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_DrawingAttributes"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Essa propriedade não é usada normalmente em XAML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.DrawingAttributes> de objeto para um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Neste exemplo, a tinta dinamicamente renderizada coincide com as propriedades especificadas pelo `inkDA`. Para criar um controle que processa dinamicamente tinta, consulte [criando um controle de entrada de tinta](~/docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
+  
+ [!code-csharp[StylusPluginSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/StylusControl.cs#3)]
+ [!code-vb[StylusPluginSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/StylusControl.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDispatcher">
+      <MemberSignature Language="C#" Value="protected System.Windows.Threading.Dispatcher GetDispatcher ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Windows.Threading.Dispatcher GetDispatcher() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.GetDispatcher" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Windows.Threading.Dispatcher" /> para o thread de processamento.</summary>
+        <returns>Um <see cref="T:System.Windows.Threading.Dispatcher" /> para o thread de processamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.GetDispatcher%2A> método para executar um trabalho no thread de processamento.  
+  
+ [!code-csharp[StylusPluginSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/CustomDynamicRenderer.cs#19)]
+ [!code-vb[StylusPluginSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/CustomDynamicRenderer.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAdded">
+      <MemberSignature Language="C#" Value="protected override void OnAdded ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAdded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnAdded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" /> é adicionado a um elemento.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnAdded" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnAdded" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected virtual void OnDraw (System.Windows.Media.DrawingContext drawingContext, System.Windows.Input.StylusPointCollection stylusPoints, System.Windows.Media.Geometry geometry, System.Windows.Media.Brush fillBrush);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDraw(class System.Windows.Media.DrawingContext drawingContext, class System.Windows.Input.StylusPointCollection stylusPoints, class System.Windows.Media.Geometry geometry, class System.Windows.Media.Brush fillBrush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw(System.Windows.Media.DrawingContext,System.Windows.Input.StylusPointCollection,System.Windows.Media.Geometry,System.Windows.Media.Brush)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="fillBrush" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">O <see cref="T:System.Windows.Media.DrawingContext" /> do objeto no qual o traço é renderizado.</param>
+        <param name="stylusPoints">O <see cref="T:System.Windows.Input.StylusPointCollection" /> que representa o segmento de traço para desenhar.</param>
+        <param name="geometry">Um <see cref="T:System.Windows.Media.Geometry" /> que representa o caminho do ponteiro do mouse.</param>
+        <param name="fillBrush">Um pincel que especifica a aparência do traço atual.</param>
+        <summary>Desenha tinta em tempo real para que ela pareça "fluir" a partir de caneta ou outro dispositivo apontador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> método para renderizar dinamicamente tinta digital com um <xref:System.Windows.Media.LinearGradientBrush>.  
+  
+ [!code-csharp[StylusPluginSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/CustomDynamicRenderer.cs#11)]
+ [!code-vb[StylusPluginSamples#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/CustomDynamicRenderer.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw(System.Windows.Media.DrawingContext,System.Windows.Input.StylusPointCollection,System.Windows.Media.Geometry,System.Windows.Media.Brush)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw(System.Windows.Media.DrawingContext,System.Windows.Input.StylusPointCollection,System.Windows.Media.Geometry,System.Windows.Media.Brush)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrawingAttributesReplaced">
+      <MemberSignature Language="C#" Value="protected virtual void OnDrawingAttributesReplaced ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDrawingAttributesReplaced() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDrawingAttributesReplaced" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir substitui o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDrawingAttributesReplaced%2A> método.  
+  
+ [!code-csharp[StylusPluginSamples#21](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/CustomDynamicRenderer.cs#21)]
+ [!code-vb[StylusPluginSamples#21](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/CustomDynamicRenderer.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDrawingAttributesReplaced" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDrawingAttributesReplaced" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnabledChanged">
+      <MemberSignature Language="C#" Value="protected override void OnEnabledChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnabledChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnEnabledChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Input.StylusPlugIns.StylusPlugIn.Enabled" /> muda.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnEnabledChanged" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnEnabledChanged" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsActiveForInputChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsActiveForInputChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsActiveForInputChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnIsActiveForInputChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Input.StylusPlugIns.StylusPlugIn.IsActiveForInput" /> muda.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnIsActiveForInputChanged" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnIsActiveForInputChanged" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoved">
+      <MemberSignature Language="C#" Value="protected override void OnRemoved ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoved() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnRemoved" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" /> é removido de um elemento.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnRemoved" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnRemoved" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusDown">
+      <MemberSignature Language="C#" Value="protected override void OnStylusDown (System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusDown(class System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDown(System.Windows.Input.StylusPlugIns.RawStylusInput)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawStylusInput" Type="System.Windows.Input.StylusPlugIns.RawStylusInput" />
+      </Parameters>
+      <Docs>
+        <param name="rawStylusInput">Um <see cref="T:System.Windows.Input.StylusPlugIns.RawStylusInput" /> que contém informações sobre a entrada de caneta.</param>
+        <summary>Ocorre em um thread no pool de threads de caneta quando a caneta toca o digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para este método ocorre em um thread de caneta, reduzir o trabalho nesse método para evitar o impacto no desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDown(System.Windows.Input.StylusPlugIns.RawStylusInput)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDown(System.Windows.Input.StylusPlugIns.RawStylusInput)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusDownProcessed">
+      <MemberSignature Language="C#" Value="protected override void OnStylusDownProcessed (object callbackData, bool targetVerified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusDownProcessed(object callbackData, bool targetVerified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDownProcessed(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callbackData" Type="System.Object" />
+        <Parameter Name="targetVerified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callbackData">O objeto que o aplicativo é passado para o <see cref="M:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object)" /> método.</param>
+        <param name="targetVerified">
+          <see langword="true" />Se a entrada de caneta corretamente foi encaminhado para o <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" />; caso contrário, <see langword="false" />.</param>
+        <summary>Ocorre no thread UI (interface do usuário) do aplicativo quando a caneta toca o digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para assinar esse método, chame <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> no <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDown%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDownProcessed(System.Object,System.Boolean)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusDownProcessed(System.Object,System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusEnter">
+      <MemberSignature Language="C#" Value="protected override void OnStylusEnter (System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput, bool confirmed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusEnter(class System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput, bool confirmed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusEnter(System.Windows.Input.StylusPlugIns.RawStylusInput,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawStylusInput" Type="System.Windows.Input.StylusPlugIns.RawStylusInput" />
+        <Parameter Name="confirmed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rawStylusInput">Um <see cref="T:System.Windows.Input.StylusPlugIns.RawStylusInput" /> que contém informações sobre a entrada de caneta.</param>
+        <param name="confirmed">
+          <see langword="true" />Se a caneta inseridos os limites do elemento. Caso contrário, <see langword="false" />.</param>
+        <summary>Ocorre em um thread de caneta quando o cursor entra nos limites de um elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para este método ocorre em um thread de caneta, reduzir o trabalho nesse método para evitar o impacto no desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusEnter(System.Windows.Input.StylusPlugIns.RawStylusInput,System.Boolean)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusEnter(System.Windows.Input.StylusPlugIns.RawStylusInput,System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusLeave">
+      <MemberSignature Language="C#" Value="protected override void OnStylusLeave (System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput, bool confirmed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusLeave(class System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput, bool confirmed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusLeave(System.Windows.Input.StylusPlugIns.RawStylusInput,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawStylusInput" Type="System.Windows.Input.StylusPlugIns.RawStylusInput" />
+        <Parameter Name="confirmed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rawStylusInput">Um <see cref="T:System.Windows.Input.StylusPlugIns.RawStylusInput" /> que contém informações sobre a entrada de caneta.</param>
+        <param name="confirmed">
+          <see langword="true" />Se a caneta esquerda, na verdade, os limites do elemento. Caso contrário, <see langword="false" />.</param>
+        <summary>Ocorre em um thread de caneta quando o cursor sai dos limites de um elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para este método ocorre em um thread de caneta, reduzir o trabalho nesse método para evitar o impacto no desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusLeave(System.Windows.Input.StylusPlugIns.RawStylusInput,System.Boolean)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusLeave(System.Windows.Input.StylusPlugIns.RawStylusInput,System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusMove">
+      <MemberSignature Language="C#" Value="protected override void OnStylusMove (System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusMove(class System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusMove(System.Windows.Input.StylusPlugIns.RawStylusInput)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawStylusInput" Type="System.Windows.Input.StylusPlugIns.RawStylusInput" />
+      </Parameters>
+      <Docs>
+        <param name="rawStylusInput">Um <see cref="T:System.Windows.Input.StylusPlugIns.RawStylusInput" /> que contém informações sobre a entrada de caneta.</param>
+        <summary>Ocorre em um thread de caneta quando a caneta se move sobre o digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para este método ocorre em um thread de caneta, reduzir o trabalho nesse método para evitar o impacto no desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusMove(System.Windows.Input.StylusPlugIns.RawStylusInput)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusMove(System.Windows.Input.StylusPlugIns.RawStylusInput)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusUp">
+      <MemberSignature Language="C#" Value="protected override void OnStylusUp (System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusUp(class System.Windows.Input.StylusPlugIns.RawStylusInput rawStylusInput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusUp(System.Windows.Input.StylusPlugIns.RawStylusInput)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawStylusInput" Type="System.Windows.Input.StylusPlugIns.RawStylusInput" />
+      </Parameters>
+      <Docs>
+        <param name="rawStylusInput">Um <see cref="T:System.Windows.Input.StylusPlugIns.RawStylusInput" /> que contém informações sobre a entrada de caneta.</param>
+        <summary>Ocorre em um thread de caneta quando o usuário retira a caneta do digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para este método ocorre em um thread de caneta, reduzir o trabalho nesse método para evitar o impacto no desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusUp(System.Windows.Input.StylusPlugIns.RawStylusInput)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusUp(System.Windows.Input.StylusPlugIns.RawStylusInput)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusUpProcessed">
+      <MemberSignature Language="C#" Value="protected override void OnStylusUpProcessed (object callbackData, bool targetVerified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusUpProcessed(object callbackData, bool targetVerified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusUpProcessed(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callbackData" Type="System.Object" />
+        <Parameter Name="targetVerified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callbackData">O objeto que o aplicativo é passado para o <see cref="M:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object)" /> método.</param>
+        <param name="targetVerified">
+          <see langword="true" />Se a entrada de caneta corretamente foi encaminhado para o <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" />; caso contrário, <see langword="false" />.</param>
+        <summary>Ocorre no thread UI (interface do usuário) do aplicativo quando o usuário retira a caneta do digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para assinar esse método, chame <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> no <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A> método  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusUpProcessed(System.Object,System.Boolean)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnStylusUpProcessed(System.Object,System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public virtual void Reset (System.Windows.Input.StylusDevice stylusDevice, System.Windows.Input.StylusPointCollection stylusPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset(class System.Windows.Input.StylusDevice stylusDevice, class System.Windows.Input.StylusPointCollection stylusPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.Reset(System.Windows.Input.StylusDevice,System.Windows.Input.StylusPointCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusDevice" Type="System.Windows.Input.StylusDevice" />
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stylusDevice">O dispositivo de caneta atual.</param>
+        <param name="stylusPoints">Os pontos de caneta seja redesenhado.</param>
+        <summary>Limpa o traço atual de renderização e redesenha-lo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> redesenha o traço atual e qualquer um dos pontos de caneta passado para o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.Reset%2A> método. Esse método permite que você reemitir um traço enquanto o usuário ainda está criando o traçado. A caneta deve ser tocar o digitalizador ou o botão esquerdo do mouse deve ser pressionado quando <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.Reset%2A> é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir altera a cor do traço atual como ela é desenhada.  
+  
+ [!code-csharp[StylusPluginSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/StylusControl.cs#13)]
+ [!code-vb[StylusPluginSamples#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/StylusControl.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A caneta, nem o mouse estiver no estado para baixo.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.Reset(System.Windows.Input.StylusDevice,System.Windows.Input.StylusPointCollection)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Input.StylusPlugIns.DynamicRenderer.Reset(System.Windows.Input.StylusDevice,System.Windows.Input.StylusPointCollection)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RootVisual">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Visual RootVisual { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual RootVisual" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a raiz de visual para o <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" />.</summary>
+        <value>A raiz <see cref="T:System.Windows.Media.Visual" /> para o <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, você deve anexar o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> propriedade para o <xref:System.Windows.Controls.InkPresenter> usando o <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e adicione o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> para o <xref:System.Windows.Controls.InkPresenter>. Para criar um controle que processa dinamicamente tinta, consulte [criando um controle de entrada de tinta](~/docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
+  
+ [!code-csharp[StylusPluginSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/StylusControl.cs#3)]
+ [!code-vb[StylusPluginSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/StylusControl.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

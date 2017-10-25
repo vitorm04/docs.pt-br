@@ -1,0 +1,116 @@
+<Type Name="CoClassAttribute" FullName="System.Runtime.InteropServices.CoClassAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CoClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CoClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.CoClassAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o identificador de classe de coclass importado de uma biblioteca de tipos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para coclass interfaces, embora o [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) normalmente aplica para você quando ele importa uma biblioteca de tipos.  
+  
+ Quando Tlbimp.exe importa uma coclass, ele produz uma classe gerenciada e uma interface para representar coclass. A interface de coclass tem o mesmo identificador de interface (IID) como a interface padrão de coclass original. A interface de coclass importado também mantém o nome da coclass. Tlbimp.exe anexa o nome de coclass original com "class" para identificar a classe importada.  
+  
+ Esse atributo é aplicado raramente. No entanto, se planeja escrever um código fonte que produz metadados ou perto simula metadados produzido por Tlbimp.exe, você deve criar uma interface coclass para cada coclass. Use o nome da coclass original para nomear a interface coclass e derivá-la na interface do padrão. Além de <xref:System.Runtime.InteropServices.CoClassAttribute>, você também deve aplicar o <xref:System.Runtime.InteropServices.ComImportAttribute?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.GuidAttribute?displayProperty=nameWithType> à interface coclass. Para obter informações adicionais sobre como Tlbimp.exe importa interfaces e coclasse de uma biblioteca de tipos, consulte [conversão de tipo importado](http://msdn.microsoft.com/en-us/cb1ee67d-8ef0-4e40-b2a5-13714b9f33c3).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CoClassAttribute (Type coClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type coClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CoClassAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="coClass" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="coClass">Um <see cref="T:System.Type" /> que contém o identificador de classe de coclass original.</param>
+        <summary>Inicializa a nova instância do <see cref="T:System.Runtime.InteropServices.CoClassAttribute" /> com o identificador de classe de coclass original.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CoClass">
+      <MemberSignature Language="C#" Value="public Type CoClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CoClass" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.CoClassAttribute.CoClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de classe de coclass original.</summary>
+        <value>Um <see cref="T:System.Type" /> que contém o identificador de classe de coclass original.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

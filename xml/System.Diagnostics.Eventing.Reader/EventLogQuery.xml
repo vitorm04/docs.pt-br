@@ -1,0 +1,130 @@
+<Type Name="EventLogQuery" FullName="System.Diagnostics.Eventing.Reader.EventLogQuery">
+  <TypeSignature Language="C#" Value="public class EventLogQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogQuery extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma consulta de eventos em um log de eventos e as configurações que definem como e em qual computador a consulta é executada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Por exemplo de código usando esta classe, consulte [como: consulta de eventos](http://msdn.microsoft.com/en-us/5231a436-4cf2-4539-90d2-a04813aba069) ou [How To: Access e ler informações do evento](http://msdn.microsoft.com/en-us/14db3375-d305-49ae-aa24-aedbe906e76c).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogQuery (string path, System.Diagnostics.Eventing.Reader.PathType pathType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Diagnostics.Eventing.Reader.PathType pathType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogQuery.#ctor(System.String,System.Diagnostics.Eventing.Reader.PathType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="pathType" Type="System.Diagnostics.Eventing.Reader.PathType" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome do log de eventos a ser consultado ou o caminho para o arquivo de log de eventos a ser consultado.</param>
+        <param name="pathType">Especifica se a cadeia de caracteres usada no parâmetro de caminho especifica o nome de um log de eventos ou o caminho para um arquivo de log de eventos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Eventing.Reader.EventLogQuery" /> especificando o destino da consulta. O destino pode ser um log de eventos ou um arquivo de log ativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogQuery (string path, System.Diagnostics.Eventing.Reader.PathType pathType, string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Diagnostics.Eventing.Reader.PathType pathType, string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogQuery.#ctor(System.String,System.Diagnostics.Eventing.Reader.PathType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="pathType" Type="System.Diagnostics.Eventing.Reader.PathType" />
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome do log de eventos a ser consultado ou o caminho para o arquivo de log de eventos a ser consultado.</param>
+        <param name="pathType">Especifica se a cadeia de caracteres usada no parâmetro de caminho especifica o nome de um log de eventos ou o caminho para um arquivo de log de eventos.</param>
+        <param name="query">A consulta de evento usada para recuperar eventos que correspondem às condições da consulta.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Eventing.Reader.EventLogQuery" /> especificando o destino da consulta e a consulta de evento. O destino pode ser um log de eventos ou um arquivo de log ativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReverseDirection">
+      <MemberSignature Language="C#" Value="public bool ReverseDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReverseDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogQuery.ReverseDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor booliano que determina se é necessário ler eventos do evento mais recente em um log de eventos para o evento mais antigo no log.</summary>
+        <value>Retorna <see langword="true" /> se os eventos são lidos a partir do evento mais recente no log de eventos mais antigos e retorna <see langword="false" /> se os eventos são lidos a partir do evento mais antigo no log para o evento mais recente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventLogSession Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Eventing.Reader.EventLogSession Session" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogQuery.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a sessão que acessam o serviço de Log de eventos no computador local ou em um computador remoto. Esse objeto pode ser configurado para acessar um log de eventos remoto com a criação de um <see cref="T:System.Diagnostics.Eventing.Reader.EventLogReader" /> objeto ou um <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> objeto com esta <see cref="T:System.Diagnostics.Eventing.Reader.EventLogQuery" /> objeto.</summary>
+        <value>Retorna um objeto <see cref="T:System.Diagnostics.Eventing.Reader.EventLogSession" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TolerateQueryErrors">
+      <MemberSignature Language="C#" Value="public bool TolerateQueryErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TolerateQueryErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogQuery.TolerateQueryErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que determina se esta consulta continuará recuperar eventos quando a consulta tem um erro.</summary>
+        <value>
+          <see langword="true" />indica que a consulta continue a recuperar eventos mesmo se a consulta falha por alguns logs e <see langword="false" /> indica que esta consulta não continuará a recuperar eventos quando a consulta falha.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

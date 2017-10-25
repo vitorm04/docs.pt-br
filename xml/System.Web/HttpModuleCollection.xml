@@ -1,0 +1,210 @@
+<Type Name="HttpModuleCollection" FullName="System.Web.HttpModuleCollection">
+  <TypeSignature Language="C#" Value="public sealed class HttpModuleCollection : System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpModuleCollection extends System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpModuleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de indexar e recuperar uma coleção de objetos <see cref="T:System.Web.IHttpModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Web.HttpModuleCollection.AllKeys%2A> propriedade e o <xref:System.Web.HttpModuleCollection.GetKey%2A> e <xref:System.Web.HttpModuleCollection.CopyTo%2A> métodos do <xref:System.Web.HttpModuleCollection> classe. O exemplo obtém o objeto de aplicativo para a solicitação atual da atual <xref:System.Web.HttpContext> objeto. Ele então extrai a <xref:System.Web.HttpModuleCollection> objeto da instância do aplicativo e exibe os nomes do <xref:System.Web.IHttpModule> objetos.  
+  
+ [!code-aspx-csharp[HttpModuleCollection1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpModuleCollection1/CS/httpmodulecollection1cs.aspx#1)]
+ [!code-aspx-vb[HttpModuleCollection1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpModuleCollection1/VB/httpmodulecollection1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpModuleCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de cadeia de caracteres que contém todas as chaves (nomes de módulo) no <see cref="T:System.Web.HttpModuleCollection" />.</summary>
+        <value>Uma matriz de nomes de módulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Web.HttpModuleCollection.AllKeys%2A> propriedade e o <xref:System.Web.HttpModuleCollection.GetKey%2A> e <xref:System.Web.HttpModuleCollection.CopyTo%2A> métodos do <xref:System.Web.HttpModuleCollection> classe. O exemplo obtém o objeto de aplicativo para a solicitação atual da atual <xref:System.Web.HttpContext> objeto. Ele então extrai a <xref:System.Web.HttpModuleCollection> objeto da instância do aplicativo e exibe os nomes do <xref:System.Web.IHttpModule> objetos.  
+  
+ [!code-aspx-csharp[HttpModuleCollection1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpModuleCollection1/CS/httpmodulecollection1cs.aspx#1)]
+ [!code-aspx-vb[HttpModuleCollection1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpModuleCollection1/VB/httpmodulecollection1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpModuleCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">O <see cref="T:System.Array" /> de destino.</param>
+        <param name="index">O índice do destino <see cref="T:System.Array" /> onde a cópia inicia.</param>
+        <summary>Copia os membros da coleção de módulo para um <see cref="T:System.Array" />, começando no índice especificado da matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Web.HttpModuleCollection.AllKeys%2A> propriedade e o <xref:System.Web.HttpModuleCollection.GetKey%2A> e <xref:System.Web.HttpModuleCollection.CopyTo%2A> métodos do <xref:System.Web.HttpModuleCollection> classe. O exemplo obtém o objeto de aplicativo para a solicitação atual da atual <xref:System.Web.HttpContext> objeto. Ele então extrai a <xref:System.Web.HttpModuleCollection> objeto da instância do aplicativo e exibe os nomes do <xref:System.Web.IHttpModule> objetos.  
+  
+ [!code-aspx-csharp[HttpModuleCollection1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpModuleCollection1/CS/httpmodulecollection1cs.aspx#1)]
+ [!code-aspx-vb[HttpModuleCollection1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpModuleCollection1/VB/httpmodulecollection1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpModule Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.IHttpModule Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpModuleCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpModule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.IHttpModule" /> objeto a ser retornado da coleção.</param>
+        <summary>Retorna o <see cref="T:System.Web.IHttpModule" /> objeto com o índice especificado a partir de <see cref="T:System.Web.HttpModuleCollection" />.</summary>
+        <returns>O <see cref="T:System.Web.IHttpModule" /> membro especificado pelo <paramref name="index" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpModule Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.IHttpModule Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpModuleCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpModule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">A chave do item a ser recuperado.</param>
+        <summary>Retorna o <see cref="T:System.Web.IHttpModule" /> objeto com o nome especificado do <see cref="T:System.Web.HttpModuleCollection" />.</summary>
+        <returns>O <see cref="T:System.Web.IHttpModule" /> membro especificado pelo <paramref name="name" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpModuleCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Índice da chave para recuperar da coleção.</param>
+        <summary>Retorna a chave (name) do <see cref="T:System.Web.IHttpModule" /> objeto no índice numérico especificado.</summary>
+        <returns>O nome do <see cref="T:System.Web.IHttpModule" /> membro especificado pelo <paramref name="index" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Web.HttpModuleCollection.AllKeys%2A> propriedade e o <xref:System.Web.HttpModuleCollection.GetKey%2A> e <xref:System.Web.HttpModuleCollection.CopyTo%2A> métodos do <xref:System.Web.HttpModuleCollection> classe. O exemplo obtém o objeto de aplicativo para a solicitação atual da atual <xref:System.Web.HttpContext> objeto. Ele então extrai a <xref:System.Web.HttpModuleCollection> objeto da instância do aplicativo e exibe os nomes do <xref:System.Web.IHttpModule> objetos.  
+  
+ [!code-aspx-csharp[HttpModuleCollection1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpModuleCollection1/CS/httpmodulecollection1cs.aspx#1)]
+ [!code-aspx-vb[HttpModuleCollection1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpModuleCollection1/VB/httpmodulecollection1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpModule this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.IHttpModule Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpModuleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpModule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.IHttpModule" /> objeto a ser recuperado da coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.IHttpModule" /> objeto com o índice numérico especificado a partir de <see cref="T:System.Web.HttpModuleCollection" />.</summary>
+        <value>O <see cref="T:System.Web.IHttpModule" /> módulo do objeto especificado pelo <paramref name="index" /> parâmetro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpModule this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.IHttpModule Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpModuleCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpModule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">A chave do item a ser recuperado.</param>
+        <summary>Obtém o <see cref="T:System.Web.IHttpModule" /> objeto com o nome especificado do <see cref="T:System.Web.HttpModuleCollection" />.</summary>
+        <value>O <see cref="T:System.Web.IHttpModule" /> módulo do objeto especificado pelo <paramref name="name" /> parâmetro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

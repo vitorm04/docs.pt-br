@@ -1,0 +1,109 @@
+<Type Name="SecurityRuleSet" FullName="System.Security.SecurityRuleSet">
+  <TypeSignature Language="C#" Value="public enum SecurityRuleSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityRuleSet extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityRuleSet" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica o conjunto de regras de segurança que o Common Language Runtime deve impor para um assembly.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração indica qual conjunto de regras de segurança que do common language runtime deve impor para um assembly. Por exemplo, um assembly que está marcado com `[SecurityRules(SecurityRuleSet.Level1)]` usa as regras de transparência do .NET Framework versão 2.0, onde críticas de segurança tipos e membros públicas são tratados como safe-crítico de segurança fora do assembly. Isso requer tipos críticos de segurança e membros executar uma solicitação de link de confiança total para impor um comportamento de segurança crítica quando eles são acessados por chamadores externos. Normalmente, as regras de nível 1 devem ser usadas somente para compatibilidade, como para assemblies do .NET Framework 2.0. Por padrão, os assemblies do .NET Framework 2.0 tornam-se assemblies de nível 2 quando eles são recompilados para o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]. Para compilar esses assemblies como nível 1, você deve marcá-los explicitamente como nível 1. Para obter mais informações sobre o comportamento de nível 1, consulte [código transparente de segurança, nível 1](~/docs/framework/misc/security-transparent-code-level-1.md). Para obter informações sobre o comportamento de nível 2, consulte [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Level1">
+      <MemberSignature Language="C#" Value="Level1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.SecurityRuleSet Level1 = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.SecurityRuleSet.Level1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o tempo de execução aplicará regras de transparência de nível 1 (versão 2.0 do .NET Framework).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Level2">
+      <MemberSignature Language="C#" Value="Level2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.SecurityRuleSet Level2 = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.SecurityRuleSet.Level2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o tempo de execução aplicará regras de transparência de nível 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.SecurityRuleSet None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.SecurityRuleSet.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem suporte. Usar esse valor resulta em um <see cref="T:System.IO.FileLoadException" /> que está sendo gerado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

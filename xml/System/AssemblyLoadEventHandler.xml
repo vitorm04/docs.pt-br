@@ -1,0 +1,46 @@
+<Type Name="AssemblyLoadEventHandler" FullName="System.AssemblyLoadEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AssemblyLoadEventHandler(object sender, AssemblyLoadEventArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AssemblyLoadEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.AssemblyLoadEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="args" Type="System.AssemblyLoadEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="args">Um <see cref="T:System.AssemblyLoadEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o evento <see cref="E:System.AppDomain.AssemblyLoad" /> de um <see cref="T:System.AppDomain" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.AssemblyLoadEventHandler> é usado para especificar os métodos que são invocados em resposta a um <xref:System.AppDomain.AssemblyLoad> eventos. Para associar uma instância de <xref:System.AssemblyLoadEventHandler> com um evento, adicione a instância para o evento. Os métodos referenciados pelo <xref:System.AssemblyLoadEventHandler> são invocados sempre que um assembly é carregado, até que o <xref:System.AssemblyLoadEventHandler> é removido do evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

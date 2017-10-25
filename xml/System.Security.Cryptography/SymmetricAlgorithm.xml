@@ -1,0 +1,1222 @@
+<Type Name="SymmetricAlgorithm" FullName="System.Security.Cryptography.SymmetricAlgorithm">
+  <TypeSignature Language="C#" Value="public abstract class SymmetricAlgorithm : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SymmetricAlgorithm extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.SymmetricAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata da qual todas as implementações de algoritmos simétricos devem ser herdadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes que derivam de <xref:System.Security.Cryptography.SymmetricAlgorithm> classe usar um modo encadeamento de chamada de blocos de codificação CBC (encadeamento), que requer uma chave (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) e um vetor de inicialização (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) para executar transformações de criptografia em dados.  Para descriptografar dados criptografados usando uma da <xref:System.Security.Cryptography.SymmetricAlgorithm> classes, você deve definir o <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> propriedade e o <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> propriedade com os mesmos valores que foram usados para criptografia.  Para um algoritmo simétrico ser útil, a chave secreta deve ser conhecida apenas para o remetente e o receptor.  
+  
+ <xref:System.Security.Cryptography.RijndaelManaged>, <xref:System.Security.Cryptography.DESCryptoServiceProvider>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider>, e <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> são implementações de algoritmos simétricos.  
+  
+ Observe que quando usando classes derivadas, ele não for suficiente, de uma perspectiva de segurança, simplesmente forçar uma coleta de lixo depois de terminar de usar o objeto. Você deve chamar explicitamente o <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> método no objeto para zerar quaisquer dados confidenciais dentro do objeto antes que ele seja liberado. Observe que a coleta de lixo não zero o conteúdo de objetos coletados, mas simplesmente marca a memória como disponível para redistribuição. Assim, os dados contidos em um objeto de lixo coletado podem ainda estar presentes no heap de memória na memória não alocada. No caso de objetos de criptografia, esses dados podem conter informações confidenciais, como dados de chave ou um bloco de texto sem formatação.  
+  
+ Criptografia de todas as classes do .NET Framework que contêm dados confidenciais implementar um `Clear` método. Quando chamado, o `Clear` método substitui todos os dados confidenciais dentro do objeto com zeros e, em seguida, libera o objeto para que ele pode ser ignorado com segurança coletado como lixo. Quando o objeto foi zerado e foi lançado, em seguida, você deve chamar o `Dispose` método com o `disposing` parâmetro definido como `True` para descartar todos os recursos gerenciados em associados ao objeto.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.RijndaelManaged> classe com especificado <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> vetor de inicialização e de propriedade (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) para criptografar um arquivo especificado por `inName`e gera o resultado criptografado para o arquivo especificado por `outName`. O `desKey` e `desIV` parâmetros para o método de matrizes de 8 bytes. Você deve ter o pacote de criptografia alta instalado para executar este exemplo.  
+  
+ [!code-cpp[Classic CryptoStream Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic CryptoStream Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CryptoStream Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic CryptoStream Example/CS/source.cs#1)]
+ [!code-vb[Classic CryptoStream Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic CryptoStream Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" /> classe, você deve substituir os seguintes membros: <see cref="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])" />, <see cref="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor(System.Byte[],System.Byte[])" />, <see cref="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV" />, e <see cref="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SymmetricAlgorithm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo cria uma nova instância de uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">A implementação da classe derivada do algoritmo simétrico não é válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSize">
+      <MemberSignature Language="C#" Value="public virtual int BlockSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.BlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do bloco, em bits, da operação de criptografia.</summary>
+        <value>O tamanho do bloco, em bits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do bloco é a unidade básica de dados que podem ser criptografados ou descriptografados em uma única operação. Maiores que o tamanho do bloco de mensagens são tratadas como blocos sucessivos; menores que o tamanho do bloco de mensagens devem ser preenchidas com bits extras para alcançar o tamanho de um bloco. Tamanhos de bloco válido são determinados pelo algoritmo simétrico usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho do bloco é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSizeValue">
+      <MemberSignature Language="C#" Value="protected int BlockSizeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 BlockSizeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tamanho do bloco, em bits, da operação criptográfica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do bloco é a unidade básica de dados que podem ser criptografados ou descriptografados em uma única operação. Maiores que o tamanho do bloco de mensagens são tratadas como blocos sucessivos; menores que o tamanho do bloco de mensagens devem ser preenchidas com bits extras para alcançar o tamanho de um bloco. Tamanhos de bloco válido são determinados pelo algoritmo simétrico usado.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela classe <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que quando usando classes derivadas, ele não for suficiente, de uma perspectiva de segurança, simplesmente forçar uma coleta de lixo depois de terminar de usar o objeto. Você deve chamar explicitamente o <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> método no objeto para zerar quaisquer dados confidenciais dentro do objeto antes que ele seja liberado. Observe que a coleta de lixo não zero o conteúdo de objetos coletados, mas simplesmente marca a memória como disponível para redistribuição. Assim, os dados contidos em um objeto de lixo coletado podem ainda estar presentes no heap de memória na memória não alocada. No caso de objetos de criptografia, esses dados podem conter informações confidenciais, como dados de chave ou um bloco de texto sem formatação.  
+  
+ Criptografia de todas as classes do .NET Framework que contêm dados confidenciais implementar um `Clear` método. Quando chamado, o `Clear` método substitui todos os dados confidenciais dentro do objeto com zeros e, em seguida, libera o objeto para que ele pode ser ignorado com segurança coletado como lixo. Quando o objeto foi zerado e foi lançado, em seguida, você deve chamar o `Dispose` método com o `disposing` parâmetro definido como `True` para descartar todos os recursos gerenciados em associados ao objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SymmetricAlgorithm Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SymmetricAlgorithm Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto de criptografia padrão usado para executar o algoritmo simétrico.</summary>
+        <returns>Um objeto de criptografia padrão usado para executar o algoritmo simétrico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.RijndaelManaged> classe com especificado <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> vetor de inicialização e de propriedade (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) para criptografar um arquivo especificado por `inName`e gera o resultado criptografado para o arquivo especificado por `outName`. O `desKey` e `desIV` parâmetros para o método de matrizes de 8 bytes. Você deve ter o pacote de criptografia alta instalado para executar este exemplo.  
+  
+ [!code-cpp[Classic CryptoStream Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic CryptoStream Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CryptoStream Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic CryptoStream Example/CS/source.cs#1)]
+ [!code-vb[Classic CryptoStream Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic CryptoStream Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SymmetricAlgorithm Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SymmetricAlgorithm Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">O nome da implementação específica de <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" /> classe a ser usada.</param>
+        <summary>Cria o objeto criptográfico especificado usado para executar o algoritmo simétrico.</summary>
+        <returns>Um objeto criptográfico usado para executar o algoritmo simétrico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.ICryptoTransform CreateDecryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto descriptografador simétrico com a propriedade <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> atual e o vetor de inicialização (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Um objeto descriptografador simétrico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método descriptografa uma mensagem criptografada criada usando o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor%2A> sobrecarga com a mesma assinatura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.ICryptoTransform CreateDecryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">A chave secreta a ser usada para o algoritmo simétrico.</param>
+        <param name="rgbIV">O vetor de inicialização a ser usado para o algoritmo simétrico.</param>
+        <summary>Quando substituído em uma classe derivada, cria um objeto descriptografador simétrico com a propriedade <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> especificada e o vetor de inicialização (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Um objeto descriptografador simétrico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método descriptografa uma mensagem criptografada criada usando o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor%2A> sobrecarga com os mesmos parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.ICryptoTransform CreateEncryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto criptografador simétrico com a propriedade <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> atual e o vetor de inicialização (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Um objeto criptografador simétrico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o atual <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> é de propriedade `null`, o <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey%2A> método é chamado para criar um novo aleatório <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>. Se o atual <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> é de propriedade `null`, o <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV%2A> método é chamado para criar um novo aleatório <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
+  
+ Use o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor%2A> sobrecarga com a mesma assinatura para descriptografar o resultado deste método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir criptografa uma cadeia de caracteres usando o objeto de transformação retornado do <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor%2A> método.  
+  
+ [!code-cpp[System.Security.Cryptography.SymmetricAlgorithm#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm/cpp/encryptor.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.SymmetricAlgorithm#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm/cs/encryptor.cs#1)]
+ [!code-vb[System.Security.Cryptography.SymmetricAlgorithm#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm/vb/encryptor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.ICryptoTransform CreateEncryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">A chave secreta a ser usada para o algoritmo simétrico.</param>
+        <param name="rgbIV">O vetor de inicialização a ser usado para o algoritmo simétrico.</param>
+        <summary>Quando substituído em uma classe derivada, cria um objeto criptografador simétrico com a propriedade <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> especificada e o vetor de inicialização (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Um objeto criptografador simétrico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor%2A> sobrecarga com os mesmos parâmetros para descriptografar o resultado deste método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Security.Cryptography.SymmetricAlgorithm>. O `Dispose` método deixa o <xref:System.Security.Cryptography.SymmetricAlgorithm> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Security.Cryptography.SymmetricAlgorithm> para o coletor de lixo possa recuperar a memória que o <xref:System.Security.Cryptography.SymmetricAlgorithm> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Security.Cryptography.SymmetricAlgorithm>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Security.Cryptography.SymmetricAlgorithm> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método `Finalize`. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. `Finalize` invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Security.Cryptography.SymmetricAlgorithm> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não para referenciar objetos que foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackSize">
+      <MemberSignature Language="C#" Value="public virtual int FeedbackSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FeedbackSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho dos comentários, em bits, da operação de criptografia.</summary>
+        <value>O tamanho dos comentários em bits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do comentário determina a quantidade de dados que são alimentados para operações de descriptografia ou criptografia sucessiva. O tamanho do comentário não pode ser maior que o tamanho do bloco.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho dos comentários é maior que o tamanho do bloco.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackSizeValue">
+      <MemberSignature Language="C#" Value="protected int FeedbackSizeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 FeedbackSizeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tamanho do comentário, em bits, a operação de criptografia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do comentário determina a quantidade de dados que são alimentados para operações de descriptografia ou criptografia sucessiva. O tamanho do comentário não pode ser maior que o tamanho do bloco.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIV">
+      <MemberSignature Language="C#" Value="public abstract void GenerateIV ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateIV() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, gera um vetor de inicialização aleatório (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />) a ser usado para o algoritmo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, não há nenhum motivo para usar esse método, porque `CreateEncryptor()` ou `CreateEncryptor(null, null)` gera automaticamente um vetor de inicialização e uma chave. No entanto, você talvez queira usar o <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV%2A> método para reutilizar uma instância de algoritmo simétrico com um vetor de inicialização diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public abstract void GenerateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, gera uma chave aleatória (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" />) para ser usada com o algoritmo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, não há nenhum motivo para usar esse método, porque `CreateEncryptor()` ou `CreateEncryptor(null, null)` gera automaticamente um vetor de inicialização e uma chave. No entanto, você talvez queira usar o <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey%2A> método para reutilizar uma instância de algoritmo simétrico com uma chave diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IV">
+      <MemberSignature Language="C#" Value="public virtual byte[] IV { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] IV" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o vetor de inicialização (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />) para o algoritmo simétrico.</summary>
+        <value>O vetor de inicialização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> propriedade é definida automaticamente como um novo valor aleatório sempre que você cria uma nova instância de uma da <xref:System.Security.Cryptography.SymmetricAlgorithm> classes ou quando você chama manualmente o <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV%2A> método.  O tamanho do <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> propriedade deve ser o mesmo que o <xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSize%2A> propriedade dividido por 8.  
+  
+ As classes que derivam de <xref:System.Security.Cryptography.SymmetricAlgorithm> classe usar um modo encadeamento de chamada de blocos de codificação CBC (encadeamento), que requer uma chave e um vetor de inicialização para executar transformações de criptografia nos dados.  Para descriptografar dados criptografados usando uma da <xref:System.Security.Cryptography.SymmetricAlgorithm> classes, você deve definir o <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> propriedade e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> propriedade com os mesmos valores que foram usados para criptografia.  
+  
+ Para uma determinada chave secreta *k*, uma codificação de bloco simples que não usa um vetor de inicialização criptografará o mesmo bloco de entrada de texto sem formatação no mesmo bloco de saída de texto cifrado. Se você tiver blocos dentro de seu fluxo de texto sem formatação, você terá de blocos dentro de seu fluxo de texto cifrado. Se usuários não autorizados sabe nada sobre a estrutura de um bloco do texto sem formatação, eles podem usar essas informações decifrar o bloco de texto de codificação conhecidos e possivelmente recuperar sua chave. Para combater esse problema, as informações do bloco anterior é misturadas no processo de criptografar o próximo bloco. Portanto, a saída de dois blocos de texto sem formatação idênticas é diferente. Como essa técnica usa o bloco anterior para criptografar o próximo bloco, um vetor de inicialização é necessária para criptografar o primeiro bloco de dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Foi feita uma tentativa para definir o vetor de inicialização para <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Foi feita uma tentativa para definir o vetor de inicialização para um tamanho inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IVValue">
+      <MemberSignature Language="C#" Value="protected byte[] IVValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8[] IVValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.IVValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o vetor de inicialização (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />) do algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public virtual byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a chave secreta para o algoritmo simétrico.</summary>
+        <value>A chave secreta a ser usada para o algoritmo simétrico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave secreta é usada para criptografia e descriptografia. Para um algoritmo simétrico seja bem-sucedida, a chave secreta deve ser conhecida apenas para o remetente e o receptor. Os tamanhos de chave válidos são especificados pela implementação do algoritmo simétrico específico e são listados no <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> propriedade.  
+  
+ Se essa propriedade for `null` quando ele é usado, o <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey%2A> método é chamado para criar um novo valor aleatório.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Foi feita uma tentativa para definir a chave <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho de chave é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public virtual int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho, em bits, da chave secreta usada pelo algoritmo simétrico.</summary>
+        <value>O tamanho, em bits, da chave secreta usada pelo algoritmo simétrico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tamanhos de chave válidos são especificados pela implementação do algoritmo simétrico específico e são listados no <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho de chave não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySizeValue">
+      <MemberSignature Language="C#" Value="protected int KeySizeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 KeySizeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tamanho, em bits, a chave secreta usado pelo algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tamanhos de chave válidos são especificados pela implementação do algoritmo simétrico específico e são listados no <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> propriedade.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.KeySize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyValue">
+      <MemberSignature Language="C#" Value="protected byte[] KeyValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8[] KeyValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.KeyValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave secreta para o algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave secreta é usada para criptografia e descriptografia. Para um algoritmo simétrico seja bem-sucedida, a chave secreta deve ser conhecida apenas para o remetente e o receptor. Os tamanhos de chave válidos são especificados pela implementação do algoritmo simétrico específico e são listados no <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> propriedade.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalBlockSizes">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.KeySizes[] LegalBlockSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalBlockSizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tamanhos de bloco, em bits, que tem suporte com o algoritmo simétrico.</summary>
+        <value>Uma matriz que contém os tamanhos de bloco com suporte pelo algoritmo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O algoritmo simétrico suporta apenas os tamanhos de bloco que correspondam a uma entrada nesta matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o valor de <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes%2A> para os algoritmos simétricos.  
+  
+ [!code-csharp[System.Security.Cryptography.SymmetricAlgorithm.BlockSize#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm.blocksize/cs/program.cs#1)]
+ [!code-vb[System.Security.Cryptography.SymmetricAlgorithm.BlockSize#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm.blocksize/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalBlockSizesValue">
+      <MemberSignature Language="C#" Value="protected System.Security.Cryptography.KeySizes[] LegalBlockSizesValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Security.Cryptography.KeySizes[] LegalBlockSizesValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizesValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica os tamanhos de bloco, em bits, que são suportados pelo algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O algoritmo simétrico suporta apenas os tamanhos de bloco que correspondam a uma entrada nesta matriz.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tamanhos de chave, em bits, que têm suporte pelo algoritmo simétrico.</summary>
+        <value>Uma matriz que contém os tamanhos de chave com suporte pelo algoritmo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O algoritmo simétrico dá suporte a tamanhos de chave somente corresponderem a uma entrada nesta matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o valor de <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> para os algoritmos simétricos.  
+  
+ [!code-csharp[System.Security.Cryptography.SymmetricAlgorithm.BlockSize#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm.blocksize/cs/program.cs#1)]
+ [!code-vb[System.Security.Cryptography.SymmetricAlgorithm.BlockSize#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.symmetricalgorithm.blocksize/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizesValue">
+      <MemberSignature Language="C#" Value="protected System.Security.Cryptography.KeySizes[] LegalKeySizesValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Security.Cryptography.KeySizes[] LegalKeySizesValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizesValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica os tamanhos de chave em bits, que são suportados pelo algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O algoritmo simétrico dá suporte a tamanhos de chave somente corresponderem a uma entrada nesta matriz.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.CipherMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CipherMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de operação do algoritmo simétrico.</summary>
+        <value>O modo de operação do algoritmo simétrico. O padrão é <see cref="F:System.Security.Cryptography.CipherMode.CBC" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Security.Cryptography.CipherMode> enumeração para uma descrição dos modos específicos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O modo de criptografia não é um dos valores <see cref="T:System.Security.Cryptography.CipherMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModeValue">
+      <MemberSignature Language="C#" Value="protected System.Security.Cryptography.CipherMode ModeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype System.Security.Cryptography.CipherMode ModeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.ModeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o modo de criptografia usado no algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Security.Cryptography.CipherMode> enumeração para uma descrição dos modos específicos.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.PaddingMode Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.PaddingMode Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SymmetricAlgorithm.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de preenchimento usado no algoritmo simétrico.</summary>
+        <value>O modo de preenchimento usado no algoritmo simétrico. O padrão é <see cref="F:System.Security.Cryptography.PaddingMode.PKCS7" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das mensagens de texto sem formatação não consistem em um número de bytes que preencher completamente blocos. Geralmente, não há bytes suficientes para preencher o último bloco. Quando isso acontece, uma cadeia de caracteres de preenchimento é adicionada ao texto. Por exemplo, se o tamanho do bloco é de 64 bits e o último bloco contém apenas 40 bits, 24 bits de preenchimento serão adicionados. Consulte o <xref:System.Security.Cryptography.PaddingMode> enumeração para uma descrição dos modos específicos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O modo de preenchimento não é um dos valores <see cref="T:System.Security.Cryptography.PaddingMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingValue">
+      <MemberSignature Language="C#" Value="protected System.Security.Cryptography.PaddingMode PaddingValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype System.Security.Cryptography.PaddingMode PaddingValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.SymmetricAlgorithm.PaddingValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o modo de preenchimento usado no algoritmo simétrico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das mensagens de texto sem formatação não consistem em um número de bytes que preencher completamente blocos. Geralmente, não há bytes suficientes para preencher o último bloco. Quando isso acontece, uma cadeia de caracteres de preenchimento é adicionada ao texto. Por exemplo, se o tamanho do bloco é de 64 bits e o último bloco contém apenas 40 bits, 24 bits de preenchimento serão adicionados. Consulte o <xref:System.Security.Cryptography.PaddingMode> enumeração para uma descrição dos modos específicos.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidKeySize">
+      <MemberSignature Language="C#" Value="public bool ValidKeySize (int bitLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ValidKeySize(int32 bitLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SymmetricAlgorithm.ValidKeySize(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bitLength">O comprimento, em bits, para verificar se há um tamanho de chave válido.</param>
+        <summary>Determina se o tamanho da chave especificado é válido para o algoritmo atual.</summary>
+        <returns>
+          <see langword="true" />Se o tamanho da chave especificado é válido para o algoritmo atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

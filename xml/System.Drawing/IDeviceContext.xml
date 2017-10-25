@@ -1,0 +1,80 @@
+<Type Name="IDeviceContext" FullName="System.Drawing.IDeviceContext">
+  <TypeSignature Language="C#" Value="public interface IDeviceContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeviceContext implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.IDeviceContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define os métodos para a obter e liberar um identificador existente para um contexto de dispositivo do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contexto de dispositivo define o objeto de elementos gráficos para desenho em um dispositivo baseado em Windows. Um exemplo de uma classe que implementa o <xref:System.Drawing.IDeviceContext> interface é a <xref:System.Drawing.Graphics> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHdc">
+      <MemberSignature Language="C#" Value="public IntPtr GetHdc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int GetHdc() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.IDeviceContext.GetHdc" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o identificador de um contexto de dispositivo do Windows.</summary>
+        <returns>Um <see cref="T:System.IntPtr" /> que representa o identificador de um contexto de dispositivo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.IDeviceContext.GetHdc%2A>e <xref:System.Drawing.IDeviceContext.ReleaseHdc%2A> dois métodos que permitem que você obtenha e liberar o identificador para um dispositivo baseado em Windows. Você sempre deve seguir uma chamada para <xref:System.Drawing.IDeviceContext.GetHdc%2A> com uma chamada para <xref:System.Drawing.IDeviceContext.ReleaseHdc%2A> quando tiver terminado com o identificador do Windows.  
+  
+ <xref:System.Drawing.IDeviceContext.GetHdc%2A>não foi projetado para obter identificadores criados usando os métodos de GDI do Windows, como `CreateDC` ou `CreateCompatibleDC`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHdc">
+      <MemberSignature Language="C#" Value="public void ReleaseHdc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseHdc() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.IDeviceContext.ReleaseHdc" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera o identificador de um contexto de dispositivo do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.IDeviceContext.GetHdc%2A>e <xref:System.Drawing.IDeviceContext.ReleaseHdc%2A> dois métodos que permitem que você obtenha e liberar o identificador para um dispositivo baseado em Windows. Você sempre deve seguir uma chamada para <xref:System.Drawing.IDeviceContext.GetHdc%2A> com uma chamada para <xref:System.Drawing.IDeviceContext.ReleaseHdc%2A> quando tiver terminado com o identificador do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

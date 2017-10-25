@@ -1,0 +1,116 @@
+<Type Name="ProfileOptimization" FullName="System.Runtime.ProfileOptimization">
+  <TypeSignature Language="C#" Value="public static class ProfileOptimization" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ProfileOptimization extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ProfileOptimization" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Melhora o desempenho de inicialização de domínios do aplicativo em aplicativos que exigem o compilador JIT (Just-In-Time), executando a compilação em segundo plano dos métodos que provavelmente serão executados, com base nos perfis criados durante as compilações anteriores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Otimização de perfil requer um computador com vários núcleos. Os métodos são ignorados em outros computadores.  
+  
+ Cada vez que você inicia a otimização de perfil em um domínio de aplicativo, o perfil que foi criado durante o uso anterior é lido. As informações do perfil são usadas para orientar a compilação em segundo plano, identificando os métodos que têm mais probabilidade de ser executado durante a inicialização. Em computadores com vários núcleos, isso aumenta as chances de que um método já compilados pelo tempo necessário para que o thread principal do aplicativo não precisa chamar o compilador JIT.  
+  
+ O arquivo de perfil é substituído cada uso, assim ele sempre contém as informações mais recentes sobre quais métodos são usados durante a inicialização.  
+  
+ Perfis de otimização não estão restritos a inicialização do domínio de aplicativo. Eles podem ser usados para qualquer atividade que exigirá o uso intenso do compilador JIT. Você pode manter vários perfis para um domínio de aplicativo para que cada essa atividade tem seu próprio perfil.  
+  
+ Para usar perfis de otimização em um domínio de aplicativo, você deve chamar o <xref:System.Runtime.ProfileOptimization.SetProfileRoot%2A> método e especifique a pasta onde os perfis são armazenados. A pasta já deve existir. Para começar a usar um perfil, chame o <xref:System.Runtime.ProfileOptimization.StartProfile%2A> método e especifique o nome do arquivo do perfil. Se o arquivo não foi gravado anteriormente, ele será criado no primeiro uso. Não há nenhum tempo de primeiro do benefício de desempenho um perfil é criado.  
+  
+ Otimização de perfil não altera a ordem na qual os métodos são executados. Métodos não são executados no thread em segundo plano; Se um método é compilado, mas nunca foi chamado, ele simplesmente não será usado. Se um arquivo de perfil está corrompido ou não pode ser gravado na pasta especificada (por exemplo, porque a pasta não existe), a execução do programa continua sem otimização de criação de perfil.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetProfileRoot">
+      <MemberSignature Language="C#" Value="public static void SetProfileRoot (string directoryPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetProfileRoot(string directoryPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ProfileOptimization.SetProfileRoot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directoryPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="directoryPath">O caminho completo para a pasta onde os arquivos de perfil são armazenados para o domínio de aplicativo atual.</param>
+        <summary>Permite a criação de perfil para o domínio de aplicativo atual de otimização e define a pasta onde os arquivos de perfil de otimização são armazenados. Em um computador de núcleo único, o método é ignorado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar esse método antes de chamar o <xref:System.Runtime.ProfileOptimization.StartProfile%2A> método pela primeira vez no domínio do aplicativo atual. Se você chamar <xref:System.Runtime.ProfileOptimization.SetProfileRoot%2A> mais de uma vez no mesmo domínio de aplicativo, todas as chamadas feitas depois do primeiro serão ignoradas.  
+  
+ A pasta especificada já deve existir. Se não existir, chamar este método não criá-lo e nenhuma criação de perfil ocorre.  
+  
+ Em computadores que não têm vários núcleos, esse método é ignorado.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="StartProfile">
+      <MemberSignature Language="C#" Value="public static void StartProfile (string profile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartProfile(string profile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ProfileOptimization.StartProfile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="profile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="profile">O nome de arquivo do perfil a ser usado.</param>
+        <summary>Inicia a compilação JIT (Just-In-Time) dos métodos que foram registrados anteriormente no arquivo de perfil especificado em um thread em segundo plano. Inicia o processo de gravação do uso do método atual, que posteriormente substituirá o arquivo de perfil especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o perfil especificado existe na pasta especificada o <xref:System.Runtime.ProfileOptimization.SetProfileRoot%2A> método, as informações que ele contém é usado para determinar a ordem na qual os métodos são compilados no thread em segundo plano. O <xref:System.Runtime.ProfileOptimization.StartProfile%2A> método cria o perfil, se ainda não existir e inicia o registro de uso do método.  
+  
+ Somente os métodos que são chamados, na verdade, são registrados, independentemente se eles foram compilados no thread em segundo plano ou no thread principal do aplicativo. Um método é compilado no thread principal do aplicativo se o aplicativo precisa chamá-lo antes do thread em segundo plano compilou.  
+  
+ O código que executa a gravação rastreia a taxa em que os métodos são compilados, incluindo métodos que são compilados no thread de segundo plano e no thread principal. Quando a taxa cai abaixo de um nível predeterminado, gravação interrompe. Gravação também parará se a taxa de compilação JIT excede um limite predeterminado.  
+  
+ Se o <xref:System.Runtime.ProfileOptimization.SetProfileRoot%2A> método não foi chamado para o domínio de aplicativo atual, ou se o computador não tiver vários núcleos, o <xref:System.Runtime.ProfileOptimization.StartProfile%2A> método não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

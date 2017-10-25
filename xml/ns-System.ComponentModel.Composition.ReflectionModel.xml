@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition.ReflectionModel">
+  <Docs>
+    <summary>O <see cref="N:System.ComponentModel.Composition.ReflectionModel" /> namespace fornece tipos Managed Extensibility Framework (MEF) para os desenvolvedores que usam um modelo de programação baseado em reflexão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

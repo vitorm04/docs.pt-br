@@ -1,0 +1,245 @@
+<Type Name="MessageContractAttribute" FullName="System.ServiceModel.MessageContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MessageContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma classe fortemente tipada que corresponde a uma mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.MessageContractAttribute> atributo para especificar a estrutura do envelope SOAP de uma mensagem específica. O serviço pode usar a mensagem como um parâmetro ou tipo de retorno em operações de serviço. Para obter informações sobre como controlar a serialização do conteúdo de um corpo SOAP sem modificar o envelope SOAP de padrão em si, consulte <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>, [especificando a transferência de dados em contratos de serviço](~/docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md), e [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+> [!NOTE]
+>  Você não pode usar os tipos de mensagem personalizada em sua operação de serviço com parâmetros serializáveis regulares. Use tipos de mensagem personalizados ou serializáveis parâmetros que não são <xref:System.ServiceModel.Channels.Message> objetos. Para obter detalhes, consulte, [especificando a transferência de dados em contratos de serviço](~/docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+  
+ Para implementar um contrato de mensagem para um tipo, anotá-lo com <xref:System.ServiceModel.MessageContractAttribute> e anotar um ou mais dos campos ou a propriedades com a classe <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, ou <xref:System.ServiceModel.MessageHeaderArrayAttribute>.  
+  
+> [!NOTE]
+>  <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>não é um atributo de contrato de mensagem e não pode ser usado em conjunto com <xref:System.ServiceModel.MessageContractAttribute>.  
+  
+ Use o <xref:System.ServiceModel.OperationContractAttribute.Action%2A> e <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> propriedades para especificar o valor da `<Action>` elemento na mensagem SOAP.  
+  
+-   Use o <xref:System.ServiceModel.MessageContractAttribute.HasProtectionLevel%2A> e <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> propriedades para indicar se o tipo de mensagem SOAP tem um nível de proteção e, nesse caso, o que é.  
+  
+-   Use o <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> propriedade para indicar se o corpo da mensagem tem um elemento wrapper e nesse caso, use o <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> e <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> propriedades para especificar o nome e namespace, respectivamente, do elemento de encapsulamento.  
+  
+ Para obter mais informações, consulte [usando contratos de mensagem](~/docs/framework/wcf/feature-details/using-message-contracts.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.MessageContractAttribute> para controlar a estrutura de envelope SOAP para a mensagem de solicitação e a mensagem de resposta e o uso de ambos os <xref:System.ServiceModel.MessageHeaderAttribute> (para criar um cabeçalho SOAP da mensagem de resposta) e o <xref:System.ServiceModel.MessageBodyMemberAttribute>(para especificar o corpo da mensagem de solicitação e resposta). O exemplo de código contém um exemplo de cada mensagem quando enviada.  
+  
+ [!code-csharp[MessageHeaderAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#1)]
+ [!code-vb[MessageHeaderAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageContractAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageContractAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MessageContractAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractAttribute.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a mensagem tem um nível de proteção.</summary>
+        <value>
+          <see langword="true" />Se a mensagem deve ser criptografada, assinado, ou ambos; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa configuração for `true`, o nível de proteção para a mensagem é o valor de <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A>. Para obter detalhes sobre os níveis de proteção e suas suposições e escopos, consulte [Noções básicas sobre nível de proteção](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWrapped">
+      <MemberSignature Language="C#" Value="public bool IsWrapped { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWrapped" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractAttribute.IsWrapped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o corpo da mensagem tem um elemento wrapper.</summary>
+        <value>
+          <see langword="true" /> se o corpo da mensagem tiver um elemento wrapper; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina o valor de <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> para `false` para suprimir o elemento no qual o corpo da mensagem é serializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractAttribute.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se a mensagem deve ser criptografada, assinada ou ambos.</summary>
+        <value>Um dos valores de <see cref="T:System.Net.Security.ProtectionLevel" />. O padrão é <see cref="F:System.Net.Security.ProtectionLevel.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter detalhes sobre os níveis de proteção e suas suposições e escopos, consulte [Noções básicas sobre nível de proteção](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor passado para a propriedade quando a configuração não é uma da <see cref="T:System.Net.Security.ProtectionLevel" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapperName">
+      <MemberSignature Language="C#" Value="public string WrapperName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WrapperName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractAttribute.WrapperName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento wrapper do corpo da mensagem.</summary>
+        <value>O nome do elemento wrapper no corpo da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> propriedade para definir o nome do elemento wrapper.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapperNamespace">
+      <MemberSignature Language="C#" Value="public string WrapperNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WrapperNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractAttribute.WrapperNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace do elemento wrapper do corpo da mensagem.</summary>
+        <value>O namespace do elemento do wrapper.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> propriedade para definir o namespace do elemento wrapper.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.MessageContractAttribute> para controlar a estrutura de envelope SOAP para a mensagem de solicitação e a mensagem de resposta e o uso de ambos os <xref:System.ServiceModel.MessageHeaderAttribute> (para criar um cabeçalho SOAP da mensagem de resposta) e o <xref:System.ServiceModel.MessageBodyMemberAttribute>(para especificar o corpo da mensagem de solicitação e resposta). O exemplo de código contém um exemplo de cada mensagem quando enviada.  
+  
+ [!code-csharp[MessageHeaderAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#1)]
+ [!code-vb[MessageHeaderAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

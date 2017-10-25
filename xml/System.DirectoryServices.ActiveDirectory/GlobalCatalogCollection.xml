@@ -1,0 +1,125 @@
+<Type Name="GlobalCatalogCollection" FullName="System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection">
+  <TypeSignature Language="C#" Value="public class GlobalCatalogCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GlobalCatalogCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" /> é uma coleção somente leitura que contém objetos <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.ActiveDirectory.GlobalCatalog globalCatalog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.ActiveDirectory.GlobalCatalog globalCatalog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection.Contains(System.DirectoryServices.ActiveDirectory.GlobalCatalog)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="globalCatalog" Type="System.DirectoryServices.ActiveDirectory.GlobalCatalog" />
+      </Parameters>
+      <Docs>
+        <param name="globalCatalog">O <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se o especificado <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto está nesta coleção.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> está nesta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="globalCatalog" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.GlobalCatalog[] globalCatalogs, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.GlobalCatalog[] globalCatalogs, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection.CopyTo(System.DirectoryServices.ActiveDirectory.GlobalCatalog[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="globalCatalogs" Type="System.DirectoryServices.ActiveDirectory.GlobalCatalog[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="globalCatalogs">A matriz de <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>globalCatalogs</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objetos na coleção para a matriz especificada, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de destino não é grande o suficiente, com base no tamanho da coleção de origem e o <paramref name="index" /> especificado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="globalCatalogs" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.ActiveDirectory.GlobalCatalog globalCatalog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.ActiveDirectory.GlobalCatalog globalCatalog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection.IndexOf(System.DirectoryServices.ActiveDirectory.GlobalCatalog)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="globalCatalog" Type="System.DirectoryServices.ActiveDirectory.GlobalCatalog" />
+      </Parameters>
+      <Docs>
+        <param name="globalCatalog">O <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna a primeira ocorrência de especificado <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto na coleção.</summary>
+        <returns>O índice de base zero do primeiro objeto correspondente. Retornará -1 se nenhum membro dessa coleção é idêntico de <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="globalCatalog" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalog this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.GlobalCatalog Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto a ser obtido.</param>
+        <summary>Obtém um <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto na coleção.</summary>
+        <value>O <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto que existe no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da coleção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

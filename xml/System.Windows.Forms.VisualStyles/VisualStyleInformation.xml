@@ -1,0 +1,413 @@
+<Type Name="VisualStyleInformation" FullName="System.Windows.Forms.VisualStyles.VisualStyleInformation">
+  <TypeSignature Language="C#" Value="public static class VisualStyleInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit VisualStyleInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre o estilo visual atual do sistema operacional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe expõe `static` propriedades que fornecem detalhes sobre o estilo visual atual do sistema operacional.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores da <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> propriedades em um <xref:System.Windows.Forms.ListView> controle.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleInformation#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleInformation/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleInformation#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleInformation/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleInformation#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleInformation/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Author">
+      <MemberSignature Language="C#" Value="public static string Author { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Author" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Author" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o autor do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que especifica o autor do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorScheme">
+      <MemberSignature Language="C#" Value="public static string ColorScheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ColorScheme" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.ColorScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o esquema de cores do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que especifica o esquema de cores do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estilo visual do Windows XP fornece três esquemas de cores. Essa propriedade retorna "NormalColor" se o esquema de cores azul estiver ativo, "HomeStead" se o esquema de cores verde-oliva verde estiver ativo, e "Metálico" se o esquema de cores a prata está ativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Company">
+      <MemberSignature Language="C#" Value="public static string Company { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Company" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Company" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a empresa que criou o estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que especifica a empresa que criou o estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlHighlightHot">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color ControlHighlightHot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Drawing.Color ControlHighlightHot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.ControlHighlightHot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor que usa o estilo visual atual para indicar o estado ativo de um controle.</summary>
+        <value>Se esses estilos estejam habilitados, o <see cref="T:System.Drawing.Color" /> usada para pintar um destaque em um controle no estado ativo; caso contrário, <see cref="P:System.Drawing.SystemColors.ButtonHighlight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica os valores de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A?displayProperty=nameWithType> propriedades internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public static string Copyright { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Copyright" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os direitos autorais do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que especifica os direitos autorais do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public static string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que descreve o estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public static string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome para exibição do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que especifica o nome para exibição do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledByUser">
+      <MemberSignature Language="C#" Value="public static bool IsEnabledByUser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsEnabledByUser" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o usuário habilitou estilos visuais no sistema operacional.</summary>
+        <value>
+          <see langword="true" />Se o usuário tiver habilitado os estilos visuais em um sistema operacional que ofereça suporte a eles; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os usuários podem habilitar estilos visuais no **aparência** guia o **exibição** opção no painel de controle. Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedByOS">
+      <MemberSignature Language="C#" Value="public static bool IsSupportedByOS { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupportedByOS" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o sistema operacional oferece suporte a estilos visuais.</summary>
+        <value>
+          <see langword="true" />Se o sistema operacional oferece suporte a estilos visuais; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estilos visuais são suportados apenas no Windows XP Home Edition, Windows XP Professional e Windows Server 2003.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumColorDepth">
+      <MemberSignature Language="C#" Value="public static int MinimumColorDepth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MinimumColorDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.MinimumColorDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a profundidade de cor mínima para o estilo visual atual.</summary>
+        <value>A profundidade de cor mínima para o estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica os valores de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A?displayProperty=nameWithType> propriedades internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public static string Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve o tamanho do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que descreve o tamanho do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna "NormalSize", "LargeFonts" ou "ExtraLargeFonts". Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsFlatMenus">
+      <MemberSignature Language="C#" Value="public static bool SupportsFlatMenus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool SupportsFlatMenus" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.SupportsFlatMenus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o estilo visual atual oferece suporte a menus simples.</summary>
+        <value>
+          <see langword="true" />Se esses estilos estejam habilitados e o estilo visual atual oferece suporte a menus simples; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica os valores de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A?displayProperty=nameWithType> propriedades internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextControlBorder">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color TextControlBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Drawing.Color TextControlBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.TextControlBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor que usa o estilo visual atual para desenhar as bordas dos controles que contêm texto.</summary>
+        <value>Se esses estilos estejam habilitados, o <see cref="T:System.Drawing.Color" /> que o estilo visual atual usa para desenhar as bordas dos controles que contêm texto; caso contrário, <see cref="P:System.Drawing.SystemColors.ControlDarkDark" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica a cor da borda dos controles como <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.ComboBox>. Essa propriedade verifica os valores de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A?displayProperty=nameWithType> propriedades internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public static string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma URL fornecida pelo autor do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que especifica a URL fornecida pelo autor do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleInformation.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do estilo visual atual.</summary>
+        <value>Uma cadeia de caracteres que indica a versão do estilo visual atual se estilos visuais estiverem habilitados; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade verifica o valor de <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,73 @@
+<Type Name="MapAreaShape" FullName="System.Web.UI.DataVisualization.Charting.MapAreaShape">
+  <TypeSignature Language="C#" Value="public enum MapAreaShape" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MapAreaShape extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.MapAreaShape" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a forma de uma área do mapa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.MapAreaShape> enumeração representa a forma de um <xref:System.Web.UI.DataVisualization.Charting.MapArea> objeto. Essa enumeração é geralmente usada para definir a forma de uma área de mapa personalizado. Uma área de mapa personalizado tem coordenadas definidas pelo usuário e a forma, em vez de uma área do mapa que representa um elemento gráfico, que tem uma forma que é determinada pelo elemento representa.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Circle">
+      <MemberSignature Language="C#" Value="Circle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.MapAreaShape Circle = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Circle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MapAreaShape</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A forma da área do mapa é circular.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Polygon">
+      <MemberSignature Language="C#" Value="Polygon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.MapAreaShape Polygon = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Polygon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MapAreaShape</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A forma da área do mapa é poligonal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="Rectangle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.MapAreaShape Rectangle = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Rectangle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MapAreaShape</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A forma da área do mapa é retangular.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

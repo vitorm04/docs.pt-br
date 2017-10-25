@@ -1,0 +1,136 @@
+<Type Name="PeerPresenceInfo" FullName="System.Net.PeerToPeer.Collaboration.PeerPresenceInfo">
+  <TypeSignature Language="C#" Value="public class PeerPresenceInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PeerPresenceInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as informações de presença de um par.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A presença de um par Especifica um determinado nível de participação em uma rede de colaboração ponto a ponto, como se o par registrou para dentro ou fora da rede da colaboração ponto a ponto, ou tiver definido o status de presença como "Ausente".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância de um objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novas instâncias de <xref:System.Net.PeerToPeer.Collaboration.PeerPresenceStatus> gerados por este construtor contém um valor de PeerPresenceInfo padrão igual a "Online".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerPresenceInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão de uma <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novas instâncias de <xref:System.Net.PeerToPeer.Collaboration.PeerPresenceStatus> gerados por este construtor contém um valor de PeerPresenceInfo padrão igual a "Online".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerPresenceInfo (System.Net.PeerToPeer.Collaboration.PeerPresenceStatus presenceStatus, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.PeerToPeer.Collaboration.PeerPresenceStatus presenceStatus, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.#ctor(System.Net.PeerToPeer.Collaboration.PeerPresenceStatus,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="presenceStatus" Type="System.Net.PeerToPeer.Collaboration.PeerPresenceStatus" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="presenceStatus">Status do ponto.</param>
+        <param name="description">Descrição do estado de presença.</param>
+        <summary>Inicializa uma instância de um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> objeto que inclui uma cadeia de caracteres Unicode que descreve o status de presença de par local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novas instâncias de <xref:System.Net.PeerToPeer.Collaboration.PeerPresenceStatus> gerados por este construtor contêm um valor de PeerPresenceInfo padrão igual a "Online".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DescriptiveText">
+      <MemberSignature Language="C#" Value="public string DescriptiveText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DescriptiveText" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.DescriptiveText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres Unicode adicional para o par local, que descreve o status de presença.</summary>
+        <value>Cadeia de caracteres Unicode que descreve o status de presença de um par.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta cadeia está limitada a 255 caracteres Unicode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceStatus">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerPresenceStatus PresenceStatus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerPresenceStatus PresenceStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.PresenceStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerPresenceStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o status de presença de par local.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceStatus" />enumeração que especifica o status de presença de um par.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

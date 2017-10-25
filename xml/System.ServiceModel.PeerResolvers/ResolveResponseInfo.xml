@@ -1,0 +1,103 @@
+<Type Name="ResolveResponseInfo" FullName="System.ServiceModel.PeerResolvers.ResolveResponseInfo">
+  <TypeSignature Language="C#" Value="public class ResolveResponseInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveResponseInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações de resposta retornadas como resultado de uma operação de resolução do ponto de extremidade de ponto a ponto no resolvedor peer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Resolve%28System.ServiceModel.PeerResolvers.ResolveInfo%29> ou uma implementação de <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract.Resolve%28System.ServiceModel.PeerResolvers.ResolveInfo%29> é chamado, esse objeto é retornado ao cliente. Ele contém os pontos de extremidade registrados para o ponto especificado em correspondente anterior <xref:System.ServiceModel.PeerResolvers.ResolveInfo> instância enviada para o resolvedor peer.  
+  
+ As instâncias dessa classe são usadas principalmente para transmitir informações de serviço de resolução para um cliente de rede desse serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveResponseInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveResponseInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveResponseInfo (System.ServiceModel.PeerNodeAddress[] addresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.PeerNodeAddress[] addresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveResponseInfo.#ctor(System.ServiceModel.PeerNodeAddress[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="addresses" Type="System.ServiceModel.PeerNodeAddress[]" />
+      </Parameters>
+      <Docs>
+        <param name="addresses">Matriz de <see cref="T:System.ServiceModel.PeerNodeAddress" /> objetos que contêm os endereços de ponto de extremidade registrado para o par cujos pontos de extremidade foram solicitados em uma operação de resolução anterior.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" /> classe com o conjunto fornecido de endereços de ponto de extremidade de ponto a ponto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Addresses">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.ServiceModel.PeerNodeAddress&gt; Addresses { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.ServiceModel.PeerNodeAddress&gt; Addresses" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.ResolveResponseInfo.Addresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.ServiceModel.PeerNodeAddress&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de endereços de nó par.</summary>
+        <value>Lista genérica &lt;IList&gt; de <see cref="T:System.ServiceModel.PeerNodeAddress" /> objetos que contêm os endereços de ponto de extremidade registrado para o par cujos pontos de extremidade foram solicitados em uma operação de resolução anterior.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveResponseInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o corpo da mensagem que contém uma instância serializada desse tipo é formado corretamente.</summary>
+        <returns>True se o corpo da resposta de resolução informações está formado corretamente pelo remetente; False se não for.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

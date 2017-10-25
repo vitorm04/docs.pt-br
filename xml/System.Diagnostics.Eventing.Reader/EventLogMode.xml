@@ -1,0 +1,66 @@
+<Type Name="EventLogMode" FullName="System.Diagnostics.Eventing.Reader.EventLogMode">
+  <TypeSignature Language="C#" Value="public enum EventLogMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventLogMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina que o comportamento para o serviço de log de eventos manipula um log de eventos quando o log atingir seu tamanho máximo permitido (quando o log de eventos está cheio).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoBackup">
+      <MemberSignature Language="C#" Value="AutoBackup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogMode AutoBackup = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogMode.AutoBackup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Arquivar o log quando estiver cheio, não substituir eventos. O log será arquivado automaticamente quando necessário. Nenhum evento é substituído.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Circular">
+      <MemberSignature Language="C#" Value="Circular" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogMode Circular = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogMode.Circular" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Novos eventos continuam a ser armazenados quando o arquivo de log está cheio. Cada novo evento de entrada substitui o evento mais antigo no log.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Retain">
+      <MemberSignature Language="C#" Value="Retain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogMode Retain = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogMode.Retain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não substitua eventos. Limpe o log manualmente em vez de automaticamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

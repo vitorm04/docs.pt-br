@@ -1,0 +1,194 @@
+<Type Name="WebAuditEvent" FullName="System.Web.Management.WebAuditEvent">
+  <TypeSignature Language="C#" Value="public class WebAuditEvent : System.Web.Management.WebManagementEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebAuditEvent extends System.Web.Management.WebManagementEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebAuditEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebManagementEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serve como a classe base para todos os ASP.NET monitoramento de integridade eventos de auditoria.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ O <xref:System.Web.Management.WebAuditEvent> classe é a classe base da qual derivam as classes de evento de auditoria de monitoramento de integridade ASP.NET. Os eventos de auditoria geram informações sobre operações relacionadas à segurança em um aplicativo Web e fornecem eventos de êxito e falha para cada operação auditada.  
+  
+ O sistema de monitoramento de integridade pode eventos de auditoria com e sem êxito, que significa que um aplicativo pode ser monitorado para condições normais e com defeito. Por padrão, somente os eventos de auditoria de falha são registrados.  
+  
+ As seguintes operações são auditadas pelo ASP.NET e podem gerar eventos de auditoria de monitoramento de integridade de êxito ou falha:  
+  
+-   Tentativas de logon feitas pelos usuários de um aplicativo ASP.NET. Para obter mais detalhes sobre essa auditoria, consulte <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> e <xref:System.Web.Management.WebSuccessAuditEvent>.  
+  
+-   Eventos relacionados à segurança, como falhas de autenticação, as tentativas de acesso de recurso com falha e outros eventos relacionados à segurança. O log desses eventos pode ser útil ao investigar uma invasão ou um ataque no aplicativo. Por padrão, não há suporte para auditoria é fornecido para falhas de autorização de usuários anônimos. Para obter mais detalhes sobre a auditoria de eventos de falha, consulte <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> e <xref:System.Web.Management.WebFailureAuditEvent>.  
+  
+-   Eventos personalizados gerados por um aplicativo ASP.NET. Você pode fazer auditoria de eventos personalizados, estendendo a funcionalidade fornecida pelo <xref:System.Web.Management.WebAuditEvent> classe e classes derivadas  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de derivar do <xref:System.Web.Management.WebAuditEvent> de classe, consulte o exemplo fornecido neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar o <xref:System.Web.Management.WebAuditEvent> classe para criar um evento de auditoria personalizada.  
+  
+ [!code-csharp[System.Web.Management.WebAuditEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/CS/webauditevent.cs#1)]
+ [!code-vb[System.Web.Management.WebAuditEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/VB/webauditevent.vb#1)]  
+  
+ A seguir está um trecho do arquivo de configuração que permite que o ASP.NET usar o evento.  
+  
+```  
+<healthMonitoring   
+  enabled="true"  
+  heartBeatInterval="0">   
+  
+  <providers>  
+    <add name="EventLogProvider"   
+      type="System.Web.Management.EventLogWebEventProvider,  
+      System.Web,Version=2.0.3600.0,Culture=neutral,  
+      PublicKeyToken=b03f5f7f11d50a3a"/>  
+  </providers>  
+  
+  <eventMappings>  
+    <add  name="SampleWebAuditEvent"   
+      type="SamplesAspNet.SampleWebAuditEvent,  
+      webauditevent,Version=1.0.1663.31140,   
+      Culture=neutral,   
+      PublicKeyToken=0d1fa0f69d94de96,   
+      processorArchitecture=MSIL"/>  
+  </eventMappings>  
+  
+  <rules>  
+    <add name="Custom Audit Default"  
+      eventName="SampleWebAuditEvent"  
+      provider="EventLogProvider"  
+      profile="Default"/>    
+  </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao formatar suas informações de evento personalizados para exibição, substitua o <see cref="M:System.Web.Management.WebBaseEvent.FormatCustomEventDetails(System.Web.Management.WebEventFormatter)" /> método em vez de <see cref="Overload:System.Web.Management.WebBaseEvent.ToString" /> método. Isso pode evitar a substituição ou violação com informações confidenciais.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebAuditEvent (string message, object eventSource, int eventCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebAuditEvent.#ctor(System.String,System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebAuditEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância de um <xref:System.Web.Management.WebAuditEvent> objeto, mas você pode chamar esse construtor ao implementar seu próprio tipo de evento que herda dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar este construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Management.WebAuditEvent> classe.  
+  
+ [!code-csharp[System.Web.Management.WebAuditEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/CS/webauditevent.cs#2)]
+ [!code-vb[System.Web.Management.WebAuditEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/VB/webauditevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebAuditEvent (string message, object eventSource, int eventCode, int eventDetailCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebAuditEvent.#ctor(System.String,System.Object,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">O <see cref="T:System.Web.Management.WebEventCodes" /> valor que especifica o identificador detalhado para o evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebAuditEvent" /> classe com parâmetros de evento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância de um <xref:System.Web.Management.WebAuditEvent> objeto, mas você pode chamar esse construtor ao implementar seu próprio tipo de evento que herda dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar este construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Management.WebAuditEvent> classe.  
+  
+ [!code-csharp[System.Web.Management.WebAuditEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/CS/webauditevent.cs#3)]
+ [!code-vb[System.Web.Management.WebAuditEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/VB/webauditevent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestInformation">
+      <MemberSignature Language="C#" Value="public System.Web.Management.WebRequestInformation RequestInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Management.WebRequestInformation RequestInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebAuditEvent.RequestInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.WebRequestInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obter as informações associadas a solicitação da Web.</summary>
+        <value>Um <see cref="T:System.Web.Management.WebRequestInformation" /> que contém as informações associadas a solicitação da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use as informações fornecidas pelo <xref:System.Web.Management.WebAuditEvent.RequestInformation%2A> propriedade para ajudar na detecção de causas das falhas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter as informações de solicitação por meio de <xref:System.Web.Management.WebRequestInformation> propriedade.  
+  
+ [!code-csharp[System.Web.Management.WebAuditEvent#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/CS/webauditevent.cs#5)]
+ [!code-vb[System.Web.Management.WebAuditEvent#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebAuditEvent/VB/webauditevent.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

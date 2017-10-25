@@ -1,0 +1,53 @@
+<Type Name="InstalledFontCollection" FullName="System.Drawing.Text.InstalledFontCollection">
+  <TypeSignature Language="C#" Value="public sealed class InstalledFontCollection : System.Drawing.Text.FontCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InstalledFontCollection extends System.Drawing.Text.FontCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Text.InstalledFontCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Text.FontCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as fontes instaladas no sistema. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Text.InstalledFontCollection> permite que você obtenha uma lista de famílias de fontes que estão instalados no computador que executa o aplicativo com sua <xref:System.Drawing.Text.FontCollection.Families%2A> propriedade. Para obter informações adicionais sobre fontes e texto, incluindo o código de exemplo, consulte [usando fontes e texto](~/docs/framework/winforms/advanced/using-fonts-and-text.md).  
+  
+ Não use o <xref:System.Drawing.Text.InstalledFontCollection> classe para instalar uma fonte para o Windows. Em vez disso, use o [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `AddFontResource` função. Um <xref:System.Drawing.Text.InstalledFontCollection> objeto vê somente as fontes que estão instaladas no Windows antes do objeto é criado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter uma lista de fontes que oferecem suporte a regular <xref:System.Drawing.FontStyle>.  
+  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+  
+ [!code-csharp[System.Drawing.Misc3#InstalledFonts](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#installedfonts)]
+ [!code-vb[System.Drawing.Misc3#InstalledFonts](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#installedfonts)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstalledFontCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Text.InstalledFontCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Text.InstalledFontCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,163 @@
+<Type Name="MD5" FullName="System.Security.Cryptography.MD5">
+  <TypeSignature Language="C#" Value="public abstract class MD5 : System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MD5 extends System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.MD5" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata da qual todas as implementações do algoritmo de hash <see cref="T:System.Security.Cryptography.MD5" /> herdam.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hash funções mapa binárias cadeias de caracteres de um comprimento arbitrário que cadeias pequenas de binários de comprimento fixo. Uma função de hash criptográfico tem a propriedade que é impraticável para encontrar duas entradas distintas que usam o hash para o mesmo valor. Isto é, hashes de dois conjuntos de dados devem corresponder se também correspondam os dados correspondentes. Pequenas alterações aos dados resultar em grandes, imprevisíveis alterações no hash.  
+  
+ Tamanho de hash para o <xref:System.Security.Cryptography.MD5> algoritmo é de 128 bits.  
+  
+ O <xref:System.Security.Cryptography.HashAlgorithm.ComputeHash%2A> métodos de <xref:System.Security.Cryptography.MD5> classe retornar o hash como uma matriz de 16 bytes.  Observe que algumas implementações de MD5 produzem um hash de 32 caracteres, em formato hexadecimal.  Para interoperar com tais implementações, formatar o valor de retorno de <xref:System.Security.Cryptography.HashAlgorithm.ComputeHash%2A> métodos como um valor hexadecimal.  
+  
+> [!NOTE]
+>  Funções de hash mais recentes, como o Hash seguro \ algoritmos SHA-256 e SHA-512, estão disponíveis. Considere o uso de <xref:System.Security.Cryptography.SHA256> classe ou o <xref:System.Security.Cryptography.SHA512> classe o <xref:System.Security.Cryptography.MD5> classe. Use <xref:System.Security.Cryptography.MD5> somente para compatibilidade com aplicativos herdados e dados.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo calcula o <xref:System.Security.Cryptography.MD5> o valor de uma cadeia de caracteres de hash e retorna o hash como uma cadeia de caracteres de 32 caracteres, em formato hexadecimal.  A cadeia de caracteres de hash criada por esse exemplo de código é compatível com qualquer função de hash MD5 (em qualquer plataforma) que cria uma cadeia de caracteres de hash de 32 caracteres, em formato hexadecimal.  
+  
+ [!code-csharp[Security.Cryptography.MD5#1](~/samples/snippets/csharp/VS_Snippets_CLR/Security.Cryptography.MD5/cs/example.cs#1)]
+ [!code-vb[Security.Cryptography.MD5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Security.Cryptography.MD5/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MD5 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Security.Cryptography.MD5" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância do <xref:System.Security.Cryptography.MD5> classe, use o <xref:System.Security.Cryptography.MD5.Create%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.MD5 Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.MD5 Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.MD5</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância da implementação padrão do algoritmo de hash <see cref="T:System.Security.Cryptography.MD5" />.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Security.Cryptography.MD5" /> algoritmo de hash.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">O algoritmo foi usado com o modo FIPS (Federal Information Processing Standards) habilitado, mas ele não é compatível com FIPS.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.MD5 Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.MD5 Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.MD5</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">O nome da implementação específica do <see cref="T:System.Security.Cryptography.MD5" /> a ser usada.</param>
+        <summary>Cria uma instância da implementação especificada do algoritmo de hash <see cref="T:System.Security.Cryptography.MD5" />.</summary>
+        <returns>Uma nova instância da implementação especificada de <see cref="T:System.Security.Cryptography.MD5" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores possíveis para `algName` são: `System.Security.Cryptography.MD5`, `MD5`, `System.Security.Cryptography.MD5CryptoServiceProvider`, e `System.Security.Cryptography.MD5Managed`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">O algoritmo descrito pelo parâmetro <paramref name="algName" /> foi usado com o modo FIPS (Federal Information Processing Standards) habilitado, mas ele não é compatível com FIPS.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

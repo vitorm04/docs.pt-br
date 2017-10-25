@@ -1,0 +1,268 @@
+<Type Name="MultipleViewPattern" FullName="System.Windows.Automation.MultipleViewPattern">
+  <TypeSignature Language="C#" Value="public class MultipleViewPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MultipleViewPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.MultipleViewPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os controles que fornecem e pode alternar entre várias representações do mesmo conjunto de informações ou controles filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exemplos de controles que podem apresentar vários modos de exibição incluem a exibição de lista (que pode mostrar o conteúdo como miniaturas, lado a lado, ícones ou detalhes), [!INCLUDE[TLA#tla_xl](~/includes/tlasharptla-xl-md.md)] gráficos (pizza, linha, barras, valor da célula com uma fórmula), [!INCLUDE[TLA#tla_word](~/includes/tlasharptla-word-md.md)] documentos (normal, layout da Web, layout de impressão, layout de leitura, estrutura de tópicos), [!INCLUDE[TLA#tla_outlook](~/includes/tlasharptla-outlook-md.md)] calendário (ano, mês, semana, dia) e [!INCLUDE[TLA#tla_wmp](~/includes/tlasharptla-wmp-md.md)] capas. As exibições com suporte são determinadas pelo desenvolvedor do controle e são específicas para cada controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.MultipleViewPattern/MultipleViewPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.MultipleViewPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.MultipleViewPattern+MultipleViewPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.MultipleViewPattern" />.</summary>
+        <value>Uma estrutura que contém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Use <xref:System.Windows.Automation.MultipleViewPattern.Current%2A> para obter o valor atual de uma propriedade.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.MultipleViewPattern/MultipleViewPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.MultipleViewPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.MultipleViewPattern+MultipleViewPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.MultipleViewPattern" />.</summary>
+        <value>Uma estrutura que contém atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.MultipleViewPattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentViewProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CurrentViewProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CurrentViewProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation.CurrentView" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos de cliente de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.MultipleViewPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um número inteiro é obtido que representa o modo de exibição atual para um controle que dá suporte a <xref:System.Windows.Automation.MultipleViewPattern>.  
+  
+ [!code-csharp[UIAMultipleViewPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#100)]
+ [!code-vb[UIAMultipleViewPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#100)]  
+[!code-csharp[UIAMultipleViewPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#103)]
+[!code-vb[UIAMultipleViewPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewName">
+      <MemberSignature Language="C#" Value="public string GetViewName (int viewId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetViewName(int32 viewId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.MultipleViewPattern.GetViewName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="viewId">O identificador da exibição de controle específicos.</param>
+        <summary>Recupera o nome de uma exibição de controle específicos.</summary>
+        <returns>Uma cadeia de caracteres localizada que representa o nome de exibição de controle específicos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identificadores de exibição podem ser recuperados usando <xref:System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation.GetSupportedViews%2A>.  
+  
+ A coleção de controle específicos de identificadores de exibição é idêntica entre instâncias.  
+  
+ Nomes de exibição são adequados para uso em texto em fala, Braille e outros aplicativos acessíveis.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o nome de controle específicos do modo de exibição atual é recuperado de um controle que dá suporte a <xref:System.Windows.Automation.MultipleViewPattern>.  
+  
+ [!code-csharp[UIAMultipleViewPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#105)]
+ [!code-vb[UIAMultipleViewPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="viewId" />não é um membro da coleção de exibições com suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.MultipleViewPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.MultipleViewPattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.MultipleViewPatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.MultipleViewPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIAMultipleViewPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#101)]
+ [!code-vb[UIAMultipleViewPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCurrentView">
+      <MemberSignature Language="C#" Value="public void SetCurrentView (int viewId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCurrentView(int32 viewId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.MultipleViewPattern.SetCurrentView(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="viewId">Um identificador de exibição de controle específicos.</param>
+        <summary>Define o modo de exibição atual do controle específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identificadores de exibição podem ser recuperados usando <xref:System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation.GetSupportedViews%2A>.  
+  
+ A coleção de controle específicos de identificadores de exibição é idêntica entre instâncias.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir, a coleção de exibições disponíveis para um controle que suporta o <xref:System.Windows.Automation.MultipleViewPattern> padrão de controle é recuperado. Um membro da coleção de identificadores de exibição é usado posteriormente para modificar a exibição atual do controle.  
+  
+ [!code-csharp[UIAMultipleViewPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#104)]
+ [!code-vb[UIAMultipleViewPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="viewId" />não é um membro da coleção de exibições com suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedViewsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty SupportedViewsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty SupportedViewsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.MultipleViewPattern.SupportedViewsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade que obtém a coleção de controle específicos de modos de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos de cliente de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.MultipleViewPatternIdentifiers>.  
+  
+ Essa propriedade não está presente no <xref:System.Windows.Automation.MultipleViewPattern.MultipleViewPatternInformation> e devem ser recuperados usando <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma coleção de identificadores de inteiro é obtida que representa os modos de exibição atuais disponíveis para um controle que dá suporte a <xref:System.Windows.Automation.MultipleViewPattern>.  
+  
+ [!code-csharp[UIAMultipleViewPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#100)]
+ [!code-vb[UIAMultipleViewPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#100)]  
+[!code-csharp[UIAMultipleViewPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/CSharp/UIAMultipleViewPattern_snippets.cs#102)]
+[!code-vb[UIAMultipleViewPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMultipleViewPattern_snip/VisualBasic/UIAMultipleViewPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1626 @@
+<Type Name="BinaryReader" FullName="System.IO.BinaryReader">
+  <TypeSignature Language="C#" Value="public class BinaryReader : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BinaryReader extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.BinaryReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Lê os tipos de dados primitivos como valores binários em uma codificação específica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.BinaryReader> classe fornece métodos que simplificam a ler tipos de dados primitivos de um fluxo. Por exemplo, você pode usar o <xref:System.IO.BinaryReader.ReadBoolean%2A> método para ler o próximo byte como um valor booliano e Avançar a posição atual no fluxo de um byte. A classe inclui métodos de leitura que dão suporte a diferentes tipos de dados.  
+  
+ Quando você cria uma nova instância do <xref:System.IO.BinaryReader> classe, você fornece o fluxo para ler e, opcionalmente, especifique o tipo de codificação e se deseja deixar o fluxo abrir depois de descartar o <xref:System.IO.BinaryReader> objeto. Se você não especificar um tipo de codificação, UTF-8 será usado.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como armazenar e recuperar as configurações de aplicativo em um arquivo.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryReader (System.IO.Stream input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="input">O fluxo de entrada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.BinaryReader" /> com base no fluxo especificado e usando a codificação UTF-8.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como armazenar e recuperar as configurações de aplicativo em um arquivo.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O fluxo não dá suporte à leitura, é <see langword="null" /> ou já está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryReader (System.IO.Stream input, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream input, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.#ctor(System.IO.Stream,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="input">O fluxo de entrada.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.BinaryReader" /> com base no fluxo especificado e na codificação de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O fluxo não dá suporte à leitura, é <see langword="null" /> ou já está fechado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encoding" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryReader (System.IO.Stream input, System.Text.Encoding encoding, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream input, class System.Text.Encoding encoding, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="input">O fluxo de entrada.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <param name="leaveOpen">
+          <see langword="true" /> para deixar o fluxo aberto após o objeto <see cref="T:System.IO.BinaryReader" /> ser descartado; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.BinaryReader" /> com base no fluxo e na codificação de caracteres especificados e, opcionalmente, deixa o fluxo aberto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O fluxo não dá suporte à leitura, é <see langword="null" /> ou já está fechado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encoding" /> ou <paramref name="input" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BaseStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BinaryReader.BaseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Expõe o acesso ao fluxo subjacente do <see cref="T:System.IO.BinaryReader" />.</summary>
+        <value>O fluxo subjacente associado ao <see langword="BinaryReader" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Usando a base de fluxo durante a leitura ou ao usar o `BinaryReader` pode causar corrupção e perda de dados. Por exemplo, os mesmos bytes podem ser lido mais de uma vez, bytes podem ser ignorados ou leitura de caractere pode tornar-se imprevisível.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler e gravar `Double` dados na memória usando o `BinaryReader` e <xref:System.IO.BinaryWriter> classes sobre a <xref:System.IO.MemoryStream> classe. `MemoryStream`apenas lê e grava `Byte` dados.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CPP/rwdouble.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CS/rwdouble.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/VB/rwdouble.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o leitor atual e o fluxo subjacente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação de `Close` chama o <xref:System.IO.BinaryReader.Dispose%2A> método passando um `true` valor.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.IO.Stream.Flush%2A> ou `Close`. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.IO.BinaryReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.IO.BinaryReader>. O `Dispose` método deixa o <xref:System.IO.BinaryReader> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.IO.BinaryReader> para o coletor de lixo possa recuperar a memória que o <xref:System.IO.BinaryReader> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.IO.BinaryReader>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.IO.BinaryReader> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pela classe <see cref="T:System.IO.BinaryReader" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo `Dispose` e <xref:System.Object.Finalize%2A>. Por padrão, esse método Especifica o `disposing` parâmetro como `true`. <xref:System.Object.Finalize%2A>Especifica o `disposing` parâmetro como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.BinaryReader> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.BinaryReader.Dispose(System.Boolean)" /> pode ser chamado várias vezes por outros objetos. Ao substituir esse método, tenha cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar esse método, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see cref="M:System.IDisposable.Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FillBuffer">
+      <MemberSignature Language="C#" Value="protected virtual void FillBuffer (int numBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FillBuffer(int32 numBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.FillBuffer(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numBytes" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numBytes">O número de bytes a serem lidos.</param>
+        <summary>Preenche o buffer interno com o número especificado de bytes lidos do fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do buffer interno é o maior valor entre 16 e o valor retornado por <xref:System.Text.Encoding.GetMaxByteCount%2A> para a codificação especificada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido antes que <paramref name="numBytes" /> pudesse ser lido.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="numBytes" /> solicitado é maior que o tamanho do buffer interno.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PeekChar">
+      <MemberSignature Language="C#" Value="public virtual int PeekChar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 PeekChar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.PeekChar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o próximo caractere disponível e não avance a posição do caractere ou byte.</summary>
+        <returns>O próximo caractere disponível ou -1 se não houver mais nenhum caractere disponível ou o fluxo não der suporte à busca.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se os caracteres substitutos podem ser esperadas no uso de fluxo de <xref:System.IO.BinaryReader.ReadChars%2A> método, em seguida, defina o fluxo de volta à posição original.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ArgumentException">O caractere atual não pode ser decodificado no buffer de caractere interno usando o <see cref="T:System.Text.Encoding" /> selecionado para o fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public virtual int Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê os caracteres do fluxo subjacente e avança a posição atual do fluxo de acordo com o <see langword="Encoding" /> usado e o caractere específico que está sendo lidos do fluxo.</summary>
+        <returns>O próximo caractere do fluxo de entrada ou -1 se nenhum caractere estiver disponível no momento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ler e gravar dados de uso da memória como um armazenamento de backup. Este exemplo exibe uma lista de caracteres de caminho de arquivo inválido para o console. Embora o código tenta exibir uma lista de todos os caracteres de caminho de arquivo inválido, nem todos os caracteres são dentro do conjunto de caracteres de exibição. Como a lista de caracteres inválidos pode variar com base no sistema, a saída para este código também pode variar.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChar2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar2/CPP/rwreadchar.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChar2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar2/CS/rwreadchar.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChar2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar2/VB/rwreadchar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public virtual int Read (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Read(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer no qual os dados serão lidos.</param>
+        <param name="index">O ponto de partida no buffer no qual a leitura do buffer é iniciada.</param>
+        <param name="count">O número de bytes a serem lidos.</param>
+        <summary>Lê o número especificado de bytes do fluxo, começando em um ponto especificado na matriz de bytes.</summary>
+        <returns>O número de bytes lidos no <paramref name="buffer" />. Isso poderá ser menor que o número de bytes solicitado se esse número de bytes não estiver disponível, ou zero, se o final do fluxo for atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois que um bem-sucedida da operação de leitura.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como gravar dados binários com o uso de memória como um armazenamento de backup. Ele exibe uma mensagem no console que indica se os dados foram gravados corretamente.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter.RWBytes2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes2/CS/rwreadbytes.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWBytes2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes2/VB/rwreadbytes.vb#1)]  
+  
+ Este exemplo lê o conteúdo de um arquivo e exibe o valor numérico de cada byte em formato de 16 colunas. O final do arquivo que está sendo lido é detectado quando o <xref:System.IO.BinaryReader.Read%2A> método retorna zero bytes.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source5.cs#6)]
+ [!code-vb[System.IO.BinaryReaderWriter#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source5.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.  
+  
+ -ou-  
+  
+ O número de caracteres decodificados a serem lidos é maior que <paramref name="count" />. Isso poderá ocorrer se um decodificador de Unicode retornar caracteres de fallback ou um par alternativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public virtual int Read (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Read(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Read(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer no qual os dados serão lidos.</param>
+        <param name="index">O ponto de partida no buffer no qual a leitura do buffer é iniciada.</param>
+        <param name="count">O número de caracteres a serem lidos.</param>
+        <summary>Lê o número especificado de caracteres do fluxo, começando em um ponto especificado na matriz de caracteres.</summary>
+        <returns>O número total de caracteres lidos no buffer. Isso poderá ser menor que o número de caracteres solicitado se esse número de caracteres não estiver disponível no momento ou zero, se o final do fluxo for atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois que um bem-sucedida da operação de leitura.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ler e gravar dados de uso da memória como um armazenamento de backup. Este exemplo exibe uma lista de caracteres de caminho de arquivo inválido para o console. Embora o código tenta exibir uma lista de todos os caracteres de caminho de arquivo inválido, nem todos os caracteres são dentro do conjunto de caracteres de exibição. Como a lista de caracteres inválidos pode variar com base no sistema, a saída para este código também pode variar.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChars2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/CPP/rwreadchars.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChars2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/CS/rwreadchars.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChars2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/VB/rwreadchars.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.  
+  
+ -ou-  
+  
+ O número de caracteres decodificados a serem lidos é maior que <paramref name="count" />. Isso poderá ocorrer se um decodificador de Unicode retornar caracteres de fallback ou um par alternativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read7BitEncodedInt">
+      <MemberSignature Language="C#" Value="protected int Read7BitEncodedInt ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance int32 Read7BitEncodedInt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Read7BitEncodedInt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro de 32 bits em formato compactado.</summary>
+        <returns>Um inteiro de 32 bits em formato compactado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Se o número inteiro se ajustarão em sete bits, o inteiro tem apenas um byte de espaço. O número inteiro deve ter sido gravado por meio de <xref:System.IO.BinaryWriter.Write7BitEncodedInt%2A?displayProperty=nameWithType>.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">O fluxo está corrompido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBoolean">
+      <MemberSignature Language="C#" Value="public virtual bool ReadBoolean ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ReadBoolean() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadBoolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um valor <see langword="Boolean" /> do fluxo atual e avança a posição atual do fluxo em um byte.</summary>
+        <returns>
+          <see langword="true" /> se o byte for diferente de zero; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como armazenar e recuperar as configurações de aplicativo em um arquivo.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public virtual byte ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o próximo byte do fluxo atual e avança a posição atual do fluxo em um byte.</summary>
+        <returns>O próximo byte lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Devido a conflitos de formatação de dados, não é recomendável usar esse método com as seguintes codificações:  
+  
+-   UTF-7  
+  
+-   ISO-2022-JP  
+  
+-   ISCII  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar dados binários usando memória como um repositório de backup e, em seguida, verifique se que os dados foram gravados corretamente.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWByte#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/CPP/rwbyte.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWByte#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/CS/rwbyte.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWByte#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/VB/rwbyte.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBytes">
+      <MemberSignature Language="C#" Value="public virtual byte[] ReadBytes (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] ReadBytes(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadBytes(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de bytes a serem lidos. Esse valor deve ser 0 ou um número que não seja negativo; caso contrário, uma exceção ocorrerá.</param>
+        <summary>Lê o número especificado de bytes do fluxo atual em uma matriz de bytes e avança a posição atual pelo número de bytes.</summary>
+        <returns>Uma matriz de bytes que contém os dados lidos do fluxo subjacente. Isso poderá ser menor que o número de bytes solicitado se o final do fluxo for atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois que um bem-sucedida da operação de leitura.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar dados binários usando memória como um repositório de backup e, em seguida, verifique se que os dados foram gravados corretamente.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWBytes1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/CPP/rwbytes.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWBytes1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/CS/rwbytes.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWBytes1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/VB/rwbytes.vb#1)]  
+  
+ Este exemplo lê o conteúdo de um arquivo e o exibe no console como texto de despejo. O final do arquivo que está sendo lido é detectado quando o comprimento do <xref:System.Byte> matriz retornada de <xref:System.IO.BinaryReader.ReadBytes%2A> é zero.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source5.cs#6)]
+ [!code-vb[System.IO.BinaryReaderWriter#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source5.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O número de caracteres decodificados a serem lidos é maior que <paramref name="count" />. Isso poderá ocorrer se um decodificador de Unicode retornar caracteres de fallback ou um par alternativo.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadChar">
+      <MemberSignature Language="C#" Value="public virtual char ReadChar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char ReadChar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadChar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o caractere seguinte do fluxo atual e avança a posição atual do fluxo de acordo com o <see langword="Encoding" /> usado e o caractere específico que está sendo lido do fluxo.</summary>
+        <returns>Um caractere lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.IO.BinaryReader.ReadChar%2A> método tenta ler um caractere substituto no fluxo de uma exceção será gerada e avançará a posição no fluxo. A posição é restaurada para o local original antes de <xref:System.IO.BinaryReader.ReadChar%2A> foi chamado se o fluxo é pesquisável; no entanto, se o fluxo é unseekable, a posição não será corrigida. Se os caracteres substitutos podem ser esperados no fluxo, use o <xref:System.IO.BinaryReader.ReadChars%2A> método em vez disso.  
+  
+ Devido a conflitos de formatação de dados, não é recomendável usar esse método com as seguintes codificações:  
+  
+-   UTF-7  
+  
+-   ISO-2022-JP  
+  
+-   ISCII  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler e gravar dados de uso da memória como um armazenamento de backup.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChar1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/CPP/rwchar.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChar1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/CS/rwchar.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChar1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/VB/rwchar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ArgumentException">Um caractere alternativo foi lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadChars">
+      <MemberSignature Language="C#" Value="public virtual char[] ReadChars (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char[] ReadChars(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadChars(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de caracteres a serem lidos.</param>
+        <summary>Lê o número especificado de caracteres do fluxo atual, retorna os dados em uma matriz de caracteres e avança a posição atual de acordo com o <see langword="Encoding" /> usado e o caractere específico que está sendo lido no fluxo.</summary>
+        <returns>Uma matriz de caracteres que contém os dados lidos do fluxo subjacente. Isso poderá ser menor do que o número de caracteres solicitado se o final do fluxo for atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois que um bem-sucedida da operação de leitura.  
+  
+ Durante a leitura de fluxos de rede, em alguns casos raros, o <xref:System.IO.BinaryReader.ReadChars%2A> método pode ler um caractere extra do fluxo se o <xref:System.IO.BinaryReader> foi construído com Unicode codificação. Se isso ocorrer, você pode usar o <xref:System.IO.BinaryReader.ReadBytes%2A> método para ler uma matriz de bytes de comprimento fixo e, em seguida, passar a matriz para o <xref:System.IO.BinaryReader.ReadChars%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler e gravar dados de uso da memória como um armazenamento de backup.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChars1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/CPP/rwchars.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChars1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/CS/rwchars.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChars1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/VB/rwchars.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O número de caracteres decodificados a serem lidos é maior que <paramref name="count" />. Isso poderá ocorrer se um decodificador de Unicode retornar caracteres de fallback ou um par alternativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDecimal">
+      <MemberSignature Language="C#" Value="public virtual decimal ReadDecimal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Decimal ReadDecimal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadDecimal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um valor decimal do fluxo atual e avança a posição atual do fluxo em 16 bytes.</summary>
+        <returns>Um valor decimal lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDouble">
+      <MemberSignature Language="C#" Value="public virtual double ReadDouble ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 ReadDouble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um valor de ponto flutuante de 8 bytes do fluxo atual e avança a posição atual do fluxo em oito bytes.</summary>
+        <returns>Um valor de ponto flutuante de 8 bytes lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler e gravar `Double` dados na memória usando o `BinaryReader` e <xref:System.IO.BinaryWriter> classes sobre a <xref:System.IO.MemoryStream> classe. `MemoryStream`apenas lê e grava `Byte` dados.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CPP/rwdouble.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CS/rwdouble.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/VB/rwdouble.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInt16">
+      <MemberSignature Language="C#" Value="public virtual short ReadInt16 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int16 ReadInt16() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadInt16" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro com sinal de 2 bytes do fluxo atual e avança a posição atual do fluxo em dois bytes.</summary>
+        <returns>Um inteiro com sinal de 2 bytes lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInt32">
+      <MemberSignature Language="C#" Value="public virtual int ReadInt32 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ReadInt32() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadInt32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro com sinal de 4 bytes do fluxo atual e avança a posição atual do fluxo em quatro bytes.</summary>
+        <returns>Um inteiro com sinal de 4 bytes lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ <xref:System.IO.BinaryReader>lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como armazenar e recuperar as configurações de aplicativo em um arquivo.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInt64">
+      <MemberSignature Language="C#" Value="public virtual long ReadInt64 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 ReadInt64() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadInt64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro com sinal de oito bytes do fluxo atual e avança a posição atual do fluxo em oito bytes.</summary>
+        <returns>Um inteiro com sinal de oito bytes lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSByte">
+      <MemberSignature Language="C#" Value="public virtual sbyte ReadSByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int8 ReadSByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadSByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um byte assinado desse fluxo e avança a posição atual do fluxo em um byte.</summary>
+        <returns>Um byte assinado lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSingle">
+      <MemberSignature Language="C#" Value="public virtual float ReadSingle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float32 ReadSingle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadSingle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um valor de ponto flutuante de 4 bytes do fluxo atual e avança a posição atual do fluxo em quatro bytes.</summary>
+        <returns>Um valor de ponto flutuante de 4 bytes lido do fluxo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como armazenar e recuperar as configurações de aplicativo em um arquivo.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadString">
+      <MemberSignature Language="C#" Value="public virtual string ReadString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ReadString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê uma cadeia de caracteres do fluxo atual. A cadeia de caracteres é prefixada com o tamanho, codificado como um inteiro, sete bits por vez.</summary>
+        <returns>A cadeia de caracteres que está sendo lida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como armazenar e recuperar as configurações de aplicativo em um arquivo.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadUInt16">
+      <MemberSignature Language="C#" Value="public virtual ushort ReadUInt16 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int16 ReadUInt16() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadUInt16" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro sem sinal de 2 bytes do fluxo atual usando a codificação little-endian e avança a posição do fluxo em dois bytes.</summary>
+        <returns>Um inteiro sem sinal de 2 bytes lido desse fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadUInt32">
+      <MemberSignature Language="C#" Value="public virtual uint ReadUInt32 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int32 ReadUInt32() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadUInt32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro sem sinal de quatro bytes do fluxo atual e avança a posição do fluxo em quatro bytes.</summary>
+        <returns>Um inteiro sem sinal de 4 bytes lido desse fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadUInt64">
+      <MemberSignature Language="C#" Value="public virtual ulong ReadUInt64 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int64 ReadUInt64() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadUInt64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um inteiro sem sinal de 8 bytes do fluxo atual e avança a posição do fluxo em oito bytes.</summary>
+        <returns>Um inteiro sem sinal de 8 bytes lido desse fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.BinaryReader>não restaure a posição do arquivo depois de ler um malsucedida.  
+  
+ `BinaryReader`lê esse tipo de dados no formato little-endian.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">O final do fluxo foi atingido.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

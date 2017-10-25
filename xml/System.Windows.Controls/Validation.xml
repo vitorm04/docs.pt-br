@@ -1,0 +1,432 @@
+<Type Name="Validation" FullName="System.Windows.Controls.Validation">
+  <TypeSignature Language="C#" Value="public static class Validation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Validation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Validation" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos e propriedades anexadas que dão suporte à validação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma discussão detalhada sobre o processo de validação, consulte "Validação de dados" em [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddErrorHandler">
+      <MemberSignature Language="C#" Value="public static void AddErrorHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Controls.ValidationErrorEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddErrorHandler(class System.Windows.DependencyObject element, class System.EventHandler`1&lt;class System.Windows.Controls.ValidationErrorEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.AddErrorHandler(System.Windows.DependencyObject,System.EventHandler{System.Windows.Controls.ValidationErrorEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;System.Windows.Controls.ValidationErrorEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> objeto a ser adicionado <c>manipulador</c> para.</param>
+        <param name="handler">O manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos para o <see cref="E:System.Windows.Controls.Validation.Error" /> evento anexado ao objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearInvalid">
+      <MemberSignature Language="C#" Value="public static void ClearInvalid (System.Windows.Data.BindingExpressionBase bindingExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearInvalid(class System.Windows.Data.BindingExpressionBase bindingExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.ClearInvalid(System.Windows.Data.BindingExpressionBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingExpression" Type="System.Windows.Data.BindingExpressionBase" />
+      </Parameters>
+      <Docs>
+        <param name="bindingExpression">O objeto para ativar válido.</param>
+        <summary>Remove todos os <see cref="T:System.Windows.Controls.ValidationError" /> objetos especificado <see cref="T:System.Windows.Data.BindingExpressionBase" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `bindingExpression` objeto pode ter sido inválido de um <xref:System.Windows.Controls.Validation.MarkInvalid%2A> chamada ou uma validação falhou anteriormente. O objeto é válido após esta chamada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="bindingExpression" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ErrorEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ErrorEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Validation.ErrorEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Controls.Validation.Error" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ErrorsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ErrorsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Validation.ErrorsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.Validation.Errors" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ErrorTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ErrorTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Validation.ErrorTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.Validation.ErrorTemplate" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrors">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;System.Windows.Controls.ValidationError&gt; GetErrors (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.ReadOnlyObservableCollection`1&lt;class System.Windows.Controls.ValidationError&gt; GetErrors(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.GetErrors(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;System.Windows.Controls.ValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> do qual o valor é lido.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Controls.Validation.Errors" /> anexado a propriedade do elemento especificado.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1" /> de objetos <see cref="T:System.Windows.Controls.ValidationError" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="element" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorTemplate">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ControlTemplate GetErrorTemplate (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Controls.ControlTemplate GetErrorTemplate(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.GetErrorTemplate(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ControlTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> do qual o valor é lido.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Controls.Validation.ErrorTemplate" /> anexado a propriedade do elemento especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Controls.ControlTemplate" /> usado para gerar comentários de erro de validação na camada de adorno.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="element" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHasError">
+      <MemberSignature Language="C#" Value="public static bool GetHasError (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetHasError(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.GetHasError(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> do qual o valor é lido.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Controls.Validation.HasError" /> anexado a propriedade do elemento especificado.</summary>
+        <returns>O valor da propriedade anexada <see cref="P:System.Windows.Controls.Validation.HasError" /> do elemento especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="element" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidationAdornerSite">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject GetValidationAdornerSite (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject GetValidationAdornerSite(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.GetValidationAdornerSite(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual obter o <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" />.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" /> anexado a propriedade para o elemento especificado.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidationAdornerSiteFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject GetValidationAdornerSiteFor (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject GetValidationAdornerSiteFor(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.GetValidationAdornerSiteFor(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual obter o <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" />.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" /> anexado a propriedade para o elemento especificado.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasErrorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasErrorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Validation.HasErrorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.Validation.HasError" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkInvalid">
+      <MemberSignature Language="C#" Value="public static void MarkInvalid (System.Windows.Data.BindingExpressionBase bindingExpression, System.Windows.Controls.ValidationError validationError);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MarkInvalid(class System.Windows.Data.BindingExpressionBase bindingExpression, class System.Windows.Controls.ValidationError validationError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.MarkInvalid(System.Windows.Data.BindingExpressionBase,System.Windows.Controls.ValidationError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingExpression" Type="System.Windows.Data.BindingExpressionBase" />
+        <Parameter Name="validationError" Type="System.Windows.Controls.ValidationError" />
+      </Parameters>
+      <Docs>
+        <param name="bindingExpression">O objeto <see cref="T:System.Windows.Data.BindingExpression" /> a ser marcado como inválido.</param>
+        <param name="validationError">O objeto <see cref="T:System.Windows.Controls.ValidationError" /> a ser usado.</param>
+        <summary>Marca o objeto <see cref="T:System.Windows.Data.BindingExpression" /> especificado como inválido com o objeto <see cref="T:System.Windows.Controls.ValidationError" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Data.BindingExpression> objeto permanece inválido até <xref:System.Windows.Controls.Validation.ClearInvalid%2A> é chamado ou outra transferência para a fonte da associação for validado com êxito.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="validationError" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveErrorHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveErrorHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Controls.ValidationErrorEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveErrorHandler(class System.Windows.DependencyObject element, class System.EventHandler`1&lt;class System.Windows.Controls.ValidationErrorEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.RemoveErrorHandler(System.Windows.DependencyObject,System.EventHandler{System.Windows.Controls.ValidationErrorEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;System.Windows.Controls.ValidationErrorEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> objeto a ser removido <c>manipulador</c> do.</param>
+        <param name="handler">O manipulador a ser removido.</param>
+        <summary>Adiciona um manipulador de eventos para o <see cref="E:System.Windows.Controls.Validation.Error" /> evento anexado do objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetErrorTemplate">
+      <MemberSignature Language="C#" Value="public static void SetErrorTemplate (System.Windows.DependencyObject element, System.Windows.Controls.ControlTemplate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetErrorTemplate(class System.Windows.DependencyObject element, class System.Windows.Controls.ControlTemplate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.SetErrorTemplate(System.Windows.DependencyObject,System.Windows.Controls.ControlTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.ControlTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> objeto para definir <c>valor</c> em.</param>
+        <param name="value">O <see cref="T:System.Windows.Controls.ControlTemplate" /> a ser usado para gerar comentários de erro de validação na camada de adorno.</param>
+        <summary>Define o valor de <see cref="P:System.Windows.Controls.Validation.ErrorTemplate" /> propriedade anexada ao elemento especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="element" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValidationAdornerSite">
+      <MemberSignature Language="C#" Value="public static void SetValidationAdornerSite (System.Windows.DependencyObject element, System.Windows.DependencyObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetValidationAdornerSite(class System.Windows.DependencyObject element, class System.Windows.DependencyObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.SetValidationAdornerSite(System.Windows.DependencyObject,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" />.</param>
+        <param name="value">O <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" /> do elemento especificado.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" /> propriedade anexada ao valor especificado no elemento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValidationAdornerSiteFor">
+      <MemberSignature Language="C#" Value="public static void SetValidationAdornerSiteFor (System.Windows.DependencyObject element, System.Windows.DependencyObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetValidationAdornerSiteFor(class System.Windows.DependencyObject element, class System.Windows.DependencyObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Validation.SetValidationAdornerSiteFor(System.Windows.DependencyObject,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" />.</param>
+        <param name="value">O <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" /> do elemento especificado.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" /> propriedade anexada ao valor especificado no elemento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationAdornerSiteForProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValidationAdornerSiteForProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValidationAdornerSiteForProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Validation.ValidationAdornerSiteForProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSiteFor" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationAdornerSiteProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValidationAdornerSiteProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValidationAdornerSiteProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Validation.ValidationAdornerSiteProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.Validation.ValidationAdornerSite" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

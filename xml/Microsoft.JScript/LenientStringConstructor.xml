@@ -1,0 +1,38 @@
+<Type Name="LenientStringConstructor" FullName="Microsoft.JScript.LenientStringConstructor">
+  <TypeSignature Language="C#" Value="public class LenientStringConstructor : Microsoft.JScript.StringConstructor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LenientStringConstructor extends Microsoft.JScript.StringConstructor" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LenientStringConstructor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.StringConstructor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos que representam os métodos estáticos do <see cref="T:Microsoft.JScript.StringConstructor" /> classe. O <see cref="T:Microsoft.JScript.LenientStringConstructor" /> classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="fromCharCode">
+      <MemberSignature Language="C#" Value="public object fromCharCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public object fromCharCode" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientStringConstructor.fromCharCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.StringConstructor.fromCharCode(System.Object[])" /> estático da classe <see cref="T:Microsoft.JScript.StringConstructor" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

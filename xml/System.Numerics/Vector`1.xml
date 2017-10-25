@@ -1,0 +1,1455 @@
+<Type Name="Vector&lt;T&gt;" FullName="System.Numerics.Vector&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public struct Vector&lt;T&gt; : IEquatable&lt;System.Numerics.Vector&lt;T&gt;&gt;, IFormattable where T : struct" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Vector`1&lt;struct .ctor (class System.ValueType) T&gt; extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Numerics.Vector`1&lt;!T&gt;&gt;, class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Numerics.Vector`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics.Vectors</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+        <BaseTypeName>System.ValueType</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Numerics.Vector&lt;T&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de vetor. <c>T</c> pode ser qualquer tipo numérico primitivo.</typeparam>
+    <summary>Representa um vetor de único de um tipo numérico especificado que é adequado para a otimização de nível baixo de algoritmos paralelos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Numerics.Vector%601>é uma estrutura imutável que representa um vetor de único de um tipo numérico especificado. A contagem de um <xref:System.Numerics.Vector%601> instância é fixo, mas seu limite superior é o registro da CPU dependentes. Destina-se a ser usado como um bloco de construção para vetorização algoritmos grandes.  
+  
+ O <xref:System.Numerics.Vector%601> estrutura oferece suporte para aceleração de hardware.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O tipo numérico que define o tipo dos componentes do vetor.</param>
+        <summary>Cria um vetor cujos componentes são de um tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `value`pode ser qualquer tipo numérico primitivo (isto é, um numérico tipo cujo <xref:System.Type.IsPrimitive%2A?displayProperty=nameWithType> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector (T[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.#ctor(`0[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="values" Type="T[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz numérica.</param>
+        <summary>Cria um vetor de uma matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `values`deve conter pelo menos <xref:System.Numerics.Vector%601.Count%2A> elementos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector (T[] values, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T[] values, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.#ctor(`0[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="values" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz numérica.</param>
+        <param name="index">A posição de índice inicial do qual criar o vetor.</param>
+        <summary>Cria um vetor de uma matriz especificada começando em uma posição de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz deve conter pelo menos [construtor de Vector(T) (T\<xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType > elementos do índice especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ O comprimento de <paramref name="values" /> menos <paramref name="index" /> é menor que <see cref="P:System.Numerics.Vector`1.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!T[] destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.CopyTo(`0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="T[]" />
+      </Parameters>
+      <Docs>
+        <param name="destination">A matriz para receber uma cópia dos valores de vetor.</param>
+        <summary>Copia a instância de vetor para uma matriz de destino especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação de cópia começa no índice 0 da `destination`. A matriz de destino deve ter pelo menos <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> elementos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destination" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos no vector atual é maior que o número de elementos disponíveis na <paramref name="destination" /> matriz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] destination, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!T[] destination, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="T[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">A matriz para receber uma cópia dos valores de vetor.</param>
+        <param name="startIndex">O índice inicial no <c>destino</c> no qual iniciar a operação de cópia.</param>
+        <summary>Copia a instância de vetor para um destino especificado matriz iniciando em uma posição de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação de cópia começa no índice `startIndex` de `destination`. A matriz de destino deve ter pelo menos `startIndex` + [método CopyTo (T\<xref:System.Numerics.Vector%601.Count%2A > – 1 elementos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destination" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos na instância atual é maior que o número de elementos disponíveis do <paramref name="startIndex" /> ao final do <paramref name="destination" /> matriz.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />é menor que zero ou maior que o último índice <paramref name="destination" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public static int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o número de elementos armazenados no vetor.</summary>
+        <value>O número de elementos armazenados no vetor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o acesso para o getter de propriedade por meio de reflexão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Vector&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Numerics.Vector`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.Equals(System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">O vetor a ser comparado com esta instância.</param>
+        <summary>Retorna um valor que indica se esta instância é igual a um vector especificado.</summary>
+        <returns>
+          <see langword="true" /> se a instância atual e <paramref name="other" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois vetores são iguais se forem do mesmo tipo, têm o mesmo número de valores, e cada valor na instância atual é igual ao valor correspondente no `other`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com essa instância.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se a instância atual e <paramref name="obj" /> forem iguais; caso contrário, <see langword="false" />. O método retorna <see langword="false" /> se <paramref name="obj" /> é nulo, ou se <paramref name="obj" /> é um vetor de um tipo diferente a instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois vetores são iguais se forem do mesmo tipo, têm o mesmo número de valores, e cada valor na instância atual é igual ao valor correspondente no `other`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>O código hash.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do elemento a ser retornado.</param>
+        <summary>Obtém o elemento em um índice especificado.</summary>
+        <value>O elemento no índice <paramref name="index" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" /> é maior ou igual a <see cref="P:System.Numerics.Vector`1.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="One">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; One { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector`1&lt;!T&gt; One" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector`1.One" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um vetor que contém todos os índices.</summary>
+        <value>Um vetor que contém todos os índices.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator + (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_Addition(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Addition(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor para adicionar.</param>
+        <param name="right">O segundo vetor a ser adicionado.</param>
+        <summary>Soma dois vetores.</summary>
+        <returns>O vetor somado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Addition%2A> método define a operação de adição para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_BitwiseAnd">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator &amp; (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_BitwiseAnd(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_BitwiseAnd(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor.</param>
+        <param name="right">O segundo vetor.</param>
+        <summary>Retorna um vetor novo executando um bit a bit <see langword="And" /> operação em cada um dos elementos em dois vetores.</summary>
+        <returns>O vetor que os resultados de bit a bit <see langword="And" /> de <paramref name="left" /> e <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_BitwiseAnd%2A> método define o bit a bit `And` operação para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_BitwiseOr">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator | (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_BitwiseOr(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_BitwiseOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor.</param>
+        <param name="right">O segundo vetor.</param>
+        <summary>Retorna um vetor novo executando um bit a bit <see langword="Or" /> operação em cada um dos elementos em dois vetores.</summary>
+        <returns>O vetor que os resultados de bit a bit <see langword="Or" /> dos elementos no <paramref name="left" /> e <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_BitwiseOr%2A> método define o bit a bit `Or` operação para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator / (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_Division(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Division(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor.</param>
+        <param name="right">O segundo vetor.</param>
+        <summary>Divide o primeiro vetor por segundo.</summary>
+        <returns>O vetor que é o resultado da divisão <paramref name="left" /> por <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Division%2A> método define a operação de divisão para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Equality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor a ser comparado.</param>
+        <param name="right">O segundo vetor a ser comparado.</param>
+        <summary>Retorna um valor que indica se cada par de elementos em dois vetores especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> e <paramref name="right" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois vetores são iguais se forem do mesmo tipo, ter o mesmo número de valores e cada valor na `left` é igual ao valor correspondente no `right`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_ExclusiveOr">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator ^ (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_ExclusiveOr(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_ExclusiveOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor.</param>
+        <param name="right">O segundo vetor.</param>
+        <summary>Retorna um vetor novo executando um bit a bit <see langword="XOr" /> operação em cada um dos elementos em dois vetores.</summary>
+        <returns>O vetor que os resultados de bit a bit <see langword="XOr" /> dos elementos no <paramref name="left" /> e <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_ExclusiveOr%2A> método define o bit a bit `XOr` operação para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;byte&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;unsigned int8&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Byte}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.Byte" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;double&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;float64&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Double}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.Double" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;short&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;int16&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int16}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.Int16&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.Int16" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;int&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;int32&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int32}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.Int32" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;long&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;int64&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int64}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.Int64" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;sbyte&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;int8&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.SByte}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.SByte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.SByte" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;float&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;float32&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Single}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.Single" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;ushort&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;unsigned int16&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt16}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.UInt16&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.UInt16" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;uint&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;unsigned int32&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt32}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.UInt32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.UInt32" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Vector&lt;ulong&gt; (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;unsigned int64&gt; op_Explicit(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt64}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;System.UInt64&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de reinterpret.</param>
+        <summary>Reinterprets os bits do vetor especificado em um vetor do tipo <see cref="T:System.UInt64" />.</summary>
+        <returns>O vetor de reinterpreted.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Explicit%2A> operador define uma conversão de restrição; requer um operador de conversão (em c#) ou um método de conversão (no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Inequality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor a ser comparado.</param>
+        <param name="right">O segundo vetor a ser comparado.</param>
+        <summary>Retorna um valor que indica se qualquer único par de elementos em vetores de especificado é igual.</summary>
+        <returns>
+          <see langword="true" />Se qualquer par de elemento na esquerda e direita forem iguais. <see langword="false" />Se nenhum par de elemento é iguais.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator * (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_Multiply(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Multiply(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor.</param>
+        <param name="right">O segundo vetor.</param>
+        <summary>Multiplica dois vetores juntos.</summary>
+        <returns>O vetor de produto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Multiply%2A> método define a operação de multiplicação para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator * (System.Numerics.Vector&lt;T&gt; value, T factor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_Multiply(valuetype System.Numerics.Vector`1&lt;!T&gt; value, !T factor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Multiply(System.Numerics.Vector{`0},`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="factor" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de origem.</param>
+        <param name="factor">Um valor escalar.</param>
+        <summary>Multiplica um vetor por um valor escalar especificado.</summary>
+        <returns>O vetor de escala.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Multiply%2A> método define a operação de multiplicação para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator * (T factor, System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_Multiply(!T factor, valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Multiply(`0,System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factor" Type="T" />
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="factor">O valor escalar.</param>
+        <param name="value">O vetor de origem.</param>
+        <summary>Multiplica um vetor pelo escalar determinado.</summary>
+        <returns>O vetor de escala.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Multiply%2A> método define a operação de multiplicação para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_OnesComplement">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator ~ (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_OnesComplement(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_OnesComplement(System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor de origem.</param>
+        <summary>Retorna um novo vetor cujos elementos são obtidos colocando o complemento de um dos elementos de um vetor especificado.</summary>
+        <returns>O complemento vetor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator - (System.Numerics.Vector&lt;T&gt; left, System.Numerics.Vector&lt;T&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_Subtraction(valuetype System.Numerics.Vector`1&lt;!T&gt; left, valuetype System.Numerics.Vector`1&lt;!T&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_Subtraction(System.Numerics.Vector{`0},System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector&lt;T&gt;" />
+        <Parameter Name="right" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro vetor.</param>
+        <param name="right">O segundo vetor.</param>
+        <summary>Subtrai o segundo vetor da primeira.</summary>
+        <returns>O vetor que é o resultado da subtração <paramref name="right" /> de <paramref name="left" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_Subtraction%2A> método define a operação de subtração para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; operator - (System.Numerics.Vector&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector`1&lt;!T&gt; op_UnaryNegation(valuetype System.Numerics.Vector`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.op_UnaryNegation(System.Numerics.Vector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O vetor para negar.</param>
+        <summary>Nega um vetor de determinado.</summary>
+        <returns>O vetor negado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Numerics.Vector%601.op_UnaryNegation%2A> método define a operação de negação unário para <xref:System.Numerics.Vector%601> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres desse vetor usando a formatação padrão.</summary>
+        <returns>A representação de cadeia de caracteres desse vetor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma cadeia de caracteres na qual cada elemento do vector é formatado usando a cadeia de caracteres de formato (geral) "G" e as convenções de formatação da cultura do thread atual. A cultura atual <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> propriedade seguida por um espaço é usada para separar cada elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.ToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um ou que define o formato de elementos individuais.</param>
+        <summary>Retorna a representação de cadeia de caracteres desse vetor usando a cadeia de caracteres de formato especificado para formatar os elementos individuais.</summary>
+        <returns>A representação de cadeia de caracteres da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma cadeia de caracteres na qual cada elemento do vector é formatado usando `format` e convenções de formatação da cultura atual. A cultura atual <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> propriedade seguida por um espaço é usada para separar cada elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector`1.ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um ou que define o formato de elementos individuais.</param>
+        <param name="formatProvider">Um provedor de formato que fornece informações de formatação específica da cultura.</param>
+        <summary>Retorna a representação de cadeia de caracteres desse vetor usando a cadeia de caracteres de formato especificado para formatar elementos individuais e o provedor de formato especificado para definir a formatação de cultura específica.</summary>
+        <returns>A representação de cadeia de caracteres da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma cadeia de caracteres na qual cada elemento do vector é formatado usando `format` e `formatProvider`e o provedor de formato <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> propriedade seguida por um espaço é usada para separar cada elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector&lt;T&gt; Zero { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector`1&lt;!T&gt; Zero" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector`1.Zero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um vetor que contém todos os zeros.</summary>
+        <value>Um vetor que contém todos os zeros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

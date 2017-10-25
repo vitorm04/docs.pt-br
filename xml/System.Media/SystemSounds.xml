@@ -1,0 +1,173 @@
+<Type Name="SystemSounds" FullName="System.Media.SystemSounds">
+  <TypeSignature Language="C#" Value="public sealed class SystemSounds" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemSounds extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Media.SystemSounds" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Recupera os sons associados a um conjunto de tipos de eventos de som do sistema operacional Windows. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Media.SystemSounds> classe fornece métodos para recuperar os sons associados com um conjunto de tipos de eventos de som de sistema operacional para o usuário atual. Sons associados a cada tipo de evento de som de sistema operacional podem ser configurados no painel de controle do Windows.  
+  
+ <xref:System.Media.SystemSounds>fornece métodos estáticos para acessar os sons associados a <xref:System.Media.SystemSounds.Asterisk%2A>, <xref:System.Media.SystemSounds.Beep%2A>, <xref:System.Media.SystemSounds.Exclamation%2A>, <xref:System.Media.SystemSounds.Hand%2A> e <xref:System.Media.SystemSounds.Question%2A> eventos de som. Cada propriedade retorna um <xref:System.Media.SystemSound> que pode ser usado para a reprodução do som.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Asterisk">
+      <MemberSignature Language="C#" Value="public static System.Media.SystemSound Asterisk { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Media.SystemSound Asterisk" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SystemSounds.Asterisk" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Media.SystemSound</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o som associado ao evento de programa <see langword="Asterisk" /> no esquema de som atual do Windows.</summary>
+        <value>Um <see cref="T:System.Media.SystemSound" /> associado ao evento de programa <see langword="Asterisk" /> no esquema de som atual do Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SystemSounds.Asterisk%2A> propriedade.  
+  
+ [!code-cpp[SystemSoundsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemSoundsExample/CPP/form1.cpp#1)]
+ [!code-csharp[SystemSoundsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemSoundsExample/CS/form1.cs#1)]
+ [!code-vb[SystemSoundsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemSoundsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Beep">
+      <MemberSignature Language="C#" Value="public static System.Media.SystemSound Beep { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Media.SystemSound Beep" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SystemSounds.Beep" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Media.SystemSound</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o som associado ao evento de programa <see langword="Beep" /> no esquema de som atual do Windows.</summary>
+        <value>Um <see cref="T:System.Media.SystemSound" /> associado ao evento de programa <see langword="Beep" /> no esquema de som atual do Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SystemSounds.Beep%2A> propriedade.  
+  
+ [!code-cpp[SystemSoundsExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemSoundsExample/CPP/form1.cpp#2)]
+ [!code-csharp[SystemSoundsExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemSoundsExample/CS/form1.cs#2)]
+ [!code-vb[SystemSoundsExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemSoundsExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclamation">
+      <MemberSignature Language="C#" Value="public static System.Media.SystemSound Exclamation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Media.SystemSound Exclamation" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SystemSounds.Exclamation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Media.SystemSound</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o som associado ao evento de programa <see langword="Exclamation" /> no esquema de som atual do Windows.</summary>
+        <value>Um <see cref="T:System.Media.SystemSound" /> associado ao evento de programa <see langword="Exclamation" /> no esquema de som atual do Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SystemSounds.Exclamation%2A> propriedade.  
+  
+ [!code-cpp[SystemSoundsExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemSoundsExample/CPP/form1.cpp#3)]
+ [!code-csharp[SystemSoundsExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemSoundsExample/CS/form1.cs#3)]
+ [!code-vb[SystemSoundsExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemSoundsExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hand">
+      <MemberSignature Language="C#" Value="public static System.Media.SystemSound Hand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Media.SystemSound Hand" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SystemSounds.Hand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Media.SystemSound</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o som associado ao evento de programa <see langword="Hand" /> no esquema de som atual do Windows.</summary>
+        <value>Um <see cref="T:System.Media.SystemSound" /> associado ao evento de programa <see langword="Hand" /> no esquema de som atual do Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SystemSounds.Hand%2A> propriedade.  
+  
+ [!code-cpp[SystemSoundsExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemSoundsExample/CPP/form1.cpp#4)]
+ [!code-csharp[SystemSoundsExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemSoundsExample/CS/form1.cs#4)]
+ [!code-vb[SystemSoundsExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemSoundsExample/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Question">
+      <MemberSignature Language="C#" Value="public static System.Media.SystemSound Question { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Media.SystemSound Question" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SystemSounds.Question" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Media.SystemSound</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o som associado ao evento de programa <see langword="Question" /> no esquema de som atual do Windows.</summary>
+        <value>Um <see cref="T:System.Media.SystemSound" /> associado ao evento de programa <see langword="Question" /> no esquema de som atual do Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SystemSounds.Question%2A> propriedade.  
+  
+ [!code-cpp[SystemSoundsExample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemSoundsExample/CPP/form1.cpp#5)]
+ [!code-csharp[SystemSoundsExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemSoundsExample/CS/form1.cs#5)]
+ [!code-vb[SystemSoundsExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemSoundsExample/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

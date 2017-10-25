@@ -1,0 +1,135 @@
+<Type Name="RichTextBoxLanguageOptions" FullName="System.Windows.Forms.RichTextBoxLanguageOptions">
+  <TypeSignature Language="C#" Value="public enum RichTextBoxLanguageOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RichTextBoxLanguageOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RichTextBoxLanguageOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece <see cref="T:System.Windows.Forms.RichTextBox" /> configurações para o Editor de método de entrada (IME) e suporte a idiomas asiáticos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoFont">
+      <MemberSignature Language="C#" Value="AutoFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions AutoFont = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.AutoFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o controle de alterações automaticamente fontes quando o usuário altera explicitamente a um layout do teclado diferente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFontSizeAdjust">
+      <MemberSignature Language="C#" Value="AutoFontSizeAdjust" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions AutoFontSizeAdjust = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.AutoFontSizeAdjust" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os tamanhos de fonte associada de fonte são dimensionados do tamanho do ponto de inserção acordo com um script. Por exemplo, fontes asiáticas são um pouco maiores do que fontes ocidentais. Esse é o padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoKeyboard">
+      <MemberSignature Language="C#" Value="AutoKeyboard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions AutoKeyboard = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.AutoKeyboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o <see cref="T:System.Windows.Forms.RichTextBox" /> controle altera automaticamente o layout do teclado quando o usuário altera explicitamente a uma fonte diferente, ou quando o usuário altera explicitamente o ponto de inserção para um novo local no texto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DualFont">
+      <MemberSignature Language="C#" Value="DualFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions DualFont = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.DualFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o controle para o modo de fonte dual. Usado para idiomas asiáticos texto. O <see cref="T:System.Windows.Forms.RichTextBox" /> controle usa uma fonte em inglês para uma fonte para texto asiático da Ásia e de texto ASCII.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeAlwaysSendNotify">
+      <MemberSignature Language="C#" Value="ImeAlwaysSendNotify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions ImeAlwaysSendNotify = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.ImeAlwaysSendNotify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica como o cliente é notificado durante a composição do IME. Uma configuração de 0 especifica que nenhum evento EN_CHANGE ou EN_SELCHANGE ocorre durante um estado indeterminado. Notificação é enviada quando a cadeia de caracteres final. Esse é o padrão. Uma configuração de 1 Especifica que os eventos EN_CHANGE e EN_SELCHANGE ocorrerem durante um estado indeterminado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeCancelComplete">
+      <MemberSignature Language="C#" Value="ImeCancelComplete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions ImeCancelComplete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.ImeCancelComplete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica como o controle usa a cadeia de caracteres de composição de um Editor de método de entrada (IME) se o usuário cancela a ele. Se esse sinalizador estiver definido, o controle descartará a cadeia de caracteres de composição. Se este sinalizador não for definido, o controle usa a cadeia de caracteres de composição como a cadeia de caracteres de resultado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UIFonts">
+      <MemberSignature Language="C#" Value="UIFonts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions UIFonts = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.UIFonts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as fontes de padrão de interface do usuário seja usado. Essa opção está desativada por padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

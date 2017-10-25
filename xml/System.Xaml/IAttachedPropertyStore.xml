@@ -1,0 +1,149 @@
+<Type Name="IAttachedPropertyStore" FullName="System.Xaml.IAttachedPropertyStore">
+  <TypeSignature Language="C#" Value="public interface IAttachedPropertyStore" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAttachedPropertyStore" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IAttachedPropertyStore" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um repositório anexável para um objeto em que os membros anexáveis são definidos. Esse repositório anexável pode ser referenciado com <see cref="T:System.Xaml.AttachablePropertyServices" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um membro anexável geralmente é implementado e usado como uma propriedade anexável. O termo "anexável" fornece a possibilidade de que uma tecnologia também define um sistema para eventos anexáveis. Como um item em um repositório de propriedade, um evento anexável armazena uma referência para o manipulador que é atribuído por meio do uso de anexável. Um evento anexável em XAML pode usar o mesmo repositório como as propriedades anexadas, mesmo se o evento anexável não é realmente uma propriedade para o sistema de tipo subjacente ou como ele é considerado em uso do mundo real.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyPropertiesTo">
+      <MemberSignature Language="C#" Value="public void CopyPropertiesTo (System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,object&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyPropertiesTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.Xaml.AttachableMemberIdentifier, object&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.CopyPropertiesTo(System.Collections.Generic.KeyValuePair{System.Xaml.AttachableMemberIdentifier,System.Object}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,System.Object&gt;[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de destino. A matriz é uma matriz genérica, devem ser passada undimensioned e deve ter os componentes do <see cref="T:System.Xaml.AttachableMemberIdentifier" /> e <see langword="object" />.</param>
+        <param name="index">O índice de origem onde a cópia deve ser iniciada.</param>
+        <summary>Copia todos os pares de valor/membro anexável deste membro anexável repositório em uma matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyCount">
+      <MemberSignature Language="C#" Value="public int PropertyCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PropertyCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IAttachedPropertyStore.PropertyCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a contagem do membro anexável entradas neste armazenamento anexável.</summary>
+        <value>A contagem de inteiro de entradas no repositório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public bool RemoveProperty (System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RemoveProperty(class System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.RemoveProperty(System.Xaml.AttachableMemberIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attachableMemberIdentifier" Type="System.Xaml.AttachableMemberIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="attachableMemberIdentifier">O identificador do sistema de tipo XAML para a entrada anexável remover.</param>
+        <summary>Remove a entrada para o membro anexável especificado desse armazenamento anexável.</summary>
+        <returns>
+          <see langword="true" />Se uma entrada anexável para <paramref name="attachableMemberIdentifier" /> foi encontrado no repositório e removido; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(class System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.SetProperty(System.Xaml.AttachableMemberIdentifier,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attachableMemberIdentifier" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="attachableMemberIdentifier">O identificador do sistema de tipo XAML para a entrada anexável definir.</param>
+        <param name="value">O valor a ser definido.</param>
+        <summary>Define um valor para o membro anexável especificado no repositório especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma implementação não deve lançar uma exceção se o membro anexável específico já existe. Se já existe um membro, a implementação deve substituir qualquer valor existente com `value`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty">
+      <MemberSignature Language="C#" Value="public bool TryGetProperty (System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetProperty(class System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.TryGetProperty(System.Xaml.AttachableMemberIdentifier,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attachableMemberIdentifier" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="attachableMemberIdentifier">O identificador do sistema de tipo XAML para a entrada anexável obter.</param>
+        <param name="value">Limite de parâmetro. Quando este método retorna, contém o objeto de destino para o valor se <c>attachableMemberIdentifier</c> existe no repositório e tem um valor.</param>
+        <summary>Tenta obter um valor para o membro anexável especificado no repositório especificado.</summary>
+        <returns>
+          <see langword="true" />Se uma entrada anexável para <paramref name="attachableMemberIdentifier" /> foi encontrado no repositório e um valor foi lançado <paramref name="value" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma implementação não deve lançar uma exceção se o membro anexável específico não está no repositório.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

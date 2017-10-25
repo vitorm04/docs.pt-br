@@ -1,0 +1,123 @@
+<Type Name="FormViewPageEventArgs" FullName="System.Web.UI.WebControls.FormViewPageEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewPageEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewPageEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewPageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.FormView.PageIndexChanging" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FormView> controlar gera o <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> evento quando um botão de paginação (um botão com sua `CommandName` propriedade definida como "Página") dentro do controle é clicado, mas antes de <xref:System.Web.UI.WebControls.FormView> controle manipula a operação de paginação. Você também pode definir o `CommandArgument` propriedade de um botão de pager para especificar o tipo de operação de paginação a ser executada. A tabela a seguir lista as operações com suporte.  
+  
+|Valor CommandArgument|Descrição|  
+|---------------------------|-----------------|  
+|"Avançar"|Navega para a próxima página.|  
+|"Anterior"|Navega para a página anterior.|  
+|"Primeira"|Navega para a primeira página.|  
+|"Último"|Navega para a última página.|  
+|Um valor inteiro|Navega para a página especificada.|  
+  
+ Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como cancelar a operação de paginação, sempre que esse evento ocorre.  
+  
+> [!NOTE]
+>  Botões de pager geralmente estão localizados na linha de pager de um <xref:System.Web.UI.WebControls.FormView> controle.  
+  
+ Um <xref:System.Web.UI.WebControls.FormViewPageEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você determine o índice da página selecionado pelo usuário e para indicar se a operação de paginação deve ser cancelada. Para determinar o índice da página selecionado pelo usuário, use o <xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A> propriedade. Para cancelar a operação de paginação, defina a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> propriedade o <xref:System.Web.UI.WebControls.FormViewPageEventArgs> do objeto para `true`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FormViewPageEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.FormViewPageEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewPageEventArgs> objeto passado para o método de manipulação de eventos para o <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> evento para cancelar uma operação de paginação quando o usuário tentar navegar para outra página enquanto o <xref:System.Web.UI.WebControls.FormView> controle está no modo de edição .  
+  
+> [!IMPORTANT]
+>  O controle neste exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewPageEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewPageEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewPageEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewPageEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewPageEventArgs (int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewPageEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newPageIndex">O índice da nova página para exibir.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FormViewPageEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.FormViewPageEventArgs> classe.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FormViewPageEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A>|O valor de `newPageIndex` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewPageIndex">
+      <MemberSignature Language="C#" Value="public int NewPageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da nova página a ser exibido no controle <see cref="T:System.Web.UI.WebControls.FormView" />.</summary>
+        <value>O índice da nova página a ser exibido no controle <see cref="T:System.Web.UI.WebControls.FormView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> evento ocorre antes do <xref:System.Web.UI.WebControls.FormView> controle executa a operação de paginação, o <xref:System.Web.UI.WebControls.FormView.PageIndex%2A> contém o índice da página anteriormente exibida de propriedade do controle e não pode ser usada para determinar o índice da página selecionada pelo usuário. Use o <xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A> para determinar o índice de página. Você também pode usar essa propriedade para substituir o índice de página selecionado pelo usuário definindo-o para outro valor de forma programática.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A> para determinar o índice da página selecionada pelo usuário.  
+  
+ [!code-aspx-csharp[FormViewPageEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewPageEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewPageEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewPageEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

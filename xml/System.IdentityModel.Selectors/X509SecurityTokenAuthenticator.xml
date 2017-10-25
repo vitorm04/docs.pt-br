@@ -1,0 +1,239 @@
+<Type Name="X509SecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.X509SecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public class X509SecurityTokenAuthenticator : System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SecurityTokenAuthenticator extends System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Autentica um <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe autentiquem <xref:System.IdentityModel.Tokens.X509SecurityToken> tokens de segurança.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método é chamado para autenticar o token, o certificado x. 509 não está mapeado para uma identidade do Windows e o certificado é validado usando uma cadeia de certificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator (System.IdentityModel.Selectors.X509CertificateValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.X509CertificateValidator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que verifica se o certificado é válido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" /> classe usando o validador de certificado especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe fornece modelos de validação de um conjunto de certificados predefinidos, como o <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> propriedade. Esses modelos de validação podem ser passados para o `validator` parâmetro. Quando um aplicativo requer um método de validação personalizada, derive uma classe de <xref:System.IdentityModel.Selectors.X509CertificateValidator> e substituir o <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método. O <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método é chamado pelo <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método.  
+  
+ Por padrão, o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> não mapear o certificado x. 509 para uma identidade do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator (System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.X509CertificateValidator,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+        <Parameter Name="mapToWindows" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que verifica se o certificado é válido.</param>
+        <param name="mapToWindows">
+          <see langword="true" />para mapear a identidade do certificado para uma identidade do Windows; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" /> classe usando o método de validação de certificado especificado e indica se a identidade do certificado é mapeada para uma identidade do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe fornece modelos de validação de um conjunto de certificados predefinidos, como o <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> propriedade. Esses modelos de validação podem ser passados para o `validator` parâmetro. Quando um aplicativo requer um método de validação personalizada, derive uma classe de <xref:System.IdentityModel.Selectors.X509CertificateValidator> e substituir o <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método. O <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método é chamado pelo <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método.  
+  
+ Quando o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método é chamado para autenticar o token e `mapToWindows` é `true`, o certificado x. 509 é mapeado para uma conta do Windows e declarações são adicionadas a <xref:System.IdentityModel.Policy.EvaluationContext> com os grupos do Windows que o usuário pertence. Como o certificado x. 509 é mapeado para uma conta do Windows depende do tipo de token de segurança:  
+  
+-   Quando o token de segurança é do tipo <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken>, o certificado x. 509 é mapeado usando o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.WindowsIdentity%2A> propriedade.  
+  
+-   Quando o token de segurança é do tipo `X509SecurityToken`, o certificado x. 509 é mapeado para uma conta do Windows usando o nome de usuário principal (UPN).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator (System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows, bool includeWindowsGroups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows, bool includeWindowsGroups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.X509CertificateValidator,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+        <Parameter Name="mapToWindows" Type="System.Boolean" />
+        <Parameter Name="includeWindowsGroups" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que verifica se o certificado é válido.</param>
+        <param name="mapToWindows">
+          <see langword="true" />para mapear a identidade do certificado para uma identidade do Windows; Caso contrário, <see langword="false" />.</param>
+        <param name="includeWindowsGroups">
+          <see langword="true" />para incluir os grupos do Windows usuário pertence no <see cref="P:System.IdentityModel.Policy.AuthorizationContext.ClaimSets" /> propriedade que é construído em todo o processo de autenticação; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" /> classe usando o método de validação de certificado especificado e indica se a identidade do certificado é mapeada para uma identidade do Windows e os grupos do Windows que o usuário pertence.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Passar `false` para o `includeWindowsGroups` parâmetro quando informações de grupo do Windows não é necessário para melhorar o desempenho.  
+  
+ O <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe tem várias propriedades estáticas, como o <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> propriedade que pode ser passada para o `validator` parâmetro. Essas propriedades fornecem métodos comuns de validação de certificados x. 509. Quando um método de validação personalizada é necessário, derive uma classe de <xref:System.IdentityModel.Selectors.X509CertificateValidator> e substituir o <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método. O <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método é chamado pelo <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método.  
+  
+ Quando `true` é passado para o `mapToWindows` parâmetro, o certificado x. 509 é mapeado para uma conta do Windows e declarações relevantes são adicionadas ao <xref:System.IdentityModel.Policy.EvaluationContext>, como as janelas de grupos que o usuário pertence. Quando o token de segurança é do tipo <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken>, o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.WindowsIdentity%2A> é de propriedade usando a identidade que é especificada no token; caso contrário, o certificado x. 509 está mapeado para uma identidade do Windows usando um logon do Kerberos S4U com base na extensão de SubjectAltNames de nome principal de usuário do certificado x. 509.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> a ser validado.</param>
+        <summary>Obtém um valor que indica se o token de segurança especificado pode ser validado pelo autenticador de token de segurança.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="token" /> é um <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> token de segurança ou uma classe que deriva de <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.CanValidateTokenCore%2A> método não autentica o token de segurança; que é executada pelo <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapCertificateToWindowsAccount">
+      <MemberSignature Language="C#" Value="public bool MapCertificateToWindowsAccount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MapCertificateToWindowsAccount" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.MapCertificateToWindowsAccount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se deve mapear o certificado x. 509 para uma conta do Windows.</summary>
+        <value>
+          <see langword="true" />para mapear o certificado x. 509 para uma conta do Windows; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.MapCertificateToWindowsAccount%2A> propriedade só pode ser definida em um construtor.  
+  
+ Se a segurança em nível de transporte SSL ou HTTPS está sendo usada e mapeamento já é fornecido pelo canal de segurança subjacente ou pelo Internet Information Services (IIS), esse mapeamento é aplicado com nenhuma validação da cadeia. Caso contrário, antes de fazer o mapeamento, o certificado é validado usando uma cadeia de certificados e o certificado deve se encadear a uma identidade NT_AUTHORITY. A estrutura de cadeia usada corresponde do CERT_CHAIN_POLICY_NT_AUTH conforme definido no `CertVerifyCertificateChainPolicy` função (consulte o [CertVerifyCertificateChainPolicy](http://go.microsoft.com/fwlink/?LinkId=83570) função do SDK de criptografia). Esse comportamento ocorre apenas quando o mapeamento de um certificado para uma conta do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> a ser validado.</param>
+        <summary>Autentica o token de segurança especificado e retorna o conjunto de diretivas de autorização para o token de segurança.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" /> que contém o conjunto de políticas de autorização em vigor para este aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> método é substituído, siga estas diretrizes:  
+  
+-   Quando o token de segurança é passado para o `token` parâmetro não pode ser validada, gerar o <xref:System.IdentityModel.Tokens.SecurityTokenValidationException> exceção.  
+  
+-   Quando não houver nenhuma política de autorização em vigor para este aplicativo, retornar vazio <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> do tipo <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+  
+ Quando `null` é retornado por esse método, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] gera o <xref:System.IdentityModel.Tokens.SecurityTokenValidationException> exceção.  
+  
+ O <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A> chamadas de método de <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29> método do método de validação especificado no construtor para autenticar o `token` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

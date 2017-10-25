@@ -1,0 +1,1736 @@
+<Type Name="MobilePage" FullName="System.Web.UI.MobileControls.MobilePage">
+  <TypeSignature Language="C#" Value="public class MobilePage : System.Web.UI.Page" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MobilePage extends System.Web.UI.Page" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.MobilePage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Page</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VisualStudio.Web.WebForms.MobileWebFormDesigner, Microsoft.VisualStudio.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Funciona como a classe base para todas as páginas de Web Forms do ASP.NET para dispositivos móveis. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.MobilePage> classe herda o ASP.NET <xref:System.Web.UI.Page> classe. Para especificar uma página móvel e usar controles móveis do ASP.NET, uma página de Web Forms do ASP.NET móvel deve conter a seguinte diretiva de página.  
+  
+```  
+<%@ Page   
+  Inherits="System.Web.UI.MobileControls.MobilePage" Language="c#" %>  
+```  
+  
+ O atributo `Inherits` é necessário. O `Language` atributo está definido para a linguagem que é usada na página, se necessário.  
+  
+> [!NOTE]
+>  Páginas de celular do ASP.NET permite que vários formulários móveis em cada página, enquanto as páginas da Web ASP.NET permitirem somente um formulário por página.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MobilePage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.UI.MobileControls.MobilePage" /> classe. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsoluteFilePath">
+      <MemberSignature Language="C#" Value="public string AbsoluteFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AbsoluteFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.AbsoluteFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma URL com raiz para a página atual. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Uma URL com raiz para a página atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma URL com raiz é absoluta em relação ao servidor, mas não é uma URL completa porque ele não inclui o nome do prefixo ou servidor de protocolo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveForm">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Form ActiveForm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Form ActiveForm" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.ActiveForm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Form</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formulário ativo no momento da página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Formulário de ativo no momento da página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma página é renderizada inicialmente, o primeiro formulário na página automaticamente fica ativo. Em postagens subsequentes, outro formulário pode se tornar ativo, definindo essa propriedade de forma programática ou como resultado da navegação do usuário por meio de um <xref:System.Web.UI.MobileControls.Link> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.MobilePage.ActiveForm%2A> propriedade de um <xref:System.Web.UI.MobileControls.Form> controle. Se o dispositivo móvel atual permite chaves de acesso para controles, o botão exibirá a chave de acesso que envia o formulário.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileMobilePageSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileMobilePageSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileMobilePageSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileMobilePageSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">A página não contém todos os formulários.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.IPageAdapter Adapter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.IPageAdapter Adapter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.Adapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.IPageAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o adaptador de dispositivo específico para o controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O adaptador de dispositivo específico para o controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddedControl">
+      <MemberSignature Language="C#" Value="protected override void AddedControl (System.Web.UI.Control control, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddedControl(class System.Web.UI.Control control, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.AddedControl(System.Web.UI.Control,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Web.UI.MobileControls.MobileControl" /> que foi adicionado.</param>
+        <param name="index">O índice do controle na coleção <see langword="Controls" />.</param>
+        <summary>Chamado depois que um controle é adicionado para o <see cref="P:System.Web.UI.Control.Controls" /> coleção. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Control.AddedControl%2A?displayProperty=nameWithType> método para determinar se o controle é um <xref:System.Web.UI.MobileControls.Form> ou <xref:System.Web.UI.UserControl> antes de chamar o método base. Se o controle for um `Form` ou um `UserControl` objeto, o <xref:System.Web.UI.MobileControls.MobilePage.Forms%2A> está definida como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um <see cref="T:System.Object" /> que representa o elemento analisado.</param>
+        <summary>Notifica a página que um elemento foi analisado e adiciona o elemento para o <see cref="P:System.Web.UI.Control.Controls" /> propriedade. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que você substituí-la, este método adiciona automaticamente <xref:System.Web.UI.LiteralControl> objetos para o controle de servidor <xref:System.Web.UI.ControlCollection> objeto. Essa coleção pode ser acessada por meio de <xref:System.Web.UI.Control.Controls%2A> propriedade.  
+  
+ Este membro substitui o <xref:System.Web.UI.Control.AddParsedSubObject%2A?displayProperty=nameWithType> método para determinar se o objeto é um <xref:System.Web.UI.MobileControls.StyleSheet> antes de chamar o método base. Se o objeto é do tipo `StyleSheet`, o <xref:System.Web.UI.MobileControls.MobilePage.StyleSheet%2A> está definida como o `o` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O <see cref="P:System.Web.UI.MobileControls.MobilePage.StyleSheet" /> propriedade já foi definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCustomAttributes">
+      <MemberSignature Language="C#" Value="public bool AllowCustomAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.AllowCustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os controles na página podem ter atributos personalizados definidos. O valor padrão é o valor de <see langword="allowCustomAttributes" /> atributo do &lt; <see langword="mobilecontrols" /> &gt; seção do arquivo Web. config. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se os controles na página podem ter atributos personalizados definidos; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além de <xref:System.Web.UI.IAttributeAccessor> interface, a estrutura de página ASP.NET fornece um `CustomAttributes` dicionário que permite que você especifique atributos adicionais, habilitar ou desabilitar personalizado atribuição ou ajustar o comportamento de um controle ou o processamento. Para habilitar ou desabilitar a atribuição personalizado, você pode definir o <xref:System.Web.UI.MobileControls.MobilePage.AllowCustomAttributes%2A> propriedade `true`, ou você pode definir o `allowCustomAttributes` atributo do <`mobileControls`> seção de Web. config para `true`.  
+  
+> [!NOTE]
+>  Quando os atributos personalizados estão habilitados, os erros tipográficos em nomes de propriedade podem ser interpretados como atributos personalizados. Por exemplo, se um desenvolvedor incorretamente Especifica o <xref:System.Web.UI.MobileControls.TextControl.Text%2A> propriedade de um controle como "Txet", o analisador seria salvá-lo como um atributo personalizado chamado "Txet" em vez de gerar uma exceção. Por esse motivo, os atributos personalizados estão desabilitados por padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.MobilePage.AllowCustomAttributes%2A> propriedade para habilitar personalizado `AccessKey` atributo no <xref:System.Web.UI.MobileControls.Command>.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se você copiá-lo diretamente em um arquivo code-behind. Você deve copiar esse exemplo de código em um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileMobilePageSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileMobilePageSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileMobilePageSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileMobilePageSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientViewState">
+      <MemberSignature Language="C#" Value="public string ClientViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.ClientViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de estado de exibição, que combina o estado de exibição particular e um identificador para o estado de exibição do aplicativo, para gravar o cliente no formato codificado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>As informações de estado de exibição, que combina o estado de exibição particular e um identificador para o estado de exibição do aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHtmlTextWriter">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriter CreateHtmlTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.HtmlTextWriter CreateHtmlTextWriter(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.CreateHtmlTextWriter(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> usado para criar o <see cref="T:System.Web.UI.HtmlTextWriter" />.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto para renderizar o conteúdo da página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um <see cref="T:System.Web.UI.HtmlTextWriter" /> ou derivado de um gravador de texto <see cref="T:System.Web.UI.HtmlTextWriter" />, como  
+  
+ <see cref="T:System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />, <see cref="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter" />, <see cref="T:System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter" />, ou <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de gravador criado é determinado pelo adaptador associado ao dispositivo móvel atual. Para obter mais informações sobre como mapear os adaptadores para dispositivos, consulte [mapeamentos do adaptador](http://msdn.microsoft.com/en-us/8437a6a5-855c-4637-8654-75a87b293847).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignMode">
+      <MemberSignature Language="C#" Value="public bool DesignMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.DesignMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a página está sendo instanciada no modo de design ou em tempo de execução. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se a página está sendo instanciada no modo de design; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeterminePostBackMode">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Specialized.NameValueCollection DeterminePostBackMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Specialized.NameValueCollection DeterminePostBackMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.DeterminePostBackMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina o tipo de solicitação feita o <see cref="T:System.Web.UI.MobileControls.MobilePage" /> classe e retorna um <see cref="T:System.Collections.Specialized.NameValueCollection" /> de dados postados de volta para a página usando um POST ou um comando GET. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> objeto que contém os dados do formulário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Page.DeterminePostBackMode%2A?displayProperty=nameWithType> método para determinar se a página foi solicitada devido a uma transferência ou um redirecionamento. Nesse caso, `null` será retornado. Caso contrário, o `DeterminePostBackMode` é chamado de método do adaptador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="public virtual System.Web.Mobile.MobileCapabilities Device { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Mobile.MobileCapabilities Device" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.Device" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Mobile.MobileCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Mobile.MobileCapabilities" /> objeto para o solicitação atual do dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O <see cref="T:System.Web.Mobile.MobileCapabilities" /> para o solicitação atual do dispositivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é fornecida para conveniência e é equivalente à obtenção de informações sobre o navegador do <xref:System.Web.HttpRequest> objeto, como `Page.Request.Browser`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableEventValidation">
+      <MemberSignature Language="C#" Value="public override bool EnableEventValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableEventValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.EnableEventValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados de evento de postback devem ser validados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles do ASP.NET criar scripts do lado do cliente para gerar eventos de postback no servidor. É possível que um usuário mal-intencionado usar o script de postback para enviar eventos de postagem arbitrário para controles de servidor. Por esse motivo, os controles do ASP.NET versão 2.0 validam os dados de evento para garantir que o evento foi gerado pelo código de cliente processado pelo controle.  
+  
+ Não há suporte para validação de evento em páginas de celular.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir esta propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os temas se aplicam a esta página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há suporte para temas em páginas de celular.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir esta propriedade. O valor dessa propriedade não pode ser alterado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Forms">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Forms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Forms" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.Forms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de formulários em especificado <see cref="T:System.Web.UI.MobileControls.MobilePage" /> objeto. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A coleção de formulários que está contida na página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlAdapter">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.MobileControls.IControlAdapter GetControlAdapter (System.Web.UI.MobileControls.MobileControl control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.MobileControls.IControlAdapter GetControlAdapter(class System.Web.UI.MobileControls.MobileControl control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.GetControlAdapter(System.Web.UI.MobileControls.MobileControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.IControlAdapter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.MobileControls.MobileControl" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle à qual o adaptador específico do dispositivo está conectado.</param>
+        <summary>Cria e retorna um novo adaptador de dispositivo específico para o controle especificado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um novo adaptador de dispositivo específico para o controle especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado internamente pelo ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForm">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Form GetForm (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.MobileControls.Form GetForm(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.GetForm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Form</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O identificador do formulário para retornar.</param>
+        <summary>Retorna o objeto de formulário especificado pelo parâmetro de ID. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>O objeto de formulário especificado. Se não existe nenhum esse formulário, <see cref="M:System.Web.UI.MobileControls.MobilePage.GetForm(System.String)" /> lança uma exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada formulário tem um número de identificação de cadeia de caracteres associado a ele. Ao fornecer a ID de um formulário na página, este método retorna correspondente <xref:System.Web.UI.MobileControls.Form> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O formato solicitado não foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrivateViewState">
+      <MemberSignature Language="C#" Value="public object GetPrivateViewState (System.Web.UI.MobileControls.MobileControl ctl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetPrivateViewState(class System.Web.UI.MobileControls.MobileControl ctl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.GetPrivateViewState(System.Web.UI.MobileControls.MobileControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctl" Type="System.Web.UI.MobileControls.MobileControl" />
+      </Parameters>
+      <Docs>
+        <param name="ctl">O controle para o qual recuperar o estado.</param>
+        <summary>Recupera o estado de exibição para o controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>O <see cref="T:System.Web.UI.StateBag" /> objeto associado ao controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estado de exibição do controle é a agregação de todos os seus valores de propriedade não padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHiddenVariables">
+      <MemberSignature Language="C#" Value="public bool HasHiddenVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasHiddenVariables() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.HasHiddenVariables" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera se a página tem qualquer ocultas variáveis definidas. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se a página tem todas as variáveis ocultas definidas; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HiddenPostEventArgumentId">
+      <MemberSignature Language="C#" Value="public static readonly string HiddenPostEventArgumentId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string HiddenPostEventArgumentId" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobilePage.HiddenPostEventArgumentId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o identificador a ser usado para o campo oculto no argumento de postback. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adaptadores de usam esse campo para renderizar postbacks.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HiddenPostEventSourceId">
+      <MemberSignature Language="C#" Value="public static readonly string HiddenPostEventSourceId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string HiddenPostEventSourceId" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobilePage.HiddenPostEventSourceId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o identificador de origem a ser usado para renderizar o campo oculto para a fonte de postback. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adaptadores de usam esse campo para renderizar postbacks.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HiddenVariablePrefix">
+      <MemberSignature Language="C#" Value="public static readonly string HiddenVariablePrefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string HiddenVariablePrefix" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobilePage.HiddenVariablePrefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o prefixo a ser usado para renderizar variáveis ocultos. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HiddenVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary HiddenVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary HiddenVariables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.HiddenVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de variáveis ocultos em especificado <see cref="T:System.Web.UI.MobileControls.MobilePage" /> objeto. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um dicionário das variáveis ocultos que está contido na página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdSeparator">
+      <MemberSignature Language="C#" Value="public override char IdSeparator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char IdSeparator" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.IdSeparator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caractere que é usado para separar os identificadores de controle ao criar uma ID exclusiva para um controle em uma página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O caractere que é usado para separar os identificadores de controle. O padrão é definido pela <see cref="T:System.Web.UI.Adapters.PageAdapter" /> instância que processa a página. O <see cref="P:System.Web.UI.Page.IdSeparator" /> propriedade é um campo do lado do servidor e não deve ser modificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui <xref:System.Web.UI.Page.IdSeparator%2A?displayProperty=nameWithType> para retornar um dois-pontos (:) se o adaptador for um <xref:System.Web.UI.MobileControls.Adapters.WmlPageAdapter> ou <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter>. Caso contrário, ele retorna o caractere padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InitOutputCache">
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa o cache de saída para a solicitação de página atual. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.MobileControls.MobilePage.InitOutputCache%2A>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InitOutputCache">
+      <MemberSignature Language="C#" Value="protected override void InitOutputCache (int duration, string varyByHeader, string varyByCustom, System.Web.UI.OutputCacheLocation location, string varyByParam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitOutputCache(int32 duration, string varyByHeader, string varyByCustom, valuetype System.Web.UI.OutputCacheLocation location, string varyByParam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.InitOutputCache(System.Int32,System.String,System.String,System.Web.UI.OutputCacheLocation,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByHeader" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="location" Type="System.Web.UI.OutputCacheLocation" />
+        <Parameter Name="varyByParam" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A quantidade de tempo que os objetos armazenados no cache de saída são válidos.</param>
+        <param name="varyByHeader">Uma lista separada por ponto e vírgula de cabeçalhos de conteúdo do cache de saída variam por.</param>
+        <param name="varyByCustom">O <see langword="Vary" /> cabeçalho HTTP.</param>
+        <param name="location">Um dos valores de <see cref="T:System.Web.UI.OutputCacheLocation" />.</param>
+        <param name="varyByParam">Uma lista separada por vírgulas de parâmetros, recebida por um método GET ou POST, que o conteúdo do cache de saída variam por.</param>
+        <summary>Inicializa o cache de saída para a solicitação de página atual. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Page.InitOutputCache%2A?displayProperty=nameWithType> método para adicionar mais `VaryByHeader` palavras-chave para fornecer corrigir o cache de saída de página para dispositivos de marcação diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitOutputCache">
+      <MemberSignature Language="C#" Value="protected override void InitOutputCache (int duration, string varyByContentEncoding, string varyByHeader, string varyByCustom, System.Web.UI.OutputCacheLocation location, string varyByParam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitOutputCache(int32 duration, string varyByContentEncoding, string varyByHeader, string varyByCustom, valuetype System.Web.UI.OutputCacheLocation location, string varyByParam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.InitOutputCache(System.Int32,System.String,System.String,System.String,System.Web.UI.OutputCacheLocation,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByContentEncoding" Type="System.String" />
+        <Parameter Name="varyByHeader" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="location" Type="System.Web.UI.OutputCacheLocation" />
+        <Parameter Name="varyByParam" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A quantidade de tempo que os objetos armazenados no cache de saída são válidos.</param>
+        <param name="varyByContentEncoding">Uma lista separada por ponto e vírgula-de conjuntos de caracteres (codificações de conteúdo) que o conteúdo do cache de saída variam por.</param>
+        <param name="varyByHeader">Uma lista separada por ponto e vírgula de cabeçalhos de conteúdo do cache de saída variam por.</param>
+        <param name="varyByCustom">O <see langword="Vary" /> cabeçalho HTTP.</param>
+        <param name="location">Um dos valores de <see cref="T:System.Web.UI.OutputCacheLocation" />.</param>
+        <param name="varyByParam">Uma lista separada por vírgulas de parâmetros, recebida por um método GET ou POST, que o conteúdo do cache de saída variam por.</param>
+        <summary>Inicializa o cache de saída para a solicitação de página atual. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Page.InitOutputCache%2A?displayProperty=nameWithType> método para adicionar mais `VaryByHeader` palavras-chave para fornecer corrigir o cache de saída de página para dispositivos de marcação diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPageStateFromPersistenceMedium">
+      <MemberSignature Language="C#" Value="protected override object LoadPageStateFromPersistenceMedium ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object LoadPageStateFromPersistenceMedium() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.LoadPageStateFromPersistenceMedium" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega qualquer salva informações de estado de exibição para o <see cref="T:System.Web.UI.Page" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um objeto que contém o estado de exibição salvo. Internamente, isso é geralmente um <see cref="T:System.Web.UI.StateBag" /> ou <see cref="T:System.Collections.IDictionary" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Page.LoadPageStateFromPersistenceMedium%2A?displayProperty=nameWithType> método e otimiza os dados de estado para dispositivos móveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Object" /> que representa o estado da página a ser restaurado.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação de página anterior salva pelo método <see cref="M:System.Web.UI.MobileControls.MobilePage.SaveViewState" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado basicamente pela infraestrutura do .NET Framework e não se destina a ser usado diretamente no seu código. No entanto, os desenvolvedores de controle podem substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Este membro substitui o <xref:System.Web.UI.Control.LoadViewState%2A?displayProperty=nameWithType> método e salvar qualquer estado de adaptador existente com o estado de exibição em uma matriz de objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakePathAbsolute">
+      <MemberSignature Language="C#" Value="public string MakePathAbsolute (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string MakePathAbsolute(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.MakePathAbsolute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">A URL relativa a ser convertido.</param>
+        <summary>Converte a URL relativa especificada em uma URL absoluta. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>O caminho absoluto correspondente para o caminho virtual especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ URLs absolutas diferem dependendo se o aplicativo está configurado para gerenciamento de sessão sem cookies. Esse método fornece uma maneira única para traduzir URLs de aplicativos, independentemente da configuração de cookie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MasterPageFile">
+      <MemberSignature Language="C#" Value="public override sealed string MasterPageFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MasterPageFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.MasterPageFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo da página mestra. Não há suporte para páginas mestras em páginas de Web Forms do ASP.NET móveis. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui <xref:System.Web.UI.Page.MasterPageFile%2A?displayProperty=nameWithType> para impedir que páginas mestras que está sendo usado. Isso é porque não há suporte para páginas mestras móveis páginas de Web Forms do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir esta propriedade. Não há suporte para páginas mestras móveis páginas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeviceCustomize">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeviceCustomize (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeviceCustomize(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnDeviceCustomize(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto definido por um <see cref="T:System.EventArgs" /> objeto que contém dados do evento.</param>
+        <summary>Chamado depois que a página é inicializada. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode substituir esse método para definir propriedades específicas de dispositivo. Se você substituir esse método em uma classe herdada, você deve chamar a implementação base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnError">
+      <MemberSignature Language="C#" Value="protected override void OnError (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnError(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnError(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:System.Web.HttpApplication.Error" /> evento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.TemplateControl.OnError%2A?displayProperty=nameWithType> método para permitir que o adaptador tratar o erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:System.Web.UI.Control.Init" /> evento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.Page.OnInit%2A?displayProperty=nameWithType> método para personalizar os dados de evento para o adaptador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:System.Web.UI.Control.Load" /> evento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.Control.OnLoad%2A?displayProperty=nameWithType> método para personalizar os dados de evento para o adaptador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreInit">
+      <MemberSignature Language="C#" Value="protected override void OnPreInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnPreInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o evento <see cref="E:System.Web.UI.Page.PreInit" /> no início da inicialização da página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.Page.OnPreInit%2A?displayProperty=nameWithType> método para personalizar os dados de evento para o adaptador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:System.Web.UI.Control.PreRender" /> evento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.Page.OnPreRenderComplete%2A?displayProperty=nameWithType> método para personalizar os dados de evento para o adaptador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="protected override void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:System.Web.UI.Control.Unload" /> evento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.Control.OnUnload%2A?displayProperty=nameWithType> método para personalizar os dados de evento para o adaptador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewStateExpire">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewStateExpire (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewStateExpire(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.OnViewStateExpire(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto definido por um <see cref="T:System.EventArgs" /> objeto que contém dados do evento.</param>
+        <summary>Lida com uma exceção causada por um estado de exibição expiradas em um postback. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você pretende restaurar uma página de um estado de exibição e sessão subjacente da página tiver expirado, a implementação do padrão desse método gerará uma exceção. Você pode substituir este método, executar tratamento personalizado para restaurar o estado de página sem depender de estado de exibição e retornar sem chamar a implementação base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O estado da sessão expirou.  
+  
+ -ou-  
+  
+ O cookie de sessão do cliente é inválido.  
+  
+ -ou-  
+  
+ O histórico de estado de sessão excedeu o tamanho alocado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PageClientViewStateKey">
+      <MemberSignature Language="C#" Value="public static readonly string PageClientViewStateKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PageClientViewStateKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobilePage.PageClientViewStateKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a chave a ser usado para renderizar o estado de exibição particular. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é usado por adaptadores para renderizar o estado de exibição particular. Para obter mais informações, consulte o [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce) documentação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryStringText">
+      <MemberSignature Language="C#" Value="public string QueryStringText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryStringText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.QueryStringText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de consulta que acompanha a solicitação. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A cadeia de caracteres de consulta que acompanha a solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade retorna todos os caracteres na solicitação que seguem o ponto de interrogação (?) na URL. Esse valor pode ser diferente de <xref:System.Web.HttpRequest.ServerVariables%2A> propriedade. Para dispositivos onde um sufixo do caminho de arquivo exclusivo é inserido em uma URL para postagem, essa propriedade remove automaticamente o sufixo do caminho de arquivo. Por exemplo, se a consulta original é "/ home.aspx?id=john+doe", o valor de <xref:System.Web.UI.MobileControls.MobilePage.QueryStringText%2A> propriedade será "id = john doe". Um postback seguinte URL poderia ser "/home.aspx?_ufps=20292303920 & id = john doe". Neste último postback, o valor da <xref:System.Web.UI.MobileControls.MobilePage.QueryStringText%2A> propriedade novamente será "id = john doe", porque o sufixo exclusivo será extraído.  
+  
+> [!CAUTION]
+>  Se a parte da chave do par chave/valor armazenado no <xref:System.Web.UI.MobileControls.MobilePage.QueryStringText%2A> propriedade é igual a <xref:System.Web.UI.Control.ID%2A> propriedade de um controle no <xref:System.Web.UI.MobileControls.MobilePage> objeto, o estado de exibição e o par chave/valor é removido do <xref:System.Web.UI.MobileControls.MobilePage.QueryStringText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected override void RaisePostBackEvent (System.Web.UI.IPostBackEventHandler sourceControl, string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RaisePostBackEvent(class System.Web.UI.IPostBackEventHandler sourceControl, string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.RaisePostBackEvent(System.Web.UI.IPostBackEventHandler,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceControl" Type="System.Web.UI.IPostBackEventHandler" />
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceControl">O controle de servidor ASP.NET que causou o postback. Esse controle deve implementar a interface <see cref="T:System.Web.UI.IPostBackEventHandler" />.</param>
+        <param name="eventArgument">O argumento de postback.</param>
+        <summary>Notifica o controle de servidor que causou o postback de que ele deve tratar um evento de postback de entrada. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Page.RaisePostBackEvent%2A?displayProperty=nameWithType> método para determinar se o controle é um <xref:System.Web.UI.MobileControls.Form>. Nesse caso, o método tentará localizar e chamar o manipulador de eventos padrão do formulário da Web móvel ativo. Caso contrário, o método base é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToMobilePage">
+      <MemberSignature Language="C#" Value="public void RedirectToMobilePage (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToMobilePage(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.RedirectToMobilePage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL da ação de redirecionamento.</param>
+        <summary>Redireciona para outra página móvel. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToMobilePage">
+      <MemberSignature Language="C#" Value="public void RedirectToMobilePage (string url, bool endResponse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToMobilePage(string url, bool endResponse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.RedirectToMobilePage(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="endResponse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL da ação de redirecionamento.</param>
+        <param name="endResponse">Especifica se a resposta deve ser encerrada nesse ponto. O padrão do primeiro formulário do método é <see langword="true" />.</param>
+        <summary>Redireciona para uma página móvel especificada. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeFilePath">
+      <MemberSignature Language="C#" Value="public string RelativeFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelativeFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.RelativeFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma URL relativa à página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Uma URL relativa à página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedControl">
+      <MemberSignature Language="C#" Value="protected override void RemovedControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemovedControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.RemovedControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Web.UI.MobileControls.MobileControl" /> que foi removido.</param>
+        <summary>Chamado após a remoção de um controle de <see cref="P:System.Web.UI.Control.Controls" /> coleção de outro controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Control.RemovedControl%2A?displayProperty=nameWithType> método para determinar se o controle é um <xref:System.Web.UI.MobileControls.Form> ou <xref:System.Web.UI.UserControl> antes de chamar o método base. Se o controle for um `Form` ou um `UserControl`, o <xref:System.Web.UI.MobileControls.MobilePage.Forms%2A> está definida como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador de texto que cria a marcação.</param>
+        <summary>Envia o conteúdo do controle de servidor para um objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> fornecido, que grava o conteúdo a ser renderizado no cliente. Também armazena informações de rastreamento sobre o controle se o rastreamento está habilitado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> método para chamar o `Render` método do adaptador de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderControl">
+      <MemberSignature Language="C#" Value="public override void RenderControl (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderControl(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.RenderControl(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para receber o conteúdo do controle.</param>
+        <summary>Renderiza o conteúdo do servidor de controle e armazena informações de rastreamento sobre o controle se o rastreamento está habilitado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> método para chamar o `RenderControl` método do adaptador de controle padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePageStateToPersistenceMedium">
+      <MemberSignature Language="C#" Value="protected override void SavePageStateToPersistenceMedium (object view);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SavePageStateToPersistenceMedium(object view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.SavePageStateToPersistenceMedium(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="view">Um <see cref="T:System.Object" /> no qual as informações de estado de exibição serão armazenadas.</param>
+        <summary>Salva quaisquer informações de estado para a página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Page.SavePageStateToPersistenceMedium%2A?displayProperty=nameWithType> método para otimizar os dados de estado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Estado da sessão é desativado ou somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva alterações de estado de exibição do controle de servidor que ocorreram desde a hora em que ocorreu o postback da página no servidor. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Estado de exibição atual da página.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui o <xref:System.Web.UI.Control.SaveViewState%2A?displayProperty=nameWithType> método para salvar qualquer estado de adaptador existente com o estado de exibição em uma matriz de objetos. Se não houver um estado de exibição associado ao controle, esse método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleSheet">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.StyleSheet StyleSheet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.StyleSheet StyleSheet" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.StyleSheet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.StyleSheet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a folha de estilos atual em um <see cref="T:System.Web.UI.MobileControls.MobilePage" /> objeto. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A folha de estilos atual para a página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma página móvel pode ter apenas uma folha de estilos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleSheetTheme">
+      <MemberSignature Language="C#" Value="public override string StyleSheetTheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StyleSheetTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.StyleSheetTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da folha de estilos aplicada a esta página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui <xref:System.Web.UI.Page.StyleSheetTheme%2A?displayProperty=nameWithType> para impedir que os temas que está sendo alterado do padrão. Isso ocorre porque não há suporte para temas em páginas Web Forms do ASP.NET Mobile.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir esta propriedade. Não há suporte para temas em páginas Web Forms do celular.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Theme">
+      <MemberSignature Language="C#" Value="public override string Theme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Theme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.Theme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tema de página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O nome do tema de página. O <see cref="P:System.Web.UI.MobileControls.MobilePage.Theme" /> propriedade é um campo do lado do servidor e não pode ser modificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro substitui <xref:System.Web.UI.Page.Theme%2A?displayProperty=nameWithType> para impedir que os temas sendo habilitada. Isso ocorre porque não há suporte para temas em páginas de formulários da Web móveis ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir esta propriedade. Não há suporte para temas em páginas Web Forms do celular.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título para a página. Não há suporte para esse recurso para páginas de celular. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Uma cadeia de caracteres vazia.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir a propriedade <see cref="P:System.Web.UI.MobileControls.MobilePage.Title" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueFilePathSuffix">
+      <MemberSignature Language="C#" Value="public string UniqueFilePathSuffix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UniqueFilePathSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.MobilePage.UniqueFilePathSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma chave exclusiva que pode ser adicionada para gerar uma URL exclusiva para a página atual. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Uma chave exclusiva que pode ser adicionada para gerar uma URL exclusiva para a página atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns navegadores móveis exigem uma URL exclusiva funcionar corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a validação de controle e, em seguida, define o <see cref="P:System.Web.UI.Page.IsValid" /> propriedade com base nos resultados da validação. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyRenderingInServerForm">
+      <MemberSignature Language="C#" Value="public override void VerifyRenderingInServerForm (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void VerifyRenderingInServerForm(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.MobilePage.VerifyRenderingInServerForm(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle móvel ASP.NET que é necessário o <see cref="T:System.Web.UI.MobileControls.Form" /> controle.</param>
+        <summary>Confirma que um <see cref="T:System.Web.UI.MobileControls.Form" /> controle é renderizado para o controle móvel ASP.NET especificado em tempo de execução. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.Page.VerifyRenderingInServerForm%2A?displayProperty=nameWithType> método para lançar uma exceção se o controle não está em um <xref:System.Web.UI.MobileControls.Form> em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">
+          <paramref name="control" />deve estar contido em um <see cref="T:System.Web.UI.MobileControls.Form" /> controle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewStateID">
+      <MemberSignature Language="C#" Value="public static readonly string ViewStateID;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ViewStateID" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobilePage.ViewStateID" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o identificador de origem a ser usado para renderizar o campo oculto para um estado de exibição. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é usado por adaptadores para processar informações de estado de exibição. Para obter mais informações, consulte o [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce) documentação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

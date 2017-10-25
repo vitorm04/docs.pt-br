@@ -1,0 +1,44 @@
+<Type Name="NativeActivityAbortContext" FullName="System.Activities.NativeActivityAbortContext">
+  <TypeSignature Language="C#" Value="public sealed class NativeActivityAbortContext : System.Activities.ActivityContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NativeActivityAbortContext extends System.Activities.ActivityContext" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.NativeActivityAbortContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.ActivityContext</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o ambiente de execução de uma atividade que está sendo anulada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os autores de atividade personalizada que cria atividades que são derivadas de <xref:System.Activities.NativeActivity%601> pode substituir <xref:System.Activities.NativeActivity%601.Abort%2A> agir em resposta a ser anulada. Por exemplo, uma atividade que interage com <xref:System.Data.SqlClient.SqlCommand> talvez queira chamar <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> se a atividade está sendo anulada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Exception Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.NativeActivityAbortContext.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Exception" /> que contém a razão para a atividade que está sendo anulada.</summary>
+        <value>Uma exceção que contém a razão para a atividade que está sendo anulada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

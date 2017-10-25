@@ -1,0 +1,75 @@
+<Type Name="SrgsPhoneticAlphabet" FullName="System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet">
+  <TypeSignature Language="C#" Value="public enum SrgsPhoneticAlphabet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SrgsPhoneticAlphabet extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os alfabetos fonéticos com suporte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Letras do alfabeto fonético são compostas de telefones, que consistem em letras, números e caracteres, às vezes, em combinação. Cada telefone descreve um som exclusivo de fala. Isso está em contraste com o alfabeto latino, para que qualquer letra pode representar vários sons faladas. Considere a pronúncia diferente da letra "c" na "Cessação" e "balas" palavras ou a pronúncia diferente da combinação da letra "th" na coisa"palavras" e "as".  
+  
+ Em Speech, você pode usar qualquer um dos três letras do alfabeto fonético para especificar pronúncia personalizada: alfabeto de telefone internacional (IPA), conjunto de telefone Universal (UPS) ou o SAPI phone conjunto. Alfabeto fonético específico determina qual conjunto de telefone será usado para definir a pronúncia embutido para <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> objetos. Os telefones especificados em <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> deve coincidir com o alfabeto fonético especificado em <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.PhoneticAlphabet%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ipa">
+      <MemberSignature Language="C#" Value="Ipa" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet Ipa = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet.Ipa" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conjunto de fonemas do Alfabeto Fonético Internacional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sapi">
+      <MemberSignature Language="C#" Value="Sapi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet Sapi = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet.Sapi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conjunto de fonemas da Speech API.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ups">
+      <MemberSignature Language="C#" Value="Ups" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet Ups = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet.Ups" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conjunto de Fones Universal, que é uma codificação em ASCII dos fonemas para IPA.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

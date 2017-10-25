@@ -1,0 +1,40 @@
+<Type Name="WebPartVerbsEventHandler" FullName="System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebPartVerbsEventHandler(object sender, WebPartVerbsEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartVerbsEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartVerbsEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Os argumentos de evento.</param>
+    <summary>O representante para a <see cref="E:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateVerbs" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler> classe é usada para especificar os métodos que são invocados em resposta a um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateVerbs> evento que ocorre quando os verbos de Web Parts são criados para uma zona que deriva de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> classe.  
+  
+ Verbos de partes de Web representam as ações que os usuários podem executar na interface do usuário (UI) de uma página de Web Parts, como minimizar, fechar ou controles de restauração. adicionando controles a uma página. ou cancelar uma ação. Verbos podem aparecer em áreas de cabeçalho e rodapé de uma zona e há verbos padrão fornecidos com o conjunto de controles de Web Parts e verbos personalizados que podem ser adicionados por desenvolvedores. Um verbo é representado na interface de usuário por um objeto que pode ser clicado, que você pode definir aparecem como um hiperlink, uma imagem ou um botão, usando o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.VerbButtonType%2A> propriedade.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona fornece um conjunto padrão de verbos renderizado no menu de verbos do controle de Web Parts. Uma zona de Web Parts personalizada, ou um controle de Web Parts dentro de uma zona de Web Parts, pode adicionar verbos adicionais para o menu.  
+  
+ Um controle em uma zona de Web Parts pode adicionar verbos para o menu de verbos do controle herdando a <xref:System.Web.UI.WebControls.WebParts.WebPart> base classe e substituir o <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> propriedade. Se o controle não herda o <xref:System.Web.UI.WebControls.WebParts.WebPart> classe base você pode adicionar um verbo novo Implementando o <xref:System.Web.UI.WebControls.WebParts.IWebActionable> interface e, em seguida, substituindo o <xref:System.Web.UI.WebControls.WebParts.IWebActionable.Verbs%2A> coleção.  
+  
+ Protegido <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A?displayProperty=nameWithType> método permite que classes derivadas substituam os eventos sem anexar um representante a ele. Uma classe derivada deve sempre chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A> método da classe base para garantir que representantes registrados recebam o evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,456 @@
+<Type Name="SqlCacheDependencyDatabaseCollection" FullName="System.Web.Configuration.SqlCacheDependencyDatabaseCollection">
+  <TypeSignature Language="C#" Value="public sealed class SqlCacheDependencyDatabaseCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlCacheDependencyDatabaseCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.SqlCacheDependencyDatabase))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencySection> usa o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection> programaticamente acessar e modificar o `databases` elemento do `sqlCacheDependency` no `cache` seção de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter um <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection> objeto acessando o `sqlCacheDependency` seção de um arquivo de configuração.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#1)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlCacheDependencyDatabaseCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection> classe usando o <xref:System.Web.Configuration.SqlCacheDependencySection.Databases%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.SqlCacheDependencyDatabase name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.SqlCacheDependencyDatabase name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Add(System.Web.Configuration.SqlCacheDependencyDatabase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Web.Configuration.SqlCacheDependencyDatabase" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto a ser adicionado à coleção.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Web.Configuration.SqlCacheDependencyDatabase> na coleção deve ter um nome exclusivo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Add%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#3)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto já existe na coleção ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> chaves.</summary>
+        <value>A matriz de cadeia de caracteres que contém as chaves da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.AllKeys%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#2)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `clear` diretiva na seção apropriada do arquivo de configuração para remover todas as referências a elementos definidos em um arquivo de configuração de nível superior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Clear%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#4)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SqlCacheDependencyDatabase Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.SqlCacheDependencyDatabase Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SqlCacheDependencyDatabase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> elemento para recuperar.</param>
+        <summary>Retorna o <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> elemento no índice especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> elemento no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma referência nula (`Nothing` no Visual Basic) é retornado se não existe nenhum elemento no índice especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Get%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#5)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SqlCacheDependencyDatabase Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.SqlCacheDependencyDatabase Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SqlCacheDependencyDatabase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> elemento para recuperar.</param>
+        <summary>Retorna o <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> elemento com o nome especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> elemento com o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma referência nula (`Nothing` no Visual Basic) é retornado se não existe nenhum elemento com o nome especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Get%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#6)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de chave para retornar.</param>
+        <summary>Retorna a chave para o elemento localizado no índice especificado no <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" />.</summary>
+        <returns>A chave no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma referência nula (`Nothing` no Visual Basic) é retornado se não existe nenhum elemento no índice especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.GetKey%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#7)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SqlCacheDependencyDatabase this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.SqlCacheDependencyDatabase Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SqlCacheDependencyDatabase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção de <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto no índice especificado.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SqlCacheDependencyDatabase this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.SqlCacheDependencyDatabase Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SqlCacheDependencyDatabase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" />.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto com o nome especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto com o nome especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> objeto com o nome especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Remove%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#8)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> no índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.RemoveAt%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#9)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Web.Configuration.SqlCacheDependencyDatabase user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Web.Configuration.SqlCacheDependencyDatabase user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Set(System.Web.Configuration.SqlCacheDependencyDatabase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Web.Configuration.SqlCacheDependencyDatabase" />
+      </Parameters>
+      <Docs>
+        <param name="user">O <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> elemento para redefinir.</param>
+        <summary>Redefine um especificado <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> objeto que existe na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Set` método modifica uma existente <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection> elemento.  
+  
+ Um <xref:System.Configuration.ConfigurationException> é gerada se o elemento já existe ou é somente leitura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabaseCollection.Set%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/CS/sqlcachedependencydatabasecollection.cs#10)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabaseCollection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabaseCollection/VB/sqlcachedependencydatabasecollection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.OutputCacheProfileCollection" /> é somente leitura ou já existe.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

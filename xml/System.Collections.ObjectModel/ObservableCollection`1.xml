@@ -1,0 +1,634 @@
+<Type Name="ObservableCollection&lt;T&gt;" FullName="System.Collections.ObjectModel.ObservableCollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class ObservableCollection&lt;T&gt; : System.Collections.ObjectModel.Collection&lt;T&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ObservableCollection`1&lt;T&gt; extends System.Collections.ObjectModel.Collection`1&lt;!T&gt; implements class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.ObjectModel.ObservableCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">O tipo dos elementos na coleção.</typeparam>
+    <summary>Representa uma coleção de dados dinâmicos que oferece notificações quando itens são adicionados, removidos ou quando toda a lista é atualizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em muitos casos, os dados que você trabalha com são uma coleção de objetos. Por exemplo, um cenário comum em associação de dados é usar um <xref:System.Windows.Controls.ItemsControl> como um <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListView>, ou <xref:System.Windows.Controls.TreeView> para exibir um conjunto de registros.  
+  
+ Você pode enumerar sobre qualquer coleção que implementa o <xref:System.Collections.IEnumerable> interface. No entanto, para definir associações dinâmicas para que as inserções ou exclusões na coleção de atualizem o [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] automaticamente, a coleção deve implementar a <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Essa interface expõe o <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento, um evento que deve ser gerado sempre que a coleção subjacente é alterado.  
+  
+ [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]fornece o <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, que é uma implementação interna de uma coleção de dados que implementa o <xref:System.Collections.Specialized.INotifyCollectionChanged> interface.  
+  
+ Antes de implementar sua própria coleção, considere o uso de <xref:System.Collections.ObjectModel.ObservableCollection%601> ou uma coleção existente, como classes <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, e <xref:System.ComponentModel.BindingList%601>, entre outros. Se você tiver um cenário avançado e quer implementar sua própria coleção, considere o uso de <xref:System.Collections.IList>, que fornece uma coleção não genérica de objetos que podem ser acessados separadamente por índice. Implementando <xref:System.Collections.IList> fornece o melhor desempenho com o mecanismo de associação de dados.  
+  
+> [!NOTE]
+>  Para suporte total ao transferir valores de dados de associação de objetos de origem à associação de destinos, cada objeto em sua coleção que suporta propriedades associáveis deve implementar um mecanismo de notificação de alteração de propriedade apropriado, como o <xref:System.ComponentModel.INotifyPropertyChanged> interface.  
+  
+ Para obter mais informações, consulte "Associação de coleções" [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+## <a name="notes-on-xaml-usage"></a>Observações sobre o uso do XAML  
+ <xref:System.Collections.ObjectModel.ObservableCollection%601>pode ser usado como um elemento de objeto XAML no [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], nas versões 3.0 e 3.5. No entanto, o uso tem limitações significativas.  
+  
+-   <xref:System.Collections.ObjectModel.ObservableCollection%601>deve ser o elemento raiz, porque o que devem ser usados para especificar o tipo restrito de genérica <xref:System.Collections.ObjectModel.ObservableCollection%601> só há suporte para o elemento de objeto para o elemento raiz.  
+  
+-   Você deve declarar um (que implica que a ação de compilação para este arquivo XAML deve ser `Page` ou alguma outra ação que compila o XAML de compilação).  
+  
+-   <xref:System.Collections.ObjectModel.ObservableCollection%601>é um namespace e assembly que inicialmente não são mapeados para o namespace XML padrão. Você deve mapear um prefixo para o namespace e assembly e, em seguida, usar o prefixo na marca de elemento de objeto para <xref:System.Collections.ObjectModel.ObservableCollection%601>.  
+  
+ Uma maneira mais simples de usar <xref:System.Collections.ObjectModel.ObservableCollection%601> recursos do XAML em um aplicativo é declarar sua própria classe de coleção personalizado não genérico que é derivada de <xref:System.Collections.ObjectModel.ObservableCollection%601>, e fique restrito a um tipo específico. Em seguida, mapeie o assembly que contém essa classe e referenciá-lo como um elemento de objeto em seu XAML.  
+  
+<a name="xamlTextUsage_ObservableCollection"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Consulte Observações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObservableCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObservableCollection (System.Collections.Generic.IEnumerable&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">A coleção da qual os elementos são copiados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> que contém elementos copiados da coleção especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para o <xref:System.Collections.ObjectModel.ObservableCollection%601> na mesma ordem em que são lidas pelo enumerador da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="collection" /> não pode ser <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObservableCollection (System.Collections.Generic.List&lt;T&gt; list);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.List`1&lt;!T&gt; list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.#ctor(System.Collections.Generic.List{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.Generic.List&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="list">A lista da qual os elementos são copiados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> que contém elementos copiados da lista especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para o <xref:System.Collections.ObjectModel.ObservableCollection%601> na mesma ordem em que são lidas pelo enumerador da lista.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="list" /> não pode ser <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockReentrancy">
+      <MemberSignature Language="C#" Value="protected IDisposable BlockReentrancy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IDisposable BlockReentrancy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.BlockReentrancy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Não permite tentativas reentrantes de alterar essa coleção.</summary>
+        <returns>Um objeto <see cref="T:System.IDisposable" /> que pode ser usado para descartar o objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O uso típico é para encapsular um <xref:System.Collections.ObjectModel.ObservableCollection%601.OnCollectionChanged%2A> chamar dentro de um `using` escopo, como no exemplo a seguir:  
+  
+ [!code-csharp[ObservableCollection_snip#BlockReentrancy](~/samples/snippets/csharp/VS_Snippets_Wpf/ObservableCollection_snip/CSharp/DataSource.cs#blockreentrancy)]
+ [!code-vb[ObservableCollection_snip#BlockReentrancy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ObservableCollection_snip/visualbasic/datasource.vb#blockreentrancy)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckReentrancy">
+      <MemberSignature Language="C#" Value="protected void CheckReentrancy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckReentrancy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.CheckReentrancy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se há tentativas reentrantes de alterar essa coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Se houve uma chamada para <see cref="M:System.Collections.ObjectModel.ObservableCollection`1.BlockReentrancy" /> da qual o valor retornado <see cref="T:System.IDisposable" /> ainda não foi descartado. Normalmente, isso significa quando há tentativas adicionais para alterar essa coleção durante um evento <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged" />. No entanto, isso depende de quando as classes derivadas escolhem chamar <see cref="M:System.Collections.ObjectModel.ObservableCollection`1.BlockReentrancy" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe base chama este método quando a lista está sendo apagada. Essa implementação gera o <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento.  
+  
+ Para obter mais informações, consulte o <xref:System.Collections.ObjectModel.Collection%601.ClearItems%2A> método o <xref:System.Collections.ObjectModel.Collection%601> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public virtual event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NotifyCollectionChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um item é adicionado, removido, alterado, movido ou toda a lista é atualizada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.InsertItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>item</c> devem ser inseridos.</param>
+        <param name="item">O objeto a ser inserido.</param>
+        <summary>Insere um item na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe base chama este método quando um item é adicionado à coleção. Essa implementação gera o <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento.  
+  
+ Para obter mais informações, consulte o <xref:System.Collections.ObjectModel.ObservableCollection%601.InsertItem%2A> método o <xref:System.Collections.ObjectModel.Collection%601> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public void Move (int oldIndex, int newIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Move(int32 oldIndex, int32 newIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.Move(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIndex" Type="System.Int32" />
+        <Parameter Name="newIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldIndex">O índice baseado em zero, especificando o local do item a ser movido.</param>
+        <param name="newIndex">O índice baseado em zero, especificando o novo local do item.</param>
+        <summary>Move o item no índice especificado para um novo local na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As subclasses podem substituir o <xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem%2A> método para fornecer um comportamento personalizado para esse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveItem">
+      <MemberSignature Language="C#" Value="protected virtual void MoveItem (int oldIndex, int newIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void MoveItem(int32 oldIndex, int32 newIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.MoveItem(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIndex" Type="System.Int32" />
+        <Parameter Name="newIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldIndex">O índice baseado em zero, especificando o local do item a ser movido.</param>
+        <param name="newIndex">O índice baseado em zero, especificando o novo local do item.</param>
+        <summary>Move o item no índice especificado para um novo local na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação gera o <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento.  
+  
+ As subclasses podem substituir esse método protegido para fornecer um comportamento personalizado para o <xref:System.Collections.ObjectModel.ObservableCollection%601.Move%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollectionChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCollectionChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos do evento que está sendo criado.</param>
+        <summary>Cria o evento <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged" /> com os argumentos fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades e métodos que modificar essa coleção acionar o <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> evento nesta `virtual` método.  
+  
+   
+  
+## Examples  
+ Ao substituir esse método, chame a implementação base ou use o <xref:System.Collections.ObjectModel.ObservableCollection%601.BlockReentrancy%2A> método para tratar a coleção reentrante alterações, como no exemplo a seguir:  
+  
+ [!code-csharp[ObservableCollection_snip#BlockReentrancy](~/samples/snippets/csharp/VS_Snippets_Wpf/ObservableCollection_snip/CSharp/DataSource.cs#blockreentrancy)]
+ [!code-vb[ObservableCollection_snip#BlockReentrancy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ObservableCollection_snip/visualbasic/datasource.vb#blockreentrancy)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos do evento que está sendo criado.</param>
+        <summary>Cria o evento <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.PropertyChanged" /> com os argumentos fornecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Collections.ObjectModel.ObservableCollection`1.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um valor de propriedade é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser removido.</param>
+        <summary>Remove o item no índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe base chama este método quando um item é removido da coleção. Essa implementação gera o <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento.  
+  
+ Para obter mais informações, consulte o <xref:System.Collections.ObjectModel.Collection%601.RemoveItem%2A> método o <xref:System.Collections.ObjectModel.Collection%601> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ObjectModel.ObservableCollection`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser substituído.</param>
+        <param name="item">O novo valor para o elemento no índice especificado.</param>
+        <summary>Substitui o elemento no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe base chama este método quando um item é definido na coleção. Essa implementação gera o <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento.  
+  
+ Para obter mais informações, consulte o <xref:System.Collections.ObjectModel.Collection%601.SetItem%2A> método o <xref:System.Collections.ObjectModel.Collection%601> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

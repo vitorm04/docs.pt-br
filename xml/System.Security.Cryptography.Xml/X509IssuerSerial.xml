@@ -1,0 +1,128 @@
+<Type Name="X509IssuerSerial" FullName="System.Security.Cryptography.Xml.X509IssuerSerial">
+  <TypeSignature Language="C#" Value="public struct X509IssuerSerial" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit X509IssuerSerial extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.X509IssuerSerial" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o &lt; <see langword="X509IssuerSerial" /> &gt; elemento de uma assinatura digital XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.X509IssuerSerial> estrutura representa o `<X509IssuerSerial`> elemento de uma assinatura digital XML definido pela especificação de assinatura digital XML. O `<X509IssuerSerial`> elemento é o subelemento do <`X509Data`> elemento que contém um emissor de certificado x. 509v3 diferenciados par de nome e número de série. O par de nome e número de série distinto ajuda a identificar um certificado x. 509v3 específico.  
+  
+ O emissor de um certificado x. 509 é o nome da autoridade de certificação que emitiu o certificado. Autoridades de certificação atribuir cada certificado que emitem um número de série exclusivo para fins de identificação.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.X509IssuerSerial> para especificar um emissor de certificado diferenciados par de nome e número de série ao usar o <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> classe.  Você pode adicionar uma <xref:System.Security.Cryptography.Xml.X509IssuerSerial> estrutura para o <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> classe usando o <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.IssuerSerials%2A> propriedade.  Como alternativa, você pode adicionar valores de cadeia de caracteres que representa o nome diferenciado do emissor do certificado x. 509 e número de série par usando o <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.AddIssuerSerial%2A> método.  
+  
+ Para obter mais informações sobre o `<X509IssuerSerial`> elemento, consulte a especificação de World Wide Web Consortium (W3C) em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como assinar e verificar um documento XML usando um certificado x. 509 de um repositório de certificados.  Este exemplo salva informações de chave para o documento assinado usando o <xref:System.Security.Cryptography.Xml.X509IssuerSerial> objeto.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IssuerName">
+      <MemberSignature Language="C#" Value="public string IssuerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IssuerName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.X509IssuerSerial.IssuerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome diferenciado do emissor um certificado x. 509.</summary>
+        <value>Um x. 509 nome diferenciado do emissor do certificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.X509IssuerSerial.IssuerName%2A> propriedade representa o nome diferenciado do emissor um certificado x. 509, especificado no `<X509IssuerSerial`> elemento.  
+  
+ Para obter mais informações sobre o `<X509IssuerSerial`> elemento, consulte a especificação de World Wide Web Consortium (W3C) em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como assinar e verificar um documento XML usando um certificado x. 509 de um repositório de certificados.  Este exemplo salva informações de chave para o documento assinado usando o <xref:System.Security.Cryptography.Xml.X509IssuerSerial> objeto.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialNumber">
+      <MemberSignature Language="C#" Value="public string SerialNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerialNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.X509IssuerSerial.SerialNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de série de um emissor do certificado X.509.</summary>
+        <value>Um número de série do emissor do certificado X.509.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.X509IssuerSerial.SerialNumber%2A> propriedade representa o número de série do emissor um certificado x. 509 especificado no `<X509IssuerSerial`> elemento.  
+  
+ Para obter mais informações sobre o `<X509IssuerSerial`> elemento, consulte a especificação de World Wide Web Consortium (W3C) em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como assinar e verificar um documento XML usando um certificado x. 509 de um repositório de certificados.  Este exemplo salva informações de chave para o documento assinado usando o <xref:System.Security.Cryptography.Xml.X509IssuerSerial> objeto.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

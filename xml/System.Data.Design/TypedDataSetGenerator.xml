@@ -1,0 +1,566 @@
+<Type Name="TypedDataSetGenerator" FullName="System.Data.Design.TypedDataSetGenerator">
+  <TypeSignature Language="C#" Value="public sealed class TypedDataSetGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypedDataSetGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Design.TypedDataSetGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera uma classe <see cref="T:System.Data.DataSet" /> fortemente tipada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.TypedDataSetGenerator> classe usa as informações fornecidas (por exemplo, um esquema XML) e cria uma classe de conjunto de dados tipado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Generate">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gera uma classe <see cref="T:System.Data.DataSet" /> fortemente tipada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static string Generate (System.Data.DataSet dataSet, System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Generate(class System.Data.DataSet dataSet, class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.Data.DataSet,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">A fonte <see cref="T:System.Data.DataSet" /> que especifica os metadados para o tipo <see cref="T:System.Data.DataSet" />.</param>
+        <param name="codeNamespace">O namespace que fornece o namespace de destino para o tipo <see cref="T:System.Data.DataSet" />.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base em uma <see cref="T:System.Data.DataSet" />.</summary>
+        <returns>Fortemente tipada <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gera um fortemente tipada <xref:System.Data.DataSet>. O conjunto de dados é criado no namespace indicado no `codeNamespace` parâmetro e o conjunto de dados é gerado na linguagem de programação gerenciada indicada no `codeProvider` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static string Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <returns>Fortemente tipada <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static void Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Collections.Hashtable customDBProviders);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.Collections.Hashtable customDBProviders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Collections.Hashtable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="customDBProviders" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">O idioma específico <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="customDBProviders">Uma tabela de hash que mapeia conexões para provedores específicos no conjunto de dados tipado.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static void Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Data.Common.DbProviderFactory specifiedFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.Data.Common.DbProviderFactory specifiedFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Data.Common.DbProviderFactory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="specifiedFactory" Type="System.Data.Common.DbProviderFactory" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="specifiedFactory">O <see cref="T:System.Data.Common.DbProviderFactory" /> usar para substituir o provedor contido a <c>inputFileContent</c>.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static string Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Data.Design.TypedDataSetGenerator.GenerateOption option);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption option) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Data.Design.TypedDataSetGenerator.GenerateOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="option" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="option">O <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> que determina quais (se houver) componentes adicionais e os métodos para criar ao gerar um conjunto de dados tipado.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <returns>Fortemente tipada <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static void Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Collections.Hashtable customDBProviders, System.Data.Design.TypedDataSetGenerator.GenerateOption option);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.Collections.Hashtable customDBProviders, valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption option) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Collections.Hashtable,System.Data.Design.TypedDataSetGenerator.GenerateOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="customDBProviders" Type="System.Collections.Hashtable" />
+        <Parameter Name="option" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="customDBProviders">Uma tabela de hash que mapeia conexões para provedores específicos no conjunto de dados tipado.</param>
+        <param name="option">O <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> que determina quais (se houver) componentes adicionais e os métodos para criar ao gerar um conjunto de dados tipado.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static string Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Data.Design.TypedDataSetGenerator.GenerateOption option, string dataSetNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption option, string dataSetNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Data.Design.TypedDataSetGenerator.GenerateOption,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="option" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+        <Parameter Name="dataSetNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="option">O <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> que determina quais (se houver) componentes adicionais e os métodos para criar ao gerar um conjunto de dados tipado.</param>
+        <param name="dataSetNamespace">Uma cadeia de caracteres que contém o namespace do conjunto de dados gerado.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <returns>Fortemente tipada <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static void Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Collections.Hashtable customDBProviders, System.Data.Design.TypedDataSetGenerator.GenerateOption option, string dataSetNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.Collections.Hashtable customDBProviders, valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption option, string dataSetNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Collections.Hashtable,System.Data.Design.TypedDataSetGenerator.GenerateOption,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="customDBProviders" Type="System.Collections.Hashtable" />
+        <Parameter Name="option" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+        <Parameter Name="dataSetNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="customDBProviders">Uma tabela de hash que mapeia conexões para provedores específicos no conjunto de dados tipado.</param>
+        <param name="option">O <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> que determina quais (se houver) componentes adicionais e os métodos para criar ao gerar um conjunto de dados tipado.</param>
+        <param name="dataSetNamespace">Uma cadeia de caracteres que contém o namespace do conjunto de dados gerado.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static string Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Data.Design.TypedDataSetGenerator.GenerateOption option, string dataSetNamespace, string basePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption option, string dataSetNamespace, string basePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Data.Design.TypedDataSetGenerator.GenerateOption,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="option" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+        <Parameter Name="dataSetNamespace" Type="System.String" />
+        <Parameter Name="basePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="option">O <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> que determina quais (se houver) componentes adicionais e os métodos para criar ao gerar um conjunto de dados tipado.</param>
+        <param name="dataSetNamespace">Uma cadeia de caracteres que contém o namespace do conjunto de dados gerado.</param>
+        <param name="basePath">Uma cadeia de caracteres que representa o caminho para o esquema com base no caminho relativo do arquivo de entrada do conjunto de dados.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <returns>Fortemente tipada <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static void Generate (string inputFileContent, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Collections.Hashtable customDBProviders, System.Data.Design.TypedDataSetGenerator.GenerateOption option, string dataSetNamespace, string basePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Generate(string inputFileContent, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.Collections.Hashtable customDBProviders, valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption option, string dataSetNamespace, string basePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.Generate(System.String,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.CodeDomProvider,System.Collections.Hashtable,System.Data.Design.TypedDataSetGenerator.GenerateOption,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="customDBProviders" Type="System.Collections.Hashtable" />
+        <Parameter Name="option" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+        <Parameter Name="dataSetNamespace" Type="System.String" />
+        <Parameter Name="basePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="compileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> para conter o código gerado.</param>
+        <param name="mainNamespace">O <see cref="T:System.CodeDom.CodeNamespace" /> que contém o conjunto de dados gerado.</param>
+        <param name="codeProvider">Específicos do idioma <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> a ser usado para gerar o conjunto de dados.</param>
+        <param name="customDBProviders">Uma tabela de hash que mapeia conexões para provedores específicos no conjunto de dados tipado.</param>
+        <param name="option">O <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> que determina quais (se houver) componentes adicionais e os métodos para criar ao gerar um conjunto de dados tipado.</param>
+        <param name="dataSetNamespace">Uma cadeia de caracteres que contém o namespace do conjunto de dados gerado.</param>
+        <param name="basePath">Uma cadeia de caracteres que representa o caminho para o esquema com base no caminho relativo do arquivo de entrada do conjunto de dados.</param>
+        <summary>Gera um fortemente tipada <see cref="T:System.Data.DataSet" /> com base no arquivo de entrada fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Gera um fortemente tipada <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetProviderName">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna o primeiro nome de provedor encontrado no arquivo de entrada fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna o nome do provedor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetProviderName">
+      <MemberSignature Language="C#" Value="public static string GetProviderName (string inputFileContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetProviderName(string inputFileContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.GetProviderName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <summary>Retorna o primeiro nome de provedor encontrado no arquivo de entrada fornecido.</summary>
+        <returns>Uma cadeia de caracteres que representa o provedor específico para este <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Esse método retorna o primeiro nome de provedor especificado na `inputFileContent`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderName">
+      <MemberSignature Language="C#" Value="public static string GetProviderName (string inputFileContent, string tableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetProviderName(string inputFileContent, string tableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetGenerator.GetProviderName(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputFileContent" Type="System.String" />
+        <Parameter Name="tableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputFileContent">Uma cadeia de caracteres que representa o esquema XML para basear a <see cref="T:System.Data.DataSet" /> em.</param>
+        <param name="tableName">Uma cadeia de caracteres que representa o nome da tabela para retornar o nome do provedor de.</param>
+        <summary>Retorna o nome do provedor para o <paramref name="tableName" /> no arquivo de entrada.</summary>
+        <returns>Uma cadeia de caracteres que representa o nome do provedor de determinada tabela passada para o <paramref name="tableName" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Retorna o nome do provedor para o determinado `tableName` no <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedAssemblies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt; ReferencedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.ICollection`1&lt;class System.Reflection.Assembly&gt; ReferencedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.TypedDataSetGenerator.ReferencedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de assemblies referenciados em um conjunto de dados tipado.</summary>
+        <value>Uma coleção que contém todos os assemblies referenciados no conjunto de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O gerador é iterado sobre essa lista e adiciona os assemblies ao seu projeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

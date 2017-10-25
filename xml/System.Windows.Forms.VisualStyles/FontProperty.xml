@@ -1,0 +1,41 @@
+<Type Name="FontProperty" FullName="System.Windows.Forms.VisualStyles.FontProperty">
+  <TypeSignature Language="C#" Value="public enum FontProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.FontProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica as propriedades de fonte de um elemento de estilo visual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.FontProperty> enumeração representa um conjunto de propriedades de fonte que descrevem os elementos de estilo visual. O <xref:System.Windows.Forms.VisualStyles.FontProperty> valores são usados como um argumento no <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetFont%2A?displayProperty=nameWithType> método para especificar qual valor de propriedade para recuperar para o elemento que o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> representa atualmente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GlyphFont">
+      <MemberSignature Language="C#" Value="GlyphFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.FontProperty GlyphFont = int32(2601)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.FontProperty.GlyphFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.FontProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte de um glifo é desenhado com.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

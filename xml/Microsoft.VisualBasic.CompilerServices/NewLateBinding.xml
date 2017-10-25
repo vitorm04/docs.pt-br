@@ -1,0 +1,764 @@
+<Type Name="NewLateBinding" FullName="Microsoft.VisualBasic.CompilerServices.NewLateBinding">
+  <TypeSignature Language="C#" Value="public sealed class NewLateBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NewLateBinding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.NewLateBinding" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Esta classe fornece auxiliares que o compilador do Visual Basic utiliza para chamadas de associação tardias; ele não deve ser chamado diretamente do seu código.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FallbackCall">
+      <MemberSignature Language="C#" Value="public static object FallbackCall (object Instance, string MemberName, object[] Arguments, string[] ArgumentNames, bool IgnoreReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackCall(object Instance, string MemberName, object[] Arguments, string[] ArgumentNames, bool IgnoreReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackCall(System.Object,System.String,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="IgnoreReturn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="IgnoreReturn">Um valor <see langword="Boolean" /> que indica se o valor retornado pode ser ignorado ou não.</param>
+        <summary>Executa uma chamada de método ou função de associação tardia. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semelhante a <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackGet">
+      <MemberSignature Language="C#" Value="public static object FallbackGet (object Instance, string MemberName, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackGet(object Instance, string MemberName, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackGet(System.Object,System.String,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <summary>Executa uma chamada de acesso de campo ou obtenção da propriedade de associação tardia. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackIndexSet">
+      <MemberSignature Language="C#" Value="public static void FallbackIndexSet (object Instance, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackIndexSet(object Instance, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackIndexSet(System.Object,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackIndexSetComplex">
+      <MemberSignature Language="C#" Value="public static void FallbackIndexSetComplex (object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackIndexSetComplex(object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackIndexSetComplex(System.Object,System.Object[],System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="OptimisticSet">Um <see langword="Boolean" /> valor usado para determinar se a operação de definição funcionará. Definido como <see langword="True" /> quando você acreditar que um valor intermediário foi definido na propriedade ou campo; caso contrário, <see langword="False" />.</param>
+        <param name="RValueBase">Um <see langword="Boolean" /> valor que especifica quando a referência de base da referência final é um <see langword="RValue" />. Definido como <see langword="True" /> quando a referência de base da referência final é um <see langword="RValue" />; Isso permite que você gere uma exceção de tempo de execução tardia atribuições para campos de <see langword="RValues" /> de tipos de valor. Caso contrário, é definido como <see langword="False" />.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackInvokeDefault1">
+      <MemberSignature Language="C#" Value="public static object FallbackInvokeDefault1 (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackInvokeDefault1(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackInvokeDefault1(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método. Se <c>instância</c> é do tipo <see cref="T:System.Dynamic.IDynamicMetaObjectProvider" />, em seguida, vincule usando Dynamic Language Runtime; caso contrário, realize associação tardia padrão.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="ReportErrors">Um <see langword="Boolean" /> valor usado para especificar se deve lançar exceções quando um erro for encontrado. Definido como <see langword="True" /> lançar exceções. Definido como <see langword="False" /> para retornar <see langword="Nothing" /> quando um erro for encontrado.</param>
+        <summary>Executa um get de associação tardia de chamada para o método padrão ou uma função ou campo ou propriedade padrão. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackInvokeDefault2">
+      <MemberSignature Language="C#" Value="public static object FallbackInvokeDefault2 (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackInvokeDefault2(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackInvokeDefault2(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="ReportErrors">Um <see langword="Boolean" /> valor usado para especificar se deve lançar exceções quando um erro for encontrado. Definido como <see langword="True" /> lançar exceções. Definido como <see langword="False" /> para retornar <see langword="Nothing" /> quando um erro for encontrado.</param>
+        <summary>Executa um get de associação tardia de chamada para o método padrão ou uma função ou campo ou propriedade padrão. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackSet">
+      <MemberSignature Language="C#" Value="public static void FallbackSet (object Instance, string MemberName, object[] Arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackSet(object Instance, string MemberName, object[] Arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackSet(System.Object,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackSetComplex">
+      <MemberSignature Language="C#" Value="public static void FallbackSetComplex (object Instance, string MemberName, object[] Arguments, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackSetComplex(object Instance, string MemberName, object[] Arguments, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackSetComplex(System.Object,System.String,System.Object[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="OptimisticSet">Um <see langword="Boolean" /> valor usado para determinar se a operação de definição funcionará. Definido como <see langword="True" /> quando você acreditar que um valor intermediário foi definido na propriedade ou campo; caso contrário, <see langword="False" />.</param>
+        <param name="RValueBase">Um <see langword="Boolean" /> valor que especifica quando a referência de base da referência final é um <see langword="RValue" />. Definido como <see langword="True" /> quando a referência de base da referência final é um <see langword="RValue" />; Isso permite que você gere uma exceção de tempo de execução tardia atribuições para campos de <see langword="RValues" /> de tipos de valor. Caso contrário, é definido como <see langword="False" />.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateCall">
+      <MemberSignature Language="C#" Value="public static object LateCall (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool[] CopyBack, bool IgnoreReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateCall(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool[] CopyBack, bool IgnoreReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCall(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="CopyBack" Type="System.Boolean[]" />
+        <Parameter Name="IgnoreReturn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Type">O tipo do objeto de chamada.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="TypeArguments">Uma matriz de tipos de argumento, usada somente para chamadas genéricas para passar tipos de argumento.</param>
+        <param name="CopyBack">Uma matriz de valores <see langword="Boolean" /> que o associador tardio usa para se comunicar de volta ao site de chamadas quais argumentos correspondem aos parâmetros <see langword="ByRef" />. Cada valor <see langword="True" /> indica que os argumentos foram correspondidos e devem ser copiados após a chamada para <see langword="LateCall" /> ser concluída.</param>
+        <param name="IgnoreReturn">Um valor <see langword="Boolean" /> que indica se o valor retornado pode ser ignorado ou não.</param>
+        <summary>Executa uma chamada de método ou função de associação tardia. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semelhante a <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateCallInvokeDefault">
+      <MemberSignature Language="C#" Value="public static object LateCallInvokeDefault (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateCallInvokeDefault(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCallInvokeDefault(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="ReportErrors">Um <see langword="Boolean" /> valor usado para especificar se deve lançar exceções quando um erro for encontrado. Definido como <see langword="True" /> lançar exceções. Definido como <see langword="False" /> para retornar <see langword="Nothing" /> quando um erro for encontrado.</param>
+        <summary>Executa uma chamada de associação tardia para o método padrão ou a função. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateCanEvaluate">
+      <MemberSignature Language="C#" Value="public static bool LateCanEvaluate (object instance, Type type, string memberName, object[] arguments, bool allowFunctionEvaluation, bool allowPropertyEvaluation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool LateCanEvaluate(object instance, class System.Type type, string memberName, object[] arguments, bool allowFunctionEvaluation, bool allowPropertyEvaluation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCanEvaluate(System.Object,System.Type,System.String,System.Object[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="allowFunctionEvaluation" Type="System.Boolean" />
+        <Parameter Name="allowPropertyEvaluation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="type">O tipo do objeto de chamada.</param>
+        <param name="memberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="allowFunctionEvaluation">Um <see langword="Boolean" /> valor que especifica se deve permitir que a avaliação da função.</param>
+        <param name="allowPropertyEvaluation">Um <see langword="Boolean" /> valor que especifica se deve permitir que a avaliação da propriedade.</param>
+        <summary>Indica se uma chamada requer avaliação de associação tardia. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Um <see langword="Boolean" /> valor que indica se a expressão requer avaliação de associação tardia.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateGet">
+      <MemberSignature Language="C#" Value="public static object LateGet (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool[] CopyBack);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateGet(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool[] CopyBack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="CopyBack" Type="System.Boolean[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Type">O tipo do objeto de chamada.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="TypeArguments">Uma matriz de tipos de argumento, usada somente para chamadas genéricas para passar tipos de argumento.</param>
+        <param name="CopyBack">Uma matriz de valores <see langword="Boolean" /> que o associador tardio usa para se comunicar de volta ao site de chamadas quais argumentos correspondem aos parâmetros <see langword="ByRef" />. Cada valor <see langword="True" /> indica que os argumentos foram correspondidos e devem ser copiados após a chamada para <see langword="LateCall" /> ser concluída.</param>
+        <summary>Executa uma chamada de acesso de campo ou obtenção da propriedade de associação tardia. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateGetInvokeDefault">
+      <MemberSignature Language="C#" Value="public static object LateGetInvokeDefault (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateGetInvokeDefault(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGetInvokeDefault(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="ReportErrors">Um <see langword="Boolean" /> valor usado para especificar se deve lançar exceções quando um erro for encontrado. Definido como <see langword="True" /> lançar exceções. Definido como <see langword="False" /> para retornar <see langword="Nothing" /> quando um erro for encontrado.</param>
+        <summary>Executa um get de associação tardia do campo ou propriedade padrão. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateIndexGet">
+      <MemberSignature Language="C#" Value="public static object LateIndexGet (object Instance, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateIndexGet(object Instance, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexGet(System.Object,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <summary>Executa uma chamada de acesso de campo ou obtenção da propriedade de associação tardia. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <returns>Uma instância do objeto de chamada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateIndexSet">
+      <MemberSignature Language="C#" Value="public static void LateIndexSet (object Instance, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateIndexSet(object Instance, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexSet(System.Object,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateIndexSetComplex">
+      <MemberSignature Language="C#" Value="public static void LateIndexSetComplex (object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateIndexSetComplex(object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexSetComplex(System.Object,System.Object[],System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="OptimisticSet">Um <see langword="Boolean" /> valor usado para determinar se a operação de definição funcionará. Definido como <see langword="True" /> quando você acreditar que um valor intermediário foi definido na propriedade ou campo; caso contrário, <see langword="False" />.</param>
+        <param name="RValueBase">Um <see langword="Boolean" /> valor que especifica quando a referência de base da referência final é um <see langword="RValue" />. Definido como <see langword="True" /> quando a referência de base da referência final é um <see langword="RValue" />; Isso permite que você gere uma exceção de tempo de execução tardia atribuições para campos de <see langword="RValues" /> de tipos de valor. Caso contrário, é definido como <see langword="False" />.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateSet">
+      <MemberSignature Language="C#" Value="public static void LateSet (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateSet(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Type">O tipo do objeto de chamada.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="TypeArguments">Uma matriz de tipos de argumento, usada somente para chamadas genéricas para passar tipos de argumento.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateSet">
+      <MemberSignature Language="C#" Value="public static void LateSet (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool OptimisticSet, bool RValueBase, Microsoft.VisualBasic.CallType CallType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateSet(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool OptimisticSet, bool RValueBase, valuetype Microsoft.VisualBasic.CallType CallType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean,System.Boolean,Microsoft.VisualBasic.CallType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+        <Parameter Name="CallType" Type="Microsoft.VisualBasic.CallType" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Type">O tipo do objeto de chamada.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="TypeArguments">Uma matriz de tipos de argumento, usada somente para chamadas genéricas para passar tipos de argumento.</param>
+        <param name="OptimisticSet">Um <see langword="Boolean" /> valor usado para determinar se a operação de definição funcionará. Definido como <see langword="True" /> quando você acreditar que um valor intermediário foi definido na propriedade ou campo; caso contrário, <see langword="False" />.</param>
+        <param name="RValueBase">Um <see langword="Boolean" /> valor que especifica quando a referência de base da referência final é um <see langword="RValue" />. Definido como <see langword="True" /> quando a referência de base da referência final é um <see langword="RValue" />; Isso permite que você gere uma exceção de tempo de execução tardia atribuições para campos de <see langword="RValues" /> de tipos de valor. Caso contrário, é definido como <see langword="False" />.</param>
+        <param name="CallType">Um membro de enumeração do tipo <see cref="T:Microsoft.VisualBasic.CallType" /> representando o tipo de procedimento sendo chamado. O valor de CallType pode ser <see langword="Method" />, <see langword="Get" />, ou <see langword="Set" />. Somente <see langword="Set" /> é usado.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a operação de definição é o retorno de cópia de uma expressão de associação tardia sendo passado como um `ByRef` parâmetro `OptimisticSet` é usado para determinar se a operação de definição funcionará, pois a expressão latebound pode resultar em uma propriedade somente leitura ou um método. Para obter mais informações, consulte o parâmetro CopyBack de <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCall%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateSetComplex">
+      <MemberSignature Language="C#" Value="public static void LateSetComplex (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateSetComplex(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSetComplex(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Uma instância do objeto de chamada expondo a propriedade ou método.</param>
+        <param name="Type">O tipo do objeto de chamada.</param>
+        <param name="MemberName">O nome da propriedade ou método no objeto de chamada.</param>
+        <param name="Arguments">Uma matriz que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <param name="ArgumentNames">Uma matriz de nomes de argumento.</param>
+        <param name="TypeArguments">Uma matriz de tipos de argumento, usada somente para chamadas genéricas para passar tipos de argumento.</param>
+        <param name="OptimisticSet">Um <see langword="Boolean" /> valor usado para determinar se a operação de definição funcionará. Definido como <see langword="True" /> quando você acreditar que um valor intermediário foi definido na propriedade ou campo; caso contrário, <see langword="False" />.</param>
+        <param name="RValueBase">Um <see langword="Boolean" /> valor que especifica quando a referência de base da referência final é um <see langword="RValue" />. Definido como <see langword="True" /> quando a referência de base da referência final é um <see langword="RValue" />; Isso permite que você gere uma exceção de tempo de execução tardia atribuições para campos de <see langword="RValues" /> de tipos de valor. Caso contrário, é definido como <see langword="False" />.</param>
+        <summary>Executa uma associação tardia chamada de gravação do conjunto de propriedade ou campo. Esse método auxiliar não deve ser chamado diretamente do seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semelhante ao <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet%2A> exceto que este método é usado com expressões complexas (por exemplo, expressões entre parênteses).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

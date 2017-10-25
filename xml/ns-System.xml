@@ -1,0 +1,17 @@
+<Namespace Name="System">
+  <Docs>
+    <summary>O <see cref="N:System" /> namespace contém classes fundamentais e as classes base que definem tipos de dados valor e referência usados com frequência, eventos e manipuladores de eventos, interfaces, atributos e exceções de processamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Outras classes que fornecem serviços de suporte para a conversão de tipo de dados, manipulação de parâmetros de método, matemática, invocação de programa local e remota, gerenciamento do ambiente de aplicativo e supervisão de aplicativos gerenciados e não gerenciados.  
+  
+ Para tipos de acesso no <xref:System> namespace de código c# sem precisar fornecer nomes de tipo totalmente qualificado, incluem o `using System;` instrução no início do seu arquivo de código fonte.  
+  
+ Para tipos de acesso no <xref:System> namespace do C + + código sem precisar fornecer nomes de tipo totalmente qualificado, incluem o `using namespace System;` instrução no início do seu arquivo de código fonte. Além disso, você deve compilar com o [/clr](http://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c) alternar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

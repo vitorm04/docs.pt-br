@@ -1,0 +1,44 @@
+<Type Name="DataGridViewRowErrorTextNeededEventHandler" FullName="System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewRowErrorTextNeededEventHandler(object sender, DataGridViewRowErrorTextNeededEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewRowErrorTextNeededEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Forms.DataGridView.RowErrorTextNeeded" /> de <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento ocorre somente quando o <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.DataSource%2A> está definida ou seu <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> é de propriedade `true`. Manipulando o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento é útil quando você quiser determinar o erro para uma linha, dependendo de seu estado e os valores que ele contém.  
+  
+ Quando você processa o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> eventos e especifique o texto de erro no manipulador de um glifo de erro é exibida no cabeçalho da linha, a menos que o <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A?displayProperty=nameWithType> está definida como `false`. Quando o usuário move o ponteiro do mouse sobre o glifo de erro, o texto de erro é exibida em uma dica de ferramenta.  
+  
+ O <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento também ocorre sempre que o valor da <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A?displayProperty=nameWithType> propriedade é recuperada.  
+  
+ Você pode usar o <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.RowIndex%2A?displayProperty=nameWithType> propriedade para determinar o estado ou o valor de uma linha e use essas informações para alterar ou modificar o <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText%2A?displayProperty=nameWithType> propriedade. Essa propriedade é inicializada com o valor da linha <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> propriedade, que substitui o valor do evento.  
+  
+ Manipular o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> eventos ao trabalhar com grandes quantidades de dados para evitar as penalidades de desempenho de definir a linha <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> valor para várias linhas. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Quando você cria um <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

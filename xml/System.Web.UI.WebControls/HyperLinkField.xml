@@ -1,0 +1,689 @@
+<Type Name="HyperLinkField" FullName="System.Web.UI.WebControls.HyperLinkField">
+  <TypeSignature Language="C#" Value="public class HyperLinkField : System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HyperLinkField extends System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.HyperLinkField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataControlField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um campo exibido como um hiperlink em um controle de associação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField> classe é usada por controles de associação de dados (como <xref:System.Web.UI.WebControls.GridView> e <xref:System.Web.UI.WebControls.DetailsView>) para exibir um hiperlink para cada registro exibido. Quando o usuário clica em um hiperlink, ele ou ela é direcionada para a página da Web associada ao hiperlink. O <xref:System.Web.UI.WebControls.HyperLinkField> objeto é exibido de modo diferente dependendo do controle associado a dados no qual ele é usado. Por exemplo, o <xref:System.Web.UI.WebControls.GridView> controle exibe um <xref:System.Web.UI.WebControls.HyperLinkField> objeto como uma coluna, enquanto o <xref:System.Web.UI.WebControls.DetailsView> controle exibe como uma linha.  
+  
+ Para especificar a legenda a ser exibida para os hiperlinks, use o <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> propriedade. Use o <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedade para especificar a URL para navegar quando um hiperlink é clicado. Se você deseja exibir o conteúdo vinculado em uma janela específica ou um quadro, defina o <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade.  
+  
+> [!NOTE]
+>  Quando o <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedades forem definidas, todos os hiperlinks no <xref:System.Web.UI.WebControls.HyperLinkField> objeto compartilham a mesma URL de navegação e legenda. Da mesma forma, o <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade também se aplica a todos os hiperlinks.  
+  
+ Como alternativa, você pode vincular o <xref:System.Web.UI.WebControls.HyperLinkField> objeto a campos em uma fonte de dados. Isso permite que você exibir uma legenda diferente para cada hiperlink no <xref:System.Web.UI.WebControls.HyperLinkField> objeto e ter cada hiperlink navegue até um local diferente. Para vincular um campo a uma legenda, defina o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade. Para criar uma URL de navegação, defina o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade a uma lista separada por vírgulas de campos a serem usados para criar a URL.  
+  
+ Você pode especificar um formato personalizado para as legendas e as URLs de navegação, definindo o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString%2A> propriedades, respectivamente.  
+  
+ Você pode ocultar uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto em um controle associado a dados, definindo o <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> propriedade `false`.  
+  
+ Você pode personalizar as seções de cabeçalho e rodapé de um <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Para exibir uma legenda nas seções de cabeçalho ou rodapé de página, defina o <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> ou <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> propriedades, respectivamente. Para exibir uma imagem na seção de cabeçalho, em vez de texto, defina o <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> propriedade. A seção de cabeçalho pode estar ocultos no <xref:System.Web.UI.WebControls.HyperLinkField> objeto definindo o <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> propriedade `false`.  
+  
+> [!NOTE]
+>  Alguns controles associados a dados (como o <xref:System.Web.UI.WebControls.GridView> controle) pode mostrar ou ocultar apenas a seção de cabeçalho inteiro do controle. Esses controles associados a dados não oferecem suporte a <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> propriedade para um campo associado individual. Para mostrar ou ocultar a seção de cabeçalho inteiro de um controle associado a dados, use o controle `ShowHeader` propriedade (se disponível).  
+  
+ Você também pode personalizar a aparência do <xref:System.Web.UI.WebControls.HyperLinkField> objeto (cor da fonte, cor do plano de fundo e assim por diante), definindo as propriedades de estilo para as diferentes partes do campo. A tabela a seguir lista as propriedades de estilo diferente.  
+  
+|Propriedade de estilo|Descrição|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|As configurações de estilo para controles de servidor Web filho do <xref:System.Web.UI.WebControls.HyperLinkField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|As configurações de estilo para a seção de rodapé de <xref:System.Web.UI.WebControls.HyperLinkField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|As configurações de estilo para a seção de cabeçalho de <xref:System.Web.UI.WebControls.HyperLinkField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|As configurações de estilo dos itens de dados no <xref:System.Web.UI.WebControls.HyperLinkField> objeto.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.HyperLinkField> objeto para exibir uma coluna de hiperlinks estáticos em um <xref:System.Web.UI.WebControls.GridView> controle. Cada hiperlink no <xref:System.Web.UI.WebControls.HyperLinkField> objeto compartilha a mesma URL de navegação e a legenda especificada pelo <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedades, respectivamente.  
+  
+ [!code-aspx-csharp[HyperLinkField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkField/CS/hyperlinkfieldcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkField/VB/hyperlinkfieldvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como associar um <xref:System.Web.UI.WebControls.HyperLinkField> objeto a campos em uma fonte de dados. O <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedades são usadas para especificar os campos para associar a legenda e a URL de navegação, respectivamente, de cada hiperlink exibido no <xref:System.Web.UI.WebControls.HyperLinkField> objeto.  
+  
+ [!code-aspx-csharp[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/CS/hyperlinkfielddatatextformatstringcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/VB/hyperlinkfielddatatextformatstringvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HyperLinkField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.HyperLinkField> classe. Este construtor é comumente usado ao adicionar campos a um controle de associação de dados criado dinamicamente.  
+  
+ Adicionar dinamicamente um <xref:System.Web.UI.WebControls.HyperLinkField> de objeto para um controle associado a dados, crie um novo <xref:System.Web.UI.WebControls.HyperLinkField> do objeto, defina suas propriedades e, em seguida, adicioná-lo à coleção de campos do controle associado a dados. Por exemplo, se você estiver usando o <xref:System.Web.UI.WebControls.GridView> de controle, adicione o <xref:System.Web.UI.WebControls.HyperLinkField> o objeto para o <xref:System.Web.UI.WebControls.GridView.Columns%2A> coleção.  
+  
+> [!NOTE]
+>  Embora dinamicamente, você pode adicionar campos a um controle associado a dados, é altamente recomendável que campos ser estaticamente declarados e, em seguida, mostrado ou oculto, conforme apropriado. Declarar estaticamente todos os seus campos reduz o tamanho do estado de exibição para o controle de associação de dados pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o construtor de adicionar dinamicamente um <xref:System.Web.UI.WebControls.HyperLinkField> o objeto para um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[HyperLinkFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkFieldCtor/CS/hyperlinkfieldctorcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkFieldCtor/VB/hyperlinkfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">O <see cref="T:System.Web.UI.WebControls.DataControlField" />-derivados do objeto que recebe a cópia.</param>
+        <summary>Copia as propriedades do atual <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> objeto para o objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField.CopyProperties%2A> método é chamado pelo <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> método para copiar as propriedades do atual <xref:System.Web.UI.WebControls.HyperLinkField> objeto para outro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma nova instância do <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> classe.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField.CreateField%2A> método é chamado pelo <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> método para criar uma nova instância do <xref:System.Web.UI.WebControls.HyperLinkField> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataNavigateUrlFields">
+      <MemberSignature Language="C#" Value="public virtual string[] DataNavigateUrlFields { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DataNavigateUrlFields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.DataFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os nomes dos campos da fonte de dados usada para construir as URLs dos hiperlinks no objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</summary>
+        <value>Uma matriz que contém os nomes dos campos da fonte de dados usada para construir as URLs dos hiperlinks no <see cref="T:System.Web.UI.WebControls.HyperLinkField" />. O padrão é uma matriz vazia, indicando que <see cref="P:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields" /> não foi definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade quando a fonte de dados contém vários campos que devem ser combinados para criar hiperlinks para o <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Os campos especificados no <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade são combinados com a cadeia de caracteres de formato no <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString%2A> propriedade para construir os hiperlinks a <xref:System.Web.UI.WebControls.HyperLinkField> objeto.  
+  
+> [!NOTE]
+>  Quando você define o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade com o código declarativo em um arquivo. aspx, use uma lista separada por vírgulas de nomes de campos.  
+  
+ Em vez de usar essa propriedade para associar as URLs de hiperlinks para um campo, você pode usar o <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedade para definir a URL os hiperlinks para um valor estático. Com essa opção, cada hiperlink compartilha a mesma URL.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataNavigateUrlFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataNavigateUrlFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataNavigateUrlFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres que especifica o formato no qual as URLs dos hiperlinks em um objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> são renderizadas.</summary>
+        <value>Uma cadeia de caracteres que especifica o formato em que as URLs de hiperlinks em um <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> são renderizadas. O padrão é uma cadeia de caracteres vazia (""), o que indica que nenhuma formatação especial é aplicada aos valores da URL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString%2A> propriedade para especificar um formato personalizado para as URLs de hiperlinks em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Se o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString%2A> propriedade não for definida, URLs os hiperlinks não receberá nenhuma formatação especial.  
+  
+> [!NOTE]
+>  A cadeia de caracteres de formato é aplicada apenas quando o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> está definida.  
+  
+ A cadeia de caracteres de formato pode ser qualquer cadeia de caracteres literal e geralmente inclui um espaço reservado para o valor do campo. Por exemplo, na cadeia de formato "valor do Item: {0}", o espaço reservado {0} é substituído pelo valor do campo no <xref:System.Web.UI.WebControls.HyperLinkField> objeto. O restante da cadeia de caracteres de formato é exibido como texto literal.  
+  
+> [!NOTE]
+>  Se a cadeia de caracteres de formato não incluir um espaço reservado, o valor do campo da fonte de dados não está incluído no texto da exibição final.  
+  
+ O espaço reservado consiste em duas partes, separadas por dois-pontos e encapsulado entre chaves, na forma {`A`:`Bxx`}. O valor antes de dois-pontos (`A` no exemplo geral) Especifica o índice do valor de campo em uma lista com base em zero de parâmetros.  
+  
+> [!NOTE]
+>  Esse parâmetro é parte da sintaxe da formatação. Porque não há valor de apenas um campo em cada célula, esse valor só pode ser definido como 0.  
+  
+ Os dois-pontos e os valores após os dois-pontos são opcionais. O caractere após os dois-pontos (`B` no exemplo geral) Especifica o formato no qual exibir o valor. A tabela a seguir lista os formatos comuns.  
+  
+|Formato de caractere|Descrição|  
+|----------------------|-----------------|  
+|`C`|Exibe valores numéricos em formato de moeda.|  
+|`D`|Exibe valores numéricos em formato decimal.|  
+|`E`|Exibe valores numéricos em formato científico de (exponencial).|  
+|`F`|Exibe valores numéricos em um formato fixo.|  
+|`G`|Exibe os valores numéricos de formato em geral.|  
+|`N`|Exibe valores numéricos em formato de número.|  
+|`X`|Exibe valores numéricos em formato hexadecimal.|  
+  
+> [!NOTE]
+>  Os caracteres de formato não diferenciam maiusculas de minúsculas, exceto para `X`, que exibe os caracteres hexadecimais no caso especificado.  
+  
+ O valor após o caractere de formato (`xx` no exemplo geral) Especifica o número de dígitos significativos ou casas decimais a serem exibidas. Por exemplo, a cadeia de caracteres de formato "{0: F2}" exibe um número de ponto fixo com duas casas decimais.  
+  
+ Para mais informações sobre cadeias de caracteres de formatação, consulte [Tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString%2A> propriedade para especificar um formato personalizado para aplicar as URLs de navegação dos hiperlinks exibidos em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto. O valor do campo especificado pelo <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade é passada como uma cadeia de caracteres de consulta para uma página da Web especificada na cadeia de formato.  
+  
+ [!code-aspx-csharp[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/CS/hyperlinkfielddatatextformatstringcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/VB/hyperlinkfielddatatextformatstringvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextField">
+      <MemberSignature Language="C#" Value="public virtual string DataTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.DataTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados que contém o texto a ser exibido nas legendas de hiperlink no objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</summary>
+        <value>O nome do campo da fonte de dados que contém os valores a serem exibidos para as legendas de hiperlink no <see cref="T:System.Web.UI.WebControls.HyperLinkField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade para especificar o nome do campo que contém o texto a ser exibida para as legendas hiperlink o <xref:System.Web.UI.WebControls.HyperLinkField> objeto.  
+  
+ Em vez de usar essa propriedade para associar as legendas de hiperlink para um campo, você pode usar o <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> propriedade para definir as legendas de hiperlink para um valor estático. Com essa opção, cada hiperlink compartilha a mesma legenda.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade para especificar um campo da fonte de dados para associar as legendas de hiperlink exibidas em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto.  
+  
+ [!code-aspx-csharp[HyperLinkFieldDataBind#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkFieldDataBind/CS/hyperlinkfielddatabindcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkFieldDataBind#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkFieldDataBind/VB/hyperlinkfielddatabindvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString%2A> propriedade para formatar os valores associados às legendas de hiperlink exibidas em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Os valores são formatados como moeda.  
+  
+ [!code-aspx-csharp[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/CS/hyperlinkfielddatatextformatstringcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/VB/hyperlinkfielddatatextformatstringvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataTextFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres que especifica o formato no qual as legendas de hiperlink em um objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> são exibidas.</summary>
+        <value>Uma cadeia de caracteres que especifica o formato no qual as legendas de hiperlink em um <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> são exibidas. O padrão é uma cadeia de caracteres vazia (""), o que indica que nenhuma formatação especial é aplicada às legendas de hiperlink.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString%2A> propriedade para especificar um formato de exibição personalizado para as legendas exibidas no <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Se o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString%2A> propriedade não for definida, o valor do campo será exibido sem qualquer formatação especial.  
+  
+> [!NOTE]
+>  A cadeia de caracteres de formato é aplicada apenas quando o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> está definida.  
+  
+ A cadeia de caracteres de formato pode ser qualquer cadeia de caracteres literal e geralmente inclui um espaço reservado para o valor do campo. Por exemplo, na cadeia de formato "valor de Item: {0}", {0} espaço reservado é substituído com o valor do campo quando ele for exibido no <xref:System.Web.UI.WebControls.HyperLinkField> objeto. O restante da cadeia de caracteres de formato é exibido como texto literal.  
+  
+> [!NOTE]
+>  Se a cadeia de caracteres de formato não incluir um espaço reservado, o valor do campo da fonte de dados não está incluído no texto da exibição final.  
+  
+ O espaço reservado consiste em duas partes, separadas por dois-pontos e encapsulado entre chaves, na forma {`A`:`Bxx`}. O valor antes de dois-pontos (`A` no exemplo geral) Especifica o índice do valor de campo em uma lista com base em zero de parâmetros.  
+  
+> [!NOTE]
+>  Esse parâmetro é parte da sintaxe da formatação. Porque não há valor de apenas um campo em cada célula, esse valor só pode ser definido como 0.  
+  
+ Os dois-pontos e os valores após os dois-pontos são opcionais. O caractere após os dois-pontos (`B` no exemplo geral) Especifica o formato no qual exibir o valor. A tabela a seguir lista os formatos comuns.  
+  
+|Formato de caractere|Descrição|  
+|----------------------|-----------------|  
+|`C`|Exibe valores numéricos em formato de moeda.|  
+|`D`|Exibe valores numéricos em formato decimal.|  
+|`E`|Exibe valores numéricos em formato científico de (exponencial).|  
+|`F`|Exibe valores numéricos em um formato fixo.|  
+|`G`|Exibe os valores numéricos de formato em geral.|  
+|`N`|Exibe valores numéricos em formato de número.|  
+|`X`|Exibe valores numéricos em formato hexadecimal.|  
+  
+> [!NOTE]
+>  Os caracteres de formato não diferenciam maiusculas de minúsculas, exceto para `X`, que exibe os caracteres hexadecimais no caso especificado.  
+  
+ O valor após o caractere de formato (`xx` no exemplo geral) Especifica o número de dígitos significativos ou casas decimais a serem exibidas. Por exemplo, a cadeia de caracteres de formato "{0: F2}" exibe um número de ponto fixo com duas casas decimais.  
+  
+ Para mais informações sobre cadeias de caracteres de formatação, consulte [Tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString%2A> propriedade para formatar os valores associados às legendas de hiperlink exibidas em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Os valores são formatados como moeda.  
+  
+ [!code-aspx-csharp[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/CS/hyperlinkfielddatatextformatstringcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkFieldDataTextFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkFieldDataTextFormatString/VB/hyperlinkfielddatatextformatstringvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDataNavigateUrlValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatDataNavigateUrlValue (object[] dataUrlValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatDataNavigateUrlValue(object[] dataUrlValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.FormatDataNavigateUrlValue(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataUrlValues" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="dataUrlValues">Uma matriz de valores para combinar com a cadeia de caracteres de formato.</param>
+        <summary>Formata a URL de navegação usando a cadeia de caracteres de formato especificada pelo <see cref="P:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString" /> propriedade.</summary>
+        <returns>O valor formatado da URL.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField.FormatDataNavigateUrlValue%2A> é um método auxiliar usado para formatar a URL de um hiperlink em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto com a cadeia de caracteres de formato especificado pelo <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFormatString%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDataTextValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatDataTextValue (object dataTextValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatDataTextValue(object dataTextValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.FormatDataTextValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTextValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataTextValue">O valor de texto para o formato.</param>
+        <summary>Formata o texto de legenda usando a cadeia de caracteres de formato especificada pelo <see cref="P:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString" /> propriedade.</summary>
+        <returns>O valor de texto formatado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField.FormatDataTextValue%2A> é um método auxiliar usado para formatar o texto da legenda de um hiperlink em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto com a cadeia de caracteres de formato especificado pelo <xref:System.Web.UI.WebControls.HyperLinkField.DataTextFormatString%2A> propriedade.  
+  
+> [!NOTE]
+>  Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override bool Initialize (bool enableSorting, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Initialize(bool enableSorting, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.Initialize(System.Boolean,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enableSorting" Type="System.Boolean" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="enableSorting">
+          <see langword="true" />se há suporte para classificação; Caso contrário, <see langword="false" />.</param>
+        <param name="control">O controle de dados que atua como o pai para o <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</param>
+        <summary>Inicializa o objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Um <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> que contém o texto ou controles o <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</param>
+        <param name="cellType">Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlCellType" />.</param>
+        <param name="rowState">Uma da <see cref="T:System.Web.UI.WebControls.DataControlRowState" /> valores que especifica o estado da linha que contém o <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</param>
+        <param name="rowIndex">O índice da linha na tabela.</param>
+        <summary>Inicializa uma célula em uma <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField.InitializeCell%2A> método é chamado pelo controle associado a dados que contém o <xref:System.Web.UI.WebControls.HyperLinkField> objeto para inicializar um <xref:System.Web.UI.WebControls.HyperLink> controle com o texto e a URL do link.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public virtual string NavigateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para navegar quando se clica em um hiperlink em um objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</summary>
+        <value>A URL para navegar quando se clica em um hiperlink em um <see cref="T:System.Web.UI.WebControls.HyperLinkField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedade para especificar a URL para navegar quando um hiperlink em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto é clicado. Quando essa propriedade for definida, cada hiperlink compartilha a mesma URL de navegação.  
+  
+ Em vez de usar essa propriedade para definir a URL de hiperlinks, você pode usar o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade para associar as URLs de hiperlinks para um campo em uma fonte de dados. Isso permite que você tenha uma URL diferente para cada hiperlink.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.HyperLinkField.DataNavigateUrlFields%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.NavigateUrl%2A> propriedade para especificar uma página da Web estática para navegar quando um hiperlink em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto é clicado.  
+  
+ [!code-aspx-csharp[HyperLinkField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkField/CS/hyperlinkfieldcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkField/VB/hyperlinkfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public virtual string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.TargetConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a janela de destino ou quadro no qual exibir a página da Web vinculada quando um hiperlink em um objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> é clicado.</summary>
+        <value>A janela de destino ou o quadro no qual carregar a página da Web vinculada quando um hiperlink em um <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> é clicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade para especificar a janela ou quadro no qual exibir o conteúdo da Web vinculada a um hiperlink quando esse hiperlink é clicado.  
+  
+ Os valores devem começar com uma letra no intervalo À Z (maiusculas de minúsculas), exceto para os valores especiais listados na tabela a seguir, cada uma delas começa com um sublinhado.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|`_blank`|Renderiza o conteúdo em uma nova janela sem quadros.|  
+|`_parent`|Renderiza o conteúdo no conjunto de quadros pai.|  
+|`_search`|Renderiza o conteúdo no painel de pesquisa.|  
+|`_self`|Renderiza o conteúdo do quadro com foco.|  
+|`_top`|Renderiza o conteúdo na janela inteira sem quadros.|  
+  
+> [!NOTE]
+>  Verifique a documentação do navegador para determinar se o `_search` valor tem suporte. Por exemplo, Microsoft Internet Explorer 5.0 e versões posteriores oferecem suporte a `_search` valor de destino.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade é renderizada como um `target` atributo. O `target` atributo no `anchor` elementos não é permitido na definição do tipo de documento XHTML 1.1. Não defina o <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade se a saída renderizada para o <xref:System.Web.UI.WebControls.HyperLinkField> objeto deve ser compatível com 1.1 XHTML. Para obter mais informações, consulte o tópico [padrões XHTML no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Ao criar páginas da Web acessíveis, é altamente recomendável evitar o uso de <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade a outra janela de destino. Para obter mais informações, consulte [NIB: acessibilidade ASP.NET](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.Target%2A> propriedade para especificar uma janela de destino no qual exibir o conteúdo da página da Web associada a um hiperlink em uma <xref:System.Web.UI.WebControls.HyperLinkField> objeto. A página da Web vinculada é exibida em uma nova janela quando o hiperlink é clicado.  
+  
+ [!code-aspx-csharp[HyperLinkField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkField/CS/hyperlinkfieldcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkField/VB/hyperlinkfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HyperLinkField.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido para cada hiperlink no objeto <see cref="T:System.Web.UI.WebControls.HyperLinkField" />.</summary>
+        <value>O texto a ser exibido para cada hiperlink no <see cref="T:System.Web.UI.WebControls.HyperLinkField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> propriedade para especificar a legenda a ser exibida para os hiperlinks em um <xref:System.Web.UI.WebControls.HyperLinkField> objeto. Quando essa propriedade for definida, cada hiperlink compartilha a mesma legenda.  
+  
+ Em vez de usar essa propriedade para definir as legendas de hiperlink, você pode usar o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade para associar as legendas de hiperlink para um campo em uma fonte de dados. Isso permite que você exibir uma legenda diferente para cada hiperlink.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> e <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.HyperLinkField.DataTextField%2A> propriedade terá precedência.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.HyperLinkField.Text%2A> propriedade para especificar uma legenda estática a ser exibida para os hiperlinks em um <xref:System.Web.UI.WebControls.HyperLinkField> objeto.  
+  
+ [!code-aspx-csharp[HyperLinkField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkField/CS/hyperlinkfieldcs.aspx#1)]
+ [!code-aspx-vb[HyperLinkField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkField/VB/hyperlinkfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HyperLinkField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que os controles contidos pelo <see cref="T:System.Web.UI.WebControls.HyperLinkField" /> retornos de chamada do suporte do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.HyperLinkField.ValidateSupportsCallback%2A> método substitui o padrão <xref:System.Web.UI.WebControls.DataControlField.ValidateSupportsCallback%2A?displayProperty=nameWithType> método para indicar que os controles contidos no <xref:System.Web.UI.WebControls.HyperLinkField> retornos de chamada do suporte do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

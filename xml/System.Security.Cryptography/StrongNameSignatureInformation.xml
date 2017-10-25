@@ -1,0 +1,124 @@
+<Type Name="StrongNameSignatureInformation" FullName="System.Security.Cryptography.StrongNameSignatureInformation">
+  <TypeSignature Language="C#" Value="public sealed class StrongNameSignatureInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StrongNameSignatureInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.StrongNameSignatureInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém as informações de assinatura de nome forte de um manifesto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public string HashAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.StrongNameSignatureInformation.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o algoritmo de hash que é usado para calcular a assinatura de nome forte.</summary>
+        <value>O nome do algoritmo de hash que é usado para calcular a assinatura de nome forte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HResult">
+      <MemberSignature Language="C#" Value="public int HResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.StrongNameSignatureInformation.HResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor HRESULT do código de resultado.</summary>
+        <value>O valor HRESULT do código de resultado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.StrongNameSignatureInformation.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a assinatura de nome forte é válida.</summary>
+        <value>
+          <see langword="true" />Se a assinatura de nome forte é válida. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.AsymmetricAlgorithm PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.AsymmetricAlgorithm PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.StrongNameSignatureInformation.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave pública que é usada para verificar a assinatura.</summary>
+        <value>A chave pública que é usada para verificar a assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O único caso retorna `null` quando <xref:System.Security.Cryptography.StrongNameSignatureInformation.IsValid%2A> é `false`.  Se a assinatura for válida, sempre haverá uma chave.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationResult">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.SignatureVerificationResult VerificationResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.SignatureVerificationResult VerificationResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.StrongNameSignatureInformation.VerificationResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SignatureVerificationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os resultados da verificação da assinatura de nome forte.</summary>
+        <value>Os códigos de resultado para verificação de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade e o <xref:System.Security.Cryptography.StrongNameSignatureInformation.HResult%2A> são duas maneiras de determinar se ocorreu um erro durante a verificação. Essa propriedade lista erros bem conhecidos que podem ocorrer. O <xref:System.Security.Cryptography.StrongNameSignatureInformation.HResult%2A> propriedade pode ser verificada se o erro não é coberto pelo <xref:System.Security.Cryptography.SignatureVerificationResult> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

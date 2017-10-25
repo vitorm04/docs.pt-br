@@ -1,0 +1,61 @@
+<Type Name="IWcfReferenceReceiveContextInformation" FullName="System.Web.Compilation.IWcfReferenceReceiveContextInformation">
+  <TypeSignature Language="C#" Value="public interface IWcfReferenceReceiveContextInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWcfReferenceReceiveContextInformation" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IWcfReferenceReceiveContextInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface para implementar para obter informações de contexto adicional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que o WSDL importador mechanismto receber informações de contexto extra para melhor geração de proxy e um desenvolvedor melhor experiência de dentro do Visual Studio. Se o importador WSDL implementa o <xref:System.Web.Compilation.IWcfReferenceReceiveContextInformation> interface, o `ReceiveImportContextInformation` método será chamado pelo gerador de proxy de WCF antes que qualquer método de <xref:System.ServiceModel.Description.IWsdlImportExtension> e <xref:System.ServiceModel.Description.IPolicyImportExtension> são chamados.  
+  
+ As informações de contexto adicional refere-se aos parâmetros passados para o `ReceiveImportContextInformation` método. Os parâmetros incluem o conteúdo de qualquer arquivo de extensão e uma referência a um objeto que implementa o <xref:System.IServiceProvider> interface. Os arquivos de extensão passados para o método são específicos para o importador e são usados para armazenar informações adicionais que precisam. Ou seja, o Visual Studio não controla o conteúdo desses arquivos e não usá-los diretamente.  
+  
+> [!NOTE]
+>  Importadores se referir a um mecanismo de extensibilidade do WCF. Esse mecanismo permite que você personalize a forma como o código de proxy é gerado a partir de documentos de metadados (WSDL/XSD) que descrevem o serviço. Para obter mais informações, consulte [importando metadados personalizados para uma extensão do WCF](http://go.microsoft.com/fwlink/?LinkId=92310) no MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveImportContextInformation">
+      <MemberSignature Language="C#" Value="public void ReceiveImportContextInformation (System.Collections.Generic.IDictionary&lt;string,byte[]&gt; serviceReferenceExtensionFileContents, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReceiveImportContextInformation(class System.Collections.Generic.IDictionary`2&lt;string, unsigned int8[]&gt; serviceReferenceExtensionFileContents, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IWcfReferenceReceiveContextInformation.ReceiveImportContextInformation(System.Collections.Generic.IDictionary{System.String,System.Byte[]},System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceReferenceExtensionFileContents" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Byte[]&gt;" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceReferenceExtensionFileContents">Fornece o conteúdo dos arquivos de extensão que estão associados com o arquivo svcmap de uma referência de serviço do WCF.</param>
+        <param name="serviceProvider">Uma referência a um provedor de serviços do Visual Studio a ser consultado para obter informações adicionais.</param>
+        <summary>Obtém informações de contexto adicional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `serviceReferenceExtensionFileContents` parâmetro fornece o conteúdo dos arquivos de extensão associado ao arquivo. svcmap de uma referência de serviço do WCF, como Reference.config ou arquivos de extensão personalizada que foram adicionados por meio de extensibilidade.  
+  
+> [!NOTE]
+>  Nenhuma interface recebida do provedor de serviço que é específico para o Visual Studio não estarão disponível para uma extensão de importação quando em execução no contexto de um provedor de compilação do ASP.NET. Esse é o caso quando uma referência de serviço do WCF é compilada em um projeto do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

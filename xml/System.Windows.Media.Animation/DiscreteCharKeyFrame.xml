@@ -1,0 +1,126 @@
+<Type Name="DiscreteCharKeyFrame" FullName="System.Windows.Media.Animation.DiscreteCharKeyFrame">
+  <TypeSignature Language="C#" Value="public class DiscreteCharKeyFrame : System.Windows.Media.Animation.CharKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscreteCharKeyFrame extends System.Windows.Media.Animation.CharKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.DiscreteCharKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.CharKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Anima do valor <see cref="T:System.Char" /> do quadro chave anterior para seu próprio <see cref="P:System.Windows.Media.Animation.CharKeyFrame.Value" /> com interpolação discreta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada como parte de um <xref:System.Windows.Media.Animation.CharKeyFrameCollection> em conjunto com um <xref:System.Windows.Media.Animation.CharAnimationUsingKeyFrames> para animar uma <xref:System.Char> valor da propriedade ao longo de um conjunto de quadros-chave.  
+  
+ Um quadro-chave define um segmento do <xref:System.Windows.Media.Animation.CharAnimationUsingKeyFrames> ao qual ela pertence. Cada quadro chave tem um destino <xref:System.Windows.Media.Animation.CharKeyFrame.Value%2A> e um <xref:System.Windows.Media.Animation.CharKeyFrame.KeyTime%2A>. O <xref:System.Windows.Media.Animation.CharKeyFrame.KeyTime%2A> Especifica a hora em que o quadro chave <xref:System.Windows.Media.Animation.CharKeyFrame.Value%2A> devem ser atingido. Um quadro chave anima do valor de destino de quadro chave anterior a seu próprio valor de destino. Ele começa quando o quadro chave anterior termina e termina quando é atingido sua própria chave de tempo.  
+  
+ Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteCharKeyFrame> criar "saltos" repentinos entre valores (sem interpolação). Em outras palavras, a propriedade animada não altera até que o tempo de chave do quadro chave seja atingido no ponto em que a propriedade animada repentinamente vai para o valor de destino.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteCharKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteCharKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.DiscreteCharKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteCharKeyFrame (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteCharKeyFrame.#ctor(System.Char)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.DiscreteCharKeyFrame" /> classe com o valor final especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteCharKeyFrame (char value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteCharKeyFrame.#ctor(System.Char,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <param name="keyTime">Chave de tempo para o quadro-chave. O tempo de chave determina quando o valor de destino é atingido que também é quando o quadro chave termina.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.DiscreteCharKeyFrame" /> classe com o valor e chave de hora especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteCharKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Windows.Media.Animation.DiscreteCharKeyFrame" />.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Windows.Media.Animation.DiscreteCharKeyFrame" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override char InterpolateValueCore (char baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance char InterpolateValueCore(char baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteCharKeyFrame.InterpolateValueCore(System.Char,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Char" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Interpola entre o valor anterior de quadro-chave e o valor do quadro chave atual usando a interpolação discreta.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

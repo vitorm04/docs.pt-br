@@ -1,0 +1,133 @@
+<Type Name="IPEndPointCollection" FullName="System.Net.IPEndPointCollection">
+  <TypeSignature Language="C#" Value="public class IPEndPointCollection : System.Collections.ObjectModel.Collection&lt;System.Net.IPEndPoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IPEndPointCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Net.IPEndPoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Net.IPEndPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Net.IPEndPoint&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Net.IPEndPoint</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção usada para armazenar os pontos de extremidade de rede como <see cref="T:System.Net.IPEndPoint" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IPEndPointCollection> classe é derivada do <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType> classe.  
+  
+ O <xref:System.Net.IPEndPoint> classe contém as informações de porta local ou remoto necessitados a um aplicativo para se conectar a um serviço em um host e o host. Combinando o endereço IP do host e número da porta de um serviço, o <xref:System.Net.IPEndPoint> classe formulários uma conexão ponto a um serviço.  
+  
+ O <xref:System.Net.IPEndPointCollection> classe é usada por classes de <xref:System.Net.PeerToPeer?displayProperty=nameWithType> namespace.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Um <see cref="T:System.Net.IPEndPointCollection" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada. Mesmo assim, enumerar através de uma coleção intrinsecamente não é um procedimento de thread-safe. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração. Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPEndPointCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPointCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.IPEndPointCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Net.IPEndPoint item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Net.IPEndPoint item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPointCollection.InsertItem(System.Int32,System.Net.IPEndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.IPEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>item</c> devem ser inseridos.</param>
+        <param name="item">O <see cref="T:System.Net.IPEndPoint" /> objeto a ser inserido. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Insere um <see cref="T:System.Net.IPEndPoint" /> elemento para o <see cref="T:System.Net.IPEndPointCollection" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.IPEndPointCollection>não aceita `null` como um valor válido. <xref:System.Net.IPEndPointCollection>permite que os elementos duplicados.  
+  
+ Se `index` é igual à contagem atual de itens no <xref:System.Net.IPEndPointCollection> , em seguida, o `item` é adicionada ao final da <xref:System.Net.IPEndPointCollection>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ObjectModel.Collection%601.Count%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parâmetro é menor que zero  
+  
+ -ou-  
+  
+ o <paramref name="index" /> parâmetro for maior que a contagem atual de itens de <see cref="T:System.Net.IPEndPointCollection" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="item" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Net.IPEndPoint item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Net.IPEndPoint item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPointCollection.SetItem(System.Int32,System.Net.IPEndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.IPEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser substituído.</param>
+        <param name="item">O novo <see cref="T:System.Net.IPEndPoint" /> valor para o elemento no índice especificado. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Substitui o <see cref="T:System.Net.IPEndPoint" /> elemento no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.IPEndPointCollection>não aceita `null` como um valor válido. <xref:System.Net.IPEndPointCollection>permite que os elementos duplicados.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parâmetro é menor que zero  
+  
+ -ou-  
+  
+ o <paramref name="index" /> parâmetro for maior que a contagem atual de itens de <see cref="T:System.Net.IPEndPointCollection" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="item" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

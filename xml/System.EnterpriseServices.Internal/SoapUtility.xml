@@ -1,0 +1,135 @@
+<Type Name="SoapUtility" FullName="System.EnterpriseServices.Internal.SoapUtility">
+  <TypeSignature Language="C#" Value="public sealed class SoapUtility : System.EnterpriseServices.Internal.ISoapUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapUtility extends System.Object implements class System.EnterpriseServices.Internal.ISoapUtility" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.SoapUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.ISoapUtility</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("5F9A955F-AA55-4127-A32B-33496AA8A44E")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece utilitários para oferecer suporte à exportação de proxies de aplicativo habilitado para SOAP COM+, o servidor e a importação de proxies pelo cliente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Funções de utilitário <xref:System.EnterpriseServices.Internal.SoapUtility> fornece são chamados de vários locais em COM+; no entanto, sua finalidade principal é dar suporte a exportação e importação de proxies de cliente.  
+  
+ <xref:System.EnterpriseServices.Internal.SoapUtility>é usado internamente pelo .NET Framework. Você não precisa usá-lo diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapUtility ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapUtility.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.Internal.SoapUtility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServerBinPath">
+      <MemberSignature Language="C#" Value="public void GetServerBinPath (string rootWebServer, string inBaseUrl, string inVirtualRoot, out string binPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetServerBinPath(string rootWebServer, string inBaseUrl, string inVirtualRoot, [out] string&amp; binPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapUtility.GetServerBinPath(System.String,System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootWebServer" Type="System.String" />
+        <Parameter Name="inBaseUrl" Type="System.String" />
+        <Parameter Name="inVirtualRoot" Type="System.String" />
+        <Parameter Name="binPath" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="rootWebServer">O servidor de Web raiz.</param>
+        <param name="inBaseUrl">O endereço de URL base.</param>
+        <param name="inVirtualRoot">O nome da raiz virtual.</param>
+        <param name="binPath">Quando este método retorna, este parâmetro contém o caminho do arquivo para o diretório bin SOAP raiz virtual.</param>
+        <summary>Retorna o caminho para o diretório bin do SOAP.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O utilitário SOAP não está disponível.</exception>
+        <exception cref="T:System.EnterpriseServices.ServicedComponentException">Falha na chamada para obter o diretório do sistema.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServerPhysicalPath">
+      <MemberSignature Language="C#" Value="public void GetServerPhysicalPath (string rootWebServer, string inBaseUrl, string inVirtualRoot, out string physicalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetServerPhysicalPath(string rootWebServer, string inBaseUrl, string inVirtualRoot, [out] string&amp; physicalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapUtility.GetServerPhysicalPath(System.String,System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootWebServer" Type="System.String" />
+        <Parameter Name="inBaseUrl" Type="System.String" />
+        <Parameter Name="inVirtualRoot" Type="System.String" />
+        <Parameter Name="physicalPath" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="rootWebServer">O servidor de Web raiz.</param>
+        <param name="inBaseUrl">O endereço de URL base.</param>
+        <param name="inVirtualRoot">O nome da raiz virtual.</param>
+        <param name="physicalPath">Quando este método retorna, este parâmetro contém o caminho do arquivo para a raiz virtual do SOAP.</param>
+        <summary>Retorna o caminho para a raiz virtual do SOAP.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O utilitário SOAP não está disponível.</exception>
+        <exception cref="T:System.EnterpriseServices.ServicedComponentException">Falha na chamada para obter o diretório do sistema.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Present">
+      <MemberSignature Language="C#" Value="public void Present ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Present() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapUtility.Present" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se autenticado, criptografados interfaces SOAP estão presentes.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O utilitário SOAP não está disponível.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

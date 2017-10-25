@@ -1,0 +1,449 @@
+<Type Name="MetadataSection" FullName="System.ServiceModel.Description.MetadataSection">
+  <TypeSignature Language="C#" Value="public class MetadataSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi MetadataSection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("MetadataSection", Namespace="http://schemas.xmlsoap.org/ws/2004/09/mex")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa metadados XML ou referências a metadados XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.MetadataSection> classe está de acordo com a definição do `wsx:Metadata/wsx:MetadataSection` elemento na especificação WS-Metadata Exchange e contém metadados XML ou referências a metadados XML.  
+  
+ Um <xref:System.ServiceModel.Description.MetadataSection> objeto contém um dialeto de metadados em formato XML (como um arquivo WSDL ou de Web Services Description Language). Você pode adicionar uma <xref:System.ServiceModel.Description.MetadataSection> para uma coleção de metadados XML representado por um <xref:System.ServiceModel.Description.MetadataSet> objeto. Quantidade do [!INCLUDE[indigo1](~/includes/indigo1-md.md)] sistema de metadados, como o <xref:System.ServiceModel.Description.MetadataExchangeClient> classe, use o <xref:System.ServiceModel.Description.MetadataSet> classe para importar ou exportar metadados de serviço em formato XML.  
+  
+ Por exemplo, para exportar [!INCLUDE[indigo2](~/includes/indigo2-md.md)] objetos de contrato ou ponto de extremidade para uma <xref:System.ServiceModel.Description.MetadataSet> objeto que contém os metadados equivalente na forma XML, chamar os métodos apropriados de exportação no <xref:System.ServiceModel.Description.WsdlExporter> classe, passando o <xref:System.ServiceModel.Description.ContractDescription> ou <xref:System.ServiceModel.Description.ServiceEndpoint> objetos e, em seguida, chame o <xref:System.ServiceModel.Description.WsdlExporter.GetGeneratedMetadata%2A> método.  
+  
+ Para importar os metadados com base em XML de um <xref:System.ServiceModel.Description.MetadataSet> do objeto em [!INCLUDE[indigo2](~/includes/indigo2-md.md)] <xref:System.ServiceModel.Description.ContractDescription>, <xref:System.ServiceModel.Description.ServiceEndpoint>, e <xref:System.ServiceModel.Channels.Binding> passar objetos, uma <xref:System.ServiceModel.Description.MetadataSet> objeto para o construtor do <xref:System.ServiceModel.Description.WsdlImporter> de classe e chamar um dos métodos de importação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.ServiceModel.Description.MetadataSection> objetos de um <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> e iterar através deles para gravar o <xref:System.ServiceModel.Description.MetadataSection.Identifier%2A> e <xref:System.ServiceModel.Description.MetadataSection.Dialect%2A> propriedades para o console.  
+  
+ [!code-csharp[MetadataResolver#3](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.MetadataSection" /> classe sem dialeto, um identificador ou um XML de metadados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataSection (string dialect, string identifier, object metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string dialect, string identifier, object metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataSection.#ctor(System.String,System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dialect" Type="System.String" />
+        <Parameter Name="identifier" Type="System.String" />
+        <Parameter Name="metadata" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dialect">O dialeto de metadados.</param>
+        <param name="identifier">Um identificador para os metadados.</param>
+        <param name="metadata">Os metadados XML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.MetadataSection" /> classe usando o dialeto especificado, o identificador e o XML de metadados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataSection.%23ctor%2A> construtor para especificar os metadados a serem incluídos neste <xref:System.ServiceModel.Description.MetadataSection>, o dialeto e seu identificador. O objeto de metadados deve ser serializável usando o <xref:System.Xml.Serialization.XmlSerializer> classe para que o <xref:System.ServiceModel.Description.MetadataSection> objeto pode ser serializado. Se ele não é serializável, uma exceção é lançada quando o objeto é serializado. Use um <xref:System.ServiceModel.Description.MetadataLocation> ou <xref:System.ServiceModel.Description.MetadataReference> de objeto para o `metadata` parâmetro se você quiser incluir uma referência aos metadados, em vez dos metadados em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlAttribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlAttribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAnyAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlAttribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de atributos XML que você pode usar para adicionar ou remover extensões de atributos nos metadados.</summary>
+        <value>A coleção de XML de atributos para o <see cref="T:System.ServiceModel.Description.MetadataSection" />. A coleção padrão está vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataSection.Attributes%2A> propriedade para adicionar ou remover extensões de atributo.  
+  
+> [!NOTE]
+>  Os atributos de dialeto e o identificador não são incluídos na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromPolicy">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.MetadataSection CreateFromPolicy (System.Xml.XmlElement policy, string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.MetadataSection CreateFromPolicy(class System.Xml.XmlElement policy, string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataSection.CreateFromPolicy(System.Xml.XmlElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataSection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="policy" Type="System.Xml.XmlElement" />
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="policy">Uma representação XML de uma política, conforme definido no WS-Policy.</param>
+        <param name="identifier">Um identificador para a política.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.Description.MetadataSection" /> das informações de política especificada.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Description.MetadataSection" /> que contém a expressão de política especificada com o identificador especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceModel.Description.MetadataSection.CreateFromPolicy%2A> método para criar um <xref:System.ServiceModel.Description.MetadataSection> para uma expressão de política WS-Policy. O <xref:System.ServiceModel.Description.MetadataSection.Dialect%2A> está definida como <xref:System.ServiceModel.Description.MetadataSection.PolicyDialect%2A> e o `identifier` é atribuído para o <xref:System.ServiceModel.Description.MetadataSection.Identifier%2A> propriedade. O identificador recomendado é o `wsp:Name` atributo para a expressão de política.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O elemento XML não é um elemento de diretiva.</exception>
+        <exception cref="T:System.ArgumentNullException">A política é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromSchema">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.MetadataSection CreateFromSchema (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.MetadataSection CreateFromSchema(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataSection.CreateFromSchema(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataSection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Um documento de esquema XML.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.Description.MetadataSection" /> especificado <see cref="T:System.Xml.Schema.XmlSchema" /> objeto.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Description.MetadataSection" /> que contém o esquema XML especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método de fábrica estáticos para criar rapidamente um <xref:System.ServiceModel.Description.MetadataSection> para um documento de esquema XML. O <xref:System.ServiceModel.Description.MetadataSection.Dialect%2A> é atribuído o valor da propriedade <xref:System.ServiceModel.Description.MetadataSection.XmlSchemaDialect%2A> e <xref:System.ServiceModel.Description.MetadataSection.Identifier%2A> propriedade é atribuída o valor do namespace de destino do documento de esquema XML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O esquema é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromServiceDescription">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.MetadataSection CreateFromServiceDescription (System.Web.Services.Description.ServiceDescription serviceDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.MetadataSection CreateFromServiceDescription(class System.Web.Services.Description.ServiceDescription serviceDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataSection.CreateFromServiceDescription(System.Web.Services.Description.ServiceDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataSection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">O <see cref="T:System.Web.Services.Description.ServiceDescription" /> usado para criar um <see cref="T:System.ServiceModel.Description.MetadataSection" /> objeto.</param>
+        <summary>Retorna um <see cref="T:System.ServiceModel.Description.MetadataSection" /> que contém especificado <see cref="T:System.Web.Services.Description.ServiceDescription" />.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Description.MetadataSection" /> que contém especificado <see cref="T:System.Web.Services.Description.ServiceDescription" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método de fábrica estáticos para criar rapidamente um <xref:System.ServiceModel.Description.MetadataSection> para um documento WSDL. O <xref:System.ServiceModel.Description.MetadataSection.Dialect%2A> é atribuído o valor da propriedade <xref:System.ServiceModel.Description.MetadataSection.ServiceDescriptionDialect%2A> e <xref:System.ServiceModel.Description.MetadataSection.Identifier%2A> propriedade é atribuída o valor do namespace de destino do documento WSDL.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="serviceDescription" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dialect">
+      <MemberSignature Language="C#" Value="public string Dialect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Dialect" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.Dialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o tipo de metadados.</summary>
+        <value>O dialeto para os metadados. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dialeto indica o tipo de metadados na <xref:System.ServiceModel.Description.MetadataSection>. As cadeias de caracteres de dialeto com modelos de objeto com suporte são:  
+  
+-   <xref:System.ServiceModel.Description.MetadataSection.MetadataExchangeDialect%2A>  
+  
+-   <xref:System.ServiceModel.Description.MetadataSection.PolicyDialect%2A>  
+  
+-   <xref:System.ServiceModel.Description.MetadataSection.ServiceDescriptionDialect%2A>  
+  
+-   <xref:System.ServiceModel.Description.MetadataSection.XmlSchemaDialect%2A>  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.ServiceModel.Description.MetadataSection> objetos de um <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> e iterar através deles para gravar o <xref:System.ServiceModel.Description.MetadataSection.Identifier%2A> e <xref:System.ServiceModel.Description.MetadataSection.Dialect%2A> propriedades para o console.  
+  
+ [!code-csharp[MetadataResolver#3](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identifier">
+      <MemberSignature Language="C#" Value="public string Identifier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Identifier" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.Identifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um identificador para os metadados.</summary>
+        <value>O identificador de metadados. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador de metadados na <xref:System.ServiceModel.Description.MetadataSection>. O valor depende do tipo de metadados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.ServiceModel.Description.MetadataSection> objetos de um <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> e iterar através deles para gravar o <xref:System.ServiceModel.Description.MetadataSection.Identifier%2A> e <xref:System.ServiceModel.Description.MetadataSection.Dialect%2A> propriedades para o console.  
+  
+ [!code-csharp[MetadataResolver#3](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public object Metadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAnyElement</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("Location", IsNullable=false, Namespace="http://schemas.xmlsoap.org/ws/2004/09/mex", Type=typeof(System.ServiceModel.Description.MetadataLocation))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("Metadata", IsNullable=false, Namespace="http://schemas.xmlsoap.org/ws/2004/09/mex", Type=typeof(System.ServiceModel.Description.MetadataSet))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("schema", IsNullable=false, Namespace="http://www.w3.org/2001/XMLSchema", Type=typeof(System.Xml.Schema.XmlSchema))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("definitions", IsNullable=false, Namespace="http://schemas.xmlsoap.org/wsdl/", Type=typeof(System.Web.Services.Description.ServiceDescription))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("MetadataReference", IsNullable=false, Namespace="http://schemas.xmlsoap.org/ws/2004/09/mex", Type=typeof(System.ServiceModel.Description.MetadataReference))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de metadados independente.</summary>
+        <value>Os conteúdos de metadados para este <see cref="T:System.ServiceModel.Description.MetadataSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataSection.Metadata%2A> propriedade para acessar ou modificar o conteúdo nos metadados contidos no <xref:System.ServiceModel.Description.MetadataSection>. O objeto de metadados pode ser <xref:System.ServiceModel.Description.MetadataReference> ou um <xref:System.ServiceModel.Description.MetadataLocation> como uma referência para o conteúdo de metadados. Quando um <xref:System.ServiceModel.Description.MetadataSection> é desserializado, o tipo do objeto de metadados é determinado do conteúdo do XML. A tabela a seguir descreve os possíveis valores de retorno.  
+  
+|Tipo de metadados XML|Tipo retornado|  
+|--------------------------|-------------------|  
+|Documento WSDL|<xref:System.Web.Services.Description.ServiceDescription?displayProperty=nameWithType>|  
+|esquema XML|<xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType>|  
+|Referência de metadados|<xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType>|  
+|Local de metadados|<xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType>|  
+|Política e qualquer outro conteúdo XML|<xref:System.Xml.XmlElement?displayProperty=nameWithType>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataExchangeDialect">
+      <MemberSignature Language="C#" Value="public static string MetadataExchangeDialect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MetadataExchangeDialect" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.MetadataExchangeDialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o valor de dialeto de troca de metadados.</summary>
+        <value>O dialeto para um documento do WS-Metadata Exchange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dialeto para um documento do WS-Metadata Exchange.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyDialect">
+      <MemberSignature Language="C#" Value="public static string PolicyDialect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PolicyDialect" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.PolicyDialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o valor do dialeto do WS-Policy.</summary>
+        <value>O dialeto de uma expressão de política WS-Policy.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dialeto de uma expressão de política WS-Policy.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescriptionDialect">
+      <MemberSignature Language="C#" Value="public static string ServiceDescriptionDialect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ServiceDescriptionDialect" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.ServiceDescriptionDialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o valor de dialeto WSDL Web Services Description Language ().</summary>
+        <value>O dialeto para um documento WSDL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dialeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaDialect">
+      <MemberSignature Language="C#" Value="public static string XmlSchemaDialect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XmlSchemaDialect" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataSection.XmlSchemaDialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o valor do dialeto do esquema XML.</summary>
+        <value>O dialeto de um documento de esquema XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dialeto de um documento de esquema XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

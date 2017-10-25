@@ -1,0 +1,1105 @@
+<Type Name="WebBrowser" FullName="System.Windows.Controls.WebBrowser">
+  <TypeSignature Language="C#" Value="public sealed class WebBrowser : System.Windows.Interop.ActiveXHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowser extends System.Windows.Interop.ActiveXHost" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.WebBrowser" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Interop.ActiveXHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Hospeda e navega entre documentos HTML. Permite a interoperabilidade entre código gerenciado do WPF e script HTML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.WebBrowser> controle fornece os seguintes recursos:  
+  
+ **Navegação**: <xref:System.Windows.Controls.WebBrowser.Source%2A>, <xref:System.Windows.Controls.WebBrowser.Navigate%2A>, <xref:System.Windows.Controls.WebBrowser.NavigateToStream%2A>, <xref:System.Windows.Controls.WebBrowser.NavigateToString%2A> e <xref:System.Windows.Controls.WebBrowser.Refresh%2A>.  
+  
+ **Tempo de vida de navegação**: <xref:System.Windows.Controls.WebBrowser.Navigating>, <xref:System.Windows.Controls.WebBrowser.Navigated>, e <xref:System.Windows.Controls.WebBrowser.LoadCompleted>.  
+  
+ **Diário de navegação**: <xref:System.Windows.Controls.WebBrowser.CanGoBack%2A>, <xref:System.Windows.Controls.WebBrowser.GoBack%2A>, <xref:System.Windows.Controls.WebBrowser.CanGoForward%2A>, e <xref:System.Windows.Controls.WebBrowser.GoForward%2A>.  
+  
+ **Interoperabilidade do WPF/HTML**: <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> e <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>, e <xref:System.Windows.Controls.WebBrowser.Document%2A>.  
+  
+ <xref:System.Windows.Controls.WebBrowser>é associado pelas restrições de segurança de [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] aplicativo que está hospedando o <xref:System.Windows.Controls.WebBrowser>:  
+  
+-   Quando <xref:System.Windows.Controls.WebBrowser> é hospedado por uma confiança total [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] aplicativo (um aplicativo autônomo, por exemplo), <xref:System.Windows.Controls.WebBrowser> pode hospedar [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documentos de qualquer local.  
+  
+-   Quando <xref:System.Windows.Controls.WebBrowser> é hospedado por uma confiança parcial [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] aplicativo (um [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)], por exemplo), <xref:System.Windows.Controls.WebBrowser> só pode hospedar os documentos que são **Site de origem** arquivos de dados do aplicativo. Para mais informações, consulte [Arquivos de recurso, conteúdo e dados do aplicativo WPF](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+  
+> [!CAUTION]
+>  O <xref:System.Windows.Controls.WebBrowser> controle internamente instancia o controle WebBrowser ActiveX nativo. WPF habilita os recursos de segurança, aplicando a controles de recurso para o controle WebBrowser ActiveX. Os controles de recurso que são aplicados diferem para XBAPs e aplicativos autônomos. Alguns aplicativos devem aplicar controles de recurso adicional para impedir a execução de conteúdo mal-intencionado. Para obter mais informações, consulte a seção "Controle de WebBrowser e controles de recurso" [segurança (WPF)](~/docs/framework/wpf/security-wpf.md) e [visão geral do controle WebBrowser e tutoriais](http://go.microsoft.com/fwlink/?LinkId=179388).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como configurar <xref:System.Windows.Controls.WebBrowser> para navegar até um [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documentos usando somente a marcação.  
+  
+```xaml  
+<!-- Web Browser Control that hosts a web page. -->  
+<WebBrowser x:Name="webBrowser" Source="http://msdn.com"   
+  Width="600" Height="600"  />  
+```  
+  
+ O exemplo a seguir mostra como configurar <xref:System.Windows.Controls.WebBrowser> para navegar para um documento usando a marcação e o code-behind.  
+  
+```xaml  
+<StackPanel>  
+    <StackPanel Orientation="Horizontal">  
+        <TextBox x:Name="addressTextBox" Width="200" />  
+        <Button Click="goNavigateButton_Click">Go</Button>  
+    </StackPanel>  
+    <WebBrowser x:Name="myWebBrowser" />  
+</StackPanel>  
+```  
+  
+```csharp  
+private void goNavigateButton_Click(object sender, RoutedEventArgs e)  
+{  
+    // Get URI to navigate to  
+    Uri uri = new Uri(this.addressTextBox.Text, UriKind.RelativeOrAbsolute);  
+  
+    // Only absolute URIs can be navigated to  
+    if (!uri.IsAbsoluteUri)  
+    {  
+        MessageBox.Show("The Address URI must be absolute eg 'http://www.microsoft.com'");  
+        return;  
+    }  
+  
+    // Navigate to the desired URL by calling the .Navigate method  
+    this.myWebBrowser.Navigate(uri);  
+}  
+```  
+  
+ O exemplo a seguir mostra como tratar o `NewWindow2` eventos e eventos semelhantes usando um <xref:System.Windows.Controls.WebBrowser> controle. Este exemplo requer uma referência a **Shdocvw**, um `using System.Runtime.InteropServices;` instrução e um <xref:System.Windows.Controls.WebBrowser> controle chamado `webBrowser1`.  
+  
+```csharp  
+public MainWindow()  
+{  
+    InitializeComponent();  
+  
+    var serviceProvider = (IServiceProvider)webBrowser1.Document;  
+    if (serviceProvider != null)  
+    {  
+        Guid serviceGuid = new Guid("0002DF05-0000-0000-C000-000000000046");  
+        Guid iid = typeof(SHDocVw.WebBrowser).GUID;  
+        var webBrowserPtr = (SHDocVw.WebBrowser)serviceProvider  
+            .QueryService(ref serviceGuid, ref iid);  
+        if (webBrowserPtr != null)  
+        {  
+            webBrowserPtr.NewWindow2 += webBrowser1_NewWindow2;  
+        }  
+    }  
+}  
+  
+private void webBrowser1_NewWindow2(ref object ppDisp, ref bool Cancel)  
+{  
+    // Handle the event.  
+}  
+  
+[ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]  
+[Guid("6d5140c1-7436-11ce-8034-00aa006009fa")]  
+internal interface IServiceProvider  
+{  
+    [return: MarshalAs(UnmanagedType.IUnknown)]  
+    object QueryService(ref Guid guidService, ref Guid riid);  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.WebBrowser" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.WebBrowserPermission">para chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.WebBrowserPermissionLevel.Safe" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoBack">
+      <MemberSignature Language="C#" Value="public bool CanGoBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoBack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.WebBrowser.CanGoBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há um documento para retornar ao.</summary>
+        <value>Um <see cref="T:System.Boolean" /> valor que indica se há um documento para retornar ao.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como navegar de volta para o documento anterior chamando <xref:System.Windows.Controls.WebBrowser.GoBack%2A>. O exemplo primeiro verifica se há documentos para navegar de volta para verificando <xref:System.Windows.Controls.WebBrowser.CanGoBack%2A>.  
+  
+```csharp  
+private void backButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Navigate to the previous HTML document, if there is one  
+  if (this.webBrowser.CanGoBack)  
+  {  
+    this.webBrowser.GoBack();  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoForward">
+      <MemberSignature Language="C#" Value="public bool CanGoForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.WebBrowser.CanGoForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há um documento para navegar para frente para.</summary>
+        <value>Um <see cref="T:System.Boolean" /> valor que indica se há um documento para navegar para frente para.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como navegar para frente para o próximo [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento chamando <xref:System.Windows.Controls.WebBrowser.GoForward%2A>. O exemplo primeiro verifica se há documentos para navegar para frente para verificando <xref:System.Windows.Controls.WebBrowser.CanGoForward%2A>.  
+  
+```csharp  
+private void forwardButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Navigate to the next HTML document, if there is one  
+  if (this.webBrowser.CanGoForward)  
+  {  
+    this.webBrowser.GoForward();  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public object Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.WebBrowser.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto Documento que representa a página [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] hospedada.</summary>
+        <value>Um objeto Documento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto de documento deve ser convertido para a interface COM que você espera.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar esta propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GoBack">
+      <MemberSignature Language="C#" Value="public void GoBack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoBack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.GoBack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Navegue de volta para o documento anterior, se houver um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você chamar <xref:System.Windows.Controls.WebBrowser.GoBack%2A> e não são todos os documentos para navegar de volta para <xref:System.Windows.Controls.WebBrowser> não executa uma navegação e uma exceção será lançada. Se você precisar, você pode inspecionar o valor de <xref:System.Windows.Controls.WebBrowser.CanGoBack%2A> propriedade para determinar se há documentos para navegar de volta para.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar de volta para o anterior [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento chamando <xref:System.Windows.Controls.WebBrowser.GoBack%2A>. O exemplo primeiro verifica se há [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documentos para navegar de volta para verificando <xref:System.Windows.Controls.WebBrowser.CanGoBack%2A>.  
+  
+```csharp  
+private void backButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Navigate to the previous HTML document, if there is one  
+  if (this.webBrowser.CanGoBack)  
+  {  
+    this.webBrowser.GoBack();  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há nenhum documento volte à.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoForward">
+      <MemberSignature Language="C#" Value="public void GoForward ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoForward() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.GoForward" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Navegue para frente para a próxima [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento, se houver um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você chamar <xref:System.Windows.Controls.WebBrowser.GoForward%2A> e não são todos os documentos para navegar para a frente, <xref:System.Windows.Controls.WebBrowser> não executa uma navegação e uma exceção será lançada. Se você precisar, você pode inspecionar o valor da <xref:System.Windows.Controls.WebBrowser.CanGoForward%2A> propriedade para determinar se há documentos para navegar para frente para.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar para frente para o próximo documento chamando <xref:System.Windows.Controls.WebBrowser.GoForward%2A>. O exemplo primeiro verifica se há documentos para navegar para frente para verificando <xref:System.Windows.Controls.WebBrowser.CanGoForward%2A>.  
+  
+```csharp  
+private void forwardButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Navigate to the next HTML document, if there is one  
+  if (this.webBrowser.CanGoForward)  
+  {  
+    this.webBrowser.GoForward();  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há nenhum documento navegar para frente para.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public object InvokeScript (string scriptName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object InvokeScript(string scriptName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.InvokeScript(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scriptName">O nome da função de script a ser executada.</param>
+        <summary>Executa uma função de script implementada pelo documento carregado no momento.</summary>
+        <returns>O objeto retornado pela chamada de Script Ativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.WebBrowser.InvokeScript%28System.String%29>não deve ser chamado antes que o documento que implementa terminou o carregamento. Você pode detectar quando um documento terminou o carregamento manipulando o <xref:System.Windows.Controls.WebBrowser.LoadCompleted> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar uma função de script em um documento de um [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] aplicativo usando <xref:System.Windows.Controls.WebBrowser.InvokeScript%28System.String%29>. Neste exemplo, a função de script não tem parâmetros.  
+  
+ A seguir está o [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento que implementa a função de script que será chamada de [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)].  
+  
+```html  
+<html>  
+    <head>  
+        <script type="text/javascript">  
+            // Function Without Parameters  
+            function JavaScriptFunctionWithoutParameters()    
+            {  
+              outputID.innerHTML = "JavaScript function called!";  
+            }  
+        </script>  
+    </head>  
+    <body>  
+    <div id="outputID" style="color:Red; font-size:16">  
+        Hello from HTML document with script!  
+    </div>  
+    </body>  
+</html>  
+```  
+  
+ A seguir mostra o [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] implementação para chamar a função de script no [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento.  
+  
+```csharp  
+private void callScriptFunctionNoParamButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Make sure the HTML document has loaded before attempting to  
+  // invoke script of the document page. You could set loadCompleted  
+  // to true when the LoadCompleted event on the WebBrowser fires.  
+  if (this.loadCompleted)  
+  {  
+    try  
+    {  
+      this.webBrowser.InvokeScript("JavaScriptFunctionWithoutParameters");  
+    }  
+    catch (Exception ex)  
+    {  
+      string msg = "Could not call script: " +  
+                   ex.Message +  
+                  "\n\nPlease click the 'Load HTML Document with Script' button to load.";  
+      MessageBox.Show(msg);  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">A função de script não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public object InvokeScript (string scriptName, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object InvokeScript(string scriptName, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.InvokeScript(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptName" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="scriptName">O nome da função de script a ser executada.</param>
+        <param name="args">Os parâmetros a serem passados para a função de script.</param>
+        <summary>Executa uma função de script definida no documento atualmente carregado.</summary>
+        <returns>O objeto retornado pela chamada de Script Ativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.WebBrowser.InvokeScript%28System.String%2CSystem.Object%5B%5D%29>não deve ser chamado antes que o documento que implementa terminou o carregamento. Você pode detectar quando um documento terminou o carregamento manipulando o <xref:System.Windows.Controls.WebBrowser.LoadCompleted> evento.  
+  
+ Se você não passar suficiente valores de parâmetro para o script que você está invocando, os parâmetros que você não passar valores para terá o valor indefinido. Se você passar muitos valores de parâmetro, os valores em excesso são ignorados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar funções de script em um documento de um aplicativo usando <xref:System.Windows.Controls.WebBrowser.InvokeScript%28System.String%2CSystem.Object%5B%5D%29>. Neste exemplo, as funções de script requerem parâmetros.  
+  
+ Este é o documento que implementa as funções de script que serão chamadas de [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)].  
+  
+```html  
+<html>  
+    <head>  
+        <script type="text/javascript">  
+            // Function Without Parameters  
+            function JavaScriptFunctionWithoutParameters()    
+            {  
+              outputID.innerHTML = "JavaScript function 'called: " + message + ".";  
+            }  
+        </script>  
+    </head>  
+    <body>  
+    <div id="outputID" style="color:Red; font-size:16">  
+        Hello from HTML document with script!  
+    </div>  
+    </body>  
+</html>  
+```  
+  
+ A seguir mostra o [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] implementação para chamar o script funciona no [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento.  
+  
+```csharp  
+private void callScriptFunctionNoParamButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Make sure the HTML document has loaded before attempting to  
+  // invoke script of the document page. You could set loadCompleted  
+  // to true when the LoadCompleted event on the WebBrowser fires.  
+  if (this.loadCompleted)  
+  {  
+    try  
+    {  
+      this.webBrowser.InvokeScript("JavaScriptFunctionWithoutParameters", this.messageTextBox.Text);  
+    }  
+    catch (Exception ex)  
+    {  
+      string msg = "Could not call script: " +  
+                   ex.Message +  
+                  "\n\nPlease click the 'Load HTML Document with Script' button to load.";  
+      MessageBox.Show(msg);  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">A função de script não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.WebBrowser.LoadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.LoadCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o documento que está sendo navegado concluiu o download.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipuladores de eventos navegado são transmitidos a uma instância do <xref:System.Windows.Navigation.NavigationEventArgs> classe, que fornece informações contextuais sobre a navegação, incluindo detalhes da resposta da Web.  
+  
+ Esse evento será acionado apenas para navegações de nível superior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.Navigate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">A URL até a qual navegar.</param>
+        <summary>Navega de forma assíncrona para o documento na URL especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.String%29> método para navegar até uma URL que pode incluir caracteres de escape. Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.Uri%29> método para navegar até um <xref:System.Uri> que não inclua caracteres de escape.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (Uri source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(class System.Uri source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.Navigate(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="source">A <see cref="T:System.Uri" /> até a qual navegar.</param>
+        <summary>Navega de forma assíncrona para o documento na <see cref="T:System.Uri" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Windows.Controls.WebBrowser.Navigate%28System.Uri%29> tem o mesmo efeito que definir o <xref:System.Windows.Controls.WebBrowser.Source%2A> propriedade. <xref:System.Windows.Controls.WebBrowser.Source%2A>é usado na marcação por desenvolvedores que desejam especificar declarativamente inicial de documento que <xref:System.Windows.Controls.WebBrowser> navega quando <xref:System.Windows.Controls.WebBrowser> é inicializado.  
+  
+ Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.String%29> método para navegar até uma URL que pode incluir caracteres de escape. Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.Uri%29> método para navegar até um <xref:System.Uri> que não inclua caracteres de escape.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Controls.WebBrowser> para navegar para um documento usando o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.Uri%29> método.  
+  
+```xaml  
+<StackPanel>  
+    <StackPanel Orientation="Horizontal">  
+        <TextBox x:Name="addressTextBox" Width="200" />  
+        <Button Click="goNavigateButton_Click">Go</Button>  
+    </StackPanel>  
+    <WebBrowser x:Name="myWebBrowser" />  
+</StackPanel>  
+```  
+  
+```csharp  
+private void goNavigateButton_Click(object sender, RoutedEventArgs e)  
+{  
+    // Get URI to navigate to  
+    Uri uri = new Uri(this.addressTextBox.Text, UriKind.RelativeOrAbsolute);  
+  
+    // Only absolute URIs can be navigated to  
+    if (!uri.IsAbsoluteUri)  
+    {  
+        MessageBox.Show("The Address URI must be absolute eg 'http://www.microsoft.com'");  
+        return;  
+    }  
+  
+    // Navigate to the desired URL by calling the .Navigate method  
+    this.myWebBrowser.Navigate(uri);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Security.SecurityException">Navegação de um aplicativo que está sendo executado em confiança parcial para um <see cref="T:System.Uri" /> que não está localizado no site de origem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (string source, string targetFrameName, byte[] postData, string additionalHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(string source, string targetFrameName, unsigned int8[] postData, string additionalHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.Navigate(System.String,System.String,System.Byte[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="targetFrameName" Type="System.String" />
+        <Parameter Name="postData" Type="System.Byte[]" />
+        <Parameter Name="additionalHeaders" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">A URL até a qual navegar.</param>
+        <param name="targetFrameName">O nome do quadro para exibir o conteúdo do documento.</param>
+        <param name="postData">Dados de HTTP POST para enviar ao servidor quando a origem é solicitada.</param>
+        <param name="additionalHeaders">Cabeçalhos de HTTP para enviar ao servidor quando a origem é solicitada.</param>
+        <summary>Navegue de forma assíncrona para o documento na URL especificada e especifique o quadro alvo para carregar o conteúdo do documento. Dados adicionais do HTTP POST e cabeçalhos HTTP podem ser enviados ao servidor como parte da solicitação de navegação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.String%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.String%29> método para navegar até uma URL que pode incluir caracteres de escape. Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.Uri%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.String%29> método para navegar até um <xref:System.Uri> que não inclua caracteres de escape.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (Uri source, string targetFrameName, byte[] postData, string additionalHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(class System.Uri source, string targetFrameName, unsigned int8[] postData, string additionalHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.Navigate(System.Uri,System.String,System.Byte[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+        <Parameter Name="targetFrameName" Type="System.String" />
+        <Parameter Name="postData" Type="System.Byte[]" />
+        <Parameter Name="additionalHeaders" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">A <see cref="T:System.Uri" /> até a qual navegar.</param>
+        <param name="targetFrameName">O nome do quadro para exibir o conteúdo do documento.</param>
+        <param name="postData">Dados de HTTP POST para enviar ao servidor quando a origem é solicitada.</param>
+        <param name="additionalHeaders">Cabeçalhos de HTTP para enviar ao servidor quando a origem é solicitada.</param>
+        <summary>Navegue de forma assíncrona no documento no <see cref="T:System.Uri" /> especificado e especifique o quadro de destino no qual carregar o conteúdo do documento. Dados adicionais do HTTP POST e cabeçalhos HTTP podem ser enviados ao servidor como parte da solicitação de navegação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.String%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.String%29> método para navegar até uma URL que pode incluir caracteres de escape. Use o <xref:System.Windows.Controls.WebBrowser.Navigate%28System.Uri%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.String%29> método para navegar até um <xref:System.Uri> que não inclua caracteres de escape.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar para um documento e abri-lo em uma nova janela do navegador, especificando o "sobre: em branco" destino.  
+  
+```xaml  
+<StackPanel>  
+    <StackPanel Orientation="Horizontal">  
+        <TextBox x:Name="addressTextBox" Width="200" />  
+        <Button Click="goNavigateButton_Click">Go</Button>  
+    </StackPanel>  
+    <WebBrowser x:Name="myWebBrowser" />  
+</StackPanel>  
+```  
+  
+```csharp  
+private void goNavigateButton_Click(object sender, RoutedEventArgs e)  
+{  
+    // Get URI to navigate to  
+    Uri uri = new Uri(this.addressTextBox.Text, UriKind.RelativeOrAbsolute);  
+  
+    // Only absolute URIs can be navigated to  
+    if (!uri.IsAbsoluteUri)  
+    {  
+        MessageBox.Show("The Address URI must be absolute eg 'http://www.microsoft.com'");  
+        return;  
+    }  
+  
+    // Navigate to the desired URL by calling the .Navigate method  
+    this.myWebBrowser.Navigate(uri, "_blank", null, null);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Security.SecurityException">Navegação de um aplicativo que está sendo executado em confiança parcial:  
+  
+-   Para um <see cref="T:System.Uri" /> que não está localizado no site de origem ou  
+  
+-   O nome de <paramref name="targetFrameName" /> não é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigated">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatedEventHandler Navigated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatedEventHandler Navigated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.WebBrowser.Navigated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o documento de destino da navegação foi localizado e está sendo baixado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipuladores de eventos navegado são transmitidos a uma instância do <xref:System.Windows.Navigation.NavigationEventArgs> classe, que fornece informações contextuais sobre a navegação, incluindo detalhes da resposta da Web.  
+  
+ Esse evento será acionado apenas para navegações de nível superior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateToStream">
+      <MemberSignature Language="C#" Value="public void NavigateToStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NavigateToStream(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.NavigateToStream(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> que contém o conteúdo de um documento.</param>
+        <summary>Navegue de forma assíncrona para um <see cref="T:System.IO.Stream" /> que contém o conteúdo de um documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `stream` parâmetro é `null`, <xref:System.Windows.Controls.WebBrowser> navega para um documento em branco ("sobre: em branco").  
+  
+ Se o parâmetro de fluxo não está em um arquivo [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] formato, ele será exibido como texto sem formatação.  
+  
+ Depois de navegação, <xref:System.Windows.Controls.WebBrowser.Source%2A> será `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar em um fluxo que contém um documento.  
+  
+```csharp  
+private void goNavigateToStreamButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Load HTML document as a stream  
+  Uri uri = new Uri(@"pack://application:,,,/HTMLDocumentWithScript.html", UriKind.Absolute);  
+  Stream source = Application.GetResourceStream(uri).Stream;  
+  
+  // Navigate to HTML document stream  
+  this.webBrowser.NavigateToStream(source);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateToString">
+      <MemberSignature Language="C#" Value="public void NavigateToString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NavigateToString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.NavigateToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O <see cref="T:System.String" /> que contém o conteúdo de um documento.</param>
+        <summary>Navegue de forma assíncrona para um <see cref="T:System.String" /> que contém o conteúdo de um documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `text` parâmetro é `null`, <xref:System.Windows.Controls.WebBrowser> navega para um documento em branco ("sobre: em branco").  
+  
+ Se o parâmetro de texto não estiver em válido [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] formato, ele será exibido como texto sem formatação.  
+  
+ Depois de navegação, <xref:System.Windows.Controls.WebBrowser.Source%2A> será `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar até uma cadeia de caracteres que contém um documento.  
+  
+```csharp  
+private void goNavigateToStringButton_Click(object sender, RoutedEventArgs e)  
+{  
+  // Load HTML document as a string  
+  Uri uri = new Uri(@"pack://application:,,,/HTMLDocumentWithoutScript.html", UriKind.Absolute);  
+  Stream stream = Application.GetResourceStream(uri).Stream;  
+  using (StreamReader reader = new StreamReader(stream))  
+  {  
+    // Navigate to HTML document string  
+    this.webBrowser.NavigateToString(reader.ReadToEnd());  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigating">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatingCancelEventHandler Navigating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatingCancelEventHandler Navigating" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.WebBrowser.Navigating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatingCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre logo antes da navegação para um documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipuladores de eventos de navegação são transmitidos a uma instância do <xref:System.Windows.Navigation.NavigatingCancelEventArgs> classe. Você pode cancelar a navegação definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Windows.Navigation.NavigatingCancelEventArgs> do objeto para `true`.  
+  
+ Esse evento será acionado apenas para navegações de nível superior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectForScripting">
+      <MemberSignature Language="C#" Value="public object ObjectForScripting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectForScripting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.WebBrowser.ObjectForScripting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma instância de uma classe pública, implementada pelo aplicativo host, que pode ser acessada pelo script de um documento hospedado.</summary>
+        <value>O <see cref="T:System.Object" /> que é uma instância de uma classe <see langword="public" />, implementada pelo aplicativo host, que pode ser acessada pelo script de um documento hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser definida para qualquer objeto COM visível para o qual você deseja que suas propriedades públicas e os métodos disponíveis para o código de script. Você pode tornar uma classe COM visível marcá-lo com o <xref:System.Runtime.InteropServices.ComVisibleAttribute>.  
+  
+ O objeto que é definido por script é exposto para o documento atual com o [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] DOM usando o `window.external` propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Controls.WebBrowser.ObjectForScripting" /> é definido com uma instância do tipo que não seja <see langword="COMVisible" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recarregue a página atual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (bool noCache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(bool noCache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.Refresh(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="noCache" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="noCache">Especifica se deve ser realizada a atualização sem validação de cache.</param>
+        <summary>Recarrega a página atual com a validação de cache opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `noCache` é `true`, o <xref:System.Windows.Controls.WebBrowser> controlar atualizações sem validação de cache, enviando um "Pragma:no-cache" cabeçalho para o servidor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.WebBrowser.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Uri" /> do documento atual hospedado no <see cref="T:System.Windows.Controls.WebBrowser" />.</summary>
+        <value>O <see cref="T:System.Uri" /> atual [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo a propriedade de origem faz com que <xref:System.Windows.Controls.WebBrowser> para navegar até o documento especificado pelo <xref:System.Uri>. Se o <xref:System.Uri> é `null`, um documento em branco é exibido ("sobre: em branco").  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como configurar <xref:System.Windows.Controls.WebBrowser> para navegar até um [!INCLUDE[TLA2#tla_html](~/includes/tla2sharptla-html-md.md)] documentos usando somente a marcação.  
+  
+```xaml  
+<!-- Web Browser Control that hosts a web page. -->  
+<WebBrowser x:Name="webBrowser" Source="http://msdn.com"   
+  Width="600" Height="600"  />  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Windows.Controls.WebBrowser" /> não é mais válida.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma referência para o nativo subjacente <c>WebBrowser</c> não pôde ser recuperado.</exception>
+        <exception cref="T:System.Security.SecurityException">Navegação de um aplicativo que está sendo executado em confiança parcial para um <see cref="T:System.Uri" /> que não está localizado no site de origem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIntoCore">
+      <MemberSignature Language="C#" Value="protected override bool TabIntoCore (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TabIntoCore(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.TabIntoCore(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateAcceleratorCore">
+      <MemberSignature Language="C#" Value="protected override bool TranslateAcceleratorCore (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TranslateAcceleratorCore(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.WebBrowser.TranslateAcceleratorCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <param name="modifiers">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

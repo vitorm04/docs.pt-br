@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Policy">
+  <Docs>
+    <summary>O <see cref="N:System.IdentityModel.Policy" /> namespace contém classes que são usadas para implementar a política de autorização ao usar o modelo de identidade baseada em declarações do WCF.  
+  
+ Começando com o .NET Framework 4.5 e a integração do Windows Identity Foundation (WIF) no .NET Framework, o modelo de identidade baseada em declarações do WCF foi substituído pelo WIF. O WIF fornece um modelo de objeto de identidade baseada em declarações que pode ser usado para fornecer autenticação e autorização em várias pilhas de produto da Microsoft, incluindo o CLR, o WCF e ASP.NET. No WIF, política de autorização é implementada, estendendo o <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" /> classe. Começando com o .NET 4.5, política de autorização deve ser implementada usando o WIF em vez de classes no <see cref="N:System.IdentityModel.Claims" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

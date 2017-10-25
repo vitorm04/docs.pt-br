@@ -1,0 +1,104 @@
+<Type Name="PropertyFilter" FullName="System.Activities.Presentation.PropertyEditing.PropertyFilter">
+  <TypeSignature Language="C#" Value="public class PropertyFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece funcionalidade de filtragem para um host de edição de propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contém uma lista de cadeias de caracteres chamado *predicados*, que são comparados com um nome de propriedade de destino até que uma correspondência for encontrada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyFilter (System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate&gt; predicates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate&gt; predicates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyFilter.#ctor(System.Collections.Generic.IEnumerable{System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="predicates" Type="System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="predicates">Um <see cref="T:System.Collections.IEnumerable" /> lista de predicados ou cadeias de caracteres usadas para correspondência.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" /> classe que inclui uma enumeração de filtragem de cadeias de caracteres, chamada *predicados*, que podem ser comparados com um nome de propriedade de destino até que uma correspondência for encontrada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyFilter (string filterText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filterText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyFilter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filterText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filterText">Um <see cref="T:System.String" /> que contiver os predicados de delimitada por espaço para filtragem de propriedades.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" /> classe que inclui um <see cref="T:System.String" /> que contém uma sequência delimitada por espaço de filtragem de frases, chamados *predicados*, que podem ser comparados com um nome de propriedade de destino até que uma correspondência for encontrada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyFilter.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade somente leitura que indica se este <see cref="T:System.Activities.Design.PropertyEditing.PropertyFilter" /> não tem qualquer predicados de filtragem.</summary>
+        <value>
+          <see langword="true" />Se predicados estão ausentes; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public bool Match (System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Match(class System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyFilter.Match(System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget" />
+      </Parameters>
+      <Docs>
+        <param name="target">O nome da propriedade que o filtro atual será comparado em relação ao procurar uma correspondência.</param>
+        <summary>Corresponde as cadeias de caracteres de predicado do objeto atual de filtragem em relação ao nome da propriedade de destino especificado e retorna um valor booleano que indica se uma ou mais das cadeias de caracteres predicadas corresponde ao nome de destino ou se isso <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" /> não tem qualquer predicados.</summary>
+        <returns>
+          <see langword="true" />Se houver uma correspondência de filtro/destino ou se não há nada a ser usado para comparação. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

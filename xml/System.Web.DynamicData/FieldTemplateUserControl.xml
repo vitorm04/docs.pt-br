@@ -1,0 +1,925 @@
+<Type Name="FieldTemplateUserControl" FullName="System.Web.DynamicData.FieldTemplateUserControl">
+  <TypeSignature Language="C#" Value="public class FieldTemplateUserControl : System.Web.UI.UserControl, System.Web.DynamicData.IFieldTemplate, System.Web.UI.IBindableControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FieldTemplateUserControl extends System.Web.UI.UserControl implements class System.Web.DynamicData.IFieldTemplate, class System.Web.UI.IBindableControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.FieldTemplateUserControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IFieldTemplate</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IBindableControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a classe base para todos os controles de modelo de campo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modelos de campo de dados dinâmicos do ASP.NET são controles de usuário do ASP.NET que os controles de dados são mapeados para tipos de dados em um modelo de dados. Modelos de campo derivam <xref:System.Web.DynamicData.FieldTemplateUserControl>, a classe que permite acesso aos campos de dados, colunas de dados e metadados em modelos de dados. Projetos de dados dinâmicos fornecem modelos de campo por padrão. Você pode modificar os modelos de campo fornecidos por padrão ou criar modelos de campo personalizado.  
+  
+ Essa classe herda o <xref:System.Web.UI.UserControl> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um modelo de campo que exibe os campos de dados que têm uma relação muitos-para-um e processa um <xref:System.Web.UI.WebControls.HyperLink> controle que redireciona o usuário para a página de relação.  
+  
+ O exemplo a seguir mostra o arquivo de código para o controle de usuário ForeignKey.ascx.  
+  
+```vb  
+Public Partial Class ForeignKeyField   
+    Inherits System.Web.DynamicData.FieldTemplateUserControl   
+  
+    Protected Function GetDisplayString() As String   
+        Return FormatFieldValue( _  
+            ForeignKeyColumn.ParentTable.GetDisplayString(FieldValue))   
+    End Function   
+  
+    Public Overloads Overrides ReadOnly Property DataControl() As Control   
+        Get   
+            Return HyperLink1   
+        End Get   
+    End Property   
+End Class   
+```  
+  
+```csharp  
+public partial class ForeignKeyField :   
+                        System.Web.DynamicData.FieldTemplateUserControl   
+{  
+    protected string GetDisplayString()   
+    {  
+       Return         FormatFieldValue(ForeignKeyColumn.ParentTable.GetDisplayString(FieldValue));  
+  
+    public override Control DataControl   
+    {  
+        get   
+        {  
+          return HyperLink1;  
+    }  
+}  
+```  
+  
+ O exemplo a seguir mostra o arquivo ForeignKey.aspx.  
+  
+```vb  
+<%@ Control Language="VB" CodeFile="ForeignKey.ascx.vb" Inherits="ForeignKeyField" %>  
+  
+<asp:HyperLink ID="HyperLink1" runat="server"  
+    Text="<%# GetDisplayString() %>" />  
+```  
+  
+```csharp  
+<%@ Control Language="C#" CodeFile="ForeignKey.ascx.cs" Inherits="ForeignKeyField" %>  
+  
+<asp:HyperLink ID="HyperLink1" runat="server"  
+    Text="<%# GetDisplayString() %>" />  
+```  
+  
+ Para compilar o código de exemplo, você precisará do seguinte:  
+  
+-   [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)] ou [!INCLUDE[vwd_exp_dev10_long](~/includes/vwd-exp-dev10-long-md.md)].  
+  
+-   Um site da Web dinâmico de dados. Para obter mais informações, consulte [passo a passo: Criando um novo dinâmico dados de Site da Web usando o Scaffolding](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FieldTemplateUserControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.FieldTemplateUserControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChildrenPath">
+      <MemberSignature Language="C#" Value="protected string BuildChildrenPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string BuildChildrenPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.BuildChildrenPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para substituir.</param>
+        <summary>Obtém a URL que vincula-se à página que exibe a lista de entidades de filhos e permite que o caminho a ser substituído.</summary>
+        <returns>A URL que vincula a página exibida para a página de filhos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante ao <xref:System.Web.DynamicData.FieldTemplateUserControl.ChildrenPath%2A>, exceto que ele permite que a parte do caminho da URL a ser substituído. Esse método é usado se as páginas não estão localizadas na pasta DynamicData\CustomPages do projeto de dados dinâmicos. Esse método se aplica apenas a colunas de filhos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildForeignKeyPath">
+      <MemberSignature Language="C#" Value="protected string BuildForeignKeyPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string BuildForeignKeyPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.BuildForeignKeyPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para substituir.</param>
+        <summary>Obter a URL que vincula a página atual para a página que exibe os detalhes da entidade de chave estrangeira e permite que o caminho a ser substituído.</summary>
+        <returns>A URL que contém links para a página que exibe os detalhes da página de chave estrangeira.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante ao <xref:System.Web.DynamicData.FieldTemplateUserControl.ForeignKeyPath%2A> exceto que ele permite que o caminho da URL a ser substituído. Esta propriedade é usada se a página não está localizada na pasta DynamicData\CustomPages estiver o projeto de dados dinâmicos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenColumn">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaChildrenColumn ChildrenColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaChildrenColumn ChildrenColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.ChildrenColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaChildrenColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.DynamicData.MetaChildrenColumn" /> objeto associado a um modelo de campo.</summary>
+        <value>Uma coluna que representa uma relação um-para-muitos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade converte um <xref:System.Web.DynamicData.MetaColumn> para um <xref:System.Web.DynamicData.MetaChildrenColumn>. Se o <xref:System.Web.DynamicData.MetaColumn> classe não é uma coluna de filhos, essa propriedade gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Web.DynamicData.FieldTemplateUserControl.ChildrenColumn" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenPath">
+      <MemberSignature Language="C#" Value="protected string ChildrenPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChildrenPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.ChildrenPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL que vincula-se a uma página que exibe uma lista de entidades de filhos.</summary>
+        <value>A URL que vincula a página exibida para as entidades de filhos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma URL que vincula-se a uma página que exibe uma lista de entidades de filhos. Por exemplo, a coluna de produtos na tabela ProductCategories no banco de dados de exemplo AdventureWorksLT tem URLs vincular à lista de produtos que estão na categoria selecionada. Essa propriedade só se aplica a colunas de filhos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.DynamicData.MetaColumn" /> associado a um modelo de campo.</summary>
+        <value>Um objeto que representa uma coluna de banco de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ContainerType ContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.DynamicData.ContainerType ContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.ContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ContainerType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do controle associado a dados que contém o <see cref="T:System.Web.DynamicData.FieldTemplateUserControl" /> classe.</summary>
+        <value>O tipo de controle do contêiner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEditedValue">
+      <MemberSignature Language="C#" Value="protected virtual object ConvertEditedValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object ConvertEditedValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.ConvertEditedValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de entrada.</param>
+        <summary>Obtém um valor de entrada ou <see langword="null" /> com base em <see cref="P:System.Web.DynamicData.MetaColumn.ConvertEmptyStringToNull" /> e <see cref="P:System.Web.DynamicData.DynamicField.NullDisplayText" />.</summary>
+        <returns>O valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna <xref:System.Web.DynamicData.DynamicControl.ConvertEmptyStringToNull%2A> propriedade e <xref:System.Web.DynamicData.DynamicField.NullDisplayText%2A> propriedade que pode ser definida por meio de metadados ou o <xref:System.Web.DynamicData.DynamicField> classe ou <xref:System.Web.DynamicData.DynamicControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataControl">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Control DataControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control DataControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.DataControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de dados que trata o campo de dados em um modelo de campo.</summary>
+        <value>Um controle de dados que trata o campo de dados em um modelo de campo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractForeignKey">
+      <MemberSignature Language="C#" Value="protected virtual void ExtractForeignKey (System.Collections.IDictionary dictionary, string selectedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ExtractForeignKey(class System.Collections.IDictionary dictionary, string selectedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.ExtractForeignKey(System.Collections.IDictionary,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.IDictionary" />
+        <Parameter Name="selectedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">O dicionário que contém os novos valores.</param>
+        <param name="selectedValue">O valor para salvar.</param>
+        <summary>Salva o valor de chaves estrangeiras.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado ao salvar as colunas de chave estrangeira. O valor da chave estrangeira é selecionado do <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> propriedade de uma lista suspensa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValues">
+      <MemberSignature Language="C#" Value="protected virtual void ExtractValues (System.Collections.Specialized.IOrderedDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ExtractValues(class System.Collections.Specialized.IOrderedDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.ExtractValues(System.Collections.Specialized.IOrderedDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">O dicionário que contém os novos valores.</param>
+        <summary>Fornece acesso a dicionário para todos os dados na linha atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa o <xref:System.Web.UI.IBindableControl.ExtractValues%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldValue">
+      <MemberSignature Language="C#" Value="public virtual object FieldValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object FieldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.FieldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de uma coluna em uma linha atual.</summary>
+        <value>Um objeto que representa o valor da coluna na linha atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldValueEditString">
+      <MemberSignature Language="C#" Value="public virtual string FieldValueEditString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FieldValueEditString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.FieldValueEditString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a representação de cadeia de caracteres do valor de uma coluna na linha atual quando a linha está no modo de edição.</summary>
+        <value>O valor da coluna na linha que está sendo editada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a formatação é habilitada a cadeia de caracteres é formatada após a edição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldValueString">
+      <MemberSignature Language="C#" Value="public virtual string FieldValueString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FieldValueString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.FieldValueString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a representação de cadeia de caracteres formatada do valor de uma coluna na linha atual.</summary>
+        <value>O valor formatado da coluna na linha atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOtherFieldTemplate">
+      <MemberSignature Language="C#" Value="protected System.Web.DynamicData.FieldTemplateUserControl FindOtherFieldTemplate (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.DynamicData.FieldTemplateUserControl FindOtherFieldTemplate(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.FindOtherFieldTemplate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.FieldTemplateUserControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Renderiza a coluna de dados modelo de campo.</param>
+        <summary>Determina o modelo de campo que é usado para renderizar uma coluna de dados especificado.</summary>
+        <returns>O modelo de campo que é usado para renderizar uma coluna de dados especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeignKeyColumn">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaForeignKeyColumn ForeignKeyColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaForeignKeyColumn ForeignKeyColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.ForeignKeyColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaForeignKeyColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.DynamicData.MetaForeignKeyColumn" /> que está associado uma coluna de chave estrangeira.</summary>
+        <value>Uma coluna que representa uma relação muitos-para-um.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe converte a <xref:System.Web.DynamicData.MetaColumn> para um <xref:System.Web.DynamicData.MetaForeignKeyColumn>. A classe gera uma exceção se <xref:System.Web.DynamicData.MetaColumn> não é uma coluna de chave estrangeira.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Se o <see cref="T:System.Web.DynamicData.MetaForeignKeyColumn" /> não é uma coluna de chave estrangeira.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeignKeyPath">
+      <MemberSignature Language="C#" Value="protected string ForeignKeyPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ForeignKeyPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.ForeignKeyPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obter a URL que vincula-se a página atual para a página que exibe os detalhes da entidade de chave estrangeira.</summary>
+        <value>A URL que contém links para os detalhes dos dados da chave estrangeiras.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a coluna de dados tem uma relação muitos-para-um, essa propriedade retorna uma URL que se vincula à página que exibe os detalhes da entidade de chave estrangeira. Por exemplo, na coluna categoria da tabela Product no banco de dados Northwind, esse método pode retornar um link que leva os detalhes da categoria de produto pertence. Essa propriedade se aplica somente colunas de chave estrangeira.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatFieldValue">
+      <MemberSignature Language="C#" Value="public virtual string FormatFieldValue (object fieldValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string FormatFieldValue(object fieldValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.FormatFieldValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fieldValue">O valor do campo de dados para formatar.</param>
+        <summary>Aplica-se HTML codificação e formatação a uma cadeia de caracteres que será exibida.</summary>
+        <returns>O valor formatado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattingOptions">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.IFieldFormattingOptions FormattingOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.IFieldFormattingOptions FormattingOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.FormattingOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.IFieldFormattingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a codificação e as opções para aplicar um modelo de campo de formatação HTML.</summary>
+        <value>A interface que expõe a codificação e as opções para aplicar um modelo de campo de formatação HTML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnValue">
+      <MemberSignature Language="C#" Value="protected virtual object GetColumnValue (System.Web.DynamicData.MetaColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetColumnValue(class System.Web.DynamicData.MetaColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.GetColumnValue(System.Web.DynamicData.MetaColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.DynamicData.MetaColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Para obter o valor de coluna.</param>
+        <summary>Obtém o valor de uma coluna especificada na linha atual.</summary>
+        <returns>Um objeto que representa o valor de uma coluna especificada na linha atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedValueString">
+      <MemberSignature Language="C#" Value="protected string GetSelectedValueString ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetSelectedValueString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.GetSelectedValueString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres de valor da coluna.</summary>
+        <returns>Se a coluna atual do valor é uma coluna de chave estrangeira ou uma coluna de enumeração, uma representação de cadeia de caracteres do valor selecionado; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.FieldTemplateUserControl.GetSelectedValueString%2A> método é usado para retornar uma representação de cadeia de caracteres de chave estrangeira ou de enumeração de tipos de coluna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.IFieldTemplateHost Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.IFieldTemplateHost Host" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.IFieldTemplateHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o host que fornece um contexto para este <see cref="T:System.Web.DynamicData.FieldTemplateUserControl" /> classe.</summary>
+        <value>O objeto que fornece um contexto para a classe de modelo neste campo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreModelValidationAttribute">
+      <MemberSignature Language="C#" Value="protected void IgnoreModelValidationAttribute (Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void IgnoreModelValidationAttribute(class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.IgnoreModelValidationAttribute(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O atributo Ignore.</param>
+        <summary>Permite que um <see cref="T:System.Web.DynamicData.DynamicValidator" /> para ignorar um tipo específico de atributo de validação de modelo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que um <xref:System.Web.DynamicData.DynamicValidator> para ignorar um tipo específico de atributos de validação de modelo. Este método é chamado quando o tipo de atributo já é manipulado por um ASP.NET controles de validação. Sem essa chamada, a validação pode ocorrer duas vezes, resultando em uma mensagem de erro duplicadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataAttributes">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.AttributeCollection MetadataAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection MetadataAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.MetadataAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de atributos de metadados que se aplicam a coluna atual.</summary>
+        <value>A coleção de atributos de metadados que se aplicam à coluna.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataBoundControlMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataBoundControlMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataBoundControlMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo que usa um modelo de campo.</summary>
+        <value>O modo atual do modelo de campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControlMode> que incluem modelos de campo usa `Insert`, `Edit`, e `ReadOnly`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateListControl">
+      <MemberSignature Language="C#" Value="protected void PopulateListControl (System.Web.UI.WebControls.ListControl listControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void PopulateListControl(class System.Web.UI.WebControls.ListControl listControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.PopulateListControl(System.Web.UI.WebControls.ListControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listControl" Type="System.Web.UI.WebControls.ListControl" />
+      </Parameters>
+      <Docs>
+        <param name="listControl">O controle de lista para preencher.</param>
+        <summary>Preenche um controle de lista com todos os valores de uma tabela pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método funciona com somente colunas de chave estrangeira.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public virtual object Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Row" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de linha de dados atual.</summary>
+        <value>O objeto de linha de dados atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado por essa propriedade e o <xref:System.Web.UI.Page.GetDataItem%2A> método são equivalentes. Esta propriedade usa o `Page.GetDataItem` método para retornar o objeto de linha de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUpValidator">
+      <MemberSignature Language="C#" Value="protected virtual void SetUpValidator (System.Web.UI.WebControls.BaseValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetUpValidator(class System.Web.UI.WebControls.BaseValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.SetUpValidator(System.Web.UI.WebControls.BaseValidator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Web.UI.WebControls.BaseValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">O controle de validação para configurar.</param>
+        <summary>Configura um <see cref="P:System.Web.DynamicData.IFieldTemplateHost.ValidationGroup" /> em todos os controles de validação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa lógica adicional para o controle de validação específicos, como o <xref:System.Web.UI.WebControls.RangeValidator> e configura um <xref:System.Web.DynamicData.DynamicControl.ValidationGroup%2A> em todos os controles de validação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUpValidator">
+      <MemberSignature Language="C#" Value="protected virtual void SetUpValidator (System.Web.UI.WebControls.BaseValidator validator, System.Web.DynamicData.MetaColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetUpValidator(class System.Web.UI.WebControls.BaseValidator validator, class System.Web.DynamicData.MetaColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.SetUpValidator(System.Web.UI.WebControls.BaseValidator,System.Web.DynamicData.MetaColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Web.UI.WebControls.BaseValidator" />
+        <Parameter Name="column" Type="System.Web.DynamicData.MetaColumn" />
+      </Parameters>
+      <Docs>
+        <param name="validator">O tipo de validador de configurar.</param>
+        <param name="column">A coluna para a qual a validação é definida.</param>
+        <summary>Configura um <see cref="T:System.Web.DynamicData.DynamicValidator" /> usando o tipo de validação e a coluna para validar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usado para configurar <xref:System.Web.DynamicData.DynamicControl.ValidationGroup%2A> em todos os validadores.  
+  
+ Ele executa lógica adicional para tipos específicos de validador nesse método. Por exemplo, se os valores do intervalo de saída no modelo de dados este método configura <xref:System.Web.UI.WebControls.RangeValidator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IFieldTemplate.SetHost">
+      <MemberSignature Language="C#" Value="void IFieldTemplate.SetHost (System.Web.DynamicData.IFieldTemplateHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.DynamicData.IFieldTemplate.SetHost(class System.Web.DynamicData.IFieldTemplateHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.System#Web#DynamicData#IFieldTemplate#SetHost(System.Web.DynamicData.IFieldTemplateHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Web.DynamicData.IFieldTemplateHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O objeto que hospeda a classe de modelo do campo. Controla o uso do modelo de campo.</param>
+        <summary>Associa um modelo de campo com o objeto que controla como o modelo de campo é usado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método implementa a interface <xref:System.Web.DynamicData.IFieldTemplate.SetHost%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IBindableControl.ExtractValues">
+      <MemberSignature Language="C#" Value="void IBindableControl.ExtractValues (System.Collections.Specialized.IOrderedDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IBindableControl.ExtractValues(class System.Collections.Specialized.IOrderedDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FieldTemplateUserControl.System#Web#UI#IBindableControl#ExtractValues(System.Collections.Specialized.IOrderedDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">O dicionário que contém valores/nome pares.</param>
+        <summary>Recupera um conjunto de pares de nome/valor para implementar a associação de dados bidirecional em controles de modelo de campo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FieldTemplateUserControl.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.DynamicData.MetaTable" /> que pertence uma coluna de um modelo de campo.</summary>
+        <value>A tabela à qual pertence a coluna que está associada com o modelo de campo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

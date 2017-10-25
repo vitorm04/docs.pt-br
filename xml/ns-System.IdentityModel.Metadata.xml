@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Metadata">
+  <Docs>
+    <summary>O <see cref="N:System.IdentityModel.Metadata" /> namespace contém classes que representam os elementos em um documento de metadados de Federação. Um documento de metadados de Federação é um documento XML que fornece informações que podem ser úteis para parceiros ao estabelecer uma federação. Para obter mais informações sobre metadados de federação, consulte a seção três a seguinte especificação: <see href="http://go.microsoft.com/fwlink/?LinkID=210152">Web Services Federation Language (WS-Federation) versão 1.2</see> (http://go.microsoft.com/fwlink/?LinkID=210152).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

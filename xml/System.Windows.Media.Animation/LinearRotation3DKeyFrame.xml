@@ -1,0 +1,126 @@
+<Type Name="LinearRotation3DKeyFrame" FullName="System.Windows.Media.Animation.LinearRotation3DKeyFrame">
+  <TypeSignature Language="C#" Value="public class LinearRotation3DKeyFrame : System.Windows.Media.Animation.Rotation3DKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinearRotation3DKeyFrame extends System.Windows.Media.Animation.Rotation3DKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.LinearRotation3DKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Rotation3DKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Anima a partir de <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> valor do quadro chave anterior para a sua própria <see cref="P:System.Windows.Media.Animation.Rotation3DKeyFrame.Value" /> usando interpolação linear.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada como parte de um <xref:System.Windows.Media.Animation.Rotation3DKeyFrameCollection> em conjunto com um <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> objeto animar uma <xref:System.Windows.Media.Media3D.Rotation3D> valor da propriedade ao longo de um conjunto de quadros-chave.  
+  
+ Um quadro-chave define um segmento do <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> ao qual ela pertence. Cada quadro chave tem um destino <xref:System.Windows.Media.Animation.Rotation3DKeyFrame.Value%2A> e um <xref:System.Windows.Media.Animation.Rotation3DKeyFrame.KeyTime%2A>. O <xref:System.Windows.Media.Animation.Rotation3DKeyFrame.KeyTime%2A> Especifica a hora em que o quadro chave <xref:System.Windows.Media.Animation.Rotation3DKeyFrame.Value%2A> devem ser atingido. Um quadro chave anima do valor de destino de quadro chave anterior a seu próprio valor de destino. Ele começa quando o quadro chave anterior termina e termina quando é atingido sua própria chave de tempo.  
+  
+ Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> criar uma interpolação linear suave entre valores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearRotation3DKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearRotation3DKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.LinearRotation3DKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearRotation3DKeyFrame (System.Windows.Media.Media3D.Rotation3D value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearRotation3DKeyFrame.#ctor(System.Windows.Media.Media3D.Rotation3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Rotation3D" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor final (também conhecido como "valor de destino") para o quadro-chave.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.LinearRotation3DKeyFrame" /> classe com o valor final especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearRotation3DKeyFrame (System.Windows.Media.Media3D.Rotation3D value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearRotation3DKeyFrame.#ctor(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor final (também conhecido como "valor de destino") para o quadro-chave.</param>
+        <param name="keyTime">A hora de chave para o quadro-chave. O tempo de chave determina quando o valor de destino for atingido, o que também é quando o quadro chave termina.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.LinearRotation3DKeyFrame" /> classe com o valor e chave de hora especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearRotation3DKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Windows.Media.Animation.LinearRotation3DKeyFrame" />.</summary>
+        <returns>Uma nova instância da classe <see cref="T:System.Windows.Media.Animation.LinearRotation3DKeyFrame" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Media3D.Rotation3D InterpolateValueCore (System.Windows.Media.Media3D.Rotation3D baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Media3D.Rotation3D InterpolateValueCore(class System.Windows.Media.Media3D.Rotation3D baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearRotation3DKeyFrame.InterpolateValueCore(System.Windows.Media.Media3D.Rotation3D,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rotation3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0 que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Interpola, de maneira linear entre o valor anterior de quadro-chave e o valor do quadro atual da chave, usando o incremento de andamento fornecido.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

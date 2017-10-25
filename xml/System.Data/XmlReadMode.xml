@@ -1,0 +1,238 @@
+<Type Name="XmlReadMode" FullName="System.Data.XmlReadMode">
+  <TypeSignature Language="C#" Value="public enum XmlReadMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlReadMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.XmlReadMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como ler dados XML e um esquema relacional em um <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração ao definir o `ReadMode` parâmetro o <xref:System.Data.DataSet.ReadXml%2A> método.  
+  
+> [!NOTE]
+>  `Auto`o modo pode ser mais lento do que a configuração <xref:System.Data.XmlReadMode> como uma opção explícita.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Executa o mais apropriado das seguintes ações:  
+  
+ Define se os dados forem um DiffGram, `XmlReadMode` para `DiffGram`.  
+  
+ -ou-  
+  
+ Define se o conjunto de dados já tem um esquema ou o documento contém um esquema embutido, `XmlReadMode` para `ReadSchema`.  
+  
+ -ou-  
+  
+ Define se o conjunto de dados ainda não tiver um esquema e o documento não contém um esquema embutido, `XmlReadMode` para `InferSchema`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiffGram">
+      <MemberSignature Language="C#" Value="DiffGram" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode DiffGram = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.DiffGram" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lê um DiffGram, aplicando alterações de DiffGram ao <see cref="T:System.Data.DataSet" />. A semântica é idêntica às de uma operação de <see cref="M:System.Data.DataSet.Merge(System.Data.DataSet)" />. Assim como acontece com a operação de <see cref="M:System.Data.DataSet.Merge(System.Data.DataSet)" />, os valores de <see cref="P:System.Data.DataRow.RowState" /> são preservados. A entrada para <see cref="M:System.Data.DataSet.ReadXml(System.Xml.XmlReader)" /> com DiffGrams deve apenas ser obtida usando a saída do <see cref="M:System.Data.DataSet.WriteXml(System.IO.Stream)" />, como um DiffGram.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino <xref:System.Data.DataSet> devem ter o mesmo esquema de <xref:System.Data.DataSet> no qual <xref:System.Data.DataSet.WriteXml%2A> como DiffGram é chamado. Caso contrário, a operação de mesclagem de DiffGram falhará e uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fragment">
+      <MemberSignature Language="C#" Value="Fragment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode Fragment = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.Fragment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lê os fragmentos XML, como aqueles gerados por consultas FOR XML, em uma instância do SQL Server em execução. Quando <see cref="T:System.Data.XmlReadMode" /> é definido como <see langword="Fragment" />, o namespace padrão é lido como o esquema embutido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSchema">
+      <MemberSignature Language="C#" Value="IgnoreSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode IgnoreSchema = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.IgnoreSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora qualquer esquema embutido e carrega os dados no esquema <see cref="T:System.Data.DataSet" /> existente. Se os dados não coincidem com o esquema existente, eles serão descartados (incluindo dados de diferentes namespaces definidos para o <see cref="T:System.Data.DataSet" />). Se os dados forem um DiffGram, <see langword="IgnoreSchema" /> tem a funcionalidade que <see langword="DiffGram" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InferSchema">
+      <MemberSignature Language="C#" Value="InferSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode InferSchema = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.InferSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora qualquer esquema embutido, infere o esquema dos dados e carrega-os. Se o <see cref="T:System.Data.DataSet" /> já contiver um esquema, o esquema atual será estendido, adicionando colunas às tabelas existentes. Uma exceção será lançada se uma tabela inferida já existir com um namespace diferente ou se qualquer coluna inferida estiver em conflito com colunas existentes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InferTypedSchema">
+      <MemberSignature Language="C#" Value="InferTypedSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode InferTypedSchema = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.InferTypedSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora qualquer esquema embutido, infere o esquema digitado dos dados e carrega-os. Se o tipo não pode ser inferido dos dados, ele é interpretado como dados de cadeia de caracteres. Se o <see cref="T:System.Data.DataSet" /> já contiver um esquema, o esquema atual é estendido, adicionando novas colunas ou adicionando colunas às tabelas existentes. Uma exceção será lançada se uma tabela inferida já existir com um namespace diferente ou se qualquer coluna inferida estiver em conflito com colunas existentes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSchema">
+      <MemberSignature Language="C#" Value="ReadSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode ReadSchema = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.ReadSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lê qualquer esquema embutido e carrega os dados. Se o <see cref="T:System.Data.DataSet" /> já contém o esquema, novas tabelas podem ser adicionadas ao esquema, mas uma exceção é lançada se todas as tabelas no esquema embutido já existirem no <see cref="T:System.Data.DataSet" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

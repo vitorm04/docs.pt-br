@@ -1,0 +1,124 @@
+<Type Name="DataPagerFieldItem" FullName="System.Web.UI.WebControls.DataPagerFieldItem">
+  <TypeSignature Language="C#" Value="public class DataPagerFieldItem : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPagerFieldItem extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataPagerFieldItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um item de campo do pager em um <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Web.UI.WebControls.DataPagerFieldItem> classe é criada para manter os controles de pager em um <xref:System.Web.UI.WebControls.DataPager> controle. O <xref:System.Web.UI.INamingContainer> interface é um marcador que indica que o controle de contêiner é representado pelo <xref:System.Web.UI.WebControls.DataPagerFieldItem> classe é parte do <xref:System.Web.UI.Page> hierarquia de controle do objeto.  
+  
+ O <xref:System.Web.UI.WebControls.DataPagerFieldItem> classe normalmente é usada no manipulador para o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> eventos de um <xref:System.Web.UI.WebControls.TemplatePagerField> objeto. Ele é usado para acessar os controles dentro a <xref:System.Web.UI.WebControls.TemplatePagerField> objeto e para acessar as propriedades do <xref:System.Web.UI.WebControls.DataPager> controle. O <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.Item%2A?displayProperty=nameWithType> propriedade representa o item de campo de pager.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataPagerFieldItem (System.Web.UI.WebControls.DataPagerField field, System.Web.UI.WebControls.DataPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataPagerField field, class System.Web.UI.WebControls.DataPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataPagerFieldItem.#ctor(System.Web.UI.WebControls.DataPagerField,System.Web.UI.WebControls.DataPager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataPagerField" />
+        <Parameter Name="pager" Type="System.Web.UI.WebControls.DataPager" />
+      </Parameters>
+      <Docs>
+        <param name="field">O objeto de campo de pager.</param>
+        <param name="pager">O controle de pager que contém o objeto de campo de pager.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DataPagerFieldItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataPagerFieldItem.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Os dados do evento.</param>
+        <summary>Determina se o evento do controle de servidor é passado um nível acima da hierarquia de controle de servidor da interface do usuário da página.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi enviado para o controle pai. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pager">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataPager Pager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataPager Pager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerFieldItem.Pager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de pager que contém o objeto de campo de pager.</summary>
+        <value>O controle de pager.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataPagerFieldItem.Pager%2A> propriedade para recuperar o <xref:System.Web.UI.WebControls.DataPager> controle. Essa propriedade normalmente é usada para acessar as propriedades do controle em um manipulador de eventos para o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand?displayProperty=nameWithType> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar as propriedades do <xref:System.Web.UI.WebControls.DataPager> controle usando o <xref:System.Web.UI.WebControls.DataPagerFieldItem.Pager%2A> propriedade em um manipulador para o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand?displayProperty=nameWithType> evento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagerField">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataPagerField PagerField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataPagerField PagerField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerFieldItem.PagerField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPagerField</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> objeto.</summary>
+        <value>O objeto de campo de pager.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

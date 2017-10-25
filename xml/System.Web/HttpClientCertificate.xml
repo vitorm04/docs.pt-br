@@ -1,0 +1,400 @@
+<Type Name="HttpClientCertificate" FullName="System.Web.HttpClientCertificate">
+  <TypeSignature Language="C#" Value="public class HttpClientCertificate : System.Collections.Specialized.NameValueCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpClientCertificate extends System.Collections.Specialized.NameValueCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpClientCertificate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameValueCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece os campos do certificado do cliente emitidos pelo cliente em resposta à solicitação de identidade do cliente realizada pelo servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um navegador da Web usa o protocolo SSL 3.0/PCT1 (a URL começa com https://, em vez de http://) para se conectar a um servidor e o servidor requer certificados de cliente, o envia de navegador campos contidos no seu certificado digital de certificado de cliente.  
+  
+ Para obter mais informações sobre certificados digitais, consulte o documento x. 509: frameworks, disponíveis no site da International telecomunicação Union (ITU) em http://www.itu.int de certificado de chave pública e o atributo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BinaryIssuer">
+      <MemberSignature Language="C#" Value="public byte[] BinaryIssuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] BinaryIssuer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.BinaryIssuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o emissor do certificado, em formato binário.</summary>
+        <value>O emissor do certificado, expressado em formato binário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertEncoding">
+      <MemberSignature Language="C#" Value="public int CertEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CertEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.CertEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a codificação do certificado.</summary>
+        <value>Um dos valores CERT_CONTEXT.dwCertEncodingType.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a estrutura CERT_CONTEXT, consulte http://msdn.microsoft.com e procure CERT_CONTEXT.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public byte[] Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que contém o fluxo binário de conteúdo certificado inteiro, no formato de ASN. 1.</summary>
+        <value>O certificado do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookie">
+      <MemberSignature Language="C#" Value="public string Cookie { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Cookie" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.Cookie" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID exclusiva para o certificado de cliente, se fornecido.</summary>
+        <value>A ID do certificado de cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpClientCertificate.Cookie%2A> pode ser usado como uma assinatura de certificado do cliente inteira.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public int Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um conjunto de sinalizadores que forneça informações de certificado de cliente adicional.</summary>
+        <value>Um conjunto de sinalizadores Boolean.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bit0 é definido como 1 se o certificado de cliente está presente. Bit1 é definido como 1 se a autoridade de certificação (CA) do certificado do cliente não estiver na lista de autoridades de certificação reconhecida no servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public override string Get (string field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Get(string field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpClientCertificate.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="field">O item na coleção para recuperar.</param>
+        <summary>Retorna campos de certificado de cliente individual por nome.</summary>
+        <returns>O valor do item especificado por <paramref name="field" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public bool IsPresent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPresent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.IsPresent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o certificado de cliente está presente.</summary>
+        <value>
+          <see langword="true" />Se o certificado do cliente estiver presente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public string Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres que contém uma lista de valores de subcampo que contém informações sobre o emissor do certificado.</summary>
+        <value>Informações do emissor do certificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o certificado do cliente é válido.</summary>
+        <value>
+          <see langword="true" />Se o certificado do cliente é válido. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O certificado do cliente não é válido se a autoridade de certificação (CA) não está na lista de autoridades de certificação reconhecida no servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public int KeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bits no tamanho de chave do certificado digital. Por exemplo, 128.</summary>
+        <value>O número de bits em que o tamanho da chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public byte[] PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor binário da chave pública do certificado.</summary>
+        <value>Uma matriz de bytes que contém o valor da chave pública.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecretKeySize">
+      <MemberSignature Language="C#" Value="public int SecretKeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SecretKeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.SecretKeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bits em que a chave privada do certificado de servidor. Por exemplo, 1024.</summary>
+        <value>O número de bits em que a chave privada do certificado de servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialNumber">
+      <MemberSignature Language="C#" Value="public string SerialNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerialNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.SerialNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece o número de série do certificado como uma representação de ASCII de bytes hexadecimais separados por hifens. Por exemplo, 04-67-F3-02.</summary>
+        <value>O número de série do certificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerIssuer">
+      <MemberSignature Language="C#" Value="public string ServerIssuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerIssuer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.ServerIssuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o campo emissor do certificado do servidor.</summary>
+        <value>O campo de emissor do certificado do servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerSubject">
+      <MemberSignature Language="C#" Value="public string ServerSubject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerSubject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.ServerSubject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o campo de assunto do certificado do servidor.</summary>
+        <value>O campo de assunto do certificado do servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o campo de assunto do certificado do cliente.</summary>
+        <value>O campo de assunto do certificado do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `String` for especificado sem um subcampo de <xref:System.Web.HttpClientCertificate> coleção retorna uma lista separada por vírgulas de subcampos. Por exemplo, C = US, S = Msft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data quando o certificado se torna válido. A data varia de acordo com as configurações internacionais.</summary>
+        <value>A data quando o certificado se torna válido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidUntil">
+      <MemberSignature Language="C#" Value="public DateTime ValidUntil { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidUntil" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpClientCertificate.ValidUntil" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data de validade do certificado.</summary>
+        <value>A data de validade do certificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de ano é exibido como um número de quatro dígitos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

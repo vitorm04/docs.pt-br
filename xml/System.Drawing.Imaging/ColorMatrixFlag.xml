@@ -1,0 +1,66 @@
+<Type Name="ColorMatrixFlag" FullName="System.Drawing.Imaging.ColorMatrixFlag">
+  <TypeSignature Language="C#" Value="public enum ColorMatrixFlag" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ColorMatrixFlag extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ColorMatrixFlag" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos de imagens e cores que serão afetadas pelas configurações de ajuste de cores e escala de cinza de um <see cref="T:System.Drawing.Imaging.ImageAttributes" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AltGrays">
+      <MemberSignature Language="C#" Value="AltGrays" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorMatrixFlag AltGrays = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorMatrixFlag.AltGrays" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorMatrixFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente são ajustados tons de cinza.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorMatrixFlag Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorMatrixFlag.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorMatrixFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todos os valores de cor, incluindo tons de cinza são ajustados para a mesma matriz de ajuste de cor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipGrays">
+      <MemberSignature Language="C#" Value="SkipGrays" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorMatrixFlag SkipGrays = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorMatrixFlag.SkipGrays" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorMatrixFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as cores são ajustadas, mas não são ajustadas tons de cinza. Um sombreamento cinza é qualquer cor que tem o mesmo valor para seus componentes vermelhos, verdes e azuis.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

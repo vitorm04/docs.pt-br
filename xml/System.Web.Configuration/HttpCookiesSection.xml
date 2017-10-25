@@ -1,0 +1,197 @@
+<Type Name="HttpCookiesSection" FullName="System.Web.Configuration.HttpCookiesSection">
+  <TypeSignature Language="C#" Value="public sealed class HttpCookiesSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCookiesSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpCookiesSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura as propriedades dos cookies usados por um aplicativo Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpCookiesSection> classe fornece uma maneira de acessar e modificar programaticamente o `httpCookies` seção de um arquivo de configuração.  
+  
+ Define as configurações aplicadas por padrão a todos os cookies emitidos pelo aplicativo, a menos que o código de emitir o cookie de substitui-los.  
+  
+ Um objetivo de `httpCookies` elemento é dar suporte ao uso de `HttpOnly` cookies. `HttpOnly`cookies (cookies com o `HttpOnly` atributo) foram introduzidos no Internet Explorer 6 para ajudar a reduzir o risco de scripts entre sites. O `HttpOnly` atributo impede que os cookies que está sendo acessado por meio de script do lado do cliente. As informações contidas em um `HttpOnly` cookie tem menos probabilidade de ser divulgada a um hacker ou um site mal-intencionado. Para obter mais informações, pesquise no MSDN (msdn.microsoft.com) "HttpOnly."  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.HttpCookiesSection> pode ler e gravar informações de e para a seção correspondente do arquivo de configuração de acordo com a propriedade de seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.HttpCookiesSection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.HttpCookiesSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/CS/httpCookiesSection.cs#1)]
+ [!code-vb[System.Web.Configuration.HttpCookiesSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/VB/httpCookiesSection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCookiesSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCookiesSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.HttpCookiesSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.HttpCookiesSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCookiesSection.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("domain", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de domínio do cookie.</summary>
+        <value>O nome de domínio do cookie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.HttpCookiesSection.Domain%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpCookiesSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/CS/httpCookiesSection.cs#2)]
+ [!code-vb[System.Web.Configuration.HttpCookiesSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/VB/httpCookiesSection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HttpOnlyCookies">
+      <MemberSignature Language="C#" Value="public bool HttpOnlyCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpOnlyCookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCookiesSection.HttpOnlyCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpOnlyCookies", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o suporte para o cookie <see langword="HttpOnly" /> do navegador está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o suporte para o cookie <see langword="HttpOnly" /> estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `httpCookies` elemento suporta o uso de `HttpOnly` cookies. `HttpOnly`cookies (cookies com o `HttpOnly` atributo) foram introduzidos no Internet Explorer 6 para ajudar a reduzir o risco de scripts entre sites. O `HttpOnly` atributo impede que os cookies que está sendo acessado por meio de script do lado do cliente. As informações contidas em um `HttpOnly` cookie tem menos probabilidade de ser divulgada a um hacker ou um site mal-intencionado. Para obter mais informações, pesquise no MSDN (msdn.microsoft.com) "HttpOnly."  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.HttpCookiesSection.HttpOnlyCookies%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpCookiesSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/CS/httpCookiesSection.cs#4)]
+ [!code-vb[System.Web.Configuration.HttpCookiesSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/VB/httpCookiesSection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCookiesSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSSL">
+      <MemberSignature Language="C#" Value="public bool RequireSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSSL" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCookiesSection.RequireSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requireSSL", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a comunicação do protocolo SSL é necessária.</summary>
+        <value>
+          <see langword="true" /> se o SSL estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpCookiesSection.RequireSSL%2A> propriedade habilita ou desabilita a saída do atributo cookie seguro, como descrito no RFC 2109. Quando usado por navegadores compatíveis, o cookie somente será enviado sobre uma conexão usando SSL/TLS. O padrão é `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.HttpCookiesSection.RequireSSL%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpCookiesSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/CS/httpCookiesSection.cs#3)]
+ [!code-vb[System.Web.Configuration.HttpCookiesSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpCookiesSection/VB/httpCookiesSection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

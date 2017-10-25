@@ -1,0 +1,134 @@
+<Type Name="AdamInstanceCollection" FullName="System.DirectoryServices.ActiveDirectory.AdamInstanceCollection">
+  <TypeSignature Language="C#" Value="public class AdamInstanceCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdamInstanceCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" /> é uma coleção somente leitura que contém objetos <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection> classe refere-se ao aplicativo de modo ADAM (Active Directory) que foi renomeado para Active Directory Lightweight Directory Services (AD LDS).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.ActiveDirectory.AdamInstance adamInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.ActiveDirectory.AdamInstance adamInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection.Contains(System.DirectoryServices.ActiveDirectory.AdamInstance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adamInstance" Type="System.DirectoryServices.ActiveDirectory.AdamInstance" />
+      </Parameters>
+      <Docs>
+        <param name="adamInstance">O <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se o especificado <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto está nesta coleção.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto está nesta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="adamInstance" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.AdamInstance[] adamInstances, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.AdamInstance[] adamInstances, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection.CopyTo(System.DirectoryServices.ActiveDirectory.AdamInstance[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adamInstances" Type="System.DirectoryServices.ActiveDirectory.AdamInstance[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="adamInstances">A matriz de <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>adamInstances</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objetos na coleção para a matriz especificada, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de destino não é grande o suficiente para manter o número necessário de elementos.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="adamInstances" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.ActiveDirectory.AdamInstance adamInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.ActiveDirectory.AdamInstance adamInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection.IndexOf(System.DirectoryServices.ActiveDirectory.AdamInstance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adamInstance" Type="System.DirectoryServices.ActiveDirectory.AdamInstance" />
+      </Parameters>
+      <Docs>
+        <param name="adamInstance">O <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna o índice da primeira ocorrência do <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto na coleção.</summary>
+        <returns>O índice de base zero do primeiro objeto correspondente. Retornará -1 se nenhum membro dessa coleção é idêntico de <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="adamInstance" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstance this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AdamInstance Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto a ser obtido.</param>
+        <summary>Obtém um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto na coleção.</summary>
+        <value>O <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto que existe no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da coleção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="TableNotEnabledForNotificationException" FullName="System.Web.Caching.TableNotEnabledForNotificationException">
+  <TypeSignature Language="C#" Value="public sealed class TableNotEnabledForNotificationException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit TableNotEnabledForNotificationException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.TableNotEnabledForNotificationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é gerada quando uma classe <see cref="T:System.Web.Caching.SqlCacheDependency" /> é usada em uma tabela de banco de dados que não está habilitada para notificações de alteração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir tenta criar um <xref:System.Web.Caching.SqlCacheDependency> do objeto e adicionar um item para o <xref:System.Web.Caching.Cache> com uma dependência no <xref:System.Web.Caching.SqlCacheDependency> objeto. Se a tabela de banco de dados do SQL Server não está habilitada para notificações de dependência, a <xref:System.Web.Caching.TableNotEnabledForNotificationException> é gerada e tratado chamando o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A?displayProperty=nameWithType> método.  
+  
+ [!code-csharp[CachingSamples_SqlCacheDependency#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CachingSamples_SqlCacheDependency/CS/sqlcachedepsamplecs.aspx#2)]
+ [!code-vb[CachingSamples_SqlCacheDependency#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_SqlCacheDependency/VB/sqlcachedepsamplevb.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableNotEnabledForNotificationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.TableNotEnabledForNotificationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Caching.TableNotEnabledForNotificationException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableNotEnabledForNotificationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.TableNotEnabledForNotificationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Caching.TableNotEnabledForNotificationException" /> com a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableNotEnabledForNotificationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.TableNotEnabledForNotificationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Caching.TableNotEnabledForNotificationException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

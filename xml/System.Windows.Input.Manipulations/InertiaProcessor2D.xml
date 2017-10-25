@@ -1,0 +1,333 @@
+<Type Name="InertiaProcessor2D" FullName="System.Windows.Input.Manipulations.InertiaProcessor2D">
+  <TypeSignature Language="C#" Value="public class InertiaProcessor2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InertiaProcessor2D extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.InertiaProcessor2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa a extrapolação de posição, orientação e radius médio uma manipulação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> objeto permite que seu aplicativo extrapolar o local de um elemento, orientação e outras propriedades simulando o comportamento do mundo real.  
+  
+ Por exemplo, quando um usuário move um elemento e, em seguida, libera, o elemento pode continuar movendo desacelerar e parado lentamente. Um processador de inércia implementa esse comportamento, fazendo com que os valores 2-D afins (origem, escala, conversão e rotação) para alterar um tempo especificado em uma taxa de desaceleração especificado.  
+  
+ Um processador de inércia por si só não faz com que um elemento mover e desacelerar. O aplicativo recebe informações de um processador de inércia e aplica os valores conforme necessário para um elemento específico do aplicativo. Normalmente, um aplicativo usa as informações recebidas de um processador de inércia para alterar o local, o tamanho ou a orientação de um elemento.  
+  
+ Processamento de inércia normalmente é usado em conjunto com o processamento de manipulação. Para obter mais informações, consulte a classe <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InertiaProcessor2D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaProcessor2D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.Manipulations.InertiaProcessor2D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete (long timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete(int64 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timestamp" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="timestamp">O carimbo de hora para extrapolação concluída, em tiques de 100 nanossegundos.</param>
+        <summary>Conclui extrapolação final usando o carimbo de hora especificado e gera o <see cref="E:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os carimbos de hora estão em unidades de 100 nanossegundos.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um manipulador de eventos para o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started?displayProperty=nameWithType> evento verifica se o processamento de inércia está em execução e, nesse caso, interrompe-lo ao chamar o <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> método.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationStarted](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationstarted)]  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_Timestamp](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_timestamp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro de carimbo de hora é menor que o carimbo de hora inicial e a anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando extrapolação foi concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; Delta;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; Delta" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a origem de extrapolação foi alterado ou quando a conversão, dimensionamento ou rotação ocorreram.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta?displayProperty=nameWithType> evento e o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta?displayProperty=nameWithType> eventos são do mesmo tipo. Normalmente, você pode usar o mesmo manipulador de eventos para ambos os eventos.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationOrInertiaDelta](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationorinertiadelta)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpansionBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Manipulations.InertiaExpansionBehavior2D ExpansionBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.Manipulations.InertiaExpansionBehavior2D ExpansionBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaProcessor2D.ExpansionBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Manipulations.InertiaExpansionBehavior2D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento de expansão do processador de inércia.</summary>
+        <value>O comportamento de expansão do processador de inércia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialOriginX">
+      <MemberSignature Language="C#" Value="public float InitialOriginX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialOriginX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x para a origem inicial, em unidades de coordenadas.</summary>
+        <value>A coordenada x da origem inicial, em unidades de coordenadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de origem representado pelo <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginX%2A> e <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginY%2A> propriedades é a posição de média de todos os manipuladores associado a um elemento.  
+  
+ Um valor válido para <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginX%2A> é qualquer número finito. O valor padrão é 0.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialOriginY">
+      <MemberSignature Language="C#" Value="public float InitialOriginY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialOriginY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y da origem inicial, em unidades de coordenadas.</summary>
+        <value>A coordenada y da origem inicial, em unidades de coordenadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de origem representado pelo <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginX%2A> e <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginY%2A> propriedades é a posição de média de todos os manipuladores associado a um elemento.  
+  
+ Um valor válido para <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.InitialOriginY%2A> é qualquer número finito. O valor padrão é 0.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public bool IsRunning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunning" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaProcessor2D.IsRunning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se inércia está em andamento.</summary>
+        <value>Um valor booliano que indica se inércia está em andamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, um manipulador de eventos para o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started?displayProperty=nameWithType> evento verifica se o processamento de inércia está em execução e, nesse caso, interrompe-lo chamando o <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> método.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationStarted](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationstarted)]  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_Timestamp](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_timestamp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public bool Process (long timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Process(int64 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaProcessor2D.Process(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timestamp" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="timestamp">O carimbo de hora para executar extrapolação, em tiques de 100 nanossegundos.</param>
+        <summary>Extrapolates posição a manipulação, orientação e radius médio na hora especificada.</summary>
+        <returns>A manipulação posição, orientação e média radius na hora especificada. <see langword="true" />Se extrapolação está em andamento. Caso contrário, <see langword="false" /> se extrapolação foi concluída.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os carimbos de hora estão em unidades de 100 nanossegundos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro de carimbo de hora é menor que o carimbo de hora inicial e a anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RotationBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Manipulations.InertiaRotationBehavior2D RotationBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.Manipulations.InertiaRotationBehavior2D RotationBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaProcessor2D.RotationBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Manipulations.InertiaRotationBehavior2D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento de rotação do processador de inércia.</summary>
+        <value>O comportamento de rotação do processador de inércia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation%2A> está definida como habilitar o processamento de inércia girar um objeto três-e-meia de sua orientação inicial.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_SetDesiredRotation](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_setdesiredrotation)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameters">
+      <MemberSignature Language="C#" Value="public void SetParameters (System.Windows.Input.Manipulations.InertiaParameters2D parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameters(class System.Windows.Input.Manipulations.InertiaParameters2D parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaProcessor2D.SetParameters(System.Windows.Input.Manipulations.InertiaParameters2D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Windows.Input.Manipulations.InertiaParameters2D" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Parâmetros definidos.</param>
+        <summary>Define parâmetros do processador de inércia.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslationBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Manipulations.InertiaTranslationBehavior2D TranslationBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.Manipulations.InertiaTranslationBehavior2D TranslationBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaProcessor2D.TranslationBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Manipulations.InertiaTranslationBehavior2D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento de conversão do processador de inércia.</summary>
+        <value>O comportamento de conversão de processador de inércia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,221 @@
+<Type Name="TransformerInfo" FullName="System.Web.Configuration.TransformerInfo">
+  <TypeSignature Language="C#" Value="public sealed class TransformerInfo : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransformerInfo extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TransformerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma classe personalizada que estende o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> classe para uso por conexões de Web Part.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.TransformerInfo>objetos especificam classes personalizadas que estendem o <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> classe. Essas classes de transformador personalizado atuam como pontes entre as Web Parts, transferir dados entre as Web Parts com pontos de conexão incompatível.  
+  
+   
+  
+## Examples  
+ O trecho de arquivo de configuração a seguir mostra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.TransformerInfo> classe.  
+  
+```  
+<system.web>  
+  <webParts>  
+    <transformers>  
+      <add name="RowToFieldTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />  
+      <add name="RowToFilterTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToFilterTransformer" />  
+      <add name="RowToParametersTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />  
+    </transformers>  
+  </webParts>   
+</system.web>  
+```  
+  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TransformerInfo> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebPartsSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#2)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransformerInfo (string name, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfo.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome deste tipo de transformador.</param>
+        <param name="type">Uma referência a um tipo que estende o transformador <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.TransformerInfo" /> classe com a referência de nome e tipo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema de configuração não valida o tipo especificado para garantir que um nome de tipo válido é usado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TransformerInfo.%23ctor%28System.String%2CSystem.String%29> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebPartsSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#5)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Compara atual <see cref="T:System.Web.Configuration.TransformerInfo" /> objeto para outro <see cref="T:System.Web.Configuration.TransformerInfo" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o objeto passado é igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um código hash para a coleção.</summary>
+        <returns>Código de hash do inteiro exclusivo para o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TransformerInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um nome amigável para um tipo que estende o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> classe.</summary>
+        <value>Um nome amigável de um tipo que estende o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TransformerInfo.Name%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebPartsSection> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TransformerInfo.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TransformerInfo.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a referência de tipo para uma classe que estende o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> classe.</summary>
+        <value>Uma referência de tipo para uma classe que estende o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema de configuração não valida o tipo especificado para garantir que um nome de tipo válido é usado. No entanto, tipos inválidos causarão exceções quando páginas da Web são carregadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TransformerInfo.Type%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.Configuration.WebPartsSection> tipo.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

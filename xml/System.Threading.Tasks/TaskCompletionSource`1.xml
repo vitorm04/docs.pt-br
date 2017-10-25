@@ -1,0 +1,567 @@
+<Type Name="TaskCompletionSource&lt;TResult&gt;" FullName="System.Threading.Tasks.TaskCompletionSource&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public class TaskCompletionSource&lt;TResult&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskCompletionSource`1&lt;TResult&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskCompletionSource`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TResult">O tipo de valor do resultado associado a este <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" />.</typeparam>
+    <summary>Representa o lado do produtor de um <see cref="T:System.Threading.Tasks.Task`1" /> não associado a um delegado, fornecendo acesso ao lado do consumidor por meio da propriedade <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em muitos cenários, é útil habilitar um <xref:System.Threading.Tasks.Task%601> representar uma operação assíncrona externa. <xref:System.Threading.Tasks.TaskCompletionSource%601>é fornecido para essa finalidade. Ele permite a criação de uma tarefa que pode ser enviada para os consumidores, e esses clientes podem usar os membros da tarefa como qualquer outra. No entanto, ao contrário da maioria das tarefas, o estado de uma tarefa criada por um TaskCompletionSource é controlado explicitamente pelos métodos em TaskCompletionSource. Isso permite que a conclusão da operação assíncrona externa para ser propagada para a tarefa subjacente. A separação também garante que os consumidores não são capazes de transição do estado sem acesso ao TaskCompletionSource correspondente. Para obter mais informações, consulte a entrada [a natureza de TaskCompletionSource\<TResult >](http://blogs.msdn.com/b/pfxteam/archive/2009/06/02/9685804.aspx) em programação paralela com .NET blog.  
+  
+ O [exemplos de extensões paralelas](http://go.microsoft.com/fwlink/?LinkID=165717) também contêm exemplos de como usar <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Threading.Tasks.TaskCompletionSource%601>:  
+  
+ [!code-csharp[System.Threading.Tasks.TaskCompletionSource#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.taskcompletionsource/cs/taskcompletionsource.cs#01)]
+ [!code-vb[System.Threading.Tasks.TaskCompletionSource#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.taskcompletionsource/vb/taskcompletionsource.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros de <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> são thread-safe e podem ser usados em vários threads ao mesmo tempo.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskCompletionSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskCompletionSource (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">O estado a ser usado como o AsyncState subjacente da <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Cria uma <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> com o estado especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskCompletionSource (System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="creationOptions">As opções a serem usadas ao criar o <see cref="T:System.Threading.Tasks.Task`1" /> subjacente.</param>
+        <summary>Cria um <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> com as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.Tasks.Task%601> criado por essa instância e acessível por meio de seu <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> propriedade será instanciada usando especificado `creationOptions`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="creationOptions" /> representa opções inválidas para uso com um <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskCompletionSource (object state, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object state, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Object,System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="state">O estado a ser usado como o AsyncState subjacente da <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <param name="creationOptions">As opções a serem usadas ao criar o <see cref="T:System.Threading.Tasks.Task`1" /> subjacente.</param>
+        <summary>Cria uma <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> com o estado e as opções especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="creationOptions" /> representa opções inválidas para uso com um <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCanceled">
+      <MemberSignature Language="C#" Value="public void SetCanceled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCanceled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.SetCanceled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Threading.Tasks.Task`1" /> subjacente já está em um dos três estados finais: <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />, <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> ou <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />, ou se o <see cref="T:System.Threading.Tasks.Task`1" /> subjacente já tiver sido descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetException">
+      <MemberSignature Language="C#" Value="public void SetException (System.Collections.Generic.IEnumerable&lt;Exception&gt; exceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetException(class System.Collections.Generic.IEnumerable`1&lt;class System.Exception&gt; exceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.SetException(System.Collections.Generic.IEnumerable{System.Exception})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exceptions" Type="System.Collections.Generic.IEnumerable&lt;System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="exceptions">A coleção de exceções para associar a este <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Faz a transição subjacente <see cref="T:System.Threading.Tasks.Task`1" /> para o <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> de estado e associa uma coleção de objetos de exceção para ela.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="exceptions" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">Há um ou mais elementos nulos em <paramref name="exceptions" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Threading.Tasks.Task`1" /> subjacente já está em um dos três estados finais: <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />, <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> ou <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetException">
+      <MemberSignature Language="C#" Value="public void SetException (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetException(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.SetException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção para associar a este <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Faz a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> e associa-o a uma exceção especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="exception" /> é nulo.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Threading.Tasks.Task`1" /> subjacente já está em um dos três estados finais: <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />, <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> ou <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResult">
+      <MemberSignature Language="C#" Value="public void SetResult (TResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetResult(!TResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.SetResult(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="TResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O valor do resultado a se associar a esse <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Faz a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" /> foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Threading.Tasks.Task`1" /> subjacente já está em um dos três estados finais: <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />, <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> ou <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Task">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; Task { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; Task" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskCompletionSource`1.Task" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Threading.Tasks.Task`1" /> criado por esse <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" />.</summary>
+        <value>Retorna o <see cref="T:System.Threading.Tasks.Task`1" /> criado por esse <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que um consumidor acessar o <xref:System.Threading.Tasks.Task%601> que é controlado por esta instância. Quando você cria um <xref:System.Threading.Tasks.TaskCompletionSource%601> objeto, o <xref:System.Threading.Tasks.Task.Status%2A> propriedade deste <xref:System.Threading.Tasks.Task%601> retorna do objeto<xref:System.Threading.Tasks.TaskStatus.WaitingForActivation>  
+  
+ O <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>, e <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> métodos (e suas variantes de "Try") neste instância todos resultam nas transições de estado relevantes sobre isso subjacente da tarefa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetCanceled">
+      <MemberSignature Language="C#" Value="public bool TrySetCanceled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrySetCanceled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tenta fazer a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />.</summary>
+        <returns>True se a operação for bem-sucedida; false se a operação for malsucedida ou o objeto já tiver sido descartado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação retornará false se o <xref:System.Threading.Tasks.Task%601> já está em um dos três estados finais: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, ou <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
+  
+ Esse método também retornará false se subjacente <xref:System.Threading.Tasks.Task%601> já foi descartado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetCanceled">
+      <MemberSignature Language="C#" Value="public bool TrySetCanceled (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrySetCanceled(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Um token de cancelamento.</param>
+        <summary>Tenta fazer a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" /> e permite que um token de cancelamento seja armazenado na tarefa cancelada.</summary>
+        <returns>
+          <see langword="true" /> se a operação for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método retornará false se subjacente <xref:System.Threading.Tasks.Task%601> objeto já está em um dos três estados finais.  
+  
+-   <xref:System.Threading.Tasks.TaskStatus?displayProperty=nameWithType>  
+  
+-   <xref:System.Threading.Tasks.TaskStatus?displayProperty=nameWithType>  
+  
+-   <xref:System.Threading.Tasks.TaskStatus?displayProperty=nameWithType>  
+  
+ Esse método também retorna `false` se subjacente <xref:System.Threading.Tasks.Task%601> objeto já foi descartado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetException">
+      <MemberSignature Language="C#" Value="public bool TrySetException (System.Collections.Generic.IEnumerable&lt;Exception&gt; exceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrySetException(class System.Collections.Generic.IEnumerable`1&lt;class System.Exception&gt; exceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Collections.Generic.IEnumerable{System.Exception})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exceptions" Type="System.Collections.Generic.IEnumerable&lt;System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="exceptions">A coleção de exceções para associar a este <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Tenta fazer a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> e associa uma coleção de objetos de exceção a ele.</summary>
+        <returns>True se a operação foi bem-sucedida; Caso contrário, false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação retornará false se o <xref:System.Threading.Tasks.Task%601> já está em um dos três estados finais: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, ou <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="exceptions" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">Há um ou mais elementos nulos em <paramref name="exceptions" />.  
+  
+ - ou -  
+  
+ A coleção <paramref name="exceptions" /> está vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetException">
+      <MemberSignature Language="C#" Value="public bool TrySetException (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrySetException(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção para associar a este <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Tenta fazer a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> e o associa a uma exceção especificada.</summary>
+        <returns>True se a operação foi bem-sucedida; Caso contrário, false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação retornará false se o <xref:System.Threading.Tasks.Task%601> já está em um dos três estados finais: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, ou <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="exception" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetResult">
+      <MemberSignature Language="C#" Value="public bool TrySetResult (TResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrySetResult(!TResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="TResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O valor do resultado a se associar a esse <see cref="T:System.Threading.Tasks.Task`1" />.</param>
+        <summary>Tenta fazer a transição do <see cref="T:System.Threading.Tasks.Task`1" /> subjacente para o estado <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />.</summary>
+        <returns>True se a operação foi bem-sucedida; Caso contrário, false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação retornará false se o <xref:System.Threading.Tasks.Task%601> já está em um dos três estados finais: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, ou <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
+  
+ Esse método também retornará false se subjacente <xref:System.Threading.Tasks.Task%601> já foi descartado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="FormWindowState" FullName="System.Windows.Forms.FormWindowState">
+  <TypeSignature Language="C#" Value="public enum FormWindowState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormWindowState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FormWindowState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como uma janela do formulário é exibida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pela classe de <xref:System.Windows.Forms.Form> . Representa os diferentes estados do formulário. O estado padrão é `Normal`.  
+  
+   
+  
+## Examples  
+ Neste exemplo, você alterar o estado da janela do formulário para `Maximized` e exibir as informações de estado usando um rótulo. Este exemplo supõe que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[FormWindowState#1](~/samples/snippets/cpp/VS_Snippets_Winforms/FormWindowState/CPP/formwindowstate.cpp#1)]
+ [!code-csharp[FormWindowState#1](~/samples/snippets/csharp/VS_Snippets_Winforms/FormWindowState/CS/formwindowstate.cs#1)]
+ [!code-vb[FormWindowState#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/FormWindowState/VB/formwindowstate.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Maximized">
+      <MemberSignature Language="C#" Value="Maximized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormWindowState Maximized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormWindowState.Maximized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormWindowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela maximizada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimized">
+      <MemberSignature Language="C#" Value="Minimized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormWindowState Minimized = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormWindowState.Minimized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormWindowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela minimizada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormWindowState Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormWindowState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormWindowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela de tamanho padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

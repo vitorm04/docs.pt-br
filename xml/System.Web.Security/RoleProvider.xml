@@ -1,0 +1,523 @@
+<Type Name="RoleProvider" FullName="System.Web.Security.RoleProvider">
+  <TypeSignature Language="C#" Value="public abstract class RoleProvider : System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RoleProvider extends System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.RoleProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web, Version=2.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o contrato que o ASP.NET implementa para fornecer serviços de gerenciamento de função usando provedores de função personalizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gerenciamento de função do ASP.NET foi projetado para que você possa facilmente usar um número de provedores de função diferentes para seus aplicativos ASP.NET. Você pode usar os provedores de função fornecido com o .NET Framework, ou você pode implementar seu próprio provedor.  
+  
+ Ao implementar um provedor de função personalizada, você deve herdar de <xref:System.Web.Security.RoleProvider> classe abstrata.  
+  
+ Há dois motivos principais para criar um provedor de função personalizada.  
+  
+-   Você precisa armazenar informações de função em uma fonte de dados que não é suportada pelos provedores de função incluídos com o .NET Framework, como um banco de dados FoxPro, um banco de dados Oracle ou outras fontes de dados.  
+  
+-   Você precisará gerenciar informações de função usando um esquema de banco de dados que é diferente do esquema do banco de dados usado pelos provedores fornecidos com o .NET Framework. Um exemplo comum disso seria dados de função que já existe um banco de dados do SQL Server para uma empresa ou site da Web.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RoleProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Security.RoleProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário para implementar um construtor para uma classe que herda de <xref:System.Web.Security.RoleProvider> classe abstrata. Valores de inicialização para um <xref:System.Web.Security.RoleProvider> implementação são passados para o <xref:System.Configuration.Provider.ProviderBase.Initialize%2A> implementação do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsersToRoles">
+      <MemberSignature Language="C#" Value="public abstract void AddUsersToRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddUsersToRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.AddUsersToRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeias de caracteres de nomes de usuário a serem adicionados às funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeias de caracteres dos nomes de função às quais adicionar os nomes de usuário especificados.</param>
+        <summary>Adiciona os nomes de usuário especificados às funções especificadas para o <see langword="applicationName" /> configurado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.AddUsersToRoles%2A>é chamado pelo <xref:System.Web.Security.Roles> classe para associar os usuários especificados com as funções especificadas na fonte de dados. Funções são adicionadas ao configurado <xref:System.Web.Security.RoleProvider.ApplicationName%2A>.  
+  
+ Se qualquer um dos nomes de função especificado são não encontrado para configurado `applicationName`, recomendamos que o provedor de lançar um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ Se qualquer um dos nomes de usuário especificado não estão associados a qualquer um dos nomes de função especificado configurado `applicationName`, recomendamos que o provedor de lançar um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ Se qualquer um dos nomes de usuário especificado é `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se qualquer um dos nomes de função especificado for `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se sua fonte de dados oferece suporte a transações, recomendamos que você inclua cada operação de adição em uma transação e reverter a transação e lançar uma exceção se qualquer operação de adição falhar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.AddUsersToRoles%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#2)]
+ [!code-vb[System.Web.Security.IRoleProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public abstract string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RoleProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo no qual as informações de função serão armazenadas e recuperadas.</summary>
+        <value>O nome do aplicativo no qual as informações de função serão armazenadas e recuperadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RoleProvider.ApplicationName%2A> é usado pelo <xref:System.Web.Security.Roles> classe para associar usuários e funções diferentes aplicativos. Isso permite que vários aplicativos usar o mesmo banco de dados para armazenar informações de usuário e função sem exibir conflitos entre nomes duplicados ou nomes de função. Vários aplicativos ASP.NET podem usar o mesmo banco de dados, especificando o mesmo valor no <xref:System.Web.Security.Roles.ApplicationName%2A> propriedade. O <xref:System.Web.Security.Roles.ApplicationName%2A> propriedade pode ser definida programaticamente, ou pode ser definida declarativamente no arquivo de configuração para o aplicativo Web usando o `applicationName` atributo.  
+  
+ Se nenhum <xref:System.Web.Security.RoleProvider.ApplicationName%2A> propriedade for especificada, é recomendável que o <xref:System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath%2A> usado o valor de propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo do <xref:System.Web.Security.RoleProvider.ApplicationName%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#1)]
+ [!code-vb[System.Web.Security.IRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRole">
+      <MemberSignature Language="C#" Value="public abstract void CreateRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.CreateRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser criada.</param>
+        <summary>Adiciona uma nova função à fonte de dados da <see langword="applicationName" /> configurada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.CreateRole%2A>é chamado pelo <xref:System.Web.Security.Roles.CreateRole%2A> método o <xref:System.Web.Security.Roles> classe para adicionar a função especificada para a fonte de dados configurado <xref:System.Web.Security.RoleProvider.ApplicationName%2A>.  
+  
+ Se o nome da função especificada já existe para configurado `applicationName`, é `null`, ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se o nome da função especificada contiver uma vírgula, é recomendável que seu lançar uma exceção do provedor.  
+  
+ Se sua fonte de dados restringe o comprimento do nome da função, por exemplo, por meio de uma coluna de comprimento fixo de uma tabela em um banco de dados, é recomendável que você gera uma exceção se o nome da função excede o comprimento máximo permitido pela fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.CreateRole%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#3)]
+ [!code-vb[System.Web.Security.IRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRole">
+      <MemberSignature Language="C#" Value="public abstract bool DeleteRole (string roleName, bool throwOnPopulatedRole);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool DeleteRole(string roleName, bool throwOnPopulatedRole) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.DeleteRole(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="throwOnPopulatedRole" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser excluída.</param>
+        <param name="throwOnPopulatedRole">Se <see langword="true" />, lançar uma exceção se <c>roleName</c> tem um ou mais membros e não exclua <c>roleName</c>.</param>
+        <summary>Remove uma função da fonte de dados configurado <see langword="applicationName" />.</summary>
+        <returns>
+          <see langword="true" />Se a função foi excluída com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.DeleteRole%2A>é chamado pelo <xref:System.Web.Security.Roles.DeleteRole%2A> e <xref:System.Web.Security.Roles.DeleteRole%2A> métodos do <xref:System.Web.Security.Roles> classe para excluir a função especificada da fonte de dados configurado <xref:System.Web.Security.RoleProvider.ApplicationName%2A>.  
+  
+ Quando você exclui uma função da fonte de dados, certifique-se de que você também pode excluir todas as associações entre um nome de usuário e a função excluída para configurado `applicationName`.  
+  
+ Se `throwOnPopulatedRole` é `true`e a função identificada pelo `roleName` parâmetro tem um ou mais membros, gerar um <xref:System.Configuration.Provider.ProviderException> e não exclua a função. Se `throwOnPopulatedRole` é `false`, em seguida, exclua a função se ela estiver vazia ou não.  
+  
+ Se o nome da função especificada não existir, é `null`, ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.DeleteRole%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#4)]
+ [!code-vb[System.Web.Security.IRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersInRole">
+      <MemberSignature Language="C#" Value="public abstract string[] FindUsersInRole (string roleName, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] FindUsersInRole(string roleName, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.FindUsersInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <param name="usernameToMatch">O nome de usuário a ser pesquisado.</param>
+        <summary>Obtém uma matriz de nomes de usuário em uma função em que o nome de usuário contém o nome de usuário especificado para corresponder.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os usuários cujo nome de usuário corresponde <paramref name="usernameToMatch" /> e o usuário é um membro da função especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RoleProvider.FindUsersInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe e retorna uma lista de usuários em uma função onde o nome de usuário contém uma correspondência de fornecido `usernameToMatch` configurado `applicationName`. Suporte a caracteres curinga é incluído com base na fonte de dados. Os usuários são retornados em ordem alfabética por nome de usuário.  
+  
+ É recomendável que você exiba um <xref:System.Configuration.Provider.ProviderException> se `roleName` não existe na fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um exemplo <xref:System.Web.Security.RoleProvider.FindUsersInRole%2A> implementação.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#11)]
+ [!code-vb[System.Web.Security.IRoleProvider#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRoles">
+      <MemberSignature Language="C#" Value="public abstract string[] GetAllRoles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetAllRoles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.GetAllRoles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma lista de todas as funções do <see langword="applicationName" /> configurado.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todas as funções armazenadas na fonte de dados do <see langword="applicationName" /> configurado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.GetAllRoles%2A>é chamado pelo <xref:System.Web.Security.Roles.GetAllRoles%2A> método o <xref:System.Web.Security.Roles> classe para recuperar uma lista de nomes de função da fonte de dados. Somente as funções para especificado <xref:System.Web.Security.RoleProvider.ApplicationName%2A> são recuperados.  
+  
+ Se nenhuma função existir configurado `applicationName`, recomendamos que o provedor retornar uma matriz de cadeia de caracteres com nenhum elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.GetAllRoles%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#5)]
+ [!code-vb[System.Web.Security.IRoleProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRolesForUser">
+      <MemberSignature Language="C#" Value="public abstract string[] GetRolesForUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetRolesForUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.GetRolesForUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O usuário para o qual será retornada uma lista de funções.</param>
+        <summary>Obtém uma lista das funções na qual o usuário especificado está para o <see langword="applicationName" /> configurado.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todas as funções que o usuário especificado tem para o <see langword="applicationName" /> configurado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.GetRolesForUser%2A>é chamado pelo <xref:System.Web.Security.Roles.GetRolesForUser%2A> método o <xref:System.Web.Security.Roles> classe para recuperar os nomes de função que o usuário especificado está associado da fonte de dados. Somente as funções para configurado <xref:System.Web.Security.RoleProvider.ApplicationName%2A> são recuperados.  
+  
+ Se nenhuma função existir para o usuário especificado para configurado `applicationName`, recomendamos que o provedor retornar uma matriz de cadeia de caracteres com nenhum elemento.  
+  
+ Se o nome de usuário especificado é `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.GetRolesForUser%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#6)]
+ [!code-vb[System.Web.Security.IRoleProvider#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUsersInRole">
+      <MemberSignature Language="C#" Value="public abstract string[] GetUsersInRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetUsersInRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.GetUsersInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função para a qual a lista de usuários será obtida.</param>
+        <summary>Obtém uma lista de usuários na função especificada para o <see langword="applicationName" /> configurado.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os usuários que são membros da função especificada para o <see langword="applicationName" /> configurado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.GetUsersInRole%2A>é chamado pelo <xref:System.Web.Security.Roles.GetUsersInRole%2A> método o <xref:System.Web.Security.Roles> classe para recuperar os nomes de usuário associados a uma função da fonte de dados. Somente as funções para configurado <xref:System.Web.Security.RoleProvider.ApplicationName%2A> são recuperados.  
+  
+ Se o nome da função especificada não existe para configurado `applicationName` ou se ele for `null` ou uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se nenhum usuário estiver associado com a função especificada para configurado `applicationName`, recomendamos que o provedor retornar uma matriz de cadeia de caracteres com nenhum elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.GetUsersInRole%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#7)]
+ [!code-vb[System.Web.Security.IRoleProvider#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInRole">
+      <MemberSignature Language="C#" Value="public abstract bool IsUserInRole (string username, string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUserInRole(string username, string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.IsUserInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser pesquisado.</param>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <summary>Obtém um valor que indica se o usuário especificado está na função especificada para o <see langword="applicationName" /> configurado.</summary>
+        <returns>
+          <see langword="true" /> se o usuário especificado estiver na função especificada do <see langword="applicationName" /> configurado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RoleProvider.IsUserInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles.IsUserInRole%2A> método o <xref:System.Web.Security.Roles> classe para determinar se o usuário de logon atual está associado uma função da fonte de dados configurado <xref:System.Web.Security.Roles.ApplicationName%2A>.  
+  
+ Se o nome de usuário especificado é `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se o nome da função especificada for `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.IsUserInRole%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#8)]
+ [!code-vb[System.Web.Security.IRoleProvider#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveUsersFromRoles">
+      <MemberSignature Language="C#" Value="public abstract void RemoveUsersFromRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveUsersFromRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.RemoveUsersFromRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeia de caracteres de nomes de usuário a ser removido das funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função para remover os nomes de usuários especificados.</param>
+        <summary>Remove os nomes de usuário especificados das funções especificadas configurado <see langword="applicationName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.RemoveUsersFromRoles%2A>é chamado pelo <xref:System.Web.Security.Roles.RemoveUserFromRole%2A> , <xref:System.Web.Security.Roles.RemoveUsersFromRole%2A> , <xref:System.Web.Security.Roles.RemoveUserFromRoles%2A> , e <xref:System.Web.Security.Roles.RemoveUsersFromRoles%2A> métodos de <xref:System.Web.Security.Roles> classe para remover os usuários especificados das funções especificadas na fonte de dados. Somente funções configurado <xref:System.Web.Security.RoleProvider.ApplicationName%2A> são modificadas.  
+  
+ Se qualquer um dos nomes de função especificado são não encontrado para configurado `applicationName`, recomendamos que o provedor de lançar um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ Se qualquer um dos nomes de usuário especificado não estão associados a qualquer um dos nomes de função especificado configurado `applicationName`, recomendamos que o provedor de lançar um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ Se qualquer um dos nomes de usuário especificado é `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se qualquer um dos nomes de função especificado for `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+ Se sua fonte de dados oferece suporte a transações, recomendamos que você incluir cada operação de remoção em uma transação e que você reverta a transação e lançar uma exceção se qualquer operação de remoção falhar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.RemoveUsersFromRoles%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#9)]
+ [!code-vb[System.Web.Security.IRoleProvider#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleExists">
+      <MemberSignature Language="C#" Value="public abstract bool RoleExists (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RoleExists(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleProvider.RoleExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função pela qual pesquisar na fonte de dados.</param>
+        <summary>Obtém um valor que indica se o nome da função especificada já existe na fonte de dados de função para o <see langword="applicationName" /> configurado.</summary>
+        <returns>
+          <see langword="true" />Se o nome da função já existe na fonte de dados configurado <see langword="applicationName" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RoleProvider.RoleExists%2A>é chamado pelo <xref:System.Web.Security.Roles.RoleExists%2A> método o <xref:System.Web.Security.Roles> classe para determinar se um nome de função existe na fonte de dados configurado <xref:System.Web.Security.Roles.ApplicationName%2A>.  
+  
+ Se o nome da função especificada for `null` ou é uma cadeia de caracteres vazia, é recomendável que o provedor de lançar uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de exemplo de <xref:System.Web.Security.RoleProvider.RoleExists%2A> método.  
+  
+ [!code-csharp[System.Web.Security.IRoleProvider#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/CS/odbcroleprovidersnippets.cs#10)]
+ [!code-vb[System.Web.Security.IRoleProvider#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IRoleProvider/VB/odbcroleprovidersnippets.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,272 @@
+<Type Name="EncryptionProperty" FullName="System.Security.Cryptography.Xml.EncryptionProperty">
+  <TypeSignature Language="C#" Value="public sealed class EncryptionProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EncryptionProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptionProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o <see langword="&lt;EncryptionProperty&gt;" /> elemento usado na criptografia de XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionProperty> classe encapsula o `<EncryptionProperty>` elemento definido pela especificação de criptografia de XML do World Wide Web Consortium localizado em http://www.w3.org/TR/xmlenc-core/.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.EncryptionProperty> classe para fornecer informações adicionais de criptografia relacionadas a <xref:System.Security.Cryptography.Xml.EncryptedData> e <xref:System.Security.Cryptography.Xml.EncryptedKey> elementos.  Por exemplo, use essa classe para especificar um carimbo de hora.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir criptografa e descriptografa um documento XML.  Este exemplo de código cria um <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto que contém informações personalizadas sobre o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento e adiciona o <xref:System.Security.Cryptography.Xml.EncryptionProperty> o objeto para o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  Por fim, este exemplo de código exibe informações sobre o <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto e o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptionProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptionProperty (System.Xml.XmlElement elemProp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement elemProp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionProperty.#ctor(System.Xml.XmlElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementProperty" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="elemProp">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> usando um objeto <see cref="T:System.Xml.XmlElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir criptografa e descriptografa um documento XML.  Este exemplo de código cria um <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto que contém informações personalizadas sobre o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento e adiciona o <xref:System.Security.Cryptography.Xml.EncryptionProperty> o objeto para o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  Por fim, este exemplo de código exibe informações sobre o <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto e o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="elemProp" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Xml.XmlElement.LocalName" /> propriedade o <paramref name="elemProp" /> parâmetro não é "EncryptionProperty".  
+  
+ -ou-  
+  
+ O <see cref="P:System.Xml.XmlElement.NamespaceURI" /> propriedade o <paramref name="elemProp" /> parâmetro não é "http://www.w3.org/2001/04/xmlenc#".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionProperty.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Xml.XmlElement" /> que encapsula uma instância do objeto de <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> classe.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> que encapsula uma instância do objeto de <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionProperty.GetXml%2A> método retorna uma representação de `<EncryptionProperty>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionProperty.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID da atual <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto.</summary>
+        <value>A ID da atual <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ID é usada como referência a <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto a partir de outro local.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir criptografa e descriptografa um documento XML.  Este exemplo de código cria um <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto que contém informações personalizadas sobre o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento e adiciona o <xref:System.Security.Cryptography.Xml.EncryptionProperty> o objeto para o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  Por fim, este exemplo de código exibe informações sobre o <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto e o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionProperty.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Xml.XmlElement" /> objeto a ser analisado.</param>
+        <summary>Analisa a entrada <see cref="T:System.Xml.XmlElement" /> e configura o estado interno do <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto para corresponder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionProperty.LoadXml%2A> método configura o <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto para corresponder o estado de um <xref:System.Xml.XmlElement> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Xml.XmlElement.LocalName" /> propriedade o <paramref name="value" /> parâmetro não é "EncryptionProperty".  
+  
+ -ou-  
+  
+ O <see cref="P:System.Xml.XmlElement.NamespaceURI" /> propriedade o <paramref name="value" /> parâmetro não é "http://www.w3.org/2001/04/xmlenc#".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyElement">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement PropertyElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement PropertyElement" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionProperty.PropertyElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Xml.XmlElement" /> objeto que representa um <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto.</summary>
+        <value>Um <see cref="T:System.Xml.XmlElement" /> objeto que representa um <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir criptografa e descriptografa um documento XML.  Este exemplo de código cria um <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto que contém informações personalizadas sobre o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento e adiciona o <xref:System.Security.Cryptography.Xml.EncryptionProperty> o objeto para o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  Por fim, este exemplo de código exibe informações sobre o <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto e o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Security.Cryptography.Xml.EncryptionProperty.PropertyElement" /> foi definida como <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Xml.XmlElement.LocalName" /> propriedade do valor definido para o <see cref="P:System.Security.Cryptography.Xml.EncryptionProperty.PropertyElement" /> propriedade não é "EncryptionProperty".  
+  
+ -ou-  
+  
+ O <see cref="P:System.Xml.XmlElement.NamespaceURI" /> propriedade do valor definido para o <see cref="P:System.Security.Cryptography.Xml.EncryptionProperty.PropertyElement" /> propriedade não é "http://www.w3.org/2001/04/xmlenc#".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionProperty.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o destino do <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto.</summary>
+        <value>O destino do <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir criptografa e descriptografa um documento XML.  Este exemplo de código cria um <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto que contém informações personalizadas sobre o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento e adiciona o <xref:System.Security.Cryptography.Xml.EncryptionProperty> o objeto para o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  Por fim, este exemplo de código exibe informações sobre o <xref:System.Security.Cryptography.Xml.EncryptionProperty> objeto e o <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> coleção.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

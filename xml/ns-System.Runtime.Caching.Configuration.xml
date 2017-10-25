@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Caching.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Caching.Configuration" /> namespace contém classes de manipulador de configuração para o recurso de cache do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de manipulador de configuração nesse namespace são para o cache geral usado com aplicativos do .NET Framework. Os manipuladores de configuração para o cache do ASP.NET estão contidos no <xref:System.Web.Configuration> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

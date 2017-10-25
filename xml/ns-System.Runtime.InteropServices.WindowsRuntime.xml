@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.InteropServices.WindowsRuntime">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.InteropServices.WindowsRuntime" /> namespace contém classes que oferecem suporte à interoperação entre o código gerenciado e o Windows Runtime e tipos que permitem a criação de Windows Runtime com código gerenciado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

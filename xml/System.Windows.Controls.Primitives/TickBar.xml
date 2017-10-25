@@ -1,0 +1,751 @@
+<Type Name="TickBar" FullName="System.Windows.Controls.Primitives.TickBar">
+  <TypeSignature Language="C#" Value="public class TickBar : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TickBar extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.TickBar" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle que desenha um conjunto de marcas de escala para um controle <see cref="T:System.Windows.Controls.Slider" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.TickBar> controle desenha marcas que têm uma largura de um pixel. Você pode definir o local das marcas de escala, especificando um intervalo de repetição ou uma série de pontos explícitas.  
+  
+ O <xref:System.Windows.Controls.Primitives.TickBar> controle foi especificamente projetado para trabalhar com um <xref:System.Windows.Controls.Slider> controle. Um <xref:System.Windows.Controls.Slider> exibe marcas de escala. A ilustração a seguir mostra um <xref:System.Windows.Controls.Slider> que tem um <xref:System.Windows.Controls.Primitives.TickBar>.  
+  
+ **Controle deslizante com um TickBar**  
+  
+ ![Ilustração de controle deslizante](~/add/media/genericslider.png "ilustração de controle deslizante")  
+  
+ <xref:System.Windows.Controls.Primitives.TickBar>controles geralmente são definidos no <xref:System.Windows.Style> de um <xref:System.Windows.Controls.Slider>. Para obter um exemplo de um <xref:System.Windows.Controls.Primitives.TickBar> que está incluído em um <xref:System.Windows.Controls.Slider> <xref:System.Windows.Style>, consulte [modelos e estilos de controle deslizante](~/docs/framework/wpf/controls/slider-styles-and-templates.md).  
+  
+ O <xref:System.Windows.Controls.Primitives.TickBar> e <xref:System.Windows.Controls.Slider> ambos os controles contêm propriedades que executam a mesma função. A tabela a seguir mostra o <xref:System.Windows.Controls.Primitives.TickBar> correspondente e propriedades <xref:System.Windows.Controls.Slider> propriedades ao qual eles estão associados. O <xref:System.Windows.Controls.Primitives.TickBar> propriedades têm precedência quando <xref:System.Windows.Controls.Slider> e <xref:System.Windows.Controls.Primitives.TickBar> propriedades relacionadas forem especificadas.  
+  
+ **TickBar relacionado e as propriedades de controle deslizante**  
+  
+|Propriedade <xref:System.Windows.Controls.Primitives.TickBar>|Propriedade <xref:System.Windows.Controls.Slider>|  
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.IsDirectionReversed%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.SelectionEnd%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.SelectionStart%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.TickFrequency%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.TickFrequency%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.Ticks%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.Ticks%2A?displayProperty=nameWithType>|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TickBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TickBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.TickBar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Fill { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Fill" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Fill" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Brush" /> que é usado para desenhar as marcas de escala.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Brush" /> para usar para desenhar marcas de escala. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Fill"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.FillProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.FillProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.Fill" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.TickBar.Fill%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversed">
+      <MemberSignature Language="C#" Value="public bool IsDirectionReversed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectionReversed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção de aumento do valor das marcas de escala.</summary>
+        <value>
+          <see langword="true" />Se a direção de aumento do valor é para a esquerda para um horizontal <see cref="T:System.Windows.Controls.Slider" /> ou down para vertical <see cref="T:System.Windows.Controls.Slider" />; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsDirectionReversed"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversedProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDirectionReversedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDirectionReversedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.IsDirectionReversedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRangeEnabled">
+      <MemberSignature Language="C#" Value="public bool IsSelectionRangeEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionRangeEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o <see cref="T:System.Windows.Controls.Primitives.TickBar" /> exibe um intervalo de seleção.</summary>
+        <value>
+          <see langword="true" /> se um intervalo de seleção for exibido; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Slider.SelectionStart%2A> e <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedades definem um intervalo de seleção. Essas propriedades devem ser definidas para o intervalo de seleção aparecer quando <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> é definido como `true`.  
+  
+ A ilustração a seguir mostra um <xref:System.Windows.Controls.Slider> controle que contém um <xref:System.Windows.Controls.Primitives.TickBar> que tem um intervalo de seleção definido.  
+  
+ ![Intervalo de seleção do controle deslizante](~/add/media/sliderselectionrange.GIF "intervalo de seleção do controle deslizante")  
+  
+<a name="dependencyPropertyInfo_IsSelectionRangeEnabled"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabledProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRangeEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionRangeEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionRangeEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.IsSelectionRangeEnabled" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor máximo possível para uma marca de escala.</summary>
+        <value>O maior valor possível para uma marca de escala. O valor padrão é 100.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Primários tiques são exibidos para o <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> e <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> valores e secundários tiques são exibidos para outros valores. Um horizontal <xref:System.Windows.Controls.Primitives.TickBar>, a altura de tiques primário é igual de <xref:System.Windows.FrameworkElement.ActualHeight%2A> do <xref:System.Windows.Controls.Primitives.TickBar>. Para vertical <xref:System.Windows.Controls.Primitives.TickBar>, a largura dos tiques primários é igual de <xref:System.Windows.FrameworkElement.ActualWidth%2A> do <xref:System.Windows.Controls.Primitives.TickBar>. O tamanho de tiques do secundários é 75 por cento do tamanho de tiques do primários.  
+  
+<a name="dependencyPropertyInfo_Maximum"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.MaximumProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaximumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaximumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.MaximumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.Maximum" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor mínimo que é possível que uma marca de escala.</summary>
+        <value>O menor valor possível para uma marca de escala. O valor padrão é zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Primários tiques são exibidos para o <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> e <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> valores e secundários tiques são exibidos para outros valores. Um horizontal <xref:System.Windows.Controls.Primitives.TickBar>, a altura de tiques primário é igual de <xref:System.Windows.FrameworkElement.ActualHeight%2A> do <xref:System.Windows.Controls.Primitives.TickBar>. Para vertical <xref:System.Windows.Controls.Primitives.TickBar>, a largura dos tiques primários é igual de <xref:System.Windows.FrameworkElement.ActualWidth%2A> do <xref:System.Windows.Controls.Primitives.TickBar>. O tamanho de tiques do secundários é 75 por cento do tamanho de tiques do primários.  
+  
+<a name="dependencyPropertyInfo_Minimum"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.MinimumProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinimumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinimumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.MinimumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.Minimum" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TickBar.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">O <see cref="T:System.Windows.Media.DrawingContext" /> que é usado para desenhar os tiques.</param>
+        <summary>Desenha marcas de escala para um <see cref="T:System.Windows.Controls.Slider" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores da <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> propriedade e o <xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed%2A> propriedade determinar onde as marcas de escala são desenhadas um <xref:System.Windows.Controls.Primitives.TickBar>.  
+  
+ Primários tiques são exibidos para o <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> e <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> valores e secundários tiques são exibidos para outros valores. Um horizontal <xref:System.Windows.Controls.Primitives.TickBar>, a altura de tiques primário é igual de <xref:System.Windows.FrameworkElement.ActualHeight%2A> do <xref:System.Windows.Controls.Primitives.TickBar>. Para vertical <xref:System.Windows.Controls.Primitives.TickBar>, a largura dos tiques primários é igual de <xref:System.Windows.FrameworkElement.ActualWidth%2A> do <xref:System.Windows.Controls.Primitives.TickBar>. O tamanho de tiques do secundários é 75 por cento do tamanho de tiques do primários.  
+  
+ Esse método também desenha tiques no início e no final de um intervalo de seleção se o <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> é de propriedade `true` e se o <xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A> e <xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A> propriedades são válidas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Placement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.TickBarPlacement Placement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.TickBarPlacement Placement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Placement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickBarPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define onde as marcas de escala aparecem relativo a um <see cref="T:System.Windows.Controls.Primitives.Track" /> de um <see cref="T:System.Windows.Controls.Slider" /> controle.</summary>
+        <value>Um <see cref="T:System.Windows.Controls.Primitives.TickBarPlacement" /> valor de enumeração que identifica a posição a <see cref="T:System.Windows.Controls.Primitives.TickBar" /> no <see cref="T:System.Windows.Style" /> layout de um <see cref="T:System.Windows.Controls.Slider" />. O valor padrão é <see cref="F:System.Windows.Controls.Primitives.TickBarPlacement.Top" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> valor é usado para certificar-se de que as partes visíveis do <xref:System.Windows.Controls.Primitives.TickBar>, como os indicadores de ponto de extremidade de um intervalo de seleção, são exibidos corretamente.  
+  
+<a name="dependencyPropertyInfo_Placement"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.PlacementProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.PlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.Placement" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservedSpace">
+      <MemberSignature Language="C#" Value="public double ReservedSpace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ReservedSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.ReservedSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um buffer de espaço para a área que contém as marcas de escala que são especificadas para um <see cref="T:System.Windows.Controls.Primitives.TickBar" />.</summary>
+        <value>Um valor que representa a área total do buffer em ambos os lados da linha ou coluna de marcas de escala. O valor padrão é zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O buffer de espaço que é definido pelo <xref:System.Windows.Controls.Primitives.TickBar.ReservedSpace%2A> propriedade destina-se a conta para o espaço que o <xref:System.Windows.Controls.Primitives.Thumb> controle usa quando ele está em ambas as extremidades do <xref:System.Windows.Controls.Primitives.TickBar>. O valor de <xref:System.Windows.Controls.Primitives.TickBar.ReservedSpace%2A> propriedade é dividida pela metade. Um metade do espaço é usado como um buffer em um lado da coleção de marca de escala e a outra metade do espaço é usada como um buffer no outro lado da coleção.  
+  
+<a name="dependencyPropertyInfo_ReservedSpace"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.ReservedSpaceProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservedSpaceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ReservedSpaceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ReservedSpaceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.ReservedSpaceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.ReservedSpace" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEnd">
+      <MemberSignature Language="C#" Value="public double SelectionEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.SelectionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto de extremidade de uma seleção.</summary>
+        <value>O último valor em um intervalo de valores para uma seleção. O valor padrão é -1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> propriedade deve ser definida como `true` para o <xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A> e <xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A> propriedades a serem usadas.  
+  
+<a name="dependencyPropertyInfo_SelectionEnd"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.SelectionEndProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEndProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionEndProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionEndProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.SelectionEndProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.SelectionEnd" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public double SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto inicial de uma seleção.</summary>
+        <value>O primeiro valor em um intervalo de valores para uma seleção. O valor padrão é -1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> propriedade deve ser definida como `true` para o <xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A> e <xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A> propriedades a serem usadas.  
+  
+<a name="dependencyPropertyInfo_SelectionStart"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.SelectionStartProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStartProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionStartProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionStartProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.SelectionStartProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.SelectionStart" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequency">
+      <MemberSignature Language="C#" Value="public double TickFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 TickFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.TickFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo entre marcas de escala.</summary>
+        <value>A distância entre as marcas de escala. O valor padrão é um (1.0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.Slider.Ticks%2A> propriedade é definida como um valor que não seja `null`, o <xref:System.Windows.Controls.Slider.TickFrequency%2A> propriedade não é usada. Marcas de escala são desenhadas no intervalo especificado pelo <xref:System.Windows.Controls.Slider.TickFrequency%2A> propriedade, a partir do valor da <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> propriedade e continuando até que o valor da <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> propriedade for atingida.  
+  
+<a name="dependencyPropertyInfo_TickFrequency"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.TickFrequencyProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequencyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TickFrequencyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TickFrequencyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.TickFrequencyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.TickFrequency" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ticks">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DoubleCollection Ticks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DoubleCollection Ticks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Ticks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DoubleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as posições das marcas de escala marcas.</summary>
+        <value>Um <see cref="T:System.Windows.Media.DoubleCollection" /> que especifica os locais das marcas de escala. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Marcas que são definidos pelo <xref:System.Windows.Controls.Primitives.TickBar.Ticks%2A> propriedade e que estão fora do intervalo definido pelo <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> e <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> valores de propriedade não são exibidos.  
+  
+ Quando o <xref:System.Windows.Controls.Primitives.TickBar.Ticks%2A> propriedade for definida, o <xref:System.Windows.Controls.Primitives.TickBar.TickFrequency%2A> propriedade não é usada.  
+  
+<a name="dependencyPropertyInfo_Ticks"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.TickBar.TicksProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TicksProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TicksProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TicksProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.TicksProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.TickBar.Ticks" />. Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

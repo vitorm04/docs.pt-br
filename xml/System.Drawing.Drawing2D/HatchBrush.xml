@@ -1,0 +1,177 @@
+<Type Name="HatchBrush" FullName="System.Drawing.Drawing2D.HatchBrush">
+  <TypeSignature Language="C#" Value="public sealed class HatchBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HatchBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.HatchBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um pincel retangular com um estilo de hachura, uma cor da tela de fundo e uma cor de primeiro plano. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um padrão de hachura é feito de duas cores: um definido pelo <xref:System.Drawing.Drawing2D.HatchBrush.BackgroundColor%2A>, que preenche a tela de fundo e uma para as linhas que formam o padrão no plano de fundo definido pelo <xref:System.Drawing.Drawing2D.HatchBrush.ForegroundColor%2A> propriedade. O <xref:System.Drawing.Drawing2D.HatchBrush.HatchStyle%2A> propriedade define o tipo de padrão de pincel tem e pode ser qualquer valor entre o <xref:System.Drawing.Drawing2D.HatchStyle> enumeração. Há mais de 50 elementos no <xref:System.Drawing.Drawing2D.HatchStyle> enumeração.  
+  
+ A ilustração a seguir mostra uma elipse preenchida com um padrão de hachura horizontal.  
+  
+ ![Padrão de hachura](~/add/media/hatch1.png "padrão de hachura")  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o <xref:System.Drawing.Drawing2D.HatchBrush> mostrado na ilustração anterior.  
+  
+ [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HatchBrush (System.Drawing.Drawing2D.HatchStyle hatchstyle, System.Drawing.Color foreColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Drawing2D.HatchStyle hatchstyle, valuetype System.Drawing.Color foreColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.HatchBrush.#ctor(System.Drawing.Drawing2D.HatchStyle,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hatchstyle" Type="System.Drawing.Drawing2D.HatchStyle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="hatchstyle">Um dos valores <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> que representa o padrão desenhado por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <param name="foreColor">A estrutura <see cref="T:System.Drawing.Color" /> que representa a cor das linhas desenhadas por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> com a cor de primeiro plano e a enumeração <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cor de plano de fundo é inicializada para preto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HatchBrush (System.Drawing.Drawing2D.HatchStyle hatchstyle, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Drawing2D.HatchStyle hatchstyle, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.HatchBrush.#ctor(System.Drawing.Drawing2D.HatchStyle,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hatchstyle" Type="System.Drawing.Drawing2D.HatchStyle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="hatchstyle">Um dos valores <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> que representa o padrão desenhado por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <param name="foreColor">A estrutura <see cref="T:System.Drawing.Color" /> que representa a cor das linhas desenhadas por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <param name="backColor">A estrutura <see cref="T:System.Drawing.Color" /> que representa a cor dos espaços entre as linhas desenhadas por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> com a cor de primeiro plano, cor da tela de fundo e a enumeração <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra uma elipse preenchida com um padrão de hachura horizontal.  
+  
+ ![Padrão de hachura](~/add/media/hatch1.png "padrão de hachura")  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> para criar o <xref:System.Drawing.Drawing2D.HatchBrush> mostrado na ilustração anterior.  
+  
+ [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.HatchBrush.BackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de espaços entre as linhas de hachura desenhadas por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> objeto.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> estrutura que representa a cor de plano de fundo para este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.HatchBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> objeto.</summary>
+        <returns>O <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> que esse método cria, convertido como um objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForegroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForegroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.HatchBrush.ForegroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor das linhas de hachura desenhadas por este <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> objeto.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> estrutura que representa a cor de primeiro plano para este <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HatchStyle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.HatchStyle HatchStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.HatchStyle HatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.HatchBrush.HatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.HatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo de hachura deste objeto <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</summary>
+        <value>Um dos valores <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> que representa o padrão deste <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,268 @@
+<Type Name="SettingsSection" FullName="System.Net.Configuration.SettingsSection">
+  <TypeSignature Language="C#" Value="public sealed class SettingsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SettingsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.SettingsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a seção de configuração para soquetes, IPv6, cabeçalhos de resposta e pontos de serviço. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe corresponde do [ &lt;configurações&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md) elemento de configuração.  
+  
+ Essa classe fornece acesso programático a informações que podem ser armazenados em arquivos de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.SettingsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.ConnectionManagementSection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpListener">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.HttpListenerElement HttpListener { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.HttpListenerElement HttpListener" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.HttpListener" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpListener")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.HttpListenerElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla as configurações usadas por um <see cref="T:System.Net.HttpListener" /> objeto.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.HttpListenerElement" />.  
+  
+ O elemento de configuração que controla as configurações usadas por um <see cref="T:System.Net.HttpListener" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpWebRequest">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.HttpWebRequestElement HttpWebRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.HttpWebRequestElement HttpWebRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.HttpWebRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpWebRequest")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.HttpWebRequestElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla as configurações usadas por um <see cref="T:System.Net.HttpWebRequest" /> objeto.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.HttpWebRequestElement" />.  
+  
+ O elemento de configuração que controla o tamanho do cabeçalho de resposta máximo e outras configurações usadas por um <see cref="T:System.Net.HttpWebRequest" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ipv6">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.Ipv6Element Ipv6 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.Ipv6Element Ipv6" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.Ipv6" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("ipv6")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.Ipv6Element</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que permite que o protocolo IP versão 6 (IPv6).</summary>
+        <value>Um <see cref="T:System.Net.Configuration.Ipv6Element" />.  
+  
+ O elemento de configuração que controla a configuração usada por IPv6.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformanceCounters">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.PerformanceCountersElement PerformanceCounters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.PerformanceCountersElement PerformanceCounters" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.PerformanceCounters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("performanceCounters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.PerformanceCountersElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla se os contadores de desempenho de rede estão habilitados.</summary>
+        <value>Um <see cref="T:System.Net.Configuration.PerformanceCountersElement" />.  
+  
+ O elemento de configuração que controla a configuração usada contadores de desempenho de rede.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServicePointManager">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.ServicePointManagerElement ServicePointManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.ServicePointManagerElement ServicePointManager" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.ServicePointManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("servicePointManager")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.ServicePointManagerElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla as configurações para conexões com computadores host remoto.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.ServicePointManagerElement" />.  
+  
+ O elemento de configuração que controla a configuração usada contadores de desempenho de rede para conexões com computadores host remoto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As configurações correspondem às propriedades de <xref:System.Net.ServicePointManager> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Socket">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.SocketElement Socket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.SocketElement Socket" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.Socket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("socket")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.SocketElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla as configurações de soquetes.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.SocketElement" />.  
+  
+ O elemento de configuração que controla as configurações de soquetes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebProxyScript">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.WebProxyScriptElement WebProxyScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.WebProxyScriptElement WebProxyScript" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.WebProxyScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("webProxyScript")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.WebProxyScriptElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla o tempo limite de execução e tempo limite de download de scripts de proxy da Web.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.WebProxyScriptElement" />.  
+  
+ O elemento de configuração que controla as configurações para o tempo limite de execução e tempo limite de download usado pelos scripts de proxy da Web.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebUtility">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.WebUtilityElement WebUtility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.WebUtilityElement WebUtility" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SettingsSection.WebUtility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("webUtility")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.WebUtilityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de configuração que controla as configurações usadas por um <see cref="T:System.Net.WebUtility" /> objeto.</summary>
+        <value>Retorna <see cref="T:System.Net.Configuration.WebUtilityElement" />.  
+  
+ O elemento de configuração que controla as configurações usadas por um <see cref="T:System.Net.WebUtility" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

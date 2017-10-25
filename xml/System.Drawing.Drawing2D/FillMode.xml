@@ -1,0 +1,75 @@
+<Type Name="FillMode" FullName="System.Drawing.Drawing2D.FillMode">
+  <TypeSignature Language="C#" Value="public enum FillMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FillMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.FillMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como o interior de um caminho fechado é preenchido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo preenche o interior de um caminho usando um dos dois modos de preenchimento: contorno ou alternativo. O modo determina como preencher e corta o interior de uma figura fechada.  
+  
+ É o modo padrão. Para determinar os interiores das figuras fechadas no modo alternativo, desenhe uma linha de qualquer ponto de início arbitrários no caminho em algum momento obviamente fora do caminho. Se a linha cruza um número ímpar de segmentos de caminho, o ponto de partida é dentro da região fechada e, portanto, é parte do preenchimento ou área de recorte. Um número par de cruzamentos significa que o ponto não está em uma área a ser preenchido ou recortada. Uma figura aberta é preenchida ou recortada usando uma linha para conectar-se o último ponto até o primeiro ponto da figura.  
+  
+ O modo de contorno considera a direção dos segmentos de caminho em cada interseção. Ele adiciona um para cada interseção no sentido horário e subtrai um para cada interseção no sentido anti-horário. Se o resultado for diferente de zero, o ponto é considerado dentro da área de preenchimento ou o clipe. Uma contagem de zero significa que o ponto está fora da área de preenchimento ou o clipe.  
+  
+ Uma figura é considerada no sentido horário ou no sentido anti-horário com base na ordem na qual os segmentos da figura são desenhados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um caminho que tem uma figura aberta (um arco) e uma figura fechada (uma elipse). O método FillPath preenche o caminho de acordo com o modo de preenchimento padrão, que é Alternate.The ilustração a seguir mostra a saída do exemplo de código. Observe que o caminho é preenchido (de acordo com a alternativa) como se a figura aberta foi fechada por uma linha reta do ponto final para o ponto de partida.  
+  
+ ![Preencher caminho aberto](~/add/media/fillopenpath.png "preencher caminho aberto")  
+  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+  
+ [!code-csharp[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alternate">
+      <MemberSignature Language="C#" Value="Alternate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.FillMode Alternate = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.FillMode.Alternate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.FillMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o modo de preenchimento alternativo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Winding">
+      <MemberSignature Language="C#" Value="Winding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.FillMode Winding = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.FillMode.Winding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.FillMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o modo de preenchimento do enrolamento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

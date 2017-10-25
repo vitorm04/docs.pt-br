@@ -1,0 +1,64 @@
+<Type Name="IDestinationTypeProvider" FullName="System.Xaml.IDestinationTypeProvider">
+  <TypeSignature Language="C#" Value="public interface IDestinationTypeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDestinationTypeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IDestinationTypeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um serviço que pode retornar um identificador de sistema do tipo CLR para o tipo de destino. O tipo de destino é relevante quando o tipo de destino de uma operação de configuração de propriedade é relatado indiretamente por reflexão ou outros mecanismos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo retornado pelo <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> é resolvido na posição atual do fluxo do nó XAML usando o contexto atual do esquema XAML.  
+  
+ Se você usar o sistema de tipo XAML conforme implementado pelos serviços XAML do .NET Framework e o acesso no contexto do serviço sob essas condições, <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> retorna o <xref:System.Xaml.XamlType.UnderlyingType%2A> com base em informações de sistema de tipo XAML e o contexto do esquema XAML baseado em CLR.  
+  
+ Esse serviço é relevante para situações em que puro reflexão de CLR ou outros mecanismos podem não fornecer informações suficientes sobre um tipo de destino. A seguir está uma lista de alguns cenários relevantes para <xref:System.Xaml.IDestinationTypeProvider>:  
+  
+-   O sistema de tipos CLR relatórios um tipo indireto devido a como o CLR define e usa os tipos e desejar que um tipo de destino true. Por exemplo, as APIs de serviços XAML do .NET Framework usam esse serviço internamente quando eles processem os membros do evento. Eventos são relatados por puro reflexão CLR como um <xref:System.Delegate>.  
+  
+-   Você deseja garantir que o tipo de destino do uso de um conversor de tipo corresponde ao tipo esperado que o conversor de tipo pode produzir. Este cenário é útil quando o tipo de destino é parametrizado ou genérico.  
+  
+-   O conversor de valor está sendo chamado de um uso de aninhado em outro conversor de valor. Nesse caso, <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> esvazia o aninhamento e retorna o tipo de destino da propriedade real que está sendo definido, em vez de retornar o tipo de saída de qualquer intermediários conversor de valor.  
+  
+ Conversores de tipo e extensões de marcação podem consultar <xref:System.Xaml.IDestinationTypeProvider> como um serviço no contexto do serviço é fornecido por um autor de objeto XAML, quando o gravador de objeto XAML invoca o comportamento de conversão do valor. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) e [contextos de serviço disponíveis para conversores de tipo e extensões de marcação](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDestinationType">
+      <MemberSignature Language="C#" Value="public Type GetDestinationType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetDestinationType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IDestinationTypeProvider.GetDestinationType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o CLR <see cref="T:System.Type" /> que identifica o tipo de destino para a extensão de marcação ou de conversor de tipo relevante.</summary>
+        <returns>Um CLR <see cref="T:System.Type" /> valor para o tipo de destino.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não tem nenhum parâmetro de entrada. O que retornar (e se deve retornar algo diferente de `null`) é determinado pela posição de nó atual no fluxo do nó XAML.  
+  
+## <a name="service-implementers"></a>Implementadores de serviço  
+ Se você reimplementar esse serviço, o <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> método deve retornar o tipo de espera de um conversor de tipo ou a extensão de marcação para verificar em relação a seu tipo de conversão ou saída mais específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

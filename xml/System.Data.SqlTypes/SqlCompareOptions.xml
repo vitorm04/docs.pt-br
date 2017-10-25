@@ -1,0 +1,239 @@
+<Type Name="SqlCompareOptions" FullName="System.Data.SqlTypes.SqlCompareOptions">
+  <TypeSignature Language="C#" Value="public enum SqlCompareOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SqlCompareOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlTypes.SqlCompareOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os valores da opção de comparação de uma estrutura <see cref="T:System.Data.SqlTypes.SqlString" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BinarySort">
+      <MemberSignature Language="C#" Value="BinarySort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions BinarySort = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.BinarySort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as classificações devem ser baseadas em um valor numérico de caracteres em vez de seu valor alfabético.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySort2">
+      <MemberSignature Language="C#" Value="BinarySort2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions BinarySort2 = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.BinarySort2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Executa uma classificação binária.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="IgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions IgnoreCase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.IgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as comparações <see cref="T:System.Data.SqlTypes.SqlString" /> devem ignorar maiúsculas e minúsculas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreKanaType">
+      <MemberSignature Language="C#" Value="IgnoreKanaType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions IgnoreKanaType = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.IgnoreKanaType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as comparações <see cref="T:System.Data.SqlTypes.SqlString" /> devem ignorar o tipo Kana. O tipo Kana refere-se aos caracteres japoneses Hiragana e Katakana que representam sons fonéticos em japonês. O Hiragana é usado em expressões e palavras japonesas nativas, enquanto o Katakana é usado para palavras emprestadas de outros idiomas, como “computador” ou “Internet”. Um som fonético pode ser expresso em Hiragana e em Katakana. Se esse valor estiver selecionado, o caractere Hiragana de um som será considerado igual ao caractere Katakana do mesmo som.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreNonSpace">
+      <MemberSignature Language="C#" Value="IgnoreNonSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions IgnoreNonSpace = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.IgnoreNonSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as comparações <see cref="T:System.Data.SqlTypes.SqlString" /> devem ignorar caracteres sem espaçamento, como sinais diacríticos. O Padrão Unicode define caracteres sem espaçamento como caracteres que são combinados com caracteres de base para produzir um novo caractere. Caracteres sem espaçamento não usam espaços de caractere por si só quando são renderizados. Para obter mais informações sobre caracteres sem espaçamento, consulte o Padrão Unicode em http://www.unicode.org.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreWidth">
+      <MemberSignature Language="C#" Value="IgnoreWidth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions IgnoreWidth = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.IgnoreWidth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as comparações <see cref="T:System.Data.SqlTypes.SqlString" /> devem ignorar a largura do caractere. Por exemplo, os caracteres japoneses Katakana podem ser escritos em largura inteira ou meia largura e, se esse valor for selecionado, os caracteres Katakana escritos em largura inteira serão considerados iguais para os mesmos caracteres escritos em meia largura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlTypes.SqlCompareOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlCompareOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica as configurações de opção padrão para as comparações <see cref="T:System.Data.SqlTypes.SqlString" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

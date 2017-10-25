@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Diagnostics">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceModel.Diagnostics" /> namespace contém uma enumeração que é usada para configurar contadores de desempenho para fins de diagnóstico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

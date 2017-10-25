@@ -1,0 +1,205 @@
+<Type Name="DesignerLoader" FullName="System.ComponentModel.Design.Serialization.DesignerLoader">
+  <TypeSignature Language="C#" Value="public abstract class DesignerLoader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerLoader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.DesignerLoader" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface de carregador de designer básico que pode ser usada para implementar um carregador de designer personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.Serialization.DesignerLoader>pode ser implementado para dar suporte a carregamento personalizado de um designer e componentes do designer. Um carregador de designer também é responsável por gravar alterações para um documento aberto para o armazenamento o carregador usado ao carregar o documento após o <xref:System.ComponentModel.Design.Serialization.DesignerLoader.Flush%2A> método é chamado.  
+  
+ Por padrão, o ambiente de desenvolvimento do Visual Studio cria seu próprio variedade de <xref:System.ComponentModel.Design.Serialization.DesignerLoader> que pode carregar projetos básicos do designers. Para criar um carregador de designer personalizado, você deve herdar de e implementar abstrata <xref:System.ComponentModel.Design.Serialization.DesignerLoader> classe. Você não pode instanciar diretamente <xref:System.ComponentModel.Design.Serialization.DesignerLoader>, porque não tem nenhum construtor público.  
+  
+ Quando <xref:System.ComponentModel.Design.Serialization.DesignerLoader.BeginLoad%2A> é chamado, o carregador de designer carrega o documento de design, exibe o designer superfície usando o <xref:System.ComponentModel.Design.IDesignerHost> interface e chamadas <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.EndLoad%2A> no <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost> interface quando terminar. O <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost> implementação geralmente é a mesma classe que implementa <xref:System.ComponentModel.Design.IDesignerHost>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.DesignerLoader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoad">
+      <MemberSignature Language="C#" Value="public abstract void BeginLoad (System.ComponentModel.Design.Serialization.IDesignerLoaderHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginLoad(class System.ComponentModel.Design.Serialization.IDesignerLoaderHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerLoader.BeginLoad(System.ComponentModel.Design.Serialization.IDesignerLoaderHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.Serialization.IDesignerLoaderHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O host do carregador por meio do qual esse carregador carrega componentes.</param>
+        <summary>Começa a carregar um designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost> que é passado para o `host` parâmetro normalmente é o mesmo objeto de host do designer. Através dessa referência para o host do carregador, o carregador de designer pode recarregar o documento de design e indicar que concluiu a carregar o documento de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerLoader.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.ComponentModel.Design.Serialization.DesignerLoader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.ComponentModel.Design.Serialization.DesignerLoader.Dispose%2A> quando tiver terminado de usar o <xref:System.ComponentModel.Design.Serialization.DesignerLoader>. O <xref:System.ComponentModel.Design.Serialization.DesignerLoader.Dispose%2A> método deixa o <xref:System.ComponentModel.Design.Serialization.DesignerLoader> em um estado inutilizável. Depois de chamar <xref:System.ComponentModel.Design.Serialization.DesignerLoader.Dispose%2A>, você deve liberar todas as referências para o <xref:System.ComponentModel.Design.Serialization.DesignerLoader> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Design.Serialization.DesignerLoader> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ComponentModel.Design.Serialization.DesignerLoader.Dispose%2A> antes de liberar sua última referência para o <xref:System.ComponentModel.Design.Serialization.DesignerLoader>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Design.Serialization.DesignerLoader> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public virtual void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerLoader.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gravações em cache as alterações para o local que o designer foi carregado por.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host de designer chama esse método periodicamente para garantir que as alterações feitas no documento foram salvos pelo carregador de designer. Esse método permite carregadores de designer implementar um esquema de gravação assíncrona para melhorar o desempenho. A implementação padrão desse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loading">
+      <MemberSignature Language="C#" Value="public virtual bool Loading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Loading" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerLoader.Loading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o carregador atualmente está carregando um documento.</summary>
+        <value>
+          <see langword="true" />Se o carregador atualmente está carregando um documento. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

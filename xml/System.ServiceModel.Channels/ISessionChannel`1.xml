@@ -1,0 +1,72 @@
+<Type Name="ISessionChannel&lt;TSession&gt;" FullName="System.ServiceModel.Channels.ISessionChannel&lt;TSession&gt;">
+  <TypeSignature Language="C#" Value="public interface ISessionChannel&lt;TSession&gt; where TSession : ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISessionChannel`1&lt;(class System.ServiceModel.Channels.ISession) TSession&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ISessionChannel`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TSession">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.Channels.ISession</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TSession">O tipo de <see cref="T:System.ServiceModel.Channels.ISession" /> associado a cannel.</typeparam>
+    <summary>Define a interface que associa um canal a um tipo específico de sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.ISessionChannel%601> interface é a interface base para canais de sessão. Associa o tipo de sessão com o canal, definindo o parâmetro de tipo genérico `TSession` para um tipo que implementa o <xref:System.ServiceModel.Channels.ISession> interface de forma que reflita a sua função na troca de mensagens. Por exemplo, o `TSession` é definido como <xref:System.ServiceModel.Channels.IInputSession> para uma sessão de entrada no lado de recepção de uma comunicação unidirecional, para <xref:System.ServiceModel.Channels.IOutputSession> para uma sessão de saída no lado de envio de uma comunicação unidirecional e <xref:System.ServiceModel.Channels.IDuplexSession> para uma sessão duplex para um padrão de comunicação bidirecional.  
+  
+ O <xref:System.ServiceModel.Channels.ISessionChannel%601> interface fornece um <xref:System.ServiceModel.Channels.ISessionChannel%601.Session%2A> propriedade para recuperar a sessão à qual o canal está associado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public TSession Session { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TSession Session" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ISessionChannel`1.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de sessão associada a esse canal.</summary>
+        <value>O tipo de <see cref="T:System.ServiceModel.Channels.ISession" /> associada a esse canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso retorna o parâmetro genérico `TSession` usado para definir a interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

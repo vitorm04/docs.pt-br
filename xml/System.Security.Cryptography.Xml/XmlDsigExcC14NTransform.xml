@@ -1,0 +1,437 @@
+<Type Name="XmlDsigExcC14NTransform" FullName="System.Security.Cryptography.Xml.XmlDsigExcC14NTransform">
+  <TypeSignature Language="C#" Value="public class XmlDsigExcC14NTransform : System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDsigExcC14NTransform extends System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a transformação de canonização C14N XML exclusiva de uma assinatura digital, de acordo com a definição do W3C (World Wide Web Consortium), sem comentários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> classe representa a transformação de canonização de XML C14N exclusiva sem comentários.  Essa classe é semelhante de <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> classe, que permite que um assinante criar um resumo usando a forma canônica de um documento XML.  No entanto, a <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> classe exclui o contexto do ancestral de um subdocumento conversão em formato canônico.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> classe quando precisar tornar canônicos XML subdocumento para que seja independente de seu contexto XML. Por exemplo, aplicativos, como serviços Web que usam assinado XML dentro de protocolos de comunicação complexa geralmente necessário canonizar XML dessa maneira.  Esses aplicativos geralmente envelope XML em vários elementos dinamicamente construídos, que podem alterar o documento substancialmente e confirmação de assinatura XML poderá falhar.  O <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> classe resolve esse problema excluindo tal contexto ancestral da subdocumento canônico.  
+  
+ Normalmente, você não criar uma nova instância de uma classe de transformação de conversão em formato canônico. Para especificar uma transformação de conversão em formato canônico, passe o URI Uniform Resource Identifier () que descreve uma transformação para a <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> propriedade, que é acessível a partir de <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> propriedade. Para obter uma referência para a transformação de conversão em formato canônico, use o <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject%2A> propriedade, que é acessível a partir de <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> propriedade.  
+  
+ É necessário para criar uma nova instância de uma classe de transformação de canonização somente quando você desejar manualmente um documento XML de hash ou use seu próprio algoritmo de conversão em formato canônico.  
+  
+ O URI que descreve o <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> classe é definida pelo <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigExcC14NWithCommentsTransformUrl> campo.  
+  
+ O URI que descreve o <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> classe é definida pelo <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigExcC14NTransformUrl> campo.  
+  
+ Para obter mais informações sobre a transformação C14N exclusiva, consulte a especificação de XMLDSIG, que está disponível na World Wide Web Consortium (W3C) em www.w3.org/TR/xmldsig-core/. O algoritmo de conversão em formato canônico é definido na especificação XML canônico do W3C, que está disponível em www.w3.org/2001/10/xml-exc-c14n.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como assinar um documento XML com o <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> classe com uma assinatura de envelope.  
+  
+ [!code-cpp[Cryptography.XML.XmlDsigExcC14NTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NTransform/CPP/example.cpp#1)]
+ [!code-csharp[Cryptography.XML.XmlDsigExcC14NTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NTransform/CS/example.cs#1)]
+ [!code-vb[Cryptography.XML.XmlDsigExcC14NTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NTransform/VB/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigExcC14NTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigExcC14NTransform (bool includeComments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeComments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeComments" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeComments">
+          <see langword="true" />para incluir comentários; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> classe especificando um valor que determina se é necessário incluir comentários.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigExcC14NTransform (string inclusiveNamespacesPrefixList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string inclusiveNamespacesPrefixList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inclusiveNamespacesPrefixList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inclusiveNamespacesPrefixList">Os prefixos de namespace para canonizar usando o algoritmo padrão de conversão em formato canônico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> classe especifica uma lista de prefixos de namespace para canonizar usando o algoritmo padrão de conversão em formato canônico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `inclusiveNamespacesPrefixList` parâmetro contém uma lista delimitada por espaço em branco de prefixos de namespace para canonizar usando o algoritmo padrão de conversão em formato canônico em vez do algoritmo de canonização exclusivo.  Para especificar o namespace padrão, que não tem um prefixo, passe o prefixo especial "#default".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigExcC14NTransform (bool includeComments, string inclusiveNamespacesPrefixList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeComments, string inclusiveNamespacesPrefixList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.#ctor(System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeComments" Type="System.Boolean" />
+        <Parameter Name="inclusiveNamespacesPrefixList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="includeComments">
+          <see langword="true" />para incluir comentários; Caso contrário, <see langword="false" />.</param>
+        <param name="inclusiveNamespacesPrefixList">Os prefixos de namespace para canonizar usando o algoritmo padrão de conversão em formato canônico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> classe especificando se deseja incluir comentários e especificando uma lista de prefixos de namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `inclusiveNamespacesPrefixList` parâmetro contém uma lista delimitada por espaço em branco de prefixos de namespace para canonizar usando o algoritmo padrão de conversão em formato canônico em vez do algoritmo de canonização exclusivo.  Para especificar o namespace padrão, que não tem um prefixo, passe o prefixo especial "#default".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDigestedOutput">
+      <MemberSignature Language="C#" Value="public override byte[] GetDigestedOutput (System.Security.Cryptography.HashAlgorithm hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetDigestedOutput(class System.Security.Cryptography.HashAlgorithm hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetDigestedOutput(System.Security.Cryptography.HashAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Security.Cryptography.HashAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="hash">O <see cref="T:System.Security.Cryptography.HashAlgorithm" /> objeto usado para criar um digest.</param>
+        <summary>Retorna o resumo associado com um <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</summary>
+        <returns>O resumo associado com um <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerXml">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlNodeList GetInnerXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlNodeList GetInnerXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetInnerXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação XML dos parâmetros de um <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto adequados ser incluída como subelementos de um XMLDSIG <see langword="&lt;Transform&gt;" /> elemento.</summary>
+        <returns>Uma lista de nós XML que representam o conteúdo específico da transformação necessário para descrever atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto em um XMLDSIG <see langword="&lt;Transform&gt;" /> elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto</summary>
+        <returns>A saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de saída para retornar. Isso deve ser um dos tipos de <see cref="P:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.OutputTypes" /> propriedade.</param>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto como um objeto do tipo especificado.</summary>
+        <returns>A saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto como um objeto do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput%2A> método retorna a saída da transformação atual depois que ele é executado no valor definido anteriormente por uma chamada para o <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInput%2A> método.  
+  
+ O tipo do objeto retornado deve ser um dos objetos do tipo de <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.OutputTypes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="type" /> parâmetro não é um <see cref="T:System.IO.Stream" /> objeto.  
+  
+ -ou-  
+  
+ O <paramref name="type" /> parâmetro não é derivada de uma <see cref="T:System.IO.Stream" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InclusiveNamespacesPrefixList">
+      <MemberSignature Language="C#" Value="public string InclusiveNamespacesPrefixList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InclusiveNamespacesPrefixList" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InclusiveNamespacesPrefixList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que contém prefixos de namespace para canonizar usando o algoritmo de canonização padrão.</summary>
+        <value>Uma cadeia de caracteres que contém prefixos de namespace para canonizar usando o algoritmo de canonização padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InclusiveNamespacesPrefixList%2A> propriedade contém uma lista delimitada por espaço em branco de prefixos de namespace para canonizar usando o algoritmo padrão de conversão em formato canônico em vez do algoritmo de canonização exclusivo.  Para especificar o namespace padrão, que não tem um prefixo, passe o prefixo especial "#default".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como assinar um documento XML com o <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> classe com uma assinatura de envelope.  
+  
+ [!code-cpp[Cryptography.XML.XmlDsigExcC14NTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NTransform/CPP/example.cpp#1)]
+ [!code-csharp[Cryptography.XML.XmlDsigExcC14NTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NTransform/CS/example.cs#1)]
+ [!code-vb[Cryptography.XML.XmlDsigExcC14NTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NTransform/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] InputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] InputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de tipos que são entradas válidas para o <see cref="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInput(System.Object)" /> método atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</summary>
+        <value>Uma matriz de tipos de entrada válidas para o atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto; você pode passar apenas os objetos de um desses tipos para o <see cref="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInput(System.Object)" /> método atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada pelo <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InputTypes%2A> propriedade deve conter pelo menos um elemento porque cada <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> objeto deve aceitar a pelo menos um tipo como uma entrada válida.  
+  
+ Um <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> objeto normalmente aceita um ou mais dos seguintes tipos como entrada: <xref:System.IO.Stream>, <xref:System.Xml.XmlDocument>, ou <xref:System.Xml.XmlNodeList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInnerXml">
+      <MemberSignature Language="C#" Value="public override void LoadInnerXml (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInnerXml(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInnerXml(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Um <see cref="T:System.Xml.XmlNodeList" /> objeto que especifica o conteúdo específico da transformação atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</param>
+        <summary>Analisa especificado <see cref="T:System.Xml.XmlNodeList" /> objeto como conteúdo de transformação específica de um <see langword="&lt;Transform&gt;" /> elemento e configura o estado interno do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto para corresponder a <see langword="&lt;Transform&gt;" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para processar os subelementos de um `<Transform>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInput">
+      <MemberSignature Language="C#" Value="public override void LoadInput (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInput(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInput(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">A entrada para carregar no atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</param>
+        <summary>Quando substituído em uma classe derivada, carrega a entrada especificada no atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de objeto de entrada deve ser um dos tipos de <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InputTypes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="obj" /> parâmetro não é um <see cref="T:System.IO.Stream" /> objeto.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="obj" /> não é um objeto <see cref="T:System.Xml.XmlDocument" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="obj" /> não é um objeto <see cref="T:System.Xml.XmlNodeList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] OutputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] OutputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.OutputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de tipos que são possíveis saídas provenientes de <see cref="M:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput" /> métodos do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto.</summary>
+        <value>Uma matriz de tipos de saída válido para o atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> objeto; o <see cref="Overload:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput" /> métodos do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" /> retorno somente objetos de um desses tipos de objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada pelo <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.OutputTypes%2A> propriedade deve conter pelo menos um elemento porque cada transformação deve gerar pelo menos um tipo como saída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

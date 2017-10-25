@@ -1,0 +1,167 @@
+<Type Name="TypeNameConverter" FullName="System.Configuration.TypeNameConverter">
+  <TypeSignature Language="C#" Value="public sealed class TypeNameConverter : System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeNameConverter extends System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.TypeNameConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationConverterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte entre valores de tipo e a cadeia de caracteres. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este tipo, como todos os outros conversor tipos de configuração, converte cadeias de caracteres encontradas no arquivo de configuração de e para as propriedades com rigidez de tipos relacionadas.  
+  
+ Em particular, o <xref:System.Configuration.TypeNameConverter> classe converte um <xref:System.String> valor atribuído a um tipo de configuração, como um <xref:System.Type> valor e vice-versa. O tipo de chamada é a classe responsável por processar a configuração que está associada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter um tipo associado a uma seção personalizada. Para a implementação da seção personalizada, consulte o exemplo de código no <xref:System.Configuration.ConfigurationConverterBase> referência de classe.  
+  
+ [!code-csharp[System.Configuration.TypeNameConverter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TypeNameConverter/CS/TypeNameConverter.cs#1)]
+ [!code-vb[System.Configuration.TypeNameConverter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TypeNameConverter/VB/TypeNameConverter.vb#1)]  
+  
+ O exemplo a seguir é um trecho de configuração usado pelo exemplo anterior.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  
+  <configSections>  
+    <section name="CustomSection"   
+      type="Samples.AspNet.CustomSection,   
+      ConfigurationConverters,   
+      Version=1.0.0.0, Culture=neutral,   
+      PublicKeyToken=null"   
+      allowDefinition="Everywhere"   
+      allowExeDefinition="MachineToApplication"   
+      restartOnExternalChanges="true" />  
+  </configSections>  
+  
+  <CustomSection fileName="default.txt" maxIdleTime="90"   
+    timeDelay="infinite" cdStr="str0, str1" permission="Read"  
+    maxUsers="Infinite"/>  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeNameConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TypeNameConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.TypeNameConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa os tipos de conversor fornecidos pelo sistema. A única vez em que você precisa usar o <xref:System.Configuration.TypeNameConverter.%23ctor%2A> construtor é quando você cria seu próprio tipo de conversão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TypeNameConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="data">O <see cref="T:System.String" /> objeto converter.</param>
+        <summary>Converte um objeto <see cref="T:System.String" /> em um objeto <see cref="T:System.Type" />.</summary>
+        <returns>O <see cref="T:System.Type" /> que representa o <paramref name="data" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.TypeNameConverter.ConvertFrom%2A> método durante a leitura de um arquivo de configuração para converter um <xref:System.String> valor para um <xref:System.Type> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não é possível resolver um valor <see cref="T:System.Type" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TypeNameConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="value">O valor a converter.</param>
+        <param name="type">O tipo para o qual converter.</param>
+        <summary>Converte um objeto <see cref="T:System.Type" /> em um objeto <see cref="T:System.String" />.</summary>
+        <returns>O <see cref="T:System.String" /> que representa o <paramref name="value" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.TypeNameConverter.ConvertTo%2A> método ao gravar em um arquivo de configuração para converter um <xref:System.Type> valor para um <xref:System.String> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

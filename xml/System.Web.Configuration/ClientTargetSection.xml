@@ -1,0 +1,126 @@
+<Type Name="ClientTargetSection" FullName="System.Web.Configuration.ClientTargetSection">
+  <TypeSignature Language="C#" Value="public sealed class ClientTargetSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClientTargetSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ClientTargetSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o <see langword="clientTarget" /> seção. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ClientTargetSection> classe fornece uma maneira de acessar e modificar programaticamente o `clientTarget` seção do arquivo de configuração. Ele pertence a um grupo que inclui o <xref:System.Web.Configuration.ClientTargetCollection> classe e o <xref:System.Web.Configuration.ClientTarget> classe.  
+  
+ O <xref:System.Web.Configuration.ClientTargetSection> classe contém <xref:System.Web.Configuration.ClientTarget> objetos que definem os pares de aliases e agentes de usuário de destino associados para o qual ASP.NET controles de servidor devem processar o conteúdo.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira exibe uma representação declarativa do <xref:System.Web.Configuration.ClientTargetSection> de classe e também demonstra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.ClientTarget> classe. O segundo mostra como obter o <xref:System.Web.Configuration.ClientTargetCollection> objeto do arquivo de configuração. Use esse objeto para acessar o <xref:System.Web.Configuration.ClientTarget> objetos que ele contém.  
+  
+ O exemplo de código a seguir mostra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.ClientTarget> classe.  
+  
+```  
+<clientTarget>  
+  <add alias=  
+    "uplevel" userAgent="Mozilla/5.0 (compatible;MSIE 6.0;Windows NT 5.1)"/>  
+  <add alias="downlevel" userAgent="Generic Downlevel"/>  
+</clientTarget>  
+```  
+  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.ClientTargetCollection> objeto do arquivo de configuração  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#1)]
+ [!code-vb[System.Web.Configuration.ClientTarget#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientTargetSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.ClientTargetSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelo sistema de configuração do ASP.NET e não se destina a ser usado diretamente no seu código. Você pode obter uma instância do <xref:System.Web.Configuration.ClientTargetSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientTargets">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ClientTargetCollection ClientTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ClientTargetCollection ClientTargets" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ClientTargetSection.ClientTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ClientTargetCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos <see cref="T:System.Web.Configuration.ClientTarget" />.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.ClientTargetCollection" /> que contém o <see cref="T:System.Web.Configuration.ClientTarget" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Web.Configuration.ClientTarget> objeto contém duas propriedades de identificação de um navegador de cliente, também chamado de agente do usuário. Uma propriedade é o alias associado com o navegador do cliente que é identificado por outra propriedade. O ASP.NET usa essas informações para renderizar controles de servidor em uma página.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.ClientTargetSection.ClientTargets%2A> coleção.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#2)]
+ [!code-vb[System.Web.Configuration.ClientTarget#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ClientTargetSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

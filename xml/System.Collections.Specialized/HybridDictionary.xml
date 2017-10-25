@@ -1,0 +1,1005 @@
+<Type Name="HybridDictionary" FullName="System.Collections.Specialized.HybridDictionary">
+  <TypeSignature Language="C#" Value="public class HybridDictionary : System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit HybridDictionary extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.HybridDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Specialized</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa <see langword="IDictionary" /> usando um <see cref="T:System.Collections.Specialized.ListDictionary" /> enquanto a coleção é pequena e, depois, alterna para um <see cref="T:System.Collections.Hashtable" /> quando a coleção se torna grande.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é recomendada para casos em que o número de elementos em um dicionário é desconhecido. Tira proveito de melhorar o desempenho de um <xref:System.Collections.Specialized.ListDictionary> com pequenas coleções e oferece a flexibilidade de alternar para um <xref:System.Collections.Hashtable> que trata de coleções de maior é melhores do que <xref:System.Collections.Specialized.ListDictionary>.  
+  
+ Se o tamanho inicial da coleção é maior que o tamanho ideal para uma <xref:System.Collections.Specialized.ListDictionary>, a coleção é armazenada em um <xref:System.Collections.Hashtable> para evitar a sobrecarga de cópia de elementos do <xref:System.Collections.Specialized.ListDictionary> para um <xref:System.Collections.Hashtable>.  
+  
+ O construtor aceita um parâmetro booliano que permite ao usuário especificar se a coleção ignora maiusculas ao comparar cadeias de caracteres. Se a coleção diferencia maiusculas de minúsculas, ele usa implementações da chave de <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> e <xref:System.Object.Equals%2A?displayProperty=nameWithType>. Se a coleção diferencia maiusculas de minúsculas, ele executa uma simple comparação de maiusculas e minúsculas ordinal, que obedece às regras de maiusculas e minúsculas da cultura invariável. Por padrão, a coleção diferencia maiusculas de minúsculas. Para obter mais informações sobre a cultura invariável, consulte <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>.  
+  
+ Uma chave não pode ser nula, mas sim um valor.  
+  
+ O `foreach` instrução de linguagem c# (`For Each` no Visual Basic) retorna um objeto do tipo dos elementos na coleção. Desde que cada elemento do <xref:System.Collections.Specialized.HybridDictionary> é um par chave/valor, o tipo de elemento não é o tipo de chave ou o tipo do valor. Em vez disso, o tipo de elemento é <xref:System.Collections.DictionaryEntry>. Por exemplo:  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary2#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CPP/source2.cpp#2)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CS/source2.cs#2)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/VB/source2.vb#2)]  
+  
+ O `foreach` instrução é um wrapper em torno de enumerador, que só permite ler, gravar não à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias propriedades e métodos de <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CPP/hybriddictionary.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CS/hybriddictionary.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/VB/hybriddictionary.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esta implementação não oferece um sincronizado wrapper (thread-safe) para um <see cref="T:System.Collections.Specialized.HybridDictionary" />, mas as classes derivadas podem criar suas próprias versões sincronizadas do <see cref="T:System.Collections.Specialized.HybridDictionary" /> usando o <see cref="P:System.Collections.Specialized.HybridDictionary.SyncRoot" /> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HybridDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria um vazio diferencia maiusculas de minúsculas <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a coleção diferencia maiusculas de minúsculas e usa a implementação da chave de <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> como o provedor de código de hash e a implementação da chave de <xref:System.Object.Equals%2A?displayProperty=nameWithType> como o comparador.  
+  
+ O comparador determina se duas chaves são iguais. Todas as chaves em um <xref:System.Collections.Specialized.HybridDictionary> devem ser exclusivos.  
+  
+ Este construtor é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias propriedades e métodos de <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CPP/hybriddictionary.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CS/hybriddictionary.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/VB/hybriddictionary.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HybridDictionary (bool caseInsensitive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool caseInsensitive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="caseInsensitive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="caseInsensitive">Um valor booleano que indica se o <see cref="T:System.Collections.Specialized.HybridDictionary" /> diferencia maiusculas de minúsculas.</param>
+        <summary>Cria um vazio <see cref="T:System.Collections.Specialized.HybridDictionary" /> com a especificada entre maiusculas e minúsculas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `caseInsensitive` é `false`, a coleção usa implementações da chave de <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> e <xref:System.Object.Equals%2A?displayProperty=nameWithType>. Se `caseInsensitive` é `true`, a coleção executa uma simple comparação de maiusculas e minúsculas ordinal, que obedece às regras de maiusculas e minúsculas da cultura invariável. Para obter mais informações sobre a cultura invariável, consulte <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HybridDictionary (int initialSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialSize">O número aproximado de entradas que o <see cref="T:System.Collections.Specialized.HybridDictionary" /> inicialmente pode conter.</param>
+        <summary>Cria um diferencia maiusculas de minúsculas <see cref="T:System.Collections.Specialized.HybridDictionary" /> com o tamanho inicial especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tamanho inicial da coleção é maior que o tamanho ideal para uma <xref:System.Collections.Specialized.ListDictionary>, a coleção é armazenada em um <xref:System.Collections.Hashtable> para evitar a sobrecarga de cópia de elementos do <xref:System.Collections.Specialized.ListDictionary> para o <xref:System.Collections.Hashtable>.  
+  
+ Por padrão, a coleção diferencia maiusculas de minúsculas e usa a implementação da chave de <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> como o provedor de código de hash e a implementação da chave de <xref:System.Object.Equals%2A?displayProperty=nameWithType> como o comparador.  
+  
+ O comparador determina se duas chaves são iguais. Todas as chaves em um <xref:System.Collections.Specialized.HybridDictionary> devem ser exclusivos.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `initialSize`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HybridDictionary (int initialSize, bool caseInsensitive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialSize, bool caseInsensitive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialSize" Type="System.Int32" />
+        <Parameter Name="caseInsensitive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="initialSize">O número aproximado de entradas que o <see cref="T:System.Collections.Specialized.HybridDictionary" /> inicialmente pode conter.</param>
+        <param name="caseInsensitive">Um valor booleano que indica se o <see cref="T:System.Collections.Specialized.HybridDictionary" /> diferencia maiusculas de minúsculas.</param>
+        <summary>Cria um <see cref="T:System.Collections.Specialized.HybridDictionary" /> com o tamanho inicial especificado e a diferenciação de maiusculas e minúsculas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tamanho inicial da coleção é maior que o tamanho ideal para uma <xref:System.Collections.Specialized.ListDictionary>, a coleção é armazenada em um <xref:System.Collections.Hashtable> para evitar a sobrecarga de cópia de elementos do <xref:System.Collections.Specialized.ListDictionary> para o <xref:System.Collections.Hashtable>.  
+  
+ Se `caseInsensitive` é `false`, a coleção usa implementações da chave de <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> e <xref:System.Object.Equals%2A?displayProperty=nameWithType>. Se `caseInsensitive` é `true`, a coleção executa uma simple comparação de maiusculas e minúsculas ordinal, que obedece às regras de maiusculas e minúsculas da cultura invariável. Para obter mais informações sobre a cultura invariável, consulte <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `initialSize`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da entrada a ser adicionada.</param>
+        <param name="value">O valor da entrada a ser adicionado. O valor pode ser <see langword="null" />.</param>
+        <summary>Adiciona uma entrada com a chave e o valor especificados ao <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto que não tem nenhuma correlação entre seu estado e seu valor de código de hash, normalmente, não deve ser usado como chave. Por exemplo, objetos de cadeia de caracteres são melhores que objetos de StringBuilder para uso como chaves.  
+  
+ Uma chave não pode ser `null`, mas um valor possível.  
+  
+ Você também pode usar o <xref:System.Collections.Specialized.HybridDictionary.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no <xref:System.Collections.Specialized.HybridDictionary>; por exemplo, `myCollection["myNonexistentKey"] = myValue`. No entanto, se a chave especificada já existe no <xref:System.Collections.Specialized.HybridDictionary>, a definição de <xref:System.Collections.Specialized.HybridDictionary.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.Specialized.HybridDictionary.Add%2A> método não modifica os elementos existentes.  
+  
+ Quando o número de elementos se torna maior que o tamanho ideal para uma <xref:System.Collections.Specialized.ListDictionary>, os elementos são copiados do <xref:System.Collections.Specialized.ListDictionary> para um <xref:System.Collections.Hashtable>. No entanto, isso ocorre apenas uma vez. Se a coleção já está armazenada em uma <xref:System.Collections.Hashtable> e o número de elementos cai abaixo do tamanho ideal para uma <xref:System.Collections.Specialized.ListDictionary>, a coleção permaneça no <xref:System.Collections.Hashtable>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona e remove os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/CPP/hybriddictionary_addremove.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/CS/hybriddictionary_addremove.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/VB/hybriddictionary_addremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Uma entrada com a mesma chave já existe no <see cref="T:System.Collections.Specialized.HybridDictionary" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as entradas do <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.HybridDictionary.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ Se a coleção já está armazenada em uma <xref:System.Collections.Hashtable>, a coleção permaneça no <xref:System.Collections.Hashtable>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.HybridDictionary.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona e remove os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/CPP/hybriddictionary_addremove.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/CS/hybriddictionary_addremove.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/VB/hybriddictionary_addremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Specialized.HybridDictionary" />.</param>
+        <summary>Determina se a <see cref="T:System.Collections.Specialized.HybridDictionary" /> contém uma chave específica.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Specialized.HybridDictionary" /> contiver uma entrada com a chave, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+ Começando com o .NET Framework 2.0, esse método usa objetos da coleção <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> métodos em `key` para determinar se `item` existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo procura um elemento em um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Contains#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Contains/CPP/hybriddictionary_contains.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Contains#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Contains/CS/hybriddictionary_contains.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Contains/VB/hybriddictionary_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos objetos <see cref="T:System.Collections.DictionaryEntry" /> copiados de <see cref="T:System.Collections.Specialized.HybridDictionary" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o <see cref="T:System.Collections.Specialized.HybridDictionary" /> entradas para um unidimensional <see cref="T:System.Array" /> instância no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para o <xref:System.Array> na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ Para copiar somente as chaves de <xref:System.Collections.Specialized.HybridDictionary>, use `HybridDictionary.Keys.CopyTo`.  
+  
+ Para copiar somente os valores no <xref:System.Collections.Specialized.HybridDictionary>, use `HybridDictionary.Values.CopyTo`.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.HybridDictionary.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir copia os elementos de um <xref:System.Collections.Specialized.HybridDictionary> para uma matriz.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_CopyTo/CPP/hybriddictionary_copyto.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_CopyTo/CS/hybriddictionary_copyto.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_CopyTo/VB/hybriddictionary_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.Specialized.HybridDictionary" /> é maior do que o espaço disponível de <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.Specialized.HybridDictionary" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pares chave-valor contidos no <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <value>O número de pares chave-valor contidos no <see cref="T:System.Collections.Specialized.HybridDictionary" />.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CPP/hybriddictionary_enumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CS/hybriddictionary_enumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/VB/hybriddictionary_enumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IDictionaryEnumerator" /> que itera pelo <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionaryEnumerator" /> para o <see cref="T:System.Collections.Specialized.HybridDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CPP/hybriddictionary_enumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CS/hybriddictionary_enumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/VB/hybriddictionary_enumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Specialized.HybridDictionary" /> tem um tamanho fixo.</summary>
+        <value>Essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.HybridDictionary>implementa o <xref:System.Collections.Specialized.HybridDictionary.IsFixedSize%2A> propriedade porque ele é necessário para o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface.  
+  
+ Uma coleção com um tamanho fixo não permite a adição ou a remoção de elementos após a coleção ser criada, mas permite a modificação de elementos existentes.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Specialized.HybridDictionary" /> é somente leitura.</summary>
+        <value>Essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.HybridDictionary>implementa o <xref:System.Collections.Specialized.HybridDictionary.IsReadOnly%2A> propriedade porque ele é necessário para o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface.  
+  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Specialized.HybridDictionary" /> é sincronizado (thread-safe).</summary>
+        <value>Essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.HybridDictionary>implementa o <xref:System.Collections.Specialized.HybridDictionary.IsSynchronized%2A> propriedade porque ele é necessário para o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ Classes derivadas podem fornecer uma versão sincronizada do <xref:System.Collections.Specialized.HybridDictionary> usando o <xref:System.Collections.Specialized.HybridDictionary.SyncRoot%2A> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Specialized.HybridDictionary.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary2#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CPP/source2.cpp#3)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CS/source2.cs#3)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/VB/source2.vb#3)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave cujo valor será obtido ou definido.</param>
+        <summary>Obtém ou define o valor associado à chave especificada.</summary>
+        <value>O valor associado à chave especificada. Se a chave especificada não for localizada, tentar obtê-la retornará <see langword="null" /> e tentar defini-la criará uma nova entrada usando a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[key]`.  
+  
+ Você também pode usar o <xref:System.Collections.Specialized.HybridDictionary.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no <xref:System.Collections.Specialized.HybridDictionary>; por exemplo, `myCollection["myNonexistentKey"] = myValue`. No entanto, se a chave especificada já existe no <xref:System.Collections.Specialized.HybridDictionary>, a definição de <xref:System.Collections.Specialized.HybridDictionary.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.Specialized.HybridDictionary.Add%2A> método não modifica os elementos existentes.  
+  
+ Uma chave não pode ser `null`, mas um valor possível. Para distinguir entre `null` que é retornado porque a chave especificada não foi encontrada e `null` que é retornado porque o valor da chave especificada é `null`, use o <xref:System.Collections.Specialized.HybridDictionary.Contains%2A> método para determinar se a chave existe na lista.  
+  
+ A linguagem c# usa a palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.Specialized.HybridDictionary.Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.Specialized.HybridDictionary.Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); definindo a propriedade também é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CPP/hybriddictionary_enumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CS/hybriddictionary_enumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/VB/hybriddictionary_enumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma <see cref="T:System.Collections.ICollection" /> que contém as chaves na <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <value>Uma <see cref="T:System.Collections.ICollection" /> que contém as chaves na <see cref="T:System.Collections.Specialized.HybridDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que os valores associados no <xref:System.Collections.ICollection> retornado pelo <xref:System.Collections.Specialized.HybridDictionary.Values%2A> método.  
+  
+ Retornado <xref:System.Collections.ICollection> não é uma cópia estática; em vez disso, o <xref:System.Collections.ICollection> refere-se novamente para as chaves no original <xref:System.Collections.Specialized.HybridDictionary>. Portanto, as alterações para o <xref:System.Collections.Specialized.HybridDictionary> continuar sejam refletidas no <xref:System.Collections.ICollection>.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CPP/hybriddictionary_enumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CS/hybriddictionary_enumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/VB/hybriddictionary_enumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da entrada a ser removido.</param>
+        <summary>Remove a entrada com a chave especificada do <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Collections.Specialized.HybridDictionary> não contém um elemento com a chave especificada, o <xref:System.Collections.Specialized.HybridDictionary> permanece inalterado. Nenhuma exceção é lançada.  
+  
+ Se a coleção já está armazenada em um <xref:System.Collections.Hashtable> e o número de elementos cai abaixo do tamanho ideal para uma <xref:System.Collections.Specialized.ListDictionary>, a coleção permaneça no <xref:System.Collections.Hashtable> para evitar a sobrecarga de cópia de elementos do <xref:System.Collections.Hashtable> para um <xref:System.Collections.Specialized.ListDictionary>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona e remove os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/CPP/hybriddictionary_addremove.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/CS/hybriddictionary_addremove.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_AddRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_AddRemove/VB/hybriddictionary_addremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.Specialized.HybridDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.Specialized.HybridDictionary> usando o <xref:System.Collections.Specialized.HybridDictionary.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.Specialized.HybridDictionary.SyncRoot%2A> do <xref:System.Collections.Specialized.HybridDictionary>, não diretamente no <xref:System.Collections.Specialized.HybridDictionary>. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.Specialized.HybridDictionary> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Specialized.HybridDictionary.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary2#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CPP/source2.cpp#3)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/CS/source2.cs#3)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary2/VB/source2.vb#3)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.HybridDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> que itera pelo <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para o <see cref="T:System.Collections.Specialized.HybridDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição. AT isso posicionar, chamando <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Se a última chamada <xref:System.Collections.IEnumerator.MoveNext%2A> retornou `false`, chamar <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>. Se a coleção é modificada entre <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> retorna o elemento que está definido como, mesmo se o enumerador já é invalidado.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CPP/hybriddictionary_enumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CS/hybriddictionary_enumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/VB/hybriddictionary_enumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.HybridDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém os valores no <see cref="T:System.Collections.Specialized.HybridDictionary" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Collections.Specialized.HybridDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que as chaves associadas no <xref:System.Collections.ICollection> retornado pelo <xref:System.Collections.Specialized.HybridDictionary.Keys%2A> método.  
+  
+ Retornado <xref:System.Collections.ICollection> não é uma cópia estática; em vez disso, o <xref:System.Collections.ICollection> refere-se novamente para os valores originais <xref:System.Collections.Specialized.HybridDictionary>. Portanto, as alterações para o <xref:System.Collections.Specialized.HybridDictionary> continuar sejam refletidas no <xref:System.Collections.ICollection>.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.HybridDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CPP/hybriddictionary_enumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/CS/hybriddictionary_enumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.HybridDictionary_Enumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.HybridDictionary_Enumerator/VB/hybriddictionary_enumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

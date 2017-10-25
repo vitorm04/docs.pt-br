@@ -1,0 +1,27 @@
+<Namespace Name="System.Drawing.Printing">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing.Printing" /> namespace fornece serviços relacionados à impressão para aplicativos de formulários do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, quando você imprime a partir de um aplicativo do Windows Forms, você cria uma nova instância do <xref:System.Drawing.Printing.PrintDocument> classe, definir propriedades, tais como <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> e <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A>, que descrevem como imprimir e chamar o <xref:System.Drawing.Printing.PrintDocument.Print%2A> método realmente imprimir o documento. Chamando o <xref:System.Drawing.Printing.PrintDocument.Print%2A?displayProperty=nameWithType> método gera o <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> evento, que deve ser tratado para executar o layout de documento para impressão.  
+  
+ Use o <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> propriedade o <xref:System.Drawing.Printing.PrintPageEventArgs> obtido do objeto o <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> eventos para especificar a saída de impressão. Se você estiver imprimindo um arquivo de texto, use <xref:System.IO.StreamReader> para ler uma linha por vez o fluxo e chamar o <xref:System.Drawing.Graphics.DrawString%2A> método para desenhar a linha no objeto de gráfico. Para obter mais informações sobre esse processo, consulte o <xref:System.Drawing.Graphics> e <xref:System.IO.StreamReader> classes. Você pode exibir um exemplo de impressão de um documento de texto no <xref:System.Drawing.Printing.PrintDocument> tópico de visão geral da classe.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos do <xref:System.Windows.Forms.TextRenderer> não há suporte para a classe para impressão. Em vez disso, use o <xref:System.Drawing.Graphics.DrawString%2A> métodos de <xref:System.Drawing.Graphics> classe.  
+  
+ Quando implementado em uma classe derivada, o <xref:System.Drawing.Printing.PrintController> controles como um <xref:System.Drawing.Printing.PrintDocument> é impresso. O <xref:System.Drawing.Printing.PrintDocument.Print%2A?displayProperty=nameWithType> método invoca o controlador de impressão <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>, <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A>, <xref:System.Drawing.Printing.PrintController.OnStartPage%2A>, e <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> métodos, que por sua vez indicam a impressora como imprimir o documento. Para obter mais informações sobre caixas de diálogo de impressão, consulte <xref:System.Windows.Forms.PrintDialog> e <xref:System.Windows.Forms.PageSetupDialog>.  
+  
+ O processo de visualização de impressão usa um controlador de impressão especializado, caixa de diálogo e controle. Para obter um exemplo de um controlador de impressão e caixa de diálogo, consulte <xref:System.Drawing.Printing.PreviewPrintController>, <xref:System.Windows.Forms.PrintPreviewDialog>, e <xref:System.Windows.Forms.PrintPreviewControl>.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Drawing.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo do Windows Presentation Foundation (WPF), consulte o <xref:System.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

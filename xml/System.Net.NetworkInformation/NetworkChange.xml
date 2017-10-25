@@ -1,0 +1,184 @@
+<Type Name="NetworkChange" FullName="System.Net.NetworkInformation.NetworkChange">
+  <TypeSignature Language="C#" Value="public sealed class NetworkChange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NetworkChange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.NetworkChange" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que aplicativos recebam uma notificação quando o endereço IP (Internet Protocol) de uma interface de rede, também chamado de placa ou adaptador de rede, é alterado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.NetworkChange> classe fornece notificação de alteração de endereço gerando <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> eventos. Um endereço de interface pode alterar por vários motivos, como um cabo de rede desconectado, mover fora do intervalo de rede de área Local sem fio ou falha de hardware.  
+  
+ Para receber uma notificação, você deve identificar os manipuladores de eventos do aplicativo, que são um ou mais métodos que executam as tarefas específicas do aplicativo sempre que o evento é gerado. Para ter uma <xref:System.Net.NetworkInformation.NetworkChange> objeto chamar seus métodos de manipulação de eventos quando um <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> evento ocorrer, você deve associar os métodos com um <xref:System.Net.NetworkInformation.NetworkAddressChangedEventHandler> delegar e adicionar esse delegado para o evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir escuta de alterações de endereço e exibe o status da rede interfaces quando um <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> evento ocorre.  
+  
+ [!code-cpp[NclNetAddressChanged1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetAddressChanged1/CPP/changed.cpp#1)]
+ [!code-csharp[NclNetAddressChanged1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetAddressChanged1/CS/changed.cs#1)]
+ [!code-vb[NclNetAddressChanged1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetAddressChanged1/VB/changed.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkChange ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkChange.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.NetworkChange" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkAddressChanged">
+      <MemberSignature Language="C#" Value="public static event System.Net.NetworkInformation.NetworkAddressChangedEventHandler NetworkAddressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Net.NetworkInformation.NetworkAddressChangedEventHandler NetworkAddressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkAddressChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o endereço IP de uma interface de rede é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.NetworkChange> classe gera <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> eventos quando o endereço de uma interface de rede, também chamado de placa de rede ou adaptador, é alterado.  
+  
+ Para ter uma <xref:System.Net.NetworkInformation.NetworkChange> objeto chamar um método de manipulação de eventos quando um <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> evento ocorrer, você deve associar o método com um <xref:System.Net.NetworkInformation.NetworkAddressChangedEventHandler> delegar e adicione esse delegado a esse evento.  
+  
+ O <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> evento tem suporte no Windows 2000 e posterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir escuta de alterações de endereço e exibe o status da rede interfaces quando um <xref:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged> evento ocorre.  
+  
+ [!code-cpp[NclNetAddressChanged1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetAddressChanged1/CPP/changed.cpp#1)]
+ [!code-csharp[NclNetAddressChanged1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetAddressChanged1/CS/changed.cs#1)]
+ [!code-vb[NclNetAddressChanged1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetAddressChanged1/VB/changed.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkAvailabilityChanged">
+      <MemberSignature Language="C#" Value="public static event System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler NetworkAvailabilityChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler NetworkAvailabilityChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a disponibilidade da rede muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.NetworkChange> classe gera <xref:System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged> eventos quando a disponibilidade da rede é alterada. A rede está disponível quando pelo menos uma interface de rede é marcado como "backup" e não é uma interface de túnel ou de loopback.  
+  
+ Para ter uma <xref:System.Net.NetworkInformation.NetworkChange> objeto chamar um método de manipulação de eventos quando um <xref:System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged> evento ocorrer, você deve associar o método com um <xref:System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler> delegar e adicione esse delegado a esse evento.  
+  
+ O <xref:System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged> evento tem suporte no Windows 2000 e posterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterNetworkChange">
+      <MemberSignature Language="C#" Value="public static void RegisterNetworkChange (System.Net.NetworkInformation.NetworkChange nc);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterNetworkChange(class System.Net.NetworkInformation.NetworkChange nc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkChange.RegisterNetworkChange(System.Net.NetworkInformation.NetworkChange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nc" Type="System.Net.NetworkInformation.NetworkChange" />
+      </Parameters>
+      <Docs>
+        <param name="nc">A instância a ser registrada.</param>
+        <summary>Registra uma instância de alteração de rede para receber eventos de alteração de rede.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,118 @@
+<Type Name="RouteBase" FullName="System.Web.Routing.RouteBase">
+  <TypeSignature Language="C#" Value="public abstract class RouteBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RouteBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.RouteBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Routing, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Funciona como a classe base para todas as classes que representam uma rota do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.RouteBase> classe permite que você crie classes personalizadas para definir rotas em seu aplicativo. Normalmente, você usará o <xref:System.Web.Routing.Route> classe quando você definir rotas. O <xref:System.Web.Routing.Route> classe deriva de <xref:System.Web.Routing.RouteBase> classe. No entanto, se você quiser fornecer uma funcionalidade diferente que o que é fornecido pelo <xref:System.Web.Routing.Route> classe, você cria uma classe que deriva de <xref:System.Web.Routing.RouteBase> e implementar as propriedades e métodos que você precisa.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RouteBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRouteData">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Routing.RouteData GetRouteData (System.Web.HttpContextBase httpContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Routing.RouteData GetRouteData(class System.Web.HttpContextBase httpContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteBase.GetRouteData(System.Web.HttpContextBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContextBase" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Um objeto que encapsula informações sobre a solicitação HTTP.</param>
+        <summary>Quando substituído em uma classe derivada, retorna informações de rota sobre a solicitação.</summary>
+        <returns>Um objeto que contém os valores da definição de rota se a rota corresponde à solicitação atual ou <see langword="null" /> se a rota não corresponde à solicitação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVirtualPath">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Routing.VirtualPathData GetVirtualPath (System.Web.Routing.RequestContext requestContext, System.Web.Routing.RouteValueDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Routing.VirtualPathData GetVirtualPath(class System.Web.Routing.RequestContext requestContext, class System.Web.Routing.RouteValueDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteBase.GetVirtualPath(System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.VirtualPathData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestContext" Type="System.Web.Routing.RequestContext" />
+        <Parameter Name="values" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="requestContext">Um objeto que encapsula informações sobre uma rota solicitada.</param>
+        <param name="values">Um objeto que contém os parâmetros para uma rota.</param>
+        <summary>Quando substituído em uma classe derivada, verifica se a rota corresponde aos valores especificados e, em caso afirmativo, gera uma URL e recupera informações sobre a rota.</summary>
+        <returns>Um objeto que contém a URL gerada e informações sobre a rota ou <see langword="null" />, se a rota não corresponder a <paramref name="values" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para gerar uma URL, você deve usar o <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A> método o <xref:System.Web.Routing.RouteCollection> classe. Esse método chama o <xref:System.Web.Routing.RouteBase.GetVirtualPath%2A> método para cada rota na coleção para determinar se essa rota corresponde aos valores no `values` e, portanto, pode gerar a URL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteExistingFiles">
+      <MemberSignature Language="C#" Value="public bool RouteExistingFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RouteExistingFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.RouteBase.RouteExistingFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o roteamento do ASP.NET deve tratar URLs que correspondam a um arquivo existente.</summary>
+        <value>
+          <see langword="true" />Se o roteamento ASP.NET manipula todas as solicitações, mesmo aqueles que correspondem a um arquivo existente; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

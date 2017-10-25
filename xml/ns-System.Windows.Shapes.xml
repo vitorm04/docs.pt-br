@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Shapes">
+  <Docs>
+    <summary>Fornece acesso a uma biblioteca de formas que podem ser usados no aplicativo de linguagem XAML (Extensible Markup) ou em código.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

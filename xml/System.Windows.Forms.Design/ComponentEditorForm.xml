@@ -1,0 +1,328 @@
+<Type Name="ComponentEditorForm" FullName="System.Windows.Forms.Design.ComponentEditorForm">
+  <TypeSignature Language="C#" Value="public class ComponentEditorForm : System.Windows.Forms.Form" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentEditorForm extends System.Windows.Forms.Form" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ComponentEditorForm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Form</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface do usuário para um <see cref="T:System.Windows.Forms.Design.WindowsFormsComponentEditor" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A <xref:System.Windows.Forms.Design.ComponentEditorForm> mostra uma exibição das páginas do editor de componente disponível junto com uma interface do usuário para seleção.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentEditorForm (object component, Type[] pageTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object component, class System.Type[] pageTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.#ctor(System.Object,System.Type[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="pageTypes" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente a ser editado.</param>
+        <param name="pageTypes">O conjunto de <see cref="T:System.Windows.Forms.Design.ComponentEditorPage" /> objetos a ser mostrado no formulário.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.ComponentEditorForm" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="component" /> não é um <see cref="T:System.ComponentModel.IComponent" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentEditorForm.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Redimensione o formulário de acordo com a configuração de <see cref="P:System.Windows.Forms.Form.AutoSizeMode" />.</summary>
+        <value>
+          <see langword="true" /> se o formulário for redimensionado automaticamente; <see langword="false" /> se ele precisar ser redimensionado manualmente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Design.ComponentEditorForm.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Form.AutoSize" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivated">
+      <MemberSignature Language="C#" Value="protected override void OnActivated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnActivated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.OnActivated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Form.Activated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na primeira vez o <xref:System.Windows.Forms.Design.ComponentEditorForm.OnActivated%2A> o método é executado, ele mostra a primeira página do editor de componente na lista.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Design.ComponentEditorForm.OnActivated%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Design.ComponentEditorForm.OnActivated(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Design.ComponentEditorForm.OnActivated(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHelpRequested">
+      <MemberSignature Language="C#" Value="protected override void OnHelpRequested (System.Windows.Forms.HelpEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHelpRequested(class System.Windows.Forms.HelpEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.OnHelpRequested(System.Windows.Forms.HelpEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.HelpEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.HelpEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HelpRequested" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.ComponentEditorForm.OnHelpRequested%2A> método mostra a página de Ajuda que está associada com a página do editor de componente, se houver um.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Design.ComponentEditorForm.OnHelpRequested%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Design.ComponentEditorForm.OnHelpRequested(System.Windows.Forms.HelpEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Design.ComponentEditorForm.OnHelpRequested(System.Windows.Forms.HelpEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelChangeSelector">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelChangeSelector (object source, System.Windows.Forms.TreeViewEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelChangeSelector(object source, class System.Windows.Forms.TreeViewEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.OnSelChangeSelector(System.Object,System.Windows.Forms.TreeViewEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Forms.TreeViewEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.TreeViewEventArgs" /> que contém os dados do evento.</param>
+        <summary>Alterna entre as páginas do editor de componente.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.Design.CheckoutException">Um arquivo de designer estiver marcado para controle do código fonte e não pode ser alterado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreProcessMessage">
+      <MemberSignature Language="C#" Value="public override bool PreProcessMessage (ref System.Windows.Forms.Message msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool PreProcessMessage(valuetype System.Windows.Forms.Message&amp; msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.PreProcessMessage(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Um <see cref="T:System.Windows.Forms.Message" /> que especifica a mensagem de pré-processamento.</param>
+        <summary>Fornece um método para substituir para mensagens de entrada de pré-processamento antes de serem distribuídos.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem especificada é para uma página do editor de componente. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ComponentEditorForm.PreProcessMessage%2A>é chamado pelo loop de mensagens do aplicativo para mensagens de entrada de pré-processamento antes de serem distribuídos.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowForm">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DialogResult ShowForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DialogResult ShowForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.ShowForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Mostra o formulário. O formulário não terá nenhuma janela do proprietário.</summary>
+        <returns>Uma da <see cref="T:System.Windows.Forms.DialogResult" /> indicando que o código de resultado de valores retornados na caixa de diálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowForm">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DialogResult ShowForm (int page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DialogResult ShowForm(int32 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.ShowForm(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="page">O índice da página para mostrar.</param>
+        <summary>Mostra a página especificada do formulário especificado. O formulário não terá nenhuma janela do proprietário.</summary>
+        <returns>Uma da <see cref="T:System.Windows.Forms.DialogResult" /> indicando que o código de resultado de valores retornados na caixa de diálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowForm">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DialogResult ShowForm (System.Windows.Forms.IWin32Window owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DialogResult ShowForm(class System.Windows.Forms.IWin32Window owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.ShowForm(System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.IWin32Window" /> possua a caixa de diálogo.</param>
+        <summary>Mostra o formulário com o proprietário especificado.</summary>
+        <returns>Uma da <see cref="T:System.Windows.Forms.DialogResult" /> indicando que o código de resultado de valores retornados na caixa de diálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowForm">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DialogResult ShowForm (System.Windows.Forms.IWin32Window owner, int page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DialogResult ShowForm(class System.Windows.Forms.IWin32Window owner, int32 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentEditorForm.ShowForm(System.Windows.Forms.IWin32Window,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="page" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.IWin32Window" /> possua a caixa de diálogo.</param>
+        <param name="page">O índice da página para mostrar.</param>
+        <summary>Mostra o formulário e a página especificada com o proprietário especificado.</summary>
+        <returns>Uma da <see cref="T:System.Windows.Forms.DialogResult" /> indicando que o código de resultado de valores retornados na caixa de diálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

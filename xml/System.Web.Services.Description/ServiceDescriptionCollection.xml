@@ -1,0 +1,533 @@
+<Type Name="ServiceDescriptionCollection" FullName="System.Web.Services.Description.ServiceDescriptionCollection">
+  <TypeSignature Language="C#" Value="public sealed class ServiceDescriptionCollection : System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceDescriptionCollection extends System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ServiceDescriptionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionBaseCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de instâncias de <see cref="T:System.Web.Services.Description.ServiceDescription" /> classe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection/CPP/servicedescriptioncollection.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection/CS/servicedescriptioncollection.cs#1)]
+ [!code-vb[ServiceDescriptionCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection/VB/servicedescriptioncollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceDescriptionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_Constructor_Add_Item#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/CPP/sdcollection_constructor_add_item.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection_Constructor_Add_Item#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/CS/servicedescriptioncollection_constructor_add_item.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_Constructor_Add_Item#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/VB/servicedescriptioncollection_constructor_add_item.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Description.ServiceDescription serviceDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Description.ServiceDescription serviceDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.Add(System.Web.Services.Description.ServiceDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">O <see cref="T:System.Web.Services.Description.ServiceDescription" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.ServiceDescription" /> ao final do <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" />.</summary>
+        <returns>O índice de base zero onde o <see cref="T:System.Web.Services.Description.ServiceDescription" /> parâmetro foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_Constructor_Add_Item#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/CPP/sdcollection_constructor_add_item.cpp#2)]
+ [!code-csharp[ServiceDescriptionCollection_Constructor_Add_Item#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/CS/servicedescriptioncollection_constructor_add_item.cs#2)]
+ [!code-vb[ServiceDescriptionCollection_Constructor_Add_Item#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/VB/servicedescriptioncollection_constructor_add_item.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Description.ServiceDescription serviceDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Description.ServiceDescription serviceDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.Contains(System.Web.Services.Description.ServiceDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">O <see cref="T:System.Web.Services.Description.ServiceDescription" /> para o qual verificar a associação da coleção.</param>
+        <summary>Retorna um valor que indica se o especificado <see cref="T:System.Web.Services.Description.ServiceDescription" /> é um membro da coleção.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="serviceDescription" /> parâmetro for um membro do <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionCollection_Contains_IndexOf_Remove#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Contains_IndexOf_Remove/CS/servicedescriptioncollection_contains_indexof_remove.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_Contains_IndexOf_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Contains_IndexOf_Remove/VB/servicedescriptioncollection_contains_indexof_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Description.ServiceDescription[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Description.ServiceDescription[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.CopyTo(System.Web.Services.Description.ServiceDescription[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Description.ServiceDescription[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz do tipo <see cref="T:System.Web.Services.Description.ServiceDescription" /> que serve como o destino da ação de cópia.</param>
+        <param name="index">O índice baseado em zero no qual começar a colocar a coleção copiada.</param>
+        <summary>Copia todo o <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> em uma matriz unidimensional de tipo <see cref="T:System.Web.Services.Description.ServiceDescription" />, começando no índice de base zero especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_Insert_Item_CopyTo#3](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/CPP/sdcollection_insert_item_copyto.cpp#3)]
+ [!code-csharp[ServiceDescriptionCollection_Insert_Item_CopyTo#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/CS/servicedescriptioncollection_insert_item_copyto.cs#3)]
+ [!code-vb[ServiceDescriptionCollection_Insert_Item_CopyTo#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/VB/servicedescriptioncollection_insert_item_copyto.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Binding GetBinding (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.Binding GetBinding(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.GetBinding(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.Xml.XmlQualifiedName" /> cujo <see cref="P:System.Xml.XmlQualifiedName.Name" /> propriedade é usada para recuperar um <see cref="T:System.Web.Services.Description.Binding" /> instância.</param>
+        <summary>Pesquisas de <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> e retorna o <see cref="T:System.Web.Services.Description.Binding" /> com o nome que é um membro de uma a <see cref="T:System.Web.Services.Description.ServiceDescription" /> contidas na coleção de instâncias.</summary>
+        <returns>A associação com o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_GetBinding#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetBinding/CPP/servicedescriptioncollection_getbinding.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection_GetBinding#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetBinding/CS/servicedescriptioncollection_getbinding.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_GetBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_GetBinding/VB/servicedescriptioncollection_getbinding.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Especificado <see langword="Binding" /> não é um membro de qualquer <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias dentro da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="protected override string GetKey (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetKey(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.GetKey(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message GetMessage (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.Message GetMessage(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.GetMessage(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.Xml.XmlQualifiedName" />, passado por referência, cuja <see cref="P:System.Xml.XmlQualifiedName.Name" /> propriedade é compartilhada pelo <see cref="T:System.Web.Services.Description.Message" /> retornado.</param>
+        <summary>Pesquisas de <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> e retorna o <see cref="T:System.Web.Services.Description.Message" /> com o nome que é um membro de uma a <see cref="T:System.Web.Services.Description.ServiceDescription" /> contidas na coleção de instâncias.</summary>
+        <returns>A mensagem com o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_GetMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetMessage/CPP/servicedescriptioncollection_getmessage.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection_GetMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetMessage/CS/servicedescriptioncollection_getmessage.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_GetMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_GetMessage/VB/servicedescriptioncollection_getmessage.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Especificado <see langword="Message" /> não é um membro de qualquer <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias dentro da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPortType">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.PortType GetPortType (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.PortType GetPortType(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.GetPortType(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.PortType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.Xml.XmlQualifiedName" />, passado por referência, cuja <see cref="P:System.Xml.XmlQualifiedName.Name" /> propriedade é compartilhada pelo <see cref="T:System.Web.Services.Description.PortType" /> retornado.</param>
+        <summary>Pesquisas de <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> e retorna o <see cref="T:System.Web.Services.Description.PortType" /> com o nome que é um membro de uma a <see cref="T:System.Web.Services.Description.ServiceDescription" /> contidas na coleção de instâncias.</summary>
+        <returns>O <see langword="PortType" /> com o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_GetPortType#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetPortType/CPP/servicedescriptioncollection_getporttype.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection_GetPortType#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetPortType/CS/servicedescriptioncollection_getporttype.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_GetPortType#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_GetPortType/VB/servicedescriptioncollection_getporttype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Especificado <see langword="PortType" /> não é um membro de qualquer <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias dentro da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Service GetService (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.Service GetService(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.GetService(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Service</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.Xml.XmlQualifiedName" />, passado por referência, cuja <see cref="P:System.Xml.XmlQualifiedName.Name" /> propriedade é compartilhada pelo <see cref="T:System.Web.Services.Description.Service" /> retornado.</param>
+        <summary>Pesquisas de <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> e retorna o <see cref="T:System.Web.Services.Description.Service" /> com o nome que é um membro de uma a <see cref="T:System.Web.Services.Description.ServiceDescription" /> contidas na coleção de instâncias.</summary>
+        <returns>O serviço com o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_GetService#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetService/CPP/servicedescriptioncollection_getservice.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection_GetService#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_GetService/CS/servicedescriptioncollection_getservice.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_GetService#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_GetService/VB/servicedescriptioncollection_getservice.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Especificado <see langword="Service" /> não é um membro de qualquer <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias dentro da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Description.ServiceDescription serviceDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Description.ServiceDescription serviceDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.IndexOf(System.Web.Services.Description.ServiceDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">O <see cref="T:System.Web.Services.Description.ServiceDescription" /> que deve ser pesquisado na coleção.</param>
+        <summary>Procura especificado <see cref="T:System.Web.Services.Description.ServiceDescription" /> e retorna o índice baseado em zero da primeira ocorrência na coleção.</summary>
+        <returns>O índice baseado em zero da descrição do serviço especificado ou -1 se o elemento não foi encontrado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionCollection_Contains_IndexOf_Remove#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Contains_IndexOf_Remove/CS/servicedescriptioncollection_contains_indexof_remove.cs#2)]
+ [!code-vb[ServiceDescriptionCollection_Contains_IndexOf_Remove#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Contains_IndexOf_Remove/VB/servicedescriptioncollection_contains_indexof_remove.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Services.Description.ServiceDescription serviceDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Services.Description.ServiceDescription serviceDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.Insert(System.Int32,System.Web.Services.Description.ServiceDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o <c>serviceDescription</c> parâmetro.</param>
+        <param name="serviceDescription">O <see cref="T:System.Web.Services.Description.ServiceDescription" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.ServiceDescription" /> de instância para o <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> no índice de base zero especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o número de itens na coleção já for igual a capacidade da coleção, a capacidade é duplicada, automaticamente realocando a matriz interna antes do novo elemento é inserido.  
+  
+ Se o `index` parâmetro for igual ao <xref:System.Collections.CollectionBase.Count%2A>, o `serviceDescription` parâmetro é adicionado ao final do <xref:System.Web.Services.Description.ServiceDescriptionCollection>.  
+  
+ Os elementos após o ponto de inserção se mover para baixo para acomodar o novo elemento.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_Insert_Item_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/CPP/sdcollection_insert_item_copyto.cpp#1)]
+ [!code-csharp[ServiceDescriptionCollection_Insert_Item_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/CS/servicedescriptioncollection_insert_item_copyto.cs#1)]
+ [!code-vb[ServiceDescriptionCollection_Insert_Item_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/VB/servicedescriptioncollection_insert_item_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ O parâmetro <paramref name="index" /> é maior que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Web.Services.Description.ServiceDescription" /> cujo valor é modificado ou retornado.</param>
+        <summary>Obtém ou define o valor de um <see cref="T:System.Web.Services.Description.ServiceDescription" /> no índice de base zero especificado.</summary>
+        <value>O valor de um <see cref="T:System.Web.Services.Description.ServiceDescription" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_Constructor_Add_Item#3](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/CPP/sdcollection_constructor_add_item.cpp#3)]
+ [!code-csharp[ServiceDescriptionCollection_Constructor_Add_Item#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/CS/servicedescriptioncollection_constructor_add_item.cs#3)]
+ [!code-vb[ServiceDescriptionCollection_Constructor_Add_Item#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Constructor_Add_Item/VB/servicedescriptioncollection_constructor_add_item.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription this[string ns] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O namespace do <see cref="T:System.Web.Services.Description.ServiceDescription" /> retornado.</param>
+        <summary>Obtém um <see cref="T:System.Web.Services.Description.ServiceDescription" /> especificado por seu <see cref="P:System.Web.Services.Description.ServiceDescription.TargetNamespace" /> propriedade.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.ServiceDescription" /> especificado por sua propriedade de namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionCollection_Insert_Item_CopyTo#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/CPP/sdcollection_insert_item_copyto.cpp#2)]
+ [!code-csharp[ServiceDescriptionCollection_Insert_Item_CopyTo#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/CS/servicedescriptioncollection_insert_item_copyto.cs#2)]
+ [!code-vb[ServiceDescriptionCollection_Insert_Item_CopyTo#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Insert_Item_CopyTo/VB/servicedescriptioncollection_insert_item_copyto.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Description.ServiceDescription serviceDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Description.ServiceDescription serviceDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.Remove(System.Web.Services.Description.ServiceDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">O <see cref="T:System.Web.Services.Description.ServiceDescription" /> a ser removido da coleção.</param>
+        <summary>Remove a primeira ocorrência do <see cref="T:System.Web.Services.Description.ServiceDescription" /> da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Os elementos que seguem o removido <xref:System.Web.Services.Description.ServiceDescription> mover para cima para ocupar o ponto vagas.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionCollection_Contains_IndexOf_Remove#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionCollection_Contains_IndexOf_Remove/CS/servicedescriptioncollection_contains_indexof_remove.cs#3)]
+ [!code-vb[ServiceDescriptionCollection_Contains_IndexOf_Remove#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionCollection_Contains_IndexOf_Remove/VB/servicedescriptioncollection_contains_indexof_remove.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="protected override void SetParent (object value, object parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParent(object value, object parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionCollection.SetParent(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="parent">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

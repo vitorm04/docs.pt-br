@@ -1,0 +1,73 @@
+<Type Name="ContextProperty" FullName="System.Runtime.Remoting.Contexts.ContextProperty">
+  <TypeSignature Language="C#" Value="public class ContextProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContextProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.ContextProperty" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém o par de nome/valor do nome da propriedade e o objeto que representa a propriedade de um contexto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades que compõem o contexto são fornecidas por vários serviços automática e são configuradas pela ativação de serviços quando um <xref:System.Runtime.Remoting.Contexts.Context> classe é criada. Cada propriedade é um objeto gerenciado. Dependendo se propriedades contribuem Coletores de mensagem, elas são consideradas ativo ou passivo.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.ContextProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da classe T:System.Runtime.Remoting.Contexts.ContextProperty.</summary>
+        <value>O nome do <see cref="T:System.Runtime.Remoting.Contexts.ContextProperty" /> classe.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public virtual object Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Property" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.ContextProperty.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que representa a propriedade de um contexto.</summary>
+        <value>O objeto que representa a propriedade de um contexto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

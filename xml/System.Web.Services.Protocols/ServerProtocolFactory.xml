@@ -1,0 +1,56 @@
+<Type Name="ServerProtocolFactory" FullName="System.Web.Services.Protocols.ServerProtocolFactory">
+  <TypeSignature Language="C#" Value="public abstract class ServerProtocolFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServerProtocolFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.ServerProtocolFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O .NET Framework usa classes que derivam de <see cref="T:System.Web.Services.Protocols.ServerProtocolFactory" /> classe para processar solicitações de serviço da Web em XML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServerProtocolFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.ServerProtocolFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor para <see cref="T:System.Web.Services.Protocols.ServerProtocolFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIfRequestCompatible">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.Services.Protocols.ServerProtocol CreateIfRequestCompatible (System.Web.HttpRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.Services.Protocols.ServerProtocol CreateIfRequestCompatible(class System.Web.HttpRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.ServerProtocolFactory.CreateIfRequestCompatible(System.Web.HttpRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.ServerProtocol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">O <see cref="T:System.Web.HttpRequest" /> que representa a solicitação de serviço da Web.</param>
+        <summary>Retorna um <see cref="T:System.Web.Services.Protocols.ServerProtocol" /> que pode ser usado para processar a solicitação de serviço Web XML especificada pelo <paramref name="request" /> parâmetro.</summary>
+        <returns>Um <see cref="T:System.Web.Services.Protocols.ServerProtocol" /> que pode ser usado para processar a solicitação de serviço Web XML especificada pelo <paramref name="request" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

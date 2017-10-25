@@ -1,0 +1,93 @@
+<Type Name="IAssemblyPostProcessor" FullName="System.Web.Compilation.IAssemblyPostProcessor">
+  <TypeSignature Language="C#" Value="public interface IAssemblyPostProcessor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAssemblyPostProcessor implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IAssemblyPostProcessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define o método que implementa uma classe para processar um assembly depois que o assembly foi compilado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe que implemente essa interface pode acessar um assembly depois que ele foi compilado. O <xref:System.Web.Compilation.AssemblyBuilder> classe compila os assemblies e, em seguida, verifica se um <xref:System.Web.Compilation.IAssemblyPostProcessor> interface foi registrada no arquivo de configuração da Web. Nesse caso, o <xref:System.Web.Compilation.AssemblyBuilder> instância chama o <xref:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly%2A> método para o <xref:System.Web.Compilation.IAssemblyPostProcessor> interface para realizar qualquer ação após a compilação e antes de carregar o assembly. Por exemplo, uma ferramenta do criador de perfil pode implementar essa interface para estabelecer testes no assembly.  
+  
+ Quando um <xref:System.Web.Compilation.IAssemblyPostProcessor> interface está registrada, o aplicativo ASP.NET e seus assemblies sempre serão compilados no modo de depuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma implementação de <xref:System.Web.Compilation.IAssemblyPostProcessor> de interface e registrá-lo no arquivo Web. config de um aplicativo Web.  
+  
+ A primeira parte do exemplo de código cria uma classe denominada `Samples.Process.postProcessTest` que implementa o <xref:System.Web.Compilation.IAssemblyPostProcessor> interface. Esta classe executa a ação simple de escrever um arquivo quando o <xref:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly%2A> método é chamado.  
+  
+ [!code-csharp[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/CS/postProcessTest.cs#1)]
+ [!code-vb[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/VB/postProcessTest.vb#1)]  
+  
+ Compile a classe em um arquivo. dll com o comando `csc /target:library postProcessTest.cs`. Adicione o arquivo. dll resultante para a pasta Bin do aplicativo ASP.NET e registrar o. dll no arquivo Web. config, conforme mostrado no código a seguir.  
+  
+```  
+<compilation debug="true" assemblyPostProcessorType="Samples.Process.postProcessTest" />  
+```  
+  
+ Quando um usuário visita o site da Web, o aplicativo Web é compilado dinamicamente e o arquivo MyTest.txt será gravado para C:\compile.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PostProcessAssembly">
+      <MemberSignature Language="C#" Value="public void PostProcessAssembly (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostProcessAssembly(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o assembly.</param>
+        <summary>Chamado antes que o assembly é carregado para permitir que a classe de implementação modificar o assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.AssemblyBuilder> classe chama este método depois que o assembly foi compilado. As ações a serem tomadas antes de carregar o assembly devem ser incluídas nesse método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma implementação de <xref:System.Web.Compilation.IAssemblyPostProcessor> de interface e registrá-lo no arquivo Web. config de um aplicativo Web.  
+  
+ A primeira parte do exemplo de código cria uma classe denominada `Samples.Process.postProcessTest` que implementa o <xref:System.Web.Compilation.IAssemblyPostProcessor> interface. Esta classe executa a ação simple de escrever um arquivo quando o <xref:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly%2A> método é chamado.  
+  
+ [!code-csharp[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/CS/postProcessTest.cs#1)]
+ [!code-vb[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/VB/postProcessTest.vb#1)]  
+  
+ Compile a classe em um arquivo. dll com o comando `csc /target:library postProcessTest.cs`. Adicione o arquivo. dll resultante para a pasta Bin do aplicativo ASP.NET e registrar o. dll no arquivo Web. config, conforme mostrado no código a seguir.  
+  
+```  
+<compilation debug="true" assemblyPostProcessorType="Samples.Process.postProcessTest" />  
+```  
+  
+ Quando um usuário visita o site da Web, o aplicativo Web é compilado dinamicamente e o arquivo MyTest.txt será gravado para C:\compile.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

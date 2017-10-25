@@ -1,0 +1,72 @@
+<Type Name="SpecialSetting" FullName="System.Configuration.SpecialSetting">
+  <TypeSignature Language="C#" Value="public enum SpecialSetting" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SpecialSetting extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SpecialSetting" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a categoria de configuração especial de uma propriedade de configurações de aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SpecialSetting> enumeração define um conjunto de categorias especiais que são aplicados às propriedades de configurações do aplicativo com a classe ttribute.  
+  
+> [!CAUTION]
+>  O provedor de configurações padrão, <xref:System.Configuration.LocalFileSettingsProvider>, não criptografar ou protegem cadeias de caracteres de conexão. Simples armazena esse tipo de configurações em um separado `<connectionstrings>` seção no arquivo de configuração apropriado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="ConnectionString" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.SpecialSetting ConnectionString = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.SpecialSetting.ConnectionString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SpecialSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade de configuração representa uma cadeia de conexão, normalmente, para um armazenamento de dados ou recurso de rede.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WebServiceUrl">
+      <MemberSignature Language="C#" Value="WebServiceUrl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.SpecialSetting WebServiceUrl = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.SpecialSetting.WebServiceUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SpecialSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade de configuração representa uma URL (Uniform Resource Locator) de um serviço Web.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

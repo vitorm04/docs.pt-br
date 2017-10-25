@@ -1,0 +1,362 @@
+<Type Name="CryptographicException" FullName="System.Security.Cryptography.CryptographicException">
+  <TypeSignature Language="C#" Value="public class CryptographicException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CryptographicException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CryptographicException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção lançada quando ocorre um erro durante uma operação criptográfica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CryptographicException>usa o HRESULT CORSEC_E_CRYPTO, a menos que um código de erro alternativo é especificado.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância de <xref:System.Security.Cryptography.CryptographicException>, consulte o construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar membros de <xref:System.Security.Cryptography.CryptographicException> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptographicException#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CPP/cryptographicexceptionmembers.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.CryptographicException#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CS/cryptographicexceptionmembers.cs#2)]
+ [!code-vb[System.Security.Cryptography.CryptographicException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/VB/cryptographicexceptionmembers.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicException" /> com propriedades padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicException> sem parâmetros. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicException> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptographicException#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CPP/cryptographicexceptionmembers.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.CryptographicException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CS/cryptographicexceptionmembers.cs#1)]
+ [!code-vb[System.Security.Cryptography.CryptographicException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/VB/cryptographicexceptionmembers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicException (int hr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 hr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicException.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="hr" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hr">O <see langword="HRESULT" /> código de erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CryptographicException" /> classe com especificado <see langword="HRESULT" /> código de erro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.CryptographicException.%23ctor%2A> construtor aceita um sistema `HRESULT` código de erro e conjuntos de <xref:System.Exception.Message%2A> propriedade para a mensagem localizada que corresponde ao `HRESULT`.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicException> usando um código de erro para um <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicException> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptographicException#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CPP/cryptographicexceptionmembers.cpp#3)]
+ [!code-csharp[System.Security.Cryptography.CryptographicException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CS/cryptographicexceptionmembers.cs#3)]
+ [!code-vb[System.Security.Cryptography.CryptographicException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/VB/cryptographicexceptionmembers.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicException> usando uma mensagem de erro personalizada. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicException> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptographicException#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CPP/cryptographicexceptionmembers.cpp#4)]
+ [!code-csharp[System.Security.Cryptography.CryptographicException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CS/cryptographicexceptionmembers.cs#4)]
+ [!code-vb[System.Security.Cryptography.CryptographicException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/VB/cryptographicexceptionmembers.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CryptographicException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="inner">A exceção que é a causa da exceção atual. Se o <c>interna</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicException> usando uma mensagem de erro personalizada e uma exceção interna. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicException> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptographicException#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CPP/cryptographicexceptionmembers.cpp#5)]
+ [!code-csharp[System.Security.Cryptography.CryptographicException#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CS/cryptographicexceptionmembers.cs#5)]
+ [!code-vb[System.Security.Cryptography.CryptographicException#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/VB/cryptographicexceptionmembers.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicException (string format, string insert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string format, string insert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="insert" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato usado para gerar a mensagem de erro.</param>
+        <param name="insert">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CryptographicException" /> classe com uma mensagem de erro especificado no formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicException> usando um formato de hora e a data atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicException> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptographicException#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CPP/cryptographicexceptionmembers.cpp#6)]
+ [!code-csharp[System.Security.Cryptography.CryptographicException#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/CS/cryptographicexceptionmembers.cs#6)]
+ [!code-vb[System.Security.Cryptography.CryptographicException#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicException/VB/cryptographicexceptionmembers.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

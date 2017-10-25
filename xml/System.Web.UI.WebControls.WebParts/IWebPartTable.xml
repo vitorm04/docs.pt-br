@@ -1,0 +1,121 @@
+<Type Name="IWebPartTable" FullName="System.Web.UI.WebControls.WebParts.IWebPartTable">
+  <TypeSignature Language="C#" Value="public interface IWebPartTable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebPartTable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IWebPartTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma interface de provedor para conectar dois controles de servidor usando uma tabela de dados inteira.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface foi projetada para ser usado com conexões de Web Parts. Em uma conexão de Web Parts, dois controles de servidor que residem em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona estabelecer uma conexão e compartilhamento de dados, com um controle que atua como o consumidor e o outro controle que atua como um provedor. O mecanismo para o compartilhamento de dados em uma conexão de Web Parts é uma instância de interface, que atua como o provedor para o consumidor por meio de um método de retorno de chamada. Para estabelecer uma conexão, o consumidor e provedor devem ambos funcionam com o mesmo tipo de interface para o compartilhamento de dados. Se o consumidor não reconhece o tipo de interface enviado pelo provedor, ele ainda é possível conectar-se os controles por meio de um transformador (um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto) que converte a instância da interface enviada pelo provedor para um tipo que reconhece o consumidor. Para obter detalhes sobre conexões, consulte <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> e [Web Parts Connections Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> é uma interface de provedor incluída com o controle de Web Parts definido como uma interface padrão para a criação de conexões com base em uma tabela de dados. Você também pode criar interfaces personalizados para usar com conexões de Web Parts, mas em muitos aplicativos de Web controladas por dados, é útil criar conexões com base em um campo comum (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.IWebPartField> interface), linha (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> interface), ou tabela da fonte de dados. Em uma conexão típica, um <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar atuar como um provedor deve implementar a <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> de interface e fornecer uma instância da interface para os consumidores de um método de retorno de chamada especial. Por exemplo, o provedor pode implementar uma <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface para uma tabela que contém os dados de desempenho financeiro. Outro <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar atuar como um consumidor define um método especial para receber a instância da interface, pode extrair os dados e renderizar um gráfico para exibir as informações resultantes.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface tem dois membros expostos. O <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema%2A> propriedade retorna informações de esquema sobre a tabela de dados encapsulada em uma <xref:System.ComponentModel.PropertyDescriptorCollection> objeto. O <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> método declara um método que usa um implementador (como um controle de provedor) para recuperar dados da tabela da instância de interface quando o método de retorno de chamada é invocado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma conexão estática entre dois controles usando a <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface. O exemplo de código tem três partes:  
+  
+-   Fonte de código para personalizar dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles que podem formar uma conexão usando o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface, com um controle que atua como o provedor e o outros atuando como o consumidor.  
+  
+-   Uma página da Web que hospeda os controles e declara a conexão estático no formato de persistência.  
+  
+-   Uma descrição do que acontece quando o código de exemplo é executado.  
+  
+ A primeira parte do exemplo de código é o código-fonte para os dois controles personalizados. A primeira é o código para o provedor, que implementa o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface. Para simplificar o exemplo, o provedor cria uma tabela com alguns dados em vez de se conectar a um banco de dados. O `GetConnectionInterface` método serve como ponto de conexão do provedor, o método de retorno de chamada que retorna a instância da interface para o consumidor. Para o consumidor, ele recupera a instância da interface do provedor em seu método chamado `SetConnectionInterface`, que é marcado com um `ConnectionConsumer` atributo. Depois de recuperar a instância da interface, o consumidor, no seu `OnPreRender` chamadas de método, a implementação do <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> método no provedor, para recuperar os dados reais e gravá-la para a página.  
+  
+ Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_IWebPartTable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartTable_Overview/CS/ITableSample.cs#2)]
+ [!code-vb[WebParts_IWebPartTable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartTable_Overview/VB/ITableSample.vb#2)]  
+  
+ A segunda parte do exemplo de código é a página da Web que declara o conexão estática e os hosts de controles. Na parte superior da página é uma `Register` diretiva que declara o namespace do código-fonte contido no diretório App_Code. A conexão é declarado usando um `<asp:webpartconnection>` elemento. Controles personalizados de consumidor e provedor são declarados em um `<zonetemplate>` elemento dentro um `<asp:webpartzone>` elemento, que é necessário para que eles possam ser capaz de se conectar (eles devem residir dentro de uma zona que herda do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> classe).  
+  
+ [!code-aspx-csharp[WebParts_IWebPartRow_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPartRow_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/VB/defaultvb.aspx#1)]  
+  
+ Carregar a página em um navegador. O controle de consumidor exibe os dados fornecidos a partir da tabela especificada, o provedor torna disponível por meio de uma instância do <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetTableData">
+      <MemberSignature Language="C#" Value="public void GetTableData (System.Web.UI.WebControls.WebParts.TableCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTableData(class System.Web.UI.WebControls.WebParts.TableCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData(System.Web.UI.WebControls.WebParts.TableCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.UI.WebControls.WebParts.TableCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Um delegado <see cref="T:System.Web.UI.WebControls.WebParts.TableCallback" /> que contém o endereço de um método que recebe os dados.</param>
+        <summary>Retorna os dados para a tabela que está sendo usado pela interface como a base de uma conexão entre dois <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para recuperar os valores da tabela de dados transmitidos pela interface. O provedor implementa este método e o consumidor chama no ponto quando o consumidor está pronto para processar ou processar dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação e usar o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> método. O exemplo completo é mostrado na visão geral de classe para o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface. O controle de provedor implementa o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> método, retornando os dados na tabela especificada. O controle de consumidor chama o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> método no seu `OnPreRender` método, para que o valor dos dados pode ser gravado para a página.  
+  
+ [!code-csharp[WebParts_IWebPartTable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartTable_Overview/CS/ITableSample.cs#2)]
+ [!code-vb[WebParts_IWebPartTable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartTable_Overview/VB/ITableSample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de esquema para uma tabela de dados que é usada para compartilhar dados entre duas <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles.</summary>
+        <value>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descrevem os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade fornece informações de propriedade sobre os dados em um <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> instância. Há um contrato implícito entre o esquema referenciado pelo <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema%2A> propriedade e os dados na tabela. O contrato é que, para cada <xref:System.ComponentModel.PropertyDescriptor> objeto o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema%2A> propriedade, você pode chamar <xref:System.ComponentModel.PropertyDescriptor.GetValue%2A> em um elemento de dados da tabela para obter o valor em uma coluna ou uma linha da tabela.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação e usar o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema%2A> propriedade. O exemplo completo é mostrado na visão geral de classe para o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> interface. O controle de provedor implementa o <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema%2A> propriedade. Em seguida, o consumidor controlar, no seu `RenderContents` método, as consultas a <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.Schema%2A> propriedade para recuperar informações sobre a tabela conforme ele grava os dados da tabela para a página.  
+  
+ [!code-csharp[WebParts_IWebPartTable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartTable_Overview/CS/ITableSample.cs#2)]
+ [!code-vb[WebParts_IWebPartTable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartTable_Overview/VB/ITableSample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

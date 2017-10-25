@@ -1,0 +1,159 @@
+<Type Name="IComparable&lt;T&gt;" FullName="System.IComparable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IComparable&lt;in T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComparable`1&lt;- T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.IComparable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo de objeto a ser comparado.</typeparam>
+    <summary>Define um método de comparação generalizado que implementa uma classe ou um tipo de valor para criar um método de comparação de tipo específico para ordenar ou classificar suas instâncias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por tipos cujos valores podem ser ordenados ou classificados e fornece um método de comparação com rigidez de tipos para ordenar os membros de um objeto de coleção genérica. Por exemplo, um número pode ser maior que o segundo número e uma cadeia de caracteres pode aparecer em ordem alfabética antes da outra. Requer que os tipos de implementação definem um único método, <xref:System.IComparable%601.CompareTo%28%600%29>, que indica se a posição da instância atual na ordem de classificação é antes, depois, ou o mesmo que um segundo objeto do mesmo tipo. Normalmente, o método não é chamado diretamente no código do desenvolvedor. Em vez disso, ele é chamado automaticamente pelos métodos como <xref:System.Collections.Generic.List%601.Sort?displayProperty=nameWithType> e <xref:System.Collections.Generic.SortedList%602.Add%2A>.  
+  
+ Normalmente, os tipos que fornecem uma <xref:System.IComparable%601> implementação também implementam o <xref:System.IEquatable%601> interface. O <xref:System.IEquatable%601> interface define o <xref:System.IEquatable%601.Equals%2A> método, que determina a igualdade de instâncias do tipo de implementação.  
+  
+ A implementação de <xref:System.IComparable%601.CompareTo%28%600%29> método deve retornar um <xref:System.Int32> que tem um dos três valores, conforme mostrado na tabela a seguir.  
+  
+|Valor|Significado|  
+|-----------|-------------|  
+|Menor que zero|Esse objeto precede o objeto especificado pelo <xref:System.IComparable%601.CompareTo%2A> método na ordem de classificação.|  
+|Zero|Esta instância atual ocorre na mesma posição na ordem de classificação como o objeto especificado pelo <xref:System.IComparable%601.CompareTo%2A> argumento de método.|  
+|Maior que zero|Esta instância atual segue o objeto especificado pelo <xref:System.IComparable%601.CompareTo%2A> argumento do método na ordem de classificação.|  
+  
+ Todos os tipos numéricos (como <xref:System.Int32> e <xref:System.Double>) implementar <xref:System.IComparable%601>, assim como <xref:System.String>, <xref:System.Char>, e <xref:System.DateTime>. Tipos personalizados também devem fornecer sua própria implementação de <xref:System.IComparable%601> para habilitar instâncias de objeto a ser ordenados ou classificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra a implementação de <xref:System.IComparable%601> para um simples `Temperature` objeto. O exemplo cria um <xref:System.Collections.Generic.SortedList%602> coleção de cadeias de caracteres com `Temperature` chaves de objeto e, em seguida, adiciona vários pares de temperaturas e cadeias de caracteres para a lista fora de sequência. Na chamada para o <xref:System.Collections.Generic.SortedList%602.Add%2A> método, o <xref:System.Collections.Generic.SortedList%602> coleção usa a <xref:System.IComparable%601> implementação para classificar as entradas da lista, que são exibidas em ordem crescente de temperatura.  
+  
+ [!code-cpp[IComparable\`1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/IComparable`1 Example/CPP/source.cpp#1)]
+ [!code-csharp[IComparable\`1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/IComparable`1 Example/CS/source.cs#1)]
+ [!code-vb[IComparable\`1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IComparable`1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Substitua o parâmetro de tipo de <see cref="T:System.IComparable`1" /> interface com o tipo que implementa essa interface.  
+  
+ Se você implementar <see cref="T:System.IComparable`1" />, você deve sobrecarregar o <see langword="op_GreaterThan" />, <see langword="op_GreaterThanOrEqual" />, <see langword="op_LessThan" />, e <see langword="op_LessThanOrEqual" /> operadores para retornar valores que são consistentes com <see cref="M:System.IComparable`1.CompareTo(`0)" />. Além disso, você também deve implementar <see cref="T:System.IEquatable`1" />. Consulte o <see cref="T:System.IEquatable`1" /> artigo para obter informações completas.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (T other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(!T other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IComparable`1.CompareTo(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um objeto a ser comparado com essa instância.</param>
+        <summary>Compara a instância atual com outro objeto do mesmo tipo e retorna um inteiro que indica se a instância atual precede, segue ou ocorre na mesma posição da ordem de classificação do outro objeto.</summary>
+        <returns>Um valor que indica a ordem relativa dos objetos que estão sendo comparados. O valor retornado tem estes significados:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Significado  
+  
+ </description></listheader><item><term>Menor que zero  
+  
+ </term><description>Essa instância precede <paramref name="other" /> na ordem de classificação.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Esta instância ocorre na mesma posição na ordem de classificação como <paramref name="other" />.  
+  
+ </description></item><item><term>Maior que zero  
+  
+ </term><description>Essa instância segue <paramref name="other" /> na ordem de classificação.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IComparable%601.CompareTo%2A>Fornece um método de comparação com rigidez de tipos para ordenar os membros de um objeto de coleção genérica. Por isso, ele geralmente não é chamado diretamente no código do desenvolvedor. Em vez disso, ele é chamado automaticamente pelos métodos como <xref:System.Collections.Generic.List%601.Sort?displayProperty=nameWithType> e <xref:System.Collections.Generic.SortedList%602.Add%2A>.  
+  
+ Esse método é apenas uma definição e deve ser implementado por um tipo específico de classe ou o valor tenha efeito. O significado das comparações a especificados nos valores de retorno seção ("precede", "ocorre na mesma posição como" e "segue) depende da implementação específica.  
+  
+ Por definição, qualquer objeto compara maior `null`, e duas referências nulas comparam como iguais entre si.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra a implementação de <xref:System.IComparable> para um simples `Temperature` objeto. O exemplo cria um <xref:System.Collections.Generic.SortedList%602> coleção de cadeias de caracteres com `Temperature` chaves de objeto e, em seguida, adiciona vários pares de temperaturas e cadeias de caracteres para a lista fora de sequência. Na chamada para o <xref:System.Collections.Generic.SortedList%602.Add%2A> método, o <xref:System.Collections.Generic.SortedList%602> coleção usa a <xref:System.IComparable%601> implementação para classificar as entradas da lista, que são exibidas em ordem crescente de temperatura.  
+  
+ [!code-cpp[IComparable\`1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/IComparable`1 Example/CPP/source.cpp#1)]
+ [!code-csharp[IComparable\`1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/IComparable`1 Example/CS/source.cs#1)]
+ [!code-vb[IComparable\`1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IComparable`1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para objetos A, B e C, a seguir deve ser verdadeiras:  
+  
+ <c>A.CompareTo(A)</c> é necessário para retornar zero.  
+  
+ Se <c>A.CompareTo(B)</c> retorna zero, em seguida, <c>B.CompareTo(A)</c> é necessário para retornar zero.  
+  
+ Se <c>A.CompareTo(B)</c> retorna zero e <c>B.CompareTo(C)</c> retorna zero, em seguida, <c>A.CompareTo(C)</c> é necessário para retornar zero.  
+  
+ Se <c>A.CompareTo(B)</c> retorna um valor diferente de zero, em seguida, <c>B.CompareTo(A)</c> é necessário para retornar um valor do sinal de oposta.  
+  
+ Se <c>A.CompareTo(B)</c> retorna um valor <paramref name="x" /> que não é igual a zero, e <c>B.CompareTo(C)</c> retorna um valor <paramref name="y" /> do mesmo sinal <paramref name="x" />, em seguida, <c>A. CompareTo(C)</c> é necessário para retornar um valor do mesmo sinal <paramref name="x" /> e <paramref name="y" />.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Use o <see cref="M:System.IComparable`1.CompareTo(`0)" /> método para determinar a ordem das instâncias de uma classe.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

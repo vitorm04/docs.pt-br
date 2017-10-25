@@ -1,0 +1,111 @@
+<Type Name="FigureUnitType" FullName="System.Windows.FigureUnitType">
+  <TypeSignature Language="C#" Value="public enum FigureUnitType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FigureUnitType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FigureUnitType" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o tipo de unidade associado a largura ou altura de um <see cref="T:System.Windows.FigureLength" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, quando o usuário clica no <xref:System.Windows.Documents.Figure>, o <xref:System.Windows.Documents.Figure.Width%2A> do <xref:System.Windows.Documents.Figure> diminui. Abaixo está o XAML para o exemplo.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#FigureLengthExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml#figurelengthexamplewholepage)]  
+  
+ Abaixo está o código usado para diminuir o <xref:System.Windows.Documents.Figure.Width%2A> do <xref:System.Windows.Documents.Figure> usando o Pixel para especificar o tipo de unidade.  
+  
+ [!code-csharp[FlowMiscSnippets_snip#FigureLengthCodeBehindExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml.cs#figurelengthcodebehindexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FigureUnitType Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FigureUnitType.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FigureUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor padrão quando o <see cref="T:System.Windows.FigureLength" /> não for especificado que cria um valor para a largura ou altura do <see cref="T:System.Windows.Documents.Figure" /> calculado sem restrições. **Observação:** quando <see cref="T:System.Windows.FigureUnitType" /> é definido como <see cref="F:System.Windows.FigureUnitType.Auto" />, o <see cref="P:System.Windows.FigureLength.Value" /> propriedade <see cref="T:System.Windows.FigureLength" /> é definido como <c>1</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="Column" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FigureUnitType Column = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FigureUnitType.Column" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FigureUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor da largura ou altura do <see cref="T:System.Windows.Documents.Figure" /> é expresso como uma fração (incluindo frações maior e 1) da largura da coluna a <see cref="T:System.Windows.Documents.Figure" /> está em.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="Content" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FigureUnitType Content = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FigureUnitType.Content" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FigureUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor da largura ou altura do <see cref="T:System.Windows.Documents.Figure" /> é expresso como uma fração (incluindo frações maior e 1) da largura do conteúdo a <see cref="T:System.Windows.Documents.Figure" />. Observação: **Observação:** quando <see cref="T:System.Windows.FigureUnitType" /> é definido como <see cref="F:System.Windows.FigureUnitType.Content" />, o <see cref="P:System.Windows.FigureLength.Value" /> propriedade <see cref="T:System.Windows.FigureLength" /> deve ser definido como um valor entre <c>0</c> e <c>1</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="Page" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FigureUnitType Page = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FigureUnitType.Page" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FigureUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor da largura ou altura do <see cref="T:System.Windows.Documents.Figure" /> é expresso como uma fração (incluindo frações maior e 1) da largura da página do que o <see cref="T:System.Windows.Documents.Figure" /> está em. Observação: **Observação:** quando <see cref="T:System.Windows.FigureUnitType" /> é definido como <see cref="F:System.Windows.FigureUnitType.Page" />, o <see cref="P:System.Windows.FigureLength.Value" /> propriedade <see cref="T:System.Windows.FigureLength" /> deve ser definido como um valor entre <c>0</c> e <c>1</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixel">
+      <MemberSignature Language="C#" Value="Pixel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FigureUnitType Pixel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FigureUnitType.Pixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FigureUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor da largura ou altura do <see cref="T:System.Windows.Documents.Figure" /> é expresso em pixels a (96 pixels por polegada).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

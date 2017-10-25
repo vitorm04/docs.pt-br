@@ -1,0 +1,3034 @@
+<Type Name="Login" FullName="System.Web.UI.WebControls.Login">
+  <TypeSignature Language="C#" Value="public class Login : System.Web.UI.WebControls.CompositeControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Login extends System.Web.UI.WebControls.CompositeControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Login" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CompositeControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Authenticate")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LoginDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece os elementos da interface do usuário para logon em um site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Modelos e estilos](#styles_and_templates)  
+  
+-   [Agrupamentos de validação](#validation_groupings)  
+  
+-   [Acessibilidade](#accessibility)  
+  
+-   [Aplicando estilos CSS](#applying_styles)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.Login> controle é um controle composto que fornece todos os elementos de interface de usuário comuns necessários para autenticar um usuário em um site da Web. Três elementos a seguir são necessários para todos os cenários de logon:  
+  
+-   Um nome de usuário exclusivo para identificar o usuário.  
+  
+-   Uma senha para verificar a identidade do usuário.  
+  
+-   Um botão de login para enviar as informações de logon para o servidor.  
+  
+ O <xref:System.Web.UI.WebControls.Login> controle também fornece os seguintes elementos de interface de usuário opcionais que dão suporte a funções adicionais:  
+  
+-   Um link para um lembrete da senha.  
+  
+-   Lembrar-Me marca de verificação para manter as informações de logon entre sessões.  
+  
+-   Um link de ajuda para os usuários que estão com problemas de logon.  
+  
+-   Um link de registrar o novo usuário que redireciona os usuários para uma página de registro.  
+  
+-   Texto de instrução que aparece no formulário de logon.  
+  
+-   Texto de erro personalizado que é exibido quando o usuário clica no botão logon sem preencher os campos de nome ou a senha do usuário.  
+  
+-   Texto de erro personalizado que será exibido se o logon falhar.  
+  
+-   Uma ação personalizada que ocorre quando o logon for bem-sucedido.  
+  
+-   Uma maneira para ocultar o controle de logon se o usuário já está conectado ao site.  
+  
+ Para uma tabela que mostra quais controles são necessários e opcionais, consulte <xref:System.Web.UI.WebControls.Login.LayoutTemplate%2A> propriedade.  
+  
+> [!NOTE]
+>  Se você não estiver familiarizado com o conjunto de controles de logon disponíveis no ASP.NET, consulte [visão geral dos controles de logon ASP.NET](http://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d) antes de continuar. Para obter uma lista de outros tópicos relacionados a controles de logon e associação, consulte [Gerenciando usuários com o uso de associações](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+> [!IMPORTANT]
+>  Aceitar entrada do usuário é uma possível ameaça à segurança. Usuários mal-intencionados podem enviar dados que são destinados para expor vulnerabilidades ou executar programas que tentam senhas geradas. Para melhorar a segurança ao trabalhar com a entrada do usuário, você deve usar os recursos de validação de seu controle e proteger qualquer provedor de dados que está configurados para o seu controle. Para obter mais informações, consulte [protegendo controles de logon](http://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c), [recomendações de segurança para aplicativos Web](http://msdn.microsoft.com/library/3eeeee9e-b09f-4c7f-8ce5-d9ca1f9322ad), e [protegendo associação](http://msdn.microsoft.com/library/2dab2012-c278-426a-bb0d-93b260c428a7).  
+  
+ O <xref:System.Web.UI.WebControls.Login> controle usa um provedor de associação para obter as credenciais do usuário. A menos que você especifique o contrário, o <xref:System.Web.UI.WebControls.Login> controle usa o provedor de associação padrão definido no arquivo Web. config. Para especificar um provedor diferente, defina o <xref:System.Web.UI.WebControls.Login.MembershipProvider%2A> propriedade para um dos nomes de provedor de associação definida no arquivo Web. config de seu aplicativo. Para obter mais informações, consulte [provedores de associação](http://msdn.microsoft.com/library/d2c90ff6-aa86-4001-b2c5-e5c99cb7f68f).  
+  
+ Se você quiser usar um serviço de autenticação personalizada, você pode usar o <xref:System.Web.UI.WebControls.Login.OnAuthenticate%2A> método para chamar o serviço.  
+  
+<a name="styles_and_templates"></a>   
+## <a name="styles-and-templates"></a>Estilos e modelos   
+ A aparência do <xref:System.Web.UI.WebControls.Login> controle é totalmente personalizável através de modelos e as configurações de estilo. Também podem ser personalizadas por meio das propriedades de todas as mensagens de texto de interface do usuário a <xref:System.Web.UI.WebControls.Login> classe. O texto de interface padrão está localizado automaticamente com base na configuração de localidade no servidor.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login> controle é personalizado com modelos, em seguida, o <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> propriedade e o <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> são ignoradas. Nesse caso, defina o <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> propriedade e o <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> propriedade de cada modelo filho controle diretamente.  
+  
+ <xref:System.Web.UI.WebControls.Login>controlar propriedades representadas por caixas de texto, como <xref:System.Web.UI.WebControls.Login.UserName%2A> e <xref:System.Web.UI.WebControls.Login.Password%2A>, são acessíveis durante todas as fases do ciclo de vida da página. O controle assumirão a todas as alterações feitas pelo usuário final por meio do <xref:System.Web.UI.WebControls.TextBox.TextChanged> evento disparado por caixas de texto.  
+  
+> [!NOTE]
+>  Se você inserir o <xref:System.Web.UI.WebControls.Login> controlar um <xref:System.Web.UI.WebControls.WizardStep> do objeto, defina explicitamente o <xref:System.Web.UI.WebControls.Wizard.ActiveStepIndex%2A> propriedade em um `Page_Load` manipulador de eventos se o usuário é autenticado. O <xref:System.Web.UI.WebControls.Wizard> controle não Avançar automaticamente para o próximo <xref:System.Web.UI.WebControls.WizardStep> objeto nesse cenário.  
+  
+ A seguinte tabela lista o <xref:System.Web.UI.WebControls.Login> controlar propriedades de estilo e explica qual elemento de interface do usuário afeta cada propriedade de estilo. Para obter uma lista de quais propriedades de cada estilo se aplica, consulte a documentação para as propriedades de estilo individuais.  
+  
+|Propriedade de estilo|Elemento de interface do usuário afetado|  
+|--------------------|-------------------------|  
+|<xref:System.Web.UI.WebControls.Login.BorderPadding%2A>|O espaço entre o conteúdo de controle e a borda do controle.|  
+|<xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A>|Lembrar na caixa de seleção.|  
+|<xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A>|Texto de falha de logon.|  
+|<xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A>|Texto das instruções na página que informa aos usuários como usar o controle.|  
+|<xref:System.Web.UI.WebControls.Login.LabelStyle%2A>|Rótulos de entrada de todos os campos, como caixas de texto.|  
+|<xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A>|Campos de entrada de entrada de texto.|  
+|<xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A>|Texto do título.|  
+|<xref:System.Web.UI.WebControls.Login.ValidatorTextStyle%2A>|Texto exibido para o usuário quando uma tentativa de logon não for bem-sucedida devido a erros de validação.|  
+|<xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A>|Links para outras páginas.|  
+|<xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A>|Botão de logon.|  
+  
+<a name="validation_groupings"></a>   
+## <a name="validation-groupings"></a>Agrupamentos de validação  
+ O <xref:System.Web.UI.WebControls.Login.UserName%2A> e <xref:System.Web.UI.WebControls.Login.Password%2A> propriedades têm <xref:System.Web.UI.WebControls.RequiredFieldValidator> controles associados a eles para impedir que os usuários enviar a página sem fornecer as informações necessárias.  
+  
+ O <xref:System.Web.UI.WebControls.Login> controle usa um grupo de validação de forma que outros campos na mesma página como o <xref:System.Web.UI.WebControls.Login> controle pode ser validado separadamente. Por padrão, o <xref:System.Web.UI.Control.ID%2A> propriedade o <xref:System.Web.UI.WebControls.Login> controle é usado como o nome do grupo de validação. Por exemplo, um <xref:System.Web.UI.WebControls.Login> controle com a ID "Login1" irá usar um nome de grupo de validação de "Login1". Se você deseja definir a validação de grupo que o <xref:System.Web.UI.WebControls.Login> controle faz parte do, é necessário o controle de modelo e alterar o nome do grupo de validação.  
+  
+<a name="applying_styles"></a>   
+## <a name="applying-css-styles"></a>Aplicando estilos CSS  
+ O <xref:System.Web.UI.WebControls.Login> controle permite que você especifique regras de estilo CSS na marcação. Se você usar modelos para personalizar a aparência do <xref:System.Web.UI.WebControls.Login> controle, você pode especificar a marcação nos modelos de estilos CSS. Nesse caso, nenhuma tabela externa adicional é necessária. Você pode impedir que a tabela está sendo processado, definindo o <xref:System.Web.UI.WebControls.Login.RenderOuterTable%2A> propriedade `false`.  
+  
+<a name="accessibility"></a>   
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar este controle para que ele gera marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:Login  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderPadding="integer"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CreateUserIconUrl="uri"  
+    CreateUserText="string"  
+    CreateUserUrl="uri"  
+    CssClass="string"  
+    DestinationPageUrl="uri"  
+    DisplayRememberMe="True|False"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    FailureAction="Refresh|RedirectToLoginPage"  
+    FailureText="string"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+               Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    HelpPageIconUrl="uri"  
+    HelpPageText="string"  
+    HelpPageUrl="uri"  
+    ID="string"  
+    InstructionText="string"  
+    LoginButtonImageUrl="uri"  
+    LoginButtonText="string"  
+    LoginButtonType="Button|Image|Link"  
+    MembershipProvider="string"  
+    OnAuthenticate="Authenticate event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnLoggedIn="LoggedIn event handler"  
+    OnLoggingIn="LoggingIn event handler"  
+    OnLoginError="LoginError event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    Orientation="Horizontal|Vertical"  
+    PasswordLabelText="string"  
+    PasswordRecoveryIconUrl="uri"  
+    PasswordRecoveryText="string"  
+    PasswordRecoveryUrl="uri"  
+    PasswordRequiredErrorMessage="string"  
+    RememberMeSet="True|False"  
+    RememberMeText="string"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    TextLayout="TextOnLeft|TextOnTop"  
+    TitleText="string"  
+    ToolTip="string"  
+    UserName="string"  
+    UserNameLabelText="string"  
+    UserNameRequiredErrorMessage="string"  
+    Visible="True|False"  
+    VisibleWhenLoggedIn="True|False"  
+    Width="size"  
+>  
+        <CheckBoxStyle />  
+        <FailureTextStyle />  
+        <HyperLinkStyle />  
+        <InstructionTextStyle />  
+        <LabelStyle />  
+        <LayoutTemplate>  
+            <!-- child controls -->  
+        </LayoutTemplate>  
+        <LoginButtonStyle />  
+        <TextBoxStyle />  
+        <TitleTextStyle />  
+        <ValidatorTextStyle />  
+</asp:Login>  
+```  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Web.UI.WebControls.Login> controle para fornecer uma interface de usuário para fazer logon em um site da Web.  
+  
+ [!code-aspx-csharp[LoginClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginClass/CS/loginclasscs.aspx#1)]
+ [!code-aspx-vb[LoginClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginClass/VB/loginclassvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como você pode estender o <xref:System.Web.UI.WebControls.Login> controle. O `CustomLogin` controle inclui um <xref:System.Web.UI.WebControls.DropDownList> que permite aos usuários escolher o provedor de associação são autenticadas com. (Esses provedores são configurados no Web. config). No <xref:System.Web.UI.WebControls.Login.OnLoggingIn%2A> método, o <xref:System.Web.UI.WebControls.Login.MembershipProvider%2A> propriedade é definida como o valor selecionado de <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[Samples.AspNet.Controls.CustomLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Controls.CustomLogin/CS/FarmasLogin.cs#1)]
+ [!code-vb[Samples.AspNet.Controls.CustomLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Controls.CustomLogin/VB/FarmasLogin.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Login ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do controle <see cref="T:System.Web.UI.WebControls.Login" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login> construtor cria uma nova instância do <xref:System.Web.UI.WebControls.Login> controle que pode ser inserido por meio de programação em uma página da Web.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma nova instância da <xref:System.Web.UI.WebControls.Login>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.Login.RememberMeSet%2A>|`true`|  
+|<xref:System.Web.UI.WebControls.Login.VisibleWhenLoggedIn%2A>|`true`|  
+|<xref:System.Web.UI.WebControls.Login.FailureAction%2A>|`true`|  
+|<xref:System.Web.UI.WebControls.Login.FailureText%2A>|"Tentativa de logon falhou. Tente novamente."|  
+|<xref:System.Web.UI.WebControls.Login.MembershipProvider%2A>|"Padrão"|  
+|<xref:System.Web.UI.WebControls.Login.Orientation%2A>|<xref:System.Web.UI.WebControls.Orientation.Vertical>|  
+|<xref:System.Web.UI.WebControls.Login.PasswordLabelText%2A>|"Senha:"|  
+|<xref:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage%2A>|"Senha".|  
+|<xref:System.Web.UI.WebControls.Login.RememberMeSet%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.Login.RememberMeText%2A>|"Lembrar na próxima vez."|  
+|<xref:System.Web.UI.WebControls.Login.LoginButtonText%2A>|"Logon"|  
+|<xref:System.Web.UI.WebControls.Login.TextLayout%2A>|<xref:System.Web.UI.WebControls.LoginTextLayout.TextOnLeft>|  
+|<xref:System.Web.UI.WebControls.Login.TitleText%2A>|"Logon"|  
+|<xref:System.Web.UI.WebControls.Login.UserNameLabelText%2A>|"Nome de usuário:"|  
+|<xref:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage%2A>|"Nome de usuário".|  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.%23ctor%2A> construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.Login> controlar e adicione essa instância para o <xref:System.Web.UI.Control.Controls%2A> coleção de um <xref:System.Web.UI.WebControls.PlaceHolder> controle.  
+  
+ [!code-aspx-csharp[LoginLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLogin/CS/loginlogincs.aspx#1)]
+ [!code-aspx-vb[LoginLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLogin/VB/loginloginvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.AuthenticateEventHandler Authenticate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.AuthenticateEventHandler Authenticate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Login.Authenticate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.AuthenticateEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário é autenticado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.Authenticate> é gerado quando um usuário utiliza o <xref:System.Web.UI.WebControls.Login> controle para fazer logon em um site da Web. Esquemas de autenticação personalizados podem usar o <xref:System.Web.UI.WebControls.Login.Authenticate> evento para autenticar usuários.  
+  
+> [!NOTE]
+>  Quando um usuário utiliza o <xref:System.Web.UI.WebControls.Login> controle para fazer logon um site da Web, todos os dados no estado de exibição e todos os dados de postagem é perdida. Não executar ações no <xref:System.Web.UI.WebControls.Login.Authenticate> evento que contam com o estado de exibição.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.Authenticate> evento para chamar o código de autenticação personalizada específica do site.  
+  
+ [!code-aspx-csharp[LoginAuthenticate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginAuthenticate/CS/loginauthenticatecs.aspx#1)]
+ [!code-aspx-vb[LoginAuthenticate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginAuthenticate/VB/loginauthenticatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esquemas de autenticação personalizado devem definir o <see cref="P:System.Web.UI.WebControls.AuthenticateEventArgs.Authenticated" /> propriedade <see langword="true" /> para indicar que um usuário foi autenticado.  
+  
+ Quando um usuário envia suas informações de logon, o <see cref="T:System.Web.UI.WebControls.Login" /> controlar primeiro gera o <see cref="E:System.Web.UI.WebControls.Login.LoggingIn" /> evento, o <see cref="E:System.Web.UI.WebControls.Login.Authenticate" /> evento e, finalmente, o <see cref="E:System.Web.UI.WebControls.Login.LoggedIn" /> evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderPadding">
+      <MemberSignature Language="C#" Value="public virtual int BorderPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.BorderPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de preenchimento dentro das bordas do <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>A quantidade de espaço (em pixels) entre o conteúdo de um <see cref="T:System.Web.UI.WebControls.Login" /> controle e o <see cref="T:System.Web.UI.WebControls.Login" /> borda do controle. O valor padrão é <see langword="1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Web.UI.WebControls.Login.BorderPadding%2A> propriedade é armazenada em um estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Web.UI.WebControls.Login.BorderPadding" /> é definida com um valor menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckBoxStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle CheckBoxStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle CheckBoxStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.CheckBoxStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um <see cref="T:System.Web.UI.WebControls.Style" /> objeto que define as configurações para lembrar-Me a caixa de seleção.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.Style" /> que define as configurações de estilo para o <see cref="T:System.Web.UI.WebControls.Login" /> controle lembrar na caixa de seleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> propriedade obtém uma referência a um <xref:System.Web.UI.WebControls.Style> do objeto que você use para alterar a aparência do <xref:System.Web.UI.WebControls.Login> controle lembrar na caixa de seleção.  
+  
+ Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.Style> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.Style> classe (por exemplo, `CheckBoxStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `CheckBoxStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> propriedade define a aparência do <xref:System.Web.UI.WebControls.Login.RememberMeText%2A> propriedade.  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo do controle são substituídas pela <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define a cor do texto de lembrar-Me verificar caixa para azul e o estilo de fonte em itálico, definindo propriedades do <xref:System.Web.UI.WebControls.Style> objeto referenciado pelo <xref:System.Web.UI.WebControls.Login.CheckBoxStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginCheckBoxStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginCheckBoxStyle/CS/logincheckboxstylecs.aspx#1)]
+ [!code-aspx-vb[LoginCheckBoxStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginCheckBoxStyle/VB/logincheckboxstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria os controles individuais que compõem o <see cref="T:System.Web.UI.WebControls.Login" /> manipuladores de eventos de controle e associa com seus eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.CreateChildControls%2A> método cria instâncias dos controles que compõem o <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserIconUrl">
+      <MemberSignature Language="C#" Value="public virtual string CreateUserIconUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreateUserIconUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.CreateUserIconUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local de uma imagem a ser exibida ao lado do link para uma página de registro para novos usuários.</summary>
+        <value>A URL da imagem para exibir. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserText">
+      <MemberSignature Language="C#" Value="public virtual string CreateUserText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreateUserText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.CreateUserText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de um link para uma página de registro para novos usuários.</summary>
+        <value>O texto do link para a página de registro do novo usuário. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.CreateUserText%2A> propriedade contém o texto de um link para a página de registro para o site. A URL da página de registro é especificada no <xref:System.Web.UI.WebControls.Login.CreateUserUrl%2A> propriedade.  
+  
+ Se <xref:System.Web.UI.WebControls.Login.CreateUserUrl%2A> está vazia, o texto do <xref:System.Web.UI.WebControls.Login.CreateUserText%2A> propriedade será exibida para o usuário, mas não está formatada como um link.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.CreateUserText%2A> propriedade estiver vazia, um link para a página de registro não está disponível para o usuário.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.CreateUserText%2A> propriedade como "Registrar novo usuário..."  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginCreateUserText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginCreateUserText/CS/logincreateusertextcs.aspx#1)]
+ [!code-aspx-vb[LoginCreateUserText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginCreateUserText/VB/logincreateusertextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserUrl">
+      <MemberSignature Language="C#" Value="public virtual string CreateUserUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreateUserUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.CreateUserUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página de registro do novo usuário.</summary>
+        <value>A URL da página de registro do novo usuário. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.CreateUserUrl%2A> propriedade contém a URL da página de registro de novo usuário para o site da Web. O <xref:System.Web.UI.WebControls.Login.CreateUserText%2A> propriedade contém o texto usado para o link.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.CreateUserText%2A> propriedade estiver vazia, o link para a página de registro não está disponível para o usuário.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.CreateUserUrl%2A> propriedade como "Register".  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginCreateUserText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginCreateUserText/CS/logincreateusertextcs.aspx#1)]
+ [!code-aspx-vb[LoginCreateUserText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginCreateUserText/VB/logincreateusertextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationPageUrl">
+      <MemberSignature Language="C#" Value="public virtual string DestinationPageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DestinationPageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.DestinationPageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página exibida ao usuário quando uma tentativa de logon é bem-sucedida.</summary>
+        <value>A URL da página para a qual o usuário é redirecionado quando uma tentativa de logon é bem-sucedida. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.DestinationPageUrl%2A> propriedade especifica a página que é exibida quando uma tentativa de logon é bem-sucedida.  
+  
+ O comportamento padrão da <xref:System.Web.UI.WebControls.Login> é retornar o usuário para a página de referência, ou para a página definido no controle de `defaultUrl` atributo do elemento no arquivo Web. config.  
+  
+ O <xref:System.Web.UI.WebControls.Login.DestinationPageUrl%2A> propriedade substitui o comportamento padrão da <xref:System.Web.UI.WebControls.Login> controle, bem como a `defaultUrl` configuração feita no arquivo de configuração.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.DestinationPageUrl%2A> propriedade. O método Page_Load é usado para anexar a URL da página de referência para a URL da página de destino para que a página de destino pode retornar o usuário para a página original, se desejado.  
+  
+ [!code-aspx-csharp[LoginDestinationPageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginDestinationPageUrl/CS/logindestinationpageurlcs.aspx#1)]
+ [!code-aspx-vb[LoginDestinationPageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginDestinationPageUrl/VB/logindestinationpageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayRememberMe">
+      <MemberSignature Language="C#" Value="public virtual bool DisplayRememberMe { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayRememberMe" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.DisplayRememberMe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve exibir uma caixa de seleção para habilitar o usuário para controlar se um cookie persistente é enviado para seu navegador.</summary>
+        <value>
+          <see langword="true" /> para exibir a caixa de seleção; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> está definida como `true`, o texto contido no <xref:System.Web.UI.WebControls.Login.RememberMeText%2A> propriedade é exibida na página, junto com um lembrar-Me a caixa de seleção. Quando o usuário seleciona a lembrar-Me a caixa de seleção, o cookie de autenticação enviado ao seu computador persistir para que o usuário é autenticado automaticamente em futuras visitas ao site. O valor de <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> propriedade é definida pela seleção no lembrar-Me a caixa de seleção.  
+  
+ Se <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> é `false`, um lembrar-Me a caixa de seleção não é exibido na página e o usuário não tem como controlar se o cookie de autenticação persiste ou não. Você ainda pode definir o <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> propriedade `true` para enviar um cookie de autenticação persistente para o navegador do usuário sem exibir a caixa de seleção.  
+  
+> [!NOTE]
+>  Há riscos de segurança inerentes à definição de um cookie de autenticação persistente no navegador do usuário. Você deve determinar se esses riscos de segurança são aceitáveis para seu site. Se você definir o <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> propriedade `true` e <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> propriedade `false`, os usuários que visitam seu site público de navegadores, como na Internet cafés, por exemplo, poderá acidentalmente deixar cookies de autenticação persistentes por trás e o próximo usuário do navegador será capaz de acessar o site usando as credenciais do usuário anterior.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir desabilita a lembrar-Me a caixa de seleção, definindo a <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> propriedade `false`.  
+  
+ [!code-aspx-csharp[LoginEnableRememberMe#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginEnableRememberMe/CS/loginenableremembermecs.aspx#1)]
+ [!code-aspx-vb[LoginEnableRememberMe#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginEnableRememberMe/VB/loginenableremembermevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureAction">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.LoginFailureAction FailureAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.LoginFailureAction FailureAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.FailureAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LoginFailureAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ação que ocorre quando uma tentativa de logon falhar.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.LoginFailureAction" />. O padrão é <see cref="F:System.Web.UI.WebControls.LoginFailureAction.Refresh" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.FailureAction%2A> propriedade define o comportamento do <xref:System.Web.UI.WebControls.Login> controlar quando o usuário não com êxito logon no site da Web.  
+  
+ O comportamento padrão recarrega a página e exibe o conteúdo do <xref:System.Web.UI.WebControls.Login.FailureText%2A> propriedade para alertar o usuário que a tentativa de logon falha.  
+  
+ Quando <xref:System.Web.UI.WebControls.Login.FailureAction%2A> é definido como <xref:System.Web.UI.WebControls.LoginFailureAction.RedirectToLoginPage>, o usuário é redirecionado para a página de logon definida no arquivo Web. config.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir o <xref:System.Web.UI.WebControls.Login.FailureAction%2A> propriedade declarativamente e no código.  
+  
+ [!code-aspx-csharp[LoginLoginFailureAction#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLoginFailureAction/CS/loginloginfailureactioncs.aspx#1)]
+ [!code-aspx-vb[LoginLoginFailureAction#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLoginFailureAction/VB/loginloginfailureactionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado não é um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.LoginFailureAction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureText">
+      <MemberSignature Language="C#" Value="public virtual string FailureText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FailureText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.FailureText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido quando uma tentativa de logon falha.</summary>
+        <value>O texto a ser exibido para o usuário quando uma tentativa de logon falha. O padrão é "tentativa de logon falhou. Tente novamente."</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.FailureText%2A> propriedade especifica a cadeia de caracteres que é exibida quando uma tentativa de logon falhar.  
+  
+ Se você definir um modelo para o <xref:System.Web.UI.WebControls.Login> controle, você pode indicar onde no modelo para exibir o <xref:System.Web.UI.WebControls.Login.FailureText%2A> propriedade usando um <xref:System.Web.UI.WebControls.Literal> controle e dando que controlam a ID "FailureText". Quando você usa um modelo, o <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> propriedade não é aplicada ao texto especificado no <xref:System.Web.UI.WebControls.Login.FailureText%2A> propriedade.  
+  
+ O texto padrão para a propriedade é localizado com base na localidade atual do servidor.  
+  
+> [!NOTE]
+>  Por motivos de segurança, o texto de falha de logon não deve incluir uma razão específica para a falha. Por exemplo, uma mensagem de erro como "senha não é válida para o usuário \<nome de usuário >" revela a um potencial invasor que \<nome de usuário > é um usuário no sistema. Para obter mais informações, consulte [como: exibir mensagens de erro de segurança](http://msdn.microsoft.com/library/6f70ac33-6e11-4e98-ab7d-bae9c0e7eefa).  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.FailureText%2A> propriedade como "Ocorreu um erro ao fazer logon. Tente novamente. ".  
+  
+ [!code-aspx-csharp[LoginLoginFailureText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLoginFailureText/CS/loginloginfailuretextcs.aspx#1)]
+ [!code-aspx-vb[LoginLoginFailureText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLoginFailureText/VB/loginloginfailuretextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureTextStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle FailureTextStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle FailureTextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.FailureTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a uma coleção de propriedades que definem a aparência do texto de erro no controle <see cref="T:System.Web.UI.WebControls.Login" />.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que contém propriedades que definem a aparência do texto de erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> propriedade obtém uma referência a um <xref:System.Web.UI.WebControls.TableItemStyle> do objeto que você use para alterar a aparência do texto de falha de logon. O padrão é exibir o texto em vermelho.  
+  
+ Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.TableItemStyle> classe (por exemplo, `FailureTextStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `FailureTextStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> propriedade define a aparência do <xref:System.Web.UI.WebControls.Login.FailureText%2A> propriedade.  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo do controle são substituídas pela <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir especifica o estilo de texto de falha de logon, definindo o plano de fundo e texto propriedades de cor de <xref:System.Web.UI.WebControls.TableItemStyle> objeto mencionado no <xref:System.Web.UI.WebControls.Login.FailureTextStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginLoginFailureText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLoginFailureText/CS/loginloginfailuretextcs.aspx#1)]
+ [!code-aspx-vb[LoginLoginFailureText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLoginFailureText/VB/loginloginfailuretextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPageIconUrl">
+      <MemberSignature Language="C#" Value="public virtual string HelpPageIconUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpPageIconUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.HelpPageIconUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local de uma imagem a ser exibida ao lado do link para a página de Ajuda de logon.</summary>
+        <value>A URL da imagem para exibir. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPageText">
+      <MemberSignature Language="C#" Value="public virtual string HelpPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.HelpPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de um link para a página de ajuda de logon.</summary>
+        <value>O texto do link para a página de ajuda de logon. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade contém o texto do link para a página de ajuda de logon para o site. A URL da página de ajuda de logon especificada no <xref:System.Web.UI.WebControls.Login.HelpPageUrl%2A> propriedade.  
+  
+ Se <xref:System.Web.UI.WebControls.Login.HelpPageUrl%2A> está vazia, o texto de <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade é exibida ao usuário na página, mas não está formatada como um link.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade estiver vazia, o link para a página de ajuda de logon não está disponível para o usuário.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade para especificar o texto de um link para a página de ajuda de logon do site.  
+  
+ [!code-aspx-csharp[LoginHelpPageText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginHelpPageText/CS/loginhelppagetextcs.aspx#1)]
+ [!code-aspx-vb[LoginHelpPageText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginHelpPageText/VB/loginhelppagetextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPageUrl">
+      <MemberSignature Language="C#" Value="public virtual string HelpPageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpPageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.HelpPageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página de ajuda de logon.</summary>
+        <value>A URL da página de ajuda de logon. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.HelpPageUrl%2A> propriedade contém a URL da página de ajuda de logon para o site da Web. O <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade contém o texto usado para o link.  
+  
+ Se <xref:System.Web.UI.WebControls.Login.HelpPageUrl%2A> está vazia, texto de <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade será exibida para o usuário, mas não está formatada como um link.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.HelpPageText%2A> propriedade estiver vazia, o link para a página de ajuda de logon não está disponível para o usuário.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.HelpPageUrl%2A> propriedade para especificar a URL da página de ajuda de logon do site.  
+  
+ [!code-aspx-csharp[LoginHelpPageText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginHelpPageText/CS/loginhelppagetextcs.aspx#1)]
+ [!code-aspx-vb[LoginHelpPageText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginHelpPageText/VB/loginhelppagetextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HyperLinkStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle HyperLinkStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle HyperLinkStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.HyperLinkStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a uma coleção de propriedades que definem a aparência de hiperlinks no <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que contém propriedades que definem a aparência dos hiperlinks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> propriedade define a aparência de hiperlinks no <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.TableItemStyle> classe (por exemplo, `HyperLinkStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `HyperLinkStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> propriedade define a aparência das seguintes propriedades:  
+  
+-   <xref:System.Web.UI.WebControls.Login.CreateUserText%2A>  
+  
+-   <xref:System.Web.UI.WebControls.Login.HelpPageText%2A>  
+  
+-   <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A>  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo são substituídas por <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define hiperlinks no <xref:System.Web.UI.WebControls.Login> verde texto em itálico, definindo propriedades do controle de <xref:System.Web.UI.WebControls.TableItemStyle> objeto referenciado pelo <xref:System.Web.UI.WebControls.Login.HyperLinkStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginHyperLinkStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginHyperLinkStyle/CS/loginhyperlinkstylecs.aspx#1)]
+ [!code-aspx-vb[LoginHyperLinkStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginHyperLinkStyle/VB/loginhyperlinkstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstructionText">
+      <MemberSignature Language="C#" Value="public virtual string InstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.InstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de instrução de logon do usuário.</summary>
+        <value>O texto de instrução de logon para exibir para o usuário. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.InstructionText%2A> propriedade contém instruções para os usuários fazer logon no site da Web. Esse texto é exibido o <xref:System.Web.UI.WebControls.Login> controle, o título.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.InstructionText%2A> está definida como <xref:System.String.Empty>, nenhum texto de instrução está disponível para o usuário.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.InstructionText%2A> propriedade para inserir o texto de instrução no <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ [!code-aspx-csharp[LoginInstructionText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginInstructionText/CS/logininstructiontextcs.aspx#1)]
+ [!code-aspx-vb[LoginInstructionText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginInstructionText/VB/logininstructiontextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstructionTextStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle InstructionTextStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle InstructionTextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.InstructionTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> objeto que define as configurações de texto de instrução de <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que contém as configurações de estilo do <see cref="T:System.Web.UI.WebControls.Login" /> o texto de instrução de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> propriedade define a aparência do texto de instrução no <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.TableItemStyle> classe (por exemplo, `InstructionTextStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `InstructionTextStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> propriedade define a aparência do <xref:System.Web.UI.WebControls.Login.InstructionText%2A> propriedade.  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo são substituídas por <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o texto de instrução e a cor de plano de fundo para o texto de instrução, definindo propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> objeto referenciado pelo <xref:System.Web.UI.WebControls.Login.InstructionTextStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginInstructionText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginInstructionText/CS/logininstructiontextcs.aspx#1)]
+ [!code-aspx-vb[LoginInstructionText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginInstructionText/VB/logininstructiontextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle LabelStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle LabelStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.LabelStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> objeto que define as configurações para <see cref="T:System.Web.UI.WebControls.Login" /> rótulos de controle.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que define as configurações de estilo do <see cref="T:System.Web.UI.WebControls.Login" /> rótulos de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> propriedade define a aparência dos rótulos de caixa de texto no <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.TableItemStyle> classe (por exemplo, `LabelStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `LableStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> propriedade define a aparência das seguintes propriedades:  
+  
+-   <xref:System.Web.UI.WebControls.Login.PasswordLabelText%2A>  
+  
+-   <xref:System.Web.UI.WebControls.Login.UserNameLabelText%2A>  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo são substituídas por <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o texto de rótulos de caixa azul texto em itálico, definindo propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> objeto referenciado pelo <xref:System.Web.UI.WebControls.Login.LabelStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginLabelStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLabelStyle/CS/loginlabelstylecs.aspx#1)]
+ [!code-aspx-vb[LoginLabelStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLabelStyle/VB/loginlabelstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate LayoutTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate LayoutTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.LayoutTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.Login))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo usado para exibir o controle <see cref="T:System.Web.UI.WebControls.Login" />.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que contém o modelo para exibir o controle <see cref="T:System.Web.UI.WebControls.Login" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LayoutTemplate%2A> propriedade contém o modelo que define como o <xref:System.Web.UI.WebControls.Login> controle é exibido para o usuário.  
+  
+ A tabela a seguir lista os controles necessários e opcionais usados em um <xref:System.Web.UI.WebControls.Login> modelo de controle.  
+  
+|Nome de identificação ou de comando|Tipo de controle|Obrigatórios/opcionais|  
+|------------------------|------------------|------------------------|  
+|`UserName`|Qualquer controle que implemente <xref:System.Web.UI.IEditableTextControl>, incluindo <xref:System.Web.UI.WebControls.TextBox>, ou um controle personalizado ou de terceiros.|Necessária|  
+|`Password`|Qualquer controle que implemente <xref:System.Web.UI.IEditableTextControl>, incluindo <xref:System.Web.UI.WebControls.TextBox>, ou um controle personalizado ou de terceiros.|Necessária|  
+|`RememberMe`|<xref:System.Web.UI.WebControls.CheckBox>|Opcional|  
+|`FailureText`|Qualquer controle que implemente <xref:System.Web.UI.ITextControl>.|Opcional|  
+|`Login`|Qualquer controle que faz com que o serviço de propagação de eventos.|Opcional|  
+  
+ O <xref:System.Web.UI.WebControls.Login> controlar lança um <xref:System.Web.HttpException> exceção se o modelo de layout não contém os controles necessários. Nenhuma exceção é lançada se você fornecer uma ID de controle opcional para um controle do tipo errado; No entanto, o controle é subsequentemente ignorado pelo <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O controle de logon pode ser qualquer controle que causa a propagação de eventos, como <xref:System.Web.UI.WebControls.Button>, <xref:System.Web.UI.WebControls.LinkButton>, ou <xref:System.Web.UI.WebControls.ImageButton>. Propriedade de nome de comando do controle deve ser definida como "Logon".  
+  
+ Quando um modelo é usado para o <xref:System.Web.UI.WebControls.Login> controlar, somente as propriedades a seguir afetam o comportamento do controle:  
+  
+-   Todas as propriedades herdadas de <xref:System.Web.UI.WebControls.WebControl>. (Para obter detalhes, consulte o <xref:System.Web.UI.WebControls.Login> tabela de membros do controle.)  
+  
+-   <xref:System.Web.UI.WebControls.Login.DestinationPageUrl%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.VisibleWhenLoggedIn%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.LayoutTemplate%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.FailureAction%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.MembershipProvider%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.Password%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A>.  
+  
+-   <xref:System.Web.UI.WebControls.Login.UserName%2A>.  
+  
+ Todas as outras propriedades estarão inativas quando um modelo é definido para o <xref:System.Web.UI.WebControls.Login> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um modelo para o <xref:System.Web.UI.WebControls.Login> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginLayoutTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLayoutTemplate/CS/loginlayouttemplatecs.aspx#1)]
+ [!code-aspx-vb[LoginLayoutTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLayoutTemplate/VB/loginlayouttemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um objeto que representa o estado do controle a ser restaurado.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação anterior que foi salva com o método <see cref="M:System.Web.UI.WebControls.WebControl.SaveViewState" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="savedState" /> não é um <see cref="P:System.Web.UI.PageStatePersister.ViewState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggedIn">
+      <MemberSignature Language="C#" Value="public event EventHandler LoggedIn;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LoggedIn" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Login.LoggedIn" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário faz logon no site da Web e é autenticado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LoggedIn> é gerado depois que o provedor de autenticação verifica as credenciais do usuário e o cookie de autenticação está na fila para enviar para o navegador na resposta Avançar. Use o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento para fornecer processamento adicional, como acessar dados por usuário, depois que o usuário é autenticado.  
+  
+ Quando um usuário envia suas informações de logon, o <xref:System.Web.UI.WebControls.Login> controlar primeiro gera o <xref:System.Web.UI.WebControls.Login.LoggingIn> evento, o <xref:System.Web.UI.WebControls.Login.Authenticate> evento e, finalmente, o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento.  
+  
+> [!NOTE]
+>  Quando um usuário utiliza o <xref:System.Web.UI.WebControls.Login> controle para fazer logon um site da Web, todos os dados no estado de exibição e todos os dados de postagem é perdida. Não executar ações no <xref:System.Web.UI.WebControls.Login.LoggedIn> evento que contam com o estado de exibição.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento para chamar um método específicas do site que mantém um registro de logons de usuário.  
+  
+ [!code-aspx-csharp[LoginAfterLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginAfterLogin/CS/loginafterlogincs.aspx#1)]
+ [!code-aspx-vb[LoginAfterLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginAfterLogin/VB/loginafterloginvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggingIn">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.LoginCancelEventHandler LoggingIn;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.LoginCancelEventHandler LoggingIn" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Login.LoggingIn" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LoginCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário envia informações de logon antes que a autenticação ocorra.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LoggingIn> é gerado quando um usuário envia informações de logon, mas antes do usuário é autenticado no site da Web. Use o <xref:System.Web.UI.WebControls.Login.LoggingIn> evento configurar todas as informações que você precisa antes de autenticar um usuário.  
+  
+ Você pode cancelar uma tentativa de logon durante o <xref:System.Web.UI.WebControls.Login.LoggingIn> evento definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade do <xref:System.ComponentModel.CancelEventArgs> do objeto para `true`.  
+  
+ Após o <xref:System.Web.UI.WebControls.Login.LoggingIn> é gerado, o <xref:System.Web.UI.WebControls.Login> controlar gera o <xref:System.Web.UI.WebControls.Login.Authenticate> evento e, em seguida, o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoggingIn> eventos para garantir que o usuário inseriu um endereço de email válido no <xref:System.Web.UI.WebControls.Login.UserName%2A> propriedade. Caso contrário, o <xref:System.Web.UI.WebControls.Login.LoggingIn> evento cancela a tentativa de logon e exibe uma mensagem de erro usando o <xref:System.Web.UI.WebControls.Login.InstructionText%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginBeforeLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginBeforeLogin/CS/loginbeforelogincs.aspx#1)]
+ [!code-aspx-vb[LoginBeforeLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginBeforeLogin/VB/loginbeforeloginvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginButtonCommandName">
+      <MemberSignature Language="C#" Value="public static readonly string LoginButtonCommandName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string LoginButtonCommandName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.Login.LoginButtonCommandName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o nome do comando associado ao botão de logon.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.Login.LoginButtonCommandName>é um campo somente leitura e o valor padrão é "Logon". Esse valor é passado para o <xref:System.Web.UI.WebControls.Login.OnBubbleEvent%2A>, e se o valor for "Login", o controle de tentativas de logon do usuário atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginButtonImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string LoginButtonImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoginButtonImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.LoginButtonImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL de uma imagem a ser usado no botão de logon.</summary>
+        <value>A URL da imagem usada no botão de logon. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LoginButtonImageUrl%2A> propriedade contém a URL da imagem renderizada como o <xref:System.Web.UI.WebControls.Login> logon de controle de botão quando o <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A> está definida como <xref:System.Web.UI.WebControls.ButtonType.Image>.  
+  
+ O <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade é usada como o texto alternativo para a imagem em navegadores que não exibir imagens.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.LoginButtonImageUrl%2A> propriedade para a URL de uma imagem.  
+  
+ [!code-aspx-csharp[LoginSubmitButtonImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginSubmitButtonImageUrl/CS/loginsubmitbuttonimageurlcs.aspx#1)]
+ [!code-aspx-vb[LoginSubmitButtonImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginSubmitButtonImageUrl/VB/loginsubmitbuttonimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginButtonStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style LoginButtonStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style LoginButtonStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.LoginButtonStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.Style" /> objeto que permite que você defina a aparência do botão de logon de <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Uma referência a um <see cref="T:System.Web.UI.WebControls.Style" /> que representa o estilo do botão de logon.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> propriedade para controlar a aparência do botão de logon de <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.Style> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.Style> classe (por exemplo, `LoginButtonStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `LoginButtonStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> propriedade define a aparência do botão de logon.  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo são substituídas por <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoginButtonStyle%2A> propriedade para definir a aparência do <xref:System.Web.UI.WebControls.Login> botão de logon do controle.  
+  
+ [!code-aspx-csharp[LoginButtonStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginButtonStyle/CS/loginbuttonstylecs.aspx#1)]
+ [!code-aspx-vb[LoginButtonStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginButtonStyle/VB/loginbuttonstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginButtonText">
+      <MemberSignature Language="C#" Value="public virtual string LoginButtonText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoginButtonText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.LoginButtonText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para o <see cref="T:System.Web.UI.WebControls.Login" /> botão de logon do controle.</summary>
+        <value>O texto usado para o <see cref="T:System.Web.UI.WebControls.Login" /> botão de logon do controle. O padrão é “Login”.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade contém o texto exibido para o <xref:System.Web.UI.WebControls.Login> botão de logon do controle. Dependendo do valor da <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A> propriedade, o <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade pode ser exibido como texto em um botão, como o texto exibido como uma alternativa para uma imagem em navegadores que não processam imagens, ou o texto de um link. A tabela a seguir descreve como as diferentes <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A> valores afetam o <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade.  
+  
+|Configuração de <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A>|Como o <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade é usada.|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Web.UI.WebControls.ButtonType.Button>|Como o botão `Text` propriedade.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Image>|Texto alternativo para a imagem.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Link>|Como o texto do link.|  
+  
+ O texto padrão para o controle é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como o texto a <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade é afetada pelo valor da <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginButtonType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginButtonType/CS/loginbuttontypecs.aspx#1)]
+ [!code-aspx-vb[LoginButtonType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginButtonType/VB/loginbuttontypevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginButtonType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ButtonType LoginButtonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ButtonType LoginButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.LoginButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do botão a ser usado ao renderizar o <see cref="T:System.Web.UI.WebControls.Login" /> botão.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.ButtonType" />. O padrão é <see cref="F:System.Web.UI.WebControls.ButtonType.Button" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A> propriedade determina o tipo de botão a ser usado para o <xref:System.Web.UI.WebControls.Login> botão de logon do controle. A tabela a seguir descreve os tipos diferentes de botão.  
+  
+|Configuração de <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A>|Tipo de botão renderizado|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|  
+|<xref:System.Web.UI.WebControls.ButtonType.Button>|Um botão HTML com o texto especificado no <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Image>|Uma imagem. A URL da imagem é especificada no <xref:System.Web.UI.WebControls.Login.LoginButtonImageUrl%2A> propriedade. A cadeia de caracteres especificada no <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade é usada como texto alternativo para a imagem.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Link>|Um link HTML com o texto especificado no <xref:System.Web.UI.WebControls.Login.LoginButtonText%2A> propriedade.|  
+  
+ Quando o <xref:System.Web.UI.WebControls.Login.LoginButtonType%2A> está definida como <xref:System.Web.UI.WebControls.ButtonType.Button> ou <xref:System.Web.UI.WebControls.ButtonType.Link>, o conteúdo do <xref:System.Web.UI.WebControls.Login.LoginButtonImageUrl%2A> propriedade será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra os diferentes tipos de botões de logon disponíveis para o <xref:System.Web.UI.WebControls.Login> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginButtonType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginButtonType/CS/loginbuttontypecs.aspx#1)]
+ [!code-aspx-vb[LoginButtonType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginButtonType/VB/loginbuttontypevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Web.UI.WebControls.Login.LoginButtonType" /> propriedade não está definida como uma opção válida <see cref="T:System.Web.UI.WebControls.ButtonType" /> valor de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginError">
+      <MemberSignature Language="C#" Value="public event EventHandler LoginError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LoginError" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Login.LoginError" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando é detectado um erro de logon.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.LoginError> evento é gerado quando as credenciais inseridas pelo usuário são inválidas. Você pode usar o <xref:System.Web.UI.WebControls.Login.LoginError> evento para redirecionar o usuário para uma página de erro personalizada, para oferecer ajuda adicional, ou em log as tentativas de logon com falha.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoginError> evento para exibir links de ajuda para o usuário quando uma tentativa de logon falhar.  
+  
+ [!code-aspx-csharp[LoginLoginError#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLoginError/CS/loginloginerrorcs.aspx#1)]
+ [!code-aspx-vb[LoginLoginError#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLoginError/VB/loginloginerrorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipProvider">
+      <MemberSignature Language="C#" Value="public virtual string MembershipProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MembershipProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.MembershipProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do provedor de dados de associação usado pelo controle.</summary>
+        <value>O nome do provedor de dados de associação usado pelo controle. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.MembershipProvider%2A> propriedade contém o nome do provedor de dados que fornece as informações de autenticação para o <xref:System.Web.UI.WebControls.Login> controle. Nomes de provedor de associação válidos são definidos no `<membership>` elemento no arquivo Machine. config ou Web. config de seu aplicativo.  
+  
+ Se você não definir a <xref:System.Web.UI.WebControls.Login.MembershipProvider%2A> propriedade, ele sempre retornará <xref:System.String.Empty>.  
+  
+ Para obter mais informações, consulte a classe <xref:System.Web.Security.Membership>.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAuthenticate">
+      <MemberSignature Language="C#" Value="protected virtual void OnAuthenticate (System.Web.UI.WebControls.AuthenticateEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAuthenticate(class System.Web.UI.WebControls.AuthenticateEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.OnAuthenticate(System.Web.UI.WebControls.AuthenticateEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.AuthenticateEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.WebControls.AuthenticateEventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o evento <see cref="E:System.Web.UI.WebControls.Login.Authenticate" /> para autenticar o usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.OnAuthenticate%2A> método gera o <xref:System.Web.UI.WebControls.Login.Authenticate> evento. Use o <xref:System.Web.UI.WebControls.Login.Authenticate> evento para implementar um esquema de autenticação personalizada.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.Login.OnAuthenticate%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.Authenticate> evento para chamar o código de autenticação personalizada específica do site.  
+  
+ [!code-aspx-csharp[LoginOnAuthenticate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginOnAuthenticate/CS/loginonauthenticatecs.aspx#1)]
+ [!code-aspx-vb[LoginOnAuthenticate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginOnAuthenticate/VB/loginonauthenticatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Login.OnAuthenticate(System.Web.UI.WebControls.AuthenticateEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Login.OnAuthenticate(System.Web.UI.WebControls.AuthenticateEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados para o evento.</param>
+        <summary>Determina se deve transmitir um evento a hierarquia de controle de servidor de interface de usuário da página.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi cancelado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.OnBubbleEvent%2A> método implementa o <xref:System.Web.UI.Control.OnBubbleEvent%2A?displayProperty=nameWithType> método para passar os eventos de controles filho para a hierarquia de página.  
+  
+ Se o evento atual é publicado pelo <xref:System.Web.UI.WebControls.Login> controle de botão de logon, o <xref:System.Web.UI.WebControls.Login> controle tenta fazer logon no site da Web. Caso contrário, o evento é passado a hierarquia de controle de página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Login.OnBubbleEvent(System.Object,System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Login.OnBubbleEvent(System.Object,System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoggedIn">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoggedIn (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoggedIn(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.OnLoggedIn(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o evento <see cref="E:System.Web.UI.WebControls.Login.LoggedIn" /> depois que o usuário faz logon no site da Web e é autenticado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.OnLoggedIn%2A> método gera o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento. Use o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento para fornecer processamento adicional, como acessar dados por usuário, depois que o usuário é autenticado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Web.UI.WebControls.Login.OnLoggedIn%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoggedIn> evento para chamar um método específicas do site que mantém um registro de logons de usuário.  
+  
+ [!code-aspx-csharp[LoginOnAfterLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginOnAfterLogin/CS/loginonafterlogincs.aspx#1)]
+ [!code-aspx-vb[LoginOnAfterLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginOnAfterLogin/VB/loginonafterloginvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Login.OnLoggedIn(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Login.OnLoggedIn(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoggingIn">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoggingIn (System.Web.UI.WebControls.LoginCancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoggingIn(class System.Web.UI.WebControls.LoginCancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.OnLoggingIn(System.Web.UI.WebControls.LoginCancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LoginCancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.WebControls.LoginCancelEventArgs" /> que contém os dados de evento.</param>
+        <summary>Gera o evento <see cref="E:System.Web.UI.WebControls.Login.LoggingIn" /> quando um usuário envia informações de logon, mas antes de a autenticação ocorrer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.OnLoggingIn%2A> método gera o <xref:System.Web.UI.WebControls.Login.LoggingIn> evento. Use o <xref:System.Web.UI.WebControls.Login.LoggingIn> evento para executar qualquer processamento que é necessário antes de autenticar um usuário ou para executar a validação personalizada.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Web.UI.WebControls.Login.OnLoggingIn%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoggingIn> eventos para garantir que o usuário inseriu um endereço de email válido no <xref:System.Web.UI.WebControls.Login.UserName%2A> propriedade. Caso contrário, o <xref:System.Web.UI.WebControls.Login.LoggingIn> cancela a tentativa de logon de manipulador de eventos e exibe a mensagem de erro especificada no <xref:System.Web.UI.WebControls.Login.InstructionText%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginOnBeforeLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginOnBeforeLogin/CS/loginonbeforelogincs.aspx#1)]
+ [!code-aspx-vb[LoginOnBeforeLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginOnBeforeLogin/VB/loginonbeforeloginvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como você pode estender o <xref:System.Web.UI.WebControls.Login> controle. O `CustomLogin` controle inclui um <xref:System.Web.UI.WebControls.DropDownList> que permite aos usuários escolher o provedor de associação são autenticadas com. (Esses provedores são configurados no Web. config). No <xref:System.Web.UI.WebControls.Login.OnLoggingIn%2A> método, o <xref:System.Web.UI.WebControls.Login.MembershipProvider%2A> propriedade é definida como o valor selecionado de <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[Samples.AspNet.Controls.CustomLogin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Controls.CustomLogin/CS/FarmasLogin.cs#1)]
+ [!code-vb[Samples.AspNet.Controls.CustomLogin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Controls.CustomLogin/VB/FarmasLogin.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Login.OnLoggingIn(System.Web.UI.WebControls.LoginCancelEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Login.OnLoggingIn(System.Web.UI.WebControls.LoginCancelEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoginError">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoginError (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoginError(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.OnLoginError(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Web.UI.WebControls.Login.LoginError" /> evento quando uma tentativa de logon falha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.OnLoginError%2A> método gera o <xref:System.Web.UI.WebControls.Login.LoginError> evento. Use o <xref:System.Web.UI.WebControls.Login.LoginError> evento para fornecer processamento adicional, como o log de erros quando ocorre falha na tentativa de logon do usuário.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.Login.OnLoginError%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.Login.LoginError> evento para exibir links de ajuda para o usuário quando uma tentativa de logon falhar.  
+  
+ [!code-aspx-csharp[LoginOnLoginError#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginOnLoginError/CS/loginonloginerrorcs.aspx#1)]
+ [!code-aspx-vb[LoginOnLoginError#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginOnLoginError/VB/loginonloginerrorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Login.OnLoginError(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Login.OnLoginError(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Implementa a base de <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.OnPreRender%2A> método implementa o <xref:System.Web.UI.Control.OnPreRender%2A?displayProperty=nameWithType> método para notificar o <xref:System.Web.UI.WebControls.Login> controle para executar as etapas de pré-processamento necessário antes de salvar o estado de exibição e processar o conteúdo.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.Login.OnPreRender%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Login.OnPreRender(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Login.OnPreRender(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a posição dos elementos do <see cref="T:System.Web.UI.WebControls.Login" /> controle na página.</summary>
+        <value>Um o <see cref="T:System.Web.UI.WebControls.Orientation" /> valores de enumeração. O padrão é <see cref="F:System.Web.UI.WebControls.Orientation.Vertical" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.Orientation%2A> propriedade determina se deve ser exibido o <xref:System.Web.UI.WebControls.Login> controle em um formato vertical, com o <xref:System.Web.UI.WebControls.Login.UserName%2A> campo de entrada de texto acima a <xref:System.Web.UI.WebControls.Login.Password%2A> entrada de texto de campo, ou em um formato horizontal, com o <xref:System.Web.UI.WebControls.Login.UserName%2A> campo de entrada de texto próximo ao <xref:System.Web.UI.WebControls.Login.Password%2A> campo de entrada de texto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o efeito de alterar o <xref:System.Web.UI.WebControls.Login.Orientation%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginLoginLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLoginLayout/CS/loginloginlayoutcs.aspx#1)]
+ [!code-aspx-vb[LoginLoginLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLoginLayout/VB/loginloginlayoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Web.UI.WebControls.Login.Orientation" /> propriedade não está definida como uma opção válida <see cref="T:System.Web.UI.WebControls.Orientation" /> valor de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public virtual string Password { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a senha inserida pelo usuário.</summary>
+        <value>A senha inserida pelo usuário. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.Password%2A> propriedade contém a senha inserida pelo usuário. É a senha em texto não criptografado. Para obter mais informações, consulte [recomendações de segurança para aplicativos da Web](http://msdn.microsoft.com/library/3eeeee9e-b09f-4c7f-8ce5-d9ca1f9322ad).  
+  
+> [!NOTE]
+>  Se você manipular o <xref:System.Web.UI.WebControls.Login.UserName%2A> ou <xref:System.Web.UI.WebControls.Login.Password%2A> propriedades programaticamente, é importante fazer isso no momento certo durante o ciclo de vida da página. Os valores de <xref:System.Web.UI.WebControls.Login.UserName%2A> e <xref:System.Web.UI.WebControls.Login.Password%2A> não estão disponíveis durante o `Page_Load` fase, mas são durante o `Pre_Render` fase.  
+  
+ <xref:System.Web.UI.WebControls.Login>controlar propriedades representadas por caixas de texto, como <xref:System.Web.UI.WebControls.Login.UserName%2A> e <xref:System.Web.UI.WebControls.Login.Password%2A>, são acessíveis durante todas as fases do ciclo de vida da página. O controle assumirão a todas as alterações feitas pelo usuário final por meio do <xref:System.Web.UI.WebControls.TextBox.TextChanged> evento disparado por caixas de texto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo passa o <xref:System.Web.UI.WebControls.Login.Password%2A> propriedade para um método de autenticação personalizado.  
+  
+ [!code-aspx-csharp[LoginAuthenticate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginAuthenticate/CS/loginauthenticatecs.aspx#1)]
+ [!code-aspx-vb[LoginAuthenticate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginAuthenticate/VB/loginauthenticatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordLabelText">
+      <MemberSignature Language="C#" Value="public virtual string PasswordLabelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PasswordLabelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.PasswordLabelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do rótulo da caixa de texto <see cref="P:System.Web.UI.WebControls.Login.Password" />.</summary>
+        <value>O texto do rótulo da caixa de texto <see cref="P:System.Web.UI.WebControls.Login.Password" />. O padrão é "senha:".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.PasswordLabelText%2A> propriedade contém o texto do rótulo de <xref:System.Web.UI.WebControls.Login.Password%2A> caixa de texto.  
+  
+ O <xref:System.Web.UI.WebControls.Login.TextLayout%2A> propriedade define onde o rótulo é posicionado.  
+  
+ O texto padrão para o controle é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.PasswordLabelText%2A> propriedade como "senha de usuário:".  
+  
+ [!code-aspx-csharp[LoginLabelText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLabelText/CS/loginlabeltextcs.aspx#1)]
+ [!code-aspx-vb[LoginLabelText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLabelText/VB/loginlabeltextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordRecoveryIconUrl">
+      <MemberSignature Language="C#" Value="public virtual string PasswordRecoveryIconUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PasswordRecoveryIconUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.PasswordRecoveryIconUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local de uma imagem a ser exibida ao lado do link para a página de recuperação de senha.</summary>
+        <value>A URL da imagem para exibir. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordRecoveryText">
+      <MemberSignature Language="C#" Value="public virtual string PasswordRecoveryText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PasswordRecoveryText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.PasswordRecoveryText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de um link para a página de recuperação de senha.</summary>
+        <value>O texto do link para a página de recuperação de senha. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedade contém o texto de um link para a página de recuperação de senha para o site. A URL da página de recuperação de senha é especificada no <xref:System.Web.UI.WebControls.Login.PasswordRecoveryUrl%2A> propriedade.  
+  
+ Se <xref:System.Web.UI.WebControls.Login.PasswordRecoveryUrl%2A> está vazia, o texto do <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedade será exibida para o usuário, mas não está formatada como um link.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedade estiver vazia, o link para a página de recuperação de senha não está disponível para o usuário.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedade para especificar o texto do link para a página de recuperação de senha do site. O exemplo exibe um formulário de logon e define o <xref:System.Web.UI.WebControls.Login.PasswordRecoveryUrl%2A> e <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedades. Se o usuário clica em "Esqueceu sua senha", a página de getPass.aspx é exibida.  
+  
+ [!code-aspx-csharp[LoginPasswordRecoveryText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginPasswordRecoveryText/CS/loginpasswordrecoverytextcs.aspx#1)]
+ [!code-aspx-vb[LoginPasswordRecoveryText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginPasswordRecoveryText/VB/loginpasswordrecoverytextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordRecoveryUrl">
+      <MemberSignature Language="C#" Value="public virtual string PasswordRecoveryUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PasswordRecoveryUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.PasswordRecoveryUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página de recuperação de senha.</summary>
+        <value>A URL da página de recuperação de senha. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.PasswordRecoveryUrl%2A> propriedade contém a URL da página de recuperação de senha para o site da Web. O <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedade contém o texto usado para o link.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedade estiver vazia, o link para a página de recuperação de senha não está disponível para o usuário.  
+  
+   
+  
+## Examples  
+ O código de exemplo a seguir usa o <xref:System.Web.UI.WebControls.Login.PasswordRecoveryUrl%2A> propriedade para especificar a URL da página de recuperação de senha do site. O exemplo exibe um formulário de logon e define o <xref:System.Web.UI.WebControls.Login.PasswordRecoveryUrl%2A> e <xref:System.Web.UI.WebControls.Login.PasswordRecoveryText%2A> propriedades. Se o usuário clica em "Esqueceu sua senha", a página de getPass.aspx é exibida.  
+  
+ [!code-aspx-csharp[LoginPasswordRecoveryText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginPasswordRecoveryText/CS/loginpasswordrecoverytextcs.aspx#1)]
+ [!code-aspx-vb[LoginPasswordRecoveryText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginPasswordRecoveryText/VB/loginpasswordrecoverytextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordRequiredErrorMessage">
+      <MemberSignature Language="C#" Value="public virtual string PasswordRequiredErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PasswordRequiredErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a mensagem de erro para exibir em um <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> controlar quando o campo de senha for deixado em branco.</summary>
+        <value>A mensagem de erro para exibir em um <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> controlar quando o campo de senha for deixado em branco. O padrão é "Password".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage%2A> propriedade contém a mensagem de erro exibida em um <xref:System.Web.UI.WebControls.ValidationSummary> controle na página de logon.  
+  
+ O <xref:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage%2A> o valor da propriedade é exibido somente quando as seguintes condições forem verdadeiras:  
+  
+-   Um <xref:System.Web.UI.WebControls.ValidationSummary> controle está presente na página.  
+  
+-   A caixa de texto de senha for deixada em branco pelo usuário.  
+  
+ O texto padrão para a propriedade é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ Tanto o <xref:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage%2A> e <xref:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage%2A> valores são encapsulados em um grupo de validação dentro de <xref:System.Web.UI.WebControls.Login> controle. Para esses valores a serem exibidos, o <xref:System.Web.UI.WebControls.ValidationSummary.ValidationGroup%2A> propriedade do <xref:System.Web.UI.WebControls.ValidationSummary> controle deve ser definido como o <xref:System.Web.UI.Control.ID%2A> propriedade do <xref:System.Web.UI.WebControls.Login> controle.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Web.UI.WebControls.ValidationSummary> controle para exibir a mensagem de erro especificada no <xref:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginRequiredErrorMessage#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginRequiredErrorMessage/CS/loginrequirederrormessagecs.aspx#1)]
+ [!code-aspx-vb[LoginRequiredErrorMessage#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginRequiredErrorMessage/VB/loginrequirederrormessagevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RememberMeSet">
+      <MemberSignature Language="C#" Value="public virtual bool RememberMeSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RememberMeSet" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.RememberMeSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja enviar um cookie de autenticação persistente para o navegador do usuário.</summary>
+        <value>
+          <see langword="true" /> para enviar um cookie de autenticação persistente; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> é de propriedade `true`, o cookie de autenticação enviado para o computador do usuário está definido para expirar em 50 anos, tornando-o um cookie persistente que será usado quando o usuário próxima visita o site da Web. Porque o cookie de autenticação estará presente no computador do usuário, o usuário será considerado já autenticado e não será necessário fazer logon no site da Web novamente.  
+  
+ Quando o <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> é de propriedade `true`, o <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> propriedade é definida como o valor da caixa de seleção exibida para o usuário.  
+  
+ Se o <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> é de propriedade `false`, um lembrar-Me a caixa de seleção não é exibido na página e o usuário não tem como controlar se o cookie de autenticação é persistente. Se o <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> é de propriedade `true`, o cookie de autenticação enviado para o navegador do usuário será um cookie persistente.  
+  
+ Se o usuário faz logoff de site da Web usando o <xref:System.Web.UI.WebControls.LoginStatus> controle, o cookie persistente do computador do usuário e o usuário terá que fazer logon site na próxima visita.  
+  
+> [!NOTE]
+>  Há riscos de segurança inerentes à definição de um cookie de autenticação persistente no navegador do usuário. Você deve determinar se esses riscos de segurança são aceitáveis para seu site. Se você definir o <xref:System.Web.UI.WebControls.Login.RememberMeSet%2A> propriedade `true` e <xref:System.Web.UI.WebControls.Login.DisplayRememberMe%2A> propriedade `false`, os usuários que visitam seu site público de navegadores, como na Internet cafés, por exemplo, poderá acidentalmente deixar cookies de autenticação persistentes por trás e o próximo usuário do navegador será capaz de acessar o site usando as credenciais do usuário anterior.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RememberMeText">
+      <MemberSignature Language="C#" Value="public virtual string RememberMeText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RememberMeText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.RememberMeText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do rótulo para a lembrar-Me verificar caixa.</summary>
+        <value>O texto do rótulo para lembrar-Me a caixa de seleção. O padrão é "Lembrar na próxima vez."</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.RememberMeText%2A> propriedade contém o texto do rótulo para lembrar-Me <xref:System.Web.UI.WebControls.CheckBox> controle.  
+  
+ O texto padrão para a propriedade é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador de HTML.</param>
+        <summary>Processa o formulário de logon usando o gravador HTML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderOuterTable">
+      <MemberSignature Language="C#" Value="public virtual bool RenderOuterTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderOuterTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.RenderOuterTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle circunscreve HTML renderizado em um elemento <see langword="table" /> para aplicar estilos embutidos.</summary>
+        <value>
+          <see langword="true" /> se o controle circunscrever HTML renderizado em um elemento <see langword="table" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para tornar as propriedades de estilo embutido como <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> aplicar HTML que é renderizado para o controle, o ASP.NET inclui HTML renderizado em um `table` elemento. Se você não quiser externa `table` elemento a ser renderizado, defina essa propriedade como `false`. Nesse caso, se você tentar definir propriedades de estilo que se aplicam a todo o controle de embutido, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva qualquer estado que foi modificado depois que o método <see cref="M:System.Web.UI.WebControls.Style.TrackViewState" /> foi invocado.</summary>
+        <returns>Um objeto que contém o estado de exibição atual do controle; Caso contrário, se não houver nenhum estado de exibição associado ao controle <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um <see cref="T:System.Collections.IDictionary" /> que contém os dados de tempo de design para o controle.</param>
+        <summary>Define os dados de tempo de design para um controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.HtmlTextWriterTag" /> valor que corresponde a um <see cref="T:System.Web.UI.WebControls.Login" /> controle. Essa propriedade é usada principalmente por desenvolvedores de controle.</summary>
+        <value>Sempre retorna <see cref="F:System.Web.UI.HtmlTextWriterTag.Table" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Login.TagKey%2A> propriedade para determinar a <xref:System.Web.UI.HtmlTextWriterTag> valor que está associado com um <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é usada principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBoxStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style TextBoxStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style TextBoxStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.TextBoxStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a uma coleção de propriedades que definem a aparência do texto nas caixas de <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.Style" /> que contém propriedades que definem a aparência das caixas de texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> propriedade define a aparência do nome de usuário e senha <xref:System.Web.UI.WebControls.TextBox> controles no <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.Style> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.Style> classe (por exemplo, `TextBoxStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `TextBoxStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> propriedade define a aparência das caixas de texto de nome e senha de usuário.  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo são substituídas por <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as cores de plano de fundo e texto do nome de usuário e senha <xref:System.Web.UI.WebControls.TextBox> controles definindo propriedades no <xref:System.Web.UI.WebControls.Style> objeto referenciado pelo <xref:System.Web.UI.WebControls.Login.TextBoxStyle%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginTextBoxStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginTextBoxStyle/CS/logintextboxstylecs.aspx#1)]
+ [!code-aspx-vb[LoginTextBoxStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginTextBoxStyle/VB/logintextboxstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextLayout">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.LoginTextLayout TextLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.LoginTextLayout TextLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.TextLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LoginTextLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a posição de cada rótulo em relação a sua caixa de texto associado para o <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.LoginTextLayout" />. O padrão é <see cref="F:System.Web.UI.WebControls.LoginTextLayout.TextOnLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.Login.TextLayout%2A> caixa de propriedade para especificar a posição dos rótulos em relação ao texto associado a <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é definida usando um do <xref:System.Web.UI.WebControls.LoginTextLayout> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor de LoginTextLayout|Descrição|  
+|---------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.LoginTextLayout.TextOnLeft>|Coloca rótulos à esquerda dos campos de entrada de texto associada.|  
+|<xref:System.Web.UI.WebControls.LoginTextLayout.TextOnTop>|Coloca rótulos acima dos campos de entrada de texto associada.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LoginTextLayout> enumeração para definir o <xref:System.Web.UI.WebControls.Login.TextLayout%2A> propriedade de um <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LoginTextLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LoginTextLayout/CS/logintextlayoutcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LoginTextLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LoginTextLayout/VB/logintextlayoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado não é um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.LoginTextLayout" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleText">
+      <MemberSignature Language="C#" Value="public virtual string TitleText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.TitleText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título do <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>O título do <see cref="T:System.Web.UI.WebControls.Login" /> controle. O padrão é “Login”.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.TitleText%2A> propriedade especifica o título exibido na parte superior do <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O texto padrão para o controle é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.TitleText%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginTitleText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginTitleText/CS/logintitletextcs.aspx#1)]
+ [!code-aspx-vb[LoginTitleText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginTitleText/VB/logintitletextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleTextStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle TitleTextStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle TitleTextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.TitleTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a uma coleção de propriedades que definem a aparência do texto do título no <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que contém propriedades que definem a aparência do texto do título.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> propriedade obtém uma referência a um <xref:System.Web.UI.WebControls.TableItemStyle> que você pode usar para alterar a aparência do título contido no objeto de <xref:System.Web.UI.WebControls.Login.TitleText%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> propriedade define a aparência do título no <xref:System.Web.UI.WebControls.Login> controle. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> retorna do objeto. Você pode definir essas propriedades declarativamente na forma `Property-Subproperty`, onde `Subproperty` representa uma propriedade do <xref:System.Web.UI.WebControls.TableItemStyle> classe (por exemplo, `TitleStyle-ForeColor`). Você pode definir a propriedade programaticamente no formulário `Property.Subproperty` (por exemplo, `TitleStyle.ForeColor`).  
+  
+ Configurações comuns incluem propriedades de fonte, cor do texto e cor de plano de fundo personalizado. O <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> propriedade define a aparência do <xref:System.Web.UI.WebControls.Login.TitleText%2A> propriedade.  
+  
+ As configurações de estilo para o <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> propriedade são mescladas com as configurações de estilo para o <xref:System.Web.UI.WebControls.Login> controle. Quaisquer configurações feitas a <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> as configurações correspondentes nas propriedades da substituição de propriedade de <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ O seguinte <xref:System.Web.UI.WebControls.Login> propriedades de estilo são substituídas por <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> configurações:  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BackColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Font%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>  
+  
+-   <xref:System.Web.UI.Control.Visible%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebControl.Width%2A>  
+  
+ Quando você usa modelos para definir a aparência do <xref:System.Web.UI.WebControls.Login> controle, o <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> propriedade não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define a cor do texto, a cor de fundo e a espessura da fonte do título, definindo propriedades do <xref:System.Web.UI.WebControls.TableItemStyle> objeto referenciado pelo <xref:System.Web.UI.WebControls.Login.TitleTextStyle%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LoginTitleText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginTitleText/CS/logintitletextcs.aspx#1)]
+ [!code-aspx-vb[LoginTitleText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginTitleText/VB/logintitletextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Login.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui a base de <see cref="M:System.Web.UI.Control.TrackViewState" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public virtual string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de usuário inserido pelo usuário.</summary>
+        <value>O nome de usuário inserido pelo usuário. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.UserName%2A> propriedade contém o nome de usuário inserido pelo usuário. <xref:System.Web.UI.WebControls.Login>controlar propriedades representadas por caixas de texto, como <xref:System.Web.UI.WebControls.Login.UserName%2A> e <xref:System.Web.UI.WebControls.Login.Password%2A>, são acessíveis durante todas as fases do ciclo de vida da página. O controle assumirão a todas as alterações feitas pelo usuário final por meio do <xref:System.Web.UI.WebControls.TextBox.TextChanged> evento disparado por caixas de texto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo passa o <xref:System.Web.UI.WebControls.Login.UserName%2A> propriedade para um método de autenticação personalizado.  
+  
+ [!code-aspx-csharp[LoginAuthenticate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginAuthenticate/CS/loginauthenticatecs.aspx#1)]
+ [!code-aspx-vb[LoginAuthenticate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginAuthenticate/VB/loginauthenticatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserNameLabelText">
+      <MemberSignature Language="C#" Value="public virtual string UserNameLabelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserNameLabelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.UserNameLabelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do rótulo da caixa de texto <see cref="P:System.Web.UI.WebControls.Login.UserName" />.</summary>
+        <value>O texto do rótulo da caixa de texto <see cref="P:System.Web.UI.WebControls.Login.UserName" />. O padrão é “User Name:”.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.UserNameLabelText%2A> propriedade contém o texto do rótulo de <xref:System.Web.UI.WebControls.Login.UserName%2A> caixa de texto.  
+  
+ O <xref:System.Web.UI.WebControls.Login.TextLayout%2A> propriedade define onde o rótulo é posicionado.  
+  
+ O texto padrão para o controle é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a configuração de <xref:System.Web.UI.WebControls.Login.UserNameLabelText%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginLabelText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLabelText/CS/loginlabeltextcs.aspx#1)]
+ [!code-aspx-vb[LoginLabelText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLabelText/VB/loginlabeltextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserNameRequiredErrorMessage">
+      <MemberSignature Language="C#" Value="public virtual string UserNameRequiredErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserNameRequiredErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a mensagem de erro para exibir em um <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> controlar quando o campo de nome de usuário for deixado em branco.</summary>
+        <value>A mensagem de erro para exibir em um <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> controlar quando o campo de nome de usuário for deixado em branco. O padrão é "Nome de usuário".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage%2A> propriedade contém a mensagem de erro exibida em um <xref:System.Web.UI.WebControls.ValidationSummary> controle na página de logon.  
+  
+ O <xref:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage%2A> o valor da propriedade é exibido somente quando as seguintes condições forem verdadeiras:  
+  
+-   Um <xref:System.Web.UI.WebControls.ValidationSummary> controle está presente na página.  
+  
+-   Caixa de texto de nome de usuário for deixada em branco pelo usuário.  
+  
+ O texto padrão para o controle é localizado com base na localidade atual do servidor.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ Tanto o <xref:System.Web.UI.WebControls.Login.PasswordRequiredErrorMessage%2A> e <xref:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage%2A> valores são encapsulados em um grupo de validação dentro de <xref:System.Web.UI.WebControls.Login> controle. Para esses valores a serem exibidos, o <xref:System.Web.UI.WebControls.ValidationSummary.ValidationGroup%2A> propriedade do <xref:System.Web.UI.WebControls.ValidationSummary> controle deve ser definido como o <xref:System.Web.UI.Control.ID%2A> propriedade do <xref:System.Web.UI.WebControls.Login> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ValidationSummary> controle para exibir a mensagem de erro especificada no <xref:System.Web.UI.WebControls.Login.UserNameRequiredErrorMessage%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginRequiredErrorMessage#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginRequiredErrorMessage/CS/loginrequirederrormessagecs.aspx#1)]
+ [!code-aspx-vb[LoginRequiredErrorMessage#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginRequiredErrorMessage/VB/loginrequirederrormessagevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorTextStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style ValidatorTextStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style ValidatorTextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.ValidatorTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a uma coleção de <see cref="T:System.Web.UI.WebControls.Style" /> propriedades que definem a aparência das mensagens de erro associada validadores usados pelo <see cref="T:System.Web.UI.WebControls.Login" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém as configurações de estilo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista as configurações de estilo que estão disponíveis para personalização com o <xref:System.Web.UI.WebControls.Login.ValidatorTextStyle%2A> propriedade.  
+  
+|Configuração|Descrição|  
+|-------------|-----------------|  
+|`BackColor`|A cor atrás as mensagens de erro. A cor pode ser qualquer o <xref:System.Drawing.Color> propriedades.|  
+|`BorderColor`|A cor da borda ao redor de mensagens de erro. A cor pode ser qualquer o <xref:System.Drawing.Color> propriedades.|  
+|`BorderStyle`|O estilo da borda ao redor de mensagens de erro. O estilo pode ser "None", "Pontilhada", "Tracejado", "Sólido", "Double", "Do Groove", "Montanhas", "Inserção" ou "Início". O padrão é 'NotSet'. Alguns estilos não mostram claramente a menos que o `BorderWidth` valor é maior que 2.|  
+|`BorderWidth`|A largura da borda ao redor de mensagens de erro.|  
+|`CssClass`|A classe CSS (folha) estilo em cascata usada para processar as mensagens de erro. Se outras configurações são especificadas, elas substituirão uma configuração de folha de estilo.|  
+|`Font-Bold`|`true`Para exibir o texto da mensagem de erro em negrito.|  
+|`Font-Italic`|`true`Para exibir o texto da mensagem de erro em itálico.|  
+|`Font-Names`|O nome do tipo de fonte.|  
+|`Font-Overline`|`true`Para exibir o texto da mensagem de erro com uma linha acima.|  
+|`Font-Size`|O tamanho do texto nas mensagens de erro como uma <xref:System.Web.UI.WebControls.FontUnit> objeto.|  
+|`Font-Strikeout`|`true`Para exibir o texto da mensagem de erro como riscado.|  
+|`Font-Underline`|`true`Para exibir o texto da mensagem de erro com um sublinhado.|  
+|`ForeColor`|A cor do texto nas mensagens de erro. A cor pode ser qualquer o <xref:System.Drawing.Color> propriedades.|  
+|`Height`|Um <xref:System.Web.UI.WebControls.Unit> objeto que representa a altura das mensagens de erro.|  
+|`Width`|Um <xref:System.Web.UI.WebControls.Unit> objeto que representa a largura das mensagens de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleWhenLoggedIn">
+      <MemberSignature Language="C#" Value="public virtual bool VisibleWhenLoggedIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VisibleWhenLoggedIn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Login.VisibleWhenLoggedIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve mostrar o <see cref="T:System.Web.UI.WebControls.Login" /> controle depois que o usuário é autenticado.</summary>
+        <value>
+          <see langword="false" />Se o <see cref="T:System.Web.UI.WebControls.Login" /> controle deve ser ocultado quando o usuário é autenticado; caso contrário, <see langword="true" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Login.VisibleWhenLoggedIn%2A> propriedade especifica se o <xref:System.Web.UI.WebControls.Login> controle é exibido aos usuários autenticados. Quando a propriedade for `false`, o <xref:System.Web.UI.WebControls.Login> controle não aparecem na página quando um usuário autenticado acessa o site. Isso é usado em páginas da Web que são usadas como páginas de logon e páginas de informações para ocultar o <xref:System.Web.UI.WebControls.Login> controle depois que o usuário foi autenticado.  
+  
+ O <xref:System.Web.UI.WebControls.Login.VisibleWhenLoggedIn%2A> propriedade não tem nenhum efeito um <xref:System.Web.UI.WebControls.Login> controle que aparece na página de logon padrão definido em Web. config ou no arquivo de configuração do aplicativo.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.Login.VisibleWhenLoggedIn%2A> propriedade `true` para especificar que o <xref:System.Web.UI.WebControls.Login> controle não estiver oculto e sempre é exibido na página, independentemente se o usuário foi autenticado.  
+  
+ [!code-aspx-csharp[LoginHideWhenLoggedIn#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginHideWhenLoggedIn/CS/loginhidewhenloggedincs.aspx#1)]
+ [!code-aspx-vb[LoginHideWhenLoggedIn#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginHideWhenLoggedIn/VB/loginhidewhenloggedinvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,157 @@
+<Type Name="DeliveryNotificationOptions" FullName="System.Net.Mail.DeliveryNotificationOptions">
+  <TypeSignature Language="C#" Value="public enum DeliveryNotificationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeliveryNotificationOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.DeliveryNotificationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve as opções de notificação de entrega de email.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Delay">
+      <MemberSignature Language="C#" Value="Delay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.DeliveryNotificationOptions Delay = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.DeliveryNotificationOptions.Delay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.DeliveryNotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Notificar se a entrega estiver atrasada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.DeliveryNotificationOptions Never = int32(134217728)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.DeliveryNotificationOptions.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.DeliveryNotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma notificação não deve ser gerada em nenhuma circunstância.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.DeliveryNotificationOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.DeliveryNotificationOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.DeliveryNotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma informação de notificação será enviada. O servidor de email utilizará seu comportamento configurado para determinar se é necessário gerar uma notificação de entrega.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFailure">
+      <MemberSignature Language="C#" Value="OnFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.DeliveryNotificationOptions OnFailure = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.DeliveryNotificationOptions.OnFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.DeliveryNotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Notificar se a entrega não for bem-sucedida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSuccess">
+      <MemberSignature Language="C#" Value="OnSuccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.DeliveryNotificationOptions OnSuccess = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.DeliveryNotificationOptions.OnSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.DeliveryNotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Notificar se a entrega for bem-sucedida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

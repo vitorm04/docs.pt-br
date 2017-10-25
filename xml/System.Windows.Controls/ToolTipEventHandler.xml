@@ -1,0 +1,41 @@
+<Type Name="ToolTipEventHandler" FullName="System.Windows.Controls.ToolTipEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ToolTipEventHandler(object sender, ToolTipEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolTipEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ToolTipEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Controls.ToolTipEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará eventos roteados que ocorrem quando uma dica de ferramenta abre e fecha.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma dica de ferramenta abre e fecha, este delegado oferece um manipulador de eventos. O elemento que especifica a dica de ferramenta herda do <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Portanto, os eventos de aberto e fechamento existem essas duas classes. A tabela a seguir lista os eventos que usam este manipulador de eventos.  
+  
+|Eventos que ocorrem quando uma dica de ferramenta é aberto|Eventos que ocorrem quando uma dica de ferramenta é fechada|  
+|--------------------------------------------|---------------------------------------------|  
+|<xref:System.Windows.FrameworkElement.ToolTipOpening?displayProperty=nameWithType>|<xref:System.Windows.FrameworkElement.ToolTipClosing?displayProperty=nameWithType>|  
+|<xref:System.Windows.FrameworkContentElement.ToolTipOpening?displayProperty=nameWithType>|<xref:System.Windows.FrameworkContentElement.ToolTipClosing?displayProperty=nameWithType>|  
+  
+ Esses eventos são registrados pelo <xref:System.Windows.Controls.ToolTipService> classe usando o <xref:System.Windows.Controls.ToolTipService.ToolTipOpeningEvent> e <xref:System.Windows.Controls.ToolTipService.ToolTipClosingEvent> campos, mas o <xref:System.Windows.Controls.ToolTipService> classe expõe esses eventos no próprio (anexados ou não). O <xref:System.Windows.FrameworkElement> e <xref:System.Windows.FrameworkContentElement> ambas as classes implementam o <xref:System.Windows.Controls.ToolTipService> e expor esse evento definindo os eventos na tabela anterior, copiando o <xref:System.Windows.Controls.ToolTipService> campos para criar novos roteadas identificadores de evento que existem no <xref:System.Windows.FrameworkElement> e <xref:System.Windows.FrameworkContentElement> classes.  
+  
+ Se a dica de ferramenta é definida como um <xref:System.Windows.Controls.ToolTip> objeto, o <xref:System.Windows.Controls.ToolTip.Opened> e <xref:System.Windows.Controls.ToolTip.Closed> eventos o <xref:System.Windows.Controls.ToolTip> classe também são gerados quando uma dica de ferramenta para abre e fecha.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

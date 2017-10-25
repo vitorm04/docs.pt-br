@@ -1,0 +1,175 @@
+<Type Name="UserTrackPoint" FullName="System.Workflow.Runtime.Tracking.UserTrackPoint">
+  <TypeSignature Language="C#" Value="public sealed class UserTrackPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UserTrackPoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.UserTrackPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um ponto, associado a um evento de usuário a serem controladas no caminho de execução potencial de uma instância de fluxo de trabalho raiz. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Um designer de atividade ou um designer de fluxo de trabalho pode usar o sobrecarregado <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%2A?displayProperty=nameWithType> métodos para instrumentar o fluxo de trabalho para emitir os dados para o infraestrutura como um evento de usuário de controle de tempo de execução. Os dados emitidos são referidos como dados de usuário. Ao contrário dos eventos de status de atividade e eventos de status do fluxo de trabalho, que ocorrem apenas em alterações de status, os eventos de usuário podem ocorrer em qualquer local que é instrumentada em um fluxo de trabalho. Há muitas razões para instrumentar um fluxo de trabalho para emitir eventos de usuário. Por exemplo, um designer de fluxo de trabalho pode querer comunicar informações de estado lógico sobre o andamento de um fluxo de trabalho ou um designer de atividade talvez queira dar a oportunidade de atividade membros às vezes que não seja um status de atividade de alteração.  
+  
+ Um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> define um ponto de interesse no caminho de execução potencial de uma instância de fluxo de trabalho raiz associado a um evento de usuário. Um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> contém locais que estão incluídos na correspondência, locais serão excluídos da correspondência e dados adicionais que devem ser extraídos da instância de fluxo de trabalho quando o ponto de controle for correspondido. Você pode adicionar uma <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> para <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A?displayProperty=nameWithType> para instruir o tempo de execução controle infraestrutura para enviar um <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> para o serviço de controle quando o ponto de controle for correspondido. Os dados do usuário são retornados no <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.UserData%2A?displayProperty=nameWithType>. Um único <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> pode ser correspondido em vários pontos na instância de fluxo de trabalho.  
+  
+ Um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> contém condições de correspondência para um local associado a um evento de usuário no caminho de execução potencial de uma instância de fluxo de trabalho. Você pode adicionar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> objetos <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> para definir os locais que devem ser incluídos na correspondência para o ponto de controle. Da mesma forma, você pode adicionar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> objetos <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> para definir os locais que devem ser excluídos da correspondência para o ponto de controle.  
+  
+ Você pode adicionar <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> objetos e <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> objetos <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A> para especificar os dados que devem ser extraídos da instância de fluxo de trabalho quando o ponto de controle for correspondido. Os dados extraídos serão retornados no <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.Body%2A?displayProperty=nameWithType>.  
+  
+ Você pode adicionar a <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> para especificar informações adicionais associadas ao ponto de controle. Essas anotações serão retornadas no <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A?displayProperty=nameWithType>.  
+  
+ Para obter um exemplo de como usar essa classe, consulte o [controle usando usuário rastrear pontos exemplo](http://msdn.microsoft.com/en-us/d894a18a-a4c6-467e-9a42-8be025ecd4d5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackPoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.UserTrackPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa um ponto de controle vazio. Nenhuma correspondência locais, excluídos, extrai dados ou locais anotações são especificadas. Você deve configurar o ponto de controle com a adição de pelo menos um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> para <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A>. Opcionalmente, você pode adicionar os objetos apropriados para <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A>, <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A>, e <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de anotações associadas ao ponto de controle.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" />. O padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar a <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> para especificar as anotações a serem retornados em <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A?displayProperty=nameWithType> quando o ponto de controle for correspondido. Se <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> está vazio, não há anotações são associadas com o ponto de controle.  
+  
+ As anotações são `strings` definir que contêm informações associadas ao ponto de controle. Por exemplo, uma anotação pode conter informações sobre o caminho de execução possível o fluxo de trabalho pode levar a partir deste ponto de controle, ou ele pode conter informações a serem exibidas em uma interface de usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedLocations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.UserTrackingLocationCollection ExcludedLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.UserTrackingLocationCollection ExcludedLocations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.UserTrackingLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de locais que devem ser excluídos do ponto de controle, a infra-estrutura de controle de tempo de execução.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocationCollection" /> que especifica os locais a serem excluídos do ponto de controle. O padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se qualquer um do <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> objetos no <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> é correspondido para um evento de usuário específico, o ponto de controle não haverá correspondência e não <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> serão enviadas para o serviço de acompanhamento. Se <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> está vazio, não existem excluídas localizações.  
+  
+ Você pode usar <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> para excluir locais específicos do rastreamento em tempo de execução de infra-estrutura de rastreamento. Por exemplo, você pode excluir um subconjunto dos locais especificados em <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> para refinar mais precisamente os locais que devem ser controlados pelo ponto de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extracts">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ExtractCollection Extracts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ExtractCollection Extracts" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ExtractCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que especifica os dados a ser extraído da instância de fluxo de trabalho e enviados para o serviço de controle.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.ExtractCollection" /> que especifica os dados a serem extraídos e enviados para o serviço de controle. O padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o ponto de controle for atendido, o tempo de execução controle infraestrutura envia um <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> para o serviço de acompanhamento. Os dados do usuário são retornados no <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.UserData%2A?displayProperty=nameWithType>. A infra-estrutura de controle de tempo de execução também pode extrair os dados especificados na <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A> do fluxo de trabalho de instância e enviá-lo a <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord>. Os dados extraídos são encapsulados em <xref:System.Workflow.Runtime.Tracking.TrackingDataItem> registra e retornados em <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.Body%2A?displayProperty=nameWithType>.  
+  
+ Você pode adicionar <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> objetos <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A> para especificar dados de membro devem ser extraídos da atividade associada com o evento de usuário e você podem adicionar <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> objetos <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A> para especificar dados de membro que devem ser extraídos da atividade raiz do fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingLocations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.UserTrackingLocationCollection MatchingLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.UserTrackingLocationCollection MatchingLocations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.UserTrackingLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de locais que devem ser incluídos na correspondência para o ponto de controle pela infraestrutura de controle de tempo de execução.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocationCollection" /> que especifica os locais a serem correspondidos para o ponto de controle. O padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> está vazio, o ponto de controle não pode ser correspondido pelo tempo de execução de infra-estrutura de rastreamento. Você deve adicionar pelo menos um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> para <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> para o <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> para participar na correspondência.  
+  
+ O ponto de controle será correspondido se qualquer uma da <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> objetos no <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> for correspondida e nenhum do <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> objetos no <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> for correspondida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

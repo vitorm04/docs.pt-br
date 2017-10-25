@@ -1,0 +1,149 @@
+<Type Name="EventSourceSettings" FullName="System.Diagnostics.Tracing.EventSourceSettings">
+  <TypeSignature Language="C#" Value="public enum EventSourceSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventSourceSettings extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventSourceSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções de configuração para uma fonte de evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente EtwManifestEventFormat ou EtwSelfDescribingEventFormat deve ser especificado, mas não ambos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventSourceSettings Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventSourceSettings.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventSourceSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma das opções de configuração especiais é habilitada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EtwManifestEventFormat">
+      <MemberSignature Language="C#" Value="EtwManifestEventFormat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventSourceSettings EtwManifestEventFormat = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventSourceSettings.EtwManifestEventFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventSourceSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ouvinte ETW deve usar um formato baseado em manifesto ao gerar eventos. A configuração dessa opção é uma diretiva para o ouvinte ETW de que ele deve usar o formato baseado em manifesto ao gerar eventos. Essa é a opção padrão ao definir um tipo derivado de <see cref="T:System.Diagnostics.Tracing.EventSource" /> usando um dos construtores <see cref="T:System.Diagnostics.Tracing.EventSource" /> protegidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EtwSelfDescribingEventFormat">
+      <MemberSignature Language="C#" Value="EtwSelfDescribingEventFormat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventSourceSettings EtwSelfDescribingEventFormat = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventSourceSettings.EtwSelfDescribingEventFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventSourceSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ouvinte ETW deve usar o formato de evento autodescritivo. Essa é a opção padrão ao criar uma nova instância do <see cref="T:System.Diagnostics.Tracing.EventSource" /> usando um dos construtores <see cref="T:System.Diagnostics.Tracing.EventSource" /> públicos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnEventWriteErrors">
+      <MemberSignature Language="C#" Value="ThrowOnEventWriteErrors" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventSourceSettings ThrowOnEventWriteErrors = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventSourceSettings.ThrowOnEventWriteErrors" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventSourceSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A origem do evento lança uma exceção quando ocorre um erro.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

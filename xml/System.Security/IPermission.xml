@@ -1,0 +1,319 @@
+<Type Name="IPermission" FullName="System.Security.IPermission">
+  <TypeSignature Language="C#" Value="public interface IPermission : System.Security.ISecurityEncodable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPermission implements class System.Security.ISecurityEncodable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.IPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.ISecurityEncodable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os métodos implementados pelos tipos de permissão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permissões no common language runtime são objetos que descrevem os conjuntos de operações que podem ser protegidos para recursos especificados. Um objeto de permissão descreve as operações ou access que está sujeito a controle de segurança; ele não representa um direito de executar operações ou de acesso. As permissões são usadas pelo código do aplicativo e o sistema de segurança do .NET Framework das seguintes maneiras.  
+  
+-   Código solicita as permissões necessárias para executar.  
+  
+-   A política de sistema de segurança concede permissões ao código em ordem para ele para executar.  
+  
+-   O código exige que o código de chamada tem a permissão.  
+  
+-   Código substitui a pilha de segurança usando assert/negar/permitir-somente.  
+  
+> [!NOTE]
+>  Se você gravar uma nova permissão, você deve implementar essa interface em sua classe.  
+  
+> [!IMPORTANT]
+>  Uma permissão pode ser acessada por vários threads. Ao implementar esta interface, você deve assegurar que o <xref:System.Security.IPermission.IsSubsetOf%2A>, <xref:System.Security.IPermission.Intersect%2A>, <xref:System.Security.IPermission.Union%2A>, e <xref:System.Security.IPermission.Copy%2A> implementações de método são thread-safe.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como definir uma classe de permissão para uso com a segurança de acesso do código. Todas as interfaces de permissão necessários são implementadas.  
+  
+ [!code-cpp[Permission#1](~/samples/snippets/cpp/VS_Snippets_CLR/Permission/cpp/Permission.cpp#1)]
+ [!code-csharp[Permission#1](~/samples/snippets/csharp/VS_Snippets_CLR/Permission/CS/Permission.cs#1)]
+ [!code-vb[Permission#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Permission/vb/permission.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da permissão atual.</summary>
+        <returns>Uma cópia da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.Security.IPermission.Copy%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.IPermission> classe.  
+  
+ [!code-cpp[Permission#4](~/samples/snippets/cpp/VS_Snippets_CLR/Permission/cpp/Permission.cpp#4)]
+ [!code-csharp[Permission#4](~/samples/snippets/csharp/VS_Snippets_CLR/Permission/CS/Permission.cs#4)]
+ [!code-vb[Permission#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Permission/vb/permission.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Demand">
+      <MemberSignature Language="C#" Value="public void Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IPermission.Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um <see cref="T:System.Security.SecurityException" /> em tempo de execução se o requisito de segurança não é atendido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é usado pelas bibliotecas seguras para garantir que os chamadores tem permissão para acessar um recurso. Por exemplo, uma classe de arquivo em uma biblioteca de classe seguro chama <xref:System.Security.CodeAccessPermission.Demand%2A> para necessários <xref:System.Security.Permissions.FileIOPermission> antes de executar uma operação de arquivo solicitada pelo chamador.  
+  
+ Embora a maioria das classes que implementam este método de interface atendem aos critérios de segurança executando um exame da pilha completa, um exame da pilha não é necessariamente executado. Um exemplo de uma implementação que não executará um exame da pilha é <xref:System.Security.Permissions.PrincipalPermission.Demand%2A?displayProperty=nameWithType>.  
+  
+ Quando um exame da pilha é executado, as permissões do código que chama esse método não são examinadas; a seleção começa o chamador imediato do código e continua na pilha. A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas. <xref:System.Security.CodeAccessPermission.Demand%2A>é realizada somente se nenhuma <xref:System.Security.SecurityException> é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a interseção de permissão atual e a permissão especificada. Essa nova permissão é <see langword="null" /> se a interseção estiver vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o conjunto de operações que ambas descrevem em comum. Somente uma demanda que passa as permissões originais passará a interseção.  
+  
+ As instruções a seguir deve ser verdadeiro para todas as implementações do <xref:System.Security.IPermission.Intersect%2A> método. `X`e `Y` representar <xref:System.Security.IPermission> referências de objeto que não são `null`.  
+  
+-   `X`. Intersect (`X`) retorna um valor igual a `X`.  
+  
+-   `X`. Intersect (`Y`) retorna o mesmo valor como `Y`. Intersect (`X`).  
+  
+-   `X`. Intersect (`null`) retorna `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.Security.IPermission.Intersect%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.IPermission> classe.  
+  
+ [!code-cpp[Permission#2](~/samples/snippets/cpp/VS_Snippets_CLR/Permission/cpp/Permission.cpp#2)]
+ [!code-csharp[Permission#2](~/samples/snippets/csharp/VS_Snippets_CLR/Permission/CS/Permission.cs#2)]
+ [!code-vb[Permission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Permission/vb/permission.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="target" /> parâmetro não é <see langword="null" /> e não é uma instância da classe mesmo como a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um conjunto de operações é totalmente contido pelo conjunto de permissões especificado. Por exemplo, uma permissão que representa acesso à C:\example.txt é um subconjunto de uma permissão que representa acesso na unidade c:\\. Se esse método retornar `true`, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+ As instruções a seguir deve ser verdadeiro para todas as implementações do <xref:System.Security.IPermission.IsSubsetOf%2A> método. `X`, `Y`, e `Z` representar <xref:System.Security.IPermission> objetos que não são `null`.  
+  
+-   `X`. IsSubsetOf (`X`) retorna `true`.  
+  
+-   `X`. IsSubsetOf (`Y`) retorna o mesmo valor como `Y`. IsSubsetOf (`X`) somente se `X` e `Y` representar o mesmo conjunto de permissões.  
+  
+-   If `X`. IsSubsetOf (`Y`) e `Y`. IsSubsetOf (`Z`) retornam `true`, `X`. IsSubsetOf (`Z`) retorna `true`.  
+  
+ Se `X` representa vazio <xref:System.Security.IPermission> objeto com um estado de permissão de <xref:System.Security.Permissions.PermissionState.None> e `Y` representa um <xref:System.Security.IPermission> objeto `null`, `X`. IsSubsetOf (`Y`) retorna `true`. Se `Z` também é uma permissão vazia, a operação de definição composta `X`. Union(Z). Também retorna IsSubsetOf(Y) `true` porque a união de duas permissões vazias é uma permissão vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.Security.IPermission.IsSubsetOf%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.IPermission> classe.  
+  
+ [!code-cpp[Permission#3](~/samples/snippets/cpp/VS_Snippets_CLR/Permission/cpp/Permission.cpp#3)]
+ [!code-csharp[Permission#3](~/samples/snippets/csharp/VS_Snippets_CLR/Permission/CS/Permission.cs#3)]
+ [!code-vb[Permission#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Permission/vb/permission.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de uma chamada para <xref:System.Security.IPermission.Union%2A> é uma permissão que representa todas as operações representadas pela permissão atual e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union.  
+  
+ As instruções a seguir deve ser verdadeiro para todas as implementações do <xref:System.Security.IPermission.Union%2A> método. `X`e `Y` representar <xref:System.Security.IPermission> objetos que não são `null`.  
+  
+-   `X`. União (`X`) retorna um objeto que tem o mesmo valor como `X`.  
+  
+-   `X`. União (`Y`) retorna um objeto que tem o mesmo valor que o objeto retornado por `Y`. União (`X`).  
+  
+-   `X`. União (`null`) retorna um objeto que tem o mesmo valor como `X`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.Security.IPermission.Union%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.IPermission> classe.  
+  
+ [!code-cpp[Permission#5](~/samples/snippets/cpp/VS_Snippets_CLR/Permission/cpp/Permission.cpp#5)]
+ [!code-csharp[Permission#5](~/samples/snippets/csharp/VS_Snippets_CLR/Permission/CS/Permission.cs#5)]
+ [!code-vb[Permission#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Permission/vb/permission.vb#5)]  
+  
+-  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

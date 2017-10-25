@@ -1,0 +1,173 @@
+<Type Name="CivicAddressResolver" FullName="System.Device.Location.CivicAddressResolver">
+  <TypeSignature Language="C#" Value="public sealed class CivicAddressResolver : System.Device.Location.ICivicAddressResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CivicAddressResolver extends System.Object implements class System.Device.Location.ICivicAddressResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Location.CivicAddressResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Device.Location.ICivicAddressResolver</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece funcionalidade para resolver um local baseado em coordenadas para um endereço civil.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Device.Location.CivicAddressResolver> classe fornece uma implementação de <xref:System.Device.Location.ICivicAddressResolver> um local baseados em coordenadas que resolve para um endereço civil se o provedor local fornece as coordenadas e dados de endereço civil.  
+  
+   
+  
+## Examples  
+ O programa a seguir mostra como chamar <xref:System.Device.Location.CivicAddressResolver.ResolveAddress%2A> para resolver um endereço civil de forma síncrona.  
+  
+ [!code-csharp[System.Device.Location.ResolveCivicAddressSync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.resolvecivicaddresssync/cs/resolvecivicaddresssync.cs#1)]
+ [!code-vb[System.Device.Location.ResolveCivicAddressSync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.resolvecivicaddresssync/vb/resolvecivicaddresssync.vb#1)]  
+  
+ O programa a seguir mostra como chamar <xref:System.Device.Location.CivicAddressResolver.ResolveAddressAsync%2A> para resolver um endereço civil de forma assíncrona.  
+  
+ [!code-csharp[System.Device.Location.ResolveCivicAddressSync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.resolvecivicaddresssync/cs/resolvecivicaddresssync.cs#1)]
+ [!code-vb[System.Device.Location.ResolveCivicAddressSync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.resolvecivicaddresssync/vb/resolvecivicaddresssync.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CivicAddressResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.CivicAddressResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Device.Location.CivicAddressResolver" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como inicializar uma nova instância do <xref:System.Device.Location.CivicAddressResolver> classe.  
+  
+```csharp  
+CivicAddressResolver resolver = new CivicAddressResolver();  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAddress">
+      <MemberSignature Language="C#" Value="public System.Device.Location.CivicAddress ResolveAddress (System.Device.Location.GeoCoordinate coordinate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Device.Location.CivicAddress ResolveAddress(class System.Device.Location.GeoCoordinate coordinate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.CivicAddressResolver.ResolveAddress(System.Device.Location.GeoCoordinate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.CivicAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="coordinate" Type="System.Device.Location.GeoCoordinate" />
+      </Parameters>
+      <Docs>
+        <param name="coordinate">O <see cref="T:System.Device.Location.GeoCoordinate" /> que contém o local para resolver para um endereço civil.</param>
+        <summary>Modo síncrono resolve um endereço civil de um local com base em latitude e longitude. Essa chamada bloqueará a execução do thread de chamada enquanto o endereço está sendo resolvido.</summary>
+        <returns>O endereço civil que é resolvido a partir de <paramref name="coordinate" /> parâmetro. <see cref="F:System.Device.Location.CivicAddress.Unknown" />será retornado se o endereço não pode ser resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Device.Location.ICivicAddressResolver.ResolveAddressCompleted> é gerado quando a operação de resolução de endereço é concluída. O endereço civil que é resolvido a partir de `coordinate` retornado pelo parâmetro o <xref:System.Device.Location.ResolveAddressCompletedEventArgs.Address%2A> membro do <xref:System.Device.Location.ResolveAddressCompletedEventArgs> objeto que é passado para o manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O programa a seguir demonstra como chamar <xref:System.Device.Location.CivicAddressResolver.ResolveAddress%2A> para resolver um endereço civil de forma síncrona.  
+  
+ [!code-csharp[System.Device.Location.ResolveCivicAddressSync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.resolvecivicaddresssync/cs/resolvecivicaddresssync.cs#1)]
+ [!code-vb[System.Device.Location.ResolveCivicAddressSync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.resolvecivicaddresssync/vb/resolvecivicaddresssync.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="coordinate" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinate" />não contém um válidos de latitude e longitude.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAddressAsync">
+      <MemberSignature Language="C#" Value="public void ResolveAddressAsync (System.Device.Location.GeoCoordinate coordinate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResolveAddressAsync(class System.Device.Location.GeoCoordinate coordinate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.CivicAddressResolver.ResolveAddressAsync(System.Device.Location.GeoCoordinate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="coordinate" Type="System.Device.Location.GeoCoordinate" />
+      </Parameters>
+      <Docs>
+        <param name="coordinate">O <see cref="T:System.Device.Location.GeoCoordinate" /> que contém o local para resolver para um endereço civil.</param>
+        <summary>Resolve um endereço de forma assíncrona a partir de um local que se baseia a latitude e longitude. A chamada não bloqueia a execução do thread de chamada, enquanto o endereço está sendo resolvido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O programa a seguir mostra como chamar <xref:System.Device.Location.CivicAddressResolver.ResolveAddressAsync%2A> para resolver um endereço civil de forma assíncrona.  
+  
+ [!code-csharp[System.Device.Location.ResolveCivicAddressAsync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.resolvecivicaddressasync/cs/resolvecivicaddressasync.cs#1)]
+ [!code-vb[System.Device.Location.ResolveCivicAddressAsync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.resolvecivicaddressasync/vb/resolvecivicaddressasync.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="coordinate" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinate" />não contém um válidos de latitude e longitude.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAddressCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Device.Location.ResolveAddressCompletedEventArgs&gt; ResolveAddressCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Device.Location.ResolveAddressCompletedEventArgs&gt; ResolveAddressCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Device.Location.CivicAddressResolver.ResolveAddressCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Device.Location.ResolveAddressCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a resolução de endereço que foi iniciado por uma chamada para <see cref="M:System.Device.Location.CivicAddressResolver.ResolveAddressAsync(System.Device.Location.GeoCoordinate)" /> é concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O programa a seguir mostra como chamar <xref:System.Device.Location.CivicAddressResolver.ResolveAddressAsync%2A> para resolver um endereço civil de forma assíncrona.  
+  
+ [!code-csharp[System.Device.Location.ResolveCivicAddressAsync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.resolvecivicaddressasync/cs/resolvecivicaddressasync.cs#1)]
+ [!code-vb[System.Device.Location.ResolveCivicAddressAsync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.resolvecivicaddressasync/vb/resolvecivicaddressasync.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

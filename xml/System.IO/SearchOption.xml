@@ -1,0 +1,101 @@
+<Type Name="SearchOption" FullName="System.IO.SearchOption">
+  <TypeSignature Language="C#" Value="public enum SearchOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SearchOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.SearchOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se deve pesquisar o diretório atual ou o diretório atual e todos os subdiretórios.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você escolher AllDirectories na pesquisa e a estrutura de diretório contém um link que cria um loop, a operação de pesquisa entra em um loop infinito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lista todos os diretórios e arquivos que começam com a letra "c", como em "c:\\". Neste exemplo, o <xref:System.IO.SearchOption.AllDirectories> é usado para especificar que somente o diretório de nível superior deve ser pesquisado.  
+  
+ [!code-cpp[System.IO.DirectoryInfo_SearchOptions#00](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/cpp/searchoption.cpp#00)]
+ [!code-csharp[System.IO.DirectoryInfo_SearchOptions#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/cs/searchoption.cs#00)]
+ [!code-vb[System.IO.DirectoryInfo_SearchOptions#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/vb/searchoption.vb#00)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllDirectories">
+      <MemberSignature Language="C#" Value="AllDirectories" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.SearchOption AllDirectories = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.SearchOption.AllDirectories" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.SearchOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inclui o diretório atual e todos os seus subdiretórios em uma operação de pesquisa. Essa opção inclui pontos de nova análise, como unidades montadas e links simbólicos na pesquisa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopDirectoryOnly">
+      <MemberSignature Language="C#" Value="TopDirectoryOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.SearchOption TopDirectoryOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.SearchOption.TopDirectoryOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.SearchOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inclui apenas o diretório atual em uma operação de pesquisa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

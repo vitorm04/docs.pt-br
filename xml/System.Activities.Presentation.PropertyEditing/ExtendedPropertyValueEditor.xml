@@ -1,0 +1,97 @@
+<Type Name="ExtendedPropertyValueEditor" FullName="System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor">
+  <TypeSignature Language="C#" Value="public class ExtendedPropertyValueEditor : System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExtendedPropertyValueEditor extends System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.PropertyEditing.PropertyValueEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contêiner para toda a lógica de editor estendido para as propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor> classe pode conter dois <xref:System.Windows.DataTemplate> objetos, um para um editor embutido e um para um editor estendido. Os editores fornece uma interface personalizada que é exibida dentro dos limites do `Properties` janela e o editor estendido fornece uma interface que aparece em uma nova janela.  
+  
+ O <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> propriedade retorna o modelo XAML para a interface visual para o editor embutido e o <xref:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.ExtendedEditorTemplate%2A> propriedade retorna o modelo XAML para o editor estendido. Normalmente, eles são fornecidos em um dicionário de recurso em outro lugar no projeto.  
+  
+ Você deve usar o <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> invocar personalizados <xref:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedPropertyValueEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor" /> classe sem especificada estendida e editores <see cref="T:System.Windows.DataTemplate" /> objetos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedPropertyValueEditor (System.Windows.DataTemplate extendedEditorTemplate, System.Windows.DataTemplate inlineEditorTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DataTemplate extendedEditorTemplate, class System.Windows.DataTemplate inlineEditorTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.#ctor(System.Windows.DataTemplate,System.Windows.DataTemplate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extendedEditorTemplate" Type="System.Windows.DataTemplate" />
+        <Parameter Name="inlineEditorTemplate" Type="System.Windows.DataTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="extendedEditorTemplate">O <see cref="T:System.Windows.DataTemplate" /> usado para o pop-up estendido ou fixado editor.</param>
+        <param name="inlineEditorTemplate">O <see cref="T:System.Windows.DataTemplate" /> usado para o editor embutido.</param>
+        <summary>Cria uma nova instância da <see cref="T:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor" /> com especificado estendido e editores <see cref="T:System.Windows.DataTemplate" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando usado, sua <xref:System.Activities.ActivityContext.DataContext%2A> é definido como um <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedEditorTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate ExtendedEditorTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate ExtendedEditorTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.ExtendedEditorTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.DataTemplate" /> usado para o pop-up estendido ou fixado editor.</summary>
+        <value>O <see cref="T:System.Windows.DataTemplate" /> objeto usado para o editor estendido de pop-up ou fixo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seu <xref:System.Activities.ActivityContext.DataContext%2A> é definido como um <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

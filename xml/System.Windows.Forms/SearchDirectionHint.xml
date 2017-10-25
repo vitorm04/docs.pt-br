@@ -1,0 +1,98 @@
+<Type Name="SearchDirectionHint" FullName="System.Windows.Forms.SearchDirectionHint">
+  <TypeSignature Language="C#" Value="public enum SearchDirectionHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SearchDirectionHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SearchDirectionHint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Fornece uma dica direcional onde procurar um <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.ListView.FindNearestItem%2A> métodos o <xref:System.Windows.Forms.ListView> e <xref:System.Windows.Forms.ListViewItem> classes, bem como pela <xref:System.Windows.Forms.SearchForVirtualItemEventArgs> classe. Identifica o item mais próximo em um <xref:System.Windows.Forms.ListView> controle pode variar dependendo do sistema operacional que o aplicativo está em execução no; portanto, a direção de pesquisa é uma dica e não uma garantia absoluta de resultados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.SearchDirectionHint> enumeração. Para executar este exemplo, cole o seguinte código em um formulário do Windows e a chamada `InitializeLocationSearchListView` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SearchDirectionHint Down = int32(40)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SearchDirectionHint.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SearchDirectionHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abaixo do item atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SearchDirectionHint Left = int32(37)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SearchDirectionHint.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SearchDirectionHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>À esquerda do item atual</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SearchDirectionHint Right = int32(39)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SearchDirectionHint.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SearchDirectionHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>À direita do item atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SearchDirectionHint Up = int32(38)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SearchDirectionHint.Up" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SearchDirectionHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acima do item atual.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

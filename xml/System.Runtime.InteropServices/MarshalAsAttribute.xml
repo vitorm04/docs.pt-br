@@ -1,0 +1,574 @@
+<Type Name="MarshalAsAttribute" FullName="System.Runtime.InteropServices.MarshalAsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MarshalAsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MarshalAsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.MarshalAsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica como realizar marshaling de dados entre código gerenciado e não gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para campos, parâmetros ou valores de retorno.  
+  
+ Esse atributo é opcional, como cada tipo de dados tem um padrão de comportamento de marshaling. Esse atributo só é necessário quando um determinado tipo pode ser empacotado para vários tipos. Por exemplo, você pode empacotar uma cadeia de caracteres para código não gerenciado como um <xref:System.Runtime.InteropServices.UnmanagedType.LPStr>, um <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr>, um <xref:System.Runtime.InteropServices.UnmanagedType.LPTStr>, ou um <xref:System.Runtime.InteropServices.UnmanagedType.BStr>. Por padrão, o common language runtime realiza marshaling de um parâmetro de cadeia de caracteres como um <xref:System.Runtime.InteropServices.UnmanagedType.BStr> para métodos COM. Você pode aplicar o <xref:System.Runtime.InteropServices.MarshalAsAttribute> de atributo para um campo individual ou um parâmetro para fazer com que essa cadeia de caracteres específica ser empacotado como um <xref:System.Runtime.InteropServices.UnmanagedType.LPStr> em vez de um <xref:System.Runtime.InteropServices.UnmanagedType.BStr>. O [Tlbexp.exe (exportador da biblioteca)](~/docs/framework/tools/tlbexp-exe-type-library-exporter.md) passa as preferências de empacotamento para o common language runtime.  
+  
+ Alguns parâmetros e valores de retorno tem padrão diferente quando usado com a interoperabilidade de comportamento de marshaling ou invocação de plataforma. Por padrão, o tempo de execução realiza marshaling de um parâmetro de cadeia de caracteres (e campos em um tipo de valor) como um <xref:System.Runtime.InteropServices.UnmanagedType.LPStr> para uma plataforma de invocação de método ou função. Para obter mais informações, consulte [comportamento de Marshaling padrão](~/docs/framework/interop/default-marshaling-behavior.md).  
+  
+ Na maioria dos casos, o atributo simplesmente identifica o formato dos dados não gerenciados usando o <xref:System.Runtime.InteropServices.UnmanagedType> enumeração, como mostra a assinatura c# a seguir:  
+  
+ [!code-csharp[system.runtime.interopservices.MarshalAsAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.MarshalAsAttribute/cs/Signature1.cs#2)]
+ [!code-vb[system.runtime.interopservices.MarshalAsAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.MarshalAsAttribute/vb/Signature1.vb#2)]  
+  
+ Alguns <xref:System.Runtime.InteropServices.UnmanagedType> membros de enumeração requerem informações adicionais. Por exemplo, informações adicionais são necessárias quando o <xref:System.Runtime.InteropServices.UnmanagedType> é <xref:System.Runtime.InteropServices.UnmanagedType.LPArray>. Para obter uma descrição completa de como usar esse atributo com matrizes, consulte [padrão de empacotamento para matrizes](~/docs/framework/interop/default-marshaling-for-arrays.md).  
+  
+ O [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) também se aplica esse atributo para parâmetros, campos e valores de retorno para indicar que o tipo de dados na biblioteca de tipos de entrada não é o tipo padrão para o tipo de dados gerenciado correspondente. Tlbimp.exe sempre se aplica a <xref:System.Runtime.InteropServices.MarshalAsAttribute> para <xref:System.String> e <xref:System.Object> tipos para maior clareza, independentemente do tipo especificado na biblioteca de tipo de entrada.  
+  
+> [!NOTE]
+>  O <xref:System.Runtime.InteropServices.MarshalAsAttribute> não oferece suporte para marshaling de tipos genéricos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir aplica-se a <xref:System.Runtime.InteropServices.MarshalAsAttribute> para um campo, um parâmetro de método e um método de valor de retorno em um tipo gerenciado.  
+  
+ [!code-csharp[System.Runtime.InteropServices.MarshalAsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.MarshalAsAttribute/cs/marshalasattribute.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.MarshalAsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.MarshalAsAttribute/vb/marshalasattribute.vb#1)]  
+  
+ O exemplo a seguir aplica-se a <xref:System.Runtime.InteropServices.MarshalAsAttribute> a uma propriedade de atributo:  
+  
+ [!code-csharp[System.Runtime.InteropServices.MarshalAsAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.MarshalAsAttribute/cs/Signature1.cs#3)]
+ [!code-vb[System.Runtime.InteropServices.MarshalAsAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.MarshalAsAttribute/vb/Signature1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarshalAsAttribute (short unmanagedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 unmanagedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.MarshalAsAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="unmanagedType" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedType">O valor com o qual deve ser realizado o marshalling dos dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.MarshalAsAttribute" /> com o valor <see cref="T:System.Runtime.InteropServices.UnmanagedType" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor aceita um subjacente inteiro assinado de 16 bits que representa cada <xref:System.Runtime.InteropServices.UnmanagedType> membro de enumeração. O [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) usa este construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarshalAsAttribute (System.Runtime.InteropServices.UnmanagedType unmanagedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.UnmanagedType unmanagedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.MarshalAsAttribute.#ctor(System.Runtime.InteropServices.UnmanagedType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="unmanagedType" Type="System.Runtime.InteropServices.UnmanagedType" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedType">O valor com o qual deve ser realizado o marshalling dos dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.MarshalAsAttribute" /> com o membro de enumeração <see cref="T:System.Runtime.InteropServices.UnmanagedType" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para código legível que é menos propenso a erro, sempre use este construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArraySubType">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.UnmanagedType ArraySubType;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.UnmanagedType ArraySubType" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tipo de elemento do <see cref="F:System.Runtime.InteropServices.UnmanagedType.LPArray" /> não gerenciado ou <see cref="F:System.Runtime.InteropServices.UnmanagedType.ByValArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir esse parâmetro para um valor da <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType> enumeração para especificar o tipo dos elementos da matriz. Se um tipo não for especificado, o tipo de padrão não gerenciado correspondente ao tipo de elemento da matriz gerenciado é usado. Por exemplo, o `ArraySubType` para um `LPWStr` matriz em COM é <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>. Para obter mais informações, consulte [padrão de empacotamento para matrizes](~/docs/framework/interop/default-marshaling-for-arrays.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IidParameterIndex">
+      <MemberSignature Language="C#" Value="public int IidParameterIndex;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 IidParameterIndex" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.IidParameterIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o índice do parâmetro de não gerenciado <see langword="iid_is" /> atributo usado por COM.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalCookie">
+      <MemberSignature Language="C#" Value="public string MarshalCookie;" />
+      <MemberSignature Language="ILAsm" Value=".field public string MarshalCookie" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalCookie" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece informações adicionais para um marshaler personalizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é opcional ao usar um marshaler personalizado.  
+  
+ Você pode definir este campo para uma cadeia de caracteres que fornece informações adicionais para um marshaler personalizado. Por exemplo, o marshaler mesmo pode ser usado para fornecer um número de wrappers, onde o cookie é usado para indicar o wrapper específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalType">
+      <MemberSignature Language="C#" Value="public string MarshalType;" />
+      <MemberSignature Language="ILAsm" Value=".field public string MarshalType" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nome totalmente qualificado de um marshaler personalizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> ou <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef?displayProperty=nameWithType> campo especificar um tipo de marshaler personalizado para o parâmetro de atributo, tipo de campo ou de retorno. O <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> campo permite que você especifique uma cadeia de caracteres que representa o nome totalmente qualificado de um marshaler personalizado. É útil para referências de associação tardia, mas menor é preferível que <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef> para especificar um marshaler personalizado. Para obter informações adicionais sobre como criar e usar marshalers personalizados, consulte [empacotamento personalizado](http://msdn.microsoft.com/en-us/49f9ac47-1619-4d6e-9da6-bf06bba12079).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalTypeRef">
+      <MemberSignature Language="C#" Value="public Type MarshalTypeRef;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.Type MarshalTypeRef" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementa <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType" /> como um tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef> ou <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> campo para especificar um tipo de marshaler personalizado para o parâmetro de atributo, tipo de campo ou de retorno. O <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef> campo permite um uso mais fácil de <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> diminuindo a sintaxe. No exemplo a seguir, a primeira linha representa o uso da sintaxe <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> e a segunda linha representa o uso da sintaxe <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef>.  
+  
+```  
+[MarshalAs(UnmanagedType.CustomMarshaler, MarshalType = "Assembly, NameSpace.TypeName")]   
+```  
+  
+```  
+[MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(NameSpace.TypeName)]  
+```  
+  
+ Você pode definir um <xref:System.Type> objeto usando `typeof` em c#, `GetType` no Visual Basic, ou `typeid` em C++. Para obter informações adicionais sobre como criar e usar marshalers personalizados, consulte [empacotamento personalizado](http://msdn.microsoft.com/en-us/49f9ac47-1619-4d6e-9da6-bf06bba12079).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeArraySubType">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.VarEnum SafeArraySubType;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.VarEnum SafeArraySubType" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.VarEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o tipo de elemento de <see cref="F:System.Runtime.InteropServices.UnmanagedType.SafeArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir este campo para um valor da <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType> enumeração para especificar o tipo dos elementos da matriz segura. Se um tipo não for especificado, o tipo de padrão do tipo de elemento gerenciado (se transmitido como uma VARIANTE) será usado. Por exemplo, o `SafeArraySubType` para um `int` matriz em COM é <xref:System.Runtime.InteropServices.VarEnum.VT_I4>. Para obter mais informações, consulte [padrão de empacotamento para matrizes](~/docs/framework/interop/default-marshaling-for-arrays.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeArrayUserDefinedSubType">
+      <MemberSignature Language="C#" Value="public Type SafeArrayUserDefinedSubType;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.Type SafeArrayUserDefinedSubType" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o tipo de elemento definido pelo usuário a <see cref="F:System.Runtime.InteropServices.UnmanagedType.SafeArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializar esse campo com o tipo personalizado para habilitar os elementos do `SAFEARRAY` para ser empacotado com êxito. Esse campo só é necessária quando o <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> é <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>, ou <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>. Para obter mais informações, consulte [padrão de empacotamento para matrizes](~/docs/framework/interop/default-marshaling-for-arrays.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeConst">
+      <MemberSignature Language="C#" Value="public int SizeConst;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 SizeConst" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o número de elementos na matriz de comprimento fixo ou o número de caracteres (não em bytes) em uma cadeia de caracteres a importar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é obrigatório para o <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray> e <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr> membros o <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType> enumeração. Como o formato compactado de metadados é limitado a 0x1FFFFFFF, o intervalo de valores permitidos para <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst> são (> = 0 e < = 0x1FFFFFFF).  
+  
+ Para obter mais informações, consulte [padrão de empacotamento para matrizes](~/docs/framework/interop/default-marshaling-for-arrays.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeParamIndex">
+      <MemberSignature Language="C#" Value="public short SizeParamIndex;" />
+      <MemberSignature Language="ILAsm" Value=".field public int16 SizeParamIndex" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o parâmetro baseado em zero que contém a contagem de elementos da matriz, semelhante a <see langword="size_is" /> em COM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex> campo oferece suporte a chamadas de gerenciado para não gerenciado e não gerenciado para gerenciado. Ele não tem nenhum efeito em código gerenciado que chama objetos.  
+  
+ Dependendo do tipo gerenciado e os atributos aplicados a ele, a matriz pode ser passada como uma matriz segura ou uma matriz de estilo C.  
+  
+ Quando matrizes são passadas como matrizes de estilo C, o marshaler não é possível determinar o tamanho da matriz. Portanto, para passar uma matriz gerenciada para um método ou função não gerenciada, você deve fornecer dois argumentos:  
+  
+-   A matriz, definida por valor ou referência.  
+  
+-   O tamanho da matriz, definido por valor ou referência.  
+  
+ O índice de base zero do parâmetro de tamanho de matriz é definido usando o <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex> campo.  
+  
+ Se você especificar ambos <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex> e <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> com um <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType> campo, a soma dos valores dos campos produz um total de tamanho.  
+  
+ Para obter mais informações, consulte [padrão de empacotamento para matrizes](~/docs/framework/interop/default-marshaling-for-arrays.md).  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex/CPP/marshalas.sizeparamindex.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex/CS/marshalas.sizeparamindex.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex/VB/marshalas.sizeparamindex.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.UnmanagedType Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.UnmanagedType Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.MarshalAsAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Runtime.InteropServices.UnmanagedType" /> são empacotado como os dados de valor.</summary>
+        <value>O <see cref="T:System.Runtime.InteropServices.UnmanagedType" /> são empacotado como os dados de valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é usado com <xref:System.Runtime.InteropServices.MarshalAsAttribute> para indicar como tipos devem ser empacotados entre o código gerenciado e não gerenciado. Em alguns casos, você pode usar esse campo com determinados `UnmanagedType` membros de enumeração. Para <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler> e <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray>, você deve usar os parâmetros nomeados adicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

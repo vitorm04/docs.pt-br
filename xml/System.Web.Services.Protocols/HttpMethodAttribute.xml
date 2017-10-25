@@ -1,0 +1,148 @@
+<Type Name="HttpMethodAttribute" FullName="System.Web.Services.Protocols.HttpMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class HttpMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.HttpMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Aplicar esse atributo para um cliente de serviço Web XML usando HTTP GET ou POST HTTP, define os tipos de serializar os parâmetros enviados a um método de serviço da Web em XML e leem a resposta do método de serviço da Web em XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um cliente de serviço Web XML chama um método de serviço Web XML usando HTTP GET, <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> deve ser definido como `XmlReturnReader` e <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> definido como `UrlParameterWriter`. Configure clientes XML Web Services invocar um serviço da Web em XML usando HTTP POST <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> para `XmlReturnReader` e <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> para `HtmlFormParameterWriter`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é uma classe de proxy gerada pelo utilitário Wsdl.exe para chamar um utilitário de serviço da Web em XML usando HTTP POST. O Wsdl.exe fornece automaticamente os tipos corretos para <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> e <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A>, junto com a especificação de que a classe de proxy herda de <xref:System.Web.Services.Protocols.HttpPostClientProtocol>.  
+  
+ [!code-cpp[Classic HttpMethodAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpMethodAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpMethodAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpMethodAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpMethodAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpMethodAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.HttpMethodAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMethodAttribute (Type returnFormatter, Type parameterFormatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type returnFormatter, class System.Type parameterFormatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpMethodAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="returnFormatter" Type="System.Type" />
+        <Parameter Name="parameterFormatter" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="returnFormatter">Inicializa o <see cref="P:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter" /> propriedade para um <see cref="T:System.Type" /> que desserializa a resposta de um método de serviço da Web em XML.</param>
+        <param name="parameterFormatter">Inicializa o <see cref="P:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter" /> propriedade para um <see cref="T:System.Type" /> que serializa parâmetros enviados de um cliente de serviço da Web em XML para um método de serviço da Web em XML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.HttpMethodAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterFormatter">
+      <MemberSignature Language="C#" Value="public Type ParameterFormatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ParameterFormatter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Type" /> que serializa parâmetros enviados de um cliente de serviço da Web em XML para o método de serviço da Web em XML.</summary>
+        <value>Um <see cref="T:System.Type" /> que serializa parâmetros enviados de um cliente de serviço da Web em XML para um método de serviço da Web em XML. Não há nenhum padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cliente do serviço Web XML está invocando um método de serviço Web XML usando HTTP GET ou POST HTTP, <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> devem ser `XMLReturnReader`.  
+  
+   
+  
+## Examples  
+ O exemplo é uma classe proxy gerada pelo utilitário Wsdl.exe para um cliente do serviço Web XML usando HTTP GET, definindo <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> para o valor necessário de `XMLReturnReader`.  
+  
+ [!code-cpp[Classic HttpMethodAttribute.ReturnFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpMethodAttribute.ReturnFormatter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpMethodAttribute.ReturnFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpMethodAttribute.ReturnFormatter Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpMethodAttribute.ReturnFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpMethodAttribute.ReturnFormatter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnFormatter">
+      <MemberSignature Language="C#" Value="public Type ReturnFormatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnFormatter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Type" /> que desserializa a resposta de um método de serviço da Web em XML.</summary>
+        <value>Um <see cref="T:System.Type" /> que desserializa a resposta de um método de serviço da Web em XML. Não há nenhum padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cliente do serviço Web XML está invocando um método de serviço Web XML usando HTTP GET, <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> devem ser `UrlParameterWriter`, enquanto que um cliente usando HTTP POST deve definir <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> para `HtmlFormParameterWriter`.  
+  
+   
+  
+## Examples  
+ O exemplo é uma classe proxy gerada pelo utilitário Wsdl.exe para um cliente do serviço Web XML usando HTTP GET, definindo <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> para o valor necessário de `UrlParameterWriter`.  
+  
+ [!code-cpp[Classic HttpMethodAttribute.ReturnFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpMethodAttribute.ReturnFormatter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpMethodAttribute.ReturnFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpMethodAttribute.ReturnFormatter Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpMethodAttribute.ReturnFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpMethodAttribute.ReturnFormatter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

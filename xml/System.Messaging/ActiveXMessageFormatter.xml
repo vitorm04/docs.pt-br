@@ -1,0 +1,238 @@
+<Type Name="ActiveXMessageFormatter" FullName="System.Messaging.ActiveXMessageFormatter">
+  <TypeSignature Language="C#" Value="public class ActiveXMessageFormatter : ICloneable, System.Messaging.IMessageFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveXMessageFormatter extends System.Object implements class System.ICloneable, class System.Messaging.IMessageFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.ActiveXMessageFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Messaging.IMessageFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Serializa ou desserializa os tipos de dados primitivos e outros objetos de ou para o corpo de uma mensagem do Enfileiramento de Mensagens, usando um formato compatível com o Componente ActiveX do MSMQ.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.ActiveXMessageFormatter> é compatível com as mensagens enviadas usando componentes COM serviço de enfileiramento de mensagens, que permite a interoperabilidade com aplicativos que usam o controle COM MSMQ.  
+  
+ O <xref:System.Messaging.ActiveXMessageFormatter> pode serializar a maioria dos tipos primitivos, bem como objetos que implementam o `IPersistStream` interface OLE. Ele pode desserializar o mesmo conjunto de tipos primitivos, mas requer mais esforço ao desserializar um objeto COM (por exemplo, um objeto criado usando o Visual Basic 6.0) que implementa `IPersistStream`. O objeto a ser desserializado deve ser na memória, importe primeiro o objeto em um aplicativo do .NET Framework.  
+  
+ Quando um aplicativo envia uma mensagem à fila utilizando uma instância do <xref:System.Messaging.MessageQueue> classe, o formatador serializa o objeto em um fluxo e o insere no corpo da mensagem. Durante a leitura de uma fila usando um <xref:System.Messaging.MessageQueue>, o formatador desserializa os dados da mensagem para o <xref:System.Messaging.Message.Body%2A> propriedade de um <xref:System.Messaging.Message>.  
+  
+ Serialização ActiveX é muito compact, que faz usando o <xref:System.Messaging.ActiveXMessageFormatter> e controle de MSMQ COM um método muito rápido de serialização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveXMessageFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.ActiveXMessageFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.ActiveXMessageFormatter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public bool CanRead (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanRead(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.ActiveXMessageFormatter.CanRead(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Messaging.Message" /> para inspecionar.</param>
+        <summary>Determina se o formatador pode desserializar o conteúdo da mensagem.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Messaging.ActiveXMessageFormatter" /> pode desserializar a mensagem; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.ActiveXMessageFormatter.CanRead%2A>Retorna `false` se o corpo da mensagem não é um primitivo de que o controle ActiveX de enfileiramento de mensagens pode desserializar ou se ele não implementa o `IPersistStream` interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.ActiveXMessageFormatter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Messaging.ActiveXMessageFormatter" /> classe que é idêntica à atual <see cref="T:System.Messaging.ActiveXMessageFormatter" />.</summary>
+        <returns>Um objeto cujas propriedades são idênticas desse <see cref="T:System.Messaging.ActiveXMessageFormatter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado pelo <xref:System.Messaging.MessageQueue> classe para receber várias mensagens ao mesmo tempo (por exemplo, se o aplicativo está recebendo de forma assíncrona). Normalmente, você não precisa chamar este método no código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitStreamedObject">
+      <MemberSignature Language="C#" Value="public static void InitStreamedObject (object streamedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitStreamedObject(object streamedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.ActiveXMessageFormatter.InitStreamedObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="streamedObject">Um objeto OLE que implementa <see langword="IPersistStreamInit" />.</param>
+        <summary>Fornece um utilitário para ajudar a serializar COM os objetos que implementam <see langword="IPersistStream" /> e exigem <see langword="IPersistStreamInit" /> a ser chamado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public object Read (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Read(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.ActiveXMessageFormatter.Read(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Messaging.Message" />, no formato de controle ActiveX do MSMQ, a ser desserializado.</param>
+        <summary>Lê o conteúdo da mensagem determinada e cria um objeto que contém a mensagem desserializada.</summary>
+        <returns>A mensagem desserializada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o corpo da mensagem representa um tipo primitivo, a mensagem <xref:System.Messaging.Message.BodyType%2A> propriedade deve ser um dos tipos gerenciados na tabela a seguir.  
+  
+|Valor de BodyType|Tipo gerenciado|  
+|--------------------|------------------|  
+|VT_LPSTR|<xref:System.Char>matriz (desserializado com codificação ASCII)|  
+|VT_BSTR, VT_LPWSTR|<xref:System.String>(desserializados usando a codificação Unicode)|  
+|VT_VECTOR &#124; VT_UI1|Matriz <xref:System.Byte>|  
+|VT_BOOL|<xref:System.Boolean>|  
+|VT_CLSID|<xref:System.Guid>|  
+|VT_CY|<xref:System.Decimal>|  
+|VT_DATE|<xref:System.DateTime>|  
+|VT_I1, VT_UI1|<xref:System.Byte>|  
+|VT_I2|<xref:System.Int16>|  
+|VT_UI2|<xref:System.UInt16>|  
+|VT_I4|<xref:System.Int32>|  
+|VT_UI4|<xref:System.UInt32>|  
+|VT_I8|<xref:System.Int64>|  
+|VT_UI8|<xref:System.UInt64>|  
+|VT_R4|<xref:System.Single>|  
+|VT_R8|<xref:System.Double>|  
+|VT_NULL|`null`|  
+|VT_STREAMED_OBJECT|<xref:System.Object>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Messaging.Message.BodyType" /> propriedade o <paramref name="message" /> passado como um parâmetro não pode ser mapeado para um tipo primitivo, nem ele representa um objeto de fluxo.</exception>
+        <exception cref="T:System.NotSupportedException">O corpo representa um objeto armazenado. O <see cref="T:System.Messaging.ActiveXMessageFormatter" /> não oferece suporte a desserialização de objetos armazenados.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.Messaging.Message message, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Messaging.Message message, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.ActiveXMessageFormatter.Write(System.Messaging.Message,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Messaging.Message" /> cujo <see cref="P:System.Messaging.Message.Body" /> propriedade conterá o objeto serializado.</param>
+        <param name="obj">O objeto a ser serializado no corpo da mensagem.</param>
+        <summary>Serializa um objeto no corpo da mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra a relação entre tipos gerenciados e o <xref:System.Messaging.Message.BodyType%2A> propriedade. O objeto que você serializar deve ser um destes tipos gerenciados ou deve implementar a OLE `IPersistStream` interface.  
+  
+|Valor de BodyType|Tipo gerenciado|  
+|--------------------|------------------|  
+|VT_LPSTR|<xref:System.Char>|  
+|VT_BSTR, VT_LPWSTR|<xref:System.String>|  
+|VT_VECTOR &#124; VT_UI1|<xref:System.Byte>|  
+|VT_BOOL|<xref:System.Boolean>|  
+|VT_CLSID|<xref:System.Guid>|  
+|VT_CY|<xref:System.Decimal>|  
+|VT_DATE|<xref:System.DateTime>|  
+|VT_I1, VT_UI1|<xref:System.Byte>|  
+|VT_I2|<xref:System.Int16>|  
+|VT_UI2|<xref:System.UInt16>|  
+|VT_I4|<xref:System.Int32>|  
+|VT_UI4|<xref:System.UInt32>|  
+|VT_I8|<xref:System.Int64>|  
+|VT_UI8|<xref:System.UInt64>|  
+|VT_R4|<xref:System.Single>|  
+|VT_R8|<xref:System.Double>|  
+|VT_NULL|`null`|  
+|VT_STREAMED_OBJECT|`IPersistStream`(OLE)<xref:System.Object>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O objeto a ser serializado não é um primitivo nem um objeto de fluxo que implementa a OLE <see langword="IPersistStream" /> interface.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1199 @@
+<Type Name="OdbcParameter" FullName="System.Data.Odbc.OdbcParameter">
+  <TypeSignature Language="C#" Value="public sealed class OdbcParameter : System.Data.Common.DbParameter, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcParameter extends System.Data.Common.DbParameter implements class System.Data.IDataParameter, class System.Data.IDbDataParameter, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.Odbc.OdbcParameter/OdbcParameterConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um parâmetro para um <see cref="T:System.Data.Odbc.OdbcCommand" /> e, opcionalmente, seu mapeamento para um <see cref="T:System.Data.DataColumn" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nomes de parâmetros não diferenciam maiusculas de minúsculas.  
+  
+ Ao consultar um banco de dados Oracle usando o provedor Microsoft OLE DB para Oracle (MSDAORA) e o provedor de dados ODBC .NET Framework, usando o `LIKE` cláusula para valores de consulta nos campos de comprimento fixo pode não retornar esperadas todas as correspondências. A razão é que, quando Oracle coincide com os valores dos campos de comprimento fixo em um `LIKE` cláusula, ele corresponde toda a duração da cadeia de caracteres, incluindo qualquer preenchimento espaços à direita. Por exemplo, se uma tabela em um banco de dados Oracle contém um campo denominado "Campo1" é definido como `char(3)`, e insira o valor "a" em uma linha da tabela, o código a seguir não retornará a linha.  
+  
+```vb  
+Dim queryString As String = "SELECT * FROM Table1 WHERE Field1 LIKE ?"  
+Dim command As OleDbCommand = New OleDbCommand(queryString, connection)  
+command.Parameters.Add("@p1", OleDbType.Char, 3).Value = "a"  
+Dim reader As OleDbDataReader = command.ExecuteReader()  
+```  
+  
+```csharp  
+string queryString = "SELECT * FROM Table1 WHERE Field1 LIKE ?";  
+OleDbCommand command = new OleDbCommand(queryString, connection);  
+command.Parameters.Add("@p1", OleDbType.Char, 3).Value = "a";  
+OleDbDataReader reader = command.ExecuteReader();  
+```  
+  
+ Isso ocorre porque o Oracle armazena o valor da coluna como "a" (preenchimento "a", com espaços até o comprimento de campo fixo de 3 à direita), que o Oracle não tratará como uma correspondência para o valor do parâmetro de "a" no caso de um `LIKE` comparação dos campos de comprimento fixo.  
+  
+ Para resolver esse problema, acrescente um caractere curinga de porcentagem ("%") para o valor do parâmetro (`"a%"`), ou usar um SQL `=` comparação em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria várias instâncias do <xref:System.Data.Odbc.OdbcParameter> por meio de <xref:System.Data.Odbc.OdbcParameterCollection> dentro de <xref:System.Data.Odbc.OdbcDataAdapter>. Esses parâmetros são usados para selecionar dados da fonte de dados e colocar os dados de <xref:System.Data.DataSet>. Este exemplo supõe que um <xref:System.Data.DataSet> e um <xref:System.Data.Odbc.OdbcDataAdapter> já foram criados usando o esquema apropriado, comandos e conexão.  
+  
+ [!code-csharp[Classic WebData OdbcParameter#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor base inicializa todos os campos com seus valores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.OdbcParameter#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.OdbcParameter#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter (string name, System.Data.Odbc.OdbcType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.Odbc.OdbcType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor(System.String,System.Data.Odbc.OdbcType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Data.Odbc.OdbcType" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Data.Odbc.OdbcType" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" /> que usa o nome do parâmetro e o tipo de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.OdbcParameter1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.OdbcParameter1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor fornecido no parâmetro <paramref name="type" /> é um tipo de dados de back-end inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="value">Um objeto <see cref="T:System.Data.Odbc.OdbcParameter" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" /> que usa o nome do parâmetro e um objeto <see cref="T:System.Data.Odbc.OdbcParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tenha cuidado ao usar essa sobrecarga do <xref:System.Data.Odbc.OdbcParameter> construtor para especificar valores de parâmetro de número inteiro. Como essa sobrecarga toma um `value` do tipo <xref:System.Object>, você deve converter o valor integral em um tipo <xref:System.Object> quando o valor for zero, como demonstra o exemplo C# a seguir.  
+  
+```  
+Parameter = new OdbcParameter("@pname", Convert.ToInt32(0));  
+```  
+  
+ Se você não realizar essa conversão, o compilador assumirá que você está tentando chamar o <xref:System.Data.Odbc.OdbcParameter.%23ctor%2A?displayProperty=nameWithType> sobrecarga de construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter (string name, System.Data.Odbc.OdbcType type, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.Odbc.OdbcType type, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor(System.String,System.Data.Odbc.OdbcType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Data.Odbc.OdbcType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Data.Odbc.OdbcType" />.</param>
+        <param name="size">O tamanho do parâmetro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" /> que usa o nome do parâmetro, o tipo de dados e o tamanho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.OdbcParameter2#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter2/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.OdbcParameter2#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor fornecido no parâmetro <paramref name="type" /> é um tipo de dados de back-end inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter (string name, System.Data.Odbc.OdbcType type, int size, string sourcecolumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.Odbc.OdbcType type, int32 size, string sourcecolumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor(System.String,System.Data.Odbc.OdbcType,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Data.Odbc.OdbcType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="sourcecolumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Data.Odbc.OdbcType" />.</param>
+        <param name="size">O tamanho do parâmetro.</param>
+        <param name="sourcecolumn">O nome da coluna de origem.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" /> que usa o nome do parâmetro, o tipo de dados, o tamanho e o nome da coluna de origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.OdbcParameter3#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter3/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.OdbcParameter3#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter3/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor fornecido no parâmetro <paramref name="type" /> é um tipo de dados de back-end inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter (string parameterName, System.Data.Odbc.OdbcType odbcType, int size, System.Data.ParameterDirection parameterDirection, bool isNullable, byte precision, byte scale, string srcColumn, System.Data.DataRowVersion srcVersion, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.Odbc.OdbcType odbcType, int32 size, valuetype System.Data.ParameterDirection parameterDirection, bool isNullable, unsigned int8 precision, unsigned int8 scale, string srcColumn, valuetype System.Data.DataRowVersion srcVersion, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor(System.String,System.Data.Odbc.OdbcType,System.Int32,System.Data.ParameterDirection,System.Boolean,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="odbcType" Type="System.Data.Odbc.OdbcType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="parameterDirection" Type="System.Data.ParameterDirection" />
+        <Parameter Name="isNullable" Type="System.Boolean" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="srcColumn" Type="System.String" />
+        <Parameter Name="srcVersion" Type="System.Data.DataRowVersion" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="odbcType">Um dos valores de <see cref="T:System.Data.Odbc.OdbcType" />.</param>
+        <param name="size">O tamanho do parâmetro.</param>
+        <param name="parameterDirection">Um dos valores de <see cref="T:System.Data.ParameterDirection" />.</param>
+        <param name="isNullable">
+          <see langword="true" /> se o valor do campo puder ser null; caso contrário, <see langword="false" />.</param>
+        <param name="precision">O número total de dígitos à esquerda e à direita do ponto decimal para o qual o <see cref="P:System.Data.Odbc.OdbcParameter.Value" /> é resolvido.</param>
+        <param name="scale">O número total de casas decimais para as quais o <see cref="P:System.Data.Odbc.OdbcParameter.Value" /> é resolvido.</param>
+        <param name="srcColumn">O nome da coluna de origem.</param>
+        <param name="srcVersion">Um dos valores de <see cref="T:System.Data.DataRowVersion" />.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que é o valor do <see cref="T:System.Data.Odbc.OdbcParameter" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" /> que usa o nome do parâmetro, o tipo de dados, o tamanho, o nome da coluna de origem, a direção de parâmetro, a precisão numérica e outras propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e exibe o <xref:System.Data.Odbc.OdbcParameter.ParameterName%2A>.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.OdbcParameter4#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter4/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.OdbcParameter4#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.OdbcParameter4/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor fornecido no parâmetro <paramref name="type" /> é um tipo de dados de back-end inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcParameter (string parameterName, System.Data.Odbc.OdbcType odbcType, int size, System.Data.ParameterDirection parameterDirection, byte precision, byte scale, string sourceColumn, System.Data.DataRowVersion sourceVersion, bool sourceColumnNullMapping, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.Odbc.OdbcType odbcType, int32 size, valuetype System.Data.ParameterDirection parameterDirection, unsigned int8 precision, unsigned int8 scale, string sourceColumn, valuetype System.Data.DataRowVersion sourceVersion, bool sourceColumnNullMapping, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.#ctor(System.String,System.Data.Odbc.OdbcType,System.Int32,System.Data.ParameterDirection,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Boolean,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="odbcType" Type="System.Data.Odbc.OdbcType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="parameterDirection" Type="System.Data.ParameterDirection" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="sourceVersion" Type="System.Data.DataRowVersion" />
+        <Parameter Name="sourceColumnNullMapping" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="odbcType">Um dos valores de <see cref="P:System.Data.Odbc.OdbcParameter.OdbcType" />.</param>
+        <param name="size">O tamanho do parâmetro.</param>
+        <param name="parameterDirection">Um dos valores de <see cref="T:System.Data.ParameterDirection" />.</param>
+        <param name="precision">O número total de dígitos à esquerda e à direita do ponto decimal para o qual o <see cref="P:System.Data.Odbc.OdbcParameter.Value" /> é resolvido.</param>
+        <param name="scale">O número total de casas decimais para as quais o <see cref="P:System.Data.Odbc.OdbcParameter.Value" /> é resolvido.</param>
+        <param name="sourceColumn">O nome da coluna de origem.</param>
+        <param name="sourceVersion">Um dos valores de <see cref="T:System.Data.DataRowVersion" />.</param>
+        <param name="sourceColumnNullMapping">
+          <see langword="true" />Se a coluna de origem correspondente for anulável; <see langword="false" /> se não for.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que é o valor do <see cref="T:System.Data.Odbc.OdbcParameter" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcParameter" /> que usa o nome do parâmetro, o tipo de dados, o tamanho, o nome da coluna de origem, a direção de parâmetro, a precisão numérica e outras propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e exibe o <xref:System.Data.Odbc.OdbcParameter.ParameterName%2A>.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+  Dim parameter As New OdbcParameter("Description", OdbcType.VarChar, 11, ParameterDirection.Output, True, 0, 0, "Description", DataRowVersion.Current, False, "garden hose")  
+  MessageBox.Show(parameter.ToString())  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+{  
+  OdbcParameter parameter = new OdbcParameter("Description",OdbcType.VarChar,  
+              11,ParameterDirection.Output,true,0,0,"Description",  
+              DataRowVersion.Current, false, "garden hose");  
+  MessageBox.Show(parameter.ToString());  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor fornecido no parâmetro <paramref name="type" /> é um tipo de dados de back-end inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public override System.Data.DbType DbType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DbType DbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.DbType" /> do parâmetro.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.DbType" />. O padrão é <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> e <xref:System.Data.Odbc.OdbcParameter.DbType%2A> estão vinculados. Portanto, definir o <xref:System.Data.Odbc.OdbcParameter.DbType%2A> alterações a <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> para um suporte <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A>.  
+  
+ Para obter uma lista dos tipos de dados com suporte, consulte o <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> membro. Para obter mais informações, consulte [parâmetros DataAdapter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+> [!NOTE]
+>  <xref:System.Data.DbType.Object>Não há suporte, o Microsoft .NET Framework Data Provider para ODBC.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama um **procedimento armazenado** com três parâmetros usar o ODBC provedor gerenciado.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.DbType#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.DbType/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.DbType#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.DbType/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade não foi definida como um <see cref="T:System.Data.DbType" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public override System.Data.ParameterDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ParameterDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ParameterDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o parâmetro é apenas de entrada, saída, bidirecional ou um parâmetro de valor retornado do procedimento armazenado.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.ParameterDirection" />. O padrão é <see langword="Input" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Data.ParameterDirection> é `Output`e a execução de associado <xref:System.Data.Odbc.OdbcCommand> não retorna um valor, o <xref:System.Data.Odbc.OdbcParameter> conterá um valor nulo. Valores nulos são tratados usando a <xref:System.DBNull> classe.  
+  
+ `Output`, `InputOut`, e `ReturnValue` parâmetros retornados ao chamar <xref:System.Data.Odbc.OdbcCommand.ExecuteReader%2A> não pode ser acessado até que você chame <xref:System.Data.Odbc.OdbcDataReader.Close%2A> ou `Dispose` sobre o <xref:System.Data.Odbc.OdbcDataReader>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateMyProc(connection As OdbcConnection)  
+  
+   Dim command As OdbcCommand = connection.CreateCommand()  
+   command.CommandText = "{ call MyProc(?,?,?) }"  
+   command.Parameters.Add("", OdbcType.Int).Value = 1  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 2  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 3  
+  
+End Sub  
+```  
+  
+```csharp  
+public void CreateMyProc(OdbcConnection connection)   
+{  
+   OdbcCommand command = connection.CreateCommand();  
+   command.CommandText = "{ call MyProc(?,?,?) }";  
+   command.Parameters.Add("", OdbcType.Int).Value = 1;  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 2;  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 3;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade não foi definida como um dos valores <see cref="T:System.Data.ParameterDirection" /> válidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public override bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o parâmetro aceita valores nulos.</summary>
+        <value>
+          <see langword="true" /> se valores nulos são aceitos; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores nulos são tratados usando a <xref:System.DBNull> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+   Dim parameter As New OdbcParameter("Description", OdbcType.VarChar, 88)  
+   parameter.IsNullable = True  
+   parameter.Direction = ParameterDirection.Output  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+{  
+   OdbcParameter parameter = new OdbcParameter("Description", OdbcType.VarChar, 88);  
+   parameter.IsNullable = true;  
+   parameter.Direction = ParameterDirection.Output;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OdbcType">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcType OdbcType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Odbc.OdbcType OdbcType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.OdbcType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Data.Common.DbProviderSpecificTypeProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.Odbc.OdbcType" /> do parâmetro.</summary>
+        <value>Um valor <see cref="T:System.Data.Odbc.OdbcType" /> que é o <see cref="T:System.Data.Odbc.OdbcType" /> do parâmetro. O padrão é <see langword="Nchar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> e <xref:System.Data.Odbc.OdbcParameter.DbType%2A> estão vinculados. Portanto, definir o <xref:System.Data.Odbc.OdbcParameter.DbType%2A> alterações a <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> para um suporte <xref:System.Data.Odbc.OdbcType>.  
+  
+ Para obter uma lista dos tipos de dados com suporte, consulte o <xref:System.Data.Odbc.OdbcType> membro. Para obter mais informações, consulte [parâmetros DataAdapter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public override string ParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.ParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de <see cref="T:System.Data.Odbc.OdbcParameter" />.</summary>
+        <value>O nome do <see cref="T:System.Data.Odbc.OdbcParameter" />. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de parâmetros nomeados, o provedor de .NET ODBC usa parâmetros posicionais são marcados com um ponto de interrogação (?) na sintaxe do texto de comando. Objetos de parâmetro no <xref:System.Data.Odbc.OdbcParameterCollection> e os parâmetros reais aceito pelo procedimento armazenado ou instrução SQL parametrizada correspondem uns aos outros com base na ordem em que o <xref:System.Data.Odbc.OdbcParameter> objetos são inseridos na coleção em vez de pelo nome do parâmetro. Nomes de parâmetro podem ser fornecidos, mas serão ignorados durante a vinculação de objeto de parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir presume que a fonte de dados tem um nome de tabela **MyTable** e um procedimento armazenado chamado MyProc é definido como:  
+  
+```  
+CREATE TABLE MyTable (col1 int, col2 smallmoney, col3 decimal)  
+CREATE PROC MyProc (@p1 int, @p2 smallmoney, @p3 decimal) AS INSERT INTO MyTable VALUES (@p1, @p2, @p3)  
+```  
+  
+ O exemplo a seguir cria parâmetros e chama o procedimento armazenado de MyProc:  
+  
+```vb  
+Public Sub CreateMyProc(connection As OdbcConnection)  
+  
+   Dim command As OdbcCommand = connection.CreateCommand()  
+  
+   command.CommandText = "{ call MyProc(?,?,?) }"  
+   command.Parameters.Add("", OdbcType.Int).Value = 1  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 2  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 3  
+  
+End Sub  
+```  
+  
+```csharp  
+public void CreateMyProc(OdbcConnection connection)   
+{  
+   OdbcCommand command = myConnection.CreateCommand();  
+  
+   command.CommandText = "{ call MyProc(?,?,?) }";  
+   command.Parameters.Add("", OdbcType.Int).Value = 1;  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 2;  
+   command.Parameters.Add("", OdbcType.Decimal).Value = 3;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public byte Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de dígitos usados para representar a propriedade <see cref="P:System.Data.Odbc.OdbcParameter.Value" />.</summary>
+        <value>O número máximo de dígitos usados para representar a propriedade <see cref="P:System.Data.Odbc.OdbcParameter.Value" />. O valor padrão é 0, que indica que o provedor de dados define a precisão do <see cref="P:System.Data.Odbc.OdbcParameter.Value" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como um valor diferente do valor no banco de dados depende da implementação do provedor de dados e pode retornar o erro código, truncate ou round dados.  
+  
+ O <xref:System.Data.Odbc.OdbcParameter.Precision%2A> propriedade afeta apenas os parâmetros cujos <xref:System.Data.Odbc.OdbcType> é `Decimal` ou `Numeric`. Para outros tipos de dados, <xref:System.Data.Odbc.OdbcParameter.Precision%2A> será ignorado.  
+  
+> [!NOTE]
+>  Não há suporte para o uso dessa propriedade para forçar os dados passados para o banco de dados. Para arredondar, truncate, ou forçar caso contrário, os dados antes de passar para o banco de dados, use o <xref:System.Math> que faz parte da classe de `System` namespace antes de atribuir um valor para o parâmetro `Value` propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+    Dim parameter As New OdbcParameter("Price", OdbcType.Decimal)  
+    parameter.Value = 3.1416  
+    parameter.Precision = 8  
+    parameter.Scale = 4  
+End Sub   
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+ {  
+    OdbcParameter parameter = new OdbcParameter("Price", OdbcType.Decimal);  
+    parameter.Value = 3.1416;  
+    parameter.Precision = 8;  
+    parameter.Scale = 4;  
+ }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDbType">
+      <MemberSignature Language="C#" Value="public override void ResetDbType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetDbType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.ResetDbType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o tipo associado a este <see cref="T:System.Data.Odbc.OdbcParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao executar um comando que inclui valores de parâmetro, código pode definir explicitamente o tipo de um parâmetro ou o parâmetro pode inferir o tipo do valor. Chamar este método redefine o parâmetro para que ele pode inferir novamente seu tipo do valor transmitido no parâmetro. Chamar esse método afeta tanto o <xref:System.Data.Odbc.OdbcParameter.DbType%2A> e <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> propriedades da <xref:System.Data.Odbc.OdbcParameter>.  
+  
+ Chamando <xref:System.Data.Odbc.OdbcParameter.ResetDbType%2A> redefine <xref:System.Data.Odbc.OdbcParameter.DbType%2A> para seu valor padrão (String).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetOdbcType">
+      <MemberSignature Language="C#" Value="public void ResetOdbcType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetOdbcType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.ResetOdbcType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o tipo associado a este <see cref="T:System.Data.Odbc.OdbcParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao executar um comando que inclui valores de parâmetro, código pode definir explicitamente o tipo de um parâmetro ou o parâmetro pode inferir o tipo do valor. Chamar este método redefine o parâmetro para que ele pode inferir novamente seu tipo do valor transmitido no parâmetro. Chamar esse método afeta tanto o <xref:System.Data.Odbc.OdbcParameter.DbType%2A> e <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> propriedades da <xref:System.Data.Odbc.OdbcParameter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public byte Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de casas decimais para as quais o <see cref="P:System.Data.Odbc.OdbcParameter.Value" /> é resolvido.</summary>
+        <value>O número de casas decimais para o qual o <see cref="P:System.Data.Odbc.OdbcParameter.Value" /> é resolvido. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcParameter.Scale%2A> propriedade é usada somente para parâmetros de entrada numéricos e decimais.  
+  
+ O efeito de definir esta propriedade como um valor diferente do valor no banco de dados depende da implementação do provedor de dados e pode retornar um código de erro ou truncar ou dados de ida e volta.  
+  
+ O <xref:System.Data.Odbc.OdbcParameter.Scale%2A> propriedade afeta apenas os parâmetros cujos <xref:System.Data.Odbc.OdbcType> é `Decimal` ou `Numeric`. Para outros tipos de dados, <xref:System.Data.Odbc.OdbcParameter.Scale%2A> será ignorado.  
+  
+ Ao usar o SQL Server Native Client 10 (ou posterior) para associar um parâmetro cujo tipo é Decimal, Numeric, VarNumeric, DBDate ou DBTimeStamp, você deve especificar manualmente um valor de escala apropriado.  
+  
+> [!NOTE]
+>  Não há suporte para o uso dessa propriedade para forçar os dados passados para o banco de dados. Para arredondar, truncate, ou forçar caso contrário, os dados antes de passar para o banco de dados, use o <xref:System.Math> que faz parte da classe de `System` namespace antes de atribuir um valor para o parâmetro `Value` propriedade.  
+  
+> [!NOTE]
+>  Provedores de dados do .NET framework que estão incluídos com o .NET Framework versão 1.0 não verificam a `scale` de <xref:System.Decimal> valores de parâmetro. Isso pode causar modificados dados inseridos na fonte de dados. Se você estiver usando o .NET Framework versão 1.0, validar o s`cale` de d`ecimal` valores antes de definir o valor do parâmetro. Quando você usa o .NET Framework versão 1.1 ou posterior, `scale` valores que excedem o `decimal` escala do parâmetro só pode estar truncada em escala, se esse for o comportamento do ODBC driver subjacente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+    Dim parameter As New OdbcParameter("Price", OdbcType.Decimal)  
+    parameter.Value = 3.1416  
+    parameter.Precision = 8  
+    parameter.Scale = 4  
+End Sub   
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+ {  
+    OdbcParameter parameter = new OdbcParameter("Price", OdbcType.Decimal);  
+    parameter.Value = 3.1416;  
+    parameter.Precision = 8;  
+    parameter.Scale = 4;  
+ }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public override int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo dos dados da coluna.</summary>
+        <value>O tamanho máximo dos dados da coluna. O valor padrão é inferido do valor do parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcParameter.Size%2A> propriedade é usada para tipos binários e de cadeia de caracteres.  
+  
+ Para dados de cadeia de caracteres de tipos de dados não-String e ANSI de <xref:System.Data.Odbc.OdbcParameter.Size%2A> propriedade se refere ao número de bytes. Para dados de cadeia de caracteres Unicode, <xref:System.Data.Odbc.OdbcParameter.Size%2A> se refere ao número de caracteres. A contagem de cadeias de caracteres não inclui o caractere de terminação.  
+  
+ Para tipos de dados de comprimento variável, `Size` descreve a quantidade máxima de dados para transmitir para o servidor. Por exemplo, para um valor de cadeia de caracteres Unicode, `Size` pode ser usado para limitar a quantidade de dados enviados ao servidor para os caracteres de cem primeiro.  
+  
+ Para parâmetros de saída e bidirecionais e valores de retorno, você deve definir o valor de `Size`. Isso não é necessário para parâmetros de entrada, e se não foi explicitamente definido, o valor é inferido do tamanho real do parâmetro especificado quando uma instrução parametrizada é executada.  
+  
+ O <xref:System.Data.Common.DbParameter.DbType%2A>, <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A>, e <xref:System.Data.Odbc.OdbcParameter.Size%2A> propriedades de um parâmetro podem ser inferidas definindo <xref:System.Data.Odbc.OdbcParameter.Value%2A>. Portanto, você não precisa especificá-los. No entanto, eles não são expostos no <xref:System.Data.Odbc.OdbcParameter> as configurações de propriedade. Por exemplo, se o tamanho do parâmetro foi inferido, `Size` não tem valor inferido após a execução da instrução.  
+  
+> [!NOTE]
+>  Para uma `OdbcParameter` com um <xref:System.Data.Odbc.OdbcParameter.Direction%2A> de `ParameterDirection.Output`, `ParameterDirection.InputOutput`, ou `ParameterDirection.ReturnValue`, uma exceção é lançada quando o comando é executado, se o tamanho do valor retornado pela fonte de dados exceder especificado `Size` do <xref:System.Data.Odbc.OdbcParameter>.  
+  
+ Para tipos de dados de comprimento fixo, o valor de `Size` será ignorado. Ele pode ser recuperado para fins informativos e retorna o número máximo de bytes que o provedor usa ao transmitir o valor do parâmetro para o servidor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+    Dim myValue As String = "12 foot scarf - multiple colors, one previous owner"  
+    Dim parameter As New OdbcParameter("Description", OdbcType.VarChar)  
+    parameter.Direction = ParameterDirection.Output  
+    parameter.Size = myValue.Length  
+    parameter.Value = myValue  
+End Sub   
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+ {  
+    string myValue = "12 foot scarf - multiple colors, one previous owner";  
+    OdbcParameter parameter = new OdbcParameter("Description", OdbcType.VarChar);  
+    parameter.Direction = ParameterDirection.Output;  
+    parameter.Size = myValue.Length;  
+    parameter.Value = myValue;  
+ }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumn">
+      <MemberSignature Language="C#" Value="public override string SourceColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.SourceColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da coluna de origem mapeada para o <see cref="T:System.Data.DataSet" /> e usada para carregar ou retornar o <see cref="P:System.Data.Odbc.OdbcParameter.Value" />.</summary>
+        <value>O nome da coluna de origem que será usado para definir o valor desse parâmetro. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Data.Odbc.OdbcParameter.SourceColumn%2A> for definida como algo diferente de uma cadeia de caracteres vazia, o valor do parâmetro é recuperado da coluna com o `SourceColumn` nome. Se <xref:System.Data.Odbc.OdbcParameter.Direction%2A> é definido como `Input`, o valor é extraído o <xref:System.Data.DataSet>. Se `Direction` é definido como `Output`, o valor é obtido da fonte de dados. Um `Direction` de `InputOutput` é uma combinação de ambos.  
+  
+ Para obter mais informações sobre como usar o <xref:System.Data.Odbc.OdbcParameter.SourceColumn%2A> propriedade, consulte [parâmetros DataAdapter](~/docs/framework/data/adonet/dataadapter-parameters.md) e [Atualizar fontes de dados com DataAdapters](~/docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+    Dim parameter As New OdbcParameter("Description", OdbcType.VarChar, 88)  
+    parameter.SourceColumn = "Description"  
+End Sub   
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+ {  
+    OdbcParameter parameter = new OdbcParameter("Description", OdbcType.VarChar, 88);  
+    parameter.SourceColumn = "Description";  
+ }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumnNullMapping">
+      <MemberSignature Language="C#" Value="public override bool SourceColumnNullMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SourceColumnNullMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.SourceColumnNullMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém um valor que indica se a coluna de origem permite valor nulo. Isso permite <see cref="T:System.Data.Common.DbCommandBuilder" /> corretamente gerar instruções de atualização para colunas anuláveis.</summary>
+        <value>
+          <see langword="true" /> se a coluna de origem for nula; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcParameter.SourceColumnNullMapping%2A>é usado pelo <xref:System.Data.Common.DbCommandBuilder> ao gerar comandos de atualização corretamente ao lidar com colunas anuláveis. Em geral, uso de <xref:System.Data.Odbc.OdbcParameter.SourceColumnNullMapping%2A> é limitado aos desenvolvedores herdando <xref:System.Data.Common.DbCommandBuilder>.  
+  
+ <xref:System.Data.Common.DbCommandBuilder>usa essa propriedade para determinar se a coluna de origem é anulável e define essa propriedade como `true` se ele for anulável, e `false` se não for. Quando <xref:System.Data.Common.DbCommandBuilder> é gerar sua instrução de atualização, ele examina o <xref:System.Data.Odbc.OdbcParameter.SourceColumnNullMapping%2A> para cada parâmetro. Se a propriedade for `true`, <xref:System.Data.Common.DbCommandBuilder> gera um cláusulas WHERE, como o exemplo a seguir. Esta expressão de consulta "FieldName" representa o nome do campo:  
+  
+```  
+((@IsNull_FieldName = 1 AND FieldName IS NULL) OR   
+  (FieldName = @Original_FieldName))  
+```  
+  
+ Se <xref:System.Data.Odbc.OdbcParameter.SourceColumnNullMapping%2A> para o campo é false, <xref:System.Data.Common.DbCommandBuilder> gera a seguinte cláusula WHERE:  
+  
+```  
+FieldName = @OriginalFieldName  
+```  
+  
+ Além disso, @IsNull_FieldName contém 1 se o campo de origem contém null e 0 se não existir. Esse mecanismo permite uma otimização de desempenho no SQL Server e fornece código comum que funciona em vários provedores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceVersion">
+      <MemberSignature Language="C#" Value="public override System.Data.DataRowVersion SourceVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowVersion SourceVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.SourceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.DataRowVersion" /> para usar ao carregar <see cref="P:System.Data.Odbc.OdbcParameter.Value" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.DataRowVersion" />. O padrão é atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `SourceVersion` é usado pelo <xref:System.Data.Odbc.OdbcDataAdapter.UpdateCommand%2A> durante um <xref:System.Data.Common.DbDataAdapter.Update*> operação para determinar se o valor do parâmetro está definido como atual ou Original. Isso permite que as chaves primárias a serem atualizadas.  
+  
+ Essa propriedade é definida para a versão do <xref:System.Data.DataRow> usado por qualquer o `Item` propriedade (`DataRow` indexador), ou o <xref:System.Data.DataRow.GetChildRows%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+    Dim parameter As New OdbcParameter("Description", OdbcType.VarChar, 88)  
+    parameter.SourceColumn = "Description"  
+    parameter.SourceVersion = DataRowVersion.Current  
+End Sub   
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+ {  
+    OdbcParameter parameter = new OdbcParameter("Description", OdbcType.VarChar, 88);  
+    parameter.SourceColumn = "Description";  
+    parameter.SourceVersion = DataRowVersion.Current;  
+ }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Um novo <see cref="T:System.Object" /> que é uma cópia dessa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Odbc.OdbcParameter> é convertida em uma interface de <xref:System.ICloneable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameter.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que contém o <see cref="P:System.Data.Odbc.OdbcParameter.ParameterName" />.</summary>
+        <returns>Uma cadeia de caracteres que contém o <see cref="P:System.Data.Odbc.OdbcParameter.ParameterName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do parâmetro.</summary>
+        <value>Um <see cref="T:System.Object" /> que é o valor do parâmetro. O valor padrão é null.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para parâmetros de entrada, o valor é vinculado ao <xref:System.Data.Odbc.OdbcCommand> que é enviado ao servidor. Para parâmetros de valor de retorno e saída, o valor é definido na conclusão do <xref:System.Data.Odbc.OdbcCommand> e depois o <xref:System.Data.Odbc.OdbcDataReader> está fechado.  
+  
+ Quando você envia um valor de parâmetro nulo para o servidor, o usuário deve especificar <xref:System.DBNull>, não null. Um valor nulo no sistema é um objeto vazio que não tem nenhum valor. <xref:System.DBNull> é usado para representar valores nulos. Se o parâmetro é usado para chamar um procedimento armazenado com parâmetros que têm valores padrão, definindo <xref:System.Data.Odbc.OdbcParameter.Value%2A> como nulo faz com que o valor padrão a ser usado.  
+  
+ Se o aplicativo especifica o tipo de banco de dados, o valor associado é convertido para esse tipo de quando o provedor envia os dados para o servidor. O provedor tenta converter qualquer tipo de valor se ele dá suporte a <xref:System.IConvertible> interface. Erros de conversão podem resultar se o tipo especificado não é compatível com o valor.  
+  
+ Tanto o <xref:System.Data.Odbc.OdbcParameter.DbType%2A> e <xref:System.Data.Odbc.OdbcParameter.OdbcType%2A> propriedades podem ser inferidas definindo <xref:System.Data.Odbc.OdbcParameter.Value%2A>. Se aplicável, o tamanho, precisão e escala também será de <xref:System.Data.Odbc.OdbcParameter.Value%2A> quando a instrução parametrizada é executada. No entanto, valores deduzidos não são expostos ao usuário.  
+  
+ O <xref:System.Data.Odbc.OdbcParameter.Value%2A> propriedade é substituída pelo `Update` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcParameter> e define algumas de suas propriedades.  
+  
+```vb  
+Public Sub CreateOdbcParameter()  
+    Dim parameter As New OdbcParameter("Description", OdbcType.VarChar, 88)  
+    parameter.Value = "garden hose"  
+End Sub   
+```  
+  
+```csharp  
+public void CreateOdbcParameter()   
+ {  
+    OdbcParameter parameter = new OdbcParameter("Description", OdbcType.VarChar, 88);  
+    parameter.Value = "garden hose";  
+ }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,578 @@
+<Type Name="StatisticFormula" FullName="System.Windows.Forms.DataVisualization.Charting.StatisticFormula">
+  <TypeSignature Language="C#" Value="public class StatisticFormula" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StatisticFormula extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.StatisticFormula" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Calcula fórmulas estatísticas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fórmulas podem ser agrupadas livremente nas seguintes categorias: distribuições, incluindo distribuições inversas; testes; e fórmulas básicas de estatísticas. Cada grupo tem características comuns em relação a seus valores de entrada e de retorno.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anova">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AnovaResult Anova (double probability, string inputSeriesNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.AnovaResult Anova(float64 probability, string inputSeriesNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Anova(System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AnovaResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="inputSeriesNames" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="inputSeriesNames">Uma lista delimitada por vírgulas de nomes de entrada da série.</param>
+        <summary>Executa um teste ANOVA para determinar se há uma diferença estatisticamente significativa entre os valores médios de dois ou mais grupos de dados.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.AnovaResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um teste ANOVA é usado para testar a diferença entre o meio de dois ou mais grupos de dados.  
+  
+ Dois ou mais grupos de dados da série devem ser especificados, e cada série deve ter o mesmo número de pontos de dados; Caso contrário, será gerada uma exceção.  
+  
+ Se uma série de entrada especificada não existe no <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> no momento da chamada de método, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BetaFunction">
+      <MemberSignature Language="C#" Value="public double BetaFunction (double m, double n);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 BetaFunction(float64 m, float64 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.BetaFunction(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Double" />
+        <Parameter Name="n" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="m">O primeiro valor da função beta.</param>
+        <param name="n">O segundo valor para a função beta.</param>
+        <summary>Retorna o valor da função de beta para dois valores fornecidos.</summary>
+        <returns>Um <see langword="double" /> valor que representa a função de beta para os dois valores fornecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o valor da função beta para dois valores fornecidos são especificadas por `m` e `n`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlation">
+      <MemberSignature Language="C#" Value="public double Correlation (string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Correlation(string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Correlation(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="firstInputSeriesName">O primeiro nome da série de entrada.</param>
+        <param name="secondInputSeriesName">O nome da segunda série de entrada.</param>
+        <summary>Retorna o valor de correlação para duas séries de dados.</summary>
+        <returns>Um valor <see langword="double" /> que representa a correlação entre duas séries de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Correlação mede a relação entre dois conjuntos de dados que são dimensionados para serem independentes da unidade de medida. O <xref:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Correlation%2A> método retorna a covariância de dois conjuntos de dados dividida pelo produto de seus desvios padrão e sempre varia de -1 a 1.  
+  
+ Correlação de uso para determinar se dois intervalos de dados se movem juntos; Isto é, se valores altos de um conjunto estão associados com valores altos de outro (correlação positiva), se valores baixos de um conjunto estão associados com valores altos de outro (correlação negativa) ou se valores de dois conjuntos não estão relacionados (correlação próxima de zero).  
+  
+ Se uma série de entrada especificada não existe na coleção de séries no momento da chamada de método, uma exceção será lançada. Também será gerada uma exceção se a série especificada não tem o mesmo número de pontos de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Covariance">
+      <MemberSignature Language="C#" Value="public double Covariance (string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Covariance(string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Covariance(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="firstInputSeriesName">O primeiro nome da série de entrada.</param>
+        <param name="secondInputSeriesName">O nome da segunda série de entrada.</param>
+        <summary>Retorna o valor de covariância para a série de dados.</summary>
+        <returns>Um <see langword="double" /> valor que representa a covariância entre as séries de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FDistribution">
+      <MemberSignature Language="C#" Value="public double FDistribution (double value, int firstDegreeOfFreedom, int secondDegreeOfFreedom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 FDistribution(float64 value, int32 firstDegreeOfFreedom, int32 secondDegreeOfFreedom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.FDistribution(System.Double,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="firstDegreeOfFreedom" Type="System.Int32" />
+        <Parameter Name="secondDegreeOfFreedom" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de F.</param>
+        <param name="firstDegreeOfFreedom">Primeiro grau de liberdade.</param>
+        <param name="secondDegreeOfFreedom">Segundo grau de liberdade.</param>
+        <summary>Retorna a probabilidade cumulativa de função de distribuição F.</summary>
+        <returns>Um <see langword="double" /> valor que representa a probabilidade cumulativa de função de distribuição F.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.FTestResult FTest (double probability, string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.FTestResult FTest(float64 probability, string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.FTest(System.Double,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.FTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="firstInputSeriesName">Nome da série de entrada primeiro.</param>
+        <param name="secondInputSeriesName">Segundo nome da série de entrada.</param>
+        <summary>Executa um teste de F duas amostras usando a distribuição F. Este teste é usado para determinar se os exemplos têm diferentes variações.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.FTestResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GammaFunction">
+      <MemberSignature Language="C#" Value="public double GammaFunction (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GammaFunction(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.GammaFunction(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">A variável de entrada.</param>
+        <summary>Retorna o valor da função gama para a variável especificada.</summary>
+        <returns>Um valor <see langword="double" /> que representa a função gama.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InverseFDistribution">
+      <MemberSignature Language="C#" Value="public double InverseFDistribution (double probability, int firstDegreeOfFreedom, int secondDegreeOfFreedom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 InverseFDistribution(float64 probability, int32 firstDegreeOfFreedom, int32 secondDegreeOfFreedom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.InverseFDistribution(System.Double,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="firstDegreeOfFreedom" Type="System.Int32" />
+        <Parameter Name="secondDegreeOfFreedom" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="firstDegreeOfFreedom">Primeiro grau de liberdade.</param>
+        <param name="secondDegreeOfFreedom">Segundo grau de liberdade.</param>
+        <summary>Retorna o inverso da distribuição cumulativa F.</summary>
+        <returns>Um valor <see langword="double" /> da função de distribuição F inversa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o valor F a probabilidade da distribuição F determinado.  
+  
+ A distribuição F pode ser usada em um teste F que compara o grau de variabilidade em dois conjuntos de dados.  
+  
+ Esse método pode retornar uma exceção dependendo dos valores de parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Condição: não é possível dar continuidade ao cálculo usando os valores de parâmetro especificados devido a uma limitação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InverseNormalDistribution">
+      <MemberSignature Language="C#" Value="public double InverseNormalDistribution (double probability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 InverseNormalDistribution(float64 probability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.InverseNormalDistribution(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="probability" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <summary>Retorna o inverso da distribuição cumulativa normal padrão.</summary>
+        <returns>Um valor <see langword="double" /> da função de distribuição cumulativa normal padrão inversa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o valor F a probabilidade da distribuição F determinado.  
+  
+ Presume-se que a distribuição possui uma média de 0 (zero) e um desvio padrão de um.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InverseTDistribution">
+      <MemberSignature Language="C#" Value="public double InverseTDistribution (double probability, int degreeOfFreedom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 InverseTDistribution(float64 probability, int32 degreeOfFreedom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.InverseTDistribution(System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="degreeOfFreedom" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="degreeOfFreedom">O grau de liberdade.</param>
+        <summary>Retorna o valor t inverso da distribuição de t de estudantes como uma função de probabilidade e o grau de liberdade.</summary>
+        <returns>Um <see langword="double" /> valor que representa a distribuição T de inverso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o valor t para a probabilidade da distribuição T determinado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mean">
+      <MemberSignature Language="C#" Value="public double Mean (string inputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Mean(string inputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Mean(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputSeriesName">Nome da série de entrada.</param>
+        <summary>Retorna a média de todos os pontos de dados armazenados na série especificada.</summary>
+        <returns>Um <see langword="double" /> valor que representa a média de todos os pontos de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para calcular a média (ou seja, a média) dos pontos de armazenadas em uma série.  
+  
+ Se a série de entrada especificada não existe no <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> no momento da chamada de método, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Median">
+      <MemberSignature Language="C#" Value="public double Median (string inputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Median(string inputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Median(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputSeriesName">Nome da série de entrada.</param>
+        <summary>Retorna a mediana de todos os pontos de dados na série especificada.</summary>
+        <returns>Um valor <see langword="double" /> que representa a mediana.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para calcular a mediana dos pontos de armazenadas em uma série.  
+  
+ A mediana é o valor intermediário de um conjunto de exemplo, em que metade dos membros forem maior em tamanho e metade os membros são menor em tamanho.  
+  
+ Se a série de entrada especificada não existe no <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> no momento da chamada de método, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalDistribution">
+      <MemberSignature Language="C#" Value="public double NormalDistribution (double zValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 NormalDistribution(float64 zValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.NormalDistribution(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="zValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="zValue">O valor de Z para a qual a probabilidade é necessária.</param>
+        <summary>Retorna a probabilidade da função de distribuição cumulativa normal padrão.</summary>
+        <returns>Um valor de <see langword="double" /> da função de distribuição cumulativa normal padrão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TDistribution">
+      <MemberSignature Language="C#" Value="public double TDistribution (double value, int degreeOfFreedom, bool oneTail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 TDistribution(float64 value, int32 degreeOfFreedom, bool oneTail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.TDistribution(System.Double,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="degreeOfFreedom" Type="System.Int32" />
+        <Parameter Name="oneTail" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor T</param>
+        <param name="degreeOfFreedom">Grau de liberdade</param>
+        <param name="oneTail">Se <see langword="true" />, uma distribuição unicaudal for usada; caso contrário, uma distribuição bicaudal é usada.</param>
+        <summary>Retorna a probabilidade da distribuição T (distribuição de Student).</summary>
+        <returns>Um <see langword="double" /> valor que representa uma função de distribuição T cumulativa.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TTestEqualVariances">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TTestResult TTestEqualVariances (double hypothesizedMeanDifference, double probability, string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.TTestResult TTestEqualVariances(float64 hypothesizedMeanDifference, float64 probability, string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.TTestEqualVariances(System.Double,System.Double,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hypothesizedMeanDifference" Type="System.Double" />
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hypothesizedMeanDifference">Diferença média hipotética.</param>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="firstInputSeriesName">Nome da série de entrada primeiro.</param>
+        <param name="secondInputSeriesName">Segundo nome da série de entrada.</param>
+        <summary>Executa um teste de T usando distribuição (T) Student com variâncias iguais.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.TTestResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TTestPaired">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TTestResult TTestPaired (double hypothesizedMeanDifference, double probability, string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.TTestResult TTestPaired(float64 hypothesizedMeanDifference, float64 probability, string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.TTestPaired(System.Double,System.Double,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hypothesizedMeanDifference" Type="System.Double" />
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hypothesizedMeanDifference">Diferença média hipotética.</param>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="firstInputSeriesName">Nome da série de entrada primeiro.</param>
+        <param name="secondInputSeriesName">Segundo nome da série de entrada.</param>
+        <summary>Executa um teste de T usando distribuição (T) Student com exemplos de emparelhados. Isso é útil quando há um emparelhamento natural de observações nas amostras.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.TTestResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TTestUnequalVariances">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TTestResult TTestUnequalVariances (double hypothesizedMeanDifference, double probability, string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.TTestResult TTestUnequalVariances(float64 hypothesizedMeanDifference, float64 probability, string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.TTestUnequalVariances(System.Double,System.Double,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hypothesizedMeanDifference" Type="System.Double" />
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hypothesizedMeanDifference">Diferença média hipotética.</param>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="firstInputSeriesName">Nome da série de entrada primeiro.</param>
+        <param name="secondInputSeriesName">Segundo nome da série de entrada.</param>
+        <summary>Executa um teste de T usando distribuição (T) Student com variâncias diferentes.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.TTestResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variance">
+      <MemberSignature Language="C#" Value="public double Variance (string inputSeriesName, bool sampleVariance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Variance(string inputSeriesName, bool sampleVariance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.Variance(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputSeriesName" Type="System.String" />
+        <Parameter Name="sampleVariance" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inputSeriesName">O nome da série de entrada.</param>
+        <param name="sampleVariance">
+          <see langword="True" />Se os dados são uma amostra da população; <see langword="false" /> se os dados são a população inteira.</param>
+        <summary>Retorna a variância de uma série.</summary>
+        <returns>Um <see langword="double" /> valor que representa a variação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ZTestResult ZTest (double hypothesizedMeanDifference, double varianceFirstGroup, double varianceSecondGroup, double probability, string firstInputSeriesName, string secondInputSeriesName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.ZTestResult ZTest(float64 hypothesizedMeanDifference, float64 varianceFirstGroup, float64 varianceSecondGroup, float64 probability, string firstInputSeriesName, string secondInputSeriesName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StatisticFormula.ZTest(System.Double,System.Double,System.Double,System.Double,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ZTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hypothesizedMeanDifference" Type="System.Double" />
+        <Parameter Name="varianceFirstGroup" Type="System.Double" />
+        <Parameter Name="varianceSecondGroup" Type="System.Double" />
+        <Parameter Name="probability" Type="System.Double" />
+        <Parameter Name="firstInputSeriesName" Type="System.String" />
+        <Parameter Name="secondInputSeriesName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hypothesizedMeanDifference">Diferença média hipotética.</param>
+        <param name="varianceFirstGroup">Variância do primeiro grupo.</param>
+        <param name="varianceSecondGroup">Variância do segundo grupo.</param>
+        <param name="probability">O valor alfa, que é a probabilidade de que a hipótese seja rejeitada. O intervalo permitido é 0-1.</param>
+        <param name="firstInputSeriesName">Nome da série de entrada primeiro.</param>
+        <param name="secondInputSeriesName">Segundo nome da série de entrada.</param>
+        <summary>Executa um teste de Z usando a distribuição Normal.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ZTestResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

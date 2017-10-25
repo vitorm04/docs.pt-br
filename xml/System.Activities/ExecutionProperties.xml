@@ -1,0 +1,198 @@
+<Type Name="ExecutionProperties" FullName="System.Activities.ExecutionProperties">
+  <TypeSignature Language="C#" Value="public sealed class ExecutionProperties : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExecutionProperties extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ExecutionProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a coleção de propriedades em um escopo específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o armazenamento local (TLS) de segmento, CLR mantém um contexto de execução para cada segmento. Este contexto de execução controla a propriedades de thread conhecido como a identidade do segmento, a transação de ambiente, e a permissão atual definido, bem como propriedades de thread definido pelo usuário como chamado slots.  
+  
+ Ao contrário de programas diretamente direcionando o CLR, programas de fluxo de trabalho são árvores hierarquicamente no escopo do que executar em um ambiente de thread independente. Isso significa que os mecanismos padrão de TLS diretamente não podem ser usados para determinar qual contexto está no escopo de um item de trabalho determinado. Por exemplo, duas ramificações paralelas de execução podem usar diferentes identidades ainda o Agendador de intercalação de sua execução no mesmo thread CLR.  
+  
+ Propriedades de execução permitem que uma atividade para declarar quais propriedades estão no escopo de sua subárvore como também fornecem ganchos para configurar e subdividir TLS corretamente interoperar com objetos CLR.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, object property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="property" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade.</param>
+        <param name="property">O objeto que representa a propriedade.</param>
+        <summary>Registra uma nova propriedade usando o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object property, bool onlyVisibleToPublicChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, object property, bool onlyVisibleToPublicChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Add(System.String,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="property" Type="System.Object" />
+        <Parameter Name="onlyVisibleToPublicChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade.</param>
+        <param name="property">O objeto que representa a propriedade.</param>
+        <param name="onlyVisibleToPublicChildren">Um valor que determina se essa propriedade é visível para os filhos da atividade do proprietário.</param>
+        <summary>Registra uma propriedade usando a visibilidade de nome e o filho especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public object Find (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Find(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Find(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade.</param>
+        <summary>Retorna a propriedade mais próxima do nome fornecido.</summary>
+        <returns>A propriedade mais próxima do nome fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.ExecutionProperties.Find%2A>Localiza o mais próximo a propriedade visible usando hierárquica de escopo. Se duas propriedades têm o mesmo nome, a propriedade mais próxima no escopo do pai será retornada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera através da coleção de propriedades.</summary>
+        <returns>Um enumerador que itera através da coleção de propriedades.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ExecutionProperties.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há propriedades registradas no escopo atual.</summary>
+        <value>
+          <see langword="true" />Se houver propriedades registradas; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade para cancelar o registro.</param>
+        <summary>Cancela o registro a propriedade com o nome especificado.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade foi cancelada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades são canceladas automaticamente quando a atividade é concluída. Esse método pode ser usado para cancelar o registro de uma propriedade antes da conclusão da atividade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera através da coleção de propriedades.</summary>
+        <returns>Um enumerador que itera através da coleção de propriedades.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

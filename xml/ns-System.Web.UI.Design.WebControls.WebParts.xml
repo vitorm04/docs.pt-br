@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design.WebControls.WebParts">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.Design.WebControls.WebParts" /> namespace contém classes que oferecem suporte em tempo de design para controles derivados de classes de <see cref="N:System.Web.UI.WebControls.WebParts" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

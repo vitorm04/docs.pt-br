@@ -1,0 +1,225 @@
+<Type Name="SoapServerFormatterSink" FullName="System.Runtime.Remoting.Channels.SoapServerFormatterSink">
+  <TypeSignature Language="C#" Value="public class SoapServerFormatterSink : System.Runtime.Remoting.Channels.IServerChannelSink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapServerFormatterSink extends System.Object implements class System.Runtime.Remoting.Channels.IChannelSinkBase, class System.Runtime.Remoting.Channels.IServerChannelSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IServerChannelSink</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a implementação de um coletor do formatador do servidor que usa o <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fluxo da solicitação propaga do coletor de transporte de servidor por meio de Coletores de canal do servidor até atingir o coletor do formatador adequado. O coletor do formatador desserializa a mensagem e passa por meio do pipeline. Um coletor de expedição especial é inserido no final da cadeia de coletor de canal por <xref:System.Runtime.Remoting.Channels.ChannelServices.CreateServerChannelSinkChain%2A?displayProperty=nameWithType> método, que é chamado pelos canais de servidor para criar o servidor cadeias de coletor de canal. Quando a mensagem atingir o coletor de expedição, o coletor de expedição passa a mensagem para a infraestrutura de comunicação remota.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|`includeVersions`|Especifica se o formatador incluirá informações de controle de versão. Os valores são `true` ou `false`.|  
+|`strictBinding`|Indica que um formatador de recebimento primeiro tentará identificar o tipo usando as informações de versão completa se ela existe antes de usar somente o nome do tipo e o nome de assembly sem informações de versão. Os valores são `true` ou `false`. O padrão para ambos os formatadores fornecidos pelo sistema é `false`.|  
+|`typeFilterLevel`|Um valor de cadeia de caracteres especificando o nível de desserialização automática as tentativas de um canal do servidor. Valores com suporte são `Low` (o padrão) e `Full`. Para obter detalhes sobre os níveis de desserialização, consulte [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).<br /><br /> Essa propriedade é suportada somente pelo .NET Framework versão 1.1 nas seguintes plataformas: família Windows 98, Windows NT 4.0, Windows Millennium Edition, Windows 2000, Windows XP Home Edition, Windows XP Professional e Windows Server 2003.|  
+  
+> [!IMPORTANT]
+>  Usando uma instância do objeto com dados não confiáveis ou em um canal não seguro é um risco de segurança. Use esse objeto somente com dados confiáveis e em um canal seguro. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerFormatterSink (System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol protocol, System.Runtime.Remoting.Channels.IServerChannelSink nextSink, System.Runtime.Remoting.Channels.IChannelReceiver receiver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Remoting.Channels.SoapServerFormatterSink/Protocol protocol, class System.Runtime.Remoting.Channels.IServerChannelSink nextSink, class System.Runtime.Remoting.Channels.IChannelReceiver receiver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.#ctor(System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol,System.Runtime.Remoting.Channels.IServerChannelSink,System.Runtime.Remoting.Channels.IChannelReceiver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protocol" Type="System.Runtime.Remoting.Channels.SoapServerFormatterSink+Protocol" />
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Channels.IServerChannelSink" />
+        <Parameter Name="receiver" Type="System.Runtime.Remoting.Channels.IChannelReceiver" />
+      </Parameters>
+      <Docs>
+        <param name="protocol">O <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol" /> que será usado com a instância atual do <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />.</param>
+        <param name="nextSink">O coletor Avançar na cadeia de coletor de canal.</param>
+        <param name="receiver">Indica o canal que receberá as mensagens serializadas pela nova instância do <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncProcessResponse">
+      <MemberSignature Language="C#" Value="public void AsyncProcessResponse (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AsyncProcessResponse(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Uma pilha de Coletores à esquerda para o coletor de transporte do servidor.</param>
+        <param name="state">Informações associadas com o coletor atual, gerado no lado de solicitação e necessária no lado de resposta.</param>
+        <param name="msg">A mensagem de resposta.</param>
+        <param name="headers">Os cabeçalhos para adicionar ao cabeçalho da mensagem de retorno ao cliente.</param>
+        <param name="stream">O cabeçalho de fluxo de volta para o coletor de transporte.</param>
+        <summary>Solicitações de processamento do coletor atual da resposta de uma chamada de método enviada de forma assíncrona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetResponseStream (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetResponseStream(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Uma pilha de Coletores à esquerda para o coletor de transporte do servidor.</param>
+        <param name="state">Informações associadas com o coletor atual, gerado no lado de solicitação e necessária no lado de resposta.</param>
+        <param name="msg">A mensagem de resposta que deve ser serializado.</param>
+        <param name="headers">Os cabeçalhos para colocar no fluxo de resposta ao cliente.</param>
+        <summary>Retorna o <see cref="T:System.IO.Stream" /> até que a mensagem de resposta fornecida é a ser serializado.</summary>
+        <returns>O <see cref="T:System.IO.Stream" /> até que a mensagem de resposta fornecida é a ser serializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando um fluxo de resposta deve ser criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextChannelSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.NextChannelSink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a próxima <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> na cadeia de coletor.</summary>
+        <value>A próxima <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> na cadeia de coletor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage (System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, System.Runtime.Remoting.Messaging.IMessage requestMsg, System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, System.IO.Stream requestStream, out System.Runtime.Remoting.Messaging.IMessage responseMsg, out System.Runtime.Remoting.Channels.ITransportHeaders responseHeaders, out System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage(class System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, class System.Runtime.Remoting.Messaging.IMessage requestMsg, class System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, class System.IO.Stream requestStream, [out] class System.Runtime.Remoting.Messaging.IMessage&amp; responseMsg, [out] class System.Runtime.Remoting.Channels.ITransportHeaders&amp; responseHeaders, [out] class System.IO.Stream&amp; responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.ServerProcessing</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerChannelSinkStack" />
+        <Parameter Name="requestMsg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="requestHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="requestStream" Type="System.IO.Stream" />
+        <Parameter Name="responseMsg" Type="System.Runtime.Remoting.Messaging.IMessage&amp;" RefType="out" />
+        <Parameter Name="responseHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders&amp;" RefType="out" />
+        <Parameter Name="responseStream" Type="System.IO.Stream&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">A pilha de Coletores que transportes a mensagem.</param>
+        <param name="requestMsg">A mensagem que contém a solicitação.</param>
+        <param name="requestHeaders">Cabeçalhos recuperado da mensagem de entrada do cliente.</param>
+        <param name="requestStream">O fluxo que precisa ser processada e passados para o coletor de desserialização.</param>
+        <param name="responseMsg">Quando este método retorna, contém um <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> que contém a mensagem de resposta. Este parâmetro é passado não inicializado.</param>
+        <param name="responseHeaders">Quando este método retorna, contém um <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> que contém os cabeçalhos para adicionar ao cabeçalho da mensagem de retorno ao cliente. Este parâmetro é passado não inicializado.</param>
+        <param name="responseStream">Quando este método retorna, contém um <see cref="T:System.IO.Stream" /> que é o título para o coletor de transporte. Este parâmetro é passado não inicializado.</param>
+        <summary>Mensagem de solicitações de processamento do coletor atual.</summary>
+        <returns>Um <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> valor de status que fornece informações sobre como a mensagem foi processada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> de propriedades para o coletor de canal atual.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> de propriedades para o coletor de canal atual. Para obter mais informações, consulte [Channel e propriedades de configuração do formatador](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeFilterLevel">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.TypeFilterLevel TypeFilterLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel TypeFilterLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.TypeFilterLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="TypeFilterLevel" /> valor de desserialização automática a <see langword="SoapServerFormatterSink" /> executa.</summary>
+        <value>O <see langword="TypeFilterLevel" /> que representa o nível atual de desserialização automática.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores com suporte são `Low` (o padrão) e `Full`. Para obter detalhes sobre os níveis de desserialização, consulte [desserialização automática no .NET Remoting](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

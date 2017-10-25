@@ -1,0 +1,251 @@
+<Type Name="IDataEnvironment" FullName="System.ComponentModel.Design.Data.IDataEnvironment">
+  <TypeSignature Language="C#" Value="public interface IDataEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataEnvironment" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.IDataEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma interface para os serviços de dados que permite que os designers de controle integrar o repositório de dados ou recursos relacionados ao banco de dados em seu ambiente de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto que implementa o <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface pode acessar as conexões de dados disponíveis para um aplicativo em tempo de design. O <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface fornece métodos para listar conexões de dados disponíveis, criar novas conexões de dados, recuperar as informações de esquema de uma conexão e salvar informações de configuração de conexão de dados para o arquivo de configuração do aplicativo.  
+  
+ O <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface permite que você interaja com conexões de dados no ambiente de design, mas ele não foi desenvolvido como uma API de gerenciamento de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildConnection">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Data.DesignerDataConnection BuildConnection (System.Windows.Forms.IWin32Window owner, System.ComponentModel.Design.Data.DesignerDataConnection initialConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.Data.DesignerDataConnection BuildConnection(class System.Windows.Forms.IWin32Window owner, class System.ComponentModel.Design.Data.DesignerDataConnection initialConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDataEnvironment.BuildConnection(System.Windows.Forms.IWin32Window,System.ComponentModel.Design.Data.DesignerDataConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.DesignerDataConnection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="initialConnection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+      </Parameters>
+      <Docs>
+        <param name="owner">A janela pai para a caixa de diálogo de conexão.</param>
+        <param name="initialConnection">A conexão, se houver, para editar. Para criar uma nova conexão, <c>initialConnection</c> devem ser <see langword="null" />.</param>
+        <summary>Cria uma nova conexão de dados ou edita uma conexão existente usando a nova interface de usuário de conexão da ferramenta de design.</summary>
+        <returns>Um novo ou editado <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> objeto, ou <see langword="null" /> se o usuário cancelou.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ComponentModel.Design.Data.IDataEnvironment.BuildConnection%2A> método para ativar a interface do usuário do ambiente de design para criar ou editar as conexões de dados. Se o `initialConnection` parâmetro é `null`, ele indica que o usuário deseja criar uma nova conexão. Se o `initialConnection` parâmetro é um <xref:System.ComponentModel.Design.Data.DesignerDataConnection> do objeto, ele indica que o usuário deseja editar uma conexão existente.  
+  
+ Seu ambiente de design é responsável por criar a conexão de dados, adicionando a conexão a uma lista global de conexões ou arquivo de configuração do aplicativo da Web e adicionar a nova conexão para o <xref:System.ComponentModel.Design.Data.IDataEnvironment.Connections%2A> propriedade.  
+  
+ A nova conexão deve incluir as informações que o aplicativo precisa criar uma conexão de dados em tempo de execução. Se você precisar usar a conexão de dados no ambiente de design, use o <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetDesignTimeConnection%2A> método para retornar um <xref:System.Data.Common.DbConnection> objeto que irão se conectar ao repositório de dados do ambiente de design.  
+  
+ Se o usuário optar por cancelar o processo de criação de conexão nova, o <xref:System.ComponentModel.Design.Data.IDataEnvironment.BuildConnection%2A> método deve retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildQuery">
+      <MemberSignature Language="C#" Value="public string BuildQuery (System.Windows.Forms.IWin32Window owner, System.ComponentModel.Design.Data.DesignerDataConnection connection, System.ComponentModel.Design.Data.QueryBuilderMode mode, string initialQueryText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string BuildQuery(class System.Windows.Forms.IWin32Window owner, class System.ComponentModel.Design.Data.DesignerDataConnection connection, valuetype System.ComponentModel.Design.Data.QueryBuilderMode mode, string initialQueryText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDataEnvironment.BuildQuery(System.Windows.Forms.IWin32Window,System.ComponentModel.Design.Data.DesignerDataConnection,System.ComponentModel.Design.Data.QueryBuilderMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="connection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+        <Parameter Name="mode" Type="System.ComponentModel.Design.Data.QueryBuilderMode" />
+        <Parameter Name="initialQueryText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">A janela pai da caixa de diálogo.</param>
+        <param name="connection">A conexão de dados a ser usado para a consulta.</param>
+        <param name="mode">Um dos valores de <see cref="T:System.ComponentModel.Design.Data.QueryBuilderMode" />.</param>
+        <param name="initialQueryText">O valor inicial da consulta ou <see cref="F:System.String.Empty" /> para criar uma nova consulta.</param>
+        <summary>Inicia uma caixa de diálogo para criar uma cadeia de caracteres de consulta SQL.</summary>
+        <returns>Uma cadeia de caracteres que contém a consulta SQL, ou <see langword="null" /> se o usuário cancelou.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDataEnvironment.BuildQuery%2A> método inicia interface do usuário do ambiente de design para edição ou criação de cadeias de caracteres de consulta SQL. Se o `initialQueryText` parâmetro é <xref:System.String.Empty>, ele indica que o usuário deseja criar uma nova consulta. Se o `initialQueryText` parâmetro contém uma cadeia de caracteres, ele indica que o usuário deseja editar a consulta existente.  
+  
+ O `mode` parâmetro indica o tipo de consulta que o usuário deseja criar, selecione, atualizar, inserir ou excluir. A interface do usuário pode usar o `mode` parâmetro autoconfiguração para o tipo de consulta desejado, limitar o usuário a usar instruções SQL válidas somente para o tipo de consulta desejado e/ou validar a consulta em relação ao tipo desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureConnection">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Data.DesignerDataConnection ConfigureConnection (System.Windows.Forms.IWin32Window owner, System.ComponentModel.Design.Data.DesignerDataConnection connection, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.Data.DesignerDataConnection ConfigureConnection(class System.Windows.Forms.IWin32Window owner, class System.ComponentModel.Design.Data.DesignerDataConnection connection, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection(System.Windows.Forms.IWin32Window,System.ComponentModel.Design.Data.DesignerDataConnection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.DesignerDataConnection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="connection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">A janela pai da caixa de diálogo, se houver.</param>
+        <param name="connection">Um <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> objeto que contém os dados de conexão para salvar.</param>
+        <param name="name">O nome da nova entrada de configuração de conexão.</param>
+        <summary>Grava uma cadeia de caracteres de conexão para o arquivo de configuração do aplicativo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> objeto que contém os dados de conexão salvo com a <see cref="P:System.ComponentModel.Design.Data.DesignerDataConnection.Name" /> propriedade definida como <paramref name="name" />e o <see cref="P:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured" /> propriedade definida como <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection%2A> método grava uma conexão para o arquivo de configuração do aplicativo. O nome de cadeia de caracteres e o provedor de conexão são gravados para o [connectionStrings Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) elemento de configuração nomeado de acordo com o `name` parâmetro. O <xref:System.ComponentModel.Design.Data.DesignerDataConnection.Name%2A> propriedade o `connection` parâmetro é ignorado.  
+  
+ Implementações de <xref:System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection%2A> método deve lançar as exceções a seguir.  
+  
+|Exceção|Motivo|  
+|---------------|------------|  
+|<xref:System.ArgumentException>|Existe um nome duplicado no arquivo de configuração do aplicativo.|  
+|<xref:System.IO.FileNotFoundException>, <xref:System.UnauthorizedAccessException>, ou outro exceção de e/s de arquivo apropriado.|Arquivo de configuração do aplicativo não pode ser atualizado. O <xref:System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection%2A> implementação do método deve lançar uma exceção apropriada.|  
+|<xref:System.ComponentModel.Design.CheckoutException>|Arquivo de configuração do aplicativo não é possível fazer check-out do sistema de controle de origem.|  
+  
+ Considere o uso de APIs de gerenciamento de configuração no <xref:System.Configuration> namespace para ler e gravar o arquivo de configuração do aplicativo. O <xref:System.Configuration.ConnectionStringsSection> classe lerá e gravará o [connectionStrings Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connections">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Connections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Connections" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.IDataEnvironment.Connections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de conexões de dados definidas na sessão atual do design.</summary>
+        <value>Uma coleção de <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> objetos que representam as conexões de dados disponíveis na sessão atual do design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDataEnvironment.Connections%2A> propriedade retorna o conjunto de conexões disponíveis em tempo de design. A implementação do <xref:System.ComponentModel.Design.Data.IDataEnvironment.Connections%2A> propriedade pode retornar a lista de conexões definidos no aplicativo Web atual, ou uma lista de conexões definidas em um nível global, como uma lista de conexões de dados mantidas pelo ambiente de design.  
+  
+ Cada conexão na coleção deve ter uma cadeia de caracteres de conexão exclusivo. Se sua coleção inclui conexões de arquivo de configuração do aplicativo e as conexões globais, sua implementação deve tratar o caso em conexões da lista global e o arquivo de configuração tem a mesma cadeia de conexão. Nesse caso, é recomendável que você elimina duplicatas e usar apenas a conexão do arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression GetCodeExpression (System.ComponentModel.Design.Data.DesignerDataConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.ComponentModel.Design.Data.DesignerDataConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDataEnvironment.GetCodeExpression(System.ComponentModel.Design.Data.DesignerDataConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">A conexão para recuperar o arquivo de configuração do aplicativo.</param>
+        <summary>Retorna uma expressão de código que contém o código-fonte necessário para recuperar uma cadeia de caracteres de conexão do arquivo de configuração do aplicativo.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> objeto que contém o código-fonte necessário para recuperar uma cadeia de caracteres de conexão do arquivo de configuração do aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionSchema">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Data.IDesignerDataSchema GetConnectionSchema (System.ComponentModel.Design.Data.DesignerDataConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.Data.IDesignerDataSchema GetConnectionSchema(class System.ComponentModel.Design.Data.DesignerDataConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema(System.ComponentModel.Design.Data.DesignerDataConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.IDesignerDataSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">A conexão de dados para o qual retornar informações de esquema.</param>
+        <summary>Obtém o esquema para a conexão de dados especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.Design.Data.IDesignerDataSchema" /> objeto que contém as informações de esquema para a conexão de dados especificado, ou <see langword="null" /> se nenhuma informação de esquema está disponível.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema%2A> método retorna o esquema de banco de dados para a conexão de dados especificado. Se o esquema não estiver disponível, ou se o provedor para a conexão não estiver disponível, o <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema%2A> deve retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeConnection">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbConnection GetDesignTimeConnection (System.ComponentModel.Design.Data.DesignerDataConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.Common.DbConnection GetDesignTimeConnection(class System.ComponentModel.Design.Data.DesignerDataConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDataEnvironment.GetDesignTimeConnection(System.ComponentModel.Design.Data.DesignerDataConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">A conexão de dados desejado.</param>
+        <summary>Obtém uma conexão de banco de dados que pode ser usado em tempo de design.</summary>
+        <returns>Um <see cref="T:System.Data.Common.DbConnection" /> objeto que pode ser usado em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetDesignTimeConnection%2A> método retorna uma conexão aberta, válido para o repositório de dados que pode ser usado pelo designer de controle.  
+  
+ Designers de controle devem usar o <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetDesignTimeConnection%2A> para obter uma conexão de dados e não deve tentar abrir uma conexão usando o <xref:System.ComponentModel.Design.Data.DesignerDataConnection.ConnectionString%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

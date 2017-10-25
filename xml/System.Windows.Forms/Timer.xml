@@ -1,0 +1,418 @@
+<Type Name="Timer" FullName="System.Windows.Forms.Timer">
+  <TypeSignature Language="C#" Value="public class Timer : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Timer extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Timer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Tick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Interval")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um temporizador que gera um evento em intervalos definidos pelo usuário. Esse temporizador é otimizado para uso em aplicativos do Windows Forms e deve ser usado em uma janela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.Timer> é usado para gerar um evento em intervalos definidos pelo usuário. O temporizador do Windows foi projetado para um ambiente de thread único em que os threads de interface do usuário são usadas para executar o processamento. Ele requer que o código de usuário tem uma bomba de mensagem da interface do usuário disponível e sempre funcionam do mesmo thread ou realizar marshaling da chamada em outro thread.  
+  
+ Quando você usa o temporizador, use o <xref:System.Windows.Forms.Timer.Tick> evento para executar uma operação de pesquisa ou para exibir uma tela inicial de um período de tempo especificado. Sempre que o <xref:System.Windows.Forms.Timer.Enabled%2A> está definida como `true` e o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade é maior que zero, o <xref:System.Windows.Forms.Timer.Tick> é gerado em intervalos com base no <xref:System.Windows.Forms.Timer.Interval%2A> configuração de propriedade.  
+  
+ Essa classe fornece métodos para definir o intervalo e para iniciar e parar o timer.  
+  
+> [!NOTE]
+>  O componente de temporizador de formulários do Windows é de thread único e é limitado a uma precisão de 55 milissegundos. Se você precisar de um timer multithread com maior precisão, use o <xref:System.Timers.Timer> classe no <xref:System.Timers> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um temporizador de intervalo simples, o que desativa um alarme a cada cinco segundos. Quando o alarme ocorre, um <xref:System.Windows.Forms.MessageBox> exibe uma contagem do número de vezes que o alarme foi iniciado e solicita ao usuário se o timer deve continuar a execução.  
+  
+ [!code-cpp[Classic Timer Example 2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Timer Example 2/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example 2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Timer Example 2/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Timer Example 2/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Timer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Timer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um novo temporizador é criado, ele é desabilitado; ou seja, <xref:System.Windows.Forms.Timer.Enabled%2A> é definido como `false`. Para habilitar o temporizador, chame o <xref:System.Windows.Forms.Timer.Start%2A> método ou conjunto <xref:System.Windows.Forms.Timer.Enabled%2A> para `true`.  
+  
+ Se o timer será desabilitado e o timer está fora do escopo, o timer será descartado quando ocorre a coleta de lixo. Se o timer está ativado, mesmo se ele está fora do escopo, não é sujeitas à coleta de lixo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Timer (System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="container">Um <see cref="T:System.ComponentModel.IContainer" /> que representa o contêiner do temporizador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Timer" /> em conjunto com o contêiner especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Timer> construtor permite que você associe um <xref:System.Windows.Forms.Timer> com qualquer <xref:System.ComponentModel.Container> objeto. Associando a <xref:System.Windows.Forms.Timer> como esta, você fornece controle de tempo de vida do <xref:System.Windows.Forms.Timer> para o <xref:System.ComponentModel.Container>. Isso pode ser útil se você usar um número de componentes em seu aplicativo e deseja descartar todos eles simultaneamente. Por exemplo, se você associar um <xref:System.Windows.Forms.ToolTip>, uma <xref:System.Windows.Forms.ImageList>e um <xref:System.Windows.Forms.Timer> com um <xref:System.ComponentModel.Container>, chamar <xref:System.ComponentModel.Container.Dispose%2A> no <xref:System.ComponentModel.Container> forçará o descarte de todos esses componentes também.  
+  
+ Quando um novo temporizador é criado, ele é desabilitado; ou seja, <xref:System.Windows.Forms.Timer.Enabled%2A> é definido como `false`. Para habilitar o temporizador, chame o <xref:System.Windows.Forms.Timer.Start%2A> método ou conjunto <xref:System.Windows.Forms.Timer.Enabled%2A> para `true`.  
+  
+ Esta instância existirá até que seu contêiner libera para coleta de lixo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados. <see langword="false" />para liberar apenas os recursos não gerenciados.</param>
+        <summary>Libera os recursos, que não seja a memória usada pelo timer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Windows.Forms.Timer.Dispose%2A> quando terminar de usar o timer. O <xref:System.Windows.Forms.Timer.Dispose%2A> método deixa o timer em um estado inutilizável. Depois de chamar <xref:System.Windows.Forms.Timer.Dispose%2A>, você deve liberar todas as referências para o temporizador para a memória estava ocupando pode ser recuperada pela coleta de lixo.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Windows.Forms.Timer.Dispose%2A> antes de liberar sua última referência para o temporizador. Caso contrário, os recursos que o timer está usando não serão liberados até que a coleta de lixo chama o destruidor do objeto de timer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public virtual bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Timer.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o temporizador está em execução.</summary>
+        <value>
+          <see langword="true" /> se o temporizador estiver habilitado no momento; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O timer não está sujeita à coleta de lixo quando o valor é `true`.  
+  
+ Chamando o <xref:System.Windows.Forms.Timer.Start%2A> método é a mesma configuração <xref:System.Windows.Forms.Timer.Enabled%2A> para `true`. Da mesma forma, ao chamar o <xref:System.Windows.Forms.Timer.Stop%2A> método é a mesma configuração <xref:System.Windows.Forms.Timer.Enabled%2A> para `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um temporizador de intervalo simples, o que desativa um alarme a cada cinco segundos. Quando o alarme ocorre, um <xref:System.Windows.Forms.MessageBox> exibe uma contagem do número de vezes que o alarme foi iniciado e solicita que o usuário se o timer deve continuar a executar.  
+  
+ [!code-cpp[Classic Timer Example 2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Timer Example 2/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example 2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Timer Example 2/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Timer Example 2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public int Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Timer.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em milissegundos, antes que o evento <see cref="E:System.Windows.Forms.Timer.Tick" /> seja gerado em relação à última ocorrência do evento <see cref="E:System.Windows.Forms.Timer.Tick" />.</summary>
+        <value>Um <see cref="T:System.Int32" /> que especifica o número de milissegundos antes que o evento <see cref="E:System.Windows.Forms.Timer.Tick" /> seja gerado em relação à última ocorrência do evento <see cref="E:System.Windows.Forms.Timer.Tick" />. O valor não pode ser menor que um.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o número de segundos durante o intervalo, divida esse número por 1.000.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir implementa um temporizador de intervalo simples, o que desativa um alarme a cada cinco segundos. Quando o alarme ocorre, um <xref:System.Windows.Forms.MessageBox> exibe uma contagem do número de vezes que o alarme foi iniciado e solicita que o usuário se o timer deve continuar a executar.  
+  
+ [!code-cpp[Classic Timer Example 2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Timer Example 2/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example 2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Timer Example 2/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Timer Example 2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTick">
+      <MemberSignature Language="C#" Value="protected virtual void OnTick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.OnTick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento. Isso sempre é <see cref="F:System.EventArgs.Empty" />.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Timer.Tick" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado para cada escala timer. Ele chama os métodos que são adicionados por meio de <xref:System.Windows.Forms.Timer.Tick>. Se você herdando <xref:System.Windows.Forms.Timer>, você pode substituir esse método.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Timer.OnTick(System.EventArgs)" /> em uma classe derivada, certifique-se de que você chamar a classe base <see cref="M:System.Windows.Forms.Timer.OnTick(System.EventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o temporizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode iniciar o timer, definindo o <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir implementa um temporizador de intervalo simples, o que desativa um alarme a cada cinco segundos. Quando o alarme ocorre, um <xref:System.Windows.Forms.MessageBox> exibe uma contagem do número de vezes que o alarme foi iniciado e solicita que o usuário se o timer deve continuar a executar.  
+  
+ [!code-cpp[Classic Timer Example 2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Timer Example 2/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example 2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Timer Example 2/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Timer Example 2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o temporizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode parar o timer definindo o <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade `false`. Um <xref:System.Windows.Forms.Timer> objeto pode ser habilitado e desabilitado várias vezes dentro da mesma sessão do aplicativo.  
+  
+ Chamando <xref:System.Windows.Forms.Timer.Start%2A> depois que você desabilitou um <xref:System.Windows.Forms.Timer> chamando <xref:System.Windows.Forms.Timer.Stop%2A> fará com que o <xref:System.Windows.Forms.Timer> para reiniciar o intervalo interrompido. Se seu <xref:System.Windows.Forms.Timer> está definido para um intervalo de milissegundo 5000, e você chamar <xref:System.Windows.Forms.Timer.Stop%2A> em aproximadamente 3.000 milissegundos, chamando <xref:System.Windows.Forms.Timer.Start%2A> fará com que o <xref:System.Windows.Forms.Timer> aguardar 5000 milissegundos antes de acionar o <xref:System.Windows.Forms.Timer.Tick> evento.  
+  
+> [!NOTE]
+>  Chamando parar em qualquer <xref:System.Windows.Forms.Timer> dentro de um Windows Forms aplicativo pode fazer com que as mensagens de outros <xref:System.Windows.Forms.Timer> componentes do aplicativo para ser processado imediatamente, porque todos os <xref:System.Windows.Forms.Timer> componentes operam no thread principal do aplicativo. Se você tiver dois <xref:System.Windows.Forms.Timer> componentes, definidas como 700 milissegundos e um conjunto para 500 milissegundos, e você chamar <xref:System.Windows.Forms.Timer.Stop%2A> na primeira <xref:System.Windows.Forms.Timer>, seu aplicativo pode receber um retorno de chamada de evento para o segundo componente primeiro. Se isso comprova problemático, considere o uso de <xref:System.Threading.Timer> classe no <xref:System.Threading> namespace em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir implementa um temporizador de intervalo simples, o que desativa um alarme a cada cinco segundos. Quando o alarme ocorre, um <xref:System.Windows.Forms.MessageBox> exibe uma contagem do número de vezes que o alarme foi iniciado e solicita que o usuário se o timer deve continuar a executar.  
+  
+ [!code-cpp[Classic Timer Example 2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Timer Example 2/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example 2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Timer Example 2/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Timer Example 2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Timer.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres arbitrária que representa algum tipo de estado do usuário.</summary>
+        <value>Uma cadeia de caracteres arbitrária que representa algum tipo de estado do usuário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tick">
+      <MemberSignature Language="C#" Value="public event EventHandler Tick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Tick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Timer.Tick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o intervalo especificado tiver terminado e o temporizador estiver habilitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Diagnostics.Debug.Assert%2A> método no <xref:System.Diagnostics.Debug> classe de dentro de <xref:System.Windows.Forms.Timer.Tick> eventos podem não se comportar conforme o esperado, como exibir a caixa de diálogo de asserção caixa pode fazer com que o Windows para gerar o <xref:System.Windows.Forms.Timer.Tick> evento repetidamente. É recomendável que você evite teste asserções dentro desse evento e use o <xref:System.Diagnostics.Debug.Write%2A>, <xref:System.Diagnostics.Debug.WriteIf%2A>, <xref:System.Diagnostics.Debug.WriteLine%2A>, ou <xref:System.Diagnostics.Debug.WriteLineIf%2A> métodos em vez disso.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir implementa um temporizador de intervalo simples, o que desativa um alarme a cada cinco segundos. Quando o alarme ocorre, um <xref:System.Windows.Forms.MessageBox> exibe uma contagem do número de vezes que o alarme foi iniciado e solicita que o usuário se o timer deve continuar a executar.  
+  
+ [!code-cpp[Classic Timer Example 2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Timer Example 2/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example 2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Timer Example 2/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Timer Example 2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Timer.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.Timer" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.Timer" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Timer.ToString%2A> método retorna uma cadeia de caracteres que contém o valor de <xref:System.Windows.Forms.Timer.Interval%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

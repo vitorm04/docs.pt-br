@@ -1,0 +1,1054 @@
+<Type Name="XmlSchemaCollection" FullName="System.Xml.Schema.XmlSchemaCollection">
+  <TypeSignature Language="C#" Value="public sealed class XmlSchemaCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlSchemaCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use System.Xml.Schema.XmlSchemaSet for schema compilation and validation. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém um cache de esquemas XSD (linguagem de definição de esquema XML) e XDR (Dados XML reduzidos). A classe <see cref="T:System.Xml.Schema.XmlSchemaCollection" /> é obsoleta. Use <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em seu lugar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os esquemas são carregados usando o <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> método, momento em que o esquema está associado um namespace de identificador de recurso uniforme (URI). Para esquemas XML, isso geralmente será o `targetNamespace` propriedade do esquema.  
+  
+ Embora essa classe armazena os esquemas XML e os esquemas XDR, qualquer método e a propriedade que usa ou retorna um <xref:System.Xml.Schema.XmlSchema> aplica-se apenas a esquemas XML.  
+  
+ Esta versão do produto dá suporte a recomendação de esquema de XML do World Wide Web Consortium (W3C) localizada em http://www.w3.org/TR/xmlschema-1 e http://www.w3.org/TR/xmlschema-2. Um esquema XML deve referenciar o namespace do esquema W3C `http://www.w3.org/2001/XMLSchema` em seu elemento de esquema. Consulte o <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> método para obter um exemplo.  
+  
+ `XmlSchemaCollection`pode ser usado por <xref:System.Xml.XmlValidatingReader> para validação de dados eficiente.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no Microsoft .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida um documento XML usando o `XmlSchemaCollection`.  
+  
+ [!code-cpp[XmlSchemaCollection.Basic#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCollection.Basic/CPP/aa.cpp#1)]
+ [!code-csharp[XmlSchemaCollection.Basic#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCollection.Basic/CS/aa.cs#1)]
+ [!code-vb[XmlSchemaCollection.Basic#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCollection.Basic/VB/aa.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="XmlSchemaCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="XmlSchemaCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaCollection (System.Xml.XmlNameTable nametable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlNameTable nametable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.#ctor(System.Xml.XmlNameTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nametable" Type="System.Xml.XmlNameTable" />
+      </Parameters>
+      <Docs>
+        <param name="nametable">O <see langword="XmlNameTable" /> a ser usado.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="XmlSchemaCollection" /> com o <see cref="T:System.Xml.XmlNameTable" /> especificado. O <see langword="XmlNameTable" /> é usada ao carregar os esquemas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Add">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona o esquema especificado na coleção de esquemas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Add(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O <see langword="XmlSchema" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Xml.Schema.XmlSchema" /> à coleção.</summary>
+        <returns>O objeto <see langword="XmlSchema" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `targetNamespace` atributo é usado para identificar este esquema.  
+  
+ Se o esquema que está sendo adicionado contém referências a outros namespaces (por meio de `include` e `import` elementos), o nível de confiança do aplicativo que determina como são resolvidos esses outros namespaces. (No .NET Framework versão 1.0, um padrão <xref:System.Xml.XmlUrlResolver> sempre foi usado).  
+  
+ `Fully trusted code:`Um padrão `XmlUrlResolver` com nenhum usuário credenciais é usado para resolver todos os recursos externos. Os esquemas para esses outros namespaces são carregados para apenas para fins de validação. Ao contrário de esquema original, esses outros esquemas não são explicitamente adicionadas à coleção de esquema. Como resultado, eles não são acessíveis usando qualquer uma das propriedades ou métodos de coleta. Se esses recursos externos estão localizados em um recurso de rede que requer autenticação, use uma sobrecarga que utiliza um <xref:System.Xml.XmlResolver> como um de seus argumentos e especifique um `XmlResolver` com as credenciais necessárias.  
+  
+ `Semi-trusted code:`Referências externas não são resolvidas.  
+  
+> [!NOTE]
+>  Se o `XmlSchemaCollection` está sendo acessado usando o <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType> propriedade, o `Add` método usa o `XmlResolver` especificado pelo <xref:System.Xml.XmlValidatingReader.XmlResolver%2A?displayProperty=nameWithType> propriedade.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Xml.Schema.XmlSchemaCollection schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Xml.Schema.XmlSchemaCollection schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Add(System.Xml.Schema.XmlSchemaCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchemaCollection" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O <see langword="XmlSchemaCollection" /> você deseja adicionar a esta coleção.</param>
+        <summary>Adiciona todos os namespaces definidos na coleção fornecida (inclusive seus esquemas associados) a esta coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o esquema que está sendo adicionado contém referências a outros namespaces (por meio de `include` e `import` elementos ou `x-schema` atributo), o nível de confiança do aplicativo que determina como são resolvidos esses outros namespaces. (No .NET Framework versão 1.0, um padrão <xref:System.Xml.XmlUrlResolver> sempre foi usado).  
+  
+ `Fully trusted code:`Um padrão `XmlUrlResolver` com nenhum usuário credenciais é usado para resolver todos os recursos externos. Os esquemas para esses outros namespaces são carregados para apenas para fins de validação. Ao contrário de esquema original, esses outros esquemas não são explicitamente adicionadas à coleção de esquema. Como resultado, eles não são acessíveis usando qualquer uma das propriedades ou métodos de coleta. Se esses recursos externos estão localizados em um recurso de rede que requer autenticação, use uma sobrecarga que utiliza um <xref:System.Xml.XmlResolver> como um de seus argumentos e especifique um `XmlResolver` com as credenciais necessárias.  
+  
+ `Semi-trusted code:`Referências externas não são resolvidas.  
+  
+> [!NOTE]
+>  Se o `XmlSchemaCollection` está sendo acessado usando o <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType> propriedade, o `Add` método usa o `XmlResolver` especificado pelo <xref:System.Xml.XmlValidatingReader.XmlResolver%2A?displayProperty=nameWithType> propriedade.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (string ns, string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(string ns, string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O URI de namespace associado ao esquema. Para esquemas XML, isso geralmente será o <see langword="targetNamespace" />.</param>
+        <param name="uri">A URL que especifica o esquema a ser carregado.</param>
+        <summary>Adiciona o esquema localizado pela URL fornecida à coleção de esquemas.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchema" /> adicionado à coleção de esquemas; <see langword="null" /> se o esquema que está sendo adicionado for um esquema XDR ou se houver erros de compilação no esquema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `ns` já foi associada com outro esquema na coleção, o esquema que está sendo adicionado substitui o esquema original na coleção. Por exemplo, no código a seguir c#, authors.xsd é removido da coleção e names.xsd é adicionado.  
+  
+```  
+schemaColl.Add("urn:author", "authors.xsd");  
+schemaColl.Add("urn:author", "names.xsd");  
+```  
+  
+ Se `ns` é `null` e o esquema que está sendo adicionado é um esquema XML, o `Add` método usa o `targetNamespace` definido no esquema XML para identificar o esquema na coleção. Se o esquema que está sendo adicionado contém referências a outros namespaces (por meio de `include` e `import` elementos ou `x-schema` atributo), o nível de confiança do aplicativo que determina como são resolvidos esses outros namespaces. (No .NET Framework versão 1.0, um padrão <xref:System.Xml.XmlUrlResolver> sempre foi usado).  
+  
+ `Fully trusted code:`Um padrão `XmlUrlResolver` com nenhum usuário credenciais é usado para resolver todos os recursos externos. Os esquemas para esses outros namespaces são carregados para apenas para fins de validação. Ao contrário de esquema original, esses outros esquemas não são explicitamente adicionadas à coleção de esquema. Como resultado, eles não são acessíveis usando qualquer uma das propriedades ou métodos de coleta. Se esses recursos externos estão localizados em um recurso de rede que requer autenticação, use uma sobrecarga que utiliza um <xref:System.Xml.XmlResolver> como um de seus argumentos e especifique um `XmlResolver` com as credenciais necessárias.  
+  
+ `Semi-trusted code:`Referências externas não são resolvidas.  
+  
+> [!NOTE]
+>  Se o `XmlSchemaCollection` está sendo acessado usando o <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType> propriedade, o `Add` método usa o `XmlResolver` especificado pelo <xref:System.Xml.XmlValidatingReader.XmlResolver%2A?displayProperty=nameWithType> propriedade.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida três arquivos XML usando esquemas armazenados no `XmlSchemaCollection`.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.Schemas Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.Schemas Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.Schemas Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/VB/source.vb#1)]  
+  
+ O exemplo usa os cinco arquivos de entrada a seguir:  
+  
+ `booksSchema.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#2)]  
+  
+ `booksSchemaFail.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#3](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#3)]  
+  
+ `newbooks.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#4](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#4)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#5](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#5)]  
+  
+ `schema1.xdr`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#6](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">O esquema não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (string ns, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(string ns, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Add(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O URI de namespace associado ao esquema. Para esquemas XML, isso geralmente será o <see langword="targetNamespace" />.</param>
+        <param name="reader">
+          <see cref="T:System.Xml.XmlReader" />que contém o esquema para adicionar.</param>
+        <summary>Adiciona o esquema contido no <see cref="T:System.Xml.XmlReader" /> para a coleção de esquema.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchema" /> adicionado à coleção de esquemas; <see langword="null" /> se o esquema que está sendo adicionado for um esquema XDR ou se houver erros de compilação no esquema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `ns` já foi associada com outro esquema na coleção, o esquema que está sendo adicionado substitui o esquema original na coleção.  
+  
+ Se `ns` é `null` e o esquema que está sendo adicionado é um esquema XML, o `Add` método usa o `targetNamespace` definido no esquema XML para identificar o esquema na coleção.  
+  
+ Se o esquema que está sendo adicionado contém referências a outros namespaces (por meio de `include` e `import` elementos ou `x-schema` atributo), o nível de confiança do aplicativo que determina como são resolvidos esses outros namespaces. (No .NET Framework versão 1.0, um padrão <xref:System.Xml.XmlUrlResolver> sempre foi usado).  
+  
+ `Fully trusted code:`Um padrão `XmlUrlResolver` com nenhum usuário credenciais é usado para resolver todos os recursos externos. Os esquemas para esses outros namespaces são carregados para apenas para fins de validação. Ao contrário de esquema original, esses outros esquemas não são explicitamente adicionadas à coleção de esquema. Como resultado, eles não são acessíveis usando qualquer uma das propriedades ou métodos de coleta. Se esses recursos externos estão localizados em um recurso de rede que requer autenticação, use uma sobrecarga que utiliza um <xref:System.Xml.XmlResolver> como um de seus argumentos e especifique um `XmlResolver` com as credenciais necessárias.  
+  
+ `Semi-trusted code:`Referências externas não são resolvidas.  
+  
+> [!NOTE]
+>  Se o `XmlSchemaCollection` está sendo acessado usando o <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType> propriedade, o `Add` método usa o `XmlResolver` especificado pelo <xref:System.Xml.XmlValidatingReader.XmlResolver%2A?displayProperty=nameWithType> propriedade.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">O esquema não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (System.Xml.Schema.XmlSchema schema, System.Xml.XmlResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(class System.Xml.Schema.XmlSchema schema, class System.Xml.XmlResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Add(System.Xml.Schema.XmlSchema,System.Xml.XmlResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+        <Parameter Name="resolver" Type="System.Xml.XmlResolver" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O <see langword="XmlSchema" /> a adicionar à coleção.</param>
+        <param name="resolver">O <see cref="T:System.Xml.XmlResolver" /> usado para resolver os namespaces referenciados em <see langword="include" /> e <see langword="import" /> elementos. Se isso for <see langword="null" />, referências externas não são resolvidas.</param>
+        <summary>Adiciona o <see cref="T:System.Xml.Schema.XmlSchema" /> à coleção. Especificado <see cref="T:System.Xml.XmlResolver" /> é usado para resolver todas as referências externas.</summary>
+        <returns>O <see langword="XmlSchema" /> adicionado à coleção de esquema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `targetNamespace` atributo é usado para identificar este esquema.  
+  
+ Se o esquema contiver `include` e `import` elementos que fazem referência a outros namespaces, os esquemas para esses outros namespaces são carregados para apenas para fins de validação. Ao contrário de esquema original, esses outros esquemas não são explicitamente adicionadas à coleção de esquema. Como resultado, eles não são acessíveis usando qualquer uma das propriedades ou métodos de coleta.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um esquema à coleção. Um <xref:System.Xml.XmlUrlResolver> é passado para o `Add` método que define as credenciais necessárias necessárias para acessar recursos externos referenciados no esquema.  
+  
+ [!code-cpp[XmlSchemaCollection.Add#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCollection.Add/CPP/schemacolladd.cpp#1)]
+ [!code-csharp[XmlSchemaCollection.Add#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCollection.Add/CS/schemacolladd.cs#1)]
+ [!code-vb[XmlSchemaCollection.Add#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCollection.Add/VB/schemacolladd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">O esquema não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (string ns, System.Xml.XmlReader reader, System.Xml.XmlResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(string ns, class System.Xml.XmlReader reader, class System.Xml.XmlResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Add(System.String,System.Xml.XmlReader,System.Xml.XmlResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="resolver" Type="System.Xml.XmlResolver" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O URI de namespace associado ao esquema. Para esquemas XML, isso geralmente será o <see langword="targetNamespace" />.</param>
+        <param name="reader">
+          <see cref="T:System.Xml.XmlReader" />que contém o esquema para adicionar.</param>
+        <param name="resolver">O <see cref="T:System.Xml.XmlResolver" /> usado para resolver os namespaces referenciados em <see langword="include" /> e <see langword="import" /> elementos ou <see langword="x-schema" /> atributo (esquemas XDR). Se isso for <see langword="null" />, referências externas não são resolvidas.</param>
+        <summary>Adiciona o esquema contido no <see cref="T:System.Xml.XmlReader" /> para a coleção de esquema. Especificado <see cref="T:System.Xml.XmlResolver" /> é usado para resolver todos os recursos externos.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchema" /> adicionado à coleção de esquemas; <see langword="null" /> se o esquema que está sendo adicionado for um esquema XDR ou se houver erros de compilação no esquema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `ns` já foi associada com outro esquema na coleção, o esquema que está sendo adicionado substitui o esquema original na coleção.  
+  
+ Se `ns` é `null` e o esquema que está sendo adicionado é um esquema XML, o `Add` método usa o `targetNamespace` atributo definido no esquema XML para identificar o esquema na coleção.  
+  
+ Se o esquema que está sendo adicionado contém referências a outros namespaces (por meio de `include` e `import` elementos ou `x-schema` atributo), os esquemas para esses outros namespaces são carregados para apenas para fins de validação. Ao contrário de esquema original, esses outros esquemas não são explicitamente adicionadas à coleção de esquema. Como resultado, eles não são acessíveis usando qualquer uma das propriedades ou métodos de coleta.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">O esquema não é válido.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Contains">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém um valor que indica se um esquema com o namespace especificado está na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O URI de namespace associado ao esquema. Para esquemas XML, isso geralmente será o namespace de destino.</param>
+        <summary>Obtém um valor que indica se um esquema com o namespace especificado está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se um esquema com o namespace especificado está na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir verifica se um esquema está na coleção. Se estiver, ele exibe o esquema.  
+  
+ [!code-cpp[Classic WebData XmlSchemaCollection.this Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaCollection.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.Contains(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O objeto <see langword="XmlSchema" />.</param>
+        <summary>Obtém um valor que indica se o <see langword="targetNamespace" /> especificada <see cref="T:System.Xml.Schema.XmlSchema" /> está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se houver um esquema na coleção com o mesmo <see langword="targetNamespace" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.Schema.XmlSchema[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.Schema.XmlSchema[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.CopyTo(System.Xml.Schema.XmlSchema[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Xml.Schema.XmlSchema[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz para copiar os objetos.</param>
+        <param name="index">O índice em <c>matriz</c> onde a cópia será iniciada.</param>
+        <summary>Copia todas as <see langword="XmlSchema" /> objetos desta coleção na matriz fornecida, iniciando no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de namespaces definidos nesta coleção.</summary>
+        <value>O número de namespaces definidos nesta coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaCollectionEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchemaCollectionEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaCollectionEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece suporte para o estilo "for each" iteração sobre a coleção de esquemas.</summary>
+        <returns>Um enumerador para iteração sobre todos os esquemas na coleção atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe cada um dos esquemas XML na coleção de esquemas.  
+  
+ [!code-cpp[Classic WebData XmlSchemaCollection.GetEnumerator Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaCollection.GetEnumerator Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaCollection.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaCollection.GetEnumerator Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaCollection.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaCollection.GetEnumerator Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema this[string ns] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchema Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O namespace URI associadas com o esquema que você deseja retornar. Isso geralmente será o <see langword="targetNamespace" /> do esquema.</param>
+        <summary>Obtém o <see cref="T:System.Xml.Schema.XmlSchema" /> associado a determinado URI de namespace.</summary>
+        <value>O <see langword="XmlSchema" /> associado com o namespace URI. <see langword="null" /> se não houver nenhum esquema carregada associada ao namespace especificado ou se o namespace está associado um esquema XDR.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir verifica se um esquema está na coleção. Se estiver, ele exibe o esquema.  
+  
+ [!code-cpp[Classic WebData XmlSchemaCollection.this Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaCollection.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNameTable NameTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCollection.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão <see langword="XmlNameTable" /> usado pelo <see langword="XmlSchemaCollection" /> ao carregar novos esquemas.</summary>
+        <value>Um <see langword="XmlNameTable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz para copiar os objetos.</param>
+        <param name="index">O índice em <c>matriz</c> onde a cópia será iniciada.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.Schema.XmlSchemaCollection.CopyTo(System.Xml.Schema.XmlSchema[],System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.Schema.XmlSchemaCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Xml.Schema.XmlSchemaCollection.Count" />.</summary>
+        <value>Retorna a contagem dos itens na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.Schema.XmlSchemaCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Xml.Schema.XmlSchemaCollection.System#Collections#ICollection#IsSynchronized" />.</summary>
+        <value>Retorna <see langword="true" /> se a coleção for sincronizada, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.Schema.XmlSchemaCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Xml.Schema.XmlSchemaCollection.System#Collections#ICollection#SyncRoot" />.</summary>
+        <value>Retorna um <see cref="P:System.Collections.ICollection.SyncRoot" /> objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.Schema.XmlSchemaCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.Schema.XmlSchemaCollection.GetEnumerator" />.</summary>
+        <returns>Retorna o <see cref="T:System.Collections.IEnumerator" /> para a coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.Schema.XmlSchemaCollection> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationEventHandler">
+      <MemberSignature Language="C#" Value="public event System.Xml.Schema.ValidationEventHandler ValidationEventHandler;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Schema.ValidationEventHandler ValidationEventHandler" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Schema.XmlSchemaCollection.ValidationEventHandler" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.ValidationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define um manipulador de eventos para receber informações sobre o esquema XDR e XML erros de validação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses eventos ocorrem quando os esquemas são adicionados à coleção. Se não for fornecido um manipulador de eventos, um <xref:System.Xml.Schema.XmlSchemaException> é gerada em erros de validação em que o <xref:System.Xml.Schema.ValidationEventArgs.Severity%2A> é `XmlSeverityType.Error`. Para especificar um manipulador de eventos, definir uma função de retorno de chamada e adicioná-lo para o `ValidationEventHandler`.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaCollection> classe está obsoleta no .NET Framework versão 2.0 e foi substituído pelo <xref:System.Xml.Schema.XmlSchemaSet> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para lidar com esquemas XML inválidos.  
+  
+ [!code-cpp[XmlSchema.ValidationEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlSchema.ValidationEventHandler/CPP/schemaevent.cpp#1)]
+ [!code-csharp[XmlSchema.ValidationEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchema.ValidationEventHandler/CS/schemaevent.cs#1)]
+ [!code-vb[XmlSchema.ValidationEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchema.ValidationEventHandler/VB/schemaevent.vb#1)]  
+  
+ O exemplo anterior usa o arquivo `invalid.xsd` como entrada.  
+  
+ [!code-xml[XmlSchema.ValidationEventHandler#2](~/samples/snippets/xml/VS_Snippets_Data/XmlSchema.ValidationEventHandler/XML/invalid.xsd#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

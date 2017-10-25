@@ -1,0 +1,238 @@
+<Type Name="CacheItemPolicy" FullName="System.Runtime.Caching.CacheItemPolicy">
+  <TypeSignature Language="C#" Value="public class CacheItemPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheItemPolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.CacheItemPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um conjunto de detalhes de remoção e expiração de uma entrada de cache específica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Runtime.Caching.CacheItemPolicy> instância contém informações que podem ser associadas uma entrada de cache. Por exemplo, quando uma entrada de cache está prestes a ser removido do cache, um <xref:System.Runtime.Caching.CacheEntryUpdateArguments> objeto é passado para um método de retorno de chamada. O <xref:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItemPolicy%2A> propriedade o <xref:System.Runtime.Caching.CacheEntryUpdateArguments> objeto pode passar uma referência a um <xref:System.Runtime.Caching.CacheItemPolicy> instância que pode incluir a remoção e vencimento detalhes sobre a entrada de cache.  
+  
+ Alguns métodos no <xref:System.Runtime.Caching.MemoryCache> e <xref:System.Runtime.Caching.ObjectCache> classes aceitam um <xref:System.Runtime.Caching.CacheItemPolicy> instância para descrever a política de expiração ou de remoção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um item de cache na memória que monitora o caminho para um arquivo de texto. Cria o cache de um <xref:System.Runtime.Caching.CacheItemPolicy> objeto e define o <xref:System.Runtime.Caching.CacheItemPolicy.AbsoluteExpiration%2A> propriedade para remover o cache após 60 segundos.  
+  
+```vb  
+Protected Sub Button1_Click(ByVal sender As Object, _  
+            ByVal e As System.EventArgs) Handles Button1.Click  
+    Dim cache As ObjectCache = MemoryCache.Default  
+    Dim fileContents As String = TryCast(cache("filecontents"), _  
+            String)  
+    If fileContents Is Nothing Then  
+        Dim policy As New CacheItemPolicy()  
+        policy.AbsoluteExpiration = _  
+            DateTimeOffset.Now.AddSeconds(60.0)  
+        Dim filePaths As New List(Of String)()  
+     Dim cachedFilePath As String = Server.MapPath("~") & _  
+         "\cacheText.txt"  
+        filePaths.Add(cachedFilePath)  
+        policy.ChangeMonitors.Add(New _  
+            HostFileChangeMonitor(filePaths))  
+  
+        ' Fetch the file contents.  
+        fileContents = File.ReadAllText(cachedFilePath)  
+        cache.Set("filecontents", fileContents, policy)  
+    End If  
+    Label1.Text = fileContents  
+End Sub  
+```  
+  
+```csharp  
+protected void Button1_Click(object sender, EventArgs e)  
+    {  
+        ObjectCache cache = MemoryCache.Default;  
+            string fileContents = cache["filecontents"] as string;  
+            if (fileContents == null)  
+            {  
+                CacheItemPolicy policy = new CacheItemPolicy();  
+                policy.AbsoluteExpiration =   
+                    DateTimeOffset.Now.AddSeconds(60.0);  
+  
+                List<string> filePaths = new List<string>();  
+             string cachedFilePath = Server.MapPath("~") +   
+                 "\\cacheText.txt";  
+             filePaths.Add(cachedFilePath);  
+  
+                policy.ChangeMonitors.Add(new   
+                    HostFileChangeMonitor(filePaths));  
+  
+                // Fetch the file contents.  
+                fileContents = File.ReadAllText(cachedFilePath);  
+  
+                cache.Set("filecontents", fileContents, policy);  
+  
+            }  
+  
+            Label1.Text = fileContents;  
+        }  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> tipo é sem lacre para que os desenvolvedores de cache personalizado poderá estendê-lo.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheItemPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheItemPolicy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Caching.CacheItemPolicy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsoluteExpiration">
+      <MemberSignature Language="C#" Value="public DateTimeOffset AbsoluteExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset AbsoluteExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItemPolicy.AbsoluteExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma entrada de cache deve ser removida após um período especificado.</summary>
+        <value>O período que deve decorrer antes que uma entrada de cache seja removida. O valor padrão é <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" />, o que significa que a entrada não expira.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeMonitors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Runtime.Caching.ChangeMonitor&gt; ChangeMonitors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Runtime.Caching.ChangeMonitor&gt; ChangeMonitors" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItemPolicy.ChangeMonitors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Runtime.Caching.ChangeMonitor&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Runtime.Caching.ChangeMonitor" /> associados a uma entrada de cache.</summary>
+        <value>Uma coleção de monitores de alteração. O padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar ou remover os monitores de alteração que estão associados uma entrada de cache. No entanto, o conjunto de monitores de alteração deve ser concluído antes de você passar um <xref:System.Runtime.Caching.CacheItemPolicy> de instância para um <xref:System.Runtime.Caching.ObjectCache> implementação. Se você alterar o conjunto de monitores de alteração em uma <xref:System.Runtime.Caching.CacheItemPolicy> objeto após o <xref:System.Runtime.Caching.CacheItemPolicy> objeto foi passado para um <xref:System.Runtime.Caching.ObjectCache> implementação, as alterações não terão efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheItemPriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Caching.CacheItemPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItemPolicy.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheItemPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma configuração de prioridade que é usada para determinar se é necessário remover uma entrada de cache.</summary>
+        <value>Um dos valores de enumeração que indica a prioridade para remoção. O valor de prioridade padrão é <see cref="F:System.Runtime.Caching.CacheItemPriority.Default" />, que significa nenhuma prioridade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No ASP.NET, a enumeração de prioridades tem apenas duas prioridades possíveis: <xref:System.Runtime.Caching.CacheItemPriority.Default> (o que não significa nenhuma prioridade) e <xref:System.Runtime.Caching.CacheItemPriority.NotRemovable> (que significa que a entrada não pode ser removido). Portanto, a prioridade só pode ser definida é se uma entrada de cache deve permanecer no cache para sempre.  
+  
+> [!IMPORTANT]
+>  Adicione uma entrada ao cache com um nível de prioridade de <xref:System.Runtime.Caching.CacheItemPriority.NotRemovable> pode fazer com que o cache de estouro com as entradas que nunca podem ser removidas. Implementações de cache devem definir o <xref:System.Runtime.Caching.CacheItemPriority.NotRemovable> prioridade para uma entrada de cache somente se a implementação de cache fornece maneiras para remover entradas do cache e para gerenciar o número de entradas de cache.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedCallback">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheEntryRemovedCallback RemovedCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.CacheEntryRemovedCallback RemovedCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItemPolicy.RemovedCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheEntryRemovedCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para um delegado <see cref="T:System.Runtime.Caching.CacheEntryRemovedCallback" /> que é chamado depois que uma entrada é removida do cache.</summary>
+        <value>Uma referência a um delegado que é chamado por uma implementação de cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que uma entrada de cache foi removida do cache, o cache invoca o objeto de retorno de chamada que é referenciado pelo <xref:System.Runtime.Caching.CacheItemPolicy.RemovedCallback%2A> propriedade. Uma implementação de cache pode usar esse retorno de chamada para notificar o método de chamada que uma entrada de cache foi removida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SlidingExpiration">
+      <MemberSignature Language="C#" Value="public TimeSpan SlidingExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SlidingExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma entrada de cache deve ser removida caso ela não tenha sido acessada em um determinado período de tempo.</summary>
+        <value>Um período de tempo em que uma entrada de cache deve ser acessada antes que a entrada de cache seja removida dele. O padrão é <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />, o que significa que o item não deve ser expirado com base em um período de tempo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCallback">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheEntryUpdateCallback UpdateCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.CacheEntryUpdateCallback UpdateCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItemPolicy.UpdateCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheEntryUpdateCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para um delegado de <see cref="T:System.Runtime.Caching.CacheEntryUpdateCallback" /> que é chamado antes que uma entrada de cache seja removida do cache.</summary>
+        <value>Uma referência a um delegado que é chamado por uma implementação de cache.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

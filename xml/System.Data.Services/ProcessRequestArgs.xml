@@ -1,0 +1,73 @@
+<Type Name="ProcessRequestArgs" FullName="System.Data.Services.ProcessRequestArgs">
+  <TypeSignature Language="C#" Value="public sealed class ProcessRequestArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProcessRequestArgs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.ProcessRequestArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os argumentos usados por uma solicitação HTTP para o serviço de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsBatchOperation">
+      <MemberSignature Language="C#" Value="public bool IsBatchOperation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBatchOperation" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ProcessRequestArgs.IsBatchOperation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se a solicitação HTTP para o serviço de dados é uma operação em lote.</summary>
+        <value>O valor booliano que indica se a solicitação HTTP para o serviço de dados é uma operação em lote.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationContext">
+      <MemberSignature Language="C#" Value="public System.Data.Services.DataServiceOperationContext OperationContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.DataServiceOperationContext OperationContext" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ProcessRequestArgs.OperationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.DataServiceOperationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto que contém informações sobre a operação atual que está sendo processada.</summary>
+        <value>Um <see cref="T:System.Data.Services.DataServiceOperationContext" /> objeto que contém informações sobre a operação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public Uri RequestUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ProcessRequestArgs.RequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI de uma solicitação HTTP para serem processados.</summary>
+        <value>Um <see cref="T:System.Uri" /> que contém o URI da solicitação a ser processado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

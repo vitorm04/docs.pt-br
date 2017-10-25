@@ -1,0 +1,166 @@
+<Type Name="ICustomFormatter" FullName="System.ICustomFormatter">
+  <TypeSignature Language="C#" Value="public interface ICustomFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.ICustomFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um método que dá suporte à formatação personalizada do valor de um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ICustomFormatter> interface inclui um único método, <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>. Quando essa interface é implementada por um tipo de referência ou valor, o <xref:System.ICustomFormatter.Format%2A> método retorna uma representação de cadeia de caracteres de formatação personalizada do valor de um objeto.  
+  
+ Normalmente, o <xref:System.ICustomFormatter> interface é implementada com o <xref:System.IFormatProvider> interface para personalizar o comportamento dos dois métodos do .NET Framework cadeia composta formatação que incluem um <xref:System.IFormatProvider> parâmetro. Especificamente, o <xref:System.ICustomFormatter> interface pode fornecer formatação personalizada do valor de um objeto passado para o <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> métodos.  
+  
+ Fornecer uma representação personalizada do valor de um objeto requer que você faça o seguinte:  
+  
+1.  Definir uma classe que implementa o <xref:System.ICustomFormatter> interface e o único membro, o <xref:System.ICustomFormatter.Format%2A> método.  
+  
+2.  Definir uma classe que implementa o <xref:System.IFormatProvider> interface e o único membro, o <xref:System.IFormatProvider.GetFormat%2A> método. O <xref:System.IFormatProvider.GetFormat%2A> método retorna uma instância de sua <xref:System.ICustomFormatter> implementação. Geralmente, uma única classe implementa ambos <xref:System.ICustomFormatter> e <xref:System.IFormatProvider>. Nesse caso, a classe `GetFormat` implementação retorna apenas uma instância de si mesma.  
+  
+3.  Passar o <xref:System.IFormatProvider> implementação como o `provider` argumento o <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método ou um método comparável.  
+  
+ O método do .NET Framework, em seguida, usará a formatação personalizada em vez de seu próprio.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa <xref:System.ICustomFormatter> para permitir hexadecimal, octal e binário formatação de valores integrais. Neste exemplo, uma única classe, `IBinaryFormatter`, implementa ambos <xref:System.ICustomFormatter> e <xref:System.IFormatProvider>. Seu <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> método determina se o `formatType` parâmetro representa um <xref:System.ICustomFormatter> tipo. Em caso afirmativo, `BinaryFormatter` retorna uma instância do próprio; caso contrário, retornará `null`. Seu <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> implementação determina se o parâmetro de formato é uma das três cadeias de caracteres de formato com suporte ("B" para o binário, "O" para octal e "H" para hexadecimal) e formata o `arg` parâmetro adequadamente. Caso contrário, se `arg` não é `null`, ele chama o `arg` do parâmetro <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementação, se houver, ou sem seus parâmetros `ToString` método, se não. Se `arg` for `null`, o método retornará <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.ICustomFormatter.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.icustomformatter.class/cs/binaryformatter.cs#1)]
+ [!code-vb[System.ICustomFormatter.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.icustomformatter.class/vb/binaryformatter.vb#1)]  
+  
+ `BinaryFormatter`pode ser usado para fornecer formatação personalizada, passando um `BinaryFormatter` de objeto como o `provider` parâmetro do <xref:System.String.Format%2A> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.ICustomFormatter.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.icustomformatter.class/cs/binaryformatter.cs#2)]
+ [!code-vb[System.ICustomFormatter.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.icustomformatter.class/vb/binaryformatter.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O common language runtime tenta usar seu <see cref="T:System.ICustomFormatter" /> implementação para cada item de formato em uma cadeia de caracteres de formato composto. Como resultado, você deve esperar que o <see cref="T:System.ICustomFormatter" /> implementação será chamada para fornecer serviços de formatação para objetos ou valores que não são projetados para manipular. Nesses casos, seu <see cref="M:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)" /> método deve chamar o método apropriado de formatação para esse objeto ou valor.  
+  
+ Há dois tipos de <see cref="T:System.ICustomFormatter" /> implementações: intrínseco e a extensão.  
+  
+ Implementações intrínsecas são implementações que fornecem a formatação personalizada para um objeto definido pelo aplicativo. Nesse caso, sua implementação deve incluir o seguinte:  
+  
+-   Uma definição de cadeias de caracteres de formato que definem a formatação do objeto. Cadeias de caracteres de formato são opcionais. Normalmente, uma cadeia de caracteres de formato "G" ou "g" define o formato geral (ou mais comumente usado). No entanto, você é livre para definir qualquer cadeia de caracteres de formato que você escolher. Você também está livre para decidir se eles são diferencia maiusculas de minúsculas ou maiusculas de minúsculas.  
+  
+-   Um teste para garantir que o tipo de objeto passado para o <see cref="M:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)" /> método é o tipo definido pelo aplicativo. Se não estiver, você deve chamar o objeto <see cref="T:System.IFormattable" /> implementação, se houver, ou seus <see cref="M:System.Object.ToString" /> método, se não existir. Você deve estar preparado para lidar com essas chamadas de método podem lançar exceções.  
+  
+-   Código para lidar com uma cadeia de caracteres de formato nulo, se sua implementação oferece suporte a cadeias de caracteres de formato. A abordagem mais comum é substituir uma cadeia de caracteres de formato null com o especificador de formato geral.  
+  
+-   Código para lidar com qualquer cadeia de caracteres de formato que oferece suporte a sua implementação.  
+  
+-   Código para tratar cadeias de caracteres de formato que não têm suporte. A abordagem mais comum é gerar um <see cref="T:System.FormatException" />, embora você possa fornecer a formatação padrão.  
+  
+ Implementações de extensão são implementações que fornecem a formatação personalizada para um tipo que já tem o suporte para formatação. Por exemplo, você pode definir um <c>CustomerNumberFormatter</c> que formata um tipo integral com hifens entre dígitos específicos. Nesse caso, sua implementação deve incluir o seguinte:  
+  
+-   Uma definição de cadeias de caracteres de formato que estendem a formatação do objeto. Essas cadeias de caracteres de formato são necessárias, mas eles não devem entrar em conflito com cadeias de caracteres de formato existente do tipo. Por exemplo, se você estiver estendendo formatação para o <see cref="T:System.Int32" /> tipo, você não deve implementar os especificadores de formato "C", "D", "E", "F" e "G", entre outros.  
+  
+-   Um teste que o tipo de objeto passado para o <see cref="M:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)" /> método é um tipo cuja formatação sua extensão oferece suporte. Se não estiver, chame o objeto <see cref="T:System.IFormattable" /> implementação, se houver, ou o objeto sem parâmetros <see cref="M:System.Object.ToString" /> método, se não existir. Você deve estar preparado para lidar com essas chamadas de método podem lançar exceções.  
+  
+-   Código para lidar com qualquer cadeia de caracteres de formato que oferece suporte a sua extensão.  
+  
+-   Código para lidar com qualquer cadeia de caracteres de formato que não dão suporte a sua extensão. Eles devem ser passados para o tipo <see cref="T:System.IFormattable" /> implementação. Você deve estar preparado para lidar com essas chamadas de método podem lançar exceções.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format (string format, object arg, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Format(string format, object arg, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato que contém especificações de formatação.</param>
+        <param name="arg">Um objeto a ser formatado.</param>
+        <param name="formatProvider">Um objeto que fornece informações de formato sobre a instância atual.</param>
+        <summary>Converte o valor de um objeto especificado em uma representação de cadeia de caracteres equivalente usando as informações de formatação específicas da cultura especificada.</summary>
+        <returns>A representação da cadeia de caracteres do valor de <paramref name="arg" />, formatada conforme especificado por <paramref name="format" /> e <paramref name="formatProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>é um método de retorno de chamada. Ele é chamado por um método que dá suporte à formatação personalizada, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. A implementação é chamada uma vez para cada item de formato em um [cadeia de caracteres de formato composto](~/docs/standard/base-types/composite-formatting.md). Por exemplo, na instrução a seguir, o <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> método é chamado de três vezes.  
+  
+ [!code-csharp[System.ICustomFormatter.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.icustomformatter.class/cs/binaryformatter.cs#4)]
+ [!code-vb[System.ICustomFormatter.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.icustomformatter.class/vb/binaryformatter.vb#4)]  
+  
+ O `arg` parâmetro é o objeto na lista de objetos cuja posição baseada em zero corresponde ao índice de um item de formato específico.  
+  
+ O `format` parâmetro contém uma cadeia de caracteres de formato, que é o `formatString` componente de um item de formato. Se o item de formato não tiver nenhuma `formatString` componente, o valor de `format` é `null`. Se `format` é `null`, dependendo do tipo de `arg`, você poderá usar a especificação de formato padrão de sua escolha.  
+  
+ O `formatProvider` parâmetro é o <xref:System.IFormatProvider> implementação que fornece a formatação para `arg`. Normalmente, é uma instância de sua <xref:System.ICustomFormatter> implementação. Se `formatProvider` é `null`, ignore esse parâmetro.  
+  
+ A implementação do <xref:System.ICustomFormatter.Format%2A> método deve incluir a seguinte funcionalidade para o .NET Framework possa fornecer a formatação não dão suporte. Se o método de formato não oferece suporte a um formato, determinar se o objeto que está sendo formatado implementa o <xref:System.IFormattable> interface. Se, invocar o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> método da interface. Caso contrário, invocar o padrão <xref:System.Object.ToString%2A?displayProperty=nameWithType> método do objeto subjacente. O código a seguir ilustra esse padrão.  
+  
+ [!code-csharp[System.ICustomFormatter.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.icustomformatter.class/cs/binaryformatter.cs#3)]
+ [!code-vb[System.ICustomFormatter.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.icustomformatter.class/vb/binaryformatter.vb#3)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa <xref:System.ICustomFormatter> para permitir hexadecimal, octal e binário formatação de valores integrais. Seu <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> implementação determina se o parâmetro de formato é uma das três cadeias de caracteres de formato com suporte ("B" para o binário, "O" para octal e "H" para hexadecimal) e formata o `arg` parâmetro adequadamente. Caso contrário, se `arg` não é `null`, ele chama o `arg` do parâmetro <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementação, se houver, ou sem seus parâmetros `ToString` método, se não. Se `arg` for `null`, o método retornará <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.ICustomFormatter.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.icustomformatter.class/cs/binaryformatter.cs#1)]
+ [!code-vb[System.ICustomFormatter.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.icustomformatter.class/vb/binaryformatter.vb#1)]  
+  
+ `BinaryFormatter`pode ser usado para fornecer formatação personalizada, passando um `BinaryFormatter` de objeto como o `provider` parâmetro do <xref:System.String.Format%2A> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.ICustomFormatter.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.icustomformatter.class/cs/binaryformatter.cs#2)]
+ [!code-vb[System.ICustomFormatter.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.icustomformatter.class/vb/binaryformatter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

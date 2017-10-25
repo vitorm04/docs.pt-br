@@ -1,0 +1,161 @@
+<Type Name="CategoryNameCollection" FullName="System.Drawing.Design.CategoryNameCollection">
+  <TypeSignature Language="C#" Value="public sealed class CategoryNameCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CategoryNameCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.CategoryNameCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de cadeias de caracteres de nome de categoria.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa coleção é usada para armazenar conjuntos de nomes de categoria da caixa de ferramentas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir tenta recuperar o <xref:System.Drawing.Design.IToolboxService> quando o controle é colocado no modo de design. Se o <xref:System.Drawing.Design.IToolboxService> é recuperado, o código obtém os nomes de cada categoria de caixa de ferramentas e desenha cada nome na superfície do controle.  
+  
+ [!code-cpp[CategoryNameCollectionExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/CategoryNameCollectionExample/CPP/toolboxcategorynamescontrol.cpp#2)]
+ [!code-csharp[CategoryNameCollectionExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/CategoryNameCollectionExample/CS/toolboxcategorynamescontrol.cs#2)]
+ [!code-vb[CategoryNameCollectionExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CategoryNameCollectionExample/VB/toolboxcategorynamescontrol.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CategoryNameCollection (System.Drawing.Design.CategoryNameCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Design.CategoryNameCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.CategoryNameCollection.#ctor(System.Drawing.Design.CategoryNameCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.Design.CategoryNameCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Drawing.Design.CategoryNameCollection" /> que contém os nomes para inicializar os valores da coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Design.CategoryNameCollection" /> classe usando a coleção especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CategoryNameCollection (string[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.CategoryNameCollection.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de cadeias de caracteres que contém os nomes das categorias para inicializar os valores da coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Design.CategoryNameCollection" /> usando a matriz especificada de nomes de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.CategoryNameCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para verificar a coleção.</param>
+        <summary>Indica se a categoria especificada está contida na coleção.</summary>
+        <returns>
+          <see langword="true" />Se a categoria especificada está contida na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (string[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(string[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.CategoryNameCollection.CopyTo(System.String[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.String[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz na qual copiar.</param>
+        <param name="index">O índice da matriz de destino no qual começar a copiar.</param>
+        <summary>Copia os elementos da coleção na matriz especificada no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.CategoryNameCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O nome da categoria para recuperar o índice na coleção.</param>
+        <summary>Obtém o índice do valor especificado.</summary>
+        <returns>O índice na coleção, ou <see langword="null" /> se a cadeia de caracteres não existe na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.CategoryNameCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do elemento de coleção para acessar.</param>
+        <summary>Obtém o nome da categoria no índice especificado.</summary>
+        <value>O nome da categoria no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

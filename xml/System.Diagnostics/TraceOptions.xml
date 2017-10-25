@@ -1,0 +1,254 @@
+<Type Name="TraceOptions" FullName="System.Diagnostics.TraceOptions">
+  <TypeSignature Language="C#" Value="public enum TraceOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TraceOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções de dados de rastreamento a serem gravados na saída de rastreamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por ouvintes de rastreamento para determinar quais opções ou elementos, devem ser incluídos na saída do rastreamento. Ouvintes de rastreamento armazenam as opções de rastreamento de <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade.  
+  
+ O exemplo a seguir mostra o uso do `traceOutputOptions` atributo para especificar as opções de saída de rastreamento para um <xref:System.Diagnostics.ConsoleTraceListener> que é habilitada por meio de um arquivo de configuração.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="consoleListener"  
+          type="System.Diagnostics.ConsoleTraceListener"   
+          traceOutputOptions="ProcessId, DateTime" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Para obter detalhes sobre como adicionar ouvintes de rastreamento para o arquivo de configuração do aplicativo, consulte [ &lt;ouvintes&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md).  
+  
+ O <xref:System.Diagnostics.TraceOptions> enumeração não é usada pelas seguintes classes e métodos:  
+  
+-   O <xref:System.Diagnostics.EventLogTraceListener> de classe, porque isso pode causar um grande volume de dados a serem gravados no log.  
+  
+-   O `Write` e `WriteLine` métodos do <xref:System.Diagnostics.ConsoleTraceListener>, <xref:System.Diagnostics.DefaultTraceListener>, e <xref:System.Diagnostics.TextWriterTraceListener> classes.  
+  
+-   O <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A> métodos de <xref:System.Diagnostics.TraceListener> classe quando eles não são substituídos em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.TraceOptions> enumeração para definir programaticamente a <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade para um ouvinte de rastreamento do console. O ouvinte de rastreamento do console é um dos ouvintes enumerados no <xref:System.Diagnostics.TraceSource.Listeners%2A> propriedade de uma origem de rastreamento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#16)]
+ [!code-vb[System.Diagnostics.TraceSource2#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#16)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Callstack">
+      <MemberSignature Language="C#" Value="Callstack" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions Callstack = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.Callstack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grave a pilha de chamadas, que é representada pelo valor retornado da propriedade <see cref="P:System.Environment.StackTrace" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="DateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions DateTime = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.DateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grave a data e hora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalOperationStack">
+      <MemberSignature Language="C#" Value="LogicalOperationStack" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions LogicalOperationStack = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.LogicalOperationStack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grave a pilha de operação lógica, que é representada pelo valor retornado da propriedade <see cref="P:System.Diagnostics.CorrelationManager.LogicalOperationStack" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não grave todos os elementos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="ProcessId" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions ProcessId = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.ProcessId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grave a identidade do processo, que é representada pelo valor retornado da propriedade <see cref="P:System.Diagnostics.Process.Id" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadId">
+      <MemberSignature Language="C#" Value="ThreadId" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions ThreadId = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.ThreadId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grave a identidade do thread, que é representada pelo valor retornado da propriedade <see cref="P:System.Threading.Thread.ManagedThreadId" /> para o thread atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="Timestamp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceOptions Timestamp = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceOptions.Timestamp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grave o carimbo de data/hora, que é representado pelo valor retornado do método <see cref="M:System.Diagnostics.Stopwatch.GetTimestamp" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

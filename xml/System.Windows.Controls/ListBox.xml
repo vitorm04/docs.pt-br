@@ -1,0 +1,534 @@
+<Type Name="ListBox" FullName="System.Windows.Controls.ListBox">
+  <TypeSignature Language="C#" Value="public class ListBox : System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ListBox extends System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ListBox" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.Selector</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.ListBox)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.ListBoxItem))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém uma lista de itens selecionáveis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ListBox>é um <xref:System.Windows.Controls.ItemsControl>, que significa que ele pode conter uma coleção de objetos de qualquer tipo (como cadeia de caracteres, imagem ou painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ItemsControl>.  
+  
+ Mais de um item em uma <xref:System.Windows.Controls.ListBox> estiver visível, ao contrário de <xref:System.Windows.Controls.ComboBox>, que tem apenas o item selecionado visível, a menos que o <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A> é de propriedade `true`.  O <xref:System.Windows.Controls.ListBox.SelectionMode%2A> propriedade determina se mais de um item de <xref:System.Windows.Controls.ListBox> é selecionável em um momento.  
+  
+ O <xref:System.Windows.Controls.ListBox.SelectionMode%2A> propriedade determina quantos itens um usuário podem selecionar ao mesmo tempo. Você pode definir a propriedade <xref:System.Windows.Controls.SelectionMode.Single> (o padrão), <xref:System.Windows.Controls.SelectionMode.Multiple>, ou <xref:System.Windows.Controls.SelectionMode.Extended>. A tabela a seguir descrito o comportamento desses valores de enumeração.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Windows.Controls.SelectionMode.Single>|O usuário pode selecionar apenas um item de cada vez.|  
+|<xref:System.Windows.Controls.SelectionMode.Multiple>|O usuário pode selecionar vários itens sem pressionar uma tecla modificadora.|  
+|<xref:System.Windows.Controls.SelectionMode.Extended>|O usuário pode selecionar vários itens consecutivos enquanto mantém pressionada a tecla SHIFT ou itens não consecutivas, mantendo a tecla CTRL pressionada e clicando em itens.|  
+  
+ <xref:System.Windows.Controls.ListBox>controles geralmente são usados com associação de dados.  Para obter mais informações, consulte [Visão geral de vinculação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Exibir um grande número de itens pode causar problemas de desempenho.  Consulte [otimizando o desempenho: controles](~/docs/framework/wpf/advanced/optimizing-performance-controls.md) para obter mais informações.  
+  
+## <a name="customizing-the-listbox-control"></a>Personalizando o controle ListBox  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.ListBox> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.ListBox>, consulte [modelos e estilos de caixa de listagem](~/docs/framework/wpf/controls/listbox-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.ListBox> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> e assina o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> evento.  
+  
+ [!code-xaml[ListBoxEvent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#1)]  
+  
+ [!code-csharp[ListBoxEvent#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ListBoxEvent#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorItem">
+      <MemberSignature Language="C#" Value="protected object AnchorItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AnchorItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ListBox.AnchorItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o item inicialmente selecionado quando <see cref="P:System.Windows.Controls.ListBox.SelectionMode" /> é <see cref="F:System.Windows.Controls.SelectionMode.Extended" />.</summary>
+        <value>O item inicialmente selecionado quando <see cref="P:System.Windows.Controls.ListBox.SelectionMode" /> é <see cref="F:System.Windows.Controls.SelectionMode.Extended" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria ou identifica o elemento usado para exibir um item especificado.</summary>
+        <returns>O elemento usado para exibir um item especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlesScrolling">
+      <MemberSignature Language="C#" Value="protected override bool HandlesScrolling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HandlesScrolling" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ListBox.HandlesScrolling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.ListBox" /> dá suporte à rolagem.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.ListBox" /> der suporte à rolagem, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle tiver um <xref:System.Windows.Controls.ScrollViewer> no seu estilo e tem um teclado personalizado rolagem comportamento, <xref:System.Windows.Controls.ListBox.HandlesScrolling%2A> deve retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Item especificado.</param>
+        <summary>Determina se o item especificado for (ou é elegível para ser) seu próprio <c>ItemContainer</c>.</summary>
+        <returns>
+          <see langword="true" /> se o item é seu próprio <see langword="ItemContainer" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um apropriado <see cref="T:System.Windows.Automation.Peers.ListBoxAutomationPeer" /> implementação para este controle, como parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infra-estrutura de automação.</summary>
+        <returns>A implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> específica ao tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsMouseCapturedChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsMouseCapturedChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsMouseCapturedChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para o <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.UIElement.IsMouseCaptured" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para <see cref="T:System.Windows.Input.KeyEventArgs" />.</param>
+        <summary>Responde a <see cref="E:System.Windows.UIElement.KeyDown" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para <see cref="T:System.Windows.Input.MouseEventArgs" />.</param>
+        <summary>Chamado quando um <see cref="T:System.Windows.Controls.ListBox" /> relata um movimento do mouse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectionChanged (System.Windows.Controls.SelectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectionChanged(class System.Windows.Controls.SelectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.SelectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para <see cref="T:System.Windows.Controls.SelectionChangedEventArgs" />.</param>
+        <summary>Alterar responde a uma seleção de caixa de listagem, gerando um <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Elemento usado para exibir o item especificado.</param>
+        <param name="item">Item especificado.</param>
+        <summary>Prepara o elemento especificado para exibir o item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Preparar o elemento pode envolver a aplicação de estilos, associações, de configuração e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollIntoView">
+      <MemberSignature Language="C#" Value="public void ScrollIntoView (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollIntoView(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.ScrollIntoView(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Objeto a ser rolado.</param>
+        <summary>Faz com que o objeto seja rolado e apareça na exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto não estiver visível, ele será alinhado na parte superior ou inferior do visor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public void SelectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.SelectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Seleciona todos os itens em um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ListBox.SelectAll%2A> método para selecionar e realçar todos os itens em uma caixa de listagem.  
+  
+ [!code-csharp[ListBox_snip#ListBoxSelectAll](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml.cs#listboxselectall)]
+ [!code-vb[ListBox_snip#ListBoxSelectAll](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb#listboxselectall)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A propriedade <see cref="P:System.Windows.Controls.ListBox.SelectionMode" /> é definida como <see cref="F:System.Windows.Controls.SelectionMode.Single" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItems">
+      <MemberSignature Language="C#" Value="public System.Collections.IList SelectedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList SelectedItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ListBox.SelectedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os itens selecionados no momento.</summary>
+        <value>Retorna uma coleção de itens selecionados no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade deve ser usada quando <xref:System.Windows.Controls.ListBox.SelectionMode%2A> não é igual a <xref:System.Windows.Controls.SelectionMode.Single>. Se o modo de seleção é <xref:System.Windows.Controls.SelectionMode.Single> a propriedade correta a ser usado é <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.  
+  
+<a name="dependencyPropertyInfo_SelectedItems"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ListBox.SelectedItemsProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ListBox.SelectedItems%2A> para determinar se uma caixa de listagem possui os itens selecionados.  
+  
+ [!code-csharp[ListBox_snip#ListBoxSelectedItems](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml.cs#listboxselecteditems)]
+ [!code-vb[ListBox_snip#ListBoxSelectedItems](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb#listboxselecteditems)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Windows.Controls.ListBox.SelectionMode" /> é definida como <see cref="F:System.Windows.Controls.SelectionMode.Single" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ListBox.SelectedItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ListBox.SelectedItems" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.SelectionMode SelectionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.SelectionMode SelectionMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ListBox.SelectionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento de seleção para um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Controls.SelectionMode" />. O padrão é seleção de <see cref="F:System.Windows.Controls.SelectionMode.Single" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_SelectionMode"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ListBox.SelectionModeProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Windows.Controls.ListBox.SelectionMode%2A> propriedade <xref:System.Windows.Controls.SelectionMode.Multiple>.  
+  
+ [!code-xaml[ListBoxEvent#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ListBox.SelectionModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ListBox.SelectionMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectedItems">
+      <MemberSignature Language="C#" Value="protected bool SetSelectedItems (System.Collections.IEnumerable selectedItems);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool SetSelectedItems(class System.Collections.IEnumerable selectedItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.SetSelectedItems(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedItems" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="selectedItems">Coleção de itens sejam selecionados.</param>
+        <summary>Define uma coleção de itens selecionados.</summary>
+        <returns>
+          <see langword="true" /> se todos os itens tiverem sido selecionado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectAll">
+      <MemberSignature Language="C#" Value="public void UnselectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnselectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBox.UnselectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa toda a seleção em um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ListBox.UnselectAll%2A> método para desmarcar todos os itens em uma caixa de listagem.  
+  
+ [!code-csharp[ListBox_snip#ListBoxUnselectAll](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml.cs#listboxunselectall)]
+ [!code-vb[ListBox_snip#ListBoxUnselectAll](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb#listboxunselectall)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

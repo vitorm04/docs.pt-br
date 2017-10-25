@@ -1,0 +1,128 @@
+<Type Name="ResolveProjectBase" FullName="Microsoft.Build.Tasks.ResolveProjectBase">
+  <TypeSignature Language="C#" Value="public abstract class ResolveProjectBase : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ResolveProjectBase extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ResolveProjectBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base para <see cref="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput" /> e <see cref="T:Microsoft.Build.Tasks.AssignProjectConfiguration" />.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ResolveProjectBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveProjectBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.ResolveProjectBase" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddSyntheticProjectReferences">
+      <MemberSignature Language="C#" Value="protected void AddSyntheticProjectReferences (string currentProjectAbsolutePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddSyntheticProjectReferences(string currentProjectAbsolutePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveProjectBase.AddSyntheticProjectReferences(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentProjectAbsolutePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="currentProjectAbsolutePath">O caminho absoluto do projeto atual.</param>
+        <summary>Método auxiliar para recuperar o extra "referências de projeto" passados ao blob de solução. Eles são provenientes dependências expressadas no próprio arquivo de solução.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectElement">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlElement GetProjectElement (Microsoft.Build.Framework.ITaskItem projectRef);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlElement GetProjectElement(class Microsoft.Build.Framework.ITaskItem projectRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveProjectBase.GetProjectElement(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectRef" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="projectRef">O item de referência de projeto.</param>
+        <summary>Recupera o elemento XML que representa o projeto fornecido.</summary>
+        <returns>Retorna o elemento de projeto.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectItem">
+      <MemberSignature Language="C#" Value="protected string GetProjectItem (Microsoft.Build.Framework.ITaskItem projectRef);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetProjectItem(class Microsoft.Build.Framework.ITaskItem projectRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveProjectBase.GetProjectItem(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectRef" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="projectRef">Uma referência de projeto que contém um atributo GUID de projeto.</param>
+        <summary>Recupera o conteúdo XML do elemento de projeto do projeto especificado.</summary>
+        <returns>O conteúdo XML do elemento de projeto do projeto especificado.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ProjectReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ProjectReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveProjectBase.ProjectReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as referências do projeto.</summary>
+        <value>As referências do projeto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

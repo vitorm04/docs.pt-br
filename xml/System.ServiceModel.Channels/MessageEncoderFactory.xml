@@ -1,0 +1,179 @@
+<Type Name="MessageEncoderFactory" FullName="System.ServiceModel.Channels.MessageEncoderFactory">
+  <TypeSignature Language="C#" Value="public abstract class MessageEncoderFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageEncoderFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageEncoderFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe base abstrata que representa a fábrica para produzir codificadores de mensagem que podem ler mensagens de um fluxo e gravá-las em um fluxo para vários tipos de codificação de mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codificação é o processo de transformar uma mensagem em uma sequência de bytes. Decodificação de é o processo inverso.  
+  
+ Use essa classe se você deseja implementar um codificador de mensagem personalizada. Para implementar seu próprio codificador de mensagem personalizada, você deve fornecer implementações personalizadas das classes base abstratas de três seguintes:  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncoder>  
+  
+ Substituir o <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A> para retornar uma instância de personalizados <xref:System.ServiceModel.Channels.MessageEncoder>. Conectar personalizados <xref:System.ServiceModel.Channels.MessageEncoderFactory> para a pilha do elemento de associação usada para configurar o serviço ou cliente, substituindo o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> método para retornar uma instância dessa fábrica. Para obter mais informações sobre codificadores personalizados, consulte [serialização e transferência de dados](~/docs/framework/wcf/feature-details/data-transfer-and-serialization.md).  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como escrever uma classe derivada de <xref:System.ServiceModel.Channels.MessageEncoderFactory>:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#8)]
+ [!code-csharp[S_UE_CustomTextMessageEncoder#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoderfactory.cs#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageEncoderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoderFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.MessageEncoderFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSessionEncoder">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.MessageEncoder CreateSessionEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.MessageEncoder CreateSessionEncoder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoderFactory.CreateSessionEncoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageEncoder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um codificador de mensagem que pode ser usado para correlacionar mensagens em trocas baseadas em sessão.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.MessageEncoder" /> que é usado em baseadas em sessão trocas de mensagens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um codificador de mensagens baseadas em sessão pode controlar que o indivíduo mensagens que compõem a uma conversa que consiste em todas as mensagens trocadas entre dois pontos de extremidade que fazem parte de uma sessão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoder">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageEncoder Encoder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageEncoder Encoder" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageEncoderFactory.Encoder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageEncoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o codificador de mensagem que é produzido pela fábrica.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageEncoder" /> usado pela fábrica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como implementar a <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A> propriedade:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoderfactory.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageVersion MessageVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageEncoderFactory.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão de mensagem que é usada pelos codificadores produzidos pela fábrica para codificar mensagens.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> usado pela fábrica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão de mensagem pode ser definida usando o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A> propriedade. <xref:System.ServiceModel.Channels.MessageVersion>é limitado ao uso de determinadas versões de SOAP e WS-Addressing e não é extensível. Portanto, se essas versões não deve ser usada, essa propriedade deve ser substituída para retornar <xref:System.ServiceModel.Channels.MessageVersion.None%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar a <xref:System.ServiceModel.Channels.MessageEncoderFactory.MessageVersion%2A> propriedade:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoderfactory.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

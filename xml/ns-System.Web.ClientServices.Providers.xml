@@ -1,0 +1,17 @@
+<Namespace Name="System.Web.ClientServices.Providers">
+  <Docs>
+    <summary>O <see cref="N:System.Web.ClientServices.Providers" /> namespace contém os provedores de serviços de cliente e outras classes que oferecem suporte a acesso em aplicativos do Windows para a autenticação do Microsoft Ajax, funções e perfil de serviços.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes de <xref:System.Web.ClientServices.Providers> namespace incluem provedores de serviço de aplicativos cliente que permitem que aplicativos baseados no Windows para usar o [!INCLUDE[ajax_current_short](~/includes/ajax-current-short-md.md)] autenticação, funções e serviços de perfil. Habilitar esses serviços e especificar provedores de serviços de cliente em seu arquivo de configuração do aplicativo e, em seguida, acessar os serviços por meio de existente [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] associação, identidade e infraestruturas de configurações do aplicativo. Os provedores de serviço de cliente também dão suporte à conectividade ocasional armazenar e recuperar informações do usuário em um cache de dados local quando o aplicativo está offline. Para obter mais informações, consulte [Serviços de aplicativo cliente](~/docs/framework/common-client-technologies/client-application-services.md).  
+  
+ Para acessar o serviço de logon, você pode usar a autenticação do Windows ou formulários, especificando o <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> ou <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> na configuração do aplicativo. Autenticação do Windows usa a identidade fornecida quando um usuário faz logon no sistema operacional. Autenticação de formulários exige que você recuperar informações de logon do usuário e passá-lo para o serviço. Você pode fazer isso especificando uma <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> implementação com seu <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> configuração. O <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> método retorna um <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> objeto que contém informações de logon do usuário. Você pode preencher esse objeto, por exemplo, exibindo uma caixa de diálogo de logon na <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> método.  
+  
+ Para acessar as funções e serviços de perfil, especifique o <xref:System.Web.ClientServices.Providers.ClientRoleProvider> e <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> na configuração do aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,44 @@
+<Type Name="DataObjectPastingEventHandler" FullName="System.Windows.DataObjectPastingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataObjectPastingEventHandler(object sender, DataObjectPastingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataObjectPastingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataObjectPastingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.DataObjectPastingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa um método que manipulará o <see cref="E:System.Windows.DataObject.Pasting" /> evento anexado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DataObject.Pasting> evento anexado ocorre quando uma operação de colagem tiver selecionado um formato de dados para colar, mas antes dos dados realmente serão colados.  
+  
+ Ações que normalmente é executadas por um <xref:System.Windows.DataObject.Pasting> manipulador de eventos anexados incluem:  
+  
+-   Alterar o formato de colar selecionada, definindo um novo valor para o <xref:System.Windows.DataObjectPastingEventArgs.FormatToApply%2A> propriedade.  
+  
+-   Aplica um formato de dados personalizado para a seleção de colar.  
+  
+-   Criar um novo <xref:System.Windows.DataObject>e atribuí-la para o <xref:System.Windows.DataObjectPastingEventArgs.DataObject%2A> propriedade `e`.  Uma cópia somente leitura do objeto de dados original é armazenada no <xref:System.Windows.DataObjectPastingEventArgs.SourceDataObject%2A>.  
+  
+-   Cancelar a operação de colagem chamando <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A>.  
+  
+ **Importante** se Colar formato for alterado, o método do manipulador é responsável por garantir que um formato de colar recém-selecionada é consumido pelo destino colar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

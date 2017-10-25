@@ -1,0 +1,233 @@
+<Type Name="FileShare" FullName="System.IO.FileShare">
+  <TypeSignature Language="C#" Value="public enum FileShare" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FileShare extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileShare" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém constantes para controlar o tipo de acesso que outros objetos <see cref="T:System.IO.FileStream" /> podem ter ao mesmo arquivo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter um exemplo de criação de um arquivo e gravar texto em um arquivo, consulte [como: gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md). Para obter um exemplo de texto de leitura de um arquivo, consulte [como: ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md). Para obter um exemplo de leitura e gravação em um arquivo binário, consulte [como: ler e gravar um recentemente criado arquivo de dados](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md).  
+  
+ Um uso típico dessa enumeração é definir se os dois processos simultaneamente podem ler do mesmo arquivo. Por exemplo, se um arquivo é aberto e leitura for especificada, outros usuários podem abrir o arquivo para leitura, mas não para gravação.  
+  
+ Um <xref:System.IO.FileShare.Read> parâmetro é especificado em alguns dos construtores para <xref:System.IO.FileStream>, <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>e em alguns do `Open` métodos de <xref:System.IO.File> e <xref:System.IO.FileInfo> para controlar como um arquivo é aberto.  
+  
+   
+  
+## Examples  
+ O seguinte <xref:System.IO.FileStream> construtor abre um arquivo existente e concede acesso somente leitura a outros usuários (leitura).  
+  
+ [!code-cpp[Classic FileAccess Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileAccess Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileAccess Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileAccess Example/CS/source.cs#1)]
+ [!code-vb[Classic FileAccess Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileAccess Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileShare Delete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileShare.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileShare</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite a exclusão posterior de um arquivo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inheritable">
+      <MemberSignature Language="C#" Value="Inheritable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileShare Inheritable = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileShare.Inheritable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileShare</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Torna o identificador de arquivo herdável por processos filho. Não há suporte direto para isso no Win32.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileShare None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileShare.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileShare</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recusa o compartilhamento do arquivo atual. Qualquer solicitação para abrir o arquivo (por esse processo ou por outro) falhará até que o arquivo seja fechado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileShare Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileShare.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileShare</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite a abertura posterior do arquivo para leitura. Se este sinalizador não for especificado, todas as solicitações para abrir o arquivo para leitura (por esse processo ou outro) falharão até que o arquivo seja fechado. No entanto, mesmo se esse sinalizador for especificado, ainda poderão ser necessárias permissões adicionais para acessar o arquivo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWrite">
+      <MemberSignature Language="C#" Value="ReadWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileShare ReadWrite = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileShare.ReadWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileShare</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite a abertura posterior do arquivo para leitura ou gravação. Se este sinalizador não for especificado, todas as solicitações para abrir o arquivo para leitura ou gravação (por esse processo ou outro) falharão até que o arquivo seja fechado. No entanto, mesmo se esse sinalizador for especificado, ainda poderão ser necessárias permissões adicionais para acessar o arquivo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileShare Write = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileShare.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileShare</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite a abertura posterior do arquivo para gravação. Se este sinalizador não for especificado, todas as solicitações para abrir o arquivo para gravação (por esse processo ou outro) falharão até que o arquivo seja fechado. No entanto, mesmo se esse sinalizador for especificado, ainda poderão ser necessárias permissões adicionais para acessar o arquivo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

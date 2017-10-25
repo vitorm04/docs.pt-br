@@ -1,0 +1,149 @@
+<Type Name="Rule" FullName="System.Data.Rule">
+  <TypeSignature Language="C#" Value="public enum Rule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Rule extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Rule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a ação que ocorre quando um <see cref="T:System.Data.ForeignKeyConstraint" /> é imposto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Rule> valores são definidos o <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> e <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> propriedades de um <xref:System.Data.ForeignKeyConstraint> objeto encontrado em um <xref:System.Data.DataTable> do objeto <xref:System.Data.ConstraintCollection>.  
+  
+ O <xref:System.Data.Rule> valores determinam a ação que ocorre quando um valor em uma coluna é excluído ou atualizado. Dos dois, excluir um valor é mais críticas e exigentes de atenção ao definir uma regra.  
+  
+ No caso em que um valor é excluído, `Cascade` Especifica que todas as linhas que contém esse valor também serão excluídas. `SetNull`Especifica que os valores em todas as colunas filho são definidos como valores nulos. `SetDefault`Especifica que todas as colunas filho seja definido como o valor padrão para a coluna. `None`Especifica que nenhuma ação ocorrerá, mas exceções são geradas.  
+  
+ No caso em que um valor é atualizado, `Cascade` Especifica que todas as colunas filho da mesma forma são atualizadas com o novo valor. `SetNull`Especifica que todas as colunas filho seja definida como valores nulos. `SetDefault`Especifica que todos os valores de coluna filho ser definido como o valor padrão. `None`Especifica que nenhuma ação tomada, mas as exceções são geradas.  
+  
+ Restrições em uma <xref:System.Data.DataSet> não são impostas, a menos que o <xref:System.Data.DataSet.EnforceConstraints%2A> é de propriedade `true`.  
+  
+ Quando o <xref:System.Data.DataTable.AcceptChanges%2A> método é chamado, o <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> mais determina a ação que ocorre.  
+  
+   
+  
+## Examples  
+ [!code-vb[Classic WebData ForeignKeyConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cascade">
+      <MemberSignature Language="C#" Value="Cascade" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule Cascade = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.Cascade" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Excluir ou atualizar linhas relacionadas. Esse é o padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma ação em linhas relacionadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefault">
+      <MemberSignature Language="C#" Value="SetDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule SetDefault = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.SetDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definir valores em linhas relacionadas como o valor contido na propriedade <see cref="P:System.Data.DataColumn.DefaultValue" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNull">
+      <MemberSignature Language="C#" Value="SetNull" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule SetNull = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.SetNull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definir valores em linhas relacionadas como <see langword="DBNull" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

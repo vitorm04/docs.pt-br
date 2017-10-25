@@ -1,0 +1,27 @@
+<Type Name="FaultCallback" FullName="System.Activities.FaultCallback">
+  <TypeSignature Language="C#" Value="public delegate void FaultCallback(NativeActivityFaultContext faultContext, Exception propagatedException, ActivityInstance propagatedFrom);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FaultCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.FaultCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="faultContext" Type="System.Activities.NativeActivityFaultContext" />
+    <Parameter Name="propagatedException" Type="System.Exception" />
+    <Parameter Name="propagatedFrom" Type="System.Activities.ActivityInstance" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="faultContext">O <see cref="T:System.Activities.ActivityFaultContext" /> fornecido para inspecionar a falha de fluxo de trabalho.</param>
+    <param name="propagatedException">A exceção que causou a falha.</param>
+    <param name="propagatedFrom">A atividade que gerou a exceção e gerou a falha.</param>
+    <summary>Representa o método que é chamado quando uma atividade agendada ou um de seus filhos entra o <see cref="F:System.Activities.ActivityInstanceState.Faulted" /> estado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

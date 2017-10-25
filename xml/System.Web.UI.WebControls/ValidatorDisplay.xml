@@ -1,0 +1,82 @@
+<Type Name="ValidatorDisplay" FullName="System.Web.UI.WebControls.ValidatorDisplay">
+  <TypeSignature Language="C#" Value="public enum ValidatorDisplay" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidatorDisplay extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ValidatorDisplay" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o comportamento de exibição de mensagens de erro em controles de validação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ValidatorDisplay> enumeração representa os comportamentos de exibição diferente das mensagens de erro em controles de validação.  
+  
+ NONE especifica que somente você deseja exibir a mensagem de erro em um <xref:System.Web.UI.WebControls.ValidationSummary> controle. A mensagem de erro não será exibido no controle de validação.  
+  
+ Static Especifica que você não deseja o layout da página da Web para alterar quando os controles de validação exibem mensagens de erro. Espaço na página é alocado para as mensagens de erro ao exibir a página. O conteúdo de validador fisicamente fazem parte da página. Portanto, vários validadores para o mesmo controle de entrada devem ocupar locais diferentes na página.  
+  
+ Dinâmico especifica que você deseja colocar dinamicamente as mensagens de erro na página da Web quando a validação falha. Não seja alocado espaço para o conteúdo de validação na página; Portanto, a página dinamicamente as alterações para exibir a mensagem de erro. Isso permite que vários validadores compartilhar o mesmo local físico da página. Para manter o layout da página de alteração quando uma mensagem de erro é exibida, o elemento HTML que contém o validador deve ser dimensionado grande o suficiente para acomodar o tamanho máximo do validador.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar controles de validação para que elas geram marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dynamic">
+      <MemberSignature Language="C#" Value="Dynamic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidatorDisplay Dynamic = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidatorDisplay.Dynamic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidatorDisplay</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo do validador é adicionado à página dinamicamente quando a validação falha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidatorDisplay None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidatorDisplay.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidatorDisplay</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo do validador nunca é exibido embutido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidatorDisplay Static = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidatorDisplay.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidatorDisplay</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo do validador é fisicamente parte do layout da página.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,274 @@
+<Type Name="ProsodyNumber" FullName="System.Speech.Synthesis.TtsEngine.ProsodyNumber">
+  <TypeSignature Language="C#" Value="public struct ProsodyNumber : IEquatable&lt;System.Speech.Synthesis.TtsEngine.ProsodyNumber&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ProsodyNumber extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Speech.Synthesis.TtsEngine.ProsodyNumber&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ImmutableObject(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os atributos prosody e seus valores.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProsodyNumber (int ssmlAttributeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 ssmlAttributeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ssmlAttributeId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ssmlAttributeId">O identificador de um atributo prosody.</param>
+        <summary>Cria uma nova instância do <c>ProsodyNumber</c> classe e especifica o identificador de um atributo prosody.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProsodyNumber (float number);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.#ctor(System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="number" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="number">Um valor para um atributo prosody.</param>
+        <summary>Cria uma nova instância do <c>ProsodyNumber</c> classe e especifica um valor para um atributo prosody.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsoluteNumber">
+      <MemberSignature Language="C#" Value="public const int AbsoluteNumber = 2147483647;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AbsoluteNumber = (2147483647)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyNumber.AbsoluteNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2147483647</MemberValue>
+      <Docs>
+        <summary>Contém um valor que representa uma configuração de um atributo prosody.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser avaliado.</param>
+        <summary>Determina se um objeto especificado é uma instância de <c>ProsodyNumber</c> e igual à instância atual do <c>ProsodyNumber</c>.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é igual à atual <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Speech.Synthesis.TtsEngine.ProsodyNumber other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Equals(System.Speech.Synthesis.TtsEngine.ProsodyNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Speech.Synthesis.TtsEngine.ProsodyNumber" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto para avaliar.</param>
+        <summary>Determina se um especificado <c>ProsodyNumber</c> objeto é igual à instância atual do <c>ProsodyNumber</c>.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="other" /> é igual à atual <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um código hash para um <c>ProsodyNumber</c> objeto.</summary>
+        <returns>Um código hash para um <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNumberPercent">
+      <MemberSignature Language="C#" Value="public bool IsNumberPercent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNumberPercent" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ProsodyNumber.IsNumberPercent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o <c>número</c> propriedade representa um valor percentual.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Number" /> representa um valor de porcentagem, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Number">
+      <MemberSignature Language="C#" Value="public float Number { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Number" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Number" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor numérico de um atributo de prosody SSML.</summary>
+        <value>O valor numérico de um atributo de prosody SSML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber1, System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber1, valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.op_Equality(System.Speech.Synthesis.TtsEngine.ProsodyNumber,System.Speech.Synthesis.TtsEngine.ProsodyNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prosodyNumber1" Type="System.Speech.Synthesis.TtsEngine.ProsodyNumber" />
+        <Parameter Name="prosodyNumber2" Type="System.Speech.Synthesis.TtsEngine.ProsodyNumber" />
+      </Parameters>
+      <Docs>
+        <param name="prosodyNumber1">O <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto a ser comparado com <c>prosodyNumber2</c>.</param>
+        <param name="prosodyNumber2">O <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto a ser comparado com <c>prosodyNumber1</c>.</param>
+        <summary>Determina se duas instâncias de <c>ProsodyNumber</c> são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="prosodyNumber1" /> é o mesmo que <paramref name="prosodyNumber2" />;  Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Equals%28System.Speech.Synthesis.TtsEngine.ProsodyNumber%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber1, System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber1, valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber prosodyNumber2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ProsodyNumber.op_Inequality(System.Speech.Synthesis.TtsEngine.ProsodyNumber,System.Speech.Synthesis.TtsEngine.ProsodyNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prosodyNumber1" Type="System.Speech.Synthesis.TtsEngine.ProsodyNumber" />
+        <Parameter Name="prosodyNumber2" Type="System.Speech.Synthesis.TtsEngine.ProsodyNumber" />
+      </Parameters>
+      <Docs>
+        <param name="prosodyNumber1">O <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto a ser comparado com <c>prosodyNumber2</c>.</param>
+        <param name="prosodyNumber2">O <see cref="T:System.Speech.Synthesis.TtsEngine.ProsodyNumber" /> objeto a ser comparado com <c>prosodyNumber1</c>.</param>
+        <summary>Determina se duas instâncias de <c>ProsodyNumber</c> não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="prosodyNumber1" /> é diferente do <paramref name="prosodyNumber2" />; caso contrário, <paramref name="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Equals%28System.Speech.Synthesis.TtsEngine.ProsodyNumber%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SsmlAttributeId">
+      <MemberSignature Language="C#" Value="public int SsmlAttributeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SsmlAttributeId" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ProsodyNumber.SsmlAttributeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de um atributo de prosody SSML.</summary>
+        <value>O identificador de um atributo de prosody SSML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unit">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.ProsodyUnit Unit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.TtsEngine.ProsodyUnit Unit" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ProsodyNumber.Unit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a unidade na qual a quantidade de alteração é especificada.</summary>
+        <value>A unidade na qual a quantidade de alterações for especificada, por exemplo, semitone ou Hz (Hertz).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

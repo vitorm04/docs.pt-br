@@ -1,0 +1,97 @@
+<Type Name="CorrelationHandle" FullName="System.ServiceModel.Activities.CorrelationHandle">
+  <TypeSignature Language="C#" Value="public class CorrelationHandle : System.Activities.Handle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CorrelationHandle extends System.Activities.Handle" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.CorrelationHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Handle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa atividades juntos em uma correlação, que representa um determinado compartilhado <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> ou contexto transitório no fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[wf](~/includes/wf-md.md)]fornece quatro tipos de correlação: [com base em conteúdo](~/docs/framework/wcf/feature-details/content-based-correlation.md), [solicitação-resposta](~/docs/framework/wcf/feature-details/request-reply-correlation.md), [Duplex durável](~/docs/framework/wcf/feature-details/durable-duplex-correlation.md), e [intercâmbio de contexto](~/docs/framework/wcf/feature-details/context-exchange-correlation.md). [!INCLUDE[crabout](~/includes/crabout-md.md)]correlação, consulte [visão geral de correlação](~/docs/framework/wcf/feature-details/correlation-overview.md), os tipos de correlação específica mencionado anteriormente, e os exemplos de correlação localizados no [Services &#91; Exemplos de WF &#93; ](~/docs/framework/windows-workflow-foundation/samples/services.md) nó do [!INCLUDE[wf1](~/includes/wf1-md.md)] exemplos.  
+  
+ O tempo de execução usa a <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> para correlação se ele estiver presente, caso contrário, o **CorrelatesWith** propriedade da atividade de mensagens será usada.  Se ambos estiverem ausentes, o identificador de ambiente fornecido pelo <xref:System.ServiceModel.Activities.CorrelationScope> ou o serviço de fluxo de trabalho é usado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.ServiceModel.Activities.CorrelationHandle> em um <xref:System.ServiceModel.Activities.SendReply> atividade.  
+  
+ [!code-csharp[ImplicitExplicitCorrelation#0](~/samples/snippets/csharp/VS_Snippets_CFX/implicitexplicitcorrelation/cs/service/pharmacyservice.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CorrelationHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationHandle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.CorrelationHandle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialize">
+      <MemberSignature Language="C#" Value="protected override void OnInitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationHandle.OnInitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente de inicialização.</param>
+        <summary>Registra o <see cref="T:System.ServiceModel.Activities.CorrelationHandle" /> com o tempo de execução do fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUninitialize">
+      <MemberSignature Language="C#" Value="protected override void OnUninitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUninitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationHandle.OnUninitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente de inicialização do <see cref="T:System.ServiceModel.Activities.CorrelationHandle" />.</param>
+        <summary>Cancela o registro de <see cref="T:System.ServiceModel.Activities.CorrelationHandle" /> com o tempo de execução do fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

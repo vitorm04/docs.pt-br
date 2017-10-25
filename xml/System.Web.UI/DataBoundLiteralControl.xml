@@ -1,0 +1,265 @@
+<Type Name="DataBoundLiteralControl" FullName="System.Web.UI.DataBoundLiteralControl">
+  <TypeSignature Language="C#" Value="public sealed class DataBoundLiteralControl : System.Web.UI.Control, System.Web.UI.ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataBoundLiteralControl extends System.Web.UI.Control implements class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataBoundLiteralControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Retém a expressões de associação de dados e texto literal estático. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataBoundLiteralControl> classe persiste o valor de seu <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade no estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma classe que obtém um <xref:System.Web.UI.DataBoundLiteralControl> objeto e exibe o <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade do objeto.  
+  
+ [!code-csharp[SystemWebUI_DataBoundLiteralControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_DataBoundLiteralControl/CS/mydataboundliteralcontrol.cs#1)]
+ [!code-vb[SystemWebUI_DataBoundLiteralControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_DataBoundLiteralControl/VB/mydataboundliteralcontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBoundLiteralControl (int staticLiteralsCount, int dataBoundLiteralCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 staticLiteralsCount, int32 dataBoundLiteralCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="staticLiteralsCount" Type="System.Int32" />
+        <Parameter Name="dataBoundLiteralCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="staticLiteralsCount">Define o tamanho da matriz para criar para armazenar cadeias de caracteres literal estáticas.</param>
+        <param name="dataBoundLiteralCount">Define o tamanho da matriz para criar para armazenar cadeias de caracteres literais de associação de dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataBoundString">
+      <MemberSignature Language="C#" Value="public void SetDataBoundString (int index, string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDataBoundString(int32 index, string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.SetDataBoundString(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição em uma matriz na qual se deseja reter o <c>s</c> o valor do parâmetro.</param>
+        <param name="s">Um <see cref="T:System.String" /> que contém o valor para a expressão de associação de dados.</param>
+        <summary>Atribui um valor de cadeia de caracteres em uma matriz que contém valores de associação de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStaticString">
+      <MemberSignature Language="C#" Value="public void SetStaticString (int index, string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetStaticString(int32 index, string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBoundLiteralControl.SetStaticString(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição em uma matriz na qual se deseja reter o <c>s</c> o valor do parâmetro.</param>
+        <param name="s">Um <see cref="T:System.String" /> que contém o valor para a expressão de associação de dados.</param>
+        <summary>Atribui um valor de cadeia de caracteres em uma matriz que contém valores estáticos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.ITextControl.Text">
+      <MemberSignature Language="C#" Value="string System.Web.UI.ITextControl.Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.ITextControl.Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBoundLiteralControl.System#Web#UI#ITextControl#Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do texto do objeto <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o conteúdo de texto de <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Web.UI.ITextControl> interface retorna o valor da <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade. O valor de <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade é mantida no estado de exibição.  
+  
+ O <xref:System.Web.UI.DataBoundLiteralControl> objeto implementa <xref:System.Web.UI.ITextControl> mas não dá suporte a `set` método o <xref:System.Web.UI.ITextControl.Text%2A> propriedade. Todas as tentativas de usar esse método retornará um <xref:System.NotSupportedException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">É feita uma tentativa para definir o valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBoundLiteralControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto do conteúdo do <see cref="T:System.Web.UI.DataBoundLiteralControl" /> objeto.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o conteúdo de texto de <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataBoundLiteralControl> classe persiste o valor de seu <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade no estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um controle personalizado e usa o controle de dentro de um arquivo. aspx para exibir o texto de um <xref:System.Web.UI.DataBoundLiteralControl> objeto. O controle personalizado obtém um <xref:System.Web.UI.DataBoundLiteralControl> do objeto e gera a propriedade de texto no seu `Render` método.  
+  
+ [!code-csharp[SystemWebUI_DataBoundLiteralControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_DataBoundLiteralControl/CS/mydataboundliteralcontrol.cs#1)]
+ [!code-vb[SystemWebUI_DataBoundLiteralControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_DataBoundLiteralControl/VB/mydataboundliteralcontrol.vb#1)]  
+  
+ Você pode compilar o controle com o compilador do Visual Basic (vbc.exe) ou do compilador c# (csc.exe). Você deve colocar o arquivo. dll resultante no diretório Bin do projeto da Web, conforme mostrado no exemplo de código a seguir.  
+  
+```vb  
+vbc /r:System.dll /r:System.Web.dll /t:library /out:myWebAppPath/bin/vb_myDataBoundLiteralControl.dll myDataBoundLiteralControl.vb  
+```  
+  
+```csharp  
+csc /t:library /out:myWebAppPath/bin/cs_myDataBoundLiteralControl.dll myDataBoundLiteralControl.cs  
+```  
+  
+ O exemplo de código a seguir demonstra como o controle personalizado é registrado e usado dentro de um arquivo. aspx.  
+  
+ [!code-aspx-csharp[SystemWebUI_DataBoundLiteralControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_DataBoundLiteralControl/CS/databoundform.aspx#2)]
+ [!code-aspx-vb[SystemWebUI_DataBoundLiteralControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_DataBoundLiteralControl/VB/databoundform.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

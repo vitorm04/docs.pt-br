@@ -1,0 +1,218 @@
+<Type Name="BinaryKeyIdentifierClause" FullName="System.IdentityModel.Tokens.BinaryKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public abstract class BinaryKeyIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BinaryKeyIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe base para cláusulas de identificador de chave que são baseados em dados binários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.IdentityModel.Tokens.BinaryKeyIdentifierClause> não precisa ser usada, diferente de quando um serviço de token de segurança personalizada é criado. Quando um serviço de token de segurança retorna um token de segurança, o token de segurança emitido contém referências aos tokens de segurança anexados ou não. Consultem referências associadas aos tokens de segurança que estão contidos dentro do cabeçalho de segurança de uma mensagem SOAP e referências não são tokens de segurança que não estão incluídas no cabeçalho de segurança da mensagem SOAP. Normalmente, essas referências confirmar a autenticidade do token de segurança emitido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BinaryKeyIdentifierClause (string clauseType, byte[] identificationData, bool cloneBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string clauseType, unsigned int8[] identificationData, bool cloneBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.#ctor(System.String,System.Byte[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauseType" Type="System.String" />
+        <Parameter Name="identificationData" Type="System.Byte[]" />
+        <Parameter Name="cloneBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="clauseType">O tipo de cláusula de identificador de chave. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />.</param>
+        <param name="identificationData">Uma matriz de <see cref="T:System.Byte" /> que contém os dados binários que representa o identificador de chave.</param>
+        <param name="cloneBuffer">
+          <see langword="true" />para clonar a matriz passada para o <c>identificationData</c> parâmetro; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.BinaryKeyIdentifierClause" /> classe usando o tipo de cláusula de identificador de chave especificado, dados binários e um valor que indica se os dados binários devem ser clonados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identificationData" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="identificationData" /> tem tamanho zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BinaryKeyIdentifierClause (string clauseType, byte[] identificationData, bool cloneBuffer, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string clauseType, unsigned int8[] identificationData, bool cloneBuffer, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.#ctor(System.String,System.Byte[],System.Boolean,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauseType" Type="System.String" />
+        <Parameter Name="identificationData" Type="System.Byte[]" />
+        <Parameter Name="cloneBuffer" Type="System.Boolean" />
+        <Parameter Name="derivationNonce" Type="System.Byte[]" />
+        <Parameter Name="derivationLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="clauseType">O tipo de cláusula de identificador de chave. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />.</param>
+        <param name="identificationData">Uma matriz de <see cref="T:System.Byte" /> que contém os dados binários que representa o identificador de chave. Define os dados binários que são retornados pelo <see cref="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer" /> método.</param>
+        <param name="cloneBuffer">
+          <see langword="true" />para clonar a matriz passada para o <c>identificationData</c> parâmetro; caso contrário, <see langword="false" />.</param>
+        <param name="derivationNonce">Uma matriz de <see cref="T:System.Byte" /> que contém o valor de uso único que foi usado para criar uma chave derivada. Define o valor retornado pelo <see cref="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.GetDerivationNonce" /> método.</param>
+        <param name="derivationLength">O tamanho da chave derivada. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.DerivationLength" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.BinaryKeyIdentifierClause" /> usando o tipo de cláusula de identificador de chave especificado, dados binários, um valor que indica se os dados binários devem ser clonados, um valor de uso único e o comprimento da chave de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `derivationNonce` e `derivationLength` são especificados, a chave derivada implícita é usada em vez da chave de segurança direta do token.  
+  
+ Independentemente do valor passado para o `cloneBuffer` parâmetro, o <xref:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer%2A> método sempre retorna um clone da matriz passado para o `identificationData` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identificationData" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="identificationData" /> tem tamanho zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBuffer">
+      <MemberSignature Language="C#" Value="public byte[] GetBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os dados binários que representa o identificador de chave.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém os dados binários que representa o identificador de chave.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Independentemente do valor passado para o construtor `cloneBuffer` parâmetro, o <xref:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer%2A> método sempre retorna um clone da matriz passado para o construtor `identificationData` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRawBuffer">
+      <MemberSignature Language="C#" Value="protected byte[] GetRawBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] GetRawBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetRawBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os dados binários que representa o identificador de chave.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém os dados binários que representa o identificador de chave.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada pelo <xref:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetRawBuffer%2A> método é um clone do construtor de `identificationData` parâmetro quando o valor passado para o `cloneBuffer` é `true`; caso contrário, será o mesmo conjunto.  
+  
+ O <xref:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer%2A> método sempre retorna um clone da matriz passado para o construtor `identificationData` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.Matches(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma matriz de <see cref="T:System.Byte" /> a ser comparado.</param>
+        <summary>Retorna um valor que indica se os dados binários para a instância atual com os dados binários especificados.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="data" /> equivale aos dados binários retornados pelo <see cref="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer" /> método; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para essa instância é equivalente à cláusula do identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="clause" /> é do tipo <see cref="T:System.IdentityModel.Tokens.BinaryKeyIdentifierClause" /> e os dados binários retornados pelo <see cref="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer" /> método é idêntico para o <paramref name="clause" /> parâmetro e a instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (byte[] data, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(unsigned int8[] data, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.Matches(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma matriz de <see cref="T:System.Byte" /> a ser comparado.</param>
+        <param name="offset">O índice na matriz na qual a comparação inicia.</param>
+        <summary>Retorna um valor que indica se os dados binários para a instância atual são equivalentes para os dados binários especificados no deslocamento especificado.</summary>
+        <returns>
+          <see langword="true" />Se os dados binários no <paramref name="data" /> parâmetro começando no índice especificado no <paramref name="offset" /> parâmetro é equivalente para os dados binários retornados pelo <see cref="M:System.IdentityModel.Tokens.BinaryKeyIdentifierClause.GetBuffer" /> método (começando no índice zero); caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

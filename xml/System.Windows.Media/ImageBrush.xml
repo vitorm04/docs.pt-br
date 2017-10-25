@@ -1,0 +1,238 @@
+<Type Name="ImageBrush" FullName="System.Windows.Media.ImageBrush">
+  <TypeSignature Language="C#" Value="public sealed class ImageBrush : System.Windows.Media.TileBrush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImageBrush extends System.Windows.Media.TileBrush" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ImageBrush" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.TileBrush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Pinta uma área com uma imagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.ImageBrush> é um tipo de <xref:System.Windows.Media.TileBrush> que define seu conteúdo como uma imagem, que é especificada pelo seu <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propriedade. Você pode controlar como a imagem é esticada, alinhados e lado a lado, permitindo que você gerar padrões e outros efeitos. As imagens a seguir mostram alguns efeitos que podem ser obtidos com um <xref:System.Windows.Media.ImageBrush>.  
+  
+ ![Exemplos de saída de ImageBrush](~/add/media/wcpsdk-mmgraphics-imagebrushexamples.gif "ImageBrush exemplos de saída")  
+Um ImageBrush pintar formas, controles, texto e muito mais  
+  
+ Conforme mencionado, um <xref:System.Windows.Media.ImageBrush> pinta uma área com um <xref:System.Windows.Media.ImageSource>. O tipo mais comum de <xref:System.Windows.Media.ImageSource> para usar com um <xref:System.Windows.Media.ImageBrush> é um <xref:System.Windows.Media.Imaging.BitmapImage>, que descreve um gráfico de bitmap. Você pode usar um <xref:System.Windows.Media.DrawingImage> para pintar usando um <xref:System.Windows.Media.Drawing> objeto, mas é mais simples usar uma <xref:System.Windows.Media.DrawingBrush> em vez disso. Para obter mais informações sobre <xref:System.Windows.Media.ImageSource> objetos, consulte [Imaging Overview](~/docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
+  
+ Para obter mais informações sobre <xref:System.Windows.Media.ImageBrush> recursos, consulte [pintura com imagens, desenhos e visuais](~/docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) visão geral.  
+  
+## <a name="freezable-features"></a>Recursos congeláveis  
+ Porque o <xref:System.Windows.Media.ImageBrush> classe herda de <xref:System.Windows.Freezable>, <xref:System.Windows.Media.ImageBrush> objetos obtém vários recursos especiais, que incluem o seguinte: eles podem ser declarados como, compartilhados entre vários objetos, somente leitura para melhorar o desempenho, clonados e feitos com segurança de thread. Para obter mais informações sobre os recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.MediaPermission">Para exibir imagens que você não tem <see cref="T:System.Net.WebPermission" /> ou <see cref="T:System.Security.Permissions.FileIOPermission" /> acessar. Enumeração associada: <see cref="F:System.Security.Permissions.MediaPermissionImage.SafeImage" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageBrush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ImageBrush.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.ImageBrush" /> classe sem conteúdo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageBrush (System.Windows.Media.ImageSource image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.ImageSource image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ImageBrush.#ctor(System.Windows.Media.ImageSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Windows.Media.ImageSource" />
+      </Parameters>
+      <Docs>
+        <param name="image">A imagem a ser exibida.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.ImageBrush" /> que pinta uma área com a imagem especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageBrush Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.ImageBrush Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ImageBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.ImageBrush" />, fazendo cópias em profundidade dos valores do objeto.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.  
+  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageBrush CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.ImageBrush CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ImageBrush.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.ImageBrush" />, fazendo cópias em profundidade dos valores do objeto atual.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.  
+  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ImageBrush.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentBounds">
+      <MemberSignature Language="C#" Value="protected override void GetContentBounds (out System.Windows.Rect contentBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetContentBounds([out] valuetype System.Windows.Rect&amp; contentBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ImageBrush.GetContentBounds(System.Windows.Rect@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentBounds" Type="System.Windows.Rect&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="contentBounds">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource ImageSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource ImageSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ImageBrush.ImageSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem exibida por este <see cref="T:System.Windows.Media.ImageBrush" />.</summary>
+        <value>A imagem exibida por este <see cref="T:System.Windows.Media.ImageBrush" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.ImageBrush> pinta uma área com um <xref:System.Windows.Media.ImageSource>. O tipo mais comum de <xref:System.Windows.Media.ImageSource> para usar com um <xref:System.Windows.Media.ImageBrush> é um <xref:System.Windows.Media.Imaging.BitmapImage>, que descreve um gráfico de bitmap. Você pode usar um <xref:System.Windows.Media.DrawingImage> para pintar usando um <xref:System.Windows.Media.Drawing> objeto, mas é mais simples usar uma <xref:System.Windows.Media.DrawingBrush> em vez disso. Para obter mais informações sobre <xref:System.Windows.Media.ImageSource> objetos, consulte [Imaging Overview](~/docs/framework/wpf/graphics-multimedia/imaging-overview.md) e [pintura com imagens, desenhos e visuais](~/docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+  
+<a name="xamlAttributeUsage_ImageSource"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object ImageSource="imageUri"/>  
+```  
+  
+<a name="xamlTextUsage_ImageSource"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações, consulte <xref:System.Windows.Media.ImageSource>.  
+  
+<a name="xamlValues_ImageSource"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *imageUri*  
+ <xref:System.String?displayProperty=nameWithType>  
+  
+ Um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de uma imagem.  
+  
+<a name="dependencyPropertyInfo_ImageSource"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.ImageBrush.ImageSourceProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ImageSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ImageSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ImageBrush.ImageSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.ImageBrush.ImageSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

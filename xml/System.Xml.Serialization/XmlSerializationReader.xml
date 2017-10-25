@@ -1,0 +1,3208 @@
+<Type Name="XmlSerializationReader" FullName="System.Xml.Serialization.XmlSerializationReader">
+  <TypeSignature Language="C#" Value="public abstract class XmlSerializationReader : System.Xml.Serialization.XmlSerializationGeneratedCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract XmlSerializationReader extends System.Xml.Serialization.XmlSerializationGeneratedCode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Serialization.XmlSerializationGeneratedCode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Controla a desserialização pela classe <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a inicialização, a infraestrutura de serialização de XML do .NET Framework gera e dinamicamente compila uma classe temporária para desserialização é derivada do abstrata <xref:System.Xml.Serialization.XmlSerializationReader> classe. <xref:System.Xml.Serialization.XmlSerializationReader>também é implementado no .NET Framework para desserialização de documentos XML em <xref:System.Web.Services.Discovery.DiscoveryDocument> e <xref:System.Web.Services.Description.ServiceDescription> objetos.  
+  
+ Você não deve derivar classes de <xref:System.Xml.Serialization.XmlSerializationReader>. Em vez disso, chame um do <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSerializationReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializationReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddFixup">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Armazena um objeto que contém um método de retorno de chamada a ser chamada na sequência, conforme necessário, para preencher coleções do .NET Framework ou enumerações que são mapeados para matrizes de codificação SOAP ou codificadas em SOAP, referenciada por vários elementos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddFixup">
+      <MemberSignature Language="C#" Value="protected void AddFixup (System.Xml.Serialization.XmlSerializationReader.CollectionFixup fixup);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddFixup(class System.Xml.Serialization.XmlSerializationReader/CollectionFixup fixup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.AddFixup(System.Xml.Serialization.XmlSerializationReader.CollectionFixup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixup" Type="System.Xml.Serialization.XmlSerializationReader+CollectionFixup" />
+      </Parameters>
+      <Docs>
+        <param name="fixup">Um <see cref="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" /> representante e o método de retorno de chamada de dados de entrada.</param>
+        <summary>Armazena um objeto que contém um método de retorno de chamada que será chamado, conforme necessário, para preencher coleções do .NET Framework ou enumerações que são mapeados para matrizes de codificação SOAP ou codificadas em SOAP, referenciada por vários elementos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Durante a inicialização, a infraestrutura de serialização de XML do .NET Framework gera e dinamicamente compila uma classe temporária para desserialização é derivada de <xref:System.Xml.Serialization.XmlSerializationReader>. Durante esse processo, a infraestrutura gera <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> métodos e cria <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup> objetos para armazenar os métodos de correção e os dados de entrada. A infraestrutura assim para matrizes de codificação SOAP ou codificadas em SOAP, referenciada por vários elementos cujos dados de tipos, em qualquer caso, mapear para coleções do .NET Framework ou enumerações. Em seguida, conforme necessário, os métodos são chamados durante a desserialização para preencher os itens de matriz ou objetos referenciados por vários.  
+  
+ Você não deve criar uma instância do diretamente o <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> ou <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup> classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddFixup">
+      <MemberSignature Language="C#" Value="protected void AddFixup (System.Xml.Serialization.XmlSerializationReader.Fixup fixup);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddFixup(class System.Xml.Serialization.XmlSerializationReader/Fixup fixup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.AddFixup(System.Xml.Serialization.XmlSerializationReader.Fixup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixup" Type="System.Xml.Serialization.XmlSerializationReader+Fixup" />
+      </Parameters>
+      <Docs>
+        <param name="fixup">Um <see cref="T:System.Xml.Serialization.XmlSerializationFixupCallback" /> representante e o método de retorno de chamada de dados de entrada.</param>
+        <summary>Armazena um objeto que contém uma instância de método de retorno de chamada que será chamada, conforme necessária preencher os objetos em uma matriz com SOAP codificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Durante a desserialização de documentos XML em objetos do .NET Framework, a infraestrutura de serialização de XML do .NET Framework dinamicamente cria instâncias dos métodos de correção que implementam o <xref:System.Xml.Serialization.XmlSerializationFixupCallback> delegar e cria instâncias da <xref:System.Xml.Serialization.XmlSerializationReader.Fixup> classe para armazenar os métodos de correção e os dados de entrada. A infraestrutura de assim matrizes codificadas em SOAP cujos tipos de dados do mapa para o .NET Framework de tipos de referência. Em seguida, se necessário, um método de correção é chamado para preencher os objetos na matriz.  
+  
+ Além disso, durante a inicialização, a infraestrutura de serialização de XML do .NET Framework dinamicamente gera e compila uma classe temporária para desserialização que deriva de <xref:System.Xml.Serialization.XmlSerializationReader>. Durante esse processo, a infraestrutura gera <xref:System.Xml.Serialization.XmlSerializationFixupCallback> métodos e <xref:System.Xml.Serialization.XmlSerializationReader.Fixup> objetos para dados XML de codificação SOAP, referenciada por múltiplas. Os métodos, em seguida, são chamados durante a desserialização.  
+  
+ Você não deve criar instâncias de diretamente o <xref:System.Xml.Serialization.XmlSerializationFixupCallback> ou <xref:System.Xml.Serialization.XmlSerializationReader.Fixup> classes.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddReadCallback">
+      <MemberSignature Language="C#" Value="protected void AddReadCallback (string name, string ns, Type type, System.Xml.Serialization.XmlSerializationReadCallback read);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddReadCallback(string name, string ns, class System.Type type, class System.Xml.Serialization.XmlSerializationReadCallback read) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.AddReadCallback(System.String,System.String,System.Type,System.Xml.Serialization.XmlSerializationReadCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="read" Type="System.Xml.Serialization.XmlSerializationReadCallback" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do tipo do .NET Framework que está sendo desserializado.</param>
+        <param name="ns">O namespace do tipo do .NET Framework que está sendo desserializado.</param>
+        <param name="type">O <see cref="T:System.Type" /> a ser desserializado.</param>
+        <param name="read">Um <see cref="T:System.Xml.Serialization.XmlSerializationReadCallback" /> delegate.</param>
+        <summary>Armazena uma implementação de <see cref="T:System.Xml.Serialization.XmlSerializationReadCallback" /> delegado e seus dados de entrada para uma chamada posterior.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Durante a inicialização, a infraestrutura de serialização de XML do .NET Framework gera e dinamicamente compila uma classe temporária para desserialização que deriva de <xref:System.Xml.Serialization.XmlSerializationReader>. Durante esse processo, o .NET Framework gera leitura métodos que implementam o <xref:System.Xml.Serialization.XmlSerializationReadCallback> delegate. Ele então para determinados faz mapeamentos entre tipos do .NET Framework e tipos de dados XML que são serializados por meio de XML de codificação SOAP e não são elementos raiz. Em seguida, se necessário, um método de leitura é chamado durante a desserialização.  
+  
+ Você não deve criar uma instância do diretamente a <xref:System.Xml.Serialization.XmlSerializationReadCallback> classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddTarget">
+      <MemberSignature Language="C#" Value="protected void AddTarget (string id, object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddTarget(string id, object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.AddTarget(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="id">O valor de <see langword="id" /> atributo de um <see langword="multiRef" /> elemento que identifica o elemento.</param>
+        <param name="o">O objeto é desserializado do elemento XML.</param>
+        <summary>Armazena um objeto que está sendo desserializado a partir de uma codificação de SOAP <see langword="multiRef" /> elemento para acesso posterior por meio de <see cref="M:System.Xml.Serialization.XmlSerializationReader.GetTarget(System.String)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciado várias vezes por `ref` atributos (ou `href` atributos em SOAP 1.1) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckReaderCount">
+      <MemberSignature Language="C#" Value="protected void CheckReaderCount (ref int whileIterations, ref int readerCount);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckReaderCount(int32&amp; whileIterations, int32&amp; readerCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CheckReaderCount(System.Int32@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="whileIterations" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="readerCount" Type="System.Int32&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="whileIterations">Atual <see langword="count" /> dentro de alguns instantes loop.</param>
+        <param name="readerCount">O <see cref="P:System.Xml.Serialization.XmlSerializationReader.ReaderCount" /> atual.</param>
+        <summary>Verifica se o desserializador avançou.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método é usado por classes geradas e não deve ser chamado diretamente.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.CheckReaderCount%2A> método é usado quando o `checkDeserializerAdvances` atributo do `<xmlSerializer>` elemento de configuração é definido como `true`. Para obter mais informações, consulte [ &lt;xmlSerializer&gt; elemento](~/docs/standard/serialization/xmlserializer-element.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Xml.Serialization.XmlSerializationReader.ReaderCount" /> não avançou.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CollapseWhitespace">
+      <MemberSignature Language="C#" Value="protected string CollapseWhitespace (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CollapseWhitespace(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CollapseWhitespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres que terá o espaço em branco cortado.</param>
+        <summary>Remove todas as ocorrências de caracteres de espaço em branco do início e fim da cadeia de caracteres especificada.</summary>
+        <returns>A cadeia de caracteres cortada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAbstractTypeException">
+      <MemberSignature Language="C#" Value="protected Exception CreateAbstractTypeException (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateAbstractTypeException(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateAbstractTypeException(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do tipo abstrato.</param>
+        <param name="ns">O namespace do .NET Framework do tipo abstrato.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um objeto que está sendo desserializado deve ser abstrato.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados apenas para uso por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBadDerivationException">
+      <MemberSignature Language="C#" Value="protected Exception CreateBadDerivationException (string xsdDerived, string nsDerived, string xsdBase, string nsBase, string clrDerived, string clrBase);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateBadDerivationException(string xsdDerived, string nsDerived, string xsdBase, string nsBase, string clrDerived, string clrBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateBadDerivationException(System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xsdDerived" Type="System.String" />
+        <Parameter Name="nsDerived" Type="System.String" />
+        <Parameter Name="xsdBase" Type="System.String" />
+        <Parameter Name="nsBase" Type="System.String" />
+        <Parameter Name="clrDerived" Type="System.String" />
+        <Parameter Name="clrBase" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xsdDerived">O nome local do tipo derivado de dados de esquema XML.</param>
+        <param name="nsDerived">O namespace do tipo de dados de esquema XML derivado.</param>
+        <param name="xsdBase">O nome local do tipo base de dados de esquema XML.</param>
+        <param name="nsBase">O namespace do tipo de dados base do esquema XML.</param>
+        <param name="clrDerived">O namespace do tipo derivado do .NET Framework.</param>
+        <param name="clrBase">O nome do tipo base do .NET Framework.</param>
+        <summary>Popula um objeto de sua representação XML no local atual do <see cref="T:System.Xml.XmlReader" />, com uma opção para ler o elemento interno.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCtorHasSecurityException">
+      <MemberSignature Language="C#" Value="protected Exception CreateCtorHasSecurityException (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateCtorHasSecurityException(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateCtorHasSecurityException(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um objeto que está sendo desserializado não pode ser instanciado porque o construtor lançará uma exceção de segurança.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInaccessibleConstructorException">
+      <MemberSignature Language="C#" Value="protected Exception CreateInaccessibleConstructorException (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateInaccessibleConstructorException(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateInaccessibleConstructorException(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um objeto que está sendo desserializado não pode ser instanciado porque não há nenhum construtor.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateInvalidCastException">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria um <see cref="T:System.InvalidCastException" /> que indica que houve falha na conversão de uma referência explícita.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateInvalidCastException">
+      <MemberSignature Language="C#" Value="protected Exception CreateInvalidCastException (Type type, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateInvalidCastException(class System.Type type, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateInvalidCastException(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> que um objeto não pode ser convertido. Esse tipo é incorporado na mensagem de exceção.</param>
+        <param name="value">O objeto não pode ser convertido. Esse objeto é incorporado na mensagem de exceção.</param>
+        <summary>Cria um <see cref="T:System.InvalidCastException" /> que indica que houve falha na conversão de uma referência explícita.</summary>
+        <returns>Um <see cref="T:System.InvalidCastException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInvalidCastException">
+      <MemberSignature Language="C#" Value="protected Exception CreateInvalidCastException (Type type, object value, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateInvalidCastException(class System.Type type, object value, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateInvalidCastException(System.Type,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> que um objeto não pode ser convertido. Esse tipo é incorporado na mensagem de exceção.</param>
+        <param name="value">O objeto não pode ser convertido. Esse objeto é incorporado na mensagem de exceção.</param>
+        <param name="id">Um identificador de cadeia de caracteres.</param>
+        <summary>Cria um <see cref="T:System.InvalidCastException" /> que indica que houve falha na conversão de uma referência explícita.</summary>
+        <returns>Um <see cref="T:System.InvalidCastException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMissingIXmlSerializableType">
+      <MemberSignature Language="C#" Value="protected Exception CreateMissingIXmlSerializableType (string name, string ns, string clrType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateMissingIXmlSerializableType(string name, string ns, string clrType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateMissingIXmlSerializableType(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="clrType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do tipo de dados de esquema XML que é mapeado para o tipo derivado não está disponível.</param>
+        <param name="ns">O namespace do tipo de dados de esquema XML que é mapeado para o tipo derivado não está disponível.</param>
+        <param name="clrType">O nome completo do tipo base do .NET Framework para o qual um tipo derivado não pode ser localizado.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um tipo derivado é mapeado para um tipo de dados de esquema XML não pode ser localizado.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReadOnlyCollectionException">
+      <MemberSignature Language="C#" Value="protected Exception CreateReadOnlyCollectionException (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateReadOnlyCollectionException(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateReadOnlyCollectionException(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome totalmente qualificado do tipo do .NET Framework para o qual há um mapeamento.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um tipo de codificação SOAP coleção não pode ser modificado e seus valores não podem ser preenchidos.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUnknownConstantException">
+      <MemberSignature Language="C#" Value="protected Exception CreateUnknownConstantException (string value, Type enumType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateUnknownConstantException(string value, class System.Type enumType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateUnknownConstantException(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="enumType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de enumeração não é válido.</param>
+        <param name="enumType">O tipo de enumeração.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um valor de enumeração não é válido.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUnknownNodeException">
+      <MemberSignature Language="C#" Value="protected Exception CreateUnknownNodeException ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateUnknownNodeException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateUnknownNodeException" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que a posição atual do <see cref="T:System.Xml.XmlReader" /> representa um nó XML desconhecido.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUnknownTypeException">
+      <MemberSignature Language="C#" Value="protected Exception CreateUnknownTypeException (System.Xml.XmlQualifiedName type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception CreateUnknownTypeException(class System.Xml.XmlQualifiedName type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CreateUnknownTypeException(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o nome do tipo desconhecido.</param>
+        <summary>Cria um <see cref="T:System.InvalidOperationException" /> que indica que um tipo é desconhecido.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeName">
+      <MemberSignature Language="C#" Value="protected bool DecodeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DecodeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.DecodeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se as cadeias de caracteres XML são convertidas em nomes de tipo válidos do .NET Framework.</summary>
+        <value>
+          <see langword="true" />Se cadeias de caracteres XML são codificadas em nomes válidos de tipo do .NET Framework; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlConvert.EncodeName%2A> método grava o XML válido de fontes inválidos. Por exemplo, o <xref:System.Data.DataColumn.ColumnName%2A> propriedade o <xref:System.Data.DataColumn> classe pode conter espaços, que são inválidos como XML. O <xref:System.Xml.XmlConvert.DecodeName%2A> lê o XML codificado e restaurá-lo para o valor original. No entanto, o <xref:System.Xml.Schema.XmlSchema.Read%2A> método o <xref:System.Xml.Schema.XmlSchema> classe não é possível ler como XML codificado em. Nesse caso, defina o <xref:System.Xml.Serialization.XmlSerializationWriter.EscapeName%2A> propriedade `false` para desabilitar a codificação do XML.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlDocument Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de documento XML no qual o documento XML está sendo desserializado.</summary>
+        <value>Um <see cref="T:System.Xml.XmlDocument" /> que representa o desserializado <see cref="T:System.Xml.XmlDocument" /> dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureArrayIndex">
+      <MemberSignature Language="C#" Value="protected Array EnsureArrayIndex (Array a, int index, Type elementType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Array EnsureArrayIndex(class System.Array a, int32 index, class System.Type elementType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.EnsureArrayIndex(System.Array,System.Int32,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="elementType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="a">O <see cref="T:System.Array" /> que está sendo verificada.</param>
+        <param name="index">O índice necessário.</param>
+        <param name="elementType">O <see cref="T:System.Type" /> de elementos da matriz.</param>
+        <summary>Garante que uma determinada matriz, ou uma cópia é grande o suficiente para conter um índice especificado.</summary>
+        <returns>Existente <see cref="T:System.Array" />, se ele já é grande o suficiente; caso contrário, uma matriz de nova e maior que contém elementos da matriz original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FixupArrayRefs">
+      <MemberSignature Language="C#" Value="protected void FixupArrayRefs (object fixup);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void FixupArrayRefs(object fixup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.FixupArrayRefs(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixup" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixup">Um objeto que contém a matriz cujos valores são preenchidos.</param>
+        <summary>Preenche os valores de uma matriz de codificação SOAP cujo tipo de dados é mapeado para um tipo de referência do .NET Framework.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.FixupArrayRefs%2A> método implementa o <xref:System.Xml.Serialization.XmlSerializationFixupCallback> delegar para desserialização de dados XML de codificação SOAP.  
+  
+ Durante a desserialização de documentos XML em objetos do .NET Framework, a infraestrutura de serialização de XML do .NET Framework cria dinamicamente uma instância do <xref:System.Xml.Serialization.XmlSerializationReader.FixupArrayRefs%2A> método para conjuntos de codificação SOAP cujos tipos de dados são mapeados para tipos de referência do .NET Framework. Em seguida, o método é chamado <xref:System.Xml.Serialization.XmlSerializationFixupCallback> para preencher os objetos na matriz.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetArrayLength">
+      <MemberSignature Language="C#" Value="protected int GetArrayLength (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 GetArrayLength(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.GetArrayLength(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local que a matriz deve ter.</param>
+        <param name="ns">O namespace que a matriz deve ter.</param>
+        <summary>Obtém o comprimento da matriz de codificação SOAP onde o <see cref="T:System.Xml.XmlReader" /> é posicionado no momento.</summary>
+        <returns>O comprimento da matriz de SOAP.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.GetArrayLength%2A> método aplica-se a `arrayType` atributo que é usado com codificação de SOAP e especificado com o namespace "http://schemas.xmlsoap.org/soap/encoding/".  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetNullAttr">
+      <MemberSignature Language="C#" Value="protected bool GetNullAttr ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool GetNullAttr() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.GetNullAttr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o elemento XML onde o <see cref="T:System.Xml.XmlReader" /> está atualmente posicionado tem um atributo nulo definido como o valor <see langword="true" />.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="T:System.Xml.XmlReader" /> atualmente posicionado sobre um atributo nulo com o valor <see langword="true" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetTarget">
+      <MemberSignature Language="C#" Value="protected object GetTarget (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetTarget(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.GetTarget(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O valor de <see langword="id" /> atributo de um <see langword="multiRef" /> elemento que identifica o elemento.</param>
+        <summary>Obtém um objeto que está sendo desserializado de uma codificação de SOAP <see langword="multiRef" /> elemento e que foi armazenado anteriormente por <see cref="M:System.Xml.Serialization.XmlSerializationReader.AddTarget(System.String,System.Object)" />.</summary>
+        <returns>Um objeto a ser desserializado de uma codificação de SOAP <see langword="multiRef" /> elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos. Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetXsiType">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlQualifiedName GetXsiType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlQualifiedName GetXsiType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.GetXsiType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o valor da <see langword="xsi:type" /> atributo do elemento XML no local atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Um nome qualificado de XML que indica o tipo de dados de um elemento XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O `type` atributo da instância do namespace do esquema XML especifica explicitamente o tipo de dados de um elemento XML.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InitCallbacks">
+      <MemberSignature Language="C#" Value="protected abstract void InitCallbacks ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitCallbacks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.InitCallbacks" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa os métodos de retorno de chamada que preencher os objetos que são mapeados para dados XML de codificação SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Durante a inicialização, a infraestrutura de serialização de XML do .NET Framework gera e dinamicamente compila uma classe temporária para desserialização é derivada de <xref:System.Xml.Serialization.XmlSerializationReader>. Durante esse processo, o .NET Framework gera leitura métodos que implementam o <xref:System.Xml.Serialization.XmlSerializationReadCallback> delegate. Ele então para determinados faz mapeamentos entre tipos do .NET Framework e tipos de dados XML que são serializados por meio de XML de codificação SOAP e não são elementos raiz. Em seguida, se necessário, um método de leitura é chamado durante a desserialização.  
+  
+ O resumo <xref:System.Xml.Serialization.XmlSerializationReader.InitCallbacks%2A> método é onde a classe derivada temporária cria uma instância do e inicializa os métodos de retorno de chamada de leitura.  
+  
+ Você não deve criar diretamente uma instância de <xref:System.Xml.Serialization.XmlSerializationReadCallback>.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InitIDs">
+      <MemberSignature Language="C#" Value="protected abstract void InitIDs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitIDs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.InitIDs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Armazena os nomes de elementos e atributos em uma <see cref="T:System.Xml.NameTable" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.InitIDs%2A> método é abstrato.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsReturnValue">
+      <MemberSignature Language="C#" Value="protected bool IsReturnValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.IsReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que deve ser <see langword="true" /> valor de retorno para um SOAP 1.1.</summary>
+        <value>
+          <see langword="true" />, se o valor for um valor de retorno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlnsAttribute">
+      <MemberSignature Language="C#" Value="protected bool IsXmlnsAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsXmlnsAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.IsXmlnsAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um atributo XML.</param>
+        <summary>Determina se um nome de atributo XML indica um namespace XML.</summary>
+        <returns>
+          <see langword="true" />Se o nome do atributo XML indica um namespace XML; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Um nome de atributo indica um namespace XML se ele assume a forma `xmlns:key`, onde "chave" é o nome do namespace.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseWsdlArrayType">
+      <MemberSignature Language="C#" Value="protected void ParseWsdlArrayType (System.Xml.XmlAttribute attr);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ParseWsdlArrayType(class System.Xml.XmlAttribute attr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ParseWsdlArrayType(System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attr" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="attr">Um <see cref="T:System.Xml.XmlAttribute" /> que pode ter o tipo <see langword="wsdl:array" />.</param>
+        <summary>Define o valor do atributo XML se ela é do tipo <see langword="arrayType" /> do namespace WSDL Web Services Description Language ().</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ WSDL usa o namespace "http://schemas.xmlsoap.org/wsdl/".  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadElementQualifiedName">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlQualifiedName ReadElementQualifiedName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlQualifiedName ReadElementQualifiedName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadElementQualifiedName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Torna o <see cref="T:System.Xml.XmlReader" /> ler o nome totalmente qualificado do elemento onde é posicionado no momento.</summary>
+        <returns>O nome totalmente qualificado do elemento XML atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEndElement">
+      <MemberSignature Language="C#" Value="protected void ReadEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReadEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Torna o <see cref="T:System.Xml.XmlReader" /> ler uma marca de fim XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Reader">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlReader Reader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlReader Reader" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.Reader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XmlReader" /> objeto que está sendo usado por <see cref="T:System.Xml.Serialization.XmlSerializationReader" />.</summary>
+        <value>O <see cref="T:System.Xml.XmlReader" /> que está sendo usado pelo <see cref="T:System.Xml.Serialization.XmlSerializationReader" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderCount">
+      <MemberSignature Language="C#" Value="protected int ReaderCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReaderCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.ReaderCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a contagem atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <value>A contagem atual de um <see cref="T:System.Xml.XmlReader" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método é usado por classes geradas e não deve ser chamado diretamente.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader> usa uma instância do <xref:System.Xml.XmlReader> classe para contar quando ocorre uma operação de leitura. A contagem é incrementada toda vez que o leitor chama um método apropriado, por exemplo o <xref:System.Xml.XmlReader.Read%2A> método ou o <xref:System.Xml.XmlReader.ReadElementString%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadNull">
+      <MemberSignature Language="C#" Value="protected bool ReadNull ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ReadNull() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadNull" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler o elemento XML atual se o elemento tem um atributo nulo com valor true.</summary>
+        <returns>
+          <see langword="true" />Se o elemento tem um **nulo = "true"** valor de atributo e tem sido lido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadNullableQualifiedName">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlQualifiedName ReadNullableQualifiedName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlQualifiedName ReadNullableQualifiedName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadNullableQualifiedName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler o nome totalmente qualificado do elemento onde é posicionado no momento.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa totalmente qualificado nome do elemento XML atual; caso contrário, <see langword="null" /> se um **nulo = "true"** valor de atributo está presente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadNullableString">
+      <MemberSignature Language="C#" Value="protected string ReadNullableString ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string ReadNullableString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadNullableString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler um elemento XML simple, somente texto que pode ser <see langword="null" />.</summary>
+        <returns>O valor de cadeia de caracteres; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadReference">
+      <MemberSignature Language="C#" Value="protected bool ReadReference (out string fixupReference);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ReadReference([out] string&amp; fixupReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReference(System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixupReference" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="fixupReference">Uma cadeia de caracteres de saída no qual o <see langword="href" /> é ler o valor de atributo.</param>
+        <summary>Lê o valor da <see langword="href" /> atributo (<see langword="ref" /> atributo para SOAP 1.2) que é usado para se referir a um elemento XML na codificação SOAP.</summary>
+        <returns>
+          <see langword="true" />Se o valor foi lido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ A abertura `#` símbolo é tirado do `href` valor do atributo.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ReadReferencedElement">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Desserializa um objeto de uma codificação de SOAP <see langword="multiRef" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ReadReferencedElement">
+      <MemberSignature Language="C#" Value="protected object ReadReferencedElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadReferencedElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReferencedElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desserializa um objeto de uma codificação de SOAP <see langword="multiRef" /> elemento XML.</summary>
+        <returns>O valor do elemento referenciado no documento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ReadReferencedElement%2A> método obtém o tipo de dados de esquema XML ao ler o `xsi:type` atributo o `multiRef` elemento. O prefixo `xsi` refere-se à instância do namespace do esquema XML.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadReferencedElement">
+      <MemberSignature Language="C#" Value="protected object ReadReferencedElement (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadReferencedElement(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReferencedElement(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do tipo de dados de esquema XML do elemento.</param>
+        <param name="ns">O namespace do tipo de dados de esquema XML do elemento.</param>
+        <summary>Desserializa um objeto de uma codificação de SOAP <see langword="multiRef" /> elemento XML.</summary>
+        <returns>O valor do elemento referenciado no documento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Essa assinatura do <xref:System.Xml.Serialization.XmlSerializationReader.ReadReferencedElement%2A> método obtém o tipo de dados do esquema XML para o `multiRef` elemento de parâmetros de método em vez de ler o `xsi:type` atributo. O prefixo `xsi` refere-se à instância do namespace do esquema XML.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadReferencedElements">
+      <MemberSignature Language="C#" Value="protected void ReadReferencedElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReadReferencedElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReferencedElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desserializa objetos de codificação de SOAP <see langword="multiRef" /> elementos em uma mensagem SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ReadReferencingElement">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Desserializa um objeto de um elemento XML em uma mensagem SOAP que contém uma referência a um <see langword="multiRef" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ReadReferencingElement">
+      <MemberSignature Language="C#" Value="protected object ReadReferencingElement (out string fixupReference);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadReferencingElement([out] string&amp; fixupReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReferencingElement(System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixupReference" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="fixupReference">Uma cadeia de caracteres de saída no qual o <see langword="href" /> é ler o valor de atributo.</param>
+        <summary>Desserializa um objeto de um elemento XML em uma mensagem SOAP que contém uma referência a um <see langword="multiRef" /> elemento.</summary>
+        <returns>O objeto desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadReferencingElement">
+      <MemberSignature Language="C#" Value="protected object ReadReferencingElement (string name, string ns, out string fixupReference);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadReferencingElement(string name, string ns, [out] string&amp; fixupReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReferencingElement(System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="fixupReference" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do tipo de dados de esquema XML do elemento.</param>
+        <param name="ns">O namespace do tipo de dados de esquema XML do elemento.</param>
+        <param name="fixupReference">Uma cadeia de caracteres de saída no qual o <see langword="href" /> é ler o valor de atributo.</param>
+        <summary>Desserializa um objeto de um elemento XML em uma mensagem SOAP que contém uma referência a um <see langword="multiRef" /> elemento.</summary>
+        <returns>O objeto desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadReferencingElement">
+      <MemberSignature Language="C#" Value="protected object ReadReferencingElement (string name, string ns, bool elementCanBeType, out string fixupReference);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadReferencingElement(string name, string ns, bool elementCanBeType, [out] string&amp; fixupReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadReferencingElement(System.String,System.String,System.Boolean,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="elementCanBeType" Type="System.Boolean" />
+        <Parameter Name="fixupReference" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do tipo de dados de esquema XML do elemento.</param>
+        <param name="ns">O namespace do tipo de dados de esquema XML do elemento.</param>
+        <param name="elementCanBeType">
+          <see langword="true" />Se o nome do elemento também é o nome de tipo de dados de esquema XML; Caso contrário, <see langword="false" />.</param>
+        <param name="fixupReference">Uma cadeia de caracteres de saída no qual o valor de <see langword="href" /> atributo leitura.</param>
+        <summary>Desserializa um objeto de um elemento XML em uma mensagem SOAP que contém uma referência a um <see langword="multiRef" /> elemento.</summary>
+        <returns>O objeto desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSerializable">
+      <MemberSignature Language="C#" Value="protected System.Xml.Serialization.IXmlSerializable ReadSerializable (System.Xml.Serialization.IXmlSerializable serializable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.Serialization.IXmlSerializable ReadSerializable(class System.Xml.Serialization.IXmlSerializable serializable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadSerializable(System.Xml.Serialization.IXmlSerializable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.IXmlSerializable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializable" Type="System.Xml.Serialization.IXmlSerializable" />
+      </Parameters>
+      <Docs>
+        <param name="serializable">Um <see cref="T:System.Xml.Serialization.IXmlSerializable" /> que corresponde à posição atual do <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Popula um objeto de sua representação XML no local atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.Xml.Serialization.IXmlSerializable" /> interface com seus membros preenchida do local de instalação do <see cref="T:System.Xml.XmlReader" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSerializable">
+      <MemberSignature Language="C#" Value="protected System.Xml.Serialization.IXmlSerializable ReadSerializable (System.Xml.Serialization.IXmlSerializable serializable, bool wrappedAny);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.Serialization.IXmlSerializable ReadSerializable(class System.Xml.Serialization.IXmlSerializable serializable, bool wrappedAny) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadSerializable(System.Xml.Serialization.IXmlSerializable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.IXmlSerializable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializable" Type="System.Xml.Serialization.IXmlSerializable" />
+        <Parameter Name="wrappedAny" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serializable">Um objeto IXmlSerializable que corresponde à posição atual do XMLReader.</param>
+        <param name="wrappedAny">Especifica se o objeto serializável é encapsulado.</param>
+        <summary>Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</summary>
+        <returns>Um objeto que implementa a interface IXmlSerializable com seus membros preenchidos a partir do local do XmlReader.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadString">
+      <MemberSignature Language="C#" Value="protected string ReadString (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string ReadString(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres de prefixo para o resultado de uma chamada para o <see cref="M:System.Xml.XmlReader.ReadString" /> método.</param>
+        <summary>Produz o resultado de uma chamada para o <see cref="M:System.Xml.XmlReader.ReadString" /> método acrescentado ao valor de entrada.</summary>
+        <returns>O resultado da chamada para o <see cref="M:System.Xml.XmlReader.ReadString" /> método acrescentado ao valor de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadString">
+      <MemberSignature Language="C#" Value="protected string ReadString (string value, bool trim);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string ReadString(string value, bool trim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadString(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="trim" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres que será acrescentada ao.</param>
+        <param name="trim">
+          <see langword="true" />Se o resultado da operação de leitura deve ser cortado; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna o resultado de uma chamada para o <see cref="M:System.Xml.XmlReader.ReadString" /> método o <see cref="T:System.Xml.XmlReader" /> classe cortado de espaço em branco, se necessário e acrescentado ao valor de entrada.</summary>
+        <returns>O resultado da operação de leitura anexado para o valor de entrada.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTypedNull">
+      <MemberSignature Language="C#" Value="protected object ReadTypedNull (System.Xml.XmlQualifiedName type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadTypedNull(class System.Xml.XmlQualifiedName type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadTypedNull(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Xml.XmlQualifiedName" /> que representa o tipo de dados simples para o local atual do <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Lê um elemento XML que permite valores nulos (<see langword="xsi:nil = 'true'" />) e retorna um genérico <see cref="T:System.Nullable`1" /> valor.</summary>
+        <returns>Um genérico <see cref="T:System.Nullable`1" /> que representa um valor nulo do XML.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTypedPrimitive">
+      <MemberSignature Language="C#" Value="protected object ReadTypedPrimitive (System.Xml.XmlQualifiedName type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object ReadTypedPrimitive(class System.Xml.XmlQualifiedName type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadTypedPrimitive(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Xml.XmlQualifiedName" /> que representa o tipo de dados simples para o local atual do <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Obtém o valor do nó XML no qual o <see cref="T:System.Xml.XmlReader" /> está atualmente posicionado.</summary>
+        <returns>O valor do nó como um tipo de valor do .NET Framework, se o valor for um tipo de dados de esquema XML simples.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXmlDocument">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlDocument ReadXmlDocument (bool wrapped);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlDocument ReadXmlDocument(bool wrapped) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadXmlDocument(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wrapped" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="wrapped">
+          <see langword="true" />Se o método deve ler conteúdo somente depois de ler o início do elemento; Caso contrário, <see langword="false" />.</param>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler um elemento de raiz do documento XML na sua posição atual.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlDocument" /> que contém o elemento raiz que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXmlNode">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlNode ReadXmlNode (bool wrapped);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlNode ReadXmlNode(bool wrapped) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ReadXmlNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wrapped" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="wrapped">
+          <see langword="true" />ler conteúdo somente depois de ler o início do elemento; Caso contrário, <see langword="false" />.</param>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler o nó XML na sua posição atual.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlNode" /> que representa o nó XML que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Referenced">
+      <MemberSignature Language="C#" Value="protected void Referenced (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Referenced(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.Referenced(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser desserializado.</param>
+        <summary>Armazena um objeto a ser desserializado de uma codificação de SOAP <see langword="multiRef" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação SOAP permite que um elemento XML exclusivo aparecer uma vez dentro de uma mensagem SOAP como um `multiRef` elemento identificado por um `id` atributo. O `id` valor pode ser referenciada várias vezes usando `href` atributos (ou `ref` atributos em SOAP 1.2) substitua em elementos.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveDynamicAssembly">
+      <MemberSignature Language="C#" Value="protected static System.Reflection.Assembly ResolveDynamicAssembly (string assemblyFullName);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Reflection.Assembly ResolveDynamicAssembly(string assemblyFullName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ResolveDynamicAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyFullName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyFullName">O nome completo do assembly.</param>
+        <summary>Obtém um assembly gerado dinamicamente pelo nome.</summary>
+        <returns>Gerado dinamicamente <see cref="T:System.Reflection.Assembly" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ResolveDynamicAssembly%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShrinkArray">
+      <MemberSignature Language="C#" Value="protected Array ShrinkArray (Array a, int length, Type elementType, bool isNullable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Array ShrinkArray(class System.Array a, int32 length, class System.Type elementType, bool isNullable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ShrinkArray(System.Array,System.Int32,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Array" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="elementType" Type="System.Type" />
+        <Parameter Name="isNullable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="a">A matriz que está sendo verificada.</param>
+        <param name="length">O comprimento máximo da matriz.</param>
+        <param name="elementType">O <see cref="T:System.Type" /> de elementos da matriz.</param>
+        <param name="isNullable">
+          <see langword="true" />Se <see langword="null" /> para a matriz, se presente para a matriz de entrada, pode ser retornado; caso contrário, uma nova matriz menor.</param>
+        <summary>Garante que uma determinada matriz, ou uma cópia, não é maior que o período especificado.</summary>
+        <returns>Existente <see cref="T:System.Array" />, se ele já é muito pequeno; caso contrário, uma nova matriz menor que contém elementos da matriz original até o tamanho de <paramref name="length" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ToByteArrayBase64">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lê o valor atual e o retorna como uma matriz de bytes de base 64.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> devem ser seguidas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ToByteArrayBase64">
+      <MemberSignature Language="C#" Value="protected byte[] ToByteArrayBase64 (bool isNull);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] ToByteArrayBase64(bool isNull) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToByteArrayBase64(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isNull" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isNull">
+          <see langword="true" />para retornar <see langword="null" />; <see langword="false" /> para retornar uma matriz de bytes de base 64.</param>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler o valor de cadeia de caracteres na sua posição atual e retorná-la como uma matriz de bytes de base 64.</summary>
+        <returns>Uma matriz de bytes de base 64; Caso contrário, <see langword="null" /> se o valor de <paramref name="isNull" /> parâmetro é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToByteArrayBase64">
+      <MemberSignature Language="C#" Value="protected static byte[] ToByteArrayBase64 (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig unsigned int8[] ToByteArrayBase64(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToByteArrayBase64(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para converter em uma matriz de bytes de base 64.</param>
+        <summary>Gera uma matriz de bytes de base 64 de uma cadeia de caracteres de entrada.</summary>
+        <returns>Uma matriz de bytes de base 64.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToByteArrayBase64%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToByteArrayHex">
+      <MemberSignature Language="C#" Value="protected byte[] ToByteArrayHex (bool isNull);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] ToByteArrayHex(bool isNull) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToByteArrayHex(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isNull" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isNull">
+          <see langword="true" />para retornar <see langword="null" />; <see langword="false" /> para retornar uma matriz de bytes hexadecimais.</param>
+        <summary>Instrui o <see cref="T:System.Xml.XmlReader" /> para ler o valor de cadeia de caracteres na sua posição atual e retorná-la como uma matriz de bytes hexadecimais.</summary>
+        <returns>Uma matriz de bytes hexadecimais; Caso contrário, <see langword="null" /> se o valor de <paramref name="isNull" /> parâmetro é **true**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToByteArrayHex">
+      <MemberSignature Language="C#" Value="protected static byte[] ToByteArrayHex (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig unsigned int8[] ToByteArrayHex(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToByteArrayHex(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para converter em uma matriz de bytes hexadecimais.</param>
+        <summary>Produz uma matriz de bytes hexadecimais de uma cadeia de caracteres de entrada.</summary>
+        <returns>Uma matriz de bytes hexadecimais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToByteArrayHex%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToChar">
+      <MemberSignature Language="C#" Value="protected static char ToChar (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig char ToChar(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToChar(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para converter em um <see cref="T:System.Char" /> objeto.</param>
+        <summary>Produz um <see cref="T:System.Char" /> objeto a partir de uma cadeia de caracteres de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.Char" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToChar%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToDate">
+      <MemberSignature Language="C#" Value="protected static DateTime ToDate (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig valuetype System.DateTime ToDate(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToDate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para converter em um <see cref="T:System.DateTime" /> objeto de classe.</param>
+        <summary>Produz um <see cref="T:System.DateTime" /> objeto a partir de uma cadeia de caracteres de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToDate%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="protected static DateTime ToDateTime (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig valuetype System.DateTime ToDateTime(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToDateTime(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para converter em um <see cref="T:System.DateTime" /> objeto.</param>
+        <summary>Produz um <see cref="T:System.DateTime" /> objeto a partir de uma cadeia de caracteres de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToDateTime%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToEnum">
+      <MemberSignature Language="C#" Value="protected static long ToEnum (string value, System.Collections.Hashtable h, string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig int64 ToEnum(string value, class System.Collections.Hashtable h, string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToEnum(System.String,System.Collections.Hashtable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="h" Type="System.Collections.Hashtable" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres que consiste em delimitados em que cada identificador representa uma constante na lista de enumerador de conjunto de identificadores.</param>
+        <param name="h">Um <see cref="T:System.Collections.Hashtable" /> que consiste em identificadores como chaves e as constantes como números inteiros.</param>
+        <param name="typeName">O nome do tipo de enumeração.</param>
+        <summary>Produz um valor de enumeração numérico de uma cadeia de caracteres que consiste em identificadores delimitados que representam as constantes da lista de enumerador.</summary>
+        <returns>Um valor longo que consiste o valor de enumeração como uma série de bit a bit <see langword="OR" /> operações.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToEnum%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToTime">
+      <MemberSignature Language="C#" Value="protected static DateTime ToTime (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig valuetype System.DateTime ToTime(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToTime(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para converter em um <see cref="T:System.DateTime" /> objeto.</param>
+        <summary>Produz um <see cref="T:System.DateTime" /> de uma cadeia de caracteres que representa o tempo.</summary>
+        <returns>Um objeto <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToTime%2A> método é estático.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlName">
+      <MemberSignature Language="C#" Value="protected static string ToXmlName (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string ToXmlName(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToXmlName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um nome XML a ser decodificado.</param>
+        <summary>Decodifica um nome XML.</summary>
+        <returns>Uma cadeia de caracteres decodificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlName%2A> método é estático.  
+  
+ <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlName%2A>converte os códigos de UCS-2 de 4 dígitos hexadecimais em Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNCName">
+      <MemberSignature Language="C#" Value="protected static string ToXmlNCName (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string ToXmlNCName(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToXmlNCName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um nome XML a ser decodificado.</param>
+        <summary>Decodifica um nome XML.</summary>
+        <returns>Uma cadeia de caracteres decodificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlNCName%2A> método é estático.  
+  
+ <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlNCName%2A>converte os códigos de UCS-2 de 4 dígitos hexadecimais em Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNmToken">
+      <MemberSignature Language="C#" Value="protected static string ToXmlNmToken (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string ToXmlNmToken(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToXmlNmToken(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um nome XML a ser decodificado.</param>
+        <summary>Decodifica um nome XML.</summary>
+        <returns>Uma cadeia de caracteres decodificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> destinado somente para uso por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlNmToken%2A> método é estático.  
+  
+ <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlNmToken%2A>converte os códigos de UCS-2 de 4 dígitos hexadecimais em Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNmTokens">
+      <MemberSignature Language="C#" Value="protected static string ToXmlNmTokens (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string ToXmlNmTokens(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToXmlNmTokens(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um nome XML a ser decodificado.</param>
+        <summary>Decodifica um nome XML.</summary>
+        <returns>Uma cadeia de caracteres decodificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> devem ser seguidas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlNmTokens%2A> método é estático.  
+  
+ <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlNmTokens%2A>converte os códigos de UCS-2 de 4 dígitos hexadecimais em Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlQualifiedName">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlQualifiedName ToXmlQualifiedName (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Xml.XmlQualifiedName ToXmlQualifiedName(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.ToXmlQualifiedName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um nome que pode conter um prefixo.</param>
+        <summary>Obtém um <see cref="T:System.Xml.XmlQualifiedName" /> de um nome que pode conter um prefixo.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa um nome de qualificado de namespace XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Se um prefixo estiver presente, o <xref:System.Xml.Serialization.XmlSerializationReader.ToXmlQualifiedName%2A> método pesquisa o namespace associado para o documento atual e coloca o valor de <xref:System.Xml.XmlQualifiedName> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownAttribute">
+      <MemberSignature Language="C#" Value="protected void UnknownAttribute (object o, System.Xml.XmlAttribute attr);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnknownAttribute(object o, class System.Xml.XmlAttribute attr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnknownAttribute(System.Object,System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="attr" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um objeto que o <see cref="T:System.Xml.Serialization.XmlSerializer" /> tentar desserializar subsequentemente acessíveis por meio de <see cref="P:System.Xml.Serialization.XmlAttributeEventArgs.ObjectBeingDeserialized" /> propriedade.</param>
+        <param name="attr">Um <see cref="T:System.Xml.XmlAttribute" /> que representa o atributo em questão.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownAttribute" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Adicionar um método de manipulador para o <xref:System.Xml.Serialization.XmlSerializationReader.UnknownAttribute%2A> método para lidar com atributos desconhecidos durante o <xref:System.Xml.Serialization.XmlSerializer> está executando seu <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownAttribute">
+      <MemberSignature Language="C#" Value="protected void UnknownAttribute (object o, System.Xml.XmlAttribute attr, string qnames);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnknownAttribute(object o, class System.Xml.XmlAttribute attr, string qnames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnknownAttribute(System.Object,System.Xml.XmlAttribute,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="attr" Type="System.Xml.XmlAttribute" />
+        <Parameter Name="qnames" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um objeto que o <see cref="T:System.Xml.Serialization.XmlSerializer" /> tentar desserializar subsequentemente acessíveis por meio de <see cref="P:System.Xml.Serialization.XmlAttributeEventArgs.ObjectBeingDeserialized" /> propriedade.</param>
+        <param name="attr">Um <see cref="T:System.Xml.XmlAttribute" /> que representa o atributo em questão.</param>
+        <param name="qnames">Uma lista delimitada por vírgulas de XML nomes qualificados.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownAttribute" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownElement">
+      <MemberSignature Language="C#" Value="protected void UnknownElement (object o, System.Xml.XmlElement elem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnknownElement(object o, class System.Xml.XmlElement elem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnknownElement(System.Object,System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="elem" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Object" /> que está sendo desserializado.</param>
+        <param name="elem">O <see cref="T:System.Xml.XmlElement" /> para que um evento é gerado.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownElement" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownElement">
+      <MemberSignature Language="C#" Value="protected void UnknownElement (object o, System.Xml.XmlElement elem, string qnames);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnknownElement(object o, class System.Xml.XmlElement elem, string qnames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnknownElement(System.Object,System.Xml.XmlElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="elem" Type="System.Xml.XmlElement" />
+        <Parameter Name="qnames" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um objeto que o <see cref="T:System.Xml.Serialization.XmlSerializer" /> tentar desserializar subsequentemente acessíveis por meio de <see cref="P:System.Xml.Serialization.XmlAttributeEventArgs.ObjectBeingDeserialized" /> propriedade.</param>
+        <param name="elem">O <see cref="T:System.Xml.XmlElement" /> para que um evento é gerado.</param>
+        <param name="qnames">Uma lista delimitada por vírgulas de XML nomes qualificados.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownElement" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownNode">
+      <MemberSignature Language="C#" Value="protected void UnknownNode (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnknownNode(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnknownNode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto que está sendo desserializado.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownNode" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownNode">
+      <MemberSignature Language="C#" Value="protected void UnknownNode (object o, string qnames);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnknownNode(object o, string qnames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnknownNode(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="qnames" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto que está sendo desserializado.</param>
+        <param name="qnames">Uma lista delimitada por vírgulas de XML nomes qualificados.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownNode" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnreferencedObject">
+      <MemberSignature Language="C#" Value="protected void UnreferencedObject (string id, object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnreferencedObject(string id, object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.UnreferencedObject(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="id">Uma cadeia de caracteres exclusiva que é usada para identificar o objeto não referenciado, subsequentemente acessível por meio de <see cref="P:System.Xml.Serialization.UnreferencedObjectEventArgs.UnreferencedId" /> propriedade.</param>
+        <param name="o">Um objeto que o <see cref="T:System.Xml.Serialization.XmlSerializer" /> tentar desserializar subsequentemente acessíveis por meio de <see cref="P:System.Xml.Serialization.UnreferencedObjectEventArgs.UnreferencedObject" /> propriedade.</param>
+        <summary>Gera um <see cref="E:System.Xml.Serialization.XmlSerializer.UnreferencedObject" /> evento para a posição atual do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros protegidos de <xref:System.Xml.Serialization.XmlSerializationReader> são destinados para uso apenas por classes derivadas que são usadas internamente na infraestrutura de serialização de XML do .NET Framework.  
+  
+ Codificação de SOAP, como especificado na seção 5 da especificação do SOAP 1.1, permite que os elementos referenciados várias vezes em uma mensagem SOAP (ou, opcionalmente, apenas uma vez) para ser referenciado por um `href` atributo na mensagem principal. Um <xref:System.Xml.Serialization.XmlSerializer.UnreferencedObject> evento ocorre quando esse elemento é exibido, mas não há nenhum `href` referência a ele.  
+  
+ Adicionar um método de manipulador para <xref:System.Xml.Serialization.XmlSerializer.UnreferencedObject> para fornecer manipulação personalizada para os objetos enquanto o <xref:System.Xml.Serialization.XmlSerializer> executa seu <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

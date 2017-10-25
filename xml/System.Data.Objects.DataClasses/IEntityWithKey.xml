@@ -1,0 +1,54 @@
+<Type Name="IEntityWithKey" FullName="System.Data.Objects.DataClasses.IEntityWithKey">
+  <TypeSignature Language="C#" Value="public interface IEntityWithKey" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEntityWithKey" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.IEntityWithKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um tipo de entidade que expõe uma chave de entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é usada para expor a chave da entidade para os serviços de objetos.  
+  
+ Objeto serviços usam o <xref:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey%2A> propriedade para gerenciar objetos no contexto do objeto.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EntityKey">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKey EntityKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityKey EntityKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.EntityKey" /> para instâncias de tipos de entidade que implementam esta interface.</summary>
+        <value>O <see cref="T:System.Data.EntityKey" /> para instâncias de tipos de entidade que implementam esta interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objeto serviços usam o <xref:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey%2A> propriedade para gerenciar objetos no contexto do objeto.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

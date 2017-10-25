@@ -1,0 +1,176 @@
+<Type Name="IGridItemProvider" FullName="System.Windows.Automation.Provider.IGridItemProvider">
+  <TypeSignature Language="C#" Value="public interface IGridItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGridItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IGridItemProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d02541f1-fb81-4d64-ae32-f520f8a6dbd1")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente de automação de interface do usuário para controles filhos individuais de contêiners que implementam <see cref="T:System.Windows.Automation.Provider.IGridProvider" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles que implementam <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente podem ser percorridos (isto é, um cliente de automação de interface do usuário pode mover para controles adjacentes) usando o teclado.  
+  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.GridItemPattern> padrão de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número ordinal da coluna que contém a célula ou item.</summary>
+        <value>Um número ordinal com base em zero que identifica a coluna que contém a célula ou item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir retorna a propriedade, que é armazenada em uma variável interna.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#104)]
+ [!code-vb[UIAMiscPatternProviders_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpan">
+      <MemberSignature Language="C#" Value="public int ColumnSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de colunas ocupadas por uma célula ou item.</summary>
+        <value>O número de colunas incluídas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir retorna a propriedade de um item em uma grade cujos itens sempre abrangem uma única coluna.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#107)]
+ [!code-vb[UIAMiscPatternProviders_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingGrid">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple ContainingGrid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderSimple ContainingGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um provedor de automação de interface do usuário implementa <see cref="T:System.Windows.Automation.Provider.IGridProvider" /> e representa o contêiner da célula ou do item.</summary>
+        <value>Um provedor de automação de interface do usuário que implementa o <see cref="T:System.Windows.Automation.GridPattern" /> e representa a célula ou item de contêiner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir retorna um objeto, armazenado como uma variável interna que representa o contêiner de grade. Esse objeto implementa <xref:System.Windows.Automation.Provider.IGridProvider> e <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#108)]
+ [!code-vb[UIAMiscPatternProviders_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public int Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número ordinal da linha que contém a célula ou item.</summary>
+        <value>Um número ordinal com base em zero que identifica a linha que contém a célula ou item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir retorna a propriedade, que é armazenada em uma variável interna.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#105)]
+ [!code-vb[UIAMiscPatternProviders_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpan">
+      <MemberSignature Language="C#" Value="public int RowSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.RowSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas incluídas por uma célula ou item.</summary>
+        <value>O número de linhas incluídas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir retorna a propriedade de um item em uma grade cujos itens sempre abrangem uma única linha.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#106)]
+ [!code-vb[UIAMiscPatternProviders_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

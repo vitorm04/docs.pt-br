@@ -1,0 +1,50 @@
+<Type Name="SlipBehavior" FullName="System.Windows.Media.Animation.SlipBehavior">
+  <TypeSignature Language="C#" Value="public enum SlipBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SlipBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SlipBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica como um <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> irão se comportar quando um ou mais dos seus <see cref="T:System.Windows.Media.Animation.Timeline" /> guias de filhos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Grow">
+      <MemberSignature Language="C#" Value="Grow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.SlipBehavior Grow = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SlipBehavior.Grow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.SlipBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> não será adiada com filho <see cref="T:System.Windows.Media.Animation.Timeline" />, mas se expande para ajustar todos os adiadas <see cref="T:System.Windows.Media.Animation.Timeline" /> filhos. **Observação**: isso só é eficaz quando o <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> do <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> não for especificado explicitamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Slip">
+      <MemberSignature Language="C#" Value="Slip" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.SlipBehavior Slip = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SlipBehavior.Slip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.SlipBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> será guia junto com seu primeiro filho <see cref="T:System.Windows.Media.Animation.Timeline" /> que pode ser adiada sempre que a criança está atrasada ou acelerada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

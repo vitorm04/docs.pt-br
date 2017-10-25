@@ -1,0 +1,1052 @@
+<Type Name="TextPatternIdentifiers" FullName="System.Windows.Automation.TextPatternIdentifiers">
+  <TypeSignature Language="C#" Value="public static class TextPatternIdentifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TextPatternIdentifiers extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TextPatternIdentifiers" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém valores usados como identificadores para <see cref="T:System.Windows.Automation.Provider.ITextProvider" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.TextPattern>expõe informações detalhadas do conteúdo textual de objetos, como documentos e controles de edição.  
+  
+ Provedores de automação de interface do usuário devem ser escritos para que eles podem trabalhar em um ambiente de confiança parcial. Porque UIAutomationClient. dll não está configurado para confiança total, seu código de provedor não deve referenciar o assembly. Se o fizer, o código pode executar em um ambiente de confiança total, mas falhar em um ambiente de confiança parcial.  
+  
+ Em particular, não use campos de classes em UIAutomationClient. dll, como aqueles em <xref:System.Windows.Automation.AutomationElement>. Em vez disso, use os campos equivalentes de classes em UIAutomationTypes, como <xref:System.Windows.Automation.AutomationElementIdentifiers>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AnimationStyleAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute AnimationStyleAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute AnimationStyleAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.AnimationStyleAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.Text.AnimationStyle" /> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As animações são exibidas na tela. o texto animado é impresso, mas a animação efeito não.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.AnimationStyle>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.AnimationStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundColorAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute BackgroundColorAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute BackgroundColorAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.BackgroundColorAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o [BackgroundColor](http://msdn.microsoft.com/library/default.asp?url=/library/gdi/colors_9xiq.asp) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Int32>.  
+  
+ O valor padrão é um `null` referência (`Nothing` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BulletStyleAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute BulletStyleAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute BulletStyleAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.BulletStyleAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.Text.BulletStyle" /> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.BulletStyle>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.BulletStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapStyleAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute CapStyleAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute CapStyleAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.CapStyleAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.Text.CapStyle" /> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.CapStyle>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.CapStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute CultureAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute CultureAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.CultureAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a cultura (<see cref="T:System.Globalization.CultureInfo" />) atributo de um intervalo de texto até o nível de subidioma; por exemplo, francês – Suíça (fr-CH) em vez de francês (fr).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Globalization.CultureInfo>.  
+  
+ Consulte <xref:System.Globalization.CultureInfo> no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] para obter mais detalhes sobre o formato de código de idioma.  
+  
+ O valor padrão é o idioma do aplicativo [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].  
+  
+> [!NOTE]
+>  Pode haver casos em que o servidor não oferece suporte a marca de idioma ou autores não podem usá-lo. Nesses casos, o padrão se aplica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontNameAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute FontNameAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute FontNameAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.FontNameAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>FontName</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exemplos incluem "Arial Black" e "Arial Narrow".  
+  
+ Os valores são não localizada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.String>.  
+  
+ O valor padrão é um `empty string`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute FontSizeAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute FontSizeAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.FontSizeAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>FontSize</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute FontWeightAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute FontWeightAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.FontWeightAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>FontWeight</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Refere-se ao traço relativo, espessura ou negrito de uma fonte.  
+  
+ Isso é modelado após o `lfWeight` campo [GDI LOGFONT](http://msdn.microsoft.com/library/default.asp?url=/library/gdi/fontext_1wmq.asp). Para manter a consistência, os seguintes valores foram adotados de LOGFONT: 0 = DontCare, 100 = fina, 200 = ExtraLight ou UltraLight, 300 = luz, 400 = Normal ou Regular, 500 = médio, 600 = SemiBold ou DemiBold, 700 = negrito, 800 = ExtraBold ou UltraBold e 900 = pesado ou preto.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Int32>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundColorAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute ForegroundColorAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute ForegroundColorAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.ForegroundColorAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o [ForegroundColor](http://msdn.microsoft.com/library/default.asp?url=/library/gdi/colors_9xiq.asp) ([COLORREF](http://msdn.microsoft.com/library/default.asp?url=/library/gdi/colors_9xiq.asp)) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cor de primeiro plano é equivalente à cor do texto ou a fonte.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Int32>.  
+  
+ O valor padrão é um `null` referência (`Nothing` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalTextAlignmentAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute HorizontalTextAlignmentAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute HorizontalTextAlignmentAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.HorizontalTextAlignmentAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.Text.HorizontalTextAlignment" /> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O alinhamento de texto horizontal aplicado para o paragraph(s) associado ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo  
+  
+ <xref:System.Windows.Automation.Text.HorizontalTextAlignment>  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.HorizontalTextAlignment.Left>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentationFirstLineAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IndentationFirstLineAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IndentationFirstLineAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IndentationFirstLineAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IndentationFirstLine</c> (<see cref="P:System.Windows.Documents.Paragraph.TextIndent" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recuo da primeira linha (especificado como um <xref:System.Drawing.GraphicsUnit.Point> valor de tipo de unidade) aplicada para o paragraph(s) associado ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentationLeadingAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IndentationLeadingAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IndentationLeadingAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IndentationLeadingAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IndentationLeading</c> (<see cref="P:System.Windows.Documents.Paragraph.TextIndent" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recuo à esquerda (especificado como um <xref:System.Drawing.GraphicsUnit.Point> valor de tipo de unidade) aplicada para o paragraph(s) associado ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentationTrailingAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IndentationTrailingAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IndentationTrailingAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IndentationTrailingAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IndentationTrailing</c> (<see cref="P:System.Windows.Documents.Paragraph.TextIndent" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recuo à direita (especificado como um <xref:System.Drawing.GraphicsUnit.Point> valor de tipo de unidade) aplicada para o paragraph(s) associado ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHiddenAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IsHiddenAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IsHiddenAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IsHiddenAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IsHidden</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Boolean>.  
+  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItalicAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IsItalicAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IsItalicAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IsItalicAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IsItalic</c> (<see cref="T:System.Windows.FontStyle" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Boolean>.  
+  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IsReadOnlyAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IsReadOnlyAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IsReadOnlyAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IsReadOnly</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estado somente leitura do documento associado ao intervalo de texto chamada.  
+  
+> [!NOTE]
+>  Se um documento ou o arquivo é somente leitura, mas você pode editá-lo e salvá-lo como outro arquivo, o texto não é somente leitura.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Boolean>.  
+  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubscriptAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IsSubscriptAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IsSubscriptAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IsSubscriptAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IsSubscript</c> (<see cref="T:System.Windows.FontVariants" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Boolean>.  
+  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSuperscriptAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute IsSuperscriptAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute IsSuperscriptAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.IsSuperscriptAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>IsSuperscript</c> (<see cref="T:System.Windows.FontVariants" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Boolean>.  
+  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginBottomAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute MarginBottomAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute MarginBottomAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.MarginBottomAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>MarginBottom</c> (<see cref="T:System.Drawing.Printing.PageSettings" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A margem inferior aplicada para o (s) associada ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginLeadingAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute MarginLeadingAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute MarginLeadingAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.MarginLeadingAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>MarginLeading</c> (<see cref="T:System.Drawing.Printing.PageSettings" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A margem esquerda aplicada para o (s) associada ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginTopAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute MarginTopAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute MarginTopAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.MarginTopAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>MarginTop</c> (<see cref="T:System.Drawing.Printing.PageSettings" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A margem superior aplicada para o (s) associada ao intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginTrailingAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute MarginTrailingAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute MarginTrailingAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.MarginTrailingAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>MarginTrailing</c> (<see cref="T:System.Drawing.Printing.PageSettings" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A margem direita aplicada para o (s) associado com o intervalo de texto chamada.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Double>.  
+  
+ O valor padrão é `zero`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MixedAttributeValue">
+      <MemberSignature Language="C#" Value="public static readonly object MixedAttributeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object MixedAttributeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.MixedAttributeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica se o valor de um determinado atributo varia ao longo de um intervalo de texto em um controle de edição com formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Text.TextPatternRange.GetAttributeValue%2A>Retorna `TextPattern.MixedAttributeValue` para indicar essa variação em vez de uma coleção de valores de atributo.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineStylesAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute OutlineStylesAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute OutlineStylesAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.OutlineStylesAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>OutlineStyles</c> (<see cref="T:System.Windows.Automation.Text.OutlineStyles" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.OutlineStyles>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.OutlineStyles.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverlineColorAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute OverlineColorAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute OverlineColorAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.OverlineColorAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>OverlineColor</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Int32>.  
+  
+ O valor padrão é `null` referência (`Nothing` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverlineStyleAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute OverlineStyleAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute OverlineStyleAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.OverlineStyleAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>OverlineStyle</c> (<see cref="T:System.Windows.Automation.Text.TextDecorationLineStyle" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.TextDecorationLineStyle>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.TextDecorationLineStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.TextPattern" /> padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughColorAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute StrikethroughColorAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute StrikethroughColorAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.StrikethroughColorAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>StrikethroughColor</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Int32>.  
+  
+ O valor padrão é um `null` referência (`Nothing` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughStyleAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute StrikethroughStyleAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute StrikethroughStyleAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.StrikethroughStyleAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>StrikethroughStyle</c> (<see cref="T:System.Windows.Automation.Text.TextDecorationLineStyle" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.TextDecorationLineStyle>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.TextDecorationLineStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabsAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute TabsAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute TabsAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.TabsAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>guias</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção de paradas de tabulação tem cada tabulação especificada como um <xref:System.Drawing.GraphicsUnit.Point> valor de tipo de unidade.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são uma matriz do tipo <xref:System.Double>.  
+  
+ O valor padrão é um `empty` matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent TextChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent TextChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento acionado sempre que o conteúdo textual é modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UIATextPattern_snip#1052](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1052)]  
+  
+ [!code-vb[UIATextPattern_snip#2052](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#2052)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextFlowDirectionsAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute TextFlowDirectionsAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute TextFlowDirectionsAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.TextFlowDirectionsAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>TextFlowDirections</c> (<see cref="T:System.Windows.Automation.Text.FlowDirections" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.FlowDirections>.  
+  
+ O valor padrão é a combinação de bit a bit dos valores a seguir: <xref:System.Windows.Automation.Text.FlowDirections.Vertical> `|` <xref:System.Windows.Automation.Text.FlowDirections.RightToLeft> `|` <xref:System.Windows.Automation.Text.FlowDirections.BottomToTop>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSelectionChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent TextSelectionChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent TextSelectionChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento gerado sempre que a seleção de texto é modificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns controles de texto lidar com o ponto de inserção (cursor) de texto como uma seleção de texto de largura zero e pode gerar `TextSelectionChangedEvent` quando o cursor é movido.  
+  
+> [!NOTE]
+>  Para acompanhar movimentos do cursor, clientes de automação de interface do usuário são aconselhados a manter controle das alterações de ponto de inserção monitorando correspondente [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] eventos em vez de depender de <xref:System.Windows.Automation.TextPattern.TextSelectionChangedEvent>.  
+  
+ Esse identificador é usado pelo [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] provedores. Aplicativos cliente devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineColorAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute UnderlineColorAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute UnderlineColorAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.UnderlineColorAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>UnderlineColor</c> atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Int32>.  
+  
+ O valor padrão é um `null` referência (`Nothing` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineStyleAttribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationTextAttribute UnderlineStyleAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationTextAttribute UnderlineStyleAttribute" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TextPatternIdentifiers.UnderlineStyleAttribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <c>UnderlineStyle</c> (<see cref="T:System.Windows.Automation.Text.TextDecorationLineStyle" />) atributo de um intervalo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TextPattern>.  
+  
+ Os valores para esse atributo são do tipo <xref:System.Windows.Automation.Text.TextDecorationLineStyle>.  
+  
+ O valor padrão é <xref:System.Windows.Automation.Text.TextDecorationLineStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

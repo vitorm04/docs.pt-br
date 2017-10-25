@@ -1,0 +1,98 @@
+<Type Name="MessageBoxButton" FullName="System.Windows.MessageBoxButton">
+  <TypeSignature Language="C#" Value="public enum MessageBoxButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MessageBoxButton extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.MessageBoxButton" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os botões são exibidos em uma caixa de mensagem. Usado como um argumento do método <see cref="Overload:System.Windows.MessageBox.Show" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.MessageBox.Show%2A> método o <xref:System.Windows.MessageBox> exibe uma caixa de mensagem que tem um **Okey** botão. Você pode usar as sobrecargas do <xref:System.Windows.MessageBox.Show%2A> método que aceite um <xref:System.Windows.MessageBoxButton> argumento para especificar diferentes combinações de botões, que incluem **Okey**, **Okey**/**Cancelar**, **Sim**/**não**, e **Sim**/**não**/**Cancelar**.  
+  
+ Se você especificar YesNo, você desabilitar o **fechar** botão na barra de título da caixa de mensagem. No entanto, o **fechar** botão é habilitado para todas as outras opções. Quando um usuário clica o **fechar** botão ou pressiona o **ESC** chave, uma caixa de mensagem retorna um valor de resultado da caixa de mensagem <xref:System.Windows.MessageBoxResult>. No entanto, se uma caixa de mensagem exibe somente um **Okey** , clique no botão de **fechar** botão ou pressionando o **ESC** chave faz com que uma caixa de mensagem retornar um valor de resultado da caixa de mensagem <xref:System.Windows.MessageBoxResult.Cancel>.  
+  
+ O valor do botão que um usuário clica é retornado por <xref:System.Windows.MessageBox.Show%2A> e é um dos valores da <xref:System.Windows.MessageBoxResult> enumeração.  
+  
+   
+  
+## Examples  
+ Para obter mais informações, consulte [MessageBox exemplo](http://go.microsoft.com/fwlink/?LinkID=160023).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OK">
+      <MemberSignature Language="C#" Value="OK" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton OK = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.OK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de mensagem exibe um botão **OK**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OKCancel">
+      <MemberSignature Language="C#" Value="OKCancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton OKCancel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.OKCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de mensagem exibe os botões **OK** e **Cancelar**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="YesNo">
+      <MemberSignature Language="C#" Value="YesNo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton YesNo = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.YesNo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de mensagem exibe os botões **Sim** e **Não**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="YesNoCancel">
+      <MemberSignature Language="C#" Value="YesNoCancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton YesNoCancel = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.YesNoCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de mensagem exibe os botões **Sim**, **Não** e **Cancelar**.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

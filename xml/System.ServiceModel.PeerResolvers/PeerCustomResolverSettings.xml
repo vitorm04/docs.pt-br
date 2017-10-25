@@ -1,0 +1,123 @@
+<Type Name="PeerCustomResolverSettings" FullName="System.ServiceModel.PeerResolvers.PeerCustomResolverSettings">
+  <TypeSignature Language="C#" Value="public class PeerCustomResolverSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PeerCustomResolverSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém configurações específicas para uma instância de um serviço resolvedor de pares personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo define as configurações básicas para um serviço resolvedor de pares personalizado, incluindo o endereço do ponto de extremidade do par que hospeda o serviço e as configurações de associação específica. Normalmente, essas configurações são fornecidas para o <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings.Custom%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerCustomResolverSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço do ponto de extremidade do nó par que hospeda o serviço resolvedor de pares personalizado.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.EndpointAddress" />que contém o endereço do ponto de extremidade do nó par que executa o serviço resolvedor de pares personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Binding Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação de canal usada pelo serviço resolvedor de pares personalizado.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.Channels.Binding" />que contém as configurações de associação para este serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento de associação fornece a especificação para a criação de uma fábrica de canais no cliente e um ouvinte de canal do serviço. Esta fábrica de canais usada para produzir canais para o serviço resolvedor de pares personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBindingSpecified">
+      <MemberSignature Language="C#" Value="public bool IsBindingSpecified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBindingSpecified" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.IsBindingSpecified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o <see cref="P:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Binding" /> está definida.</summary>
+        <value>True se o <see cref="P:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Binding" /> propriedade for definida; false se não for.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolver">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolver Resolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.PeerResolver Resolver" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Resolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a instância do resolvedor de pares personalizado para este serviço.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerResolver" />instância usada pelo serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

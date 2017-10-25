@@ -1,0 +1,64 @@
+<Type Name="IRawElementProviderHwndOverride" FullName="System.Windows.Automation.Provider.IRawElementProviderHwndOverride">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderHwndOverride : System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderHwndOverride implements class System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderHwndOverride" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IRawElementProviderSimple</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("1d5df27c-8947-4425-b8d9-79787bb460b8")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe um método que permite a reposicionamento de elementos baseados em janela dentro da árvore de automação de interface do usuário do fragmento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetOverrideProviderForHwnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple GetOverrideProviderForHwnd (IntPtr hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple GetOverrideProviderForHwnd(native int hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">O identificador de janela do elemento.</param>
+        <summary>Recupera um provedor de automação de interface do usuário para o elemento especificado.</summary>
+        <returns>O provedor para o elemento especificado ou uma referência nula (<see langword="Nothing" /> em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) se o provedor de padrão do elemento não está sendo substituída.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por provedores de automação de interface do usuário do lado do cliente para as raízes de fragmento em fragmentos que contêm elementos filho baseado no Windows, quando os HWNDs desses elementos filho não são logicamente posicionados dentro de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore. Para obter mais informações, consulte a mudança de provedor pai não-WPF e WPF não provedor reposicionamento no [implementação de provedor de automação de interface do usuário do lado do servidor](~/docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md) tópico.  
+  
+ O provedor retornado deve ser parte da árvore de fragmento. Ele pode fornecer as propriedades adicionais ou substituir as propriedades do componente especificado.  
+  
+ Se o provedor retornado implementa <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>, o provedor deve ser parte da árvore do fragmento e ser acessível por meio da navegação da raiz do fragmento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

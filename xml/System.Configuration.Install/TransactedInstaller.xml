@@ -1,0 +1,138 @@
+<Type Name="TransactedInstaller" FullName="System.Configuration.Install.TransactedInstaller">
+  <TypeSignature Language="C#" Value="public class TransactedInstaller : System.Configuration.Install.Installer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransactedInstaller extends System.Configuration.Install.Installer" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.TransactedInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.Installer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um instalador que completamente bem-sucedida ou falha e deixa o computador em seu estado inicial.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para executar os instaladores em uma transação, adicioná-los para o <xref:System.Configuration.Install.Installer.Installers%2A> propriedade deste <xref:System.Configuration.Install.TransactedInstaller> instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.TransactedInstaller.%23ctor%2A>, <xref:System.Configuration.Install.TransactedInstaller.Install%2A> e <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> métodos de <xref:System.Configuration.Install.TransactedInstaller> classe.  
+  
+ Este exemplo fornece uma implementação semelhante do [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). Ele instala os assemblies com as opções anteriores a esse assembly específico. Se uma opção não for especificada para um assembly, opções do assembly anterior serão usadas se houver um assembly anterior na lista. Se o "/ u" ou "/Uninstall" opção for especificada, os assemblies são desinstalados. Se o "/?" ou "/Help" é fornecida uma opção, as informações de Ajuda serão exibidas no console.  
+  
+ [!code-cpp[TransactedInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/TransactedInstaller/CPP/transactedinstaller.cpp#1)]
+ [!code-csharp[TransactedInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/TransactedInstaller/CS/transactedinstaller.cs#1)]
+ [!code-vb[TransactedInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TransactedInstaller/VB/transactedinstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactedInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.TransactedInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.Install.TransactedInstaller" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.TransactedInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> em que esse método salva as informações necessárias para executar um commit, rollback, ou a operação de desinstalação.</param>
+        <summary>Realiza a instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Configuration.Install.TransactedInstaller.Install%2A> método de cada instalador contida o <xref:System.Configuration.Install.Installer.Installers%2A> propriedade desta instância. O <xref:System.Collections.IDictionary> objeto referenciado pelo `savedState` parâmetro é atualizado para refletir o status da instalação depois de executaram os instaladores independentes. Se todos os <xref:System.Configuration.Install.TransactedInstaller.Install%2A> métodos falharem, o <xref:System.Configuration.Install.Installer.Commit%2A> método é chamado. Caso contrário, o <xref:System.Configuration.Install.Installer.Rollback%2A> método é chamado para cada instalação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.TransactedInstaller.%23ctor%2A>, <xref:System.Configuration.Install.TransactedInstaller.Install%2A> e <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> métodos de <xref:System.Configuration.Install.TransactedInstaller> classe.  
+  
+ Este exemplo fornece uma implementação semelhante de InstallUtil.exe. Ele instala os assemblies com as opções anteriores a esse assembly específico. Se uma opção não for especificada para um assembly, as opções de assemblies anteriores serão executadas se houver um assembly anterior na lista. Se a ' / u' ou '/uninstall' opção for especificada, os assemblies são desinstalados. Se a '/'? ou '/Help' opção for fornecida, então as informações de Ajuda será impressa no console.  
+  
+ [!code-cpp[TransactedInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/TransactedInstaller/CPP/transactedinstaller.cpp#1)]
+ [!code-csharp[TransactedInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/TransactedInstaller/CS/transactedinstaller.cs#1)]
+ [!code-vb[TransactedInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TransactedInstaller/VB/transactedinstaller.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="savedState" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Exception">A instalação falha e está sendo revertida.</exception>
+        <block subset="none" type="usage">
+          <para>O <see cref="T:System.Collections.IDictionary" /> especificado pelo <paramref name="savedState" /> parâmetro deve estar vazio quando passados para o <see cref="M:System.Configuration.Install.TransactedInstaller.Install(System.Collections.IDictionary)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.TransactedInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado do computador após a instalação ser concluída.</param>
+        <summary>Remove uma instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para remover uma instalação concluída anteriormente. Isso <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> chamadas de método de <xref:System.Configuration.Install.Installer.Uninstall%2A> método de cada instalador no <xref:System.Configuration.Install.Installer.Installers%2A> definida para desinstalar todos os recursos durante a instalação. As exceções durante a desinstalação serão ignoradas.  
+  
+> [!NOTE]
+>  Embora o <xref:System.Configuration.Install.Installer.Install%2A> e <xref:System.Configuration.Install.Installer.Commit%2A> métodos salvar o estado do computador após as instalações, o arquivo que contém o <xref:System.Collections.IDictionary> do `savedState` parâmetro pode ter sido excluído em algum momento depois que a instalação foi concluída. Se o arquivo é excluído, o `savedState` parâmetro é `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.TransactedInstaller.%23ctor%2A>, <xref:System.Configuration.Install.TransactedInstaller.Install%2A> e <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> métodos de <xref:System.Configuration.Install.TransactedInstaller> classe.  
+  
+ Este exemplo fornece uma implementação semelhante do [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). Ele instala os assemblies com as opções anteriores a esse assembly específico. Se uma opção não for especificada para um assembly, opções do assembly anterior serão usadas se houver um assembly anterior na lista. Se o "/ u" ou "/Uninstall" opção for especificada, os assemblies são desinstalados. Se o "/?" ou "/Help" é fornecida uma opção, as informações de Ajuda serão exibidas no console.  
+  
+ [!code-cpp[TransactedInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/TransactedInstaller/CPP/transactedinstaller.cpp#1)]
+ [!code-csharp[TransactedInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/TransactedInstaller/CS/transactedinstaller.cs#1)]
+ [!code-vb[TransactedInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TransactedInstaller/VB/transactedinstaller.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

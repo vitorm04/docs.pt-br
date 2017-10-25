@@ -1,0 +1,1137 @@
+<Type Name="TcpListener" FullName="System.Net.Sockets.TcpListener">
+  <TypeSignature Language="C#" Value="public class TcpListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TcpListener extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.TcpListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Escuta conexões de clientes de rede TCP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.TcpListener> classe fornece métodos simples que escutar e aceitam solicitações de conexão de entrada no modo síncrono de bloqueio. Você pode usar um <xref:System.Net.Sockets.TcpClient> ou um <xref:System.Net.Sockets.Socket> para se conectar com um <xref:System.Net.Sockets.TcpListener>. Criar um <xref:System.Net.Sockets.TcpListener> usando um <xref:System.Net.IPEndPoint>, um endereço IP Local e o número da porta ou um número de porta. Especifique <xref:System.Net.IPAddress.Any> para o endereço IP local e 0 para o número de porta local se desejar que o provedor de serviço subjacente atribui esses valores para você. Se você optar por fazer isso, você pode usar o <xref:System.Net.Sockets.TcpListener.LocalEndpoint%2A> propriedade para identificar as informações atribuídas, depois que conectou o soquete.  
+  
+ Use o <xref:System.Net.Sockets.TcpListener.Start%2A> método para começar a escutar solicitações de conexão de entrada. <xref:System.Net.Sockets.TcpListener.Start%2A>conexões de entrada serão na fila até que você chamar o <xref:System.Net.Sockets.TcpListener.Stop%2A> método ou colocou em fila <xref:System.Net.Sockets.SocketOptionName.MaxConnections>. Use um <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> ou <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> para efetuar pull de uma conexão da fila de solicitação de conexão de entrada. Esses dois métodos serão bloqueada. Se você quiser evitar o bloqueio, você pode usar o <xref:System.Net.Sockets.TcpListener.Pending%2A> método primeiro para determinar se as solicitações de conexão estão disponíveis na fila.  
+  
+ Chamar o <xref:System.Net.Sockets.TcpListener.Stop%2A> método para fechar o <xref:System.Net.Sockets.TcpListener>.  
+  
+> [!NOTE]
+>  O <xref:System.Net.Sockets.TcpListener.Stop%2A> método não feche todas as conexões aceitas. Você é responsável para fechar esses separadamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.Sockets.TcpListener>.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener/CPP/tcpserver.cpp#1)]
+ [!code-csharp[System.Net.Sockets.TcpListener#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener/CS/tcpserver.cs#1)]
+ [!code-vb[System.Net.Sockets.TcpListener#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener/VB/tcpserver.vb#1)]  
+  
+ Consulte <xref:System.Net.Sockets.TcpClient> para obter um exemplo de cliente.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Net.SocketPermission">para estabelecer uma conexão de saída ou aceitar uma solicitação de entrada.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpListener (int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use TcpListener (IPAddress address, int port) instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">A porta na qual escutar tentativas de conexão de entrada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Sockets.TcpListener" /> que escuta na porta especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor é obsoleto. Use o <xref:System.Net.Sockets.TcpListener.%23ctor%28System.Net.IPAddress%2CSystem.Int32%29?displayProperty=nameWithType> ou <xref:System.Net.Sockets.TcpListener.%23ctor%28System.Net.IPEndPoint%29?displayProperty=nameWithType> construtores.  
+  
+ Este construtor permite que você especifique o número da porta para escuta de tentativas de conexão de entrada. Com esse construtor, o provedor de serviço subjacente atribui o endereço de rede mais apropriado. Se você não fizer a porta local é usada, você pode especificar 0 para o número da porta. Nesse caso, o provedor de serviços atribuirá um número de porta entre 1024 e 5000. Se você usar essa abordagem, você pode descobrir o número de porta e endereço de rede local foi atribuído usando o <xref:System.Net.Sockets.TcpListener.LocalEndpoint%2A> propriedade.  
+  
+ Chamar o <xref:System.Net.Sockets.TcpListener.Start%2A> método comece a escutar para tentativas de conexão de entrada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.Sockets.TcpListener> usando um número de porta local.  
+  
+ [!code-cpp[Classic TcpListener.PublicMethodsAndPropertiesExample#3](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CPP/source.cpp#3)]
+ [!code-csharp[Classic TcpListener.PublicMethodsAndPropertiesExample#3](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CS/source.cs#3)]
+ [!code-vb[Classic TcpListener.PublicMethodsAndPropertiesExample#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> não está entre <see cref="F:System.Net.IPEndPoint.MinPort" /> e <see cref="F:System.Net.IPEndPoint.MaxPort" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpListener (System.Net.IPEndPoint localEP);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPEndPoint localEP) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.#ctor(System.Net.IPEndPoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localEP" Type="System.Net.IPEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="localEP">Um <see cref="T:System.Net.IPEndPoint" /> que representa o ponto de extremidade local ao qual o ouvinte <see cref="T:System.Net.Sockets.Socket" /> será associado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Sockets.TcpListener" /> com o ponto de extremidade local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite que você especifique o endereço IP local e tentativas de número de porta para escuta de conexão de entrada. Antes de usar este construtor, você deve criar um <xref:System.Net.IPEndPoint> usando o desejado local IP endereço e número da porta. Transmita esse <xref:System.Net.IPEndPoint> para o construtor como o `localEP` parâmetro.  
+  
+ Se você não fizer a qual o endereço local é atribuído, você pode criar um <xref:System.Net.IPEndPoint> usando <xref:System.Net.IPAddress.Any?displayProperty=nameWithType> como o parâmetro de endereço e o serviço subjacente provedor atribuirá o endereço de rede mais apropriado. Isso pode ajudar a simplificar seu aplicativo, se você tiver várias interfaces de rede. Se você não fizer a porta local é usada, você pode criar um <xref:System.Net.IPEndPoint> usar 0 como o número da porta. Nesse caso, o provedor de serviços atribuirá um número de porta entre 1024 e 5000. Se você usar essa abordagem, você pode descobrir o número de porta e endereço de rede local foi atribuído usando o <xref:System.Net.Sockets.TcpListener.LocalEndpoint%2A> propriedade.  
+  
+ Chamar o <xref:System.Net.Sockets.TcpListener.Start%2A> método comece a escutar para tentativas de conexão de entrada.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Net.Sockets.TcpListener> classe usando o ponto de extremidade local.  
+  
+ [!code-cpp[Classic TcpListener.PublicMethodsAndPropertiesExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CPP/source.cpp#1)]
+ [!code-csharp[Classic TcpListener.PublicMethodsAndPropertiesExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CS/source.cs#1)]
+ [!code-vb[Classic TcpListener.PublicMethodsAndPropertiesExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="localEP" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpListener (System.Net.IPAddress localaddr, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress localaddr, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.#ctor(System.Net.IPAddress,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localaddr" Type="System.Net.IPAddress" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="localaddr">Um <see cref="T:System.Net.IPAddress" /> que representa o endereço IP local.</param>
+        <param name="port">A porta na qual escutar tentativas de conexão de entrada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Sockets.TcpListener" /> que escuta tentativas de conexões de entrada no endereço IP local e no número da porta especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite que você especifique o endereço IP local e tentativas de número de porta para escuta de conexão de entrada. Antes de chamar este construtor você deve primeiro criar um <xref:System.Net.IPAddress> usando o endereço local desejado. Transmita esse <xref:System.Net.IPAddress> para o construtor como o `localaddr` parâmetro. Se você não fizer a qual o endereço local é atribuído, especifique <xref:System.Net.IPAddress?displayProperty=nameWithType> para o `localaddr` parâmetro e o provedor de serviço subjacente atribuirá o endereço de rede mais apropriado. Isso pode ajudar a simplificar seu aplicativo, se você tiver várias interfaces de rede. Se você não fizer a porta local é usada, você pode especificar 0 para o número da porta. Nesse caso, o provedor de serviços atribuirá um número de porta entre 1024 e 5000. Se você usar essa abordagem, você pode descobrir o número de porta e endereço de rede local foi atribuído usando o <xref:System.Net.Sockets.TcpListener.LocalEndpoint%2A> propriedade.  
+  
+ Chamar o <xref:System.Net.Sockets.TcpListener.Start%2A> método comece a escutar para tentativas de conexão de entrada.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Net.Sockets.TcpListener> classe usando um número de porta e endereço IP local.  
+  
+ [!code-cpp[Classic TcpListener.PublicMethodsAndPropertiesExample#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CPP/source.cpp#2)]
+ [!code-csharp[Classic TcpListener.PublicMethodsAndPropertiesExample#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CS/source.cs#2)]
+ [!code-vb[Classic TcpListener.PublicMethodsAndPropertiesExample#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="localaddr" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> não está entre <see cref="F:System.Net.IPEndPoint.MinPort" /> e <see cref="F:System.Net.IPEndPoint.MaxPort" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptSocket">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.Socket AcceptSocket ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Sockets.Socket AcceptSocket() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.AcceptSocket" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.Socket</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aceita uma solicitação de conexão pendente.</summary>
+        <returns>Um <see cref="T:System.Net.Sockets.Socket" /> usado para enviar e receber dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>é um método de bloqueio que retorna um <xref:System.Net.Sockets.Socket> que você pode usar para enviar e receber dados. Se você quiser evitar o bloqueio, use o <xref:System.Net.Sockets.TcpListener.Pending%2A> método para determinar se as solicitações de conexão estão disponíveis na fila de conexão de entrada.  
+  
+ O <xref:System.Net.Sockets.Socket> retornado é inicializada com o número de porta e endereço IP do host remoto. Você pode usar qualquer uma da <xref:System.Net.Sockets.Socket.Send%2A> e <xref:System.Net.Sockets.Socket.Receive%2A> métodos disponíveis a <xref:System.Net.Sockets.Socket> classe para se comunicar com o host remoto. Quando tiver terminado usando o <xref:System.Net.Sockets.Socket>, certifique-se de chamar o <xref:System.Net.Sockets.Socket.Close%2A> método. Se seu aplicativo é relativamente simple, considere o uso de <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método em vez de <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método. <xref:System.Net.Sockets.TcpClient>fornece métodos simples para enviar e receber dados pela rede no modo síncrono de bloqueio.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método é usado para retornar um <xref:System.Net.Sockets.Socket>. Isso <xref:System.Net.Sockets.Socket> é usado para se comunicar com o cliente conectado recentemente.  
+  
+ [!code-cpp[Classic TcpListener.PublicMethodsAndPropertiesExample#4](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CPP/source.cpp#4)]
+ [!code-csharp[Classic TcpListener.PublicMethodsAndPropertiesExample#4](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/CS/source.cs#4)]
+ [!code-vb[Classic TcpListener.PublicMethodsAndPropertiesExample#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic TcpListener.PublicMethodsAndPropertiesExample/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O ouvinte não foi iniciado com uma chamada para <see cref="M:System.Net.Sockets.TcpListener.Start" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptSocketAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Sockets.Socket&gt; AcceptSocketAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Sockets.Socket&gt; AcceptSocketAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.AcceptSocketAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Sockets.Socket&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aceita uma solicitação de conexão pendente como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto da tarefa retorna um <see cref="T:System.Net.Sockets.Socket" /> usado para enviar e receber dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após a conexão de soquete foi aceita.  
+  
+ O <xref:System.Net.Sockets.Socket> retornado em <xref:System.Threading.Tasks.Task%601> é inicializada com o número de porta e endereço IP do host remoto. Você pode usar qualquer uma da <xref:System.Net.Sockets.Socket.Send%2A> e <xref:System.Net.Sockets.Socket.Receive%2A> métodos disponíveis a <xref:System.Net.Sockets.Socket> classe para se comunicar com o host remoto. Quando tiver terminado usando o <xref:System.Net.Sockets.Socket>, certifique-se de chamar o <xref:System.Net.Sockets.Socket.Close%2A> método. Se seu aplicativo é relativamente simple, considere o uso de <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método em vez de <xref:System.Net.Sockets.TcpListener.AcceptSocketAsync%2A> método. <xref:System.Net.Sockets.TcpClient>fornece métodos simples para enviar e receber dados pela rede no modo síncrono de bloqueio.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O ouvinte não foi iniciado com uma chamada para <see cref="M:System.Net.Sockets.TcpListener.Start" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTcpClient">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.TcpClient AcceptTcpClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Sockets.TcpClient AcceptTcpClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.AcceptTcpClient" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TcpClient</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aceita uma solicitação de conexão pendente.</summary>
+        <returns>Um <see cref="T:System.Net.Sockets.TcpClient" /> usado para enviar e receber dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>é um método de bloqueio que retorna um <xref:System.Net.Sockets.TcpClient> que você pode usar para enviar e receber dados. Use o <xref:System.Net.Sockets.TcpListener.Pending%2A> método para determinar se as solicitações de conexão estão disponíveis na fila de entrada de conexão se você quiser evitar o bloqueio.  
+  
+ Use o <xref:System.Net.Sockets.TcpClient.GetStream%2A?displayProperty=nameWithType> método obter subjacente <xref:System.Net.Sockets.NetworkStream> de retornado <xref:System.Net.Sockets.TcpClient>. O <xref:System.Net.Sockets.NetworkStream> fornece métodos para enviar e receber com o host remoto. Quando tiver acabado com o <xref:System.Net.Sockets.TcpClient>, certifique-se de chamar o <xref:System.Net.Sockets.TcpClient.Close%2A> método. Se você quiser maior flexibilidade do que um <xref:System.Net.Sockets.TcpClient> ofertas, considere o uso de <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método é usado para retornar um <xref:System.Net.Sockets.TcpClient>. Isso <xref:System.Net.Sockets.TcpClient> é usado para se comunicar com o cliente conectado recentemente.  
+  
+ [!code-cpp[Classic TcpListenerExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic TcpListenerExample/CPP/source.cpp#1)]
+ [!code-csharp[Classic TcpListenerExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic TcpListenerExample/CS/source.cs#1)]
+ [!code-vb[Classic TcpListenerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic TcpListenerExample/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O ouvinte não foi iniciado com uma chamada para <see cref="M:System.Net.Sockets.TcpListener.Start" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Use a propriedade <see cref="P:System.Net.Sockets.SocketException.ErrorCode" /> para obter o código de erro específico. Quando você obteve esse código, você pode consultar o Windows Sockets versão 2 erro código documentação da API no MSDN para obter uma descrição detalhada do erro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTcpClientAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Sockets.TcpClient&gt; AcceptTcpClientAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Sockets.TcpClient&gt; AcceptTcpClientAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.AcceptTcpClientAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Sockets.TcpClient&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aceita uma solicitação de conexão pendente como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto da tarefa retorna um <see cref="T:System.Net.Sockets.TcpClient" /> usado para enviar e receber dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após a conexão TCP foi aceita.  
+  
+ Use o <xref:System.Net.Sockets.TcpClient.GetStream%2A?displayProperty=nameWithType> método obter subjacente <xref:System.Net.Sockets.NetworkStream> de retornado <xref:System.Net.Sockets.TcpClient> no <xref:System.Threading.Tasks.Task%601>. O <xref:System.Net.Sockets.NetworkStream> fornece métodos para enviar e receber com o host remoto. Quando tiver acabado com o <xref:System.Net.Sockets.TcpClient>, certifique-se de chamar o <xref:System.Net.Sockets.TcpClient.Close%2A> método. Se você quiser maior flexibilidade do que um <xref:System.Net.Sockets.TcpClient> ofertas, considere o uso de <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> ou <xref:System.Net.Sockets.TcpListener.AcceptSocketAsync%2A>.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O ouvinte não foi iniciado com uma chamada para <see cref="M:System.Net.Sockets.TcpListener.Start" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Use a propriedade <see cref="P:System.Net.Sockets.SocketException.ErrorCode" /> para obter o código de erro específico. Quando você obteve esse código, você pode consultar o Windows Sockets versão 2 erro código documentação da API no MSDN para obter uma descrição detalhada do erro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="protected bool Active { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Active" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.TcpListener.Active" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se <see cref="T:System.Net.Sockets.TcpListener" /> está ouvindo ativamente as conexões de cliente.</summary>
+        <value>
+          <see langword="true" /> se <see cref="T:System.Net.Sockets.TcpListener" /> estiver escutando ativamente; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas de <xref:System.Net.Sockets.TcpListener> pode usar essa propriedade para determinar se o <xref:System.Net.Sockets.Socket> está escutando no momento de tentativas de conexão de entrada. O <xref:System.Net.Sockets.TcpClient.Active%2A> propriedade pode ser usada para evitar a redundância <xref:System.Net.Sockets.TcpListener.Start%2A> tentativas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNatTraversal">
+      <MemberSignature Language="C#" Value="public void AllowNatTraversal (bool allowed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AllowNatTraversal(bool allowed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.AllowNatTraversal(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allowed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allowed">Um valor booliano que especifica se a passagem de NAT deve ser habilitada ou desabilitada.</param>
+        <summary>Habilita ou desabilita a passagem de NAT (Conversão de Endereços de Rede) em uma instância de <see cref="T:System.Net.Sockets.TcpListener" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> método é usado para habilitar ou desabilitar o percurso de NAT para um <xref:System.Net.Sockets.TcpListener> instância. Percurso de NAT pode ser fornecido usando um túnel ISATAP, 6to4 ou Teredo.  
+  
+ Quando o `allowed` parâmetro for false, o <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel> opção no soquete associado é definida como <xref:System.Net.Sockets.IPProtectionLevel.EdgeRestricted>. Isso desabilita o percurso de NAT para explicitamente um <xref:System.Net.Sockets.TcpListener> instância.  
+  
+ Quando o `allowed` parâmetro for true, o <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel> opção no soquete associado é definida como <xref:System.Net.Sockets.IPProtectionLevel.Unrestricted>. Isso pode permitir percurso de NAT para um <xref:System.Net.Sockets.TcpListener> dependendo de regras de firewall em vigor no sistema.  
+  
+ O <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> método deve ser chamado antes de chamar o <xref:System.Net.Sockets.TcpListener.Start%2A> método para começar a escutar solicitações de conexão de entrada (antes do soquete é vinculado). Se <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> método é chamado após o <xref:System.Net.Sockets.TcpListener.Start%2A> método, então um <xref:System.InvalidOperationException> será lançada.  
+  
+ Um endereço de Teredo é um endereço IPv6 com o prefixo de 2001::/ / 32. Endereços Teredo podem ser retornados por meio da resolução de nome DNS normal ou enumerados como um endereço de IPv6 atribuído a uma interface local.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="M:System.Net.Sockets.TcpListener.AllowNatTraversal(System.Boolean)" /> foi chamado após chamar o método <see cref="M:System.Net.Sockets.TcpListener.Start" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAcceptSocket">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAcceptSocket (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAcceptSocket(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.BeginAcceptSocket(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="state">Um objeto definido pelo usuário que contém informações sobre a operação de aceitação. Este objeto é passado para o <c>retorno de chamada</c> delegar quando a operação for concluída.</param>
+        <summary>Inicia uma operação assíncrona para aceitar uma tentativa de conexão de entrada.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência à criação assíncrona do <see cref="T:System.Net.Sockets.Socket" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O assíncrona <xref:System.Net.Sockets.TcpListener.BeginAcceptSocket%2A> operação deve ser concluída chamando o <xref:System.Net.Sockets.TcpListener.EndAcceptSocket%2A> método. Normalmente, o método é invocado pelo `callback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até a conclusão da operação, use o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método.  
+  
+ Para obter informações detalhadas sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+> [!NOTE]
+>  Você pode chamar o <xref:System.Net.Sockets.Socket.RemoteEndPoint%2A> propriedade retornado <xref:System.Net.Sockets.Socket> para identificar o número de porta e endereço de rede do host remoto.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.Net.Sockets.SocketException>, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A?displayProperty=nameWithType> propriedade para obter o código de erro específico e consulte a documentação de códigos de erro do Windows Sockets versão 2 API na biblioteca MSDN em [http://msdn.microsoft.com/library/](http://msdn.microsoft.com/library/) para obter uma descrição detalhada do erro.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Net.Sockets.TcpListener.BeginAcceptSocket%2A> método para criar e conectar-se a um soquete. O retorno de chamada delegado chama o <xref:System.Net.Sockets.TcpListener.EndAcceptSocket%2A> método para encerrar a solicitação assíncrona.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#4](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#4)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#4)]
+ [!code-vb[System.Net.Sockets.TcpListener1#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Erro ao tentar acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.Socket" /> foi fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAcceptTcpClient">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAcceptTcpClient (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAcceptTcpClient(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.BeginAcceptTcpClient(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="state">Um objeto definido pelo usuário que contém informações sobre a operação de aceitação. Este objeto é passado para o <c>retorno de chamada</c> delegar quando a operação for concluída.</param>
+        <summary>Inicia uma operação assíncrona para aceitar uma tentativa de conexão de entrada.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência à criação assíncrona do <see cref="T:System.Net.Sockets.TcpClient" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O assíncrona <xref:System.Net.Sockets.TcpListener.BeginAcceptTcpClient%2A> operação deve ser concluída chamando o <xref:System.Net.Sockets.TcpListener.EndAcceptTcpClient%2A> método. Normalmente, o método é invocado pelo `callback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até a conclusão da operação, use o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método.  
+  
+ Para obter informações detalhadas sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.Net.Sockets.SocketException>, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A?displayProperty=nameWithType> propriedade para obter o código de erro específico e consulte a documentação de códigos de erro do Windows Sockets versão 2 API na biblioteca MSDN em [http://msdn.microsoft.com/library/](http://msdn.microsoft.com/library/) para obter uma descrição detalhada do erro.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Net.Sockets.TcpListener.BeginAcceptTcpClient%2A> método para criar e conectar-se a um soquete. O retorno de chamada delegado chama o <xref:System.Net.Sockets.TcpListener.EndAcceptTcpClient%2A> método para encerrar a solicitação assíncrona.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#5](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#5)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#5](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#5)]
+ [!code-vb[System.Net.Sockets.TcpListener1#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Erro ao tentar acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.Socket" /> foi fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Net.Sockets.TcpListener Create (int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Sockets.TcpListener Create(int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.Create(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TcpListener</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">A porta na qual escutar tentativas de conexão de entrada.</param>
+        <summary>Cria uma nova instância <see cref="T:System.Net.Sockets.TcpListener" /> para escutar na porta especificada.</summary>
+        <returns>Retorna <see cref="T:System.Net.Sockets.TcpListener" />.  
+  
+ Uma nova instância <see cref="T:System.Net.Sockets.TcpListener" /> para escutar na porta especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAcceptSocket">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.Socket EndAcceptSocket (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Sockets.Socket EndAcceptSocket(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.EndAcceptSocket(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.Socket</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Um <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o método <see cref="M:System.Net.Sockets.TcpListener.BeginAcceptSocket(System.AsyncCallback,System.Object)" />.</param>
+        <summary>Aceita de forma assíncrona uma tentativa de conexão de entrada e cria um novo <see cref="T:System.Net.Sockets.Socket" /> para manipular as comunicações com o host remoto.</summary>
+        <returns>Um <see cref="T:System.Net.Sockets.Socket" />.  
+  
+ O <see cref="T:System.Net.Sockets.Socket" /> usado para enviar e receber dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que a operação seja concluída. Para executar esta operação síncrona, use o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método.  
+  
+> [!NOTE]
+>  Você pode chamar o <xref:System.Net.Sockets.Socket.RemoteEndPoint%2A> propriedade retornado <xref:System.Net.Sockets.Socket> para identificar o número de porta e endereço de rede do host remoto.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.Net.Sockets.SocketException>, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A?displayProperty=nameWithType> propriedade para obter o código de erro específico e consulte a documentação de códigos de erro do Windows Sockets versão 2 API na biblioteca MSDN em [http://msdn.microsoft.com/library/](http://msdn.microsoft.com/library/) para obter uma descrição detalhada do erro.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Net.Sockets.TcpListener.BeginAcceptSocket%2A> método para criar e conectar-se a um soquete. O retorno de chamada delegado chama o <xref:System.Net.Sockets.TcpListener.EndAcceptSocket%2A> método para encerrar a solicitação assíncrona.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#4](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#4)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#4)]
+ [!code-vb[System.Net.Sockets.TcpListener1#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente foi fechado.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="asyncResult" /> não foi criado por uma chamada para o método <see cref="M:System.Net.Sockets.TcpListener.BeginAcceptSocket(System.AsyncCallback,System.Object)" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="M:System.Net.Sockets.TcpListener.EndAcceptSocket(System.IAsyncResult)" /> foi chamado anteriormente.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Erro ao tentar acessar o <see cref="T:System.Net.Sockets.Socket" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAcceptTcpClient">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.TcpClient EndAcceptTcpClient (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Sockets.TcpClient EndAcceptTcpClient(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.EndAcceptTcpClient(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TcpClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Um <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o método <see cref="M:System.Net.Sockets.TcpListener.BeginAcceptTcpClient(System.AsyncCallback,System.Object)" />.</param>
+        <summary>Aceita de forma assíncrona uma tentativa de conexão de entrada e cria um novo <see cref="T:System.Net.Sockets.TcpClient" /> para manipular as comunicações com o host remoto.</summary>
+        <returns>Um <see cref="T:System.Net.Sockets.TcpClient" />.  
+  
+ O <see cref="T:System.Net.Sockets.TcpClient" /> usado para enviar e receber dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que a operação seja concluída. Para executar esta operação síncrona, use o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método.  
+  
+> [!NOTE]
+>  Você pode chamar o <xref:System.Net.Sockets.Socket.RemoteEndPoint%2A> propriedade do soquete subjacente (<xref:System.Net.Sockets.TcpClient.Client%2A>) para identificar o número de porta e endereço de rede do host remoto.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.Net.Sockets.SocketException>, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A?displayProperty=nameWithType> propriedade para obter o código de erro específico e consulte a documentação de códigos de erro do Windows Sockets versão 2 API na biblioteca MSDN em [http://msdn.microsoft.com/library/](http://msdn.microsoft.com/library/) para obter uma descrição detalhada do erro.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Net.Sockets.TcpListener.BeginAcceptTcpClient%2A> método para criar e conectar-se a um soquete. O retorno de chamada delegado chama o <xref:System.Net.Sockets.TcpListener.EndAcceptTcpClient%2A> método para encerrar a solicitação assíncrona.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#5](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#5)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#5](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#5)]
+ [!code-vb[System.Net.Sockets.TcpListener1#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExclusiveAddressUse">
+      <MemberSignature Language="C#" Value="public bool ExclusiveAddressUse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExclusiveAddressUse" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.TcpListener.ExclusiveAddressUse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor <see cref="T:System.Boolean" /> que especifica se o <see cref="T:System.Net.Sockets.TcpListener" /> permite que apenas um soquete subjacente escute uma porta específica.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Net.Sockets.TcpListener" /> permitir apenas um <see cref="T:System.Net.Sockets.TcpListener" /> para escutar uma porta específica; caso contrário, <see langword="false" />. . O padrão é <see langword="true" /> para o Windows Server 2003 e Windows XP Service Pack 2 e posterior e <see langword="false" /> para todas as outras versões.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, vários ouvintes podem escutar uma porta específica. No entanto, somente um dos ouvintes pode executar operações no tráfego de rede enviado para a porta. Se mais de um ouvinte tentativas vincular a uma porta específica, com o endereço IP mais específico manipula o tráfego de rede enviado a essa porta. Você pode usar o <xref:System.Net.Sockets.Socket.ExclusiveAddressUse%2A> propriedade para impedir que vários ouvintes escutar uma porta específica.  
+  
+ Defina essa propriedade antes de chamar <xref:System.Net.Sockets.TcpListener.Start%2A>, ou chamar o <xref:System.Net.Sockets.TcpListener.Stop%2A> método e, em seguida, defina essa propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o <xref:System.Net.Sockets.TcpListener.ExclusiveAddressUse%2A> propriedade.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#2)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#2)]
+ [!code-vb[System.Net.Sockets.TcpListener1#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Net.Sockets.TcpListener" /> foi iniciado. Chame o método <see cref="M:System.Net.Sockets.TcpListener.Stop" /> e defina a propriedade <see cref="P:System.Net.Sockets.Socket.ExclusiveAddressUse" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Erro ao tentar acessar o soquete subjacente.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente foi fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~TcpListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalEndpoint">
+      <MemberSignature Language="C#" Value="public System.Net.EndPoint LocalEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.EndPoint LocalEndpoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.TcpListener.LocalEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.EndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.EndPoint" /> subjacente do <see cref="T:System.Net.Sockets.TcpListener" /> atual.</summary>
+        <value>O <see cref="T:System.Net.EndPoint" /> ao qual o <see cref="T:System.Net.Sockets.Socket" /> está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Net.Sockets.TcpListener.LocalEndpoint%2A> propriedade para identificar o número de porta e de interface de rede local que está sendo usado para ouvir solicitações de conexão de cliente recebidas, depois que uma conexão de soquete foi feita. Você deve primeiro converter isso <xref:System.Net.EndPoint> para um <xref:System.Net.IPEndPoint>. Em seguida, você pode chamar o <xref:System.Net.IPEndPoint.Address%2A?displayProperty=nameWithType> propriedade para recuperar o endereço IP local e o <xref:System.Net.IPEndPoint.Port%2A?displayProperty=nameWithType> propriedade para recuperar o número de porta local.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o número de porta e endereço IP local no qual o <xref:System.Net.Sockets.TcpListener> está escutando para solicitações de conexão de entrada.  
+  
+ [!code-cpp[TcpListener_Pending_LocalEndPoint#1](~/samples/snippets/cpp/VS_Snippets_Remoting/TcpListener_Pending_LocalEndPoint/CPP/source.cpp#1)]
+ [!code-csharp[TcpListener_Pending_LocalEndPoint#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TcpListener_Pending_LocalEndPoint/CS/source.cs#1)]
+ [!code-vb[TcpListener_Pending_LocalEndPoint#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TcpListener_Pending_LocalEndPoint/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="public bool Pending ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Pending() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.Pending" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se há solicitações de conexão pendentes.</summary>
+        <returns>
+          <see langword="true" /> se houver conexões pendentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sem bloqueio determina se há quaisquer solicitações de conexão pendentes. Porque o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> e <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> métodos bloqueiam a execução até que o <xref:System.Net.Sockets.TcpListener.Start%2A> método colocou em fila para uma solicitação de conexão de entrada, o <xref:System.Net.Sockets.TcpListener.Pending%2A> método pode ser usado para determinar se conexões estão disponíveis antes de tentar aceitá-los.  
+  
+   
+  
+## Examples  
+ O seguinte código de exemplo verifica o <xref:System.Net.Sockets.TcpListener.Pending%2A> método. Se uma solicitação de conexão está esperando para ser aceita, em seguida, uma chamada para o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método é feito.  
+  
+ [!code-cpp[TcpListener_Pending_LocalEndPoint#1](~/samples/snippets/cpp/VS_Snippets_Remoting/TcpListener_Pending_LocalEndPoint/CPP/source.cpp#1)]
+ [!code-csharp[TcpListener_Pending_LocalEndPoint#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TcpListener_Pending_LocalEndPoint/CS/source.cs#1)]
+ [!code-vb[TcpListener_Pending_LocalEndPoint#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TcpListener_Pending_LocalEndPoint/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O ouvinte não foi iniciado com uma chamada para <see cref="M:System.Net.Sockets.TcpListener.Start" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.Socket Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Sockets.Socket Server" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.TcpListener.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.Socket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.Sockets.Socket" /> da rede subjacente.</summary>
+        <value>O <see cref="T:System.Net.Sockets.Socket" /> subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Sockets.TcpListener>cria um <xref:System.Net.Sockets.Socket> para escutar as solicitações de conexão de cliente recebidas. Classes derivadas de <xref:System.Net.Sockets.TcpListener> pode usar essa propriedade para obter isso <xref:System.Net.Sockets.Socket>. Use subjacente <xref:System.Net.Sockets.Socket> retornado pelo <xref:System.Net.Sockets.TcpListener.Server%2A> propriedade se você precisar acessar além do qual <xref:System.Net.Sockets.TcpListener> fornece.  
+  
+> [!NOTE]
+>  O <xref:System.Net.Sockets.TcpListener.Server%2A> propriedade retorna apenas o <xref:System.Net.Sockets.Socket> usada para ouvir solicitações de conexão de cliente recebidas. Use o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método para aceitar uma solicitação de conexão pendente e obter um <xref:System.Net.Sockets.Socket> para enviar e receber dados. Você também pode usar o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método para aceitar uma solicitação de conexão pendente e obter um <xref:System.Net.Sockets.TcpClient> para enviar e receber dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Net.Sockets.TcpListener.Server%2A> propriedade. Subjacente <xref:System.Net.Sockets.Socket> é recuperado e o <xref:System.Net.Sockets.SocketOptionName.Linger> <xref:System.Net.Sockets.Socket> opção estiver configurada para expirar após 10 segundos se os dados ainda permanecem no buffer de rede depois que a conexão é fechada.  
+  
+ [!code-csharp[TcpListenerProtectedMembers1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TcpListenerProtectedMembers1/CS/source.cs#1)]
+ [!code-vb[TcpListenerProtectedMembers1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TcpListenerProtectedMembers1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Começa a escutar as solicitações de conexão recebidas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.TcpListener.Start%2A> método inicializa subjacente <xref:System.Net.Sockets.Socket>, associa-o para um ponto de extremidade local e escuta de tentativas de conexão de entrada. Se uma solicitação de conexão é recebida, o <xref:System.Net.Sockets.TcpListener.Start%2A> método irá enfileirar a solicitação e continuar a escutar solicitações adicionais até que você chamar o <xref:System.Net.Sockets.TcpListener.Stop%2A> método. Se <xref:System.Net.Sockets.TcpListener> recebe uma solicitação de conexão depois que já colocou em fila o número máximo de conexões, ela irá gerar um <xref:System.Net.Sockets.SocketException> no cliente.  
+  
+ Para remover uma conexão da fila de conexão de entrada, use o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método ou o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método. O <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método removerá uma conexão da fila e retornar um <xref:System.Net.Sockets.TcpClient> que você pode usar para enviar e receber dados. O <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método retornará um <xref:System.Net.Sockets.Socket> que você pode usar para fazer o mesmo. Se seu aplicativo requer apenas a e/s síncronas, use <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>. Para obter mais controle comportamental, use <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>. Ambos os métodos bloqueiam até que uma solicitação de conexão está disponível na fila.  
+  
+ Use o <xref:System.Net.Sockets.TcpListener.Stop%2A> método para fechar o <xref:System.Net.Sockets.TcpListener> e interromperá a escuta. Você é responsável para fechar as conexões aceitas separadamente.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como <xref:System.Net.Sockets.TcpListener.Start%2A> é usada para ouvir tentativas de conexão de cliente de entrada.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#3)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#3)]
+ [!code-vb[System.Net.Sockets.TcpListener1#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Use a propriedade <see cref="P:System.Net.Sockets.SocketException.ErrorCode" /> para obter o código de erro específico. Quando você obteve esse código, você pode consultar o Windows Sockets versão 2 erro código documentação da API no MSDN para obter uma descrição detalhada do erro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start (int backlog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start(int32 backlog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.Start(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="backlog" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="backlog">O comprimento máximo da fila de conexões pendentes.</param>
+        <summary>Começa a detectar solicitações de conexão recebidas com um número máximo conexões pendentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.TcpListener.Start%2A> método inicializa subjacente <xref:System.Net.Sockets.Socket>, associa-o para um ponto de extremidade local e escuta de tentativas de conexão de entrada. Se uma solicitação de conexão é recebida, <xref:System.Net.Sockets.TcpListener.Start%2A> irá enfileirar a solicitação e continuar a escutar solicitações adicionais até que você chamar o <xref:System.Net.Sockets.TcpListener.Stop%2A> método. Se <xref:System.Net.Sockets.TcpListener> recebe uma solicitação de conexão depois que já tem em fila o número máximo de conexões, ela irá gerar um <xref:System.Net.Sockets.SocketException> no cliente.  
+  
+ Para remover uma conexão da fila de conexão de entrada, use o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método ou o <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método. O <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> método removerá uma conexão da fila e retornar um <xref:System.Net.Sockets.TcpClient> que você pode usar para enviar e receber dados. O <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método retornará um <xref:System.Net.Sockets.Socket> que você pode usar para fazer o mesmo. Se seu aplicativo requer apenas a e/s síncronas, use o <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>. Para obter mais controle comportamental, use <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> método. Ambos os métodos bloqueiam até que uma solicitação de conexão está disponível na fila.  
+  
+ Use o <xref:System.Net.Sockets.TcpListener.Stop%2A> método para fechar o <xref:System.Net.Sockets.TcpListener> e interromperá a escuta. Você é responsável para fechar as conexões aceitas separadamente.  
+  
+> [!NOTE]
+>  Use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A?displayProperty=nameWithType> propriedade para obter o código de erro específico e consulte a documentação de códigos de erro do Windows Sockets versão 2 API na biblioteca MSDN em [http://msdn.microsoft.com/library/](http://msdn.microsoft.com/library/) para obter uma descrição detalhada do erro.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como <xref:System.Net.Sockets.TcpListener.Start%2A> é usada para ouvir tentativas de conexão de cliente de entrada.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener1#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/cpp/tcpserver.cpp#3)]
+ [!code-csharp[System.Net.Sockets.TcpListener1#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/CS/tcpserver.cs#3)]
+ [!code-vb[System.Net.Sockets.TcpListener1#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener1/VB/tcpserver.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="backlog" /> parâmetro é menor que zero ou excede o número máximo de conexões permitidas.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.TcpListener.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Sockets.TcpListener.Stop%2A>Fecha o ouvinte. Todas as solicitações na fila inaceitável de conexão serão perdidas. Hosts remotos aguardando uma conexão seja aceita lançará um <xref:System.Net.Sockets.SocketException>. Você é responsável para fechar as conexões aceitas separadamente.  
+  
+> [!NOTE]
+>  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Net.Sockets.TcpListener.Stop%2A> método para fechar subjacente <xref:System.Net.Sockets.Socket>.  
+  
+ [!code-cpp[System.Net.Sockets.TcpListener#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener/CPP/tcpserver.cpp#1)]
+ [!code-csharp[System.Net.Sockets.TcpListener#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.TcpListener/CS/tcpserver.cs#1)]
+ [!code-vb[System.Net.Sockets.TcpListener#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.TcpListener/VB/tcpserver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Use a propriedade <see cref="P:System.Net.Sockets.SocketException.ErrorCode" /> para obter o código de erro específico. Quando você obteve esse código, você pode consultar o Windows Sockets versão 2 erro código documentação da API no MSDN para obter uma descrição detalhada do erro.</exception>
+        <block subset="none" type="usage">
+          <para>O <see cref="M:System.Net.Sockets.TcpListener.Stop" /> método fecha também subjacente <see cref="T:System.Net.Sockets.Socket" />e cria um novo <see cref="T:System.Net.Sockets.Socket" /> para o <see cref="T:System.Net.Sockets.TcpListener" />. Se você definir as propriedades em subjacente <see cref="T:System.Net.Sockets.Socket" /> antes de chamar o <see cref="M:System.Net.Sockets.TcpListener.Stop" /> método, essas propriedades não continuará até o novo <see cref="T:System.Net.Sockets.Socket" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

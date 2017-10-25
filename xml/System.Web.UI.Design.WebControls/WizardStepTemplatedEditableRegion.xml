@@ -1,0 +1,57 @@
+<Type Name="WizardStepTemplatedEditableRegion" FullName="System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion">
+  <TypeSignature Language="C#" Value="public class WizardStepTemplatedEditableRegion : System.Web.UI.Design.TemplatedEditableDesignerRegion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WizardStepTemplatedEditableRegion extends System.Web.UI.Design.TemplatedEditableDesignerRegion" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.TemplatedEditableDesignerRegion</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma área editável de conteúdo dentro da marcação de tempo de design de um modelo em uma etapa do Assistente para um <see cref="T:System.Web.UI.Design.WebControls.WizardDesigner" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WizardStepTemplatedEditableRegion (System.Web.UI.Design.TemplateDefinition templateDefinition, System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.TemplateDefinition templateDefinition, class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion.#ctor(System.Web.UI.Design.TemplateDefinition,System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="templateDefinition" Type="System.Web.UI.Design.TemplateDefinition" />
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="templateDefinition">Um <see cref="T:System.Web.UI.Design.TemplateDefinition" /> objeto que define um elemento de modelo em uma etapa do assistente em tempo de design.</param>
+        <param name="wizardStep">Um <see cref="T:System.Web.UI.WebControls.WizardStepBase" /> objeto que representa uma etapa exibida em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Step">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WizardStepBase Step { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WizardStepBase Step" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion.Step" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a etapa do assistente associado de tempo de design.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.WebControls.WizardStepBase" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

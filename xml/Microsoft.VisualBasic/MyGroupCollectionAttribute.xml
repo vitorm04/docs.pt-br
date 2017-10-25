@@ -1,0 +1,179 @@
+<Type Name="MyGroupCollectionAttribute" FullName="Microsoft.VisualBasic.MyGroupCollectionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MyGroupCollectionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MyGroupCollectionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.MyGroupCollectionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Esse atributo suporta <see langword="My.Forms" /> e <see langword="My.WebServices" /> no Visual Basic.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo suporta `My.Forms` e `My.WebServices` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele não se destina a ser usado diretamente no seu código.  
+  
+ Quando esse atributo é colocado em uma classe, o compilador preenche a classe com propriedades correspondentes para todos os tipos de projeto que é derivado do tipo especificado pelo <xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MyGroupCollectionAttribute (string typeToCollect, string createInstanceMethodName, string disposeInstanceMethodName, string defaultInstanceAlias);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string typeToCollect, string createInstanceMethodName, string disposeInstanceMethodName, string defaultInstanceAlias) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyGroupCollectionAttribute.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeToCollect" Type="System.String" />
+        <Parameter Name="createInstanceMethodName" Type="System.String" />
+        <Parameter Name="disposeInstanceMethodName" Type="System.String" />
+        <Parameter Name="defaultInstanceAlias" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeToCollect">
+          <see langword="String" />. Inicializa o <see cref="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName" /> propriedade. O compilador gera propriedades de acessador para classes que derivam deste tipo.</param>
+        <param name="createInstanceMethodName">
+          <see langword="String" />. Inicializa o <see cref="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod" /> propriedade. Especifica o método na classe que cria instâncias do tipo.</param>
+        <param name="disposeInstanceMethodName">
+          <see langword="String" />. Inicializa o <see cref="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod" /> propriedade. Especifica o método na classe que dispõe das instâncias do tipo.</param>
+        <param name="defaultInstanceAlias">
+          <see langword="String" />. Inicializa o <see cref="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias" /> propriedade. Especifica o nome da propriedade que retorna a instância padrão da classe.</param>
+        <summary>Esse atributo suporta <see langword="My.Forms" /> e <see langword="My.WebServices" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo suporta `My.Forms` e `My.WebServices` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele não se destina a ser usado diretamente no seu código.  
+  
+ Quando esse atributo é colocado em uma classe, o compilador preenche a classe com propriedades correspondentes para todos os tipos de projeto que é derivado do tipo especificado pelo <xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMethod">
+      <MemberSignature Language="C#" Value="public string CreateMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreateMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade suporta <see langword="My" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <value>Especifica o método na classe que cria instâncias do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade suporta `My.Forms` e `My.WebServices` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultInstanceAlias">
+      <MemberSignature Language="C#" Value="public string DefaultInstanceAlias { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultInstanceAlias" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade suporta <see langword="My" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <value>Especifica o nome da propriedade que retorna a instância padrão da classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade suporta `My.Forms` e `My.WebServices` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeMethod">
+      <MemberSignature Language="C#" Value="public string DisposeMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisposeMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade suporta <see langword="My" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <value>Especifica o método na classe que dispõe das instâncias do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade suporta `My.Forms` e `My.WebServices` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MyGroupName">
+      <MemberSignature Language="C#" Value="public string MyGroupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MyGroupName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade suporta <see langword="My" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <value>Especifica o nome do tipo para o qual o compilador gera propriedades de acessador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade suporta `My.Forms` e `My.WebServices` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

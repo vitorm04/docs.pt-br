@@ -1,0 +1,198 @@
+<Type Name="DockPattern" FullName="System.Windows.Automation.DockPattern">
+  <TypeSignature Language="C#" Value="public class DockPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DockPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.DockPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os controles que expõem as propriedades de encaixe dentro de um contêiner de encaixe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contêiner de encaixe é um controle que permite que a organização de filho elementos, tanto horizontal quanto verticalmente, em relação aos limites do contêiner do encaixe e outros elementos dentro do contêiner.  
+  
+ Controles são encaixados em relação a outros com base em sua ordem-z atual; o mais alto sua ordem z colocação, quanto mais serem colocados da borda do contêiner de encaixe especificada.  
+  
+ Consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](~/docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md) para obter exemplos de controles que podem implementar esse padrão de controle.  
+  
+ <xref:System.Windows.Automation.DockPattern>não oferece suporte a qualquer propriedade do recipiente de encaixe ou propriedades de controles que podem ser encaixadas adjacente ao controle atual dentro do contêiner de encaixe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.DockPattern.DockPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.DockPattern/DockPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.DockPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.DockPattern+DockPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.DockPattern" />.</summary>
+        <value>Uma estrutura que contém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Use <xref:System.Windows.Automation.DockPattern.Current%2A> para obter o valor atual de uma propriedade.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.DockPattern.DockPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.DockPattern.DockPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.DockPattern/DockPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.DockPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.DockPattern+DockPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.DockPattern" />.</summary>
+        <value>Uma estrutura que contém atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.DockPattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.DockPattern.DockPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPositionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty DockPositionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty DockPositionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.DockPattern.DockPositionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.DockPattern.DockPatternInformation.DockPosition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.DockPatternIdentifiers>.  
+  
+ Essa propriedade também pode ser recuperada do <xref:System.Windows.Automation.DockPattern.Current%2A> ou <xref:System.Windows.Automation.DockPattern.Cached%2A> propriedades.  
+  
+ O valor padrão é <xref:System.Windows.Automation.DockPosition.None>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.DockPosition> valor é obtido representando a posição de encaixe atual para um controle que dá suporte a <xref:System.Windows.Automation.DockPattern>.  
+  
+ [!code-csharp[UIADockPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#100)]
+ [!code-vb[UIADockPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#100)]  
+[!code-csharp[UIADockPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#102)]
+[!code-vb[UIADockPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.DockPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.DockPattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.DockPatternIdentifiers>.  
+  
+ O padrão de [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.DockPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIADockPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#101)]
+ [!code-vb[UIADockPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDockPosition">
+      <MemberSignature Language="C#" Value="public void SetDockPosition (System.Windows.Automation.DockPosition dockPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDockPosition(valuetype System.Windows.Automation.DockPosition dockPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.DockPattern.SetDockPosition(System.Windows.Automation.DockPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dockPosition" Type="System.Windows.Automation.DockPosition" />
+      </Parameters>
+      <Docs>
+        <param name="dockPosition">A posição de encaixe em relação aos limites do contêiner do encaixe e outros elementos dentro do contêiner.</param>
+        <summary>Módulos de ancoragem de <see cref="T:System.Windows.Automation.AutomationElement" /> em solicitados <see cref="T:System.Windows.Automation.DockPosition" /> dentro de um contêiner de encaixe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contêiner de encaixe é um controle que permite que a organização de filho elementos, tanto horizontal quanto verticalmente, em relação aos limites do contêiner do encaixe e outros elementos dentro do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.AutomationElement> que representa um controle que suporta o padrão de controle DockPattern tem seu `dockPosition` modificado.  
+  
+ [!code-csharp[UIADockPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#101)]
+ [!code-vb[UIADockPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#101)]  
+[!code-csharp[UIADockPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#103)]
+[!code-vb[UIADockPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Quando um controle não é capaz de executar o estilo de encaixe solicitada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

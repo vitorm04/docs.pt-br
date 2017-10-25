@@ -1,0 +1,827 @@
+<Type Name="HttpServerUtilityBase" FullName="System.Web.HttpServerUtilityBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpServerUtilityBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpServerUtilityBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpServerUtilityBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Funciona como a classe base das classes que fornecem métodos auxiliares para processar solicitações da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpServerUtilityBase> classe é uma classe abstrata que contém os mesmos membros como o <xref:System.Web.HttpServerUtility> classe. O <xref:System.Web.HttpServerUtilityBase> classe permite que você criar classes derivadas que são semelhantes a <xref:System.Web.HttpServerUtility> classe, mas que você pode personalizar e que trabalham fora o pipeline do ASP.NET. Quando você executa testes de unidade, você normalmente usar uma classe derivada para implementar membros com comportamento personalizado que atende o cenário que você está testando.  
+  
+ O <xref:System.Web.HttpServerUtilityWrapper> classe deriva de <xref:System.Web.HttpServerUtilityBase> classe. O <xref:System.Web.HttpServerUtilityWrapper> classe serve como um wrapper para o <xref:System.Web.HttpServerUtility> classe. Em tempo de execução, você normalmente usa uma instância do <xref:System.Web.HttpServerUtilityWrapper> classe para chamar membros de <xref:System.Web.HttpServerUtility> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpServerUtilityBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearError">
+      <MemberSignature Language="C#" Value="public virtual void ClearError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.ClearError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, limpa a exceção mais recente.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObject">
+      <MemberSignature Language="C#" Value="public virtual object CreateObject (string progID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateObject(string progID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.CreateObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="progID">A classe ou tipo de objeto do qual criar uma instância.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma instância de servidor de um objeto COM que é identificado pelo identificador de programação (ProgID) do objeto.</summary>
+        <returns>O novo objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObject">
+      <MemberSignature Language="C#" Value="public virtual object CreateObject (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateObject(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.CreateObject(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um tipo que representa o objeto a ser criado.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma instância de servidor de um objeto COM que é identificado pelo tipo de objeto.</summary>
+        <returns>O novo objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjectFromClsid">
+      <MemberSignature Language="C#" Value="public virtual object CreateObjectFromClsid (string clsid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateObjectFromClsid(string clsid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.CreateObjectFromClsid(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clsid" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clsid">O identificador de classe do objeto para criar uma instância do.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma instância de servidor de um objeto COM que é identificado pelo identificador do objeto de classe (CLSID).</summary>
+        <returns>O novo objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public virtual void Execute (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Execute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL do manipulador para executar.</param>
+        <summary>Quando substituído em uma classe derivada, executa o manipulador para o caminho virtual especificado no contexto do processo atual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public virtual void Execute (string path, bool preserveForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(string path, bool preserveForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Execute(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL do manipulador para executar.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <summary>Quando substituído em uma classe derivada, executa o manipulador para o caminho virtual especificado no contexto do processo atual e especifica se deseja limpar o <see cref="P:System.Web.HttpRequestBase.QueryString" /> e <see cref="P:System.Web.HttpRequestBase.Form" /> coleções.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public virtual void Execute (string path, System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(string path, class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Execute(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL do manipulador para executar.</param>
+        <param name="writer">Um objeto para capturar a saída.</param>
+        <summary>Quando substituído em uma classe derivada, executa o manipulador para o caminho virtual especificado no contexto do processo atual, usando um <see cref="T:System.IO.TextWriter" /> instância para capturar a saída do manipulador de executada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `writer` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.Execute%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `writer` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.Execute%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public virtual void Execute (string path, System.IO.TextWriter writer, bool preserveForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(string path, class System.IO.TextWriter writer, bool preserveForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Execute(System.String,System.IO.TextWriter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL do manipulador para executar.</param>
+        <param name="writer">O objeto para capturar a saída.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <summary>Quando substituído em uma classe derivada, executa o manipulador para o caminho virtual especificado no contexto da solicitação atual, usando um <see cref="T:System.IO.TextWriter" /> instância para capturar a saída de página e um valor que indica se deseja limpar o <see cref="P:System.Web.HttpRequestBase.QueryString" /> e <see cref="P:System.Web.HttpRequestBase.Form" /> coleções.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `writer` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.Execute%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `writer` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.Execute%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public virtual void Execute (System.Web.IHttpHandler handler, System.IO.TextWriter writer, bool preserveForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Web.IHttpHandler handler, class System.IO.TextWriter writer, bool preserveForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Execute(System.Web.IHttpHandler,System.IO.TextWriter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O manipulador HTTP que implementa a interface para transferir a solicitação atual para.</param>
+        <param name="writer">O objeto para capturar a saída.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <summary>Quando substituído em uma classe derivada, executa o manipulador especificado no contexto atual processar, usando um <see cref="T:System.IO.TextWriter" /> instância para capturar a saída do manipulador executado e um valor que especifica se deseja limpar o <see cref="P:System.Web.HttpRequestBase.QueryString" /> e <see cref="P:System.Web.HttpRequestBase.Form" /> coleções.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `writer` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.Execute%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `writer` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.Execute%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLastError">
+      <MemberSignature Language="C#" Value="public virtual Exception GetLastError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Exception GetLastError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.GetLastError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna a exceção mais recente.</summary>
+        <returns>A exceção mais recente que foi gerada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="public virtual string HtmlDecode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string HtmlDecode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.HtmlDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres HTML a ser decodificada.</param>
+        <summary>Quando substituído em uma classe derivada, decodifica uma cadeia de caracteres codificada em HTML e retorna a cadeia de caracteres decodificada.</summary>
+        <returns>O texto decodificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="public virtual void HtmlDecode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HtmlDecode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.HtmlDecode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres HTML a ser decodificada.</param>
+        <param name="output">O fluxo para conter a cadeia de caracteres decodificada.</param>
+        <summary>Quando substituído em uma classe derivada, decodifica uma cadeia de caracteres codificada em HTML e retorna os resultados em um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `output` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.HtmlDecode%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `output` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.HtmlDecode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public virtual string HtmlEncode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string HtmlEncode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.HtmlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres a ser codificada.</param>
+        <summary>Quando substituído em uma derivada de classe, uma cadeia de caracteres de codificação HTML e retorna a cadeia de caracteres codificada.</summary>
+        <returns>O texto codificado em HTML.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public virtual void HtmlEncode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HtmlEncode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.HtmlEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres a ser codificada.</param>
+        <param name="output">O fluxo para conter a cadeia de caracteres codificada.</param>
+        <summary>Quando substituído em uma classe derivada, uma cadeia de caracteres de codificação HTML e envia a saída resultante para um fluxo de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `output` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.HtmlEncode%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `output` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.HtmlEncode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public virtual string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpServerUtilityBase.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome do computador do servidor.</summary>
+        <value>O nome do computador do servidor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public virtual string MapPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string MapPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.MapPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o qual obter o caminho físico.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o caminho do arquivo físico que corresponde ao caminho virtual especificado no servidor Web.</summary>
+        <returns>O caminho de arquivo físico que corresponde a <paramref name="path" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptTimeout">
+      <MemberSignature Language="C#" Value="public virtual int ScriptTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScriptTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpServerUtilityBase.ScriptTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém ou define o valor de tempo limite da solicitação em segundos.</summary>
+        <value>O valor de tempo limite para solicitações.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transfer">
+      <MemberSignature Language="C#" Value="public virtual void Transfer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Transfer(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Transfer(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da página ou do manipulador para executar.</param>
+        <summary>Quando substituído em uma classe derivada, finaliza a execução do processo atual e inicia a execução de uma página ou um manipulador que está especificado com uma URL.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transfer">
+      <MemberSignature Language="C#" Value="public virtual void Transfer (string path, bool preserveForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Transfer(string path, bool preserveForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Transfer(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da página ou do manipulador para executar.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <summary>Quando substituído em uma classe derivada, finaliza a execução da página atual e inicia a execução de uma página diferente ou o manipulador usando a URL especificada e um valor que especifica se deseja limpar o <see cref="P:System.Web.HttpRequestBase.QueryString" /> e <see cref="P:System.Web.HttpRequestBase.Form" /> coleções.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transfer">
+      <MemberSignature Language="C#" Value="public virtual void Transfer (System.Web.IHttpHandler handler, bool preserveForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Transfer(class System.Web.IHttpHandler handler, bool preserveForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.Transfer(System.Web.IHttpHandler,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O manipulador HTTP para transferir a solicitação atual para.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <summary>Quando substituído em uma classe derivada, finaliza a execução do processo atual e inicia a execução de uma nova solicitação usando um manipulador HTTP personalizado e um valor que especifica se deseja limpar o <see cref="P:System.Web.HttpRequestBase.QueryString" /> e <see cref="P:System.Web.HttpRequestBase.Form" /> coleções.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferRequest">
+      <MemberSignature Language="C#" Value="public virtual void TransferRequest (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransferRequest(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.TransferRequest(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da página ou do manipulador para executar.</param>
+        <summary>Quando substituído em uma classe derivada, executa de forma assíncrona o ponto de extremidade na URL especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferRequest">
+      <MemberSignature Language="C#" Value="public virtual void TransferRequest (string path, bool preserveForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransferRequest(string path, bool preserveForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.TransferRequest(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da página ou do manipulador para executar.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <summary>Quando substituído em uma classe derivada, executa o ponto de extremidade na URL especificada e de forma assíncrona Especifica se deseja limpar o <see cref="P:System.Web.HttpRequestBase.QueryString" /> e <see cref="P:System.Web.HttpRequestBase.Form" /> coleções.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferRequest">
+      <MemberSignature Language="C#" Value="public virtual void TransferRequest (string path, bool preserveForm, string method, System.Collections.Specialized.NameValueCollection headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransferRequest(string path, bool preserveForm, string method, class System.Collections.Specialized.NameValueCollection headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.TransferRequest(System.String,System.Boolean,System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="headers" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da página ou do manipulador para executar.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <param name="method">O método HTTP (<see langword="GET" />, <see langword="POST" />e assim por diante) a ser usado para a nova solicitação. Se <see langword="null" />, o método HTTP da solicitação original é usado.</param>
+        <param name="headers">Uma coleção de cabeçalhos de solicitação para a nova solicitação.</param>
+        <summary>Quando substituído em uma classe derivada, executa de forma assíncrona o ponto de extremidade na URL especificada usando o método HTTP especificado e os cabeçalhos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferRequest">
+      <MemberSignature Language="C#" Value="public virtual void TransferRequest (string path, bool preserveForm, string method, System.Collections.Specialized.NameValueCollection headers, bool preserveUser);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransferRequest(string path, bool preserveForm, string method, class System.Collections.Specialized.NameValueCollection headers, bool preserveUser) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.TransferRequest(System.String,System.Boolean,System.String,System.Collections.Specialized.NameValueCollection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveForm" Type="System.Boolean" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="headers" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="preserveUser" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho.</param>
+        <param name="preserveForm">
+          <see langword="true" /> para preservar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />; <see langword="false" /> para limpar as coleções <see cref="P:System.Web.HttpRequest.QueryString" /> e <see cref="P:System.Web.HttpRequest.Form" />.</param>
+        <param name="method">O método HTTP a ser usado para a nova solicitação.</param>
+        <param name="headers">Um objeto <see cref="T:System.Collections.Specialized.NameValueCollection" /> que contém cabeçalhos de solicitação para a nova solicitação.</param>
+        <param name="preserveUser">
+          <see langword="true" /> para preservar a identidade do usuário, caso contrário, <see langword="false" />. Outras sobrecargas do método chamar essa sobrecarga de método com o <c>preserveUser</c> parâmetro definido como <see langword="true" />.</param>
+        <summary>Quando implementada em uma classe derivada, executa de forma assíncrona o ponto de extremidade na URL especificada, usando o especificado HTTP método, cabeçalhos, caminho e opções para preservar valores de formulário e preservar a identidade do usuário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public virtual string UrlDecode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UrlDecode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres para decodificar.</param>
+        <summary>Quando substituído em uma classe derivada, decodifica uma cadeia de caracteres codificados de URL e retorna a cadeia de caracteres decodificada.</summary>
+        <returns>O texto decodificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public virtual void UrlDecode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UrlDecode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlDecode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres para decodificar.</param>
+        <param name="output">O fluxo para conter a cadeia de caracteres decodificada.</param>
+        <summary>Quando substituído em uma classe derivada, decodifica uma cadeia de caracteres codificados de URL e envia a saída resultante para um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `output` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.UrlDecode%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `output` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.HtmlDecode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public virtual string UrlEncode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UrlEncode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">O texto a ser codificado em URL.</param>
+        <summary>Quando substituído em uma derivada de classe, uma cadeia de caracteres de codificação de URL e retorna a cadeia de caracteres codificada.</summary>
+        <returns>O texto codificado em URL.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public virtual void UrlEncode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UrlEncode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres a ser codificada.</param>
+        <param name="output">O fluxo para conter a cadeia de caracteres codificada.</param>
+        <summary>Quando substituído em uma classe derivada, uma cadeia de caracteres de codificação de URL e envia a saída resultante para um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `output` parâmetro é passado por referência para o <xref:System.Web.HttpServerUtilityBase.UrlEncode%2A> método. Para recuperar a saída do manipulador de depois que o método é concluído, você usa as propriedades e métodos do `output` objeto. Para ver um exemplo, consulte <xref:System.Web.HttpServerUtility.UrlEncode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlPathEncode">
+      <MemberSignature Language="C#" Value="public virtual string UrlPathEncode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UrlPathEncode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlPathEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres para a codificação de URL.</param>
+        <summary>Quando substituído em uma classe derivada, codifica a URL a seção do caminho de uma cadeia de caracteres de URL.</summary>
+        <returns>O texto codificado em URL.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlTokenDecode">
+      <MemberSignature Language="C#" Value="public virtual byte[] UrlTokenDecode (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] UrlTokenDecode(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlTokenDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">O token de cadeia de caracteres de URL a ser decodificado.</param>
+        <summary>Quando substituído em uma classe derivada, decodifica um token de cadeia de caracteres de URL em uma matriz de bytes equivalente usando dígitos codificado na base64.</summary>
+        <returns>A matriz de bytes que contém o token codificado de URL.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlTokenEncode">
+      <MemberSignature Language="C#" Value="public virtual string UrlTokenEncode (byte[] input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UrlTokenEncode(unsigned int8[] input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpServerUtilityBase.UrlTokenEncode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="input">A matriz de bytes para codificar.</param>
+        <summary>Quando substituído em uma classe derivada, codifica uma matriz de bytes em uma representação de cadeia de caracteres equivalente usando base64 dígitos, que torna utilizável para transmissão na URL.</summary>
+        <returns>A cadeia de caracteres que contém a matriz codificada se o comprimento de <paramref name="input" /> é maior que 1; caso contrário, uma cadeia de caracteres vazia ("")</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

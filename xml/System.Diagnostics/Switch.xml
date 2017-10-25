@@ -1,0 +1,500 @@
+<Type Name="Switch" FullName="System.Diagnostics.Switch">
+  <TypeSignature Language="C#" Value="public abstract class Switch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Switch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Switch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base abstrata para criar novos comutadores de rastreamento e depuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um comutador fornece um mecanismo eficiente para controlar a saída de rastreamento e depuração no tempo de execução usando as configurações de externas. O <xref:System.Diagnostics.Switch> classe implementa o comportamento padrão de opções, que permite alterar o nível de comutador em tempo de execução.  
+  
+ Essa classe é a classe base para o <xref:System.Diagnostics.BooleanSwitch>, <xref:System.Diagnostics.SourceSwitch> e <xref:System.Diagnostics.TraceSwitch> classes. Essas opções atendem mais depuração e rastreamento necessidades. Para obter mais informações sobre opções de rastreamento, consulte [opções de rastreamento](~/docs/framework/debug-trace-profile/trace-switches.md).  
+  
+ Você deve habilitar o rastreamento ou a depuração para usar uma opção. A sintaxe a seguir é específico do compilador. Se você usar compiladores que não seja o c# ou Visual Basic, consulte a documentação para o compilador.  
+  
+-   Para habilitar a depuração em c#, adicione o `/d:DEBUG` sinalizador para a linha de comando do compilador quando você compila o código, ou você pode adicionar `#define DEBUG` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:DEBUG=True` sinalizador para a linha de comando do compilador.  
+  
+-   Para habilitar o rastreamento usando em c#, adicione o `/d:TRACE` sinalizador para a linha de comando do compilador quando você compila o código ou adiciona `#define TRACE` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:TRACE=True` sinalizador para a linha de comando do compilador.  
+  
+ Para definir o nível de seu comutador, edite o arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode adicionar um comutador e defina seu valor, remova um comutador ou desmarcar todas as opções definidas anteriormente pelo aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="true" />  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Esta seção de configuração de exemplo define um <xref:System.Diagnostics.BooleanSwitch> com o <xref:System.Diagnostics.Switch.DisplayName%2A> propriedade definida como `mySwitch` e <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> valor definido como `true`. Dentro de seu aplicativo, você pode usar o valor da opção configurado ao criar um <xref:System.Diagnostics.BooleanSwitch> com o mesmo nome, conforme mostrado no exemplo de código a seguir.  
+  
+ [!code-cpp[Classic Switch Example#4](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Switch Example/CPP/remarks.cpp#4)]
+ [!code-csharp[Classic Switch Example#4](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Switch Example/CS/remarks.cs#4)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um novo <xref:System.Diagnostics.Switch> classe com quatro níveis de rastreamento que podem ser usados para rastrear uma pilha de chamadas. Você pode usar a opção para instrumentar seu aplicativo para fazer logon sempre que o método for inserido ou foi encerrado.  
+  
+ O primeiro exemplo cria a enumeração usada para definir o nível do comutador.  
+  
+ [!code-cpp[Classic Switch Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Switch Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Switch Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Switch Example/CS/source.cs#1)]
+ [!code-vb[Classic Switch Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Switch Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir cria o novo comutador. O código implementa um `Level` propriedade para definir o valor do novo comutador. `Level`chama a propriedade protegida <xref:System.Diagnostics.Switch.SwitchSetting%2A> que atribui o valor para o novo comutador. Este exemplo também implementa duas propriedades assessor para obter o valor atribuído do comutador.  
+  
+ [!code-cpp[Classic Switch Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Switch Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Switch Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Switch Example/CS/source.cs#2)]
+ [!code-vb[Classic Switch Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Switch Example/VB/source.vb#2)]  
+  
+ O exemplo a seguir cria um novo comutador em `Main`. Ele cria um novo comutador e atribui um valor. Em seguida, dependendo das configurações de comutador, ele produz mensagens de depuração para entrar e sair do método.  
+  
+ [!code-cpp[Classic Switch Example#3](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Switch Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic Switch Example#3](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Switch Example/CS/source.cs#3)]
+ [!code-vb[Classic Switch Example#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Switch Example/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Se você precisar rastrear níveis ou mecanismos para configuração alternar níveis diferentes daqueles fornecidos pelo <see cref="T:System.Diagnostics.BooleanSwitch" />, <see cref="T:System.Diagnostics.SourceSwitch" /> e <see cref="T:System.Diagnostics.TraceSwitch" />, você pode herdar de <see cref="T:System.Diagnostics.Switch" />. Ao herdar desta classe, você deve implementar o <see cref="P:System.Diagnostics.Switch.SwitchSetting" /> método.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Switch (string displayName, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string displayName, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Switch.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">O nome de opção.</param>
+        <param name="description">A descrição para o comutador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Switch" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um novo <xref:System.Diagnostics.Switch> , e o valor do objeto de `displayName` parâmetro é usado para localizar as configurações de comutador inicial. O valor padrão é uma cadeia de caracteres vazia ("").  
+  
+ No arquivo de configuração XML, você pode adicionar um comutador e defina seu valor, remova um comutador ou limpar todas as opções definidas anteriormente pelo aplicativo. Alterações dinâmicas para o arquivo de configuração não são detectadas durante a execução do aplicativo. Você deve parar e reiniciar um aplicativo para que as alterações no arquivo de configuração entrem em vigor. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="10" />  
+      <add name="myNewSwitch" value="20" />  
+      <remove name="mySwitch" />  
+      <clear/>  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para definir o valor da opção, defina o <see cref="P:System.Diagnostics.Switch.SwitchSetting" /> propriedade no construtor.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Switch (string displayName, string description, string defaultSwitchValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string displayName, string description, string defaultSwitchValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Switch.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="defaultSwitchValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">O nome de opção.</param>
+        <param name="description">A descrição do comutador.</param>
+        <param name="defaultSwitchValue">O valor padrão para o comutador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Switch" /> classe, especificando o nome de exibição, descrição e o valor padrão para o comutador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `displayName` parâmetro é usado para definir o valor da <xref:System.Diagnostics.Switch.DisplayName%2A> propriedade e o `description` parâmetro é usado para definir o valor da <xref:System.Diagnostics.Switch.Description%2A> propriedade. O `defaultSwitchValue` parâmetro é o valor para o comutador, se o <xref:System.Diagnostics.Switch.Value%2A> propriedade não é definida por código ou o atributo de arquivo de configuração. Consulte o <xref:System.Diagnostics.Switch.%23ctor%28System.String%2CSystem.String%29> sobrecarga para obter informações adicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringDictionary Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Switch.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de opção personalizados definidos no arquivo de configuração de aplicativo.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringDictionary" /> que contém os atributos personalizados que não diferenciam maiúsculas de minúsculas para a opção de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.Switch.Attributes%2A> propriedade identifica os atributos personalizados referenciados no arquivo de configuração do aplicativo. Atributos personalizados não referenciados não são enumerados. Classes que herdam o <xref:System.Diagnostics.Switch> classe pode adicionar atributos personalizados, substituindo o <xref:System.Diagnostics.Switch.GetSupportedAttributes%2A> método e retornar uma matriz de cadeia de caracteres de nomes de atributo personalizado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como exibir os atributos não reconhecidos para um comutador personalizado.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#15)]
+ [!code-vb[System.Diagnostics.TraceSource#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Switch.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição do comutador.</summary>
+        <value>A descrição do comutador. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade deve indicar a função de switch; Por exemplo, "habilita o rastreamento para um componente do Inspetor de diretório." O valor é definido pelo `descriptor` parâmetro o <xref:System.Diagnostics.Switch.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Switch.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um nome usado para identificar o comutador.</summary>
+        <value>O nome usado para identificar o comutador. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um novo <xref:System.Diagnostics.Switch> objeto, o <xref:System.Diagnostics.Switch.DisplayName%2A> localiza as configurações de comutador inicial. Para obter mais informações, consulte o <xref:System.Diagnostics.Switch.%23ctor%2A> construtor e [como: criar, inicializar e configurar opções de rastreamento](~/docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md) na documentação do Visual Studio.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o nome de exibição para o comutador em uso por uma origem de rastreamento.  Este exemplo de código é parte de um exemplo maior que pode ser encontrado no <xref:System.Diagnostics.TraceSource> classe resumo.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#10)]
+ [!code-vb[System.Diagnostics.TraceSource#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected virtual string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Switch.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os atributos personalizados com suporte pelo comutador.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes dos atributos personalizados com suporte do comutador ou <see langword="null" /> se existe sem atributos personalizados são suportados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão para o <xref:System.Diagnostics.Switch.GetSupportedAttributes%2A> método retornará `null`. Se uma opção é adicionada em um arquivo de configuração e os atributos personalizados especificados que não são incluídos na matriz de cadeia de caracteres retornada por <xref:System.Diagnostics.Switch.GetSupportedAttributes%2A>, um <xref:System.Configuration.ConfigurationException> é gerada quando a opção é carregada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Diagnostics.Switch.GetSupportedAttributes%2A> método para um comutador personalizado.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#34](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#34)]
+ [!code-vb[System.Diagnostics.TraceSource#34](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Diagnostics.Switch" /> classe ou uma classe derivada, você pode substituir o <see cref="M:System.Diagnostics.Switch.GetSupportedAttributes" /> método para fornecer atributos personalizados para sua classe.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSwitchSettingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSwitchSettingChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSwitchSettingChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Switch.OnSwitchSettingChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o <see cref="P:System.Diagnostics.Switch.SwitchSetting" /> propriedade é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Switch.OnSwitchSettingChanged%2A>é invocado na primeira vez em um comutador lê o <xref:System.Diagnostics.Switch.SwitchSetting%2A> valor no arquivo de configuração e é chamado novamente cada vez que o valor do comutador é alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Switch.OnValueChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o <see cref="P:System.Diagnostics.Switch.Value" /> propriedade é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão analisa o novo valor da <xref:System.Diagnostics.Switch.Value%2A> propriedade para um valor inteiro que ele usa para definir o <xref:System.Diagnostics.Switch.SwitchSetting%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir este método e usar uma conversão que define as <see cref="P:System.Diagnostics.Switch.SwitchSetting" /> valor de seu comutador.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchSetting">
+      <MemberSignature Language="C#" Value="protected int SwitchSetting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SwitchSetting" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Switch.SwitchSetting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração atual para essa opção.</summary>
+        <value>A configuração atual para essa opção. O padrão é zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="protected string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Switch.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da opção.</summary>
+        <value>Uma cadeia de caracteres que representa o valor da opção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.Switch.OnValueChanged%2A> método é chamado quando o valor de <xref:System.Diagnostics.Switch.Value%2A> propriedade é alterada. O <xref:System.Diagnostics.Switch.OnValueChanged%2A> método analisa o valor dessa propriedade e o converte em um valor inteiro, que é usado para definir o <xref:System.Diagnostics.Switch.SwitchSetting%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O valor é <see langword="null" />.  
+  
+ -ou-  
+  
+ O valor não consiste apenas em um sinal negativo opcional seguido por uma sequência de dígitos de 0 a 9.  
+  
+ -ou-  
+  
+ O valor representa um número menor que <see cref="F:System.Int32.MinValue" /> ou maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir o <see cref="M:System.Diagnostics.Switch.OnValueChanged" /> método e fornecem uma operação de conversão que define as <see cref="P:System.Diagnostics.Switch.SwitchSetting" /> valor de seu comutador.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

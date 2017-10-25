@@ -1,0 +1,107 @@
+<Type Name="EventEntry" FullName="System.Web.UI.EventEntry">
+  <TypeSignature Language="C#" Value="public class EventEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.EventEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Atua como a entrada de propriedade para manipuladores de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O analisador de página usa classes de entrada de propriedade durante a análise para representar as expressões localizadas dentro de marcas de controle de servidor. O <xref:System.Web.UI.EventEntry> classe é usada para expressões associadas às propriedades que especificam um manipulador de eventos. Esses associado propriedades iniciar com "on", como `OnClick` ou `OnInit`.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.EventEntry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.EventEntry" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerMethodName">
+      <MemberSignature Language="C#" Value="public string HandlerMethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HandlerMethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.EventEntry.HandlerMethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método que manipula o evento.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome de método do manipulador de eventos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na configuração da propriedade, o <xref:System.Web.UI.EventEntry.HandlerMethodName%2A> propriedade é definida como o valor da expressão.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerType">
+      <MemberSignature Language="C#" Value="public Type HandlerType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type HandlerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.EventEntry.HandlerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de delegado do evento.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de delegado do evento.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.EventEntry.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade da expressão.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome da propriedade.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

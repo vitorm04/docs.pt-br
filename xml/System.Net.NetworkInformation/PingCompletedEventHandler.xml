@@ -1,0 +1,49 @@
+<Type Name="PingCompletedEventHandler" FullName="System.Net.NetworkInformation.PingCompletedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void PingCompletedEventHandler(object sender, PingCompletedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PingCompletedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.PingCompletedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Ping</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Net.NetworkInformation.PingCompletedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A origem do evento <see cref="E:System.Net.NetworkInformation.Ping.PingCompleted" />.</param>
+    <param name="e">Um objeto de <see cref="T:System.Net.NetworkInformation.PingCompletedEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Net.NetworkInformation.Ping.PingCompleted" /> de um objeto <see cref="T:System.Net.NetworkInformation.Ping" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados do usuário que são especificados em uma <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamada está disponível para o método invocado por este delegado no <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> para responder a um <xref:System.Net.NetworkInformation.Ping.PingCompleted> eventos.  
+  
+ [!code-cpp[NclPingAsync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingAsync/CPP/asyncping.cpp#1)]
+ [!code-csharp[NclPingAsync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingAsync/CS/asyncping.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

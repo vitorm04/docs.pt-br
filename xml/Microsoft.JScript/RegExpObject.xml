@@ -1,0 +1,138 @@
+<Type Name="RegExpObject" FullName="Microsoft.JScript.RegExpObject">
+  <TypeSignature Language="C#" Value="public sealed class RegExpObject : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegExpObject extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.RegExpObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto de expressão regular. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="global">
+      <MemberSignature Language="C#" Value="public bool global { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool global" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.global" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as pesquisas são executadas com o sinalizador global (<c>/g</c>), todas as ocorrências de correspondência.</summary>
+        <value>
+          <see langword="true" />Se as pesquisas globais são executadas; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ignoreCase">
+      <MemberSignature Language="C#" Value="public bool ignoreCase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ignoreCase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.ignoreCase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as pesquisas são executadas com o sinalizador de maiusculas e minúsculas (<c>/i</c>).</summary>
+        <value>
+          <see langword="true" />Se as pesquisas de maiusculas e minúsculas são executadas; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="lastIndex">
+      <MemberSignature Language="C#" Value="public object lastIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object lastIndex" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.lastIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da última correspondência bem-sucedida.</summary>
+        <value>O índice da última correspondência com êxito, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="multiline">
+      <MemberSignature Language="C#" Value="public bool multiline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool multiline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.multiline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as pesquisas são executadas com o sinalizador de várias linhas (<c>/m</c>).</summary>
+        <value>
+          <see langword="true" />Se as pesquisas são executadas no modo de várias linhas. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="source">
+      <MemberSignature Language="C#" Value="public string source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão de expressão regular que é representado por esse objeto.</summary>
+        <value>O padrão de expressão regular que é representado por esse objeto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.RegExpObject.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma representação de cadeia de caracteres do objeto que contém o padrão de expressão regular e os sinalizadores.</summary>
+        <returns>Uma representação de cadeia de caracteres deste objeto.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

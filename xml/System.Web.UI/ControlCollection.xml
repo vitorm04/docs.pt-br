@@ -1,0 +1,552 @@
+<Type Name="ControlCollection" FullName="System.Web.UI.ControlCollection">
+  <TypeSignature Language="C#" Value="public class ControlCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um contêiner de coleção que permite que controles de servidor ASP.NET mantenham uma lista de seus controles filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode acessar qualquer uma das propriedades e métodos do <xref:System.Web.UI.ControlCollection> classe por meio de <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> propriedade. Desde o <xref:System.Web.UI.Control> classe é a classe base para todos os controles de servidor ASP.NET, todos os controles de servidor herdam essa propriedade.  
+  
+ Para obter mais informações sobre coleções, consulte [coleções e estruturas de dados](http://msdn.microsoft.com/library/60cc581f-1db5-445b-ba04-a173396bf872).  
+  
+   
+  
+## Examples  
+ O seguinte código de exemplo substitui o <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> método para criar dois controles, ambas as instâncias da classe personalizada chamada `ChildControl`, que tem uma propriedade de cadeia de caracteres denominada `Message`. Quando criado, os dois controles são adicionados para o <xref:System.Web.UI.ControlCollection>. O <xref:System.Web.UI.ControlCollection.Add%2A> método é chamado em cada um desses controles para adicioná-los para a classe que contém esta versão do <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType>. O <xref:System.Web.UI.Control.ChildControlsCreated%2A> está definida como `true` para que esses controles não serão criados novamente desnecessariamente.  
+  
+ [!code-csharp[Control_Sample_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Control_Sample_1/CS/control_sample.cs#1)]
+ [!code-vb[Control_Sample_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Control_Sample_1/VB/control_sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlCollection (System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O controle de servidor ASP.NET criado para a coleção de controle.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.ControlCollection" /> classe para o controle de servidor pai especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir é um personalizado <xref:System.Web.UI.ControlCollection> classe que substitui o construtor para gravar mensagens (que incluem o nome do <xref:System.Web.UI.ControlCollection.Owner%2A> propriedade) para o log de rastreamento quando uma instância da coleção é criada. Você deve habilitar o rastreamento para a página ou aplicativo para esse exemplo funcione.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/cs/controlcollection_7.cs#1)]
+ [!code-vb[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/VB/controlcollection_7.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ocorre se o parâmetro <paramref name="owner" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">O <see cref="T:System.Web.UI.Control" /> a adicionar à coleção.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.UI.Control" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo controle é adicionado ao final de uma matriz de índice ordinal. O controle pode ser uma instância de qualquer controle de servidor ASP.NET, um controle de servidor personalizado que você criar ou um controle literal.  
+  
+ Para adicionar um controle para a coleção em um local de índice específico, use o <xref:System.Web.UI.ControlCollection.AddAt%2A> método.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.ControlCollection.Add%2A> método para adicionar uma série de itens de modelo, o número do qual é obtido de estado de exibição do controle de servidor, para um controle modelo personalizado.  
+  
+ [!code-csharp[TemplatedDataBoundControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplatedDataBoundControl/CS/templatedataboundcontrol.cs#2)]
+ [!code-vb[TemplatedDataBoundControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplatedDataBoundControl/VB/templatedataboundcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Gerado se o parâmetro <paramref name="child" /> não especificar um controle.</exception>
+        <exception cref="T:System.Web.HttpException">Gerado se o <see cref="T:System.Web.UI.ControlCollection" /> for somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public virtual void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na matriz à qual você deseja adicionar o controle filho.</param>
+        <param name="child">O <see cref="T:System.Web.UI.Control" /> a adicionar à coleção.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.UI.Control" /> especificado à coleção no local de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle adicional pode ser uma instância de qualquer controle de servidor ASP.NET, um controle de servidor personalizado que você criar ou um controle literal.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.ControlCollection.AddAt%2A> método para criar um novo <xref:System.Web.UI.LiteralControl> chamado `ChildControl2` e adicioná-lo para o `myButton` do controle <xref:System.Web.UI.ControlCollection> coleção no local do índice de 1.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#1)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="child" /> não especifica um controle.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero ou maior que a propriedade <see cref="P:System.Web.UI.ControlCollection.Count" />.</exception>
+        <exception cref="T:System.Web.HttpException">O <see cref="T:System.Web.UI.ControlCollection" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os controles do controle de servidor atual <see cref="T:System.Web.UI.ControlCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para esvaziar um controle personalizado <xref:System.Web.UI.ControlCollection> quando você substituir o <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> e <xref:System.Web.UI.Control.DataBind%2A> métodos. Faça isso quando você desenvolve controles compostos, modelo ou controles de associação de dados de modelo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra substituindo o <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> método e usar o <xref:System.Web.UI.ControlCollection.Clear%2A> método para excluir todos os controles de filho anteriormente no <xref:System.Web.UI.ControlCollection> objeto. Nesse caso, você deve fazer isso para que desatualizado objetos no seu controle <xref:System.Web.UI.ControlCollection> não são exibidos de forma inadequada.  
+  
+ [!code-csharp[TemplatedDataBoundControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplatedDataBoundControl/CS/templatedataboundcontrol.cs#2)]
+ [!code-vb[TemplatedDataBoundControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplatedDataBoundControl/VB/templatedataboundcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (System.Web.UI.Control c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Web.UI.Control c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Contains(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="c">O controle de servidor a ser pesquisado na coleção.</param>
+        <summary>Determina se o controle de servidor especificado está no objeto <see cref="T:System.Web.UI.ControlCollection" /> do controle de servidor pai.</summary>
+        <returns>
+          <see langword="true" /> se o controle de servidor especificado existir na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Web.UI.ctrlCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.CtrlCollection_Contains/CS/ctrlcollection_contains.cs.aspx#1)]
+ [!code-vb[System.Web.UI.ctrlCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.CtrlCollection_Contains/VB/ctrlcollection_contains.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> para copiar os controles filho.</param>
+        <param name="index">O índice baseado em zero relativo em <c>matriz</c> onde a cópia começa.</param>
+        <summary>Copia os controles filho armazenados no <see cref="T:System.Web.UI.ControlCollection" /> o objeto para um <see cref="T:System.Array" /> objeto, começando no local do índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="array" />não é <see langword="null" /> e não unidimensional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de controles de servidor a <see cref="T:System.Web.UI.ControlCollection" /> objeto para o controle de servidor ASP.NET especificado.</summary>
+        <value>O número de controles de servidor a <see cref="T:System.Web.UI.ControlCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.ControlCollection.Count%2A> propriedade para iterar por meio de um controle <xref:System.Web.UI.ControlCollection> objeto. O uso do <xref:System.Web.UI.Control.HasControls%2A?displayProperty=nameWithType> propriedade verifica se o controle tem controles filho. Se <xref:System.Web.UI.Control.HasControls%2A?displayProperty=nameWithType> retorna `false`, o restante do código não será executado.  
+  
+ [!code-csharp[Classic Control.HasControls Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Control.HasControls Example/CS/source.cs#1)]
+ [!code-vb[Classic Control.HasControls Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Control.HasControls Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um enumerador que pode iterar por meio de <see cref="T:System.Web.UI.ControlCollection" /> objeto.</summary>
+        <returns>O enumerador para iteração pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um método que enumera através de <xref:System.Web.UI.ControlCollection> coleção de um <xref:System.Web.UI.WebControls.Button> controle, `myButton`. Quando o enumerador é criado, o <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> propriedade é verificada para ver se a operação é thread-safe, e se não estiver, o <xref:System.Web.UI.ControlCollection.SyncRoot%2A> propriedade é usada para obter um objeto para fazer o thread de operação seguro. Quando a enumeração é concluída, o valor da <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> propriedade é gravada como o <xref:System.Web.UI.WebControls.Label.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.Label> controle sobre o conteúdo da página.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public virtual int IndexOf (System.Web.UI.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class System.Web.UI.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.IndexOf(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.UI.Control" /> para o qual o índice será retornado.</param>
+        <summary>Recupera o índice de um objeto <see cref="T:System.Web.UI.Control" /> especificado na coleção.</summary>
+        <returns>O índice do controle do servidor especificado. Se o controle de servidor não for um membro da coleção, ele retornará -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar o local do índice do controle do servidor especificado no <xref:System.Web.UI.ControlCollection> objeto.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.ControlCollection.IndexOf%2A> método grave o local do índice de um controle `myLiteralControl`, no <xref:System.Web.UI.ControlCollection> coleção de um <xref:System.Web.UI.WebControls.Button> controle chamado `myButton`.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#1)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto <see cref="T:System.Web.UI.ControlCollection" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o controle for somente leitura; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um método que enumera através de <xref:System.Web.UI.ControlCollection> coleção de um <xref:System.Web.UI.WebControls.Button> controle, `myButton`. Quando o enumerador é criado, o <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> propriedade é verificada para ver se a operação é thread-safe, e se não estiver, o <xref:System.Web.UI.ControlCollection.SyncRoot%2A> propriedade é usada para obter um objeto para fazer o thread de operação seguro. Quando a enumeração é concluída, o valor da <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> propriedade é gravada como o <xref:System.Web.UI.WebControls.Label.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.Label> controle sobre o conteúdo da página.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.ControlCollection" /> objeto foi sincronizado.</summary>
+        <value>Esta propriedade é sempre <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um método que enumera através de <xref:System.Web.UI.ControlCollection> coleção de um <xref:System.Web.UI.WebControls.Button> controle, `myButton`. Quando o enumerador é criado, o <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> propriedade é verificada para ver se a operação é thread-safe, e se não estiver, o <xref:System.Web.UI.ControlCollection.SyncRoot%2A> propriedade é usada para obter um objeto para fazer o thread de operação seguro. Quando a enumeração é concluída, o valor da <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> propriedade é gravada como o <xref:System.Web.UI.WebControls.Label.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.Label> controle sobre o conteúdo da página.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Control this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do controle de servidor a <see cref="T:System.Web.UI.ControlCollection" />.</param>
+        <summary>Obtém uma referência para o controle de servidor no local especificado do índice de <see cref="T:System.Web.UI.ControlCollection" /> objeto.</summary>
+        <value>A referência ao controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.ControlCollection.Item%2A> propriedade para especificar o local do índice de um filho de controle que será removida em uma <xref:System.Web.UI.ControlCollection.Remove%2A> chamada de método. Isso é feito com o `myButton.Controls.Remove` sintaxe.  
+  
+ [!code-aspx-csharp[ControlCollection_ReSubmit_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlCollection_ReSubmit_2/CS/controlcollection_copyto.cs.aspx#1)]
+ [!code-aspx-vb[ControlCollection_ReSubmit_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlCollection_ReSubmit_2/VB/controlcollection_copyto.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parâmetro for menor que zero ou maior que ou igual a <see cref="P:System.Web.UI.ControlCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Control Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de servidor ASP.NET para o qual o <see cref="T:System.Web.UI.ControlCollection" /> objeto pertence.</summary>
+        <value>O <see cref="T:System.Web.UI.Control" /> ao qual o <see cref="T:System.Web.UI.ControlCollection" /> pertence.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir é um personalizado <xref:System.Web.UI.ControlCollection> classe que substitui o <xref:System.Web.UI.ControlCollection.%23ctor%2A> método para gravar mensagens (que incluem o nome do <xref:System.Web.UI.ControlCollection.Owner%2A> propriedade) para o log de rastreamento quando uma instância da coleção é criada. Você deve habilitar o rastreamento para a página ou aplicativo para esse exemplo funcione.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/cs/controlcollection_7.cs#1)]
+ [!code-vb[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/VB/controlcollection_7.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (System.Web.UI.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.Web.UI.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Remove(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">O controle de servidor a ser removido.</param>
+        <summary>Remove o controle de servidor especificado do controle de servidor pai <see cref="T:System.Web.UI.ControlCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para remover um controle de um local de índice, use o <xref:System.Web.UI.ControlCollection.RemoveAt%2A> método.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.ControlCollection.Remove%2A> método para excluir um controle filho do `myButton` controle de servidor. Primeiro o código usa o <xref:System.Web.UI.ControlCollection.Contains%2A> método para determinar se o `myChildControl` está contida no <xref:System.Web.UI.ControlCollection> do objeto e, se for, ela será removida.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#4)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice ordinal do controle de servidor a ser removido da coleção.</param>
+        <summary>Remove um controle filho, no local do índice especificado, o <see cref="T:System.Web.UI.ControlCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para remover um controle da coleção com base em seu valor, use o <xref:System.Web.UI.ControlCollection.Remove%2A> método.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.ControlCollection.RemoveAt%2A> método para excluir um controle filho do `myButton` controle de servidor. A chamada do método primeiro especifica um local de índice de 1 a partir do qual o controle é excluído. Em seguida, o exemplo grava a que contém a página dizendo que o controle nesse local foi excluído de uma mensagem de texto a <xref:System.Web.UI.ControlCollection> coleção.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#5)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Gerado se o <see cref="T:System.Web.UI.ControlCollection" /> for somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção de controles.</summary>
+        <value>O <see cref="T:System.Object" /> usado para sincronizar a coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um método que enumera através de <xref:System.Web.UI.ControlCollection> coleção de um <xref:System.Web.UI.WebControls.Button> controle, `myButton`. Quando o enumerador é criado, o <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> propriedade é verificada para ver se a operação é thread-safe, e se não estiver, o <xref:System.Web.UI.ControlCollection.SyncRoot%2A> propriedade é usada para obter um objeto para fazer o thread de operação seguro. Quando a enumeração é concluída, o valor da <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> propriedade é gravada como o <xref:System.Web.UI.WebControls.Label.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.Label> controle sobre o conteúdo da página.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

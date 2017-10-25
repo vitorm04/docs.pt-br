@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Principal">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Principal" /> namespace define um objeto de entidade que representa o contexto de segurança sob a qual o código está sendo executado. Para obter mais informações, consulte [segurança baseada em função](~/docs/standard/security/role-based-security.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

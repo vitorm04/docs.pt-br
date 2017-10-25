@@ -1,0 +1,256 @@
+<Type Name="SwitchAttribute" FullName="System.Diagnostics.SwitchAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SwitchAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SwitchAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SwitchAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Event)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica uma opção usada em um assembly, classe ou membro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Diagnostics.SwitchAttribute> atributo pode ser usado em um assembly, classe, construtor, método, propriedade ou evento.  
+  
+ O <xref:System.Diagnostics.SwitchAttribute> atributo pode ser usado pelas ferramentas que inspecionam um assembly para definições de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Diagnostics.SwitchAttribute> atributo para identificar a opção usada em um assembly. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.TraceSource2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SwitchAttribute (string switchName, Type switchType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string switchName, class System.Type switchType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SwitchAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="switchType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">O nome de exibição do comutador.</param>
+        <param name="switchType">O tipo de comutador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.SwitchAttribute" /> classe, especificando o nome e o tipo de comutador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `switchName` parâmetro deve corresponder a <xref:System.Diagnostics.Switch.DisplayName%2A> propriedade do comutador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.SwitchAttribute.%23ctor%2A> construtor para criar um atributo de chave. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.TraceSource2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.SwitchAttribute[] GetAll (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.SwitchAttribute[] GetAll(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SwitchAttribute.GetAll(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SwitchAttribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly para verificar os atributos de chave.</param>
+        <summary>Retorna que todas as atributos do comutador para o assembly especificado.</summary>
+        <returns>Uma matriz que contém todos os atributos de chave para o assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.SwitchAttribute.GetAll%2A> método para identificar as opções usadas em um assembly. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#12)]
+ [!code-vb[System.Diagnostics.TraceSource2#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assembly" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchDescription">
+      <MemberSignature Language="C#" Value="public string SwitchDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SwitchDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SwitchAttribute.SwitchDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição do comutador.</summary>
+        <value>A descrição do comutador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SwitchAttribute.SwitchDescription%2A> propriedade geralmente indica a função do comutador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchName">
+      <MemberSignature Language="C#" Value="public string SwitchName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SwitchName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SwitchAttribute.SwitchName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de exibição do comutador.</summary>
+        <value>O nome de exibição do comutador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SwitchAttribute.SwitchName%2A> propriedade deve corresponder a <xref:System.Diagnostics.Switch.DisplayName%2A> propriedade do comutador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de <xref:System.Diagnostics.SwitchAttribute.SwitchName%2A> propriedade para todas as opções usadas em um assembly. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#12)]
+ [!code-vb[System.Diagnostics.TraceSource2#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Diagnostics.SwitchAttribute.SwitchName" /> é definido como <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Diagnostics.SwitchAttribute.SwitchName" />é definido como uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchType">
+      <MemberSignature Language="C#" Value="public Type SwitchType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SwitchType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SwitchAttribute.SwitchType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de comutador.</summary>
+        <value>O tipo de comutador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de <xref:System.Diagnostics.SwitchAttribute.SwitchType%2A> propriedade para todas as opções usadas em um assembly. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#12)]
+ [!code-vb[System.Diagnostics.TraceSource2#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Diagnostics.SwitchAttribute.SwitchType" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

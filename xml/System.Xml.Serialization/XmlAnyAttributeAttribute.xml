@@ -1,0 +1,117 @@
+<Type Name="XmlAnyAttributeAttribute" FullName="System.Xml.Serialization.XmlAnyAttributeAttribute">
+  <TypeSignature Language="C#" Value="public class XmlAnyAttributeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlAnyAttributeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlAnyAttributeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que o membro (um campo que retorna uma matriz de objetos <see cref="T:System.Xml.XmlAttribute" />) pode conter os atributos XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> para conter dados arbitrários (como atributos XML) que são enviados como parte de um documento XML, como, enviado como parte do documento de metadados.  
+  
+ Aplicar o <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> para um campo que retorna uma matriz de <xref:System.Xml.XmlAttribute> ou <xref:System.Xml.XmlNode> objetos. Quando o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método o <xref:System.Xml.Serialization.XmlSerializer> classe é chamada, todos os atributos XML que não têm um membro correspondente na classe que está sendo desserializada são coletados na matriz. Após a desserialização, você pode percorrer a coleção de <xref:System.Xml.XmlAttribute> itens para processar os dados.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> e <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> eventos o <xref:System.Xml.Serialization.XmlSerializer> não ocorrerá se você aplicar o <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> a um membro de uma classe.  
+  
+> [!NOTE]
+>  Você pode usar a palavra `XmlAnyAttribute` em seu código em vez do mais <xref:System.Xml.Serialization.XmlAnyAttributeAttribute>.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir reúne todos os atributos desconhecidos em uma matriz de <xref:System.Xml.XmlAttribute> objetos. Para testar o exemplo, crie um arquivo chamado `UnknownAttributes.xml` que contém o XML a seguir:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+GroupType = 'Technical' GroupNumber = '42' GroupBase = 'Red'>  
+  <GroupName>MyGroup</GroupName>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlAnyAttributeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlAnyAttributeAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[XmlAnyAttributeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlAnyAttributeAttribute Example/CS/anyattribute.cs#1)]
+ [!code-vb[XmlAnyAttributeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlAnyAttributeAttribute Example/VB/anyattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAnyAttributeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAnyAttributeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Constrói uma nova instância do <see cref="T:System.Xml.Serialization.XmlAnyAttributeAttribute" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir constrói um <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> que é usada para substituir a desserialização de um objeto. Para testar o exemplo, crie um arquivo chamado UnknownAttributes.xml que contém o XML a seguir:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" GroupType = 'Technical' GroupNumber = '42' GroupBase = 'Red'>  
+  <GroupName>MyGroup</GroupName>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlAnyAttributeAttribute_ctor Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlAnyAttributeAttribute_ctor Example/CPP/anyattover.cpp#1)]
+ [!code-csharp[XmlAnyAttributeAttribute_ctor Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlAnyAttributeAttribute_ctor Example/CS/anyattover.cs#1)]
+ [!code-vb[XmlAnyAttributeAttribute_ctor Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlAnyAttributeAttribute_ctor Example/VB/anyattover.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

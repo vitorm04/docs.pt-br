@@ -1,0 +1,105 @@
+<Type Name="ServiceProviders" FullName="System.Windows.Markup.ServiceProviders">
+  <TypeSignature Language="C#" Value="public class ServiceProviders : IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceProviders extends System.Object implements class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ServiceProviders" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma implementação para o <see cref="T:System.IServiceProvider" /> interface com métodos que permitem adicionar serviços.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe de utilitário para uso ao serializar o conteúdo. A classe é basicamente um apenas de entrada de dicionário para armazenar o chaveado por seu tipo de serviço, que implementa os serviços <xref:System.IServiceProvider> para recuperação posterior do mesmo dicionário. Usando o dicionário evita consultar repetidamente para o mesmo serviço. Essa classe é a classe base de <xref:System.Windows.Markup.XamlDesignerSerializationManager>, que é o serviço usado para `ShouldSerialize` implementações de método em outras partes do WPF.  
+  
+ O uso dessa classe requer referenciando assemblies do WPF, não é destinado para cenários gerais de serviços XAML do .NET Framework. O cenário aqui é para implementação interna WPF de recursos com uso intensivo de serviço durante a serialização, como durante o processamento de `ShouldSerialize` implementações de certos tipos. A classe prática envolvidos neste cenário é a classe derivada <xref:System.Windows.Markup.XamlDesignerSerializationManager>.  
+  
+<a name="xamlTextUsage_ServiceProviders"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceProviders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ServiceProviders.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.ServiceProviders" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public void AddService (Type serviceType, object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddService(class System.Type serviceType, object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ServiceProviders.AddService(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Tipo de serviço do novo serviço.</param>
+        <param name="service">A classe de implementação de serviço.</param>
+        <summary>Adiciona um serviço à lista.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ou <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Tentativa de adicionar um serviço que já existe no dicionário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ServiceProviders.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de objeto de serviço a ser obtido.</param>
+        <summary>Obtém o objeto de serviço do tipo especificado.</summary>
+        <returns>Uma implementação de serviço para o tipo de <paramref name="serviceType" />. Pode ser <see langword="null" /> se não há nenhum serviço armazenado para o tipo <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

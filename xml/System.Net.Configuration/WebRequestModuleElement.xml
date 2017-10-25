@@ -1,0 +1,212 @@
+<Type Name="WebRequestModuleElement" FullName="System.Net.Configuration.WebRequestModuleElement">
+  <TypeSignature Language="C#" Value="public sealed class WebRequestModuleElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebRequestModuleElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.WebRequestModuleElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um prefixo URI e da classe associada que manipula a criação de solicitações da Web para o prefixo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> classes, os aplicativos podem solicitar recursos para qualquer <xref:System.Uri>. Use este elemento de configuração para especificar um módulo que está registrado para trabalhar com o <xref:System.Net.WebRequest.Create%2A> sobrecargas para criar novas solicitações.  
+  
+ Esta classe corresponde do [ &lt;adicionar&gt; elemento webRequestModules (configurações de rede)](~/docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md) elemento de configuração.  
+  
+ Essa classe é usada para especificar a módulos registrados para autenticar solicitações feitas com o <xref:System.Net.WebRequest> e <xref:System.Net.WebClient> classes.  
+  
+ Essa classe fornece acesso programático a informações que podem ser armazenados em arquivos de configuração.  
+  
+ O .NET Framework versão 2.0 fornece módulos de solicitação da Web que cria as solicitações para recursos com os seguintes prefixos:  
+  
+-   HTTP  
+  
+-   HTTPS  
+  
+-   FTP  
+  
+-   ARQUIVO  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestModuleElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.WebRequestModuleElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.WebRequestModuleElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestModuleElement (string prefix, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string prefix, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.WebRequestModuleElement.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Uma cadeia de caracteres que contém um prefixo URI.</param>
+        <param name="type">Uma cadeia de caracteres que contém as informações de tipo e assembly para a classe que controla a criação de solicitações para recursos que usam o <c>prefixo</c> prefixo URI.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Configuration.WebRequestModuleElement" /> classe usando as informações de prefixo e o tipo URI especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `type` contém o nome de tipo totalmente qualificado, seguido por uma vírgula (,) e as informações de assembly. Os elementos das informações de assembly são separados por vírgulas, por exemplo, "`System.Net.DigestClient, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`.  
+  
+ O <xref:System.Net.Configuration.WebRequestModuleElement.Prefix%2A> está definida como `prefix` e <xref:System.Net.Configuration.WebRequestModuleElement.Type%2A> está definida como `type`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestModuleElement (string prefix, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string prefix, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.WebRequestModuleElement.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Uma cadeia de caracteres que contém um prefixo URI.</param>
+        <param name="type">Um <see cref="T:System.Type" /> que identifica a classe que trata as solicitações de criação de recursos que usam o <c>prefixo</c> prefixo URI.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Configuration.WebRequestModuleElement" /> classe usando o prefixo URI especificado e o identificador de tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Configuration.WebRequestModuleElement.Prefix%2A> está definida como `prefix` e <xref:System.Net.Configuration.WebRequestModuleElement.Type%2A> está definida como `type`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.WebRequestModuleElement.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("prefix", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o prefixo do URI para o módulo de solicitação da Web atual.</summary>
+        <value>Uma cadeia de caracteres que contém um prefixo URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework versão 2.0 fornece módulos de solicitação da Web que cria as solicitações para recursos com os seguintes prefixos:  
+  
+-   HTTP  
+  
+-   HTTPS  
+  
+-   FTP  
+  
+-   ARQUIVO  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.WebRequestModuleElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.WebRequestModuleElement.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.TypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma classe que cria as solicitações da Web.</summary>
+        <value>Um <see cref="T:System.Type" /> instância que identifica um módulo de solicitação da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> classes, os aplicativos podem solicitar recursos para qualquer <xref:System.Uri>. Use essa propriedade para especificar um tipo que está registrado para trabalhar com o <xref:System.Net.WebRequest.Create%2A> método para criar novas solicitações.  
+  
+ O .NET Framework versão 2.0 fornece módulos de solicitação da Web que cria as solicitações para recursos com os seguintes prefixos:  
+  
+-   HTTP  
+  
+-   HTTPS  
+  
+-   FTP  
+  
+-   ARQUIVO  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

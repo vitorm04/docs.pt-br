@@ -1,0 +1,40 @@
+<Type Name="StructureChangedEventHandler" FullName="System.Windows.Automation.StructureChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StructureChangedEventHandler(object sender, StructureChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StructureChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.StructureChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Automation.StructureChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto que gerencie o evento.</param>
+    <param name="e">Informações sobre o evento.</param>
+    <summary>Representa o método implementado pelo aplicativo cliente para manipular o evento gerado quando a estrutura de árvore de automação de interface do usuário foi alterado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir descreve as informações no evento recebido pelo delegado para alterações de estrutura diferente.  
+  
+|`e.structureChangeType`|`sender`|`e.runtimeId`|  
+|-----------------------------|--------------|-------------------|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildAdded>|O filho que foi adicionado.|O filho que foi adicionado.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildRemoved>|O pai do filho que foi removido.|O filho que foi removido.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded>|O pai dos filhos que foram adicionados.|O pai dos filhos que foram adicionados.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkRemoved>|O pai dos filhos que foram removidos.|O pai dos filhos que foram removidos.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenInvalidated>|O pai dos filhos que foram invalidados.|O pai dos filhos que foram invalidados|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

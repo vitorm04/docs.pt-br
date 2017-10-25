@@ -1,0 +1,82 @@
+<Type Name="TableNameAttribute" FullName="System.Web.DynamicData.TableNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TableNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TableNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.TableNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um atributo para alterar o nome exibido para uma tabela.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableNameAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.TableNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome que a tabela será exibida.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.DynamicData.TableNameAttribute" /> classe com o nome especificado para a tabela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.TableNameAttribute> atributo é usado para alterar o nome da entidade de metadados quando ocorrem conflitos de nome de entidade de vários contextos. O <xref:System.Web.DynamicData.TableNameAttribute> não deve ser usado para alterar o nome para exibição do atributo. Em vez disso, use o <xref:System.ComponentModel.DisplayNameAttribute> atributo para alterar o nome de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o nome da tabela. No exemplo, o nome da tabela exibida é alterado de "ProductModelProductDescriptions" para "Prod modelo Desc".  
+  
+ [!code-csharp[System.Web.DynamicData.TableNameAttribute#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.TableNameAttribute/cs/ProductModelProductDescription.cs#11)]
+ [!code-vb[System.Web.DynamicData.TableNameAttribute#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.TableNameAttribute/vb/ProductModelProductDescription.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.TableNameAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da tabela.</summary>
+        <value>O nome que está associado uma tabela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para mapear um nome de tabela para um nome exclusivo quando outra tabela em um contexto de dados diferentes com o mesmo nome.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

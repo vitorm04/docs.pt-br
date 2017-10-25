@@ -1,0 +1,177 @@
+<Type Name="ValidationResult" FullName="System.Printing.ValidationResult">
+  <TypeSignature Language="C#" Value="public struct ValidationResult" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ValidationResult extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.ValidationResult" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um mesclada <see cref="T:System.Printing.PrintTicket" /> que é garantido para ser viável, com um relatório de quaisquer configurações que foram alteradas para torná-lo viável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o inicial <xref:System.Printing.PrintTicket> pede para imprimir a funcionalidade que não dão suporte a impressora, o driver de impressora resolve todos os conflitos para produzir um tíquete viável.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar os valores desse tipo durante a mesclagem duas permissões de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConflictStatus">
+      <MemberSignature Language="C#" Value="public System.Printing.ConflictStatus ConflictStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.ConflictStatus ConflictStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.ValidationResult.ConflictStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.ConflictStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se ocorreu um conflito entre a funcionalidade com suporte a impressora e a funcionalidade solicitada na fusão inicial de origem dois <see cref="T:System.Printing.PrintTicket" />s.</summary>
+        <value>Uma da <see cref="T:System.Printing.ConflictStatus" /> valores que indica que nenhum conflito ocorreu ou que pelo menos um conflito ocorreu, mas foi resolvido. O padrão é <see cref="F:System.Printing.ConflictStatus.NoConflict" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.ValidationResult.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Printing.ValidationResult" /> para comparar.</param>
+        <summary>Determina se o <see cref="T:System.Printing.ValidationResult" /> especificado é igual ao <see cref="T:System.Printing.ValidationResult" /> atual.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Printing.ValidationResult" /> objetos forem iguais; caso contrário, <see langword="false" />. <see langword="false" />também é retornado se o objeto passado não é um <see cref="T:System.Printing.ValidationResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.ValidationResult.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash associado com o <see cref="T:System.Printing.ValidationResult" /> e sua <see cref="T:System.Printing.PrintTicket" /> e fluxo de impressão.</summary>
+        <returns>Um código hash do <see cref="T:System.Printing.ValidationResult" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Printing.ValidationResult a, System.Printing.ValidationResult b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Printing.ValidationResult a, valuetype System.Printing.ValidationResult b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.ValidationResult.op_Equality(System.Printing.ValidationResult,System.Printing.ValidationResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Printing.ValidationResult" />
+        <Parameter Name="b" Type="System.Printing.ValidationResult" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro <see cref="T:System.Printing.ValidationResult" /> a ser comparado.</param>
+        <param name="b">O segundo <see cref="T:System.Printing.ValidationResult" /> a ser comparado.</param>
+        <summary>Determina se o especificado <see cref="T:System.Printing.ValidationResult" /> objetos são iguais.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Printing.ValidationResult" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Printing.ValidationResult a, System.Printing.ValidationResult b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Printing.ValidationResult a, valuetype System.Printing.ValidationResult b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.ValidationResult.op_Inequality(System.Printing.ValidationResult,System.Printing.ValidationResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Printing.ValidationResult" />
+        <Parameter Name="b" Type="System.Printing.ValidationResult" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro <see cref="T:System.Printing.ValidationResult" /> a ser comparado.</param>
+        <param name="b">O segundo <see cref="T:System.Printing.ValidationResult" /> a ser comparado.</param>
+        <summary>Determina se o especificado <see cref="T:System.Printing.ValidationResult" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Printing.ValidationResult" /> objetos não forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatedPrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket ValidatedPrintTicket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket ValidatedPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.ValidationResult.ValidatedPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Printing.PrintTicket" /> objeto resultante a mesclagem de dois <see cref="T:System.Printing.PrintTicket" /> objetos, que podem ter sido ajustados para garantir sua viabilidade.</summary>
+        <value>Um válido e viável <see cref="T:System.Printing.PrintTicket" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade ao mesclar duas permissões de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

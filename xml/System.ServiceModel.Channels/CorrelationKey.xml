@@ -1,0 +1,138 @@
+<Type Name="CorrelationKey" FullName="System.ServiceModel.Channels.CorrelationKey">
+  <TypeSignature Language="C#" Value="public sealed class CorrelationKey : System.Runtime.DurableInstancing.InstanceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CorrelationKey extends System.Runtime.DurableInstancing.InstanceKey" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.CorrelationKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstanceKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma associação entre uma parte dos dados de aplicativo e uma instância.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados de chave normalmente são obtidos uma mensagem que usa um conjunto de consultas contidas em um <xref:System.ServiceModel.MessageQuerySet>. O <xref:System.ServiceModel.Channels.CorrelationKey> é gerado usando um hash dos dados da chave. Correlações são representadas como um mapeamento entre um <xref:System.ServiceModel.Channels.CorrelationKey> e uma ID de instância.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CorrelationKey (System.Collections.Generic.IDictionary&lt;string,string&gt; keyData, System.Xml.Linq.XName scopeName, System.Xml.Linq.XNamespace provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; keyData, class System.Xml.Linq.XName scopeName, class System.Xml.Linq.XNamespace provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationKey.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Xml.Linq.XName,System.Xml.Linq.XNamespace)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="scopeName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="provider" Type="System.Xml.Linq.XNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Os dados da chave.</param>
+        <param name="scopeName">O nome do escopo.</param>
+        <param name="provider">O provedor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.CorrelationKey" /> usando os dados de chave especificado, o nome do escopo e o provedor de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; KeyData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; KeyData" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationKey.KeyData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de dados de chave.</summary>
+        <value>Um dicionário de dados de chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyString">
+      <MemberSignature Language="C#" Value="public string KeyString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyString" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationKey.KeyString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.String" /> representação dos dados da chave.</summary>
+        <value>Os dados da chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationKey.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de <see cref="T:System.ServiceModel.Channels.CorrelationKey" />.</summary>
+        <value>O nome do <see cref="T:System.ServiceModel.Channels.CorrelationKey" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XNamespace Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XNamespace Provider" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationKey.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XNamespace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o provedor.</summary>
+        <value>O provedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeName">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XName ScopeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XName ScopeName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationKey.ScopeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do escopo.</summary>
+        <value>O nome do escopo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,778 @@
+<Type Name="FontDialog" FullName="System.Windows.Forms.FontDialog">
+  <TypeSignature Language="C#" Value="public class FontDialog : System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontDialog extends System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FontDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Apply")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Font")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Solicita ao usuário para escolher uma fonte entre as instaladas no computador local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O membro herdado <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> deve ser invocada para criar essa caixa de diálogo comuns específicos. <xref:System.Windows.Forms.CommonDialog.HookProc%2A>pode ser substituído para implementar a funcionalidade de gancho de caixa de diálogo específicas.  
+  
+ Quando você cria uma instância de <xref:System.Windows.Forms.FontDialog>, algumas das propriedades de leitura/gravação são definidas para valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Windows.Forms.FontDialog.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para exibir um <xref:System.Windows.Forms.FontDialog>. Esse código requer que um <xref:System.Windows.Forms.Form> já foi criado com um <xref:System.Windows.Forms.TextBox> e botão colocada nela. Ele também requer que o `fontDialog1` foi criado. O <xref:System.Drawing.Font> contém as informações de tamanho, mas não as informações de cor.  
+  
+ [!code-cpp[Classic FontDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic FontDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FontDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic FontDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic FontDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic FontDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FontDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.FontDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de <xref:System.Windows.Forms.FontDialog>, as seguintes propriedades de leitura/gravação são inicializadas.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.FontDialog.AllowSimulations%2A>|`true`|  
+|<xref:System.Windows.Forms.FontDialog.AllowVectorFonts%2A>|`true`|  
+|<xref:System.Windows.Forms.FontDialog.AllowVerticalFonts%2A>|`true`|  
+|<xref:System.Windows.Forms.FontDialog.AllowScriptChange%2A>|`true`|  
+|<xref:System.Windows.Forms.FontDialog.Color%2A>|`Color.Black`|  
+|<xref:System.Windows.Forms.FontDialog.FixedPitchOnly%2A>|`false`|  
+|<xref:System.Windows.Forms.FontDialog.MaxSize%2A>|0|  
+|<xref:System.Windows.Forms.FontDialog.MinSize%2A>|0|  
+|<xref:System.Windows.Forms.FontDialog.ScriptsOnly%2A>|`false`|  
+|<xref:System.Windows.Forms.FontDialog.ShowApply%2A>|`false`|  
+|<xref:System.Windows.Forms.FontDialog.ShowColor%2A>|`false`|  
+|<xref:System.Windows.Forms.FontDialog.ShowEffects%2A>|`true`|  
+|<xref:System.Windows.Forms.FontDialog.ShowHelp%2A>|`false`|  
+  
+ Você pode alterar o valor de qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowScriptChange">
+      <MemberSignature Language="C#" Value="public bool AllowScriptChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowScriptChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.AllowScriptChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode alterar o conjunto de caracteres especificado no **Script** conjunto de caixa de combinação para exibir um caractere diferente de um exibido atualmente.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode alterar o conjunto de caracteres especificado no **Script** caixa de combinação; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O **Script** caixa de combinação encontrado na **fonte** caixa de diálogo contém conjuntos de caracteres associados com a fonte selecionada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSimulations">
+      <MemberSignature Language="C#" Value="public bool AllowSimulations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowSimulations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.AllowSimulations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo permite gráficos simulações de fonte GDI (interface) de dispositivo.</summary>
+        <value>
+          <see langword="true" />Se as simulações de fonte são permitidas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowVectorFonts">
+      <MemberSignature Language="C#" Value="public bool AllowVectorFonts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowVectorFonts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.AllowVectorFonts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo permite vetor seleções de fonte.</summary>
+        <value>
+          <see langword="true" />Se as fontes de vetor são permitidas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowVerticalFonts">
+      <MemberSignature Language="C#" Value="public bool AllowVerticalFonts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowVerticalFonts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.AllowVerticalFonts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo exibe fontes verticais e horizontais ou apenas as fontes horizontais.</summary>
+        <value>
+          <see langword="true" />Se as fontes verticais e horizontais são permitidas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="public event EventHandler Apply;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Apply" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.FontDialog.Apply" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no botão **Aplicar** na caixa de diálogo da fonte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o **aplicar** botão é clicado, o outro <xref:System.Windows.Forms.FontDialog.Apply> é gerado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FontDialog.MinSize%2A>, <xref:System.Windows.Forms.FontDialog.MaxSize%2A>, <xref:System.Windows.Forms.FontDialog.ShowEffects%2A> e <xref:System.Windows.Forms.FontDialog.FontMustExist%2A> membros e tratamento de <xref:System.Windows.Forms.FontDialog.Apply> eventos. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.FontDialog> chamado `FontDialog1` e um <xref:System.Windows.Forms.Button> chamado `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da fonte selecionada.</summary>
+        <value>A cor da fonte selecionada. O valor padrão é <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para exibir um <xref:System.Windows.Forms.FontDialog>. Esse código requer que um <xref:System.Windows.Forms.Form> já foi criado com um <xref:System.Windows.Forms.TextBox> e botão colocada nela. Ele também requer que o `fontDialog1` foi criado. O <xref:System.Drawing.Font> contém as informações de tamanho, mas não as informações de cor.  
+  
+ [!code-cpp[Classic FontDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic FontDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FontDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic FontDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic FontDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic FontDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventApply">
+      <MemberSignature Language="C#" Value="protected static readonly object EventApply;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly object EventApply" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FontDialog.EventApply" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Possui a <see cref="E:System.Windows.Forms.FontDialog.Apply" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedPitchOnly">
+      <MemberSignature Language="C#" Value="public bool FixedPitchOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FixedPitchOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.FixedPitchOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo permite somente a seleção de fontes de densidade fixa.</summary>
+        <value>
+          <see langword="true" />Se apenas as fontes de densidade fixa podem ser selecionadas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte selecionada.</summary>
+        <value>A fonte selecionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para exibir um <xref:System.Windows.Forms.FontDialog>. Esse código requer que um <xref:System.Windows.Forms.Form> já foi criado com um <xref:System.Windows.Forms.TextBox> e botão colocada nela. Ele também requer que o `fontDialog1` foi criado. O <xref:System.Drawing.Font> contém as informações de tamanho, mas não as informações de cor.  
+  
+ [!code-cpp[Classic FontDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic FontDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FontDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic FontDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic FontDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic FontDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontMustExist">
+      <MemberSignature Language="C#" Value="public bool FontMustExist { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FontMustExist" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.FontMustExist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo especifica uma condição de erro se o usuário tentar selecionar uma fonte ou um estilo que não existe.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo para especificar uma condição de erro quando o usuário tenta selecionar uma fonte ou um estilo que não existe; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FontDialog.MinSize%2A>, <xref:System.Windows.Forms.FontDialog.MaxSize%2A>, <xref:System.Windows.Forms.FontDialog.ShowEffects%2A> e <xref:System.Windows.Forms.FontDialog.FontMustExist%2A> membros e tratamento de <xref:System.Windows.Forms.FontDialog.Apply> eventos. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.FontDialog> chamado `FontDialog1` e um <xref:System.Windows.Forms.Button> chamado `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookProc">
+      <MemberSignature Language="C#" Value="protected override IntPtr HookProc (IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance native int HookProc(native int hWnd, int32 msg, native int wparam, native int lparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FontDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wparam" Type="System.IntPtr" />
+        <Parameter Name="lparam" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWnd">O identificador para a janela da caixa de diálogo.</param>
+        <param name="msg">A mensagem que está sendo recebida.</param>
+        <param name="wparam">Informações adicionais sobre a mensagem.</param>
+        <param name="lparam">Informações adicionais sobre a mensagem.</param>
+        <summary>Especifica o procedimento de gancho de caixa diálogo comum que é substituído para adicionar funcionalidade específica a uma caixa de diálogo comum.</summary>
+        <returns>Um valor de zero se o procedimento de caixa de diálogo padrão processar a mensagem; um valor diferente de zero se o procedimento de caixa de diálogo padrão ignorar a mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um procedimento de gancho é um mecanismo pelo qual uma função pode interceptar eventos antes que elas atinjam um aplicativo. Quando você substituir o <xref:System.Windows.Forms.CommonDialog.HookProc%2A?displayProperty=nameWithType> método para um <xref:System.Windows.Forms.CommonDialog> classe, o sistema operacional invoca a substituição da função para enviar mensagens de sistema operacional para a janela.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.FontDialog.HookProc%2A> método. O exemplo consiste em uma classe que herda de <xref:System.Windows.Forms.FontDialog> classe. A classe <xref:System.Windows.Forms.FontDialog.HookProc%2A> substituição, o exemplo avalia o método `msg` parâmetro com base nos valores de constantes mensagens específicas do Windows. Se o `msg` parâmetro for igual a constante especificada, o exemplo grava a saída de rastreamento identificando a mensagem do Windows que foi passada para o <xref:System.Windows.Forms.FontDialog.HookProc%2A> método. Este exemplo requer que a classe na qual o <xref:System.Windows.Forms.FontDialog.HookProc%2A> método for declarado herda o <xref:System.Windows.Forms.FontDialog> classe.  
+  
+ [!code-cpp[HookProc Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/HookProc Example/CPP/fontdialogoverride.cpp#1)]
+ [!code-csharp[HookProc Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/HookProc Example/CS/fontdialogoverride.cs#1)]
+ [!code-vb[HookProc Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/HookProc Example/VB/fontdialogoverride.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.FontDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.FontDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSize">
+      <MemberSignature Language="C#" Value="public int MaxSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.MaxSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho de ponto máximo que um usuário pode selecionar.</summary>
+        <value>O tamanho de ponto máximo que um usuário pode selecionar. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para que as configurações de tamanho máximo e mínimo entrem em vigor, <xref:System.Windows.Forms.FontDialog.MaxSize%2A> deve ser maior que <xref:System.Windows.Forms.FontDialog.MinSize%2A>, e deve ser maiores que 0.  
+  
+ Tentativa de definir esta propriedade para valores menores do que 0 resultará em um valor de 0 está sendo usado. Se você definir <xref:System.Windows.Forms.FontDialog.MaxSize%2A> para um valor menor que <xref:System.Windows.Forms.FontDialog.MinSize%2A>, <xref:System.Windows.Forms.FontDialog.MinSize%2A> é definido como <xref:System.Windows.Forms.FontDialog.MaxSize%2A>. O efeito da configuração <xref:System.Windows.Forms.FontDialog.MinSize%2A> e <xref:System.Windows.Forms.FontDialog.MaxSize%2A> com os mesmos valores é limitar a seleção de tamanho para um tamanho de fonte única.  
+  
+ Quando o tamanho de ponto é 0, não há nenhum limite de tamanho de fonte.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FontDialog.MinSize%2A>, <xref:System.Windows.Forms.FontDialog.MaxSize%2A>, <xref:System.Windows.Forms.FontDialog.ShowEffects%2A> e <xref:System.Windows.Forms.FontDialog.FontMustExist%2A> membros e tratamento de <xref:System.Windows.Forms.FontDialog.Apply> eventos. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.FontDialog> chamado `FontDialog1` e um <xref:System.Windows.Forms.Button> chamado `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSize">
+      <MemberSignature Language="C#" Value="public int MinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.MinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho mínimo de pontos de que um usuário pode selecionar.</summary>
+        <value>O mínimo de tamanho de um usuário pode selecionar ponto. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para que as configurações de tamanho máximo e mínimo entrem em vigor, <xref:System.Windows.Forms.FontDialog.MaxSize%2A> deve ser maior que <xref:System.Windows.Forms.FontDialog.MinSize%2A>, e deve ser maiores que 0.  
+  
+ Tentativa de definir esta propriedade para valores menores do que 0 resultará em um valor de 0 está sendo usado. Se você definir <xref:System.Windows.Forms.FontDialog.MinSize%2A> para um valor maior que <xref:System.Windows.Forms.FontDialog.MaxSize%2A>, <xref:System.Windows.Forms.FontDialog.MaxSize%2A> é definido como o valor de <xref:System.Windows.Forms.FontDialog.MinSize%2A>. O efeito da configuração <xref:System.Windows.Forms.FontDialog.MinSize%2A> e <xref:System.Windows.Forms.FontDialog.MaxSize%2A> com o mesmo valor é limitar a seleção de tamanho para um tamanho de fonte única.  
+  
+ Quando o tamanho de ponto é 0, não há nenhum limite de tamanho de fonte.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FontDialog.MinSize%2A>, <xref:System.Windows.Forms.FontDialog.MaxSize%2A>, <xref:System.Windows.Forms.FontDialog.ShowEffects%2A> e <xref:System.Windows.Forms.FontDialog.FontMustExist%2A> membros e tratamento de <xref:System.Windows.Forms.FontDialog.Apply> eventos. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.FontDialog> chamado `FontDialog1` e um <xref:System.Windows.Forms.Button> chamado `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApply">
+      <MemberSignature Language="C#" Value="protected virtual void OnApply (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnApply(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FontDialog.OnApply(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.FontDialog.Apply" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter uma visão geral, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.FontDialog.OnApply(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.FontDialog.OnApply(System.EventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="protected int Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Options" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores para inicializar o <see cref="T:System.Windows.Forms.FontDialog" />.</summary>
+        <value>Uma combinação bit a bit de valores internos que inicializam o <see cref="T:System.Windows.Forms.FontDialog" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.FontDialog.Options%2A> propriedade corresponde aos sinalizadores usados para inicializar uma caixa de diálogo de cor usando Win32. Use as propriedades do <xref:System.Windows.Forms.FontDialog> classe para obter e definir as opções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FontDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as opções da caixa de diálogo para seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando as opções são redefinição, tachado, sublinhado e efeitos de cor estiver habilitada. As fontes listadas incluem apenas as fontes de tela suportadas pelo sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hWndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hWndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FontDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWndOwner">O identificador de janela da janela do proprietário para a caixa de diálogo comuns.</param>
+        <summary>Especifica uma caixa de diálogo.</summary>
+        <returns>
+          <see langword="true" /> se a caixa de diálogo tiver sido executada com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.FontDialog.RunDialog%2A> método é invocado quando o usuário de uma caixa de diálogo fonte chama o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptsOnly">
+      <MemberSignature Language="C#" Value="public bool ScriptsOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScriptsOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.ScriptsOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo permite a seleção de fontes para todos os não-OEM e o símbolo de caractere conjuntos, bem como o conjunto de caracteres ANSI.</summary>
+        <value>
+          <see langword="true" />Se a seleção de fontes não OEM e o símbolo de caractere conjuntos, bem como o conjunto de caracteres ANSI, é permitido. Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowApply">
+      <MemberSignature Language="C#" Value="public bool ShowApply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowApply" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.ShowApply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo contém um **aplicar** botão.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo contém um **aplicar** botão; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como aplicar as seleções em uma <xref:System.Windows.Forms.FontDialog> ao texto em um <xref:System.Windows.Forms.RichTextBox>. No evento manipulador que exibe a caixa de diálogo, o exemplo inicializa o <xref:System.Windows.Forms.FontDialog.ShowApply%2A> propriedade `true` e, em seguida, exibe o <xref:System.Windows.Forms.FontDialog>. No <xref:System.Windows.Forms.FontDialog.Apply> manipulador de eventos, o <xref:System.Windows.Forms.FontDialog.Font%2A> propriedade é atribuída para o <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[FontDialog.ShowApply#1](~/samples/snippets/cpp/VS_Snippets_Winforms/FontDialog.ShowApply/CPP/form1.cpp#1)]
+ [!code-csharp[FontDialog.ShowApply#1](~/samples/snippets/csharp/VS_Snippets_Winforms/FontDialog.ShowApply/CS/form1.cs#1)]
+ [!code-vb[FontDialog.ShowApply#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/FontDialog.ShowApply/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowColor">
+      <MemberSignature Language="C#" Value="public bool ShowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.ShowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo exibe a opção de cor.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo exibe a opção de cor; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para exibir um <xref:System.Windows.Forms.FontDialog>. Esse código requer que um <xref:System.Windows.Forms.Form> já foi criado com um <xref:System.Windows.Forms.TextBox> e botão colocada nela. Ele também requer que o `fontDialog1` foi criado. O <xref:System.Drawing.Font> contém as informações de tamanho, mas não as informações de cor.  
+  
+ [!code-cpp[Classic FontDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic FontDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FontDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic FontDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic FontDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic FontDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowEffects">
+      <MemberSignature Language="C#" Value="public bool ShowEffects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.ShowEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo contém controles que permitem que o usuário especifique opções de cor de texto, sublinhado e tachado.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo contém controles para definir opções de cor de texto; sublinhado e tachado Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FontDialog.MinSize%2A>, <xref:System.Windows.Forms.FontDialog.MaxSize%2A>, <xref:System.Windows.Forms.FontDialog.ShowEffects%2A> e <xref:System.Windows.Forms.FontDialog.FontMustExist%2A> membros e tratamento de <xref:System.Windows.Forms.FontDialog.Apply> eventos. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.FontDialog> chamado `FontDialog1` e um <xref:System.Windows.Forms.Button> chamado `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FontDialogMustExist#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FontDialogMustExist/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public bool ShowHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FontDialog.ShowHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo exibe um botão de Ajuda.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo Exibir um botão de Ajuda. Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FontDialog.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma cadeia de caracteres que inclui o nome da fonte atual selecionada na caixa de diálogo.</summary>
+        <returns>Uma cadeia de caracteres que inclui o nome da fonte selecionada no momento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

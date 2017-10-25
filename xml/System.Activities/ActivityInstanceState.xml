@@ -1,0 +1,131 @@
+<Type Name="ActivityInstanceState" FullName="System.Activities.ActivityInstanceState">
+  <TypeSignature Language="C#" Value="public enum ActivityInstanceState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ActivityInstanceState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityInstanceState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve o estado de uma instância de atividade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="Canceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ActivityInstanceState Canceled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ActivityInstanceState.Canceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a atividade está em estado cancelado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cancelado é um estado terminal para uma instância de atividade. Uma atividade cancelado concluída sem executar a função que ele foi projetado para executar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="Closed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ActivityInstanceState Closed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ActivityInstanceState.Closed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a atividade está em um estado fechado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fechado é um estado terminal para uma instância de atividade. Uma atividade fechada foi concluída com êxito e executada a função que foi projetado para executar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Executing">
+      <MemberSignature Language="C#" Value="Executing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ActivityInstanceState Executing = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ActivityInstanceState.Executing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a atividade está em um estado de execução.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulted">
+      <MemberSignature Language="C#" Value="Faulted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ActivityInstanceState Faulted = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ActivityInstanceState.Faulted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a atividade está em um estado de falha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com falha é um estado terminal para uma instância de atividade. Uma instância de atividade com falha foi anulada durante a execução, possivelmente devido a uma exceção e não executou a função que foi projetado para executar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

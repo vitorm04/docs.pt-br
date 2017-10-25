@@ -1,0 +1,94 @@
+<Type Name="TypeFilterLevel" FullName="System.Runtime.Serialization.Formatters.TypeFilterLevel">
+  <TypeSignature Language="C#" Value="public enum TypeFilterLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TypeFilterLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o nível de desserialização automática para comunicação remota do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comunicação remota do .NET framework fornece dois níveis de desserialização automática, baixa e completo. O nível de desserialização baixa ajuda a proteger contra ataques de desserialização desserializando somente os tipos associados à funcionalidade de comunicação remota mais básica. A desserialização automática de dá suporte ao nível de desserialização completa de todos os tipos se a comunicação remota dá suporte a todas as situações. Para obter uma lista do .NET Framework remoting tipos que baixa e suporte completo, consulte [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+ Você pode definir os membros dessa enumeração programaticamente ou usando um arquivo de configuração do aplicativo. Para obter exemplos, consulte [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+> [!CAUTION]
+>  Não suponha que controlar desserialização é a segurança apenas que seu aplicativo requer. Em aplicativos distribuídos, um alto grau de controle sobre serialização não pode impedir que clientes mal-intencionados interceptem a comunicação e usá-lo de alguma forma, mesmo que simplesmente que está mostrando dados para outras pessoas. Portanto, embora o nível de desserialização baixa fornece proteção contra determinados tipos de ataques com base na desserialização automático, você deve avaliar se deve usar a autenticação e criptografia para ajudar a proteger a confidencialidade dos dados ainda.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel Full = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de desserialização total para comunicação remota do .NET Framework. Ele dá suporte a todos os tipos aos quais a comunicação remota dá suporte, em todas as situações.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel Low = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O baixo nível de desserialização para comunicação remota do .NET Framework. Ele dá suporte a tipos associados à funcionalidade básica de comunicação remota.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

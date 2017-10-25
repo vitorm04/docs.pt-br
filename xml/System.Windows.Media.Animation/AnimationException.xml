@@ -1,0 +1,80 @@
+<Type Name="AnimationException" FullName="System.Windows.Media.Animation.AnimationException">
+  <TypeSignature Language="C#" Value="public sealed class AnimationException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AnimationException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.AnimationException" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada quando ocorre um erro ao animar uma propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não é usada para erros relacionados a tempo, como a criação de uma animação com uma duração de negativo ou inválido <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> e <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> configurações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.AnimationClock Clock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.AnimationClock Clock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.AnimationException.Clock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.AnimationClock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o relógio que gera os valores animados.</summary>
+        <value>O relógio que gera os valores animados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.AnimationException.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a propriedade de dependência animada.</summary>
+        <value>A propriedade de dependência animada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.IAnimatable Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.IAnimatable Target" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.AnimationException.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.IAnimatable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto animado.</summary>
+        <value>O objeto animado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

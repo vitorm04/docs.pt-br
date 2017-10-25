@@ -1,0 +1,94 @@
+<Type Name="ProjectLoadSettings" FullName="Microsoft.Build.Evaluation.ProjectLoadSettings">
+  <TypeSignature Language="C#" Value="public enum ProjectLoadSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProjectLoadSettings extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectLoadSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Sinalizadores para controlar o carregamento do projeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um enum de "sinalizadores", permitindo que as futuras configurações a serem adicionadas na forma de quebra aditivos, não.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectLoadSettings Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectLoadSettings.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectLoadSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Carga normal. Esse é o padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreMissingImports">
+      <MemberSignature Language="C#" Value="IgnoreMissingImports" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectLoadSettings IgnoreMissingImports = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectLoadSettings.IgnoreMissingImports" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectLoadSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignore arquivos de destino que não existe ao avaliar o projeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordDuplicateButNotCircularImports">
+      <MemberSignature Language="C#" Value="RecordDuplicateButNotCircularImports" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectLoadSettings RecordDuplicateButNotCircularImports = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectLoadSettings.RecordDuplicateButNotCircularImports" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectLoadSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que importa importações duplicadas, mas não circulares, incluindo o <c>ImportsIncludingDuplicates</c> propriedade deve ser gravada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RejectCircularImports">
+      <MemberSignature Language="C#" Value="RejectCircularImports" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectLoadSettings RejectCircularImports = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectLoadSettings.RejectCircularImports" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectLoadSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma exceção será lançada se qualquer importações circulares são detectadas</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

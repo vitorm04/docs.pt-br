@@ -1,0 +1,125 @@
+<Type Name="ProjectedWrapper" FullName="System.Data.Services.Internal.ProjectedWrapper">
+  <TypeSignature Language="C#" Value="public abstract class ProjectedWrapper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectedWrapper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Internal.ProjectedWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um wrapper sobre o elemento de resultado com a capacidade de um subconjunto das propriedades do projeto.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProjectedWrapper ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Internal.ProjectedWrapper.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Data.Services.Internal.ProjectedWrapper" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectedPropertyValue">
+      <MemberSignature Language="C#" Value="public object GetProjectedPropertyValue (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetProjectedPropertyValue(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Internal.ProjectedWrapper.GetProjectedPropertyValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Nome da propriedade para a qual obter o valor.</param>
+        <summary>Obtém o valor da propriedade nomeada para o resultado.</summary>
+        <returns>O valor para a propriedade nomeada do resultado.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InternalGetProjectedPropertyValue">
+      <MemberSignature Language="C#" Value="protected abstract object InternalGetProjectedPropertyValue (int propertyIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object InternalGetProjectedPropertyValue(int32 propertyIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Internal.ProjectedWrapper.InternalGetProjectedPropertyValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="propertyIndex">Índice da propriedade para a qual obter o valor.</param>
+        <summary>Obtém o valor da propriedade especificada por seu índice.</summary>
+        <returns>O valor da propriedade.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyNameList">
+      <MemberSignature Language="C#" Value="public string PropertyNameList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyNameList" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Internal.ProjectedWrapper.PropertyNameList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de nomes de propriedade como texto em um formato delimitado por vírgulas.</summary>
+        <value>Lista de nomes separados por vírgulas.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceTypeName">
+      <MemberSignature Language="C#" Value="public string ResourceTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Internal.ProjectedWrapper.ResourceTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo do <see cref="T:System.Data.Services.Providers.ResourceType" /> que representa o tipo desse resultado.</summary>
+        <value>O nome completo do tipo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

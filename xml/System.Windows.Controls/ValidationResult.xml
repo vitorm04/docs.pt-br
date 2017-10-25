@@ -1,0 +1,265 @@
+<Type Name="ValidationResult" FullName="System.Windows.Controls.ValidationResult">
+  <TypeSignature Language="C#" Value="public class ValidationResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ValidationResult" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o resultado retornado pelo <see cref="T:System.Windows.Controls.ValidationRule" />.<see cref="M:System.Windows.Controls.ValidationRule.Validate(System.Object,System.Globalization.CultureInfo)" /> método que indica se o valor marcado passado a <see cref="T:System.Windows.Controls.ValidationRule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com seus <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto. Você pode criar regras personalizadas por subclassificação o <xref:System.Windows.Controls.ValidationRule> classe e implementando o <xref:System.Windows.Controls.ValidationRule.Validate%2A> método. O <xref:System.Windows.Controls.ValidationRule.Validate%2A> método retorna um <xref:System.Windows.Controls.ValidationResult> objeto para relatar se o valor marcado é válido.  
+  
+ Para obter uma discussão detalhada sobre o processo de validação, consulte "Validação de dados" em [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação de uma regra de validação que marca o valor de entrada como inválido se ele contém caracteres não numéricos ou fora os limites inferior e superior. Se o valor for inválido, o <xref:System.Windows.Controls.ValidationResult.ErrorContent%2A> propriedade e o <xref:System.Windows.Controls.ValidationResult.IsValid%2A> propriedade retornado <xref:System.Windows.Controls.ValidationResult> são definidos para a mensagem de erro apropriada e `false` respectivamente.  
+  
+ Para o exemplo completo, consulte [como: implementar a validação de associação](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationResult (bool isValid, object errorContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isValid, object errorContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationResult.#ctor(System.Boolean,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isValid" Type="System.Boolean" />
+        <Parameter Name="errorContent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="isValid">Se o valor verificado em relação a <see cref="T:System.Windows.Controls.ValidationRule" /> é válido ou não.</param>
+        <param name="errorContent">Informações sobre a invalidade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ValidationResult" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com seus <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto. Você pode criar regras personalizadas por subclassificação o <xref:System.Windows.Controls.ValidationRule> classe e implementando o <xref:System.Windows.Controls.ValidationRule.Validate%2A> método. O <xref:System.Windows.Controls.ValidationRule.Validate%2A> método retorna um <xref:System.Windows.Controls.ValidationResult> objeto para relatar se o valor marcado é válido.  
+  
+ Para obter uma discussão detalhada sobre o processo de validação, consulte "Validação de dados" em [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação de uma regra de validação que marca o valor de entrada como inválido se ele contém caracteres não numéricos ou fora os limites inferior e superior. Se o valor for inválido, o <xref:System.Windows.Controls.ValidationResult.ErrorContent%2A> propriedade e o <xref:System.Windows.Controls.ValidationResult.IsValid%2A> propriedade retornado <xref:System.Windows.Controls.ValidationResult> são definidos para a mensagem de erro apropriada e `false` respectivamente.  
+  
+ Para o exemplo completo, consulte [como: implementar a validação de associação](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationResult.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Windows.Controls.ValidationResult" /> instância a ser comparado.</param>
+        <summary>Compara a instância especificada e a instância atual do <see cref="T:System.Windows.Controls.ValidationResult" /> para igualdade de valor.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> e esta instância do <see cref="T:System.Windows.Controls.ValidationResult" />ter os mesmos valores.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelas substituições de operador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorContent">
+      <MemberSignature Language="C#" Value="public object ErrorContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ErrorContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationResult.ErrorContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que fornece informações adicionais sobre a invalidade.</summary>
+        <value>Um objeto que fornece informações adicionais sobre a invalidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com seus <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto. Você pode criar regras personalizadas por subclassificação o <xref:System.Windows.Controls.ValidationRule> classe e implementando o <xref:System.Windows.Controls.ValidationRule.Validate%2A> método. O <xref:System.Windows.Controls.ValidationRule.Validate%2A> método retorna um <xref:System.Windows.Controls.ValidationResult> objeto para relatar se o valor marcado é válido.  
+  
+ Para obter uma discussão detalhada sobre o processo de validação, consulte "Validação de dados" em [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação de uma regra de validação que marca o valor de entrada como inválido se ele contém caracteres não numéricos ou fora os limites inferior e superior. Se o valor for inválido, o <xref:System.Windows.Controls.ValidationResult.ErrorContent%2A> propriedade e o <xref:System.Windows.Controls.ValidationResult.IsValid%2A> propriedade retornado <xref:System.Windows.Controls.ValidationResult> são definidos para a mensagem de erro apropriada e `false` respectivamente.  
+  
+ Para o exemplo completo, consulte [como: implementar a validação de associação](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationResult.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Windows.Controls.ValidationResult" />.</summary>
+        <returns>O código hash para este <see cref="T:System.Windows.Controls.ValidationResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationResult.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o valor selecionado em relação a <see cref="T:System.Windows.Controls.ValidationRule" /> é válido.</summary>
+        <value>
+          <see langword="true" /> se o valor for válido; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com seus <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto. Você pode criar regras personalizadas por subclassificação o <xref:System.Windows.Controls.ValidationRule> classe e implementando o <xref:System.Windows.Controls.ValidationRule.Validate%2A> método. O <xref:System.Windows.Controls.ValidationRule.Validate%2A> método retorna um <xref:System.Windows.Controls.ValidationResult> objeto para relatar se o valor marcado é válido.  
+  
+ Para obter uma discussão detalhada sobre o processo de validação, consulte "Validação de dados" em [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação de uma regra de validação que marca o valor de entrada como inválido se ele contém caracteres não numéricos ou fora os limites inferior e superior. Se o valor for inválido, o <xref:System.Windows.Controls.ValidationResult.ErrorContent%2A> propriedade e o <xref:System.Windows.Controls.ValidationResult.IsValid%2A> propriedade retornado <xref:System.Windows.Controls.ValidationResult> são definidos para a mensagem de erro apropriada e `false` respectivamente.  
+  
+ Para o exemplo completo, consulte [como: implementar a validação de associação](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Controls.ValidationResult left, System.Windows.Controls.ValidationResult right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Windows.Controls.ValidationResult left, class System.Windows.Controls.ValidationResult right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationResult.op_Equality(System.Windows.Controls.ValidationResult,System.Windows.Controls.ValidationResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Controls.ValidationResult" />
+        <Parameter Name="right" Type="System.Windows.Controls.ValidationResult" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância a ser comparado.</param>
+        <param name="right">A segunda instância a ser comparado.</param>
+        <summary>Compara dois <see cref="T:System.Windows.Controls.ValidationResult" /> objetos para igualdade de valor.</summary>
+        <returns>
+          <see langword="true" /> se os dois objetos forem iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Controls.ValidationResult left, System.Windows.Controls.ValidationResult right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Windows.Controls.ValidationResult left, class System.Windows.Controls.ValidationResult right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationResult.op_Inequality(System.Windows.Controls.ValidationResult,System.Windows.Controls.ValidationResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Controls.ValidationResult" />
+        <Parameter Name="right" Type="System.Windows.Controls.ValidationResult" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância a ser comparado.</param>
+        <param name="right">A segunda instância a ser comparado.</param>
+        <summary>Compara dois <see cref="T:System.Windows.Controls.ValidationResult" /> objetos para desigualdade de valor.</summary>
+        <returns>
+          <see langword="true" />Se os valores não forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidResult">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ValidationResult ValidResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Controls.ValidationResult ValidResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationResult.ValidResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância válida de <see cref="T:System.Windows.Controls.ValidationResult" />.</summary>
+        <value>Uma instância válida de <see cref="T:System.Windows.Controls.ValidationResult" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,50 @@
+<Type Name="IModalService" FullName="System.Activities.Presentation.IModalService">
+  <TypeSignature Language="C#" Value="public interface IModalService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IModalService" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.IModalService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Habilita a notificação para um aplicativo host que uma caixa de diálogo modal é exibida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns aplicativos que precisam de designers de host a ser notificado quando a caixa de diálogo modal foi invocada. Visual Studio é um exemplo de um host. O <xref:System.Activities.Presentation.IModalService> interface fornece uma interface para comunicar o status atual de janela restrito.  
+  
+ O Designer de fluxo de trabalho do Windows chama o <xref:System.Activities.Presentation.IModalService.SetModalState%2A> método. Quando o `isModal` parâmetro está definido como `true`, o host é notificado de que uma caixa de diálogo modal é exibida.  
+  
+ Este é um serviço opcional. Se um aplicativo host, não importa sobre o status de janela restrito, você não precisa usar o serviço.  
+  
+ Na implementação atual, se uma caixa de mensagem do Windows Presentation Foundation (WPF) (que é uma caixa de diálogo modal) for chamada, o <xref:System.Activities.Presentation.IModalService.SetModalState%2A> não for chamado. Se o aplicativo de host requer essas informações, outra solução alternativa deve ser criada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetModalState">
+      <MemberSignature Language="C#" Value="public void SetModalState (bool isModal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetModalState(bool isModal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IModalService.SetModalState(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isModal" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isModal">Se definido como <see langword="true" />, uma caixa de diálogo modal está sendo exibida.</param>
+        <summary>Notifica o aplicativo host que uma caixa de diálogo modal está sendo exibida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,901 @@
+<Type Name="GroupCollection" FullName="System.Text.RegularExpressions.GroupCollection">
+  <TypeSignature Language="C#" Value="public class GroupCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit GroupCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.GroupCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Retorna o conjunto de grupos capturados em um única correspondência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.GroupCollection> classe é uma classe de coleção com base zero que consiste em um ou mais <xref:System.Text.RegularExpressions.Group> capturadas de objetos que fornecem informações sobre grupos em uma correspondência da expressão regular. A coleção é imutável (somente leitura) e não tem construtor público. Um <xref:System.Text.RegularExpressions.GroupCollection> retornado pelo objeto de <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> propriedade.  
+  
+ A coleção contém um ou mais <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> objetos. Se a correspondência for bem-sucedida, o primeiro elemento na coleção contém o <xref:System.Text.RegularExpressions.Group> objeto que corresponde à correspondência inteira. Cada elemento subsequente representa um grupo capturado, se a expressão regular inclui grupos de captura. Correspondências de grupos de captura (sem nome) numerados são exibidos em ordem numérica antes de correspondências de grupos de captura nomeados. Se a correspondência for bem-sucedida, a coleção contém um único <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> do objeto cuja <xref:System.Text.RegularExpressions.Group.Success%2A> é de propriedade `false` e cuja <xref:System.Text.RegularExpressions.Capture.Value%2A> propriedade é igual a <xref:System.String.Empty?displayProperty=nameWithType>. Para obter mais informações, consulte a seção "Agrupamento constrói e Regular Expression objetos" a [construções de agrupamento](~/docs/standard/base-types/grouping-constructs-in-regular-expressions.md) artigo.  
+  
+ Para percorrer os membros da coleção, você deve usar a construção de iteração da coleção fornecida pelo seu idioma (como `foreach` em c# e `For Each`...`Next` no Visual Basic) em vez de recuperar o enumerador retornado pelo <xref:System.Text.RegularExpressions.GroupCollection.GetEnumerator%2A> método. Além disso, você pode acessar grupos capturados numerados individuais do <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.Int32%29> propriedade (indexador em c#) e você pode acessar grupos capturados nomeados individuais do <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.String%29> propriedade. Observe que você pode recuperar uma matriz que contém os números e os nomes dos grupos de captura todos os chamando o <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> métodos, respectivamente. Ambos são métodos de instância e exigem que você instancia um <xref:System.Text.RegularExpressions.Regex> objeto que representa a expressão regular a ser correspondido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma expressão regular com grupos de captura para extrair informações sobre marcas comerciais e registradas usadas no texto. O padrão de expressão regular é `\b(\w+?)([\u00AE\u2122])`, que é interpretado como mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`\b`|Procure um limite de palavra.|  
+|`(\w+?)`|Procure um ou mais caracteres de texto. Juntos, eles formam o nome de marca registrado. (Observe que essa expressão regular supõe que marca consiste em uma única palavra). Este é o primeiro grupo de captura.|  
+|`([\u00AE\u2122])`|Procure por uma o® ou™ caractere. Este é o segundo grupo de captura.|  
+  
+ Para cada correspondência, o <xref:System.Text.RegularExpressions.GroupCollection> contém três <xref:System.Text.RegularExpressions.Group> objetos. O primeiro objeto contém a cadeia de caracteres que corresponde à expressão regular inteira. O segundo objeto, que representa o primeiro grupo capturado, contém o nome do produto. O terceiro objeto, que representa o segundo grupo capturado, contém a marca ou registrado o símbolo de marca.  
+  
+ [!code-csharp[System.Text.RegularExpressions.GroupCollection#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.GroupCollection/cs/Example1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.GroupCollection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.GroupCollection/vb/Example1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz para a qual a coleção deverá ser copiada.</param>
+        <param name="arrayIndex">A posição na matriz de destino onde a cópia está começar.</param>
+        <summary>Copia todos os elementos da coleção para o início da matriz fornecida no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como toda a coleção é copiada para a matriz começando no índice especificado, a matriz de destino deve ser pelo menos tão grande quanto a coleção.  
+  
+> [!WARNING]
+>  Este membro não está presente no [!INCLUDE[net_portable](~/includes/net-portable-md.md)]. Se você estiver desenvolvendo aplicativos direcionados a [!INCLUDE[net_portable](~/includes/net-portable-md.md)], use o <xref:System.Text.RegularExpressions.GroupCollection.System%23Collections%23ICollection%23CopyTo%2A?displayProperty=nameWithType> método em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir extrai cada palavra de uma sentença e captura-o em um grupo de captura, o <xref:System.Text.RegularExpressions.GroupCollection.CopyTo%2A> método é usado para copiar os elementos em cada correspondência <xref:System.Text.RegularExpressions.GroupCollection> grupos de objeto para uma matriz que contém a captura de todas as correspondências. As palavras capturadas individuais são exibidas no console.  
+  
+ [!code-csharp[System.Text.RegularExpressions.GroupCollection.CopyTo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.groupcollection.copyto/cs/copyto1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.GroupCollection.CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.groupcollection.copyto/vb/copyto1.vb#1)]  
+  
+ A expressão regular é definida da seguinte maneira:  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`\b`|Corresponder a um limite de palavra.|  
+|`(\S+?)`|Corresponde a um ou mais caracteres não seja espaço em branco. Atribuí-los para o primeiro grupo de capturando.|  
+|`\b`|Corresponder a um limite de palavra.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="arrayIndex" />está fora dos limites de <paramref name="array" />.  
+  
+ -ou-  
+  
+ <paramref name="arrayIndex" />Além de <see cref="P:System.Text.RegularExpressions.GroupCollection.Count" /> está fora dos limites de <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Text.RegularExpressions.Group[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Text.RegularExpressions.Group[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.CopyTo(System.Text.RegularExpressions.Group[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Text.RegularExpressions.Group[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="arrayIndex">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o número de grupos na coleção.</summary>
+        <value>O número de grupos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.GroupCollection> objeto sempre tem pelo menos um membro. Se uma correspondência for bem-sucedida, o <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Text.RegularExpressions.GroupCollection> objeto que contém um único membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um enumerador iterado por meio da coleção.</summary>
+        <returns>Um enumerador que contém todos os <see cref="T:System.Text.RegularExpressions.Group" /> objetos no <see cref="T:System.Text.RegularExpressions.GroupCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de chamar o <xref:System.Text.RegularExpressions.GroupCollection.GetEnumerator%2A> método para recuperar um enumerador que permite que você percorrer o <xref:System.Text.RegularExpressions.Group> objetos na coleção, você deve usar a construção de iteração de grupo (como `foreach` em c# e `For Each`...`Next` no Visual Basic), que é fornecido pela linguagem de programação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso a <see cref="T:System.Text.RegularExpressions.GroupCollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  Este membro não está presente no [!INCLUDE[net_portable](~/includes/net-portable-md.md)]. Se você estiver desenvolvendo aplicativos direcionados a [!INCLUDE[net_portable](~/includes/net-portable-md.md)], use o <xref:System.Text.RegularExpressions.CaptureCollection.System%23Collections%23ICollection%23IsSynchronized%2A?displayProperty=nameWithType> propriedade em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.Group this[int groupnum] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.Group Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Group</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupnum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="groupnum">O índice baseado em zero do membro da coleção a ser recuperado.</param>
+        <summary>Permite acesso a um membro da coleção pelo índice de inteiros.</summary>
+        <value>O membro da coleção especificado pelo <paramref name="groupnum" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.Int32%29> propriedade é o índice (em c#) ou a propriedade padrão (no Visual Basic) da <xref:System.Text.RegularExpressions.GroupCollection> classe. Ele permite que você enumerar os membros da coleção usando um `foreach` instrução em c# ou um `For Each` instrução no Visual Basic.  
+  
+ Você também pode usar essa propriedade para recuperar grupos capturados individuais por seu número de índice. Você pode recuperar uma matriz que contém os números de todos os grupos de captura em uma expressão regular chamando-se a instância <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> método. Você também pode mapear os grupos de captura nomeados para seus números chamando-se a instância <xref:System.Text.RegularExpressions.Regex.GroupNumberFromName%2A?displayProperty=nameWithType> método.  
+  
+ Você pode determinar o número de itens na coleção por recuperar o valor da <xref:System.Text.RegularExpressions.GroupCollection.Count%2A> propriedade. Os valores válidos para o `groupnum` intervalo de parâmetro de 0 a menos que o número de itens na coleção.  
+  
+ O <xref:System.Text.RegularExpressions.GroupCollection> objeto retornado pelo <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> propriedade sempre tem pelo menos um membro. Se o mecanismo de expressão regular não pode localizar nenhuma correspondência em uma cadeia de entrada específica, a única <xref:System.Text.RegularExpressions.Group> objeto na coleção tem seu <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType> propriedade definida como `false` e sua `Group.Value` propriedade definida como <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+ Se `groupnum` não é o índice de um membro da coleção, ou se `groupnum` é o índice de um grupo de captura não foi correspondente na cadeia de entrada, o método retorna um <xref:System.Text.RegularExpressions.Group> do objeto cuja <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType> é de propriedade `false` e cuja `Group.Value` é de propriedade <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma expressão regular que consiste em dois grupos numerados. O primeiro grupo de captura uma ou mais dígitos consecutivos. O segundo grupo corresponde a um único caractere. Como o mecanismo de expressão regular parece para zero ou uma ocorrência do primeiro grupo, ele não sempre encontrar uma correspondência mesmo se a correspondência da expressão regular é bem-sucedida. O exemplo ilustra, em seguida, o resultado quando o <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.Int32%29> propriedade é usada para recuperar um grupo sem correspondência, um grupo correspondente e um grupo que não está definido na expressão regular. O exemplo define um padrão de expressão regular `(\d+)*(\w)\2`, que é interpretado como mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`(\d+)*`|Corresponde a uma ou mais ocorrências de um dígito decimal. Este é o primeiro grupo de captura. Corresponde a esse padrão de zero ou um tempo.|  
+|`(\w)`|Este é o segundo grupo de captura.|  
+|`\k`|Corresponde a cadeia de caracteres capturada por segundo grupo de capturando.|  
+  
+ [!code-csharp[System.Text.RegularExpressions.GroupCollection.Item#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.groupcollection.item/cs/item3.cs#2)]
+ [!code-vb[System.Text.RegularExpressions.GroupCollection.Item#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.groupcollection.item/vb/item3.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.Group this[string groupname] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.Group Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Group</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupname">O nome de um grupo de captura.</param>
+        <summary>Habilita o acesso a um membro da coleção pelo índice de cadeia de caracteres.</summary>
+        <value>O membro da coleção especificado pelo <paramref name="groupname" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `groupName`pode ser o nome de um grupo de captura é definido pelo `(?<` *nome* `>)` elemento em uma expressão regular ou a representação de cadeia de caracteres do número de um grupo de captura é definido por uma construção de agrupamento. Para obter mais informações sobre grupos em expressões regulares, consulte [construções de agrupamento](~/docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+  
+ Você pode recuperar os nomes de todos os grupos capturados em um <xref:System.Text.RegularExpressions.Regex> objeto chamando o <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> método. Você também pode mapear os números de grupos em uma expressão regular para seus nomes de captura ao chamar o <xref:System.Text.RegularExpressions.Regex.GroupNameFromNumber%2A?displayProperty=nameWithType> método. Os nomes individuais da matriz podem ser passados para o <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.String%29> propriedade para recuperar a cadeia de caracteres capturada.  
+  
+ Se `groupname` não é o nome de um grupo de captura na coleção, ou se `groupname` é o nome de um grupo de captura não foi correspondente na cadeia de entrada, o método retorna um <xref:System.Text.RegularExpressions.Group> do objeto cuja <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType> é de propriedade `false` e cuja `Group.Value` é de propriedade <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma expressão regular que consiste em dois grupos nomeados. O primeiro grupo, `numbers`, captura uma ou mais dígitos consecutivos. O segundo grupo, `letter`, corresponde a um único caractere. Porque o mecanismo de expressão regular procura zero ou uma ocorrência do padrão definido pelo `numbers` grupo, o `numbers` grupo não está sempre presente mesmo se uma correspondência for bem-sucedida. O exemplo ilustra, em seguida, o resultado quando o <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.String%29> propriedade é usada para recuperar um grupo sem correspondência, um grupo correspondente e um grupo que não está definido na expressão regular. O exemplo define um padrão de expressão regular `(?<numbers>\d+)*(?<letter>\w)\k<letter>`, que é interpretado como mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`(?<numbers>\d+)*`|Corresponde a uma ou mais ocorrências de um dígito decimal. O nome de `numbers` grupo de captura. Corresponde a esse padrão de zero ou um tempo.|  
+|`(?<letter>\w)`|Corresponde um caractere de palavra única. O nome de `letter` grupo de captura.|  
+|`\k<letter>`|Corresponde a cadeia de caracteres capturada pelo `letter` grupo de captura.|  
+  
+ [!code-csharp[System.Text.RegularExpressions.GroupCollection.Item#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.groupcollection.item/cs/item2.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.GroupCollection.Item#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.groupcollection.item/vb/item2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Text.RegularExpressions.GroupCollection" />.</summary>
+        <value>Uma cópia do <see cref="T:System.Text.RegularExpressions.Match" /> objeto para sincronizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  Este membro não está presente no [!INCLUDE[net_portable](~/includes/net-portable-md.md)]. Se você estiver desenvolvendo aplicativos direcionados a [!INCLUDE[net_portable](~/includes/net-portable-md.md)], use o <xref:System.Text.RegularExpressions.GroupCollection.System%23Collections%23ICollection%23SyncRoot%2A?displayProperty=nameWithType> propriedade em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;Group&gt;.Add (System.Text.RegularExpressions.Group item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Add(class System.Text.RegularExpressions.Group item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#ICollection&lt;System#Text#RegularExpressions#Group&gt;#Add(System.Text.RegularExpressions.Group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Text.RegularExpressions.Group" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Clear">
+      <MemberSignature Language="C#" Value="void ICollection&lt;Group&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#ICollection&lt;System#Text#RegularExpressions#Group&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Contains">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;Group&gt;.Contains (System.Text.RegularExpressions.Group item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Contains(class System.Text.RegularExpressions.Group item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#ICollection&lt;System#Text#RegularExpressions#Group&gt;#Contains(System.Text.RegularExpressions.Group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Text.RegularExpressions.Group" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;Group&gt;.Remove (System.Text.RegularExpressions.Group item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Text.RegularExpressions.Group&gt;.Remove(class System.Text.RegularExpressions.Group item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#ICollection&lt;System#Text#RegularExpressions#Group&gt;#Remove(System.Text.RegularExpressions.Group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Text.RegularExpressions.Group" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Text.RegularExpressions.Group&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Text.RegularExpressions.Group&gt; IEnumerable&lt;Group&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Text.RegularExpressions.Group&gt; System.Collections.Generic.IEnumerable&lt;System.Text.RegularExpressions.Group&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#IEnumerable&lt;System#Text#RegularExpressions#Group&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Text.RegularExpressions.Group&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.IndexOf">
+      <MemberSignature Language="C#" Value="int IList&lt;Group&gt;.IndexOf (System.Text.RegularExpressions.Group item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.IndexOf(class System.Text.RegularExpressions.Group item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#IList&lt;System#Text#RegularExpressions#Group&gt;#IndexOf(System.Text.RegularExpressions.Group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Text.RegularExpressions.Group" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.Insert">
+      <MemberSignature Language="C#" Value="void IList&lt;Group&gt;.Insert (int index, System.Text.RegularExpressions.Group item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.Insert(int32 index, class System.Text.RegularExpressions.Group item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#IList&lt;System#Text#RegularExpressions#Group&gt;#Insert(System.Int32,System.Text.RegularExpressions.Group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Text.RegularExpressions.Group" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.Item">
+      <MemberSignature Language="C#" Value="System.Text.RegularExpressions.Group System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.Group System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#IList&lt;System#Text#RegularExpressions#Group&gt;#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Group</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList&lt;Group&gt;.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;System.Text.RegularExpressions.Group&gt;.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#Generic#IList&lt;System#Text#RegularExpressions#Group&gt;#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="arrayIndex">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.GroupCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

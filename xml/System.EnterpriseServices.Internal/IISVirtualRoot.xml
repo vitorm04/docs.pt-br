@@ -1,0 +1,130 @@
+<Type Name="IISVirtualRoot" FullName="System.EnterpriseServices.Internal.IISVirtualRoot">
+  <TypeSignature Language="C#" Value="public class IISVirtualRoot : System.EnterpriseServices.Internal.IComSoapIISVRoot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IISVirtualRoot extends System.Object implements class System.EnterpriseServices.Internal.IComSoapIISVRoot" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.IISVirtualRoot" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.IComSoapIISVRoot</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d8013ef1-730b-45e2-ba24-874b7242c425")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria e exclui as raízes virtuais do serviços de informações da Internet (IIS) 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.Internal.IComSoapIISVRoot> interface define os métodos para criação e exclusão de raízes virtuais do IIS 6.0.  
+  
+ Essa interface é implementada somente pelo <xref:System.EnterpriseServices.Internal.IISVirtualRoot> classe e é usado apenas com a infraestrutura .NET Framework durante a criação de uma habilitado para SOAP COM+ raiz virtual do aplicativo.  
+  
+ <xref:System.EnterpriseServices.Internal.IComSoapIISVRoot>não precisam ser implementados diretamente no seu código. Em vez disso, use o <xref:System.EnterpriseServices.Internal.Publish> de classe que implementa o <xref:System.EnterpriseServices.Internal.IComSoapPublisher> interface que contém o <xref:System.EnterpriseServices.Internal.IComSoapPublisher.CreateVirtualRoot%2A> e <xref:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot%2A> métodos. No entanto, <xref:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot%2A> não é totalmente implementado por <xref:System.EnterpriseServices.Internal.Publish>.  
+  
+ <xref:System.EnterpriseServices.Internal.IISVirtualRoot>é usado internamente pelo .NET Framework. Você não precisa usá-lo diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IISVirtualRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.Internal.IISVirtualRoot" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create (string RootWeb, string inPhysicalDirectory, string VirtualDirectory, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Create(string RootWeb, string inPhysicalDirectory, string VirtualDirectory, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.Create(System.String,System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootWeb" Type="System.String" />
+        <Parameter Name="inPhysicalDirectory" Type="System.String" />
+        <Parameter Name="VirtualDirectory" Type="System.String" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootWeb">Uma cadeia de caracteres com o valor <c>"IIS://localhost/W3SVC/1/ROOT"</c> que representa o servidor Web raiz.</param>
+        <param name="inPhysicalDirectory">O caminho físico da raiz virtual, que corresponde à <c>PhysicalPath</c> do <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" /> método.</param>
+        <param name="VirtualDirectory">O nome da raiz virtual, que corresponde à <c>Raiz_virtual</c> de <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" />.</param>
+        <param name="Error">Uma cadeia de caracteres no qual uma mensagem de erro pode ser gravada.</param>
+        <summary>Cria uma raiz virtual do Internet Information Services (IIS).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não precisa chamar o <xref:System.EnterpriseServices.Internal.IISVirtualRoot.Create%2A> método do seu código. Em vez disso, use o <xref:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (string RootWeb, string PhysicalDirectory, string VirtualDirectory, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(string RootWeb, string PhysicalDirectory, string VirtualDirectory, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.Delete(System.String,System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootWeb" Type="System.String" />
+        <Parameter Name="PhysicalDirectory" Type="System.String" />
+        <Parameter Name="VirtualDirectory" Type="System.String" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootWeb">O servidor da Web raiz, conforme especificado por <c>RootWebServer</c> do <see cref="M:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot(System.String,System.String,System.String@)" /> método.</param>
+        <param name="PhysicalDirectory">O caminho físico da raiz virtual.</param>
+        <param name="VirtualDirectory">O nome da raiz virtual.</param>
+        <param name="Error">Uma cadeia de caracteres no qual uma mensagem de erro pode ser gravada.</param>
+        <summary>Exclui uma raiz virtual do Internet Information Services (IIS).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mesmo que ele é público, o <xref:System.EnterpriseServices.Internal.IISVirtualRoot.Delete%2A> método não deve ser chamado diretamente.  
+  
+ Como alternativa, há o <xref:System.EnterpriseServices.Internal.Publish.DeleteVirtualRoot%2A> método. No entanto, esse método não é totalmente implementado.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

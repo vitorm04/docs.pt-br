@@ -1,0 +1,2019 @@
+<Type Name="ToolStripTextBox" FullName="System.Windows.Forms.ToolStripTextBox">
+  <TypeSignature Language="C#" Value="public class ToolStripTextBox : System.Windows.Forms.ToolStripControlHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripTextBox extends System.Windows.Forms.ToolStripControlHost" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripTextBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripControlHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Design.ToolStripItemDesignerAvailability(System.Windows.Forms.Design.ToolStripItemDesignerAvailability.ToolStrip | System.Windows.Forms.Design.ToolStripItemDesignerAvailability.MenuStrip | System.Windows.Forms.Design.ToolStripItemDesignerAvailability.ContextMenuStrip)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma caixa de texto em um <see cref="T:System.Windows.Forms.ToolStrip" /> que permite que o usuário insira um texto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripTextBox>é o <xref:System.Windows.Forms.TextBox> otimizado para hospedagem em um <xref:System.Windows.Forms.ToolStrip>. Um subconjunto de eventos e propriedades do controle hospedado são expostos no <xref:System.Windows.Forms.ToolStripTextBox> nível, mas subjacente <xref:System.Windows.Forms.TextBox> controle é totalmente acessível por meio de <xref:System.Windows.Forms.ToolStripTextBox.TextBox%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox> controle permite que o usuário insira texto em um aplicativo. Este controle tem funcionalidade adicional que não foi encontrada no padrão Windows controle caixa de texto, incluindo a edição de várias linhas.  
+  
+ Normalmente, um <xref:System.Windows.Forms.ToolStripTextBox> controle é usado para exibir uma única linha de texto ou a aceita como entrada. Você pode usar o <xref:System.Windows.Forms.ToolStripTextBox.Multiline%2A> para permitir várias linhas de texto a ser exibido ou inserido. Definir o <xref:System.Windows.Forms.ToolStripTextBox.AcceptsTab%2A> e <xref:System.Windows.Forms.ToolStripTextBox.AcceptsReturn%2A> propriedades `true` para permitir maior manipulação de texto em um multiline <xref:System.Windows.Forms.ToolStripTextBox> controle.  
+  
+ Você pode limitar a quantidade de texto inserido em uma <xref:System.Windows.Forms.ToolStripTextBox> controle definindo o <xref:System.Windows.Forms.ToolStripTextBox.MaxLength%2A> propriedade como um número específico de caracteres. Use o <xref:System.Windows.Forms.ToolStripTextBox.CharacterCasing%2A> propriedade para permitir que o usuário digite apenas letras maiusculas, letras minúsculas apenas, ou uma combinação de caracteres maiusculos e minúsculos no <xref:System.Windows.Forms.ToolStripTextBox> controle.  
+  
+ Para restringir o texto seja inserido em um <xref:System.Windows.Forms.ToolStripTextBox> controle, você pode criar um manipulador de eventos para o <xref:System.Windows.Forms.Control.KeyDown> evento para validar cada caractere digitado no controle. Você também pode restringir todas as entrada de dados em um <xref:System.Windows.Forms.ToolStripTextBox> controle definindo o <xref:System.Windows.Forms.ToolStripTextBox.ReadOnly%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.ToolStripTextBox> com várias configurações de propriedade comuns, incluindo opções de preenchimento automático.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripTextBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripTextBox (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolStripTextBox" /> com o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripTextBox (System.Windows.Forms.Control c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="c" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="c">O controle da qual derivar a <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolStripTextBox" /> classe derivada de um controle base.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsReturn">
+      <MemberSignature Language="C#" Value="public bool AcceptsReturn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptsReturn" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.AcceptsReturn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se pressionar ENTER em um controle <see cref="T:System.Windows.Forms.TextBox" /> multilinha cria uma nova linha de texto no controle ou ativa o botão padrão para o formulário.</summary>
+        <value>
+          <see langword="true" /> se a tecla ENTER criar uma nova linha de texto em uma versão multilinha do controle; <see langword="false" /> se a tecla ENTER ativar o botão padrão para o formulário. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor dessa propriedade é `false`, o usuário deve pressionar CTRL + ENTER para criar uma nova linha em um multiline <xref:System.Windows.Forms.ToolStripTextBox> controle. Se não houver nenhum botão padrão para o formulário, em seguida, a tecla ENTER sempre criará uma nova linha de texto no controle, não importa qual o valor dessa propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.AcceptsReturn%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsTab">
+      <MemberSignature Language="C#" Value="public bool AcceptsTab { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptsTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.AcceptsTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se pressionar a tecla TAB em um controle de caixa de texto multilinha digita um caractere TAB no controle em vez de mover o foco para o próximo controle na ordem de tabulação.</summary>
+        <value>
+          <see langword="true" /> se os usuários puderem inserir tabulações em uma caixa de texto multilinha usando a tecla TAB; <see langword="false" /> se pressionar a tecla TAB mover o foco. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ToolStripTextBox.AcceptsTab%2A> está definida como `true`, o usuário deve pressionar CTRL + TAB para mover o foco para o próximo controle na ordem de tabulação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.AcceptsTab%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsTabChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AcceptsTabChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AcceptsTabChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.AcceptsTabChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.AcceptsTab" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripTextBox.AcceptsTabChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripTextBox> chamado `ToolStripTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripTextBox.AcceptsTabChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#612](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#612)]
+ [!code-vb[System.Windows.Forms.EventExamples#612](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#612)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.AppendText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser acrescentado para o conteúdo atual do <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</param>
+        <summary>Acrescenta texto para o texto atual do <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteCustomSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteStringCollection AutoCompleteCustomSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AutoCompleteStringCollection AutoCompleteCustomSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteStringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de cadeia de caracteres personalizada a ser usada quando o <see cref="P:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource" /> está definida como <see langword="CustomSource" />.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AutoCompleteStringCollection" /> para usar com <see cref="P:System.Windows.Forms.TextBox.AutoCompleteSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A>, e <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedades para criar um <xref:System.Windows.Forms.ToolStripTextBox> que preenche automaticamente cadeias de caracteres de entrada, comparando o prefixo que está sendo inserido para os prefixos de todas as cadeias de caracteres em uma fonte de manutenção. Isso é útil para <xref:System.Windows.Forms.ToolStripTextBox> controles no qual URLs, endereços, nomes de arquivos ou comandos serão frequentemente inseridos.  
+  
+ O uso do <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A> propriedade é opcional, mas você deve definir o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedade `CustomSource` para usar <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A>.  
+  
+ Você deve usar o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A> e <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedades juntas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteMode AutoCompleteMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoCompleteMode AutoCompleteMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que controla como o preenchimento automático funciona para o <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.AutoCompleteMode" />. O padrão é <see cref="F:System.Windows.Forms.AutoCompleteMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A>, e <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedades para criar um <xref:System.Windows.Forms.ToolStripTextBox> que preenche automaticamente cadeias de caracteres de entrada, comparando o prefixo que está sendo inserido para os prefixos de todas as cadeias de caracteres em uma fonte de manutenção. Isso é útil para <xref:System.Windows.Forms.ToolStripTextBox> controles no qual URLs, endereços, nomes de arquivos ou comandos serão frequentemente inseridos.  
+  
+ O uso do <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A> propriedade é opcional, mas você deve definir o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedade `CustomSource` para usar <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A>.  
+  
+ Você deve usar o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A> e <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedades juntas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteSource AutoCompleteSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoCompleteSource AutoCompleteSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a origem de cadeias de caracteres completas usadas para o preenchimento automático.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.AutoCompleteSource" />. O padrão é <see cref="F:System.Windows.Forms.AutoCompleteSource.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A>, e <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedades para criar um <xref:System.Windows.Forms.ToolStripTextBox> que preenche automaticamente cadeias de caracteres de entrada, comparando o prefixo que está sendo inserido para os prefixos de todas as cadeias de caracteres em uma fonte de manutenção. Isso é útil para <xref:System.Windows.Forms.ToolStripTextBox> controles no qual URLs, endereços, nomes de arquivos ou comandos serão frequentemente inseridos.  
+  
+ O uso do <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A> propriedade é opcional, mas você deve definir o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedade `CustomSource` para usar <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteCustomSource%2A>.  
+  
+ Você deve usar o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteMode%2A> e <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedades juntas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.AutoCompleteSource%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>A imagem de tela de fundo exibida no controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>Um valor <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de borda de <see cref="T:System.Windows.Forms.ToolStripTextBox" /> controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.BorderStyle" />. O padrão é <see cref="F:System.Windows.Forms.BorderStyle.Fixed3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.ToolStripTextBox.BorderStyle%2A> propriedade para criar controles de estilo simples e sem borda, além de controle padrão tridimensional.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.BorderStyle%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BorderStyleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BorderStyleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.BorderStyleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.BorderStyle" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripTextBox.BorderStyleChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripTextBox> chamado `ToolStripTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripTextBox.BorderStyleChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#613](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#613)]
+ [!code-vb[System.Windows.Forms.EventExamples#613](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#613)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUndo">
+      <MemberSignature Language="C#" Value="public bool CanUndo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUndo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.CanUndo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o usuário pode desfazer a operação anterior em um <see cref="T:System.Windows.Forms.ToolStripTextBox" /> controle.</summary>
+        <value>
+          <see langword="true" /> se o usuário puder desfazer a operação anterior executada em um controle de caixa de texto; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método retornar `true`, você pode chamar o <xref:System.Windows.Forms.ToolStripTextBox.Undo%2A> método para desfazer a última operação em um <xref:System.Windows.Forms.ToolStripTextBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterCasing">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CharacterCasing CharacterCasing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CharacterCasing CharacterCasing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.CharacterCasing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CharacterCasing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o controle <see cref="T:System.Windows.Forms.ToolStripTextBox" /> modifica as maiúsculas e minúsculas de caracteres quando eles são digitados.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.CharacterCasing" />. O padrão é <see cref="F:System.Windows.Forms.CharacterCasing.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> propriedade para alterar o caso de caracteres conforme exigido pelo seu aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.CharacterCasing%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todo o texto do <see cref="T:System.Windows.Forms.ToolStripTextBox" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearUndo">
+      <MemberSignature Language="C#" Value="public void ClearUndo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearUndo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.ClearUndo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa as informações sobre a operação mais recente do buffer de desfazer o <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para impedir que uma operação desfazer de repetição, com base no estado do seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copia a seleção atual no <see cref="T:System.Windows.Forms.ToolStripTextBox" /> na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método, em vez de usar o <xref:System.Windows.Forms.Clipboard> classe, para copiar o texto no <xref:System.Windows.Forms.ToolStripTextBox> e colocá-lo na área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move a seleção atual no <see cref="T:System.Windows.Forms.ToolStripTextBox" /> na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só será recortar texto do <xref:System.Windows.Forms.ToolStripTextBox> se o texto é selecionado no controle. Você pode usar esse método, em vez de usar o <xref:System.Windows.Forms.Clipboard> classe, para copiar o texto no <xref:System.Windows.Forms.ToolStripTextBox> e mova-o para a área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o espaçamento, em pixels, entre a <see cref="T:System.Windows.Forms.ToolStripTextBox" /> e itens adjacentes.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Padding" /> valor que representa o espaçamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <value>O padrão <see cref="T:System.Drawing.Size" /> da <see cref="T:System.Windows.Forms.ToolStripTextBox" /> em pixels. O tamanho padrão é 100 pixels por 25.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para manter o melhor desempenho, você não deve definir o <xref:System.Drawing.Size> de um <xref:System.Windows.Forms.ToolStripTextBox> em seu construtor. É o método preferido substituir o <xref:System.Windows.Forms.ToolStripTextBox.DefaultSize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="P:System.Windows.Forms.ToolStripTextBox.DefaultSize" /> propriedade em uma classe derivada, é preferível para retornar um <see cref="T:System.Drawing.Size" /> do objeto com as dimensões desejadas, em vez de substituir todos os a implementação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DeselectAll">
+      <MemberSignature Language="C#" Value="public void DeselectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeselectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.DeselectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica que o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.SelectionLength" /> é zero, para que nenhum caractere seja selecionado no controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharFromPosition">
+      <MemberSignature Language="C#" Value="public char GetCharFromPosition (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance char GetCharFromPosition(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetCharFromPosition(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O local do qual procurar o próximo caractere.</param>
+        <summary>Recupera o caractere que está mais próximo do local especificado no controle.</summary>
+        <returns>O caractere no local especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o local especificado no `pt` parâmetro está fora da área cliente do controle, o primeiro caractere da cadeia de caracteres mais próximo para o ponto especificado em `pt` é retornado. Você pode usar esse método para determinar quais caracteres estiverem próximos a um ponto específico dentro do controle. Você pode usar esse valor para executar operações no texto nesse local.  
+  
+> [!NOTE]
+>  Se o local especificado no `pt` parâmetro está localizado no lado direito da área cliente do controle, o último caractere da cadeia de caracteres mais próximo para o ponto especificado em `pt` é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharIndexFromPosition">
+      <MemberSignature Language="C#" Value="public int GetCharIndexFromPosition (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetCharIndexFromPosition(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetCharIndexFromPosition(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O local de pesquisa.</param>
+        <summary>Recupera o índice do caractere mais próximo ao local especificado.</summary>
+        <returns>O índice de caracteres baseado em zero no local especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o índice do caractere mais próximo à posição especificada no `pt` parâmetro. O índice de caracteres é um índice com base em zero do texto no controle, incluindo espaços. Você pode usar esse método para determinar onde o texto o usuário tem o mouse por passar o mouse coordenadas para esse método. Isso pode ser útil se você quiser executar tarefas quando o ponteiro do mouse passa sobre uma palavra no texto do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstCharIndexFromLine">
+      <MemberSignature Language="C#" Value="public int GetFirstCharIndexFromLine (int lineNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetFirstCharIndexFromLine(int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetFirstCharIndexFromLine(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineNumber">A linha para a qual o índice de seu primeiro caractere deve ser obtido.</param>
+        <summary>Recupera o índice do primeiro caractere de uma determinada linha.</summary>
+        <returns>O índice de caracteres baseado em zero na linha especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `lineNum` parâmetro for negativo, <xref:System.Windows.Forms.ToolStripTextBox.GetFirstCharIndexFromLine%2A> retornará 0. Se o `lineNum` parâmetro excede o número de linhas no controle do <xref:System.Windows.Forms.ToolStripTextBox.GetFirstCharIndexFromLine%2A> retorna o primeiro índice de caractere para a última linha no controle.  
+  
+ <xref:System.Windows.Forms.ToolStripTextBox.GetFirstCharIndexFromLine%2A>Retorna o primeiro índice de caracteres de uma linha física. A linha física é a linha exibida, não na linha atribuída. O número de linhas exibidas pode ser maior que o número de linhas atribuídas devido a quebra automática de linha. Por exemplo, se você atribuir duas linhas longas para um <xref:System.Windows.Forms.RichTextBox> controle e defina <xref:System.Windows.Forms.ToolStripTextBox.Multiline%2A> e <xref:System.Windows.Forms.ToolStripTextBox.WordWrap%2A> para `true`, as duas linhas de tempo atribuídas resultam em quatro físico (ou exibidas linhas).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstCharIndexOfCurrentLine">
+      <MemberSignature Language="C#" Value="public int GetFirstCharIndexOfCurrentLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetFirstCharIndexOfCurrentLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetFirstCharIndexOfCurrentLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o índice do primeiro caractere da linha atual.</summary>
+        <returns>O índice de caracteres baseado em zero na linha atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineFromCharIndex">
+      <MemberSignature Language="C#" Value="public int GetLineFromCharIndex (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetLineFromCharIndex(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetLineFromCharIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição de índice do caractere a ser pesquisada.</param>
+        <summary>Recupera o número de linha da posição de caractere especificada no texto do controle.</summary>
+        <returns>O número de linha de base zero no qual o índice do caractere está localizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você determine o número de linha com base no índice de caractere especificado no `index` parâmetro do método. A primeira linha do texto no controle retorna o valor zero. O <xref:System.Windows.Forms.ToolStripTextBox.GetLineFromCharIndex%2A> método retorna o número de linha física em que o caractere indexado está localizado dentro do controle. Por exemplo, se uma parte da primeira linha do texto na lógica de controle envolve para a próxima linha, o <xref:System.Windows.Forms.ToolStripTextBox.GetLineFromCharIndex%2A> método retornará 1 se o caractere no índice de caractere especificado foi quebrada para a segunda linha física. Se <xref:System.Windows.Forms.ToolStripTextBox.WordWrap%2A> é definido como `false`, nenhuma parte da linha é quebrada para a próxima, e o método retorna 0 para o índice do caractere especificado. Você pode usar esse método para determinar qual linha um índice de caracteres específica está localizado em. Por exemplo, depois de chamar o <xref:System.Windows.Forms.RichTextBox.Find%2A> método para pesquisar texto, você pode obter o índice de caracteres onde os resultados da pesquisa são encontrados. Você pode chamar esse método com o índice de caracteres retornado pelo <xref:System.Windows.Forms.RichTextBox.Find%2A> método para determinar qual linha o word foi encontrado.  
+  
+> [!NOTE]
+>  Se o índice do caractere especificado no `index` parâmetro está além do número disponível de linhas contidas dentro do controle, o último número de linha é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPositionFromCharIndex">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point GetPositionFromCharIndex (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point GetPositionFromCharIndex(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetPositionFromCharIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do caractere para o qual o local deve ser recuperado.</param>
+        <summary>Recupera o local dentro do controle no índice de caractere especificado.</summary>
+        <returns>O local do caractere especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você determine onde um índice de caracteres específica está localizado no controle. Você pode usar esse método para executar tarefas como exibir informações de itens ou a Ajuda de menu de atalho para uma palavra no controle. Por exemplo, se você quiser exibir um menu de opções para o usuário quando o usuário clica em uma palavra de controle, você pode usar esse método para determinar a posição do word para exibir corretamente um <xref:System.Windows.Forms.ContextMenuStrip> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size constrainingSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size constrainingSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constrainingSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constrainingSize">A área tamanho personalizado para um controle.</param>
+        <summary>Recupera o tamanho de uma área retangular na qual um controle pode ser ajustado.</summary>
+        <returns>Um par ordenado de tipo <see cref="T:System.Drawing.Size" /> que representa a largura e a altura de um retângulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideSelection">
+      <MemberSignature Language="C#" Value="public bool HideSelection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.HideSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto selecionado no controle de caixa de texto permanece realçado quando o controle perde o foco.</summary>
+        <value>
+          <see langword="true" /> se o texto selecionado não aparecer realçado quando o controle de caixa de texto perde o foco. <see langword="false" /> se o texto selecionado permanecer realçado quando o controle de caixa de texto perde o foco. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para manter o texto realçado em um controle de caixa de texto enquanto outro formulário ou uma caixa de diálogo tem foco, como uma caixa de diálogo verificador ortográfico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.HideSelection%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideSelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler HideSelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HideSelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.HideSelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.HideSelection" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripTextBox.HideSelectionChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripTextBox> chamado `ToolStripTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripTextBox.HideSelectionChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#614](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#614)]
+ [!code-vb[System.Windows.Forms.EventExamples#614](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#614)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lines">
+      <MemberSignature Language="C#" Value="public string[] Lines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Lines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.Lines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StringArrayEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as linhas de texto em uma <see cref="T:System.Windows.Forms.ToolStripTextBox" /> controle.</summary>
+        <value>Uma matriz de cadeias de caracteres que contém o texto em um controle de caixa de texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada elemento da matriz se torna uma linha de texto no controle de caixa de texto. Se o <xref:System.Windows.Forms.ToolStripTextBox.Multiline%2A> propriedade da caixa de texto está definida como `true` e um caractere de nova linha aparece no texto, o texto após o caractere de nova linha é adicionado a um novo elemento na matriz e exibido em uma linha separada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public int MaxLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(32767)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de caracteres que o usuário pode digitar ou colar no controle de caixa de texto.</summary>
+        <value>O número de caracteres que podem ser inseridos no controle. O padrão é 32.767 caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para restringir o comprimento do texto inserido no controle de valores como códigos postais e números de telefone ou restringir o comprimento do texto inserido quando os dados sejam inseridos em um banco de dados. Você pode limitar o texto inserido no controle para o comprimento máximo do campo correspondente no banco de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.MaxLength%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="public bool Modified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Modified" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.Modified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que o <see cref="T:System.Windows.Forms.ToolStripTextBox" /> controle foi modificado pelo usuário, desde que o controle foi criado ou seu conteúdo última foram definido.</summary>
+        <value>
+          <see langword="true" /> se o conteúdo do controle foi modificado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para determinar se o usuário modificou o conteúdo a <xref:System.Windows.Forms.ToolStripTextBox> controle. Você também pode definir essa propriedade no código para indicar que as alterações foram feitas para o <xref:System.Windows.Forms.ToolStripTextBox> controle pelo aplicativo. Essa propriedade pode ser usada por métodos de salvamento de dados e de validação para determinar se foram feitas alterações em um <xref:System.Windows.Forms.ToolStripTextBox> controle para que o conteúdo alterado pode ser validado ou salva.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ModifiedChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ModifiedChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.ModifiedChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.Modified" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripTextBox.ModifiedChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripTextBox> chamado `ToolStripTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripTextBox.ModifiedChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#615](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#615)]
+ [!code-vb[System.Windows.Forms.EventExamples#615](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#615)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiline">
+      <MemberSignature Language="C#" Value="public bool Multiline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Multiline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.Multiline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>
+          <see langword="true" /> se habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultilineChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MultilineChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MultilineChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.MultilineChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento não é relevante para essa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAcceptsTabChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAcceptsTabChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAcceptsTabChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnAcceptsTabChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripTextBox.AcceptsTabChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox.OnAcceptsTabChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripTextBox.OnAcceptsTabChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripTextBox.OnAcceptsTabChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBorderStyleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnBorderStyleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBorderStyleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnBorderStyleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripTextBox.BorderStyleChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox.OnBorderStyleChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripTextBox.OnBorderStyleChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripTextBox.OnBorderStyleChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHideSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHideSelectionChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHideSelectionChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnHideSelectionChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripTextBox.HideSelectionChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox.OnHideSelectionChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripTextBox.OnHideSelectionChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripTextBox.OnHideSelectionChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnModifiedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnModifiedChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnModifiedChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnModifiedChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripTextBox.ModifiedChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox.OnModifiedChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripTextBox.OnModifiedChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripTextBox.OnModifiedChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMultilineChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnMultilineChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMultilineChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnMultilineChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripTextBox.MultilineChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox.OnMultilineChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripTextBox.OnMultilineChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripTextBox.OnMultilineChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReadOnlyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnReadOnlyChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnReadOnlyChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnReadOnlyChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripTextBox.ReadOnlyChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripTextBox.OnReadOnlyChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripTextBox.OnReadOnlyChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripTextBox.OnReadOnlyChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubscribeControlEvents">
+      <MemberSignature Language="C#" Value="protected override void OnSubscribeControlEvents (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSubscribeControlEvents(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnSubscribeControlEvents(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de qual assinar eventos.</param>
+        <summary>Assina os eventos do controle hospedado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnsubscribeControlEvents">
+      <MemberSignature Language="C#" Value="protected override void OnUnsubscribeControlEvents (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUnsubscribeControlEvents(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.OnUnsubscribeControlEvents(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle dos quais cancelar a assinatura de eventos.</param>
+        <summary>Cancela a inscrição eventos de controle hospedado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public void Paste ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Paste() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.Paste" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui a seleção atual na caixa de texto com o conteúdo da área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripTextBox.Paste%2A> método só será colar texto no controle se o texto é armazenado no momento na área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto no <see cref="T:System.Windows.Forms.ToolStripTextBox" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.ToolStripTextBox" /> for somente leitura; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, o conteúdo do controle não pode ser alterado pelo usuário em tempo de execução, mas você ainda pode alterar o conteúdo no código. Você pode usar esse recurso em vez de desabilitar o controle com o <xref:System.Windows.Forms.Control.Enabled%2A> propriedade para permitir que o conteúdo a ser copiado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ReadOnlyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ReadOnlyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.ReadOnlyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.ReadOnly" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripTextBox.ReadOnlyChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripTextBox> chamado `ToolStripTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripTextBox.ReadOnlyChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#616](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#616)]
+ [!code-vb[System.Windows.Forms.EventExamples#616](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#616)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToCaret">
+      <MemberSignature Language="C#" Value="public void ScrollToCaret ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToCaret() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.ScrollToCaret" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o conteúdo do controle para a posição atual do cursor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite rolar o conteúdo do controle até que o cursor está dentro da região visível do controle. Se o cursor estiver posicionado abaixo da região visível do controle, o <xref:System.Windows.Forms.ToolStripTextBox.ScrollToCaret%2A> método irá rolar o conteúdo do controle até que o cursor está visível na parte inferior do controle. Se o cursor estiver posicionado acima a região visível do controle, esse método rola o conteúdo do controle até que o cursor está visível na parte superior do controle. Você pode usar esse método em uma caixa de texto de várias linhas para garantir que o ponto de entrada de texto atual está dentro da região visível do controle.  
+  
+> [!NOTE]
+>  Este método não tem efeito se o controle não tem foco ou se o cursor já é posicionado na área visível do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.Select(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">A posição do primeiro caractere na seleção de texto atual na caixa de texto.</param>
+        <param name="length">O número de caracteres a serem selecionados.</param>
+        <summary>Seleciona um intervalo de texto na caixa de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você deseja definir a posição inicial para o primeiro caractere no texto do controle, defina o `start` parâmetro como 0. Você pode usar esse método para selecionar uma subcadeia de caracteres de texto, por exemplo, ao pesquisar o texto do controle e informações de substituição.  
+  
+> [!NOTE]
+>  Programaticamente você pode mover o cursor dentro da caixa de texto, definindo o `start` parâmetro para a posição dentro da caixa de texto onde você deseja que o cursor para mover para e definir o `length` parâmetro para um valor de zero (0). A caixa de texto deve ter o foco para que o cursor a ser movido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public void SelectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.SelectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Seleciona todo o texto na caixa de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você selecione todo o texto dentro do controle. Você pode usar esse método com o <xref:System.Windows.Forms.TextBoxBase.Cut%2A> método, que requer um texto a ser selecionado no controle, todo o conteúdo do controle de copiar e colá-las na área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedText">
+      <MemberSignature Language="C#" Value="public string SelectedText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.SelectedText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o texto selecionado atualmente no controle.</summary>
+        <value>Uma cadeia de caracteres que representa o texto selecionado no momento na caixa de texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode atribuir o texto para esta propriedade para alterar o texto selecionado no momento o <xref:System.Windows.Forms.ToolStripTextBox>. Se nenhum texto selecionado no momento o <xref:System.Windows.Forms.ToolStripTextBox>, essa propriedade retorna uma cadeia de caracteres de comprimento zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionLength">
+      <MemberSignature Language="C#" Value="public int SelectionLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.SelectionLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de caracteres selecionados no <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <value>O número de caracteres selecionados no <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para determinar se todos os caracteres estão selecionados atualmente no controle de caixa de texto antes de executar operações no texto selecionado. Quando o valor da <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade é definida como um valor maior que o número de caracteres dentro do texto do controle, o valor da <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade é definida para toda a duração do texto dentro do controle menos o valor da <xref:System.Windows.Forms.ToolStripTextBox.SelectionStart%2A> propriedade (se nenhum valor for especificado para o <xref:System.Windows.Forms.ToolStripTextBox.SelectionStart%2A> propriedade).  
+  
+> [!NOTE]
+>  Programaticamente você pode mover o cursor dentro da caixa de texto, definindo o <xref:System.Windows.Forms.ToolStripTextBox.SelectionStart%2A> para a posição dentro da caixa de texto onde você deseja que o cursor para mover para e definir o <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade para um valor de zero (0). A caixa de texto deve ter o foco para que o cursor a ser movido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public int SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto inicial do texto selecionado no <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</summary>
+        <value>A posição inicial do texto selecionado no <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum texto selecionado no controle, essa propriedade indica o ponto de inserção para o novo texto. Se você definir essa propriedade para um local além do comprimento do texto no controle, a posição inicial da seleção será colocada após o último caractere. Quando o texto selecionado no controle de caixa de texto, a alteração dessa propriedade pode diminuir o valor da <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade. Se o texto restante no controle após a posição indicada pelo <xref:System.Windows.Forms.ToolStripTextBox.SelectionStart%2A> propriedade é menor que o valor da <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade, o valor da <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade é reduzida automaticamente. O valor de <xref:System.Windows.Forms.ToolStripTextBox.SelectionStart%2A> propriedade nunca faz com que um aumento no <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade.  
+  
+> [!NOTE]
+>  Programaticamente você pode mover o cursor dentro da caixa de texto, definindo o <xref:System.Windows.Forms.ToolStripTextBox.SelectionStart%2A> para a posição dentro da caixa de texto onde você deseja que o cursor para mover para e definir o <xref:System.Windows.Forms.ToolStripTextBox.SelectionLength%2A> propriedade para um valor de zero (0). A caixa de texto deve ter o foco para que o cursor a ser movido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortcutsEnabled">
+      <MemberSignature Language="C#" Value="public bool ShortcutsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShortcutsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.ShortcutsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os atalhos definidos estão habilitados.</summary>
+        <value>
+          <see langword="true" /> para habilitar os atalhos, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripTextBox.ShortcutsEnabled%2A> propriedade para habilitar ou desabilitar as combinações de teclas de atalho a seguir:  
+  
+|Teclas de atalho|Teclas de atalho|  
+|-------------------|-------------------|  
+|CTRL+Z|CTRL+E|  
+|CTRL+C|CTRL+I|  
+|CTRL+X|CTRL + Y|  
+|CTRL+V|CTRL + BACKSPACE|  
+|CTRL+A|CTRL + DELETE|  
+|CTRL+L|SHIFT + DELETE|  
+|CTRL + R|SHIFT + INSERT|  
+  
+ Você pode substituir essa propriedade para especificar outras teclas de atalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.ShortcutsEnabled%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBox">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TextBox TextBox { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TextBox TextBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.TextBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TextBox</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle <see cref="T:System.Windows.Forms.TextBox" /> hospedado.</summary>
+        <value>Hospedado <see cref="T:System.Windows.Forms.TextBox" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBoxTextAlign">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HorizontalAlignment TextBoxTextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.HorizontalAlignment TextBoxTextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto em um controle <see cref="T:System.Windows.Forms.TextBox" />.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Windows.Forms.HorizontalAlignment" /> que especifica como o texto é alinhado no controle. O padrão é <see cref="F:System.Windows.Forms.HorizontalAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para alinhar o texto dentro de um <xref:System.Windows.Forms.TextBox> para corresponder ao layout do texto do formulário. Por exemplo, se os controles estão localizados no lado direito do formulário, você pode definir o <xref:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlign%2A> propriedade <xref:System.Windows.Forms.HorizontalAlignment.Right>, e o texto será alinhado com o lado direito do controle, em vez do alinhamento à esquerda do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripTextBox> as configurações de propriedade comuns, incluindo o <xref:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlign%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripTextBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripTextBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBoxTextAlignChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextBoxTextAlignChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextBoxTextAlignChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlignChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlign" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlignChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripTextBox> chamado `ToolStripTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripTextBox.TextBoxTextAlignChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#617](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#617)]
+ [!code-vb[System.Windows.Forms.EventExamples#617](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#617)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextLength">
+      <MemberSignature Language="C#" Value="public int TextLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.TextLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento do texto no controle.</summary>
+        <value>O número de caracteres contidos no texto do <see cref="T:System.Windows.Forms.ToolStripTextBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.ToolStripTextBox.TextLength%2A> propriedade para determinar o número de caracteres em uma cadeia de caracteres para tarefas, como pesquisar cadeias de caracteres específicas do texto dentro do texto do controle, onde os dados de conhecimento do número total de caracteres é necessária.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public void Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripTextBox.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desfaz a última operação de edição na caixa de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método irá desfazer a última área de transferência ou texto alterar operação executada no controle de caixa de texto, se o <xref:System.Windows.Forms.TextBoxBase.CanUndo%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WordWrap">
+      <MemberSignature Language="C#" Value="public bool WordWrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WordWrap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripTextBox.WordWrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>
+          <see langword="true" /> se habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

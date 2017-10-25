@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Hosting">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Hosting" /> namespace fornece a funcionalidade para hospedar aplicativos ASP.NET em aplicativos gerenciados fora do Microsoft Internet Information Services (IIS).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

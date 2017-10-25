@@ -1,0 +1,128 @@
+<Type Name="DataGridViewCellStyleContentChangedEventArgs" FullName="System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewCellStyleContentChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewCellStyleContentChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.CellStyleContentChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> evento ocorre quando um valor de propriedade de um <xref:System.Windows.Forms.DataGridViewCellStyle> objeto retornado por uma das seguintes alterações de propriedades:  
+  
+-   <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+ Se uma dessas propriedades é definida como outro <xref:System.Windows.Forms.DataGridViewCellStyle> do objeto, no entanto, o correspondente *PropertyName* `Changed` evento ocorre, mas o <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> evento não ocorrerá.  
+  
+ Use o <xref:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyleScope%2A> propriedade para determinar qual propriedade tem o <xref:System.Windows.Forms.DataGridViewCellStyle> que foram alteradas. Use o <xref:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyle%2A> propriedade para recuperar o valor atualizado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#306](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#306)]
+ [!code-vb[System.Windows.Forms.EventExamples#306](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#306)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CellStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewCellStyle CellStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle CellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o alterado <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</summary>
+        <value>As alterações <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para recuperar a atualização <xref:System.Windows.Forms.DataGridViewCellStyle> valor da propriedade. Use o <xref:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyleScope%2A> propriedade para determinar qual propriedade tem o <xref:System.Windows.Forms.DataGridViewCellStyle> que foram alteradas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#306](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#306)]
+ [!code-vb[System.Windows.Forms.EventExamples#306](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#306)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellStyleScope">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewCellStyleScopes CellStyleScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewCellStyleScopes CellStyleScope" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyleScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyleScopes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o escopo que é afetado pelo estilo de célula alterada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewCellStyleScopes" /> que indica qual <see cref="T:System.Windows.Forms.DataGridView" /> entidade possui o estilo de célula alterada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyleScope%2A> propriedade para determinar qual propriedade tem o <xref:System.Windows.Forms.DataGridViewCellStyle> que foram alteradas. Use o <xref:System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs.CellStyle%2A> propriedade para recuperar o valor atualizado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#306](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#306)]
+ [!code-vb[System.Windows.Forms.EventExamples#306](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#306)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,222 @@
+<Type Name="StringLengthAttribute" FullName="System.ComponentModel.DataAnnotations.StringLengthAttribute">
+  <TypeSignature Language="C#" Value="public class StringLengthAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringLengthAttribute extends System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.StringLengthAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.DataAnnotations.ValidationAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o comprimento mínimo e máximo de caracteres permitidos em um campo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados dinâmicos do ASP.NET permite operações CRUD (criar, ler, atualizar e excluir) em um modelo de dados. Você pode especificar o comprimento mínimo e máximo de caracteres para cada campo quando os dados estão sendo inseridos ou atualizados. Para tipos de dados de caractere, o <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute.MinimumLength%2A> e <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute.MaximumLength%2A> propriedades identificam o maior número de bytes que são necessários para armazenar uma cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como limitar o número de caracteres em um campo. Este exemplo funciona com o campo ThumbnailPhotoFileName na tabela de produtos no banco de dados AdventureWorksLT. O campo é limitados 4 caracteres, aplicando o <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute> de atributo para a classe parcial que representa a entidade produto.  
+
+```csharp  
+[MetadataType(typeof(ProductMetadata))]  
+public partial class Product  
+{  
+  
+}  
+  
+public class ProductMetadata  
+{  
+  
+    [ScaffoldColumn(true)]  
+    [StringLength(4, ErrorMessage = "The ThumbnailPhotoFileName value cannot exceed 4 characters. ")]  
+    public object ThumbnailPhotoFileName;  
+  
+}  
+```  
+  
+```vb  
+<MetadataType(GetType(ProductMetadata))> _   
+Public Partial Class Product   
+  
+End Class   
+  
+Public Class ProductMetadata   
+  
+    <ScaffoldColumn(True)> _   
+    <StringLength(4, ErrorMessage := "The ThumbnailPhotoFileName value cannot exceed 4 characters. ")> _   
+    Public ThumbnailPhotoFileName As Object   
+  
+End Class  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringLengthAttribute (int maximumLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 maximumLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="maximumLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maximumLength">O comprimento máximo de uma cadeia de caracteres.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataAnnotations.StringLengthAttribute" /> usando um comprimento máximo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatErrorMessage">
+      <MemberSignature Language="C#" Value="public override string FormatErrorMessage (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string FormatErrorMessage(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.StringLengthAttribute.FormatErrorMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo que causou a falha de validação.</param>
+        <summary>Aplica formatação a uma mensagem de erro especificada.</summary>
+        <returns>A mensagem de erro formatada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumLength" /> é negativo.  
+  
+ -ou-  
+  
+ <paramref name="maximumLength" /> é menor que <paramref name="minimumLength" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.StringLengthAttribute.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser validado.</param>
+        <summary>Determina se um objeto especificado é válido.</summary>
+        <returns>
+          <see langword="true" /> se o objeto especificado é válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina se um objeto é válido. Se o valor do objeto é `null`, o método valida automaticamente o objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumLength" /> é negativo.  
+  
+ -ou-  
+  
+ <paramref name="maximumLength" /> é menor que <see cref="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MinimumLength" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumLength">
+      <MemberSignature Language="C#" Value="public int MaximumLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumLength" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MaximumLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo de uma cadeia de caracteres.</summary>
+        <value>O tamanho máximo de uma cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumLength">
+      <MemberSignature Language="C#" Value="public int MinimumLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumLength" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MinimumLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho mínimo de uma cadeia de caracteres.</summary>
+        <value>O tamanho mínimo de uma cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

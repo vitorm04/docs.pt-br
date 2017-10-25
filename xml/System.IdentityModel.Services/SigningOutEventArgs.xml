@@ -1,0 +1,114 @@
+<Type Name="SigningOutEventArgs" FullName="System.IdentityModel.Services.SigningOutEventArgs">
+  <TypeSignature Language="C#" Value="public class SigningOutEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SigningOutEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SigningOutEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitura de <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> propriedade em um manipulador de eventos para determinar se o logout foi iniciado pelo IP (foi recebida uma mensagem de solicitação de limpeza de logout, o RP), ou se o logout foi iniciado pela terceira parte confiável (RP).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SigningOutEventArgs (bool isIPInitiated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isIPInitiated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SigningOutEventArgs.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isIPInitiated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isIPInitiated">
+          <see langword="true" />Se a saída foi solicitada por IP; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> classe usando um valor que especifica se logout foi solicitado pelo provedor de identidade (IP).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> propriedade é definida como o valor de `isIPInitiated` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPInitiated">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.SigningOutEventArgs IPInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Services.SigningOutEventArgs IPInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SigningOutEventArgs.IPInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.SigningOutEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> que indica o logout foi iniciado pelo provedor de identidade (IP).</summary>
+        <value>Um <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> com seus <see cref="P:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated" /> conjunto de propriedades <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPInitiated">
+      <MemberSignature Language="C#" Value="public bool IsIPInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se logout foi iniciado pelo provedor de identidade (IP) por meio de uma mensagem de limpeza logout do WS-Federation ("wsignoutcleanup 1.0").</summary>
+        <value>
+          <see langword="true" />Se a saída foi iniciado por IP; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um manipulador de eventos, você pode usar o <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> para determinar se o logout foi iniciado pelo IP (foi recebida uma mensagem de solicitação de limpeza de logout, o RP), ou se o logout foi iniciado pela terceira parte confiável (RP).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RPInitiated">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.SigningOutEventArgs RPInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Services.SigningOutEventArgs RPInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SigningOutEventArgs.RPInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.SigningOutEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> que indica o logout foi iniciado pela terceira parte confiável (RP).</summary>
+        <value>Um <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> com seus <see cref="P:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated" /> conjunto de propriedades <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

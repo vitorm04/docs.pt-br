@@ -1,0 +1,189 @@
+<Type Name="Run" FullName="System.Windows.Documents.Run">
+  <TypeSignature Language="C#" Value="public class Run : System.Windows.Documents.Inline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Run extends System.Windows.Documents.Inline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Run" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Inline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Text")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um elemento de conteúdo de fluxo de nível embutido deve conter uma sequência de texto formatado ou não formatado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A partir de [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], o <xref:System.Windows.Documents.Run.Text%2A> propriedade do <xref:System.Windows.Documents.Run> objeto é uma propriedade de dependência, o que significa que você pode associar o <xref:System.Windows.Documents.Run.Text%2A> propriedade para uma fonte de dados. O <xref:System.Windows.Documents.Run.Text%2A> propriedade totalmente dá suporte à associação unidirecional em <xref:System.Windows.Controls.FlowDocumentReader> e outros controles que exibem texto somente leitura. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+> [!NOTE]
+>  Associação de texto para um <xref:System.Windows.Documents.Run> objeto contido em <xref:System.Windows.Controls.RichTextBox> não tem suporte. Operações dentro de edição de <xref:System.Windows.Controls.RichTextBox> pode fazer com que a associação a ser apagada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Run ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Run.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.Windows.Documents.Run" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Run (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Run.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres especificando o conteúdo inicial do <see cref="T:System.Windows.Documents.Run" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Run" /> classe, levando a uma cadeia de caracteres especificada como o conteúdo inicial do texto de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[RunSnippets#_Run_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/RunSnippets/CSharp/Window1.xaml.cs#_run_const1)]
+ [!code-vb[RunSnippets#_Run_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RunSnippets/visualbasic/window1.xaml.vb#_run_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Run (string text, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Run.#ctor(System.String,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres especificando o conteúdo inicial do <see cref="T:System.Windows.Documents.Run" /> objeto.</param>
+        <param name="insertionPosition">Um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção no qual inserir o texto depois que ele é criado, ou <see langword="null" /> para nenhuma inserção automática.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Run" /> classe, levando a uma cadeia de caracteres especificada como executar o conteúdo inicial do texto e um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção para a sequência de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[RunSnippets#_Run_Const2](~/samples/snippets/csharp/VS_Snippets_Wpf/RunSnippets/CSharp/Window1.xaml.cs#_run_const2)]
+ [!code-vb[RunSnippets#_Run_Const2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RunSnippets/visualbasic/window1.xaml.vb#_run_const2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeText">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeText (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeText(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Run.ShouldSerializeText(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Um objeto de Gerenciador de serviço de serialização para este objeto.</param>
+        <summary>Retorna um valor que indica se o valor efetivo do <see cref="P:System.Windows.Documents.Run.Text" /> propriedade deve ser serializada durante a serialização de um <see cref="T:System.Windows.Documents.Run" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Documents.Run.Text" /> propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Run.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo de texto não formatado da <see cref="T:System.Windows.Documents.Run" /> deste texto.</summary>
+        <value>Uma cadeia de caracteres que especifica o conteúdo de texto não formatado da <see cref="T:System.Windows.Documents.Run" /> deste texto. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A partir de [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], o <xref:System.Windows.Documents.Run.Text%2A> propriedade do <xref:System.Windows.Documents.Run> objeto é uma propriedade de dependência, o que significa que você pode associar o <xref:System.Windows.Documents.Run.Text%2A> propriedade para uma fonte de dados. O <xref:System.Windows.Documents.Run.Text%2A> propriedade totalmente dá suporte à associação unidirecional em <xref:System.Windows.Controls.FlowDocumentReader> e outros controles que exibem texto somente leitura. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+> [!NOTE]
+>  Associação de texto para um <xref:System.Windows.Documents.Run> objeto contido em <xref:System.Windows.Controls.RichTextBox> não tem suporte. Operações dentro de edição de <xref:System.Windows.Controls.RichTextBox> pode fazer com que a associação a ser apagada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Run.Text%2A> atributo de um <xref:System.Windows.Documents.Run> elemento diretamente e usando a associação.  
+  
+ [!code-xaml[BindableRunSnippet#BindableRun](~/samples/snippets/csharp/VS_Snippets_Wpf/bindablerunsnippet/CS/window1.xaml#bindablerun)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Run.TextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Run.Text" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

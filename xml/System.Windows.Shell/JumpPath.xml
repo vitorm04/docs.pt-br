@@ -1,0 +1,66 @@
+<Type Name="JumpPath" FullName="System.Windows.Shell.JumpPath">
+  <TypeSignature Language="C#" Value="public class JumpPath : System.Windows.Shell.JumpItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JumpPath extends System.Windows.Shell.JumpItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpPath" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Shell.JumpItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um link para um arquivo que é exibido em uma lista de atalhos de tarefas do Windows 7.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Shell.JumpPath> é uma referência a um arquivo que pode ser aberta em um [!INCLUDE[win7](~/includes/win7-md.md)] lista de atalhos da barra de tarefas. Se seu aplicativo não está registrado para manipular o tipo de arquivo do item, o arquivo não será exibido na lista de saltos. Por exemplo, se você adicionar um <xref:System.Windows.Shell.JumpPath> em um arquivo. txt, seu aplicativo deve ser registrado para manipular arquivos. txt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JumpPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.JumpPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Shell.JumpPath" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para o arquivo a ser incluído na lista de saltos.</summary>
+        <value>O caminho para o arquivo a ser incluído na lista de saltos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O aplicativo deve ser registrado para lidar com a extensão de nome de arquivo do arquivo especificado. Caso contrário, o item será rejeitado. Por exemplo, se você adicionar um <xref:System.Windows.Shell.JumpPath> em um arquivo. txt, seu aplicativo deve ser registrado para manipular arquivos. txt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

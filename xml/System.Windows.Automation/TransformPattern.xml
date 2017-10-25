@@ -1,0 +1,334 @@
+<Type Name="TransformPattern" FullName="System.Windows.Automation.TransformPattern">
+  <TypeSignature Language="C#" Value="public class TransformPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransformPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TransformPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um controle que pode ser movido, redimensionado ou girado em um espaço bidimensional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Suporte para esse padrão de controle não está limitado a objetos na área de trabalho. Esse padrão de controle também deve haver suporte pelos filhos de um objeto de contêiner, como os filhos podem ser movidos, redimensionados ou girados livremente dentro dos limites do contêiner.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TransformPattern.TransformPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TransformPattern/TransformPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TransformPattern+TransformPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.TransformPattern" />.</summary>
+        <value>Uma estrutura que contém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Use <xref:System.Windows.Automation.TransformPattern.Current%2A> para obter o valor atual de uma propriedade.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.TransformPattern.TransformPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanMoveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanMoveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.CanMoveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanMove" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elementos que são descendentes da raiz e atendem a um conjunto de condições de propriedade.  
+  
+ [!code-csharp[UIATransformPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#100)]
+ [!code-vb[UIATransformPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanResizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanResizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.CanResizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elementos que são descendentes da raiz e atendem a um conjunto de condições de propriedade.  
+  
+ [!code-csharp[UIATransformPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#100)]
+ [!code-vb[UIATransformPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRotateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanRotateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanRotateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.CanRotateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanRotate" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elementos que são descendentes da raiz e atendem a um conjunto de condições de propriedade.  
+  
+ [!code-csharp[UIATransformPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#100)]
+ [!code-vb[UIATransformPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TransformPattern.TransformPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TransformPattern/TransformPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TransformPattern+TransformPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.TransformPattern" />.</summary>
+        <value>Uma estrutura que contém atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.TransformPattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.TransformPattern.TransformPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public void Move (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Move(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TransformPattern.Move(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Coordenadas da tela absoluto do lado esquerdo do controle.</param>
+        <param name="y">Coordenadas da tela absoluto da parte superior do controle.</param>
+        <summary>Move o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente usada para mover o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#103)]
+[!code-vb[UIATransformPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanMove" /> propriedade é false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.TransformPattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resize(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TransformPattern.Resize(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A nova largura da janela, em pixels.</param>
+        <param name="height">A nova altura da janela, em pixels.</param>
+        <summary>Redimensiona o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado em um controle que dá suporte a painéis de divisão, esse método pode ter o efeito colateral de redimensionamento outros painéis contíguos.  
+  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente usada para redimensionar o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#104)]
+[!code-vb[UIATransformPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize" /> propriedade é false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (double degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rotate(float64 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TransformPattern.Rotate(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">O número de graus para girar o elemento. Um número positivo gira em sentido anti-horário. um número negativo gira no sentido anti-horário.</param>
+        <summary>Gira o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente usada para girar o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#102)]
+[!code-vb[UIATransformPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanRotate" /> propriedade é false.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

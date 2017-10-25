@@ -1,0 +1,205 @@
+<Type Name="MessageHeaderAttribute" FullName="System.ServiceModel.MessageHeaderAttribute">
+  <TypeSignature Language="C#" Value="public class MessageHeaderAttribute : System.ServiceModel.MessageContractMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageHeaderAttribute extends System.ServiceModel.MessageContractMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageHeaderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.MessageContractMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que um membro de dados é um cabeçalho de mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MessageHeaderAttribute> atributo permite mapear campos e propriedades de um tipo marcado com o <xref:System.ServiceModel.MessageContractAttribute> de atributo para cabeçalhos de mensagem SOAP. O campo ou propriedade pode ser de um tipo simple ou um tipo composto que pode ser serializado.  
+  
+ Para obter informações sobre como controlar a serialização do conteúdo de um corpo SOAP sem modificar o envelope SOAP de padrão em si, consulte <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>, [especificando a transferência de dados em contratos de serviço](~/docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md), e [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ Para obter mais informações sobre como criar contratos de mensagem, consulte [usando contratos de mensagem](~/docs/framework/wcf/feature-details/using-message-contracts.md).  
+  
+ O padrão SOAP define os seguintes atributos que podem existir em um cabeçalho de:  
+  
+-   `Actor`ou `Role` (`Actor` em SOAP 1.1, `Role` em SOAP 1.2)  
+  
+-   `MustUnderstand`  
+  
+-   `Relay`  
+  
+ O `Actor` ou `Role` atributo especifica o URI do nó para o qual um determinado cabeçalho é pretendido. O `MustUnderstand` atributo especifica se o cabeçalho entenda o processamento de nó. O `Relay` atributo especifica se o cabeçalho deve ser retransmitidas para nós de downstream. [!INCLUDE[indigo1](~/includes/indigo1-md.md)]não executa qualquer processamento desses atributos em mensagens de entrada, exceto para o `MustUnderstand` atributo.  
+  
+ No entanto, você pode ler e gravar esses atributos, mesmo que eles não são enviados por padrão. Você pode definir os valores de atributo de duas maneiras. Primeiro, você pode alterar o <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A> e <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A> propriedades de <xref:System.ServiceModel.MessageHeaderAttribute>. (Não há nenhum `Role` – definida a <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> propriedade e `Role` é passado se SOAP 1.2 é usado). Por exemplo:  
+  
+  
+  
+ A segunda maneira de controlar esses atributos está fazendo com que o cabeçalho desejado digite o parâmetro de tipo do <xref:System.ServiceModel.MessageHeader%601> classe e usando o tipo resultante junto com o <xref:System.ServiceModel.MessageHeaderAttribute>. Em seguida, use o <xref:System.ServiceModel.MessageHeader%601> propriedades por meio de programação para definir os atributos SOAP. Por exemplo:  
+  
+  
+  
+  
+  
+ Se forem usados dinâmico e os mecanismos de controle estático, as configurações estáticas são o padrão, mas podem ser substituídas usando o mecanismo dinâmico. Por exemplo:  
+  
+  
+  
+  
+  
+ É permitido criar cabeçalhos repetidos com controle de atributo dinâmico. Por exemplo:  
+  
+```  
+[MessageHeaderArray] public MessageHeader<Person> documentApprovers[];  
+```  
+  
+ No lado de recepção, ler esses atributos SOAP só pode ser feito se genérica <xref:System.ServiceModel.MessageHeader%601> classe é usada. Examine o <xref:System.ServiceModel.MessageHeader%601.Actor%2A>, <xref:System.ServiceModel.MessageHeader%601.Relay%2A> ou <xref:System.ServiceModel.MessageHeader%601.MustUnderstand%2A> propriedades de um cabeçalho do <xref:System.ServiceModel.MessageHeader%601> tipo para descobrir as configurações de atributo na mensagem recebida.  
+  
+ Quando uma mensagem é recebida e, em seguida, enviada de volta, cabeçalhos de resposta somente o SOAP atributo configurações o <xref:System.ServiceModel.MessageHeader%601> tipo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.MessageHeaderAttribute> para criar um cabeçalho SOAP da mensagem de resposta com o <xref:System.ServiceModel.MessageContractMemberAttribute.Name%2A>, <xref:System.ServiceModel.MessageContractMemberAttribute.Namespace%2A> e <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A> propriedades definidas com valores apropriados para esse cabeçalho. O exemplo de código é seguido por um exemplo de mensagem quando enviada.  
+  
+ [!code-csharp[MessageHeaderAttribute#4](~/samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#4)]
+ [!code-vb[MessageHeaderAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MessageHeaderAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public string Actor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Actor" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageHeaderAttribute.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que indica o nó no qual se destina esse cabeçalho. Mapeia para o atributo de cabeçalho de função ao SOAP 1.2 é usado e o atributo de cabeçalho de ator quando SOAP 1.1 será usado.</summary>
+        <value>Um URI que indica o nó no qual se destina esse cabeçalho. Esse URI é mapeado para o atributo de cabeçalho de função ao SOAP 1.2 é usado e o atributo de cabeçalho de ator quando SOAP 1.1 será usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a seção comentários de <xref:System.ServiceModel.MessageHeaderAttribute> para obter detalhes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustUnderstand">
+      <MemberSignature Language="C#" Value="public bool MustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageHeaderAttribute.MustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se o nó atuando na função <see cref="P:System.ServiceModel.MessageHeaderAttribute.Actor" /> deve entender esse cabeçalho. Isso é mapeado para o atributo do cabeçalho SOAP <see langword="mustUnderstand" />.</summary>
+        <value>
+          <see langword="true" /> se o nó atuando na função <see cref="P:System.ServiceModel.MessageHeaderAttribute.Actor" /> deve entender esse cabeçalho; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a seção comentários de <xref:System.ServiceModel.MessageHeaderAttribute> para obter detalhes.  
+  
+> [!IMPORTANT]
+>  É importante lembrar que, se o <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A> é de propriedade `true` em uma mensagem que está sendo enviado e o aplicativo no lado de recepção não entende o cabeçalho de uma falha é gerada. Por outro lado, se um cabeçalho com o `mustUnderstand` atributo do cabeçalho SOAP definido como `true` é recebida por [!INCLUDE[indigo1](~/includes/indigo1-md.md)], ele deve ser uma parte do contrato de mensagem (ou deve ser processado por um do [!INCLUDE[indigo1](~/includes/indigo1-md.md)] canais); caso contrário, presume-se que o cabeçalho não é compreendido e uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.MessageHeaderAttribute> para criar um cabeçalho SOAP da mensagem de resposta com o <xref:System.ServiceModel.MessageContractMemberAttribute.Name%2A>, <xref:System.ServiceModel.MessageContractMemberAttribute.Namespace%2A> e <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A> propriedades definidas com valores apropriados para esse cabeçalho. O exemplo de código é seguido por um exemplo de mensagem quando enviada.  
+  
+ [!code-csharp[MessageHeaderAttribute#4](~/samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#4)]
+ [!code-vb[MessageHeaderAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Relay">
+      <MemberSignature Language="C#" Value="public bool Relay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Relay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageHeaderAttribute.Relay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se esse cabeçalho deve ser retransmitidas para nós de downstream. Isso é mapeado para o atributo do cabeçalho SOAP <see langword="relay" />.</summary>
+        <value>
+          <see langword="true" />Se esse cabeçalho é ser retransmitidas para nós de downstream. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é ignorada quando SOAP 1.1 será usado. Para obter mais informações, consulte a seção comentários de <xref:System.ServiceModel.MessageHeaderAttribute> para obter detalhes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,103 @@
+<Type Name="WizardNavigationEventArgs" FullName="System.Web.UI.WebControls.WizardNavigationEventArgs">
+  <TypeSignature Language="C#" Value="public class WizardNavigationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WizardNavigationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WizardNavigationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para as propriedades <see cref="P:System.Web.UI.WebControls.WizardNavigationEventArgs.CurrentStepIndex" /> e <see cref="P:System.Web.UI.WebControls.WizardNavigationEventArgs.NextStepIndex" /> para navegação nos controles do assistente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WizardNavigationEventArgs> classe fornece os dados necessários para os diversos eventos de navegação em um <xref:System.Web.UI.WebControls.Wizard> controle. Por exemplo, o <xref:System.Web.UI.WebControls.Wizard.NextButtonClick> eventos de um <xref:System.Web.UI.WebControls.Wizard> controlar usa o <xref:System.Web.UI.WebControls.WizardNavigationEventArgs> objeto para indicar o <xref:System.Web.UI.WebControls.WizardNavigationEventArgs.CurrentStepIndex%2A> e <xref:System.Web.UI.WebControls.WizardNavigationEventArgs.NextStepIndex%2A> para o controle.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WizardNavigationEventArgs (int currentStepIndex, int nextStepIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 currentStepIndex, int32 nextStepIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardNavigationEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="currentStepIndex" Type="System.Int32" />
+        <Parameter Name="nextStepIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="currentStepIndex">O índice do <see cref="T:System.Web.UI.WebControls.WizardStep" /> objeto exibido no momento o <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</param>
+        <param name="nextStepIndex">O índice do <see cref="T:System.Web.UI.WebControls.WizardStep" /> do objeto que o <see cref="T:System.Web.UI.WebControls.Wizard" /> controle será exibido ao lado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WizardNavigationEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardNavigationEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a navegação para a próxima etapa no assistente deve ser cancelada.</summary>
+        <value>
+          <see langword="true" />Se a navegação para a próxima etapa deve ser cancelada; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentStepIndex">
+      <MemberSignature Language="C#" Value="public int CurrentStepIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentStepIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardNavigationEventArgs.CurrentStepIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do <see cref="T:System.Web.UI.WebControls.WizardStep" /> objeto exibido no momento o <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</summary>
+        <value>Um valor de índice de base zero que representa o <see cref="T:System.Web.UI.WebControls.WizardStep" /> objeto exibido no momento o <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextStepIndex">
+      <MemberSignature Language="C#" Value="public int NextStepIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NextStepIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardNavigationEventArgs.NextStepIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o índice do <see cref="T:System.Web.UI.WebControls.WizardStep" /> do objeto que o <see cref="T:System.Web.UI.WebControls.Wizard" /> controle será exibido ao lado.</summary>
+        <value>Um valor de índice de base zero que representa o <see cref="T:System.Web.UI.WebControls.WizardStep" /> do objeto que o <see cref="T:System.Web.UI.WebControls.Wizard" /> controle será exibido ao lado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

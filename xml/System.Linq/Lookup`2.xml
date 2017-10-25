@@ -1,0 +1,306 @@
+<Type Name="Lookup&lt;TKey,TElement&gt;" FullName="System.Linq.Lookup&lt;TKey,TElement&gt;">
+  <TypeSignature Language="C#" Value="public class Lookup&lt;TKey,TElement&gt; : System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;TKey,TElement&gt;&gt;, System.Linq.ILookup&lt;TKey,TElement&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Lookup`2&lt;TKey, TElement&gt; extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.Linq.IGrouping`2&lt;!TKey, !TElement&gt;&gt;, class System.Collections.IEnumerable, class System.Linq.ILookup`2&lt;!TKey, !TElement&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Lookup`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TElement" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;TKey,TElement&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.ILookup&lt;TKey,TElement&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">O tipo das chaves no <see cref="T:System.Linq.Lookup`2" />.</typeparam>
+    <typeparam name="TElement">O tipo dos elementos de cada valor <see cref="T:System.Collections.Generic.IEnumerable`1" /> no <see cref="T:System.Linq.Lookup`2" />.</typeparam>
+    <summary>Representa uma coleção de chaves, cada uma mapeada para um ou mais valores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Linq.Lookup%602> é semelhante a um <xref:System.Collections.Generic.Dictionary%602>. A diferença é que um <xref:System.Collections.Generic.Dictionary%602> mapeia chaves para valores únicos, enquanto um <xref:System.Linq.Lookup%602> mapeia chaves para coleções de valores.  
+  
+ Você pode criar uma instância de um <xref:System.Linq.Lookup%602> chamando <xref:System.Linq.Enumerable.ToLookup%2A> em um objeto que implementa <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+> [!NOTE]
+>  Não há nenhum construtor público para criar uma nova instância de um <xref:System.Linq.Lookup%602>. Além disso, <xref:System.Linq.Lookup%602> objetos são imutáveis, ou seja, você não pode adicionar ou remover elementos ou chaves de um <xref:System.Linq.Lookup%602> objeto após ele ter sido criado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Linq.Lookup%602> de uma coleção de objetos. Em seguida, enumera a <xref:System.Linq.Lookup%602> e saídas de cada chave e cada valor em uma coleção associada dos valores da chave. Ele também demonstra como usar as propriedades <xref:System.Linq.Lookup%602.Count%2A> e <xref:System.Linq.Lookup%602.Item%2A> e os métodos <xref:System.Linq.Lookup%602.Contains%2A> e <xref:System.Linq.Lookup%602.GetEnumerator%2A>.  
+  
+ [!code-csharp[System.Linq.Lookup#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Lookup/CS/lookup.cs#1)]
+ [!code-vb[System.Linq.Lookup#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Lookup/VB/Lookup.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyResultSelector&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TResult&gt; ApplyResultSelector&lt;TResult&gt; (Func&lt;TKey,System.Collections.Generic.IEnumerable&lt;TElement&gt;,TResult&gt; resultSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!TResult&gt; ApplyResultSelector&lt;TResult&gt;(class System.Func`3&lt;!TKey, class System.Collections.Generic.IEnumerable`1&lt;!TElement&gt;, !!TResult&gt; resultSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Lookup`2.ApplyResultSelector``1(System.Func{`0,System.Collections.Generic.IEnumerable{`1},``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="resultSelector" Type="System.Func&lt;TKey,System.Collections.Generic.IEnumerable&lt;TElement&gt;,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo dos valores de resultado produzido por <c>resultSelector</c>.</typeparam>
+        <param name="resultSelector">Uma função a um valor de resultado de cada chave e seus valores associados do projeto.</param>
+        <summary>Aplica-se a uma função de transformação para cada chave e seus valores associados e retorna os resultados.</summary>
+        <returns>Uma coleção que contém um valor para cada par de coleção de chave/valor no <see cref="T:System.Linq.Lookup`2" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Lookup`2.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Linq.Lookup`2" />.</param>
+        <summary>Determina se uma chave especificada está no <see cref="T:System.Linq.Lookup`2" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="key" /> estiver no <see cref="T:System.Linq.Lookup`2" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:System.Linq.Lookup%602.Contains%2A> para determinar se um <xref:System.Linq.Lookup%602> contém uma chave especificada. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Linq.Lookup%602> classe.  
+  
+ [!code-csharp[System.Linq.Lookup#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Lookup/CS/lookup.cs#4)]
+ [!code-vb[System.Linq.Lookup#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Lookup/VB/Lookup.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Lookup`2.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de chave/valor pares da coleção de <see cref="T:System.Linq.Lookup`2" />.</summary>
+        <value>O número de pares chave/valor da coleção no <see cref="T:System.Linq.Lookup`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Linq.Lookup%602.Count%2A> propriedade não alterado porque itens não podem ser adicionados ou removidos de um <xref:System.Linq.Lookup%602> objeto após ele ter sido criado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:System.Linq.Lookup%602.Count%2A> para determinar o número de pares chave/valor da coleção em um <xref:System.Linq.Lookup%602>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Linq.Lookup%602> classe.  
+  
+ [!code-csharp[System.Linq.Lookup#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Lookup/CS/lookup.cs#2)]
+ [!code-vb[System.Linq.Lookup#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Lookup/VB/Lookup.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Linq.IGrouping&lt;TKey,TElement&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Linq.IGrouping`2&lt;!TKey, !TElement&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Lookup`2.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Linq.IGrouping&lt;TKey,TElement&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador genérico que itera por meio de <see cref="T:System.Linq.Lookup`2" />.</summary>
+        <returns>Um enumerador para o <see cref="T:System.Linq.Lookup`2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:System.Linq.Lookup%602.GetEnumerator%2A> para percorrer as chaves e valores de um <xref:System.Linq.Lookup%602>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Linq.Lookup%602> classe.  
+  
+ [!code-csharp[System.Linq.Lookup#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Lookup/CS/lookup.cs#5)]
+ [!code-vb[System.Linq.Lookup#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Lookup/VB/Lookup.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TElement&gt; this[TKey key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TElement&gt; Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Lookup`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da coleção de valores desejada.</param>
+        <summary>Obtém a coleção de valores indexados pela chave especificada.</summary>
+        <value>A coleção de valores indexada pela chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade indexada fornece a capacidade de um conjunto específico de valores de índice de <xref:System.Linq.Lookup%602> usando a seguinte sintaxe: `myLookup[key]` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `myLookup(key)` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Se o `key` não foi encontrado na coleção, uma sequência vazia será retornada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:System.Linq.Lookup%602.Item%2A> para indexar diretamente em um <xref:System.Linq.Lookup%602>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Linq.Lookup%602> classe.  
+  
+ [!code-csharp[System.Linq.Lookup#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Lookup/CS/lookup.cs#3)]
+ [!code-vb[System.Linq.Lookup#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Lookup/VB/Lookup.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Lookup`2.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Linq.Lookup`2" />. Essa classe não pode ser herdada.</summary>
+        <returns>Um enumerador para o <see cref="T:System.Linq.Lookup`2" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

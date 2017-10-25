@@ -1,0 +1,119 @@
+<Type Name="DataGridViewLinkCell+DataGridViewLinkCellAccessibleObject" FullName="System.Windows.Forms.DataGridViewLinkCell+DataGridViewLinkCellAccessibleObject">
+  <TypeSignature Language="C#" Value="protected class DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject : System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit DataGridViewLinkCell/DataGridViewLinkCellAccessibleObject extends System.Windows.Forms.DataGridViewCell/DataGridViewCellAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCell+DataGridViewCellAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre um <see cref="T:System.Windows.Forms.DataGridViewLinkCell" /> controle para aplicativos cliente de acessibilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms inclui suporte interno de acessibilidade que permite que seu aplicativo trabalhar com aplicativos cliente de acessibilidade. Exemplos de aplicativos cliente de acessibilidade incluem utilitários ampliador e Revisor de tela, utilitários de entrada de voz, teclados na tela, dispositivos de entrada alternativos e os utilitários de aprimoramento de teclado.  
+  
+ O <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject> classe herda o <xref:System.Windows.Forms.AccessibleObject> classe para fornecer informações sobre um <xref:System.Windows.Forms.DataGridViewLinkCell> para aplicativos cliente de acessibilidade. Cada classe que representa uma parte do <xref:System.Windows.Forms.DataGridView>— como <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>, <xref:System.Windows.Forms.DataGridViewRowHeaderCell>, <xref:System.Windows.Forms.DataGridViewRow> e <xref:System.Windows.Forms.DataGridViewCell>— também contém uma classe que herda de <xref:System.Windows.Forms.AccessibleObject> para fornecer informações sobre a classe continente e executar ações em nome dos aplicativos cliente de acessibilidade.  
+  
+ Há ocasiões em que você deve fornecer informações adicionais, como o nome ou descrição do <xref:System.Windows.Forms.DataGridView> controle, para aplicativos cliente de acessibilidade. Há duas maneiras de fornecer essas informações adicionais. Para fornecer informações de acessibilidade limitada para controles existentes, defina o controle <xref:System.Windows.Forms.Control.AccessibleName%2A> e <xref:System.Windows.Forms.Control.AccessibleDescription%2A> valores de propriedade, que serão relatados para aplicativos cliente de acessibilidade.  
+  
+> [!NOTE]
+>  Você deve alterar o <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleRole%2A> valores de propriedade somente em situações raras, como se você tornar um <xref:System.Windows.Forms.DataGridView> a aparência de uma lista.  
+  
+ Ocasionalmente, você pode exigir mais informações sobre acessibilidade ou ações diferentes de acessibilidade para ser incluído no personalizados <xref:System.Windows.Forms.DataGridView> ou <xref:System.Windows.Forms.DataGridViewCell>. Para personalizar a acessibilidade, você pode escrever sua própria classe que deriva de <xref:System.Windows.Forms.DataGridView.DataGridViewAccessibleObject> ou <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> classes e substituir o <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método. Por exemplo, se você estiver escrevendo uma célula de cabeçalho de linha personalizado que implementa exclusivas ações personalizadas, como o teste de clique especiais dentro de sua célula, você deve criar uma classe que herda de <xref:System.Windows.Forms.DataGridViewRowHeaderCell.DataGridViewRowHeaderCellAccessibleObject> classe e substituir o <xref:System.Windows.Forms.DataGridViewRowHeaderCell.CreateAccessibilityInstance%2A> método.  
+  
+ O <xref:System.Windows.Forms.DataGridView> expõe sua estrutura de dados usando <xref:System.Windows.Forms.AccessibleRole> valores para definir os dados de tabela hierarquia. Para obter mais informações sobre a exposição de tabelas de dados para acessibilidade ativa da Microsoft, consulte "Expor dados de tabelas por meio de Microsoft Active Accessibility" na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewLinkCellAccessibleObject (System.Windows.Forms.DataGridViewCell owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewCell owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject.#ctor(System.Windows.Forms.DataGridViewCell)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.DataGridViewCell" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.DataGridViewCell" /> que tem o <see cref="T:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa a ação padrão da <see cref="T:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject" />.</summary>
+        <value>A cadeia de caracteres "Clique".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a ação padrão da <see cref="T:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject.DoDefaultAction%2A> método navega para o link fornecido no <xref:System.Windows.Forms.DataGridViewLinkCell>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A célula retornada pelo <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> propriedade tem um <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" /> valor da propriedade que não seja <see langword="null" /> e um <see cref="P:System.Windows.Forms.DataGridViewCell.RowIndex" /> valor da propriedade de -1, indicando que a célula está em uma linha compartilhada.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildCount">
+      <MemberSignature Language="C#" Value="public override int GetChildCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChildCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject.GetChildCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o número de objetos de acessível filho que pertencem ao <see cref="T:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject" />.</summary>
+        <returns>O valor – 1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,290 @@
+<Type Name="ListBindingHelper" FullName="System.Windows.Forms.ListBindingHelper">
+  <TypeSignature Language="C#" Value="public static class ListBindingHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ListBindingHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListBindingHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a funcionalidade para detectar uma lista associável e as propriedades dos itens contidos na lista de quando elas diferem das propriedades públicas do objeto ao qual eles vinculam.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada pelas classes como <xref:System.Windows.Forms.BindingSource>.  
+  
+ Observe que, para aplicativos de Smartphone, essa classe requer software Windows Mobile versão 5.0 para Smartphones.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetList">
+      <MemberSignature Language="C#" Value="public static object GetList (object list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetList(object list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetList(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="list">A fonte de dados para examinar para sua lista subjacente.</param>
+        <summary>Retorna uma lista associada à fonte de dados especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa a lista subjacente se existir; caso contrário, a fonte de dados original é especificado pelo <paramref name="list" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte de dados especificado pelo `list` parâmetro implementa o <xref:System.ComponentModel.IListSource> interface, então o <xref:System.Windows.Forms.ListBindingHelper.GetList%2A> método retornará um objeto do tipo <xref:System.Collections.IList> que representa a lista associada. Caso contrário, esse método apenas retornará a fonte de dados especificada porque não há nenhuma lista subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetList">
+      <MemberSignature Language="C#" Value="public static object GetList (object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetList(object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetList(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados do qual obter uma lista.</param>
+        <param name="dataMember">O nome da propriedade de fonte de dados que contém a lista. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna um objeto, normalmente uma lista de avaliação de uma fonte de dados especificado e um membro de dados opcionais.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa a lista subjacente se ele foi encontrado; caso contrário, <paramref name="dataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o membro de dados for `null` ou uma cadeia de caracteres vazia (""), o <xref:System.Windows.Forms.ListBindingHelper.GetList%2A> método retornará `dataSource`.  
+  
+ Se `dataSource` não é uma lista, <xref:System.Windows.Forms.ListBindingHelper.GetList%2A> retorna o valor da `dataSource` propriedade que corresponda a `dataMember` valor.  
+  
+ Se `dataSource` é uma lista, em que ele implementa um o <xref:System.Windows.Forms.ICurrencyManagerProvider> ou <xref:System.Collections.IEnumerable> interfaces, a lista subjacente é obtida por escolhendo um item na lista e consulta de item para o valor da propriedade nomeada pelo `dataMember`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O nome do membro de dados especificado não correspondeu qualquer uma das propriedades encontradas para a fonte de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemProperties">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetListItemProperties (object list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetListItemProperties(object list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="list">A fonte de dados para examinar para obter informações de propriedade.</param>
+        <summary>Retorna o <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descreve as propriedades de um tipo de item contido em uma fonte de dados especificado ou propriedades da fonte de dados especificado.</summary>
+        <returns>O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém as propriedades dos itens contidos em <paramref name="list" />, ou as propriedades de<paramref name="list." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A> método é usado para examinar a coleção de propriedades para uma fonte de dados. A ação desse método depende do tipo real do `list` parâmetro de acordo com a tabela a seguir:  
+  
+|Tipo de parâmetro|Ação|  
+|--------------------|------------|  
+|Um tipo que é uma lista ou uma coleção de itens.|Retorna um <xref:System.ComponentModel.PropertyDescriptorCollection> que descreve as propriedades do tipo de item contido na lista.|  
+|Um tipo que não é uma lista ou coleção.|Retorna um <xref:System.ComponentModel.PropertyDescriptorCollection> que descreve as propriedades do tipo.|  
+|`null`|Retorna um <xref:System.ComponentModel.PropertyDescriptorCollection> vazio.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemProperties">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetListItemProperties (object list, System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetListItemProperties(object list, class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemProperties(System.Object,System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="list">A fonte de dados a ser examinada para obter informações de propriedade.</param>
+        <param name="listAccessors">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> matriz que descreve as propriedades dos dados de origem para examinar. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna o <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descreve as propriedades de um tipo de item contido em uma propriedade de coleção de uma fonte de dados. Usa especificado <see cref="T:System.ComponentModel.PropertyDescriptor" /> array para indicar quais propriedades para examinar.</summary>
+        <returns>O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descreve as propriedades do tipo de item contido em uma propriedade de coleção da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A> método é útil quando a fonte de dados tem propriedades que são uma coleção de itens e você precisa saber as propriedades do tipo de item na coleção, não as propriedades do tipo de coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemProperties">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetListItemProperties (object dataSource, string dataMember, System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetListItemProperties(object dataSource, string dataMember, class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemProperties(System.Object,System.String,System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados a ser examinada para obter informações de propriedade.</param>
+        <param name="dataMember">O membro de dados opcional a ser examinada para obter informações de propriedade. Ele pode ser <see langword="null" />.</param>
+        <param name="listAccessors">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> que descreve quais propriedades do membro para examinar os dados de matriz. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna o <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descreve as propriedades de um tipo de item contido no membro de dados especificado de uma fonte de dados. Usa especificado <see cref="T:System.ComponentModel.PropertyDescriptor" /> array para indicar quais propriedades para examinar.</summary>
+        <returns>O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descreve as propriedades de um tipo de item contido em uma propriedade de coleção da fonte de dados especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `dataMember` parâmetro pode ser `null`, caso em que o <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A> método retornará descrições de propriedade usando a fonte de dados e o <xref:System.ComponentModel.PropertyDescriptor> matriz.  
+  
+ <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>é útil quando o membro de dados tem propriedades que são uma coleção de itens e você precisa saber as propriedades do tipo de item na coleção, não as propriedades do tipo de coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O membro de dados especificado não pôde ser encontrado na fonte de dados especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemType">
+      <MemberSignature Language="C#" Value="public static Type GetListItemType (object list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetListItemType(object list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemType(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="list">A lista a ser examinada para obter informações de tipo.</param>
+        <summary>Retorna o tipo de dados dos itens na lista especificada.</summary>
+        <returns>O <see cref="T:System.Type" /> dos itens contidos na lista.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `list` parâmetro não é uma lista ou matriz, o tipo retornado será o `list` próprio parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemType">
+      <MemberSignature Language="C#" Value="public static Type GetListItemType (object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetListItemType(object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemType(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados para examinar os itens.</param>
+        <param name="dataMember">O nome opcional da propriedade na fonte de dados a ser usado como o membro de dados. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna o tipo de dados dos itens na fonte de dados especificado.</summary>
+        <returns>Para associação de dados complexos, o <see cref="T:System.Type" /> dos itens, representados pelo <paramref name="dataMember" /> na fonte de dados; caso contrário, o <see cref="T:System.Type" /> do item na própria lista.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A> método é usado para determinar o tipo de itens usados em esquemas de associação de dados simples ou complexas. Esse método estático pode ser útil para determinar se um esquema de associação de dados proposto é apropriado antes de tentar a ele.  
+  
+ Se `dataSource` é `null`, os descritores de propriedade não podem ser encontrados para os itens de lista do membro de dados especificado ou o descritor de propriedade do item de lista é um <xref:System.ComponentModel.ICustomTypeDescriptor>, em seguida, esse método retorna o tipo do <xref:System.Object> classe.  
+  
+ Se `dataMember` é `null` ou vazio, este método retorna o <xref:System.Type> dos itens na fonte de dados, se for uma lista; caso contrário, esse método retornará o <xref:System.Type> dos dados de origem em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="public static string GetListName (object list, System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetListName(object list, class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListName(System.Object,System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="list">A fonte de dados para examinar o nome da lista.</param>
+        <param name="listAccessors">Uma matriz de <see cref="T:System.ComponentModel.PropertyDescriptor" /> objetos a localizar na fonte de dados. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna o nome da Base de uma lista, fornecido uma fonte de dados e opcionais <see cref="T:System.ComponentModel.PropertyDescriptor" /> matriz.</summary>
+        <returns>O nome da lista na fonte de dados, conforme descrito pelo <paramref name="listAccessors" />, ou o nome do tipo de fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `listAccessors` é `null` ou está vazio, o <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A> método retorna o nome do tipo de fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

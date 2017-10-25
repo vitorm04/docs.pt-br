@@ -1,0 +1,416 @@
+<Type Name="ColumnAttribute" FullName="System.Data.Linq.Mapping.ColumnAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ColumnAttribute : System.Data.Linq.Mapping.DataAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ColumnAttribute extends System.Data.Linq.Mapping.DataAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.ColumnAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Linq.Mapping.DataAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa uma classe a uma coluna em uma tabela de banco de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse atributo para designar um membro de uma classe de entidade para representar uma coluna em uma tabela de banco de dados. Você pode aplicar esse atributo para qualquer campo ou propriedade que é `public`, `private`, ou `internal`.  
+  
+ Somente os membros de classe de entidade identificados como as colunas são persistentes quando [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] salva as alterações no banco de dados.  
+  
+ Use vírgulas para separar várias propriedades do atributo.  
+  
+   
+  
+## Examples  
+  
+```vb  
+<Table(Name:="Employees")>  _  
+Public Class Employees  
+    Private _LastName As String  
+    ' …  
+    <Column(Storage:="_LastName", DbType:="NVarChar(20) NOT NULL", _  
+        CanBeNull:=false)> _  
+    Public Property LastName() As String  
+        Get  
+            Return Me._LastName  
+        End Get  
+        Set  
+            If ((Me._LastName = value) _  
+                = false) Then  
+                Me.OnPropertyChanging("LastName")  
+                Me._LastName = value  
+                Me.OnPropertyChanged("LastName")  
+            End If  
+        End Set  
+    End Property  
+End Class  
+```  
+  
+```csharp  
+[Table(Name="Employees")]  
+public class Employees  
+{  
+    private string _LastName;      
+    // …  
+    [Column(Storage="_LastName", DbType="NVarChar(20) NOT NULL",   
+        CanBeNull=false)]  
+    public string LastName  
+    {  
+        get  
+        {  
+            return this._LastName;  
+        }  
+        set  
+        {  
+            if ((this._LastName != value))  
+            {  
+                this.OnPropertyChanging("LastName");  
+                this._LastName = value;  
+                this.OnPropertyChanged("LastName");  
+            }  
+        }  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColumnAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.ColumnAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.Mapping.ColumnAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSync">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.Mapping.AutoSync AutoSync { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Linq.Mapping.AutoSync AutoSync" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.AutoSync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.AutoSync</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a enumeração de <see cref="T:System.Data.Linq.Mapping.AutoSync" />.</summary>
+        <value>O valor <see cref="T:System.Data.Linq.Mapping.AutoSync" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#1)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeNull">
+      <MemberSignature Language="C#" Value="public bool CanBeNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se uma coluna pode conter valores nulos.</summary>
+        <value>Padrão = <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir esse valor como `false`, os dados na coluna correspondente são considerados como não nulo.  
+  
+> [!NOTE]
+>  Essa propriedade é duplicada do <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> propriedade para sua conveniência. O <xref:System.Data.Linq.DataContext.CreateDatabase%2A> método usa apenas o <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> propriedade. Por esse motivo, você deve especificar se uma coluna pode conter valores nulos no <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> propriedade também.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#2)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public string DbType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo da coluna de banco de dados.</summary>
+        <value>Valor de cadeia de caracteres que especifica o texto exato que define a coluna em uma declaração de tabela do Transact-SQL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar o texto exato que define a coluna em uma declaração de tabela do Transact-SQL. Especifique o <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> propriedade somente se você planeja usar <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para criar uma instância do banco de dados.  
+  
+ O valor padrão de <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> é inferido do tipo de membro. Para obter mais informações, consulte [mapeamento de tipo CLR SQL](~/docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#4)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public string Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se uma coluna é uma coluna computada em um banco de dados.</summary>
+        <value>Padrão = vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade quando você usar <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para definir uma coluna como contendo valores computados.  
+  
+ Por exemplo, se você deseja criar uma coluna definida no SQL como `InventoryVal AS UnitPrice * UnitsInStock`, use a seguinte *expressão* cadeia de caracteres: `"UnitPrice * UnitsInStock"`.  
+  
+> [!NOTE]
+>  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] não suporta colunas computadas como chaves primárias.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#5)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDbGenerated">
+      <MemberSignature Language="C#" Value="public bool IsDbGenerated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDbGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se uma coluna contém os valores que o banco de dados gera automaticamente.</summary>
+        <value>Padrão = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>membros são sincronizados imediatamente após a linha de dados é inserida, e os membros estão disponíveis após <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é concluída.  
+  
+> [!NOTE]
+>  Se a coluna contém valores de chave primária e designar <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> como `true`, você também deve adicionar o <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> propriedade usando o `IDENTITY` modificador.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#6)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDiscriminator">
+      <MemberSignature Language="C#" Value="public bool IsDiscriminator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDiscriminator" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se uma coluna contiver um valor Discriminatório para um [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] hierarquia de herança.</summary>
+        <value>Padrão = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `true`, essa propriedade identifica o membro de classe como contendo o valor Discriminatório para uma hierarquia de herança.  
+  
+ Você pode definir essa propriedade `true` para não mais de um membro, que deve pertencer ao nível superior mapeado classe na hierarquia.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#7)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKey">
+      <MemberSignature Language="C#" Value="public bool IsPrimaryKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se esse membro da classe representa uma coluna que faz parte ou toda a chave primária da tabela.</summary>
+        <value>Padrão = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Supondo que uma classe de entidade, você deve fornecer pelo menos um membro com esse atributo, e ele deve ser mapeado para a chave primária ou uma chave exclusiva na tabela correspondente ou exibição. Falha ao fazer essa prompts [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] considerar instâncias da classe como somente leitura para enviar alterações para o banco de dados.  
+  
+ Se você designar mais de um membro da classe usando essa propriedade, a chave deve ser uma combinação de colunas associadas.  
+  
+> [!NOTE]
+>  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] não suporta colunas computadas como chaves primárias.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#8)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVersion">
+      <MemberSignature Language="C#" Value="public bool IsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.IsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o tipo de coluna do membro é um número de versão ou carimbo de data/hora do banco de dados.</summary>
+        <value>Valor padrão = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Números de versão são incrementados e colunas de carimbo de hora são atualizadas sempre que a linha associada é atualizada. (Esta propriedade instrui [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que uma coluna deve ser atualizada para mostrar que se trata de uma nova versão; não é destinada para registrar informações como quem fez a atualização.)  
+  
+ Observe o seguinte quando `IsVersion` for verdadeira:  
+  
+-   Use <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> para especificar os modificadores corretos para designar uma coluna de carimbo de hora ou de número de versão. Se você não especificar <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] infere os modificadores corretos.  
+  
+ Números de versão são incrementados e colunas de carimbo de hora são atualizadas sempre que a linha associada é atualizada. Membros com `IsVersion=true` são sincronizados imediatamente após a linha de dados é atualizada. Os novos valores ficarão visíveis após <xref:System.Data.Linq.DataContext.SubmitChanges%2A> for concluída.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#9)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCheck">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.Mapping.UpdateCheck UpdateCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Linq.Mapping.UpdateCheck UpdateCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.UpdateCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] aborda a detecção de conflitos de simultaneidade otimista.</summary>
+        <value>Padrão = <see cref="F:System.Data.Linq.Mapping.UpdateCheck.Always" />, a menos que <see cref="P:System.Data.Linq.Mapping.ColumnAttribute.IsVersion" /> seja <see langword="true" /> para um membro.  
+  
+ Outros valores são <see cref="F:System.Data.Linq.Mapping.UpdateCheck.Never" /> e <see cref="F:System.Data.Linq.Mapping.UpdateCheck.WhenChanged" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é usada com um dos três enums, ele determina como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] detecta conflitos de simultaneidade.  
+  
+ Se nenhum membro foi projetado como `IsVersion=true`, valores de membro original são comparados com o estado atual do banco de dados.  
+  
+ Enumerações a seguir estão disponíveis:  
+  
+-   `Always`Sempre use esta coluna para detecção de conflitos.  
+  
+-   `Never`Nunca use esta coluna para detecção de conflitos.  
+  
+-   `WhenChanged`Use esta coluna somente quando o membro foi alterado pelo aplicativo.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.ColumnAttribute#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/cs/northwind.cs#10)]
+ [!code-vb[System.Data.Linq.Mapping.ColumnAttribute#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.ColumnAttribute/vb/northwind.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

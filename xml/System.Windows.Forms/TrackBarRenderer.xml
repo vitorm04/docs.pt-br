@@ -1,0 +1,683 @@
+<Type Name="TrackBarRenderer" FullName="System.Windows.Forms.TrackBarRenderer">
+  <TypeSignature Language="C#" Value="public sealed class TrackBarRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TrackBarRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TrackBarRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos usados para renderizar um controle de barra de trilha com estilos visuais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TrackBarRenderer> classe fornece um conjunto de `static` métodos que podem ser usados para processar cada parte de um controle de barra de controle com o estilo visual atual do sistema operacional. Renderizar um controle refere-se a desenhar a interface do usuário de um controle. Isso é útil se você estiver desenhando um controle personalizado que deve ter a aparência do estilo visual atual.  
+  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados à área de cliente do aplicativo windows, os métodos dessa classe desenhará a barra de controle com o estilo visual atual. Caso contrário, os métodos dessa classe lançará um <xref:System.InvalidOperationException>. Para determinar se os membros dessa classe podem ser usados, você pode verificar o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> propriedade.  
+  
+ Essa classe encapsula a funcionalidade de um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> está definido como um dos elementos expostos pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar?displayProperty=nameWithType> classe. Para obter mais informações, consulte [renderização de controles com estilos visuais](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle personalizado que usa o <xref:System.Windows.Forms.TrackBarRenderer> métodos para desenhar uma barra de controle horizontal que responde aos cliques do mouse.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.TrackBarRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.TrackBarRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawBottomPointingThumb">
+      <MemberSignature Language="C#" Value="public static void DrawBottomPointingThumb (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBottomPointingThumb(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawBottomPointingThumb(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle deslizante barra de controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle deslizante de barra de controle.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Desenha um apontando para baixo acompanhar barra deslizante (também conhecido como o thumb) com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawHorizontalThumb">
+      <MemberSignature Language="C#" Value="public static void DrawHorizontalThumb (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawHorizontalThumb(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawHorizontalThumb(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle deslizante barra de controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle deslizante de barra de controle.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Desenha um controle deslizante barra de trilha horizontal (também conhecido como o thumb) com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawHorizontalTicks">
+      <MemberSignature Language="C#" Value="public static void DrawHorizontalTicks (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, int numTicks, System.Windows.Forms.VisualStyles.EdgeStyle edgeStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawHorizontalTicks(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, int32 numTicks, valuetype System.Windows.Forms.VisualStyles.EdgeStyle edgeStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawHorizontalTicks(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.VisualStyles.EdgeStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="numTicks" Type="System.Int32" />
+        <Parameter Name="edgeStyle" Type="System.Windows.Forms.VisualStyles.EdgeStyle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar os tiques.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de tiques.</param>
+        <param name="numTicks">O número de tiques para desenhar.</param>
+        <param name="edgeStyle">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.EdgeStyle" />.</param>
+        <summary>Desenha o número especificado de tiques de barra de trilha horizontal com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ Se a largura ou altura do retângulo delimitador ou o número de tiques é menor ou igual a zero, ou `g` é `null`, <xref:System.Windows.Forms.TrackBarRenderer.DrawHorizontalTicks%2A> retorna sem processamento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawHorizontalTrack">
+      <MemberSignature Language="C#" Value="public static void DrawHorizontalTrack (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawHorizontalTrack(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawHorizontalTrack(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle.</param>
+        <summary>Desenha a faixa de uma barra horizontal acompanhar com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TrackBarRenderer.DrawHorizontalTrack%2A> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar uma barra de controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TrackBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLeftPointingThumb">
+      <MemberSignature Language="C#" Value="public static void DrawLeftPointingThumb (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawLeftPointingThumb(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawLeftPointingThumb(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle deslizante barra de controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle deslizante de barra de controle.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Desenha um apontando para a esquerda acompanhar barra deslizante (também conhecido como o thumb) com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRightPointingThumb">
+      <MemberSignature Language="C#" Value="public static void DrawRightPointingThumb (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRightPointingThumb(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawRightPointingThumb(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle deslizante barra de controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle deslizante de barra de controle.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Desenha um apontando para a direita acompanhar barra deslizante (também conhecido como o thumb) com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTopPointingThumb">
+      <MemberSignature Language="C#" Value="public static void DrawTopPointingThumb (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTopPointingThumb(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawTopPointingThumb(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle deslizante barra de controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle deslizante de barra de controle.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Desenha uma apontando para cima acompanhar barra deslizante (também conhecido como o thumb) com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TrackBarRenderer.DrawTopPointingThumb%2A> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> controlar o método para desenhar uma apontando para cima da barra deslizante. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TrackBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVerticalThumb">
+      <MemberSignature Language="C#" Value="public static void DrawVerticalThumb (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawVerticalThumb(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawVerticalThumb(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle deslizante barra de controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle deslizante de barra de controle.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Desenha um seletor de barra vertical rastrear (também conhecido como o thumb) com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVerticalTicks">
+      <MemberSignature Language="C#" Value="public static void DrawVerticalTicks (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, int numTicks, System.Windows.Forms.VisualStyles.EdgeStyle edgeStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawVerticalTicks(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, int32 numTicks, valuetype System.Windows.Forms.VisualStyles.EdgeStyle edgeStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawVerticalTicks(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.VisualStyles.EdgeStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="numTicks" Type="System.Int32" />
+        <Parameter Name="edgeStyle" Type="System.Windows.Forms.VisualStyles.EdgeStyle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar os tiques.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de tiques.</param>
+        <param name="numTicks">O número de tiques para desenhar.</param>
+        <param name="edgeStyle">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.EdgeStyle" />.</param>
+        <summary>Desenha o número especificado de tiques de barra vertical acompanhar com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a largura ou altura do retângulo delimitador ou o número de tiques é menor ou igual a zero, ou `g` é `null`, <xref:System.Windows.Forms.TrackBarRenderer.DrawVerticalTicks%2A> retorna sem processamento.  
+  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVerticalTrack">
+      <MemberSignature Language="C#" Value="public static void DrawVerticalTrack (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawVerticalTrack(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.DrawVerticalTrack(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o controle.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do controle.</param>
+        <summary>Desenha a faixa de uma barra vertical acompanhar com estilos visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBottomPointingThumbSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size GetBottomPointingThumbSize (System.Drawing.Graphics g, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size GetBottomPointingThumbSize(class System.Drawing.Graphics g, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.GetBottomPointingThumbSize(System.Drawing.Graphics,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usará essa operação.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante de barra de controle.</param>
+        <summary>Retorna o tamanho, em pixels, do controle barra controle deslizante (também conhecido como controle deslizante) que aponta para baixo.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que especifica o tamanho, em pixels, do controle deslizante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do controle deslizante é determinado pelo estilo visual atual do sistema operacional.  
+  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeftPointingThumbSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size GetLeftPointingThumbSize (System.Drawing.Graphics g, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size GetLeftPointingThumbSize(class System.Drawing.Graphics g, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.GetLeftPointingThumbSize(System.Drawing.Graphics,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usará essa operação.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante.</param>
+        <summary>Retorna o tamanho, em pixels, do controle barra controle deslizante (também conhecido como controle deslizante) que aponta para a esquerda.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que especifica o tamanho, em pixels, do controle deslizante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do controle deslizante é determinado pelo estilo visual atual do sistema operacional.  
+  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRightPointingThumbSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size GetRightPointingThumbSize (System.Drawing.Graphics g, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size GetRightPointingThumbSize(class System.Drawing.Graphics g, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.GetRightPointingThumbSize(System.Drawing.Graphics,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usará essa operação.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante.</param>
+        <summary>Retorna o tamanho, em pixels, do controle barra controle deslizante (também conhecido como controle deslizante) que aponta para a direita.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que especifica o tamanho, em pixels, do controle deslizante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do controle deslizante é determinado pelo estilo visual atual do sistema operacional.  
+  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTopPointingThumbSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size GetTopPointingThumbSize (System.Drawing.Graphics g, System.Windows.Forms.VisualStyles.TrackBarThumbState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size GetTopPointingThumbSize(class System.Drawing.Graphics g, valuetype System.Windows.Forms.VisualStyles.TrackBarThumbState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBarRenderer.GetTopPointingThumbSize(System.Drawing.Graphics,System.Windows.Forms.VisualStyles.TrackBarThumbState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TrackBarThumbState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usará essa operação.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TrackBarThumbState" /> valores que especifica o estado visual do controle deslizante.</param>
+        <summary>Retorna o tamanho, em pixels, do controle barra controle deslizante (também conhecido como controle deslizante) que aponta para cima.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que especifica o tamanho, em pixels, do controle deslizante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do controle deslizante é determinado pelo estilo visual atual do sistema operacional.  
+  
+ Antes de chamar esse método, você deve verificar se o valor de <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> é de propriedade `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TrackBarRenderer.GetTopPointingThumbSize%2A> método para determinar o tamanho do retângulo usado pelo <xref:System.Windows.Forms.TrackBarRenderer.DrawTopPointingThumb%2A> método para desenhar o controle deslizante. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TrackBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TrackBarRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TrackBarRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBarRenderer.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.TrackBarRenderer" /> classe pode ser usada para desenhar uma barra de controle com estilos visuais.</summary>
+        <value>
+          <see langword="true" />Se o usuário habilitou estilos visuais no sistema operacional e estilos visuais são aplicados à área de cliente do windows do aplicativo. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for `false`, os métodos dessa classe lançará um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TrackBarRenderer.IsSupported%2A> propriedade para determinar se deve usar o <xref:System.Windows.Forms.TrackBarRenderer> métodos. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TrackBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.TrackBarRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

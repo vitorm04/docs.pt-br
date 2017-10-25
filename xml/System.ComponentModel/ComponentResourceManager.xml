@@ -1,0 +1,185 @@
+<Type Name="ComponentResourceManager" FullName="System.ComponentModel.ComponentResourceManager">
+  <TypeSignature Language="C#" Value="public class ComponentResourceManager : System.Resources.ResourceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentResourceManager extends System.Resources.ResourceManager" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ComponentResourceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Resources.ResourceManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma funcionalidade simples para enumerar recursos para um componente ou objeto. A classe <see cref="T:System.ComponentModel.ComponentResourceManager" /> é um <see cref="T:System.Resources.ResourceManager" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.ComponentModel.ComponentResourceManager> atribuir recursos de imagem para o <xref:System.Windows.Forms.ToolStripItem.Image%2A> propriedade <xref:System.Windows.Forms.ToolStripButton> controles.  
+  
+ [!code-csharp[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentResourceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentResourceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.ComponentResourceManager" /> com valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentResourceManager (Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentResourceManager.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="t">Um <see cref="T:System.Type" /> do qual o <see cref="T:System.ComponentModel.ComponentResourceManager" /> deriva todas as informações para localizar arquivos de recurso.</param>
+        <summary>Cria um <see cref="T:System.ComponentModel.ComponentResourceManager" /> que procura recursos em assemblies satélites com base nas informações do <see cref="T:System.Type" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.ComponentModel.ComponentResourceManager> atribuir recursos de imagem para o <xref:System.Windows.Forms.ToolStripItem.Image%2A> propriedade <xref:System.Windows.Forms.ToolStripButton> controles.  
+  
+ [!code-csharp[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyResources">
+      <MemberSignature Language="C#" Value="public void ApplyResources (object value, string objectName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyResources(object value, string objectName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentResourceManager.ApplyResources(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="objectName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Object" /> que contém o valor da propriedade a ser aplicado.</param>
+        <param name="objectName">Um <see cref="T:System.String" /> que contém o nome do objeto a ser pesquisado nos recursos.</param>
+        <summary>Aplica-se o valor de um recurso à propriedade correspondente do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método examina todos os recursos para a cultura atual usada no ambiente de desenvolvimento. Ele tenta encontrar um recurso com uma chave no formato de `objectName.propertyName`, onde `objectName` é passado como um parâmetro e `propertyName` é o nome de uma propriedade. Em seguida, ele aplicará esse recurso `value` à propriedade correspondente do objeto. Se não houver nenhuma correspondência da propriedade, o recurso será ignorado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ou <paramref name="objectName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyResources">
+      <MemberSignature Language="C#" Value="public virtual void ApplyResources (object value, string objectName, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyResources(object value, string objectName, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentResourceManager.ApplyResources(System.Object,System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="objectName" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Object" /> que contém o valor da propriedade a ser aplicado.</param>
+        <param name="objectName">Um <see cref="T:System.String" /> que contém o nome do objeto a ser pesquisado nos recursos.</param>
+        <param name="culture">A cultura para a qual aplicar recursos.</param>
+        <summary>Aplica-se o valor de um recurso à propriedade correspondente do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método examina todos os recursos para a cultura fornecida. Se `culture` é `null`, a cultura atual é assumida.  
+  
+ O <xref:System.ComponentModel.ComponentResourceManager.ApplyResources%2A> método tenta encontrar um recurso com uma chave no formato de `objectName.propertyName`, onde `objectName` é passado como um parâmetro e `propertyName` é o nome de uma propriedade. Em seguida, ele aplicará esse recurso `value` à propriedade correspondente do objeto. Se não houver nenhuma correspondência da propriedade, o recurso será ignorado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ou <paramref name="objectName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

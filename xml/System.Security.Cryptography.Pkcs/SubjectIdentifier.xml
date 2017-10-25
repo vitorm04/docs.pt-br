@@ -1,0 +1,83 @@
+<Type Name="SubjectIdentifier" FullName="System.Security.Cryptography.Pkcs.SubjectIdentifier">
+  <TypeSignature Language="C#" Value="public sealed class SubjectIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SubjectIdentifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" /> classe define o tipo do identificador do assunto, como um <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> ou <see cref="T:System.Security.Cryptography.Pkcs.CmsRecipient" />.  O assunto pode ser identificado pelo emissor do certificado e o número de série ou a chave de assunto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SubjectIdentifierType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifierType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" /> propriedade recupera o tipo de identificador do assunto. O assunto pode ser identificado pelo emissor do certificado e o número de série ou a chave de assunto.</summary>
+        <value>Membro de <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> enumeração que identifica o tipo de entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Value" /> propriedade recupera o valor do identificador do assunto. Use o <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" /> propriedade para determinar o tipo de identificador do assunto e, em seguida, use o <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Value" /> propriedade para recuperar o valor correspondente.</summary>
+        <value>Um <see cref="T:System.Object" /> objeto que representa o valor do identificador do assunto. Isso <see cref="T:System.Object" /> pode ser um dos seguintes objetos, conforme determinado pelo <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" /> propriedade.  
+  
+ <list type="table"><listheader><term><see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" />propriedade  
+  
+ </term><description>Objeto  
+  
+ </description></listheader><item><term>IssuerAndSerialNumber  
+  
+ </term><description><see cref="T:System.Security.Cryptography.Xml.X509IssuerSerial" /></description></item><item><term>SubjectKeyIdentifier  
+  
+ </term><description><see cref="T:System.String" /></description></item></list></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

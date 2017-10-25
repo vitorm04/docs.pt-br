@@ -1,0 +1,70 @@
+<Type Name="ITextControl" FullName="System.Web.UI.ITextControl">
+  <TypeSignature Language="C#" Value="public interface ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ITextControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface que um controle implementa para obter ou definir seu conteúdo de texto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ITextControl> interface define o <xref:System.Web.UI.ITextControl.Text%2A> implementa um controle para permitir que a obtenção de propriedade ou configuração de seu conteúdo de texto. O <xref:System.Web.UI.ITextControl.Text%2A> propriedade pode ser definida programaticamente ou por meio de usuário de entrada.  
+  
+> [!CAUTION]
+>  Um controle que implementa esta interface pode ser usado para exibir a entrada do usuário. Antes de exibir a entrada do usuário, a entrada deve ser verificada para script de cliente mal-intencionado, como script executável ou instruções SQL. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um controle personalizado que implementa o <xref:System.Web.UI.ITextControl> interface. Um valor padrão é atribuído para o <xref:System.Web.UI.ITextControl.Text%2A> propriedade se `null` é passado para a propriedade.  
+  
+ [!code-csharp[System.Web.UI.ITextControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ITextControl/CS/CustomTextControl.cs#1)]
+ [!code-vb[System.Web.UI.ITextControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ITextControl/VB/CustomTextControl.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ITextControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo de um controle de texto.</summary>
+        <value>O conteúdo de texto de um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ITextControl.Text%2A> propriedade pode ser definida programaticamente ou por meio de usuário de entrada.  
+  
+> [!CAUTION]
+>  Um controle que implementa esta interface pode ser usado para exibir a entrada do usuário. Antes de exibir a entrada do usuário, a entrada deve ser verificada para script de cliente mal-intencionado, como script executável ou instruções SQL. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um controle personalizado que implementa o <xref:System.Web.UI.ITextControl> interface. Um valor padrão é atribuído para o <xref:System.Web.UI.ITextControl.Text%2A> propriedade se `null` é passado para a propriedade.  
+  
+ [!code-csharp[System.Web.UI.ITextControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ITextControl/CS/CustomTextControl.cs#1)]
+ [!code-vb[System.Web.UI.ITextControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ITextControl/VB/CustomTextControl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

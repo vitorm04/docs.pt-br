@@ -1,0 +1,263 @@
+<Type Name="DataFormula" FullName="System.Windows.Forms.DataVisualization.Charting.DataFormula">
+  <TypeSignature Language="C#" Value="public class DataFormula" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFormula extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.DataFormula" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos para preparar a série de dados para análise técnica, aplicar fórmulas nos dados da série e preparar os dados de saída a ser exibida como um gráfico. Os cálculos reais são executados na classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.StatisticFormula" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataFormula ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataFormula" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopySeriesValues">
+      <MemberSignature Language="C#" Value="public void CopySeriesValues (string inputSeries, string outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopySeriesValues(string inputSeries, string outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.CopySeriesValues(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputSeries" Type="System.String" />
+        <Parameter Name="outputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de séries de dados de entrada e opcional X e Y.</param>
+        <param name="outputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de séries de dados de saída e opcional X e Y.</param>
+        <summary>Copia uma série ou específicos do valor de X ou Y.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.FinancialFormula(System.Windows.Forms.DataVisualization.Charting.FinancialFormula,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Windows.Forms.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">O nome da fórmula para chamar.</param>
+        <param name="inputSeries">A entrada da série na qual o cálculo é executado.</param>
+        <summary>Chama um método de um módulo de fórmula com o nome especificado da fórmula e uma série de entrada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, System.Windows.Forms.DataVisualization.Charting.Series inputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, class System.Windows.Forms.DataVisualization.Charting.Series inputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.FinancialFormula(System.Windows.Forms.DataVisualization.Charting.FinancialFormula,System.Windows.Forms.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Windows.Forms.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.Windows.Forms.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">O nome da fórmula para chamar.</param>
+        <param name="inputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de entrada da série opcional X e Y.</param>
+        <summary>Chama um método de um módulo de fórmula com o nome especificado da fórmula e uma série de entrada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries, string outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries, string outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.FinancialFormula(System.Windows.Forms.DataVisualization.Charting.FinancialFormula,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Windows.Forms.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.String" />
+        <Parameter Name="outputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">O nome da fórmula para chamar.</param>
+        <param name="inputSeries">A entrada da série na qual o cálculo é executado.</param>
+        <param name="outputSeries">A série de saída no qual o resultado do cálculo será armazenado.</param>
+        <summary>Chama um método de um módulo de fórmula com o nome especificado da fórmula e os nomes da série de entrada e saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, System.Windows.Forms.DataVisualization.Charting.Series inputSeries, System.Windows.Forms.DataVisualization.Charting.Series outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, class System.Windows.Forms.DataVisualization.Charting.Series inputSeries, class System.Windows.Forms.DataVisualization.Charting.Series outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.FinancialFormula(System.Windows.Forms.DataVisualization.Charting.FinancialFormula,System.Windows.Forms.DataVisualization.Charting.Series,System.Windows.Forms.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Windows.Forms.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.Windows.Forms.DataVisualization.Charting.Series" />
+        <Parameter Name="outputSeries" Type="System.Windows.Forms.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">O nome da fórmula para chamar.</param>
+        <param name="inputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de entrada da série opcional X e Y.</param>
+        <param name="outputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de séries de saída e opcional X e Y.</param>
+        <summary>Chama um método de um módulo de fórmula com o nome especificado da fórmula, a série de entrada e saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string parameters, string inputSeries, string outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string parameters, string inputSeries, string outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.FinancialFormula(System.Windows.Forms.DataVisualization.Charting.FinancialFormula,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Windows.Forms.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="parameters" Type="System.String" />
+        <Parameter Name="inputSeries" Type="System.String" />
+        <Parameter Name="outputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">O nome da fórmula para chamar.</param>
+        <param name="parameters">Os parâmetros associados a fórmula.</param>
+        <param name="inputSeries">A entrada da série na qual o cálculo é executado.</param>
+        <param name="outputSeries">A série de saída no qual o resultado do cálculo será armazenado.</param>
+        <summary>Chama um método de um módulo de fórmula com o nome especificado da fórmula, parâmetros e os nomes da série de entrada e saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string parameters, System.Windows.Forms.DataVisualization.Charting.Series inputSeries, System.Windows.Forms.DataVisualization.Charting.Series outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Windows.Forms.DataVisualization.Charting.FinancialFormula formulaName, string parameters, class System.Windows.Forms.DataVisualization.Charting.Series inputSeries, class System.Windows.Forms.DataVisualization.Charting.Series outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataFormula.FinancialFormula(System.Windows.Forms.DataVisualization.Charting.FinancialFormula,System.String,System.Windows.Forms.DataVisualization.Charting.Series,System.Windows.Forms.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Windows.Forms.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="parameters" Type="System.String" />
+        <Parameter Name="inputSeries" Type="System.Windows.Forms.DataVisualization.Charting.Series" />
+        <Parameter Name="outputSeries" Type="System.Windows.Forms.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">O nome da fórmula para chamar.</param>
+        <param name="parameters">Os parâmetros associados a fórmula.</param>
+        <param name="inputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de entrada da série opcional X e Y.</param>
+        <param name="outputSeries">Os nomes de valores de uma lista separada por vírgulas de nomes de séries de saída e opcional X e Y.</param>
+        <summary>Chama um método de um módulo de fórmula com o nome especificado da fórmula e parâmetros, usando a entrada especificada e a série de saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmptyPointIgnored">
+      <MemberSignature Language="C#" Value="public bool IsEmptyPointIgnored { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmptyPointIgnored" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.DataFormula.IsEmptyPointIgnored" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se os pontos vazios são ignorados durante a execução de cálculos.</summary>
+        <value>
+          <see langword="true" />Se os pontos vazios são ignorados durante a execução de cálculos. <see langword="false" /> se os pontos vazios são tratados como zeros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStartFromFirst">
+      <MemberSignature Language="C#" Value="public bool IsStartFromFirst { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStartFromFirst" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.DataFormula.IsStartFromFirst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se deve iniciar fórmulas, como "distribuir média" de zero.</summary>
+        <value>
+          <see langword="true" />Se as fórmulas, como "distribuir média" início do zero. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statistics">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.StatisticFormula Statistics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.StatisticFormula Statistics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.DataFormula.Statistics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StatisticFormula</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Windows.Forms.DataVisualization.Charting.StatisticFormula" /> classe.</summary>
+        <value>Uma referência ao objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.StatisticFormula" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,402 @@
+<Type Name="Route" FullName="System.Web.Routing.Route">
+  <TypeSignature Language="C#" Value="public class Route : System.Web.Routing.RouteBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Route extends System.Web.Routing.RouteBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.Route" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Routing.RouteBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Routing, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece propriedades e métodos para definir uma rota e para obter informações sobre ela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.Route> classe permite que você especifique como o roteamento é processado em um aplicativo ASP.NET. Você cria um <xref:System.Web.Routing.Route> para cada padrão de URL que você deseja mapear para uma classe que pode lidar com solicitações que correspondem a esse padrão do objeto. Você, em seguida, adicionar a rota para o <xref:System.Web.Routing.RouteTable.Routes%2A> coleção. Quando o aplicativo recebe uma solicitação, roteamento ASP.NET itera por meio de rotas a <xref:System.Web.Routing.RouteTable.Routes%2A> coleção para localizar a primeira rota que corresponde ao padrão da URL.  
+  
+ Definir o <xref:System.Web.Routing.Route.Url%2A> propriedade a um padrão de URL. O padrão de URL consiste em segmentos que vêm após o nome do aplicativo em uma solicitação HTTP. Por exemplo, na URL `http://www.contoso.com/products/show/beverages`, o padrão se aplica a `products/show/beverages`. Um padrão com três segmentos, como `{controller}/{action}/{id}`, corresponde à URL `http://www.contoso.com/products/show/beverages`. Cada segmento é delimitado pela `/` caracteres. Quando um segmento é colocado entre chaves (`{` e `}`), o segmento é chamado para um parâmetro de URL. Roteamento ASP.NET recupera o valor da solicitação e o atribui ao parâmetro de URL. No exemplo anterior, o parâmetro de URL `action` é atribuído o valor `show`. Se o segmento não está entre chaves, o valor é tratado como um valor literal.  
+  
+ Definir o <xref:System.Web.Routing.Route.Defaults%2A> propriedade para um <xref:System.Web.Routing.RouteValueDictionary> objeto que inclui valores que são usados se um parâmetro estiver ausente da URL, ou para definir valores adicionais que não são parametrizados na URL. Definir o <xref:System.Web.Routing.Route.Constraints%2A> propriedade para um <xref:System.Web.Routing.RouteValueDictionary> objeto que contém os valores ou expressões regulares ou <xref:System.Web.Routing.IRouteConstraint> objetos. Esses valores são usados para determinar se um valor de parâmetro é válido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.Routing.Route> de objeto e adicioná-lo para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/vb/Global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string url, System.Web.Routing.IRouteHandler routeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, class System.Web.Routing.IRouteHandler routeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.#ctor(System.String,System.Web.Routing.IRouteHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="routeHandler" Type="System.Web.Routing.IRouteHandler" />
+      </Parameters>
+      <Docs>
+        <param name="url">O padrão de URL para a rota.</param>
+        <param name="routeHandler">O objeto que processa as solicitações para a rota.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Routing.Route" /> usando o padrão de URL e a classe de manipulador especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.Routing.Route> de objeto e adicioná-lo para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string url, System.Web.Routing.RouteValueDictionary defaults, System.Web.Routing.IRouteHandler routeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, class System.Web.Routing.RouteValueDictionary defaults, class System.Web.Routing.IRouteHandler routeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="defaults" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeHandler" Type="System.Web.Routing.IRouteHandler" />
+      </Parameters>
+      <Docs>
+        <param name="url">O padrão de URL para a rota.</param>
+        <param name="defaults">Os valores a serem usados para todos os parâmetros que estão faltando na URL.</param>
+        <param name="routeHandler">O objeto que processa as solicitações para a rota.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Routing.Route" /> classe usando o padrão de URL especificado, o valores de parâmetro padrão e a classe do manipulador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string url, System.Web.Routing.RouteValueDictionary defaults, System.Web.Routing.RouteValueDictionary constraints, System.Web.Routing.IRouteHandler routeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, class System.Web.Routing.RouteValueDictionary defaults, class System.Web.Routing.RouteValueDictionary constraints, class System.Web.Routing.IRouteHandler routeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="defaults" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="constraints" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeHandler" Type="System.Web.Routing.IRouteHandler" />
+      </Parameters>
+      <Docs>
+        <param name="url">O padrão de URL para a rota.</param>
+        <param name="defaults">Os valores a ser usado se a URL não contém todos os parâmetros.</param>
+        <param name="constraints">Uma expressão regular que especifica os valores válidos para um parâmetro de URL.</param>
+        <param name="routeHandler">O objeto que processa as solicitações para a rota.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Routing.Route" /> classe usando o padrão de URL especificado, valores de parâmetro padrão, restrições e classe de manipulador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string url, System.Web.Routing.RouteValueDictionary defaults, System.Web.Routing.RouteValueDictionary constraints, System.Web.Routing.RouteValueDictionary dataTokens, System.Web.Routing.IRouteHandler routeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, class System.Web.Routing.RouteValueDictionary defaults, class System.Web.Routing.RouteValueDictionary constraints, class System.Web.Routing.RouteValueDictionary dataTokens, class System.Web.Routing.IRouteHandler routeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="defaults" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="constraints" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="dataTokens" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeHandler" Type="System.Web.Routing.IRouteHandler" />
+      </Parameters>
+      <Docs>
+        <param name="url">O padrão de URL para a rota.</param>
+        <param name="defaults">Os valores a ser usado se a URL não contém todos os parâmetros.</param>
+        <param name="constraints">Uma expressão regular que especifica os valores válidos para um parâmetro de URL.</param>
+        <param name="dataTokens">Valores personalizados que são passados para o manipulador de rota, mas que não são usados para determinar se a rota corresponde a um padrão de URL específico. Esses valores são passados para o manipulador de rota, onde podem ser usados para processar a solicitação.</param>
+        <param name="routeHandler">O objeto que processa as solicitações para a rota.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Routing.Route" /> classe usando o padrão de URL especificado, valores de parâmetro padrão, restrições, valores personalizados e a classe de manipulador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraints">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteValueDictionary Constraints { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteValueDictionary Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.Route.Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteValueDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um dicionário de expressões que especificam os valores válidos para um parâmetro de URL.</summary>
+        <value>Um objeto que contém os nomes e as expressões de parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.Route.Constraints%2A> propriedade permite que você limitar os valores aceitáveis para um parâmetro de URL que é processada por uma rota. Você atribui um <xref:System.Web.Routing.RouteValueDictionary> o objeto para o <xref:System.Web.Routing.Route.Constraints%2A> propriedade. Cada elemento de <xref:System.Web.Routing.RouteValueDictionary> objeto contém o nome de um parâmetro e um dos seguintes:  
+  
+-   Uma cadeia de caracteres que define uma expressão regular. A expressão regular diferencia maiusculas de minúsculas.  
+  
+-   Um objeto que implementa o <xref:System.Web.Routing.IRouteConstraint> interface e que inclui um <xref:System.Web.Routing.IRouteConstraint.Match%2A> método.  
+  
+ A classe <xref:System.Web.Routing.HttpMethodConstraint> implementa a interface <xref:System.Web.Routing.IRouteConstraint>. Você pode incluir uma instância do <xref:System.Web.Routing.HttpMethodConstraint> classe como uma restrição para especificar quais verbos HTTP são aceitáveis para a rota.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.Routing.Route> do objeto e defina o <xref:System.Web.Routing.Route.Constraints%2A>, <xref:System.Web.Routing.Route.DataTokens%2A>, e <xref:System.Web.Routing.Route.Defaults%2A> propriedades.  
+  
+ [!code-csharp[System.Web.Routing.Route.ctor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.ctor/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.ctor/VB/Global.asax#1)]  
+  
+ A exemplo a seguir mostra um <xref:System.Web.Routing.Route> do objeto cuja <xref:System.Web.Routing.Route.Constraints%2A> propriedade contém um parâmetro denominado `httpMethod` com uma instância do <xref:System.Web.Routing.HttpMethodConstraint> classe para o valor.  
+  
+ [!code-csharp[System.Web.Routing.Route.Constraints#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.Constraints/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.Constraints#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.Constraints/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTokens">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteValueDictionary DataTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteValueDictionary DataTokens" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.Route.DataTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteValueDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define valores personalizados que são passados para o manipulador de rotas, mas que não são usados para determinar se a rota corresponde a um padrão de URL.</summary>
+        <value>Um objeto que contém valores personalizados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.Routing.RouteData.DataTokens%2A> propriedade para recuperar ou atribuir valores associados com a rota que não são usados para determinar se uma rota corresponde a um padrão de URL. Esses valores são passados para o manipulador de rota, onde podem ser usados para processar a solicitação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.Routing.Route> do objeto e defina o <xref:System.Web.Routing.Route.Constraints%2A>, <xref:System.Web.Routing.Route.DataTokens%2A>, e <xref:System.Web.Routing.Route.Defaults%2A> propriedades.  
+  
+ [!code-csharp[System.Web.Routing.Route.ctor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.ctor/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.ctor/VB/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Defaults">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteValueDictionary Defaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteValueDictionary Defaults" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.Route.Defaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteValueDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os valores a serem usados se a URL não contiver todos os parâmetros.</summary>
+        <value>Um objeto que contém os nomes do parâmetro e os valores padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.Route.Defaults%2A> propriedade permite que você defina o valor para um parâmetro de URL, se a URL não contém um segmento para esse parâmetro. Você atribui um <xref:System.Web.Routing.RouteValueDictionary> o objeto para o <xref:System.Web.Routing.Route.Defaults%2A> propriedade. Cada elemento de <xref:System.Web.Routing.RouteValueDictionary> objeto contém o nome de um parâmetro e o valor a ser usado se o parâmetro estiver ausente.  
+  
+ Você pode incluir um valor padrão para um parâmetro que não está definido no <xref:System.Web.Routing.Route.Url%2A> a propriedade como um segmento. Quando o roteamento ASP.NET manipula uma solicitação, o valor padrão sempre é passado para o manipulador de rota. Quando você construir uma URL e incluir um valor para um parâmetro padrão que não está definido como um segmento, a rota serão apenas considerada uma correspondência se o valor que você forneceu coincide com o valor padrão para a rota.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.Routing.Route> do objeto e defina o <xref:System.Web.Routing.Route.Constraints%2A>, <xref:System.Web.Routing.Route.DataTokens%2A>, e <xref:System.Web.Routing.Route.Defaults%2A> propriedades.  
+  
+ [!code-csharp[System.Web.Routing.Route.ctor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.ctor/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.ctor/VB/Global.asax#1)]  
+  
+ A exemplo a seguir mostra um <xref:System.Web.Routing.Route> do objeto cuja <xref:System.Web.Routing.Route.Defaults%2A> propriedade contém um parâmetro que não faz parte do padrão no <xref:System.Web.Routing.Route.Url%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Routing.Route.Defaults#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.Defaults/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.Defaults#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.Defaults/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRouteData">
+      <MemberSignature Language="C#" Value="public override System.Web.Routing.RouteData GetRouteData (System.Web.HttpContextBase httpContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Routing.RouteData GetRouteData(class System.Web.HttpContextBase httpContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.GetRouteData(System.Web.HttpContextBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContextBase" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Um objeto que encapsula informações sobre a solicitação HTTP.</param>
+        <summary>Retorna informações sobre a rota solicitada.</summary>
+        <returns>Um objeto que contém os valores da definição de rota.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVirtualPath">
+      <MemberSignature Language="C#" Value="public override System.Web.Routing.VirtualPathData GetVirtualPath (System.Web.Routing.RequestContext requestContext, System.Web.Routing.RouteValueDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Routing.VirtualPathData GetVirtualPath(class System.Web.Routing.RequestContext requestContext, class System.Web.Routing.RouteValueDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.GetVirtualPath(System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.VirtualPathData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestContext" Type="System.Web.Routing.RequestContext" />
+        <Parameter Name="values" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="requestContext">Um objeto que encapsula informações sobre uma rota solicitada.</param>
+        <param name="values">Um objeto que contém os parâmetros para uma rota.</param>
+        <summary>Retorna informações sobre a URL que está associada com a rota.</summary>
+        <returns>Um objeto que contém informações sobre a URL que está associada com a rota.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessConstraint">
+      <MemberSignature Language="C#" Value="protected virtual bool ProcessConstraint (System.Web.HttpContextBase httpContext, object constraint, string parameterName, System.Web.Routing.RouteValueDictionary values, System.Web.Routing.RouteDirection routeDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ProcessConstraint(class System.Web.HttpContextBase httpContext, object constraint, string parameterName, class System.Web.Routing.RouteValueDictionary values, valuetype System.Web.Routing.RouteDirection routeDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.Route.ProcessConstraint(System.Web.HttpContextBase,System.Object,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContextBase" />
+        <Parameter Name="constraint" Type="System.Object" />
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="values" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeDirection" Type="System.Web.Routing.RouteDirection" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Um objeto que encapsula informações sobre a solicitação HTTP.</param>
+        <param name="constraint">A expressão regular ou o objeto a ser usado para testar <c>parameterName</c>.</param>
+        <param name="parameterName">O nome do parâmetro para testar.</param>
+        <param name="values">Os valores para teste.</param>
+        <param name="routeDirection">Um valor que especifica se a URL de roteamento está processando uma solicitação de entrada ou construindo uma URL.</param>
+        <summary>Determina se um valor de parâmetro corresponde a restrição para esse parâmetro.</summary>
+        <returns>
+          <see langword="true" />Se o valor do parâmetro coincide com a restrição. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="constraint" />não é uma cadeia de caracteres que contém uma expressão regular.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteHandler">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.IRouteHandler RouteHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.IRouteHandler RouteHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.Route.RouteHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.IRouteHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que processa as solicitações para a rota.</summary>
+        <value>O objeto que processa a solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.Route.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o padrão de URL para a rota.</summary>
+        <value>O padrão para corresponder a rota a uma URL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você atribui um valor para o <xref:System.Web.Routing.Route.Url%2A> propriedade, o `/` caractere é interpretado como um delimitador quando a URL é analisada. Use chaves (`{}`) para definir uma variável que é conhecida como um *parâmetro de URL*. O valor do segmento correspondente na URL é atribuído ao parâmetro de URL. Os valores no <xref:System.Web.Routing.Route.Url%2A> propriedade que não são colocados entre chaves são tratados como literais constantes.  
+  
+ O `?` caractere não é permitido no <xref:System.Web.Routing.Route.Url%2A> propriedade. Cada segmento de URL deve ser separado por um delimitador ou uma constante literal. Você pode usar `{{` ou `}}` como caracteres de escape para uma chave de fechamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Web.Routing.Route.Url%2A> propriedade no construtor da classe. O padrão contém o valor de literal 'Categoria' para o primeiro segmento e os parâmetros de URL para os próximos dois segmentos.  
+  
+ [!code-csharp[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um dos seguintes:  
+  
+-   O valor começa com <c> ~ </c> ou <c> / </c>.  
+  
+-   O valor contém um <c>?</c> .  
+  
+-   O parâmetro pega-tudo não é o último.</exception>
+        <exception cref="T:System.Exception">Segmentos de URL não são separados por um delimitador ou uma constante literal.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

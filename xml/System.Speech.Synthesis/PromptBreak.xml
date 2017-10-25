@@ -1,0 +1,168 @@
+<Type Name="PromptBreak" FullName="System.Speech.Synthesis.PromptBreak">
+  <TypeSignature Language="C#" Value="public enum PromptBreak" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PromptBreak extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.PromptBreak" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os valores para os intervalos de separação prosódica (quebras) entre os limites das palavras.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores de <xref:System.Speech.Synthesis.PromptBreak> enumeração representa um intervalo de intervalos de separação (pausa) entre limites de palavras. O mecanismo de síntese de fala determina a duração exata do intervalo. Quando for solicitada uma quebra de, um desses valores é passado para o mecanismo de texto em fala (TTS), que contém um mapeamento entre esses valores e os valores correspondentes de quebra de milissegundo.  
+  
+ O valor `None` representa a ausência de uma pausa entre limites de palavras e pode ser usado para remover uma quebra de onde um geralmente ocorrem. Os valores restantes são listados em ordem crescente durações de quebras.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma solicitação que contém duas frases separadas por uma quebra e fala o prompt para o dispositivo de áudio padrão no computador.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Build a prompt with two sentences separated by a break.  
+        PromptBuilder builder = new PromptBuilder(  
+          new System.Globalization.CultureInfo("en-US"));  
+        builder.AppendText(  
+          "Tonight's movie showings in theater A are at 5:45, 7:15, and 8:45.");  
+        builder.AppendBreak(PromptBreak.Medium);  
+        builder.AppendText(  
+          "Tonight's movie showings in theater B are at 5:15, 7:30, and 9:15.");  
+  
+        // Speak the prompt.  
+        synth.Speak(builder);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtraLarge">
+      <MemberSignature Language="C#" Value="ExtraLarge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptBreak ExtraLarge = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptBreak.ExtraLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma quebra extra grande.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraSmall">
+      <MemberSignature Language="C#" Value="ExtraSmall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptBreak ExtraSmall = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptBreak.ExtraSmall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma quebra extra pequena.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Large">
+      <MemberSignature Language="C#" Value="Large" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptBreak Large = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptBreak.Large" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma quebra grande.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptBreak Medium = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptBreak.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma quebra média.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptBreak None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptBreak.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica nenhuma quebra.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Small">
+      <MemberSignature Language="C#" Value="Small" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptBreak Small = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptBreak.Small" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma quebra pequena.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

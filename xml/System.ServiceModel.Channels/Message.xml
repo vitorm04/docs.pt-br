@@ -1,0 +1,1987 @@
+<Type Name="Message" FullName="System.ServiceModel.Channels.Message">
+  <TypeSignature Language="C#" Value="public abstract class Message : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Message extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.Message" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a unidade de comunicação entre pontos de extremidade em um ambiente distribuído.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.Message> classe fornece um meio de se comunicar informações arbitrárias entre um remetente e o destinatário em uma rede. Ele pode ser usado para transmitir informações, sugerir ou exigem um curso de ação ou dados da solicitação.  
+  
+ A estrutura de um <xref:System.ServiceModel.Channels.Message> objeto representa um envelope SOAP. Ele consiste em duas partes distintas: corpo da mensagem e um conjunto opcional de cabeçalhos, representado pelo <xref:System.ServiceModel.Channels.Message.Headers%2A> classe. O conteúdo da mensagem é enviados de um remetente a um destinatário de dados definido pelo aplicativo. Os cabeçalhos de mensagem habilitar extensibilidade do sistema e do aplicativo atender aos requisitos de alteração, porque você pode definir o código para manipular e responder aos cabeçalhos específicos. Você também pode definir seus próprios cabeçalhos. Cabeçalhos de mensagem são serializados ou desserializados junto com o conteúdo da mensagem.  
+  
+ As mensagens são recebidas e enviadas em particular formatos. É oferecido suporte para dois formatos: o formato XML padrão baseado em texto e um formato XML binário. O <xref:System.ServiceModel.Channels.Message> objeto pode ser usado para representar envelopes SOAP 1.1 e SOAP 1.2. Observe que uma instância de <xref:System.ServiceModel.Channels.Message> é fixado no momento da criação e está associado a uma versão específica de SOAP. O <xref:System.ServiceModel.Channels.Message.Version%2A> propriedade representa a versão SOAP da mensagem.  
+  
+ Um <xref:System.ServiceModel.Channels.Message> objeto pode ser serializado para um repositório externo usando o <xref:System.ServiceModel.Channels.Message.WriteMessage%2A> método. Propriedades da mensagem também podem ser serializadas, mas eles precisam ser identificados individualmente e serializado separadamente. Desserialização de uma mensagem para criar na memória <xref:System.ServiceModel.Channels.Message> objeto pode ser feito usando <xref:System.ServiceModel.Channels.Message.CreateMessage%2A>. Propriedades também devem ser desserializadas individualmente e manualmente adicionados à coleção de propriedades específicas <xref:System.ServiceModel.Channels.Message> instância.  
+  
+ O tamanho de um <xref:System.ServiceModel.Channels.Message> objeto é fixo para o tamanho dos dados que está transmitindo. Cada corpo é modelado como uma instância de <xref:System.Xml.XmlReader>, sem limite predefinido no tamanho do fluxo que o <xref:System.Xml.XmlReader> instância é quebrado. No entanto, os provedores de canal específico podem ter um limite no tamanho de mensagens que eles processem.  
+  
+ Um <xref:System.ServiceModel.Channels.Message> podem ser anotados com informações úteis geradas por uma entidade que foi examinado e processou a mensagem. Essa funcionalidade é fornecida pelo <xref:System.ServiceModel.Channels.Message.Headers%2A> e <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedades. O <xref:System.ServiceModel.Channels.Message.Headers%2A> coleção representa o conjunto de cabeçalhos SOAP na mensagem.  
+  
+ O <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade representa o conjunto de anotações de nível de processamento da mensagem. Porque as informações nos cabeçalhos são transmitidas na conexão, uma entidade que examina um cabeçalho deve dar suporte a versões subjacentes dos protocolos usados pelo cabeçalho. No entanto, propriedades fornecem uma maneira de mais independente de versão de anotação de uma mensagem.  
+  
+ Para criar um <xref:System.ServiceModel.Channels.Message> da instância, use um do <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> métodos.  
+  
+ É recomendável que um consumidor de uma mensagem sempre chamar <xref:System.ServiceModel.Channels.Message.Close%2A> quando o consumidor tiver concluído a acessar o conteúdo da mensagem. Essa ação libera recursos do sistema finito (por exemplo, soquetes, pipes nomeados) que estão vinculados ao tempo de vida da mensagem.  
+  
+ Observação especial para usuários de C++ gerenciado derivar desta classe:  
+  
+-   Coloque a limpeza código em (On) (início) feche (e/ou OnAbort), não em um destruidor.  
+  
+-   Evite destruidores: eles fazer com que o compilador gere automaticamente <xref:System.IDisposable>.  
+  
+-   Evitar membros de referência não: pode fazer com que o compilador gere automaticamente <xref:System.IDisposable>.  
+  
+-   Evitar finalizadores; mas se você incluir um, suprimir o aviso de compilação e chamar <xref:System.GC.SuppressFinalize%28System.Object%29> e o finalizador automaticamente a partir (On) (início) feche (e/ou OnAbort) para emular o que seria o gerado automaticamente <xref:System.IDisposable> comportamento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um cliente que usa a fábrica de canais para enviar uma mensagem e ler a resposta.  
+  
+ [!code-csharp[Message#0](~/samples/snippets/csharp/VS_Snippets_CFX/message/cs/client.cs#0)]
+ [!code-vb[Message#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/message/vb/client.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.ServiceModel.Channels.Message" />, você deve substituir os seguintes membros: <see cref="P:System.ServiceModel.Channels.Message.Headers" />, e <see cref="P:System.ServiceModel.Channels.Message.Version" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Message ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.Message" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWriteBodyContents">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWriteBodyContents (System.Xml.XmlDictionaryWriter writer, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginWriteBodyContents(class System.Xml.XmlDictionaryWriter writer, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.BeginWriteBodyContents(System.Xml.XmlDictionaryWriter,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador usado para serializar o corpo da mensagem.</param>
+        <param name="callback">O método delegado que recebe a notificação quando a operação foi concluída.</param>
+        <param name="state">O objeto definido pelo usuário que representa o estado da operação.</param>
+        <summary>Inicia a gravação assíncrona do conteúdo do corpo da mensagem.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWriteMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWriteMessage (System.Xml.XmlDictionaryWriter writer, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginWriteMessage(class System.Xml.XmlDictionaryWriter writer, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.BeginWriteMessage(System.Xml.XmlDictionaryWriter,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador usado para serializar a mensagem inteira.</param>
+        <param name="callback">O método delegado que recebe a notificação quando a operação foi concluída.</param>
+        <param name="state">O objeto definido pelo usuário que representa o estado da operação.</param>
+        <summary>Inicia a gravação assíncrona da mensagem inteira.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o <see cref="T:System.ServiceModel.Channels.Message" /> e libera todos os recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.Message> tem um finalizador, que faz com que <xref:System.ServiceModel.Channels.Message.Close%2A> a ser chamado para você quando a mensagem é coletado como lixo. Isso é não ideal, como do .NET Framework coleta de lixo (GC) mecanismo necessariamente não é executado quando você ficar sem recursos do sistema que não seja de memória. Por esse motivo, você sempre deve chamar este método quando terminar com o conteúdo da mensagem. O <xref:System.ServiceModel.Channels.Message.Close%2A> método é um sinônimo para <xref:System.IDisposable.Dispose%2A> (que <xref:System.ServiceModel.Channels.Message> também implementa). A mensagem também libera o objeto que foi usado para construir o corpo quando ele for descartado.  
+  
+ Um <xref:System.ObjectDisposedException> é gerada se você chama qualquer método ou acessar as propriedades da mensagem quando ela for fechada. Chamar qualquer método ou acessar as propriedades de outros objetos relacionados à mensagem quando ela é fechada, (como a coleção de cabeçalhos de mensagem, valores de propriedade de mensagem ou <xref:System.Xml.XmlReader> instâncias retornadas para o corpo ou para um cabeçalho) possui comportamento indefinido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma mensagem, enviá-lo para um serviço e receber uma mensagem de resposta. O conteúdo da mensagem de resposta é exibido e, em seguida, a mensagem está fechada.  
+  
+ [!code-csharp[Message#0](~/samples/snippets/csharp/VS_Snippets_CFX/message/cs/client.cs#0)]
+ [!code-vb[Message#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/message/vb/client.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBufferedCopy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageBuffer CreateBufferedCopy (int maxBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.MessageBuffer CreateBufferedCopy(int32 maxBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateBufferedCopy(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxBufferSize">O tamanho máximo do buffer a ser criado.</param>
+        <summary>Armazena um <see cref="T:System.ServiceModel.Channels.Message" /> inteiro em um buffer de memória para acesso futuro.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O corpo de um <xref:System.ServiceModel.Channels.Message> instância só pode ser acessada ou gravada uma vez. Se você quiser acessar um <xref:System.ServiceModel.Channels.Message> instância mais de uma vez, você deve usar o <xref:System.ServiceModel.Channels.MessageBuffer> classe completamente armazenar toda uma <xref:System.ServiceModel.Channels.Message> instância na memória. Um <xref:System.ServiceModel.Channels.MessageBuffer> instância será construída chamando <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> de um <xref:System.ServiceModel.Channels.Message> instância.  
+  
+> [!NOTE]
+>  Se <xref:System.ServiceModel.Channels.Message.Version%2A> é igual a <xref:System.ServiceModel.Channels.MessageVersion.None%2A>, esse método armazena apenas o corpo da mensagem, não toda a mensagem para o buffer de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maxBufferSize" /> é menor que zero.</exception>
+        <exception cref="T:System.ObjectDisposedException">A mensagem está fechada.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem foi copiada, lida ou gravada.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateMessage">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria uma mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para criar uma nova cópia de uma mensagem pronto para enviar.  
+  
+ Ao trabalhar com o uso de mensagens JSON a <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%2CSystem.Object%2CSystem.Runtime.Serialization.XmlObjectSerializer%29> método, o <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%2CSystem.Object%29> método não funciona com mensagens JSON.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um cliente que usa a fábrica de canais para enviar uma mensagem e ler a resposta.  
+  
+ [!code-csharp[Message#0](~/samples/snippets/csharp/VS_Snippets_CFX/message/cs/client.cs#0)]
+ [!code-vb[Message#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/message/vb/client.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <summary>Cria uma mensagem que contém uma versão e uma ação.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> ou <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, System.ServiceModel.Channels.MessageFault fault, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, class System.ServiceModel.Channels.MessageFault fault, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.ServiceModel.Channels.MessageFault,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="fault" Type="System.ServiceModel.Channels.MessageFault" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="fault">Um <see cref="T:System.ServiceModel.Channels.MessageFault" /> objeto que representa uma falha SOAP.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <summary>Cria uma mensagem que contém uma falha de SOAP, uma versão e uma ação.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Version" />, <paramref name="fault" /> ou <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, string action, object body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, string action, object body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="body" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <param name="body">O corpo da mensagem.</param>
+        <summary>Cria uma mensagem com a versão, a ação e o corpo especificados.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ Ao trabalhar com o uso de mensagens JSON a <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%2CSystem.Object%2CSystem.Runtime.Serialization.XmlObjectSerializer%29> método, o <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%2CSystem.Object%29> método não funciona com mensagens JSON.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" />, <paramref name="action" /> ou <paramref name="body" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, string action, System.ServiceModel.Channels.BodyWriter body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, string action, class System.ServiceModel.Channels.BodyWriter body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.String,System.ServiceModel.Channels.BodyWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="body" Type="System.ServiceModel.Channels.BodyWriter" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <param name="body">Um <see cref="T:System.ServiceModel.Channels.BodyWriter" /> de byte de tipo.</param>
+        <summary>Cria uma mensagem com um corpo que consiste em uma matriz de bytes.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem vazia é útil para um ponto de extremidade enviar um alerta para outro ponto de extremidade sem qualquer conteúdo real.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Version" />, <paramref name="action" /> ou <paramref name="body" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, string action, System.Xml.XmlDictionaryReader body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, string action, class System.Xml.XmlDictionaryReader body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.String,System.Xml.XmlDictionaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="body" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <param name="body">O corpo da mensagem.</param>
+        <summary>Cria uma mensagem com a versão, a ação e o corpo especificados.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" />, <paramref name="action" /> ou <paramref name="body" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, string action, System.Xml.XmlReader body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, string action, class System.Xml.XmlReader body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="body" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <param name="body">O <see cref="T:System.Xml.XmlReader" /> objeto a ser usado para ler a mensagem SOAP.</param>
+        <summary>Cria uma mensagem usando o leitor especificado, a ação e a versão.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" />, <paramref name="action" /> ou <paramref name="body" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.Xml.XmlDictionaryReader envelopeReader, int maxSizeOfHeaders, System.ServiceModel.Channels.MessageVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.Xml.XmlDictionaryReader envelopeReader, int32 maxSizeOfHeaders, class System.ServiceModel.Channels.MessageVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.Xml.XmlDictionaryReader,System.Int32,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeReader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="maxSizeOfHeaders" Type="System.Int32" />
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeReader">O <see cref="T:System.Xml.XmlDictionaryReader" /> objeto a ser usado para ler a mensagem SOAP.</param>
+        <param name="maxSizeOfHeaders">O tamanho máximo em bytes de um cabeçalho.</param>
+        <param name="version">Uma opção válida <see cref="T:System.ServiceModel.Channels.MessageVersion" /> valor que especifica a versão a ser usado para a mensagem SOAP.</param>
+        <summary>Cria uma mensagem usando o leitor especificado, a ação e a versão.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.Message>Apropriar-se de`envelopeReader.`  
+  
+ Esse método lê o envelope, armazena em buffer todos os cabeçalhos para a coleção de cabeçalhos e lê até, mas não incluindo o `Body` marca de início e retorna a mensagem. Se a chamada do método lançará uma exceção, ele fecha o leitor.  
+  
+ O corpo da mensagem retornada pode, em seguida, a leitura ou gravação.  
+  
+ O corpo da mensagem pode ser lida usando o <xref:System.ServiceModel.Channels.Message.GetBody%2A> métodos em mensagem retornada. O objeto retornado encapsula todos os elementos filho dentro do `Body` elemento. O corpo da mensagem pode ser escrito usando <xref:System.ServiceModel.Channels.Message.WriteBody%2A> ou <xref:System.ServiceModel.Channels.Message.WriteMessage%2A>. Quando gravado, ele não pode ser lido.  
+  
+ A mensagem de fechamento fecha o leitor de envelope subjacente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeReader" /> ou <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.Xml.XmlReader envelopeReader, int maxSizeOfHeaders, System.ServiceModel.Channels.MessageVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.Xml.XmlReader envelopeReader, int32 maxSizeOfHeaders, class System.ServiceModel.Channels.MessageVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.Xml.XmlReader,System.Int32,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="maxSizeOfHeaders" Type="System.Int32" />
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeReader">O <see cref="T:System.Xml.XmlReader" /> objeto a ser usado para ler a mensagem SOAP.</param>
+        <param name="maxSizeOfHeaders">O tamanho máximo em bytes de um cabeçalho.</param>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <summary>Cria uma mensagem usando o leitor especificado, a ação e a versão.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.Message>Apropriar-se de`envelopeReader.`  
+  
+ Esse método lê o envelope, armazena em buffer todos os cabeçalhos para a coleção de cabeçalhos e lê até, mas não incluindo o `Body` marca de início e retorna a mensagem. Se a chamada do método lançará uma exceção, ele fecha o leitor.  
+  
+ O corpo da mensagem retornada pode, em seguida, a leitura ou gravação.  
+  
+ O corpo da mensagem pode ser lida usando o <xref:System.ServiceModel.Channels.Message.GetBody%2A> métodos em mensagem retornada. O objeto retornado encapsula todos os elementos filho dentro do `Body` elemento. O corpo da mensagem pode ser escrito usando <xref:System.ServiceModel.Channels.Message.WriteBody%2A> ou <xref:System.ServiceModel.Channels.Message.WriteMessage%2A>. Quando gravado, ele não pode ser lido.  
+  
+ A mensagem de fechamento fecha o leitor de envelope subjacente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeReader" /> ou <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, System.ServiceModel.FaultCode code, string reason, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, class System.ServiceModel.FaultCode code, string reason, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.ServiceModel.FaultCode,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="faultCode" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="code">To be added.</param>
+        <param name="reason">O motivo da falha de SOAP.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <summary>Cria uma mensagem que contém uma falha de SOAP, o motivo da falha, uma versão e uma ação.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" />, <paramref name="fault" />, <paramref name="action" /> or <paramref name="faultCode" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, string action, object body, System.Runtime.Serialization.XmlObjectSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, string action, object body, class System.Runtime.Serialization.XmlObjectSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="body" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <param name="body">O corpo da mensagem.</param>
+        <param name="serializer">Um objeto <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> usado para serializar a mensagem.</param>
+        <summary>Cria uma mensagem usando a versão, a ação, o corpo da mensagem e o serializador especificados.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ Ao trabalhar com o uso de mensagens JSON a <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%2CSystem.Object%2CSystem.Runtime.Serialization.XmlObjectSerializer%29> método, o <xref:System.ServiceModel.Channels.Message.CreateMessage%28System.ServiceModel.Channels.MessageVersion%2CSystem.String%2CSystem.Object%29> método não funciona com mensagens JSON.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" />, <paramref name="fault" /> ou <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.ServiceModel.Channels.MessageVersion version, System.ServiceModel.FaultCode code, string reason, object detail, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.ServiceModel.Channels.MessageVersion version, class System.ServiceModel.FaultCode code, string reason, object detail, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.CreateMessage(System.ServiceModel.Channels.MessageVersion,System.ServiceModel.FaultCode,System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="faultCode" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="detail" Type="System.Object" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um objeto <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica a versão do SOAP a ser usada para a mensagem.</param>
+        <param name="code">To be added.</param>
+        <param name="reason">O motivo da falha de SOAP.</param>
+        <param name="detail">Os detalhes da falha de SOAP.</param>
+        <param name="action">Uma descrição de como a mensagem deve ser processada.</param>
+        <summary>Cria uma mensagem que contém uma falha de SOAP, um motivo e os detalhes para a falha, uma versão e uma ação.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é usado para criar uma nova cópia da mensagem pronto para enviar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" />, <paramref name="fault" />, <paramref name="action" />, <paramref name="detail" /> or <paramref name="faultCode" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWriteBodyContents">
+      <MemberSignature Language="C#" Value="public void EndWriteBodyContents (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndWriteBodyContents(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.EndWriteBodyContents(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</param>
+        <summary>Termina a gravação assíncrona do conteúdo do corpo da mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWriteMessage">
+      <MemberSignature Language="C#" Value="public void EndWriteMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndWriteMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.EndWriteMessage(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</param>
+        <summary>Termina a gravação assíncrona da mensagem inteira.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetBody&lt;T&gt;">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Recupera o corpo dessa instância <see cref="T:System.ServiceModel.Channels.Message" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que uma mensagem é criada, o corpo da mensagem pode ser lidos usando o <xref:System.ServiceModel.Channels.Message.GetBody%2A> métodos em mensagem retornada. O objeto retornado encapsula todos os elementos filho dentro do `Body` elemento. Como o corpo de uma mensagem é um fluxo, ele pode apenas ser gravado uma vez ou lidos uma vez.  
+  
+ Use o <xref:System.ServiceModel.Channels.Message.GetBody%60%601%28System.Runtime.Serialization.XmlObjectSerializer%29> sobrecarga ao trabalhar com mensagens JSON; o <xref:System.ServiceModel.Channels.Message.GetBody%60%601> sobrecarga não funciona.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um cliente que usa a fábrica de canais para enviar uma mensagem e ler a resposta.  
+  
+ [!code-csharp[Message#0](~/samples/snippets/csharp/VS_Snippets_CFX/message/cs/client.cs#0)]
+ [!code-vb[Message#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/message/vb/client.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetBody&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetBody&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetBody&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.GetBody``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O corpo da mensagem.</typeparam>
+        <summary>Recupera o corpo dessa instância <see cref="T:System.ServiceModel.Channels.Message" />.</summary>
+        <returns>Um objeto do tipo <paramref name="T" /> que contém o corpo dessa mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.Channels.Message> instância tem um corpo que corresponde do corpo SOAP. Ele pode ser acessado como uma <xref:System.Xml.XmlDictionaryReader> chamando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. É inicialmente posicionado diretamente após o `<S:Body>` elemento e retornará `EOF` ao atingir o `</S:Body>` elemento. Como alternativa, se você espera que o corpo conterá um objeto serializado, você pode chamar <xref:System.ServiceModel.Channels.Message.GetBody%2A> em vez disso. Você deve estar ciente de que um corpo de mensagem pode ser acessado apenas uma vez e uma mensagem pode ser gravada apenas uma vez. Se você deseja acessar o `Body` várias vezes, use <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> para criar um <xref:System.ServiceModel.Channels.MessageBuffer> instância.  
+  
+ Use o <xref:System.ServiceModel.Channels.Message.GetBody%60%601%28System.Runtime.Serialization.XmlObjectSerializer%29> sobrecarga ao trabalhar com mensagens JSON; o <xref:System.ServiceModel.Channels.Message.GetBody%60%601> sobrecarga não funciona.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBody&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetBody&lt;T&gt; (System.Runtime.Serialization.XmlObjectSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetBody&lt;T&gt;(class System.Runtime.Serialization.XmlObjectSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.GetBody``1(System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O corpo da mensagem.</typeparam>
+        <param name="serializer">Um <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> objeto usado para ler o corpo da mensagem.</param>
+        <summary>Recupera o corpo desse <see cref="T:System.ServiceModel.Channels.Message" /> usando o serializador especificado.</summary>
+        <returns>Um objeto do tipo <paramref name="T" /> que contém o corpo dessa mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.Channels.Message> instância tem um corpo que corresponde do corpo SOAP. Ele pode ser acessado como uma <xref:System.Xml.XmlDictionaryReader> chamando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. É inicialmente posicionado diretamente após o `<S:Body>` elemento e retornará `EOF` ao atingir o `</S:Body>` elemento. Como alternativa, se você espera que o corpo conterá um objeto serializado, você pode chamar <xref:System.ServiceModel.Channels.Message.GetBody%2A> em vez disso. Você deve estar ciente de que um corpo de mensagem pode ser acessado apenas uma vez e uma mensagem pode ser gravada apenas uma vez. Se você quiser acessar o corpo várias vezes, use <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> para criar um <xref:System.ServiceModel.Channels.MessageBuffer> instância.  
+  
+ Use o <xref:System.ServiceModel.Channels.Message.GetBody%60%601%28System.Runtime.Serialization.XmlObjectSerializer%29> sobrecarga ao trabalhar com mensagens JSON; o <xref:System.ServiceModel.Channels.Message.GetBody%60%601> sobrecarga não funciona.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBodyAttribute">
+      <MemberSignature Language="C#" Value="public string GetBodyAttribute (string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetBodyAttribute(string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.GetBodyAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">O nome local do nó XML.  
+  
+ O nome do elemento que corresponde a esse membro. Essa cadeia de caracteres deve ser um nome de elemento XML válido.</param>
+        <param name="ns">O namespace ao qual esse elemento XML pertence.  
+  
+ O URI do namespace do elemento que corresponde a esse membro. O sistema não valida URIs diferentes de endereços de transporte.</param>
+        <summary>Recupera os atributos do corpo da mensagem.</summary>
+        <returns>Os atributos do corpo da mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.Channels.Message> instância tem um corpo que corresponde do corpo SOAP. Ele pode ser acessado como uma <xref:System.Xml.XmlDictionaryReader> chamando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. É inicialmente posicionado diretamente após o `<S:Body>` elemento e retornará `EOF` ao atingir o `</S:Body>` elemento. Como alternativa, se você espera que o corpo conterá um objeto serializado, você pode chamar <xref:System.ServiceModel.Channels.Message.GetBody%2A> em vez disso. Você deve estar ciente de que um corpo de mensagem pode ser acessado apenas uma vez e uma mensagem pode ser gravada apenas uma vez. Se você quiser acessar o corpo várias vezes, use <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> para criar um <xref:System.ServiceModel.Channels.MessageBuffer> instância.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="localName" /> ou <paramref name="ns" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A mensagem está fechada.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem foi copiada, lida ou gravada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtBodyContents">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtBodyContents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtBodyContents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.GetReaderAtBodyContents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o leitor de dicionário XML que acessa o conteúdo do corpo da mensagem.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.XmlDictionaryReader" /> que acessa o conteúdo do corpo da mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.Channels.Message> instância tem um corpo que corresponde do corpo SOAP. Ele pode ser acessado como uma <xref:System.Xml.XmlDictionaryReader> chamando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Ele é inicialmente posicionado diretamente após o `<S:Body>` elemento. Como alternativa, se você espera que o corpo conterá um objeto serializado, você pode chamar <xref:System.ServiceModel.Channels.Message.GetBody%2A> em vez disso. Você deve estar ciente de que um corpo de mensagem pode ser acessado apenas uma vez e uma mensagem pode ser gravada apenas uma vez. Se você quiser acessar o corpo várias vezes, use <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> para criar um <xref:System.ServiceModel.Channels.MessageBuffer> instância.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A mensagem está fechada.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem está vazia ou foi copiada, lida ou gravada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageHeaders Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageHeaders Headers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém os cabeçalhos da mensagem.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.Channels.MessageHeaders" /> que representa os cabeçalhos da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.Channels.Message> pode ter zero ou mais cabeçalhos que são usados como um mecanismo de extensão para passar informações em mensagens específicas do aplicativo. Você pode usar <xref:System.ServiceModel.Channels.Message.Headers%2A> para adicionar cabeçalhos de mensagem para uma mensagem chamando o <xref:System.ServiceModel.Channels.MessageHeaders.Add%2A> método.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]Fornece um número predefinido de cabeçalhos de mensagem, conforme mostrado na tabela a seguir.  
+  
+|Nome do cabeçalho|Contém o nome do cabeçalho.|  
+|-----------------|-------------------------------|  
+|Para|Contém a função que se destina a mensagem.|  
+|Ação|Fornece uma descrição de como a mensagem deve ser processada.|  
+|FaultTo|Contém o endereço do nó ao qual as falhas devem ser enviadas.|  
+|De|Contém o endereço do nó que enviou a mensagem.|  
+|Solicitação|Indica se a mensagem é uma solicitação.|  
+|MessageID|Contém a ID exclusiva da mensagem.|  
+|RelatesTo|Contém as IDs de mensagens que estão relacionadas a essa mensagem.|  
+|ReplyTo|Contém o endereço do nó para que uma resposta deve ser enviada para uma solicitação.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um cliente que usa a fábrica de canais para enviar uma mensagem e ler a resposta.  
+  
+ [!code-csharp[Message#0](~/samples/snippets/csharp/VS_Snippets_CFX/message/cs/client.cs#0)]
+ [!code-vb[Message#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/message/vb/client.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A mensagem foi descartada.</exception>
+        <block subset="none" type="overrides">
+          <para>Quando substituído em uma classe derivada, esse método retorna um <see cref="T:System.ServiceModel.Channels.MessageHeaders" /> objeto para os cabeçalhos da mensagem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.ServiceModel.Channels.Message" /> é descartado.</summary>
+        <value>
+          <see langword="true" />Se a mensagem é descartada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public virtual bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.ServiceModel.Channels.Message" /> está vazio.</summary>
+        <value>
+          <see langword="true" />Se a mensagem está vazia. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A mensagem foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFault">
+      <MemberSignature Language="C#" Value="public virtual bool IsFault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFault" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.IsFault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta mensagem gera qualquer falha SOAP.</summary>
+        <value>
+          <see langword="true" />Se essa mensagem gera quaisquer falhas SOAP. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A mensagem foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginWriteBodyContents (System.Xml.XmlDictionaryWriter writer, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginWriteBodyContents(class System.Xml.XmlDictionaryWriter writer, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnBeginWriteBodyContents(System.Xml.XmlDictionaryWriter,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador usado para serializar o conteúdo do corpo da mensagem.</param>
+        <param name="callback">O método delegado que recebe a notificação quando a operação foi concluída.</param>
+        <param name="state">O objeto definido pelo usuário que representa o estado da operação.</param>
+        <summary>Gera um evento quando a mensagem de gravação de conteúdo do corpo da mensagem é iniciado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginWriteMessage">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginWriteMessage (System.Xml.XmlDictionaryWriter writer, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginWriteMessage(class System.Xml.XmlDictionaryWriter writer, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnBeginWriteMessage(System.Xml.XmlDictionaryWriter,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador usado para serializar a mensagem inteira.</param>
+        <param name="callback">O método delegado que recebe a notificação quando a operação foi concluída.</param>
+        <param name="state">O objeto definido pelo usuário que representa o estado da operação.</param>
+        <summary>Gera um evento de gravação de mensagens inteiras inicia.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBodyToString">
+      <MemberSignature Language="C#" Value="protected virtual void OnBodyToString (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBodyToString(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnBodyToString(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usado para converter o corpo da mensagem em uma cadeia de caracteres.</param>
+        <summary>Chamado quando o corpo da mensagem é convertido em uma cadeia de caracteres.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected virtual void OnClose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnClose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando a mensagem está sendo fechado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateBufferedCopy">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Channels.MessageBuffer OnCreateBufferedCopy (int maxBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.MessageBuffer OnCreateBufferedCopy(int32 maxBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnCreateBufferedCopy(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxBufferSize">O tamanho máximo do buffer a ser criado.</param>
+        <summary>Chamado quando um buffer de mensagem é criado para armazenar esta mensagem.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> objeto para a cópia da mensagem recém-criada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndWriteBodyContents (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndWriteBodyContents(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnEndWriteBodyContents(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</param>
+        <summary>Gera um evento durante a gravação do conteúdo das extremidades do corpo da mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndWriteMessage">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndWriteMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndWriteMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnEndWriteMessage(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da operação assíncrona.</param>
+        <summary>Gera um evento quando termina a gravação da mensagem inteira.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetBody&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected virtual T OnGetBody&lt;T&gt; (System.Xml.XmlDictionaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !!T OnGetBody&lt;T&gt;(class System.Xml.XmlDictionaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnGetBody``1(System.Xml.XmlDictionaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo do corpo da mensagem.</typeparam>
+        <param name="reader">Um <see cref="T:System.Xml.XmlDictionaryReader" /> objeto usado para ler o corpo da mensagem.</param>
+        <summary>Chamado quando o corpo da mensagem é recuperado.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> que representa o corpo da mensagem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetBodyAttribute">
+      <MemberSignature Language="C#" Value="protected virtual string OnGetBodyAttribute (string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string OnGetBodyAttribute(string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnGetBodyAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">O nome local do nó XML.  
+  
+ O nome do elemento que corresponde a esse membro. Essa cadeia de caracteres deve ser um nome de elemento XML válido.</param>
+        <param name="ns">O namespace ao qual esse elemento XML pertence.  
+  
+ O URI do namespace do elemento que corresponde a esse membro. O sistema não valida URIs diferentes de endereços de transporte.</param>
+        <summary>Chamado quando os atributos do corpo da mensagem é recuperada.</summary>
+        <returns>Os atributos do corpo da mensagem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetReaderAtBodyContents">
+      <MemberSignature Language="C#" Value="protected virtual System.Xml.XmlDictionaryReader OnGetReaderAtBodyContents ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.XmlDictionaryReader OnGetReaderAtBodyContents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando um leitor de dicionário XML que acessa o conteúdo do corpo da mensagem é recuperado.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.XmlDictionaryReader" /> que acessa o conteúdo do corpo da mensagem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected abstract void OnWriteBodyContents (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteBodyContents(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usada para gravar este corpo da mensagem para um arquivo XML.</param>
+        <summary>Chamado quando o corpo da mensagem é gravado em um arquivo XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteMessage">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteMessage (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteMessage(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnWriteMessage(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usada para gravar essa mensagem para um arquivo XML.</param>
+        <summary>Chamado quando a mensagem inteira é gravada em um arquivo XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteStartBody">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteStartBody (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteStartBody(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnWriteStartBody(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usada para gravar o corpo de início para um arquivo XML.</param>
+        <summary>Chamado quando o corpo de início é gravado em um arquivo XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteStartEnvelope">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteStartEnvelope (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteStartEnvelope(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnWriteStartEnvelope(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usada para gravar o envelope de início para um arquivo XML.</param>
+        <summary>Chamado quando o envelope de início é gravado em um arquivo XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteStartHeaders">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteStartHeaders (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteStartHeaders(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.OnWriteStartHeaders(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usada para gravar o cabeçalho de início para um arquivo XML.</param>
+        <summary>Chamado quando o cabeçalho de início é gravado em um arquivo XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageProperties Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageProperties Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um conjunto de anotações no nível de processamento para a mensagem.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Channels.MessageProperties" /> que contém um conjunto de anotações no nível do processamento para a mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque as informações nos cabeçalhos são transmitidas na conexão, uma entidade que examina um cabeçalho deve dar suporte a versões subjacentes dos protocolos usados pelo cabeçalho. No entanto, propriedades fornecem uma maneira de mais independente de versão de anotação de uma mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A mensagem foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Channels.MessageState State" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual deste <see cref="T:System.ServiceModel.Channels.Message" />.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Channels.MessageState" /> que contém o estado atual deste <see cref="T:System.ServiceModel.Channels.Message" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como o corpo de uma <xref:System.ServiceModel.Channels.Message> objeto é um fluxo, ele só pode ser lido ou gravado uma vez. Isso é imposto por manter o estado atual do <xref:System.ServiceModel.Channels.Message> objeto. Um <xref:System.ServiceModel.Channels.Message> objeto pode ser de leitura, escrito ou copiado no <xref:System.ServiceModel.Channels.MessageState.Created> estado. Outros estados são <xref:System.ServiceModel.Channels.MessageState.Read>, <xref:System.ServiceModel.Channels.MessageState.Written> e <xref:System.ServiceModel.Channels.MessageState.Copied>, que significa que a ação do respectiva foi executada já uma vez.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha todos os recursos usados por essa mensagem. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método quando tiver terminado de usar o <xref:System.ServiceModel.Channels.Message>. Esse método deixará o <xref:System.ServiceModel.Channels.Message> em um estado inutilizável. Depois de chamar esse método, você deve liberar todas as referências para o <xref:System.ServiceModel.Channels.Message> para o coletor de lixo possa recuperar a memória que o <xref:System.ServiceModel.Channels.Message> residia no.  
+  
+> [!NOTE]
+>  Sempre chamar esse método antes de liberar sua última referência para o <xref:System.ServiceModel.Channels.Message>. Caso contrário, os recursos que está usando não são liberados até o coletor de lixo chama o <xref:System.ServiceModel.Channels.Message> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa a instância <see cref="T:System.ServiceModel.Channels.Message" /> atual.</summary>
+        <returns>A representação de cadeia de caracteres da instância <see cref="T:System.ServiceModel.Channels.Message" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageVersion Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion Version" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Message.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão SOAP da mensagem.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Channels.MessageVersion" /> objeto que representa a versão do SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é imutável para a mensagem. Há dois valores possíveis para a versão: <xref:System.ServiceModel.Channels.MessageVersion.Soap11%2A> e <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> que correspondem ao SOAP 1.1 e SOAP 1.2, respectivamente.  
+  
+ É importante saber a versão SOAP subjacente porque a estrutura de <xref:System.ServiceModel.Channels.Message> firmemente está correlacionado com que uma mensagem SOAP.  
+  
+> [!IMPORTANT]
+>  Herdeiros devem Observe que quando substituído em uma classe derivada, esse método retorna um <xref:System.ServiceModel.Channels.MessageVersion> objeto para a versão SOAP da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A mensagem foi descartada.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteBody">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Serializa o elemento de corpo para XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o conteúdo do corpo, bem como as marcas de início e fim do elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteBody">
+      <MemberSignature Language="C#" Value="public void WriteBody (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBody(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteBody(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> objeto a ser usado para gravar o elemento de corpo.</param>
+        <summary>Grava o elemento de corpo usando especificado <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o conteúdo do corpo, bem como as marcas de início e fim do elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBody">
+      <MemberSignature Language="C#" Value="public void WriteBody (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBody(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteBody(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> objeto a ser usado para gravar o corpo da mensagem.</param>
+        <summary>Serializa o corpo da mensagem usando especificado <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o conteúdo do corpo, bem como as marcas de início e fim do elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A mensagem é descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBodyContents">
+      <MemberSignature Language="C#" Value="public void WriteBodyContents (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBodyContents(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteBodyContents(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> objeto a ser usado para gravar o elemento de corpo.</param>
+        <summary>Serializa o conteúdo do corpo usando especificado <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A mensagem está fechada.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem foi copiada, lida ou gravada.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteMessage">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Serializa a mensagem inteira.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método serializa a mensagem inteira. Depois que uma mensagem é gravada, ele não pode ser reescrito a menos que haja um <xref:System.ServiceModel.Channels.MessageBuffer> para a mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="public void WriteMessage (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteMessage(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteMessage(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> objeto a ser usado para gravar a mensagem.</param>
+        <summary>Serializa a mensagem inteira usando especificado <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método serializa a mensagem inteira. Depois que uma mensagem é gravada, ele não pode ser reescrito, a menos que um <xref:System.ServiceModel.Channels.MessageBuffer> instância existe para a mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A mensagem está fechada.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem foi copiada, lida ou gravada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="public void WriteMessage (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteMessage(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteMessage(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> objeto a ser usado para gravar a mensagem inteira.</param>
+        <summary>Serializa a mensagem inteira usando especificado <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método serializa a mensagem inteira. Depois que uma mensagem é gravada, ele não pode ser reescrito a menos que haja um <xref:System.ServiceModel.Channels.MessageBuffer> para a mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A mensagem está fechada.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem foi copiada, lida ou gravada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartBody">
+      <MemberSignature Language="C#" Value="public void WriteStartBody (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartBody(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteStartBody(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> objeto a ser usado para gravar o corpo de início.</param>
+        <summary>Serializa o corpo do início da mensagem usando especificado <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartBody">
+      <MemberSignature Language="C#" Value="public void WriteStartBody (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartBody(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteStartBody(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> objeto a ser usado para gravar o corpo do início da mensagem.</param>
+        <summary>Serializa o corpo do início da mensagem usando especificado <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartEnvelope">
+      <MemberSignature Language="C#" Value="public void WriteStartEnvelope (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartEnvelope(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Message.WriteStartEnvelope(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> objeto a ser usado para gravar o envelope de início.</param>
+        <summary>Serializa o envelope de início usando especificado <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

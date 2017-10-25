@@ -1,0 +1,6 @@
+<Namespace Name="System.Activities.Tracking">
+  <Docs>
+    <summary>O namespace System.Activities.Tracking contém classes usadas para criar e interagir com os registros de controle de fluxo de trabalho. Registros de rastreamento são criados pelo tempo de execução de fluxo de trabalho quando uma instância de fluxo de trabalho é executado e são acessados por classes que herdam de <see cref="T:System.Activities.Tracking.TrackingParticipant" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

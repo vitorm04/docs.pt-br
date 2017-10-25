@@ -1,0 +1,67 @@
+<Type Name="EdgeMode" FullName="System.Windows.Media.EdgeMode">
+  <TypeSignature Language="C#" Value="public enum EdgeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EdgeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.EdgeMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina como as bordas de primitivas não texto são renderizadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de texto são sempre exibidos usando AntiAlias e não são afetados, definindo o valor do modo de borda. O valor padrão para primitivas não texto, como <xref:System.Windows.Shapes.Ellipse> e <xref:System.Windows.Shapes.Polygon>, é não especificado.  
+  
+ Quando você define o valor do modo de borda de um objeto visual, todas as primitivas de desenho de filho desse objeto visual são definidas para o mesmo <xref:System.Windows.Media.EdgeMode.Unspecified> valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Media.RenderOptions.SetEdgeMode%2A> método para definir o modo de borda para um primitivo de desenho a alias.  
+  
+ [!code-csharp[VisualSnippets#SetEdgeMode](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Snippets.cs#setedgemode)]
+ [!code-vb[VisualSnippets#SetEdgeMode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/snippets.vb#setedgemode)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aliased">
+      <MemberSignature Language="C#" Value="Aliased" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.EdgeMode Aliased = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EdgeMode.Aliased" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EdgeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Renderiza as bordas de primitivas desenhadas não texto como bordas com alias.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.EdgeMode Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EdgeMode.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EdgeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum modo de borda foi especificado. Não altere o modo de borda atual de primitivas não texto. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

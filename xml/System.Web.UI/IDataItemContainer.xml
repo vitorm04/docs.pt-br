@@ -1,0 +1,141 @@
+<Type Name="IDataItemContainer" FullName="System.Web.UI.IDataItemContainer">
+  <TypeSignature Language="C#" Value="public interface IDataItemContainer : System.Web.UI.INamingContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataItemContainer implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataItemContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Permite que os contêineres de controle associados a dados identifiquem um objeto de item de dados para operações de associação de dados simplificadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contêiner de classes que implementam o <xref:System.Web.UI.IDataItemContainer> interface pode especificar que uma de suas propriedades identifica o item de dados para operações de associação de dados, como associação tardia com o <xref:System.Web.UI.DataBinder> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.IDataItemContainer> interface. O `SimpleSpreadsheetControl` é um controle que exibe dados de estilo de tabela, semelhante a um <xref:System.Web.UI.WebControls.DataGrid> ou <xref:System.Web.UI.WebControls.GridView> controle. Ele contém um conjunto de `SimpleSpreadsheetRow` objetos.  
+  
+ O `SimpleSpreadsheetRow` é uma classe de contêiner que implementa o <xref:System.Web.UI.IDataItemContainer> interface. Embora este exemplo a propriedade de item de dados é denominada intuitivamente `Data`, o <xref:System.Web.UI.IDataItemContainer.DataItem%2A> propriedade pode ser implementada para mapear para qualquer valor de retorno ou propriedade de um método.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#2)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#2)]  
+  
+ O exemplo de código a seguir demonstra como usar o `SimpleSpreadsheetControl` e <xref:System.Web.UI.WebControls.AccessDataSource> controle para exibir dados em um banco de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.IDataItemContainer_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainer1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.IDataItemContainer_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainer1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public object DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataItemContainer.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado, obtém um <see langword="object" />, que é usado em operações de associação de dados simplificadas.</summary>
+        <value>Um <see langword="object" /> que representa o valor a ser usado quando são executadas operações de associação de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IDataItemContainer.DataItem%2A> propriedade identifica um objeto que é usado em operações de associação de dados e expressões de associação tardia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar um tipo que usa o <xref:System.Web.UI.IDataItemContainer> interface. O `SimpleSpreadsheetRow` classe é uma classe de contêiner com um membro chamado `Data`. Ele implementa o <xref:System.Web.UI.IDataItemContainer> interface mapeando o `Data` propriedade para o <xref:System.Web.UI.IDataItemContainer.DataItem%2A> propriedade. Expressões de associação de dados simplificadas podem ligar para o objeto de dados usando o <xref:System.Web.UI.IDataItemContainer.DataItem%2A> propriedade.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#3)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItemIndex">
+      <MemberSignature Language="C#" Value="public int DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataItemContainer.DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém o índice do item de dados associado a um controle.</summary>
+        <value>Um <see langword="Integer" /> que representa o índice do item de dados na fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de classes como <xref:System.Web.UI.WebControls.FormView>, <xref:System.Web.UI.WebControls.GridViewRow>, e <xref:System.Web.UI.WebControls.DetailsView>, o <xref:System.Web.UI.IDataItemContainer.DataItemIndex%2A> propriedade é usada para determinar o índice do item de dados associado ao controle da fonte de dados. O <xref:System.Web.UI.IDataItemContainer.DataItemIndex%2A> propriedade não se referem ao índice do item de dados conforme exibido pelo controle de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma implementação de <xref:System.Web.UI.IDataItemContainer.DataItemIndex%2A> propriedade. Ele é parte de um exemplo maior no <xref:System.Web.UI.IDataItemContainer> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#4)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayIndex">
+      <MemberSignature Language="C#" Value="public int DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataItemContainer.DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém a posição do item de dados, como exibido em um controle.</summary>
+        <value>Um <see langword="Integer" /> que representa a posição do item de dados, como exibido em um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de classes como <xref:System.Windows.Forms.DataGridViewColumn>, o <xref:System.Web.UI.IDataItemContainer.DisplayIndex%2A> propriedade é definida de acordo com o índice da linha entre as linhas exibidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma implementação de <xref:System.Web.UI.IDataItemContainer.DisplayIndex%2A> propriedade. Ele é parte de um exemplo maior no <xref:System.Web.UI.IDataItemContainer> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#5)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

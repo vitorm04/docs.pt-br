@@ -1,0 +1,1002 @@
+<Type Name="MenuItemBindingCollection" FullName="System.Web.UI.WebControls.MenuItemBindingCollection">
+  <TypeSignature Language="C#" Value="public sealed class MenuItemBindingCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItemBindingCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItemBindingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemBindingCollection> classe é usada para armazenar e gerenciar uma coleção de <xref:System.Web.UI.WebControls.MenuItemBinding> objetos no <xref:System.Web.UI.WebControls.Menu> controle. O <xref:System.Web.UI.WebControls.Menu> controlar usa o <xref:System.Web.UI.WebControls.MenuItemBindingCollection> classe como o tipo de dados para seu <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> propriedade. O <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> propriedade é usada para armazenar quaisquer associações de item de menu definidas para o <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+> [!NOTE]
+>  A ordem na qual <xref:System.Web.UI.WebControls.MenuItemBinding> objetos aparecem na coleção não tem efeito sobre como esses objetos são aplicados aos itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+ O <xref:System.Web.UI.WebControls.MenuItemBindingCollection> classe oferece suporte a várias maneiras de acessar os itens na coleção:  
+  
+-   Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Item%2A> indexador para recuperar diretamente o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto em um índice com base em zero específico.  
+  
+-   Use o <xref:System.Web.UI.StateManagedCollection.GetEnumerator%2A> método para criar um enumerador que pode ser usado para iterar pela coleção.  
+  
+-   Use o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar o conteúdo da coleção em uma matriz.  
+  
+ Você pode gerenciar programaticamente um <xref:System.Web.UI.WebControls.MenuItemBindingCollection> objeto adicionando e removendo <xref:System.Web.UI.WebControls.MenuItemBinding> objetos. Para adicionar itens de menu à coleção, use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Add%2A> ou <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Insert%2A> método. Para remover nós da coleção, use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Remove%2A>, o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.RemoveAt%2A>, ou o <xref:System.Web.UI.StateManagedCollection.Clear%2A> método.  
+  
+ O <xref:System.Web.UI.WebControls.MenuItemBindingCollection> classe contém propriedades e métodos que permitem que você recupere informações sobre a própria coleção. Para descobrir quantos itens estão na coleção, use o <xref:System.Web.UI.StateManagedCollection.Count%2A> propriedade. Se você quiser determinar se a coleção contém um determinado <xref:System.Web.UI.WebControls.MenuItemBinding> de objeto, use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Contains%2A> método. Para obter o índice de um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto na coleção, use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.IndexOf%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como preencher uma <xref:System.Web.UI.WebControls.MenuItemBindingCollection> objeto declarativamente. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuBindings#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuBindings/CS/menubindingscs.aspx#1)]
+ [!code-aspx-vb[MenuBindings#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuBindings/VB/menubindingsvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como adicionar <xref:System.Web.UI.WebControls.MenuItemBinding> objetos para um <xref:System.Web.UI.WebControls.MenuItemBindingCollection> objeto programaticamente. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionAdd/CS/menuitembindingcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionAdd/VB/menuitembindingcollectionaddvb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para os exemplos anteriores.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.MenuItemBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.MenuItemBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.Add(System.Web.UI.WebControls.MenuItemBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.MenuItemBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">O <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> para acrescentar ao final da coleção.</param>
+        <summary>Acrescenta o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> especificado ao final da coleção.</summary>
+        <returns>O índice no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Add%2A> método acrescentar especificado <xref:System.Web.UI.WebControls.MenuItemBinding> objeto ao final da coleção.  
+  
+> [!NOTE]
+>  Você pode adicionar valores nulos e duplicar <xref:System.Web.UI.WebControls.MenuItemBinding> objetos na coleção.  
+  
+ Como alternativa, você pode inserir um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto da coleção em um índice específico usando o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Insert%2A> método.  
+  
+> [!NOTE]
+>  A ordem na qual <xref:System.Web.UI.WebControls.MenuItemBinding> objetos aparecem na coleção não tem efeito sobre como esses objetos são aplicados aos itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Add%2A> método acrescentar um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto ao final do <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> coleção de um <xref:System.Web.UI.WebControls.Menu> controle. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionAdd/CS/menuitembindingcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionAdd/VB/menuitembindingcollectionaddvb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.MenuItemBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.MenuItemBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.Contains(System.Web.UI.WebControls.MenuItemBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.MenuItemBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">O <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> para localizar.</param>
+        <summary>Determina se o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> especificado está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> estiver contido na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Contains%2A> método para determinar se um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto está contido na coleção. Esse método é geralmente usado para testar a existência de uma <xref:System.Web.UI.WebControls.MenuItemBinding> objeto antes de executar uma tarefa, como adicionar ou remover uma associação de item de menu da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.MenuItemBinding[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.MenuItemBinding[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.CopyTo(System.Web.UI.WebControls.MenuItemBinding[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.MenuItemBinding[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz com base em zero de <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objetos que recebe os itens copiados da coleção.</param>
+        <param name="index">A posição na matriz de destino na qual começar a receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens do objeto <see cref="T:System.Web.UI.WebControls.MenuItemBindingCollection" /> para uma matriz unidimensional compatível de objetos <see cref="T:System.Web.UI.WebControls.MenuItemBinding" />, começando no índice especificado na matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar o conteúdo da coleção para a matriz de base zero especificada. Itens são copiados iniciando no índice especificado da matriz de destino. Com a matriz, você pode usar sintaxe de matriz para acessar os itens a <xref:System.Web.UI.WebControls.MenuItemBindingCollection> objeto.  
+  
+ Como alternativa, você também pode usar o <xref:System.Web.UI.StateManagedCollection.GetEnumerator%2A> método para criar um enumerador que pode ser usado para acessar os itens na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.CopyTo%2A> método para copiar o <xref:System.Web.UI.WebControls.MenuItemBinding> objetos da coleção para uma matriz. A matriz é iteração, em seguida, para exibir as propriedades do <xref:System.Web.UI.WebControls.MenuItemBinding> objetos. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionCopyTo/CS/menuitembindingcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionCopyTo/VB/menuitembindingcollectioncopytovb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.MenuItemBinding value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.MenuItemBinding value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.IndexOf(System.Web.UI.WebControls.MenuItemBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.MenuItemBinding" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> para determinar o índice do.</param>
+        <summary>Determina o índice especificado <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto na coleção.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> dentro da coleção, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.IndexOf%2A> método para determinar o índice especificado <xref:System.Web.UI.WebControls.MenuItemBinding> objeto na coleção.  
+  
+> [!NOTE]
+>  A ordem na qual <xref:System.Web.UI.WebControls.MenuItemBinding> objetos aparecem na coleção não tem efeito sobre como esses objetos são aplicados aos itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+ Se a associação de item de menu não está na coleção, o método retornará -1.  
+  
+> [!NOTE]
+>  Se a associação de item de menu especificado aparece várias vezes na coleção, o índice da primeira ocorrência será retornado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.IndexOf%2A> método para determinar o índice de um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto na coleção. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionIndexOf#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionIndexOf/CS/menuitembindingcollectionindexofcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionIndexOf#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionIndexOf/VB/menuitembindingcollectionindexofvb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.MenuItemBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.MenuItemBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.Insert(System.Int32,System.Web.UI.WebControls.MenuItemBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.MenuItemBinding" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local de índice baseado em zero no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> será inserido.</param>
+        <param name="binding">O <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> a ser inserido.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> especificado à coleção no local de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Insert%2A> método inserir especificado <xref:System.Web.UI.WebControls.MenuItemBinding> objeto na coleção no índice especificado.  
+  
+> [!NOTE]
+>  Você pode adicionar valores nulos e duplicar <xref:System.Web.UI.WebControls.MenuItemBinding> objetos na coleção.  
+  
+ Como alternativa, você pode simplesmente acrescentar um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto ao final da coleção usando o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Add%2A> método.  
+  
+> [!NOTE]
+>  A ordem na qual <xref:System.Web.UI.WebControls.MenuItemBinding> objetos aparecem na coleção não tem nenhum efeito sobre como esses objetos são aplicados aos itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Insert%2A> método para adicionar um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto à coleção em um índice específico. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionInsert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionInsert/CS/menuitembindingcollectioninsertcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionInsert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionInsert/VB/menuitembindingcollectioninsertvb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.MenuItemBinding this[int i] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.MenuItemBinding Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBindingCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuItemBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O índice de base zero de <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> para recuperar.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto no índice especificado da coleção.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para acessar um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto da coleção no índice especificado usando a notação de matriz. O indexador permite acessar, modificar ou substituir uma <xref:System.Web.UI.WebControls.MenuItemBinding> objeto na coleção diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como recuperar um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto da coleção usando o indexador. As propriedades do <xref:System.Web.UI.WebControls.MenuItemBinding> objeto, em seguida, são atualizados por meio de programação. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionIndexer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionIndexer/CS/menuitembindingcollectionindexercs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionIndexer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionIndexer/VB/menuitembindingcollectionindexervb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.MenuItemBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.MenuItemBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.Remove(System.Web.UI.WebControls.MenuItemBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.MenuItemBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">O <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> a ser removido da coleção.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Remove%2A> método para remover a associação de item de menu especificado da coleção. Todos os itens que seguem esse item de menu, em seguida, são movidos para cima para preencher a posição vaga nesse tipo. Os índices dos itens movidos também são atualizados.  
+  
+> [!NOTE]
+>  A coleção pode conter valores nulos, bem como duplicar <xref:System.Web.UI.WebControls.MenuItemBinding> objetos.  
+  
+ Como alternativa, você pode remover um item de menu de um índice específico na coleção usando o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.RemoveAt%2A> método. Você também pode remover todos os itens da coleção usando o <xref:System.Web.UI.StateManagedCollection.Clear%2A> método.  
+  
+> [!NOTE]
+>  A ordem na qual <xref:System.Web.UI.WebControls.MenuItemBinding> objetos aparecem na coleção não tem efeito sobre como esses objetos são aplicados aos itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Remove%2A> método para remover um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto da coleção. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionRemove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionRemove/CS/menuitembindingcollectionremovecs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionRemove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionRemove/VB/menuitembindingcollectionremovevb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice de base zero da associação de item de menu remover.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto no local do índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.RemoveAt%2A> método para remover o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto no local do índice especificado da coleção. Todos os itens que seguem esse item de menu, em seguida, são movidos para cima para preencher a posição vaga nesse tipo. Os índices dos itens movidos também são atualizados.  
+  
+> [!NOTE]
+>  A coleção pode conter valores nulos, bem como duplicar <xref:System.Web.UI.WebControls.MenuItemBinding> objetos.  
+  
+ Como alternativa, você pode remover um determinado <xref:System.Web.UI.WebControls.MenuItemBinding> objeto usando o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.Remove%2A> método. Você também pode remover todos os itens da coleção usando o <xref:System.Web.UI.StateManagedCollection.Clear%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBindingCollection.RemoveAt%2A> método para remover um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto da coleção em um índice específico. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado map.  
+  
+ [!code-aspx-csharp[MenuItemBindingCollectionRemoveAt#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCollectionRemoveAt/CS/menuitembindingcollectionremoveatcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCollectionRemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCollectionRemoveAt/VB/menuitembindingcollectionremoveatvb.aspx#1)]  
+  
+ O seguinte é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<MapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<MapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<MapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<MapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<MapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<MapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<MapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBindingCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

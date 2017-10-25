@@ -1,0 +1,41 @@
+<Type Name="ContextCorrelationInitializer" FullName="System.ServiceModel.Activities.ContextCorrelationInitializer">
+  <TypeSignature Language="C#" Value="public sealed class ContextCorrelationInitializer : System.ServiceModel.Activities.CorrelationInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContextCorrelationInitializer extends System.ServiceModel.Activities.CorrelationInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.ContextCorrelationInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.CorrelationInitializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Inicializa o associado <see cref="P:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle" /> com uma correlação baseada em troca de contexto do .NET, sujeito a <see cref="T:System.ServiceModel.Channels.ContextExchangeMechanism" /> especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma correlação de contexto baseia-se o mecanismo de troca de contexto descrito o [especificação do protocolo de troca de contexto de .NET](http://go.microsoft.com/fwlink/?LinkId=163882). Para usar a correlação de contexto um baseado no contexto de associação, como <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, ou <xref:System.ServiceModel.NetTcpContextBinding> deve ser usado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextCorrelationInitializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ContextCorrelationInitializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.ContextCorrelationInitializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

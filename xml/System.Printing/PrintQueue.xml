@@ -1,0 +1,3050 @@
+<Type Name="PrintQueue" FullName="System.Printing.PrintQueue">
+  <TypeSignature Language="C#" Value="public class PrintQueue : System.Printing.PrintSystemObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi PrintQueue extends System.Printing.PrintSystemObject" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia impressoras e trabalhos de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas propriedades do <xref:System.Printing.PrintQueue> objeto características representam o utilitário de fila de impressão é executado no computador, mas outras pessoas representam recursos ou os estados da impressora em si. Por exemplo, <xref:System.Printing.PrintQueue.NumberOfJobs%2A> é uma característica de fila de impressão, mas <xref:System.Printing.PrintQueue.Location%2A> é uma propriedade da impressora. Muitas das propriedades da impressora, como se ele precisa de atenção, o usuário precisam ser passado por meio do <xref:System.Printing.PrintQueue.Refresh%2A> método, da impressora para a <xref:System.Printing.PrintQueue> objeto. Isso deve ser feito antes da propriedade correspondente (<xref:System.Printing.PrintQueue.NeedUserIntervention%2A>) é lido pelo seu programa. Da mesma forma, quando seu programa altera os valores de uma ou mais propriedades de um <xref:System.Printing.PrintQueue> do objeto, a alteração deve ser escrita para o utilitário de fila de impressão real no computador. Fazer isso com o <xref:System.Printing.PrintQueue.Commit%2A> método.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão para hospedar a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.PrintQueue" /> usando o <see cref="T:System.Printing.PrintServer" /> e nome na fila especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>construtores que não incluem um <xref:System.Printing.PrintSystemDesiredAccess> padrão de parâmetro para <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> acesso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, int printSchemaVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, int32 printSchemaVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="printSchemaVersion" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="printSchemaVersion">A versão do esquema de impressão a ser usado.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe usando especificado <see cref="T:System.Printing.PrintServer" />, nome da fila e versão do esquema de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>construtores que não incluem um <xref:System.Printing.PrintSystemDesiredAccess> padrão de parâmetro para <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> acesso.  
+  
+ O [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) versão lançada com o Windows Vista é "1".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, System.Printing.PrintQueueIndexedProperty[] propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, valuetype System.Printing.PrintQueueIndexedProperty[] propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Printing.PrintQueueIndexedProperty[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.Printing.PrintQueueIndexedProperty[]" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="propertyFilter">Uma matriz de <see cref="T:System.Printing.PrintQueueIndexedProperty" /> valores que especifica os valores de propriedade para inicializar.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe usando especificado <see cref="T:System.Printing.PrintServer" />, nome da fila e a matriz de <see cref="T:System.Printing.PrintQueueIndexedProperty" /> valores para inicializar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>construtores que não incluem um <xref:System.Printing.PrintSystemDesiredAccess> padrão de parâmetro para <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> acesso.  
+  
+ O uso de um construtor com a `propertyFilter` parâmetro melhora o desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="desiredAccess">Uma da <see cref="T:System.Printing.PrintSystemDesiredAccess" /> valores que especifica o tipo de acesso para a fila de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe usando especificado <see cref="T:System.Printing.PrintServer" />, nome da fila e desejado de acesso.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintServer" />, não a um objeto <see cref="T:System.Printing.PrintQueue" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="propertyFilter">Uma matriz de nomes de propriedades de inicialização.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe usando especificado <see cref="T:System.Printing.PrintServer" />, nome da fila e matriz de nomes de propriedade ao inicializar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>construtores que não incluem um <xref:System.Printing.PrintSystemDesiredAccess> padrão de parâmetro para <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> acesso.  
+  
+ O uso de um construtor com a `propertyFilter` parâmetro melhora o desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, int printSchemaVersion, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, int32 printSchemaVersion, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Int32,System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="printSchemaVersion" Type="System.Int32" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="printSchemaVersion">A versão do esquema de impressão a ser usado.</param>
+        <param name="desiredAccess">Uma da <see cref="T:System.Printing.PrintSystemDesiredAccess" /> valores que especifica o tipo de acesso para a fila de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe usando especificado <see cref="T:System.Printing.PrintServer" />, nome da fila, imprimir a versão de esquema e acesso desejado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) versão lançada com o Windows Vista é "1".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintServer" />, não a um objeto <see cref="T:System.Printing.PrintQueue" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, System.Printing.PrintQueueIndexedProperty[] propertyFilter, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, valuetype System.Printing.PrintQueueIndexedProperty[] propertyFilter, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Printing.PrintQueueIndexedProperty[],System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.Printing.PrintQueueIndexedProperty[]" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="propertyFilter">Uma matriz de <see cref="T:System.Printing.PrintQueueIndexedProperty" /> valores que especifica as propriedades de inicialização.</param>
+        <param name="desiredAccess">Uma da <see cref="T:System.Printing.PrintSystemDesiredAccess" /> valores que especifica o tipo de acesso para a fila de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe com especificado <see cref="T:System.Printing.PrintServer" />, nome da fila, a matriz de <see cref="T:System.Printing.PrintQueueIndexedProperty" /> valores para inicializar e acesso desejado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um construtor com a `propertyFilter` parâmetro melhora o desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintServer" />, não a um objeto <see cref="T:System.Printing.PrintQueue" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.String[],System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.String[]" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">O servidor de impressão que hospeda a fila de impressão.</param>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="propertyFilter">Uma matriz de nomes de propriedades de inicialização.</param>
+        <param name="desiredAccess">Uma da <see cref="T:System.Printing.PrintSystemDesiredAccess" /> valores que especifica o tipo de acesso para a fila de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Printing.PrintQueue" /> classe usando especificado <see cref="T:System.Printing.PrintServer" />, nome, o filtro de propriedade da fila e desejado de acesso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um construtor com a `propertyFilter` parâmetro melhora o desempenho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintServer" />, não a um objeto <see cref="T:System.Printing.PrintQueue" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddJob">
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Insere um novo trabalho de impressão na fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Portanto, a menos que a fila está pausada ou em um estado de erro, o trabalho será impresso quando atingir o início da fila, essa é uma função de impressão.  
+  
+ Outras maneiras de imprimir em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] incluem o <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> método, que pode ser usado com ou sem abrir a caixa de diálogo e muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Insere um novo trabalho de impressão (nomeado genericamente), cujo conteúdo é uma matriz <see cref="T:System.Byte" />, na fila.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintSystemJobInfo" /> que representa o trabalho de impressão e seu status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para gravar informações específicas de dispositivo, em um arquivo de spool, que não é incluído automaticamente pelo [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] spooler. Obviamente, você precisa saber se o arquivo de spool é [!INCLUDE[TLA#tla_emf](~/includes/tlasharptla-emf-md.md)] ou [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)]. Se você preferir trabalhar com o <xref:System.IO.Stream> [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)], você pode usar o <xref:System.Printing.PrintQueueStream> classe em vez desse método.  
+  
+ Após o <xref:System.Printing.PrintQueue.AddJob%2A> método foi chamado, você deve escrever uma <xref:System.Byte> de matriz para o <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> propriedade do <xref:System.Printing.PrintSystemJobInfo> que é retornado por <xref:System.Printing.PrintQueue.AddJob%2A> ou nenhum trabalho de impressão é criado. Esta matriz é o que imprime se a impressora está funcionando e se não está em pausa.  
+  
+> [!CAUTION]
+>  Se o <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> não foi fechado com <xref:System.IO.Stream.Close%2A> antes do final do thread no qual <xref:System.Printing.PrintQueue.AddJob%2A> é chamado, então um <xref:System.InvalidOperationException> é gerada quando esse thread termina porque o thread de spooler não pode obter controle sobre o <xref:System.IO.Stream> objeto.  
+  
+ Em que a fila de impressão [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)], o trabalho tem o nome "Imprimir o documento de sistema". Para atribuir o trabalho com um nome diferente, use o <xref:System.Printing.PrintQueue.AddJob%28System.String%29> de sobrecarga.  
+  
+ Outras maneiras de imprimir em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] incluem o <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> método, que pode ser usado com ou sem abrir a caixa de diálogo e muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Printing.PrintQueue.AddJob> para enviar um <xref:System.Byte> matriz para uma fila de impressão. Esse código só funciona com impressoras que podem detectar e imprimir texto sem formatação. Algumas delas não é possível.  
+  
+ [!code-csharp[WriteToSpoolFile#AddUnnamedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/WriteToSpoolFile/CSharp/Program.cs#addunnamedjob)]
+ [!code-vb[WriteToSpoolFile#AddUnnamedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WriteToSpoolFile/visualbasic/program.vb#addunnamedjob)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">O nome do trabalho de impressão.</param>
+        <summary>Insere um novo trabalho de impressão, cujo conteúdo é uma matriz <see cref="T:System.Byte" />, na fila.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintSystemJobInfo" /> que representa o trabalho de impressão e seu status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para gravar informações específicas de dispositivo, em um arquivo de spool, que não é incluído automaticamente pelo [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] spooler. Obviamente, você precisa saber se o arquivo de spool é [!INCLUDE[TLA#tla_emf](~/includes/tlasharptla-emf-md.md)] ou [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)]. Se você preferir trabalhar com o <xref:System.IO.Stream> [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)], você pode usar o <xref:System.Printing.PrintQueueStream> classe em vez desse método.  
+  
+ Após o <xref:System.Printing.PrintQueue.AddJob%2A> método foi chamado, você deve escrever uma <xref:System.Byte> de matriz para o <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> propriedade do <xref:System.Printing.PrintSystemJobInfo> que é retornado por <xref:System.Printing.PrintQueue.AddJob%2A> ou nenhum trabalho de impressão é criado. Esta matriz é o que imprime se a impressora está funcionando e se não está em pausa.  
+  
+> [!CAUTION]
+>  Se o <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> não foi fechado com <xref:System.IO.Stream.Close%2A> antes do final do thread no qual <xref:System.Printing.PrintQueue.AddJob%2A> é chamado, então um <xref:System.InvalidOperationException> é gerada quando esse thread termina porque o thread de spooler não pode obter controle sobre o <xref:System.IO.Stream> objeto.  
+  
+ Outras maneiras de imprimir em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] incluem o <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> método, que pode ser usado com ou sem abrir a caixa de diálogo e muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Printing.PrintQueue.AddJob%28System.String%29> para ler um arquivo em um <xref:System.Byte> de matriz e enviar a matriz para uma fila de impressão. Esse código supõe que há um arquivo chamado Test. txt na raiz da unidade c. Esse código só funciona com impressoras que podem detectar e imprimir texto sem formatação. Algumas delas não é possível.  
+  
+ [!code-csharp[WriteToSpoolFile#AddNamedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/WriteToSpoolFile/CSharp/Program.cs#addnamedjob)]
+ [!code-vb[WriteToSpoolFile#AddNamedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WriteToSpoolFile/visualbasic/program.vb#addnamedjob)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">O caminho e o nome do documento que está sendo impresso.</param>
+        <param name="printTicket">As configurações do trabalho de impressão.</param>
+        <summary>Insere na fila um novo trabalho de impressão para um documento [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] e concede a ele o nome e as configurações especificadas.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintSystemJobInfo" /> que representa o trabalho de impressão e seu status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Printing.PrintQueue.AddJob%28System.String%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName, string documentPath, bool fastCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName, string documentPath, bool fastCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="documentPath" Type="System.String" />
+        <Parameter Name="fastCopy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">O nome do trabalho de impressão.</param>
+        <param name="documentPath">O caminho e o nome do documento que está sendo impresso.</param>
+        <param name="fastCopy">
+          <see langword="true" /> para armazenar no spool rapidamente sem o comentário do progresso página a página e sem validar se o arquivo é um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] válido; caso contrário, <see langword="false" />.</param>
+        <summary>Insere um novo trabalho de impressão para um documento [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] na fila, fornece o nome especificado a ele e especifica se ele deve ser validado ou não.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintSystemJobInfo" /> que representa o trabalho de impressão e seu status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `fastCopy` é `true`, em seguida, a impressora deve ser um [visão geral sobre impressão](~/docs/framework/wpf/advanced/printing-overview.md). Se não estiver, o <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> método lançará uma exceção.  
+  
+ Se `fastCopy` é `false`, em seguida, ele não é necessário usar uma impressora XPSDrv. O [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] arquivo que está sendo adicionado à fila é convertido em linguagem de descrição de página da impressora, como PCL ou Postscript. No entanto, esse tipo de impressão faz uma chamada para [!INCLUDE[TLA#tla_com](~/includes/tlasharptla-com-md.md)]. A chamada para [!INCLUDE[TLA2#tla_com](~/includes/tla2sharptla-com-md.md)] requer que o thread de chamada tenha um single-threaded apartment (<xref:System.Threading.ApartmentState.STA>) em vez de vários-threaded apartment (<xref:System.Threading.ApartmentState.MTA>) que é o padrão em [!INCLUDE[TLA#tla_net](~/includes/tlasharptla-net-md.md)] 2.0 e posterior. (Para obter mais informações sobre estados de apartment e threading, consulte [gerenciado e não gerenciado de Threading](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5), e <xref:System.Threading.ApartmentState>.) Há duas maneiras de fazer isso:  
+  
+-   A maneira mais simples é adicionar a <xref:System.STAThreadAttribute> (ou seja, "`[System.STAThreadAttribute()]`") apenas acima da primeira linha do aplicativo `Main` método (normalmente "`static void Main(string[] args)`").  
+  
+-   Se você precisar de sua `Main` estado apartment do thread seja <xref:System.Threading.ApartmentState.MTA>, você pode hospedar a chamada para <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> em um thread separado cujo estado apartment é definido como <xref:System.Threading.ApartmentState.STA> com <xref:System.Threading.Thread.SetApartmentState%2A>. O exemplo a seguir ilustra essa segunda técnica.  
+  
+> [!NOTE]
+>  Não é possível aplicar o <xref:System.STAThreadAttribute> para qualquer método exceto `Main` e você não pode usar <xref:System.Threading.Thread.SetApartmentState%2A> para o `Main` thread.  
+  
+ Outras maneiras de imprimir em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] incluem o <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> método, que pode ser usado com ou sem abrir a caixa de diálogo e muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> lote imprimir todo o [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] arquivos em um diretório.  
+  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName, string documentPath, bool fastCopy, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName, string documentPath, bool fastCopy, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String,System.String,System.Boolean,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="documentPath" Type="System.String" />
+        <Parameter Name="fastCopy" Type="System.Boolean" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">O caminho e o nome do documento que está sendo impresso.</param>
+        <param name="documentPath">O caminho e o nome do documento que está sendo impresso.</param>
+        <param name="fastCopy">
+          <see langword="true" /> para armazenar no spool rapidamente sem o comentário do progresso página a página e sem validar se o arquivo é um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] válido; caso contrário, <see langword="false" />.</param>
+        <param name="printTicket">As configurações do trabalho de impressão.</param>
+        <summary>Insere um novo trabalho de impressão para um Documento [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] na fila, fornece a ele o nome e as configurações especificadas e especifica se ele deve ser validado ou não.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintSystemJobInfo" /> que representa o trabalho de impressão e seu status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AveragePagesPerMinute">
+      <MemberSignature Language="C#" Value="public virtual int AveragePagesPerMinute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AveragePagesPerMinute" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.AveragePagesPerMinute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a velocidade da impressora medida em páginas por minuto.</summary>
+        <value>Média de páginas impressas por minuto da impressora.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientPrintSchemaVersion">
+      <MemberSignature Language="C#" Value="public int ClientPrintSchemaVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ClientPrintSchemaVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.ClientPrintSchemaVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <value>A versão do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) em uso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) versão lançada com o Windows Vista é 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public virtual string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um comentário sobre a impressora.</summary>
+        <value>Um comentário sobre a impressora.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comentário é visível para os usuários na lista de impressora do Windows e o diálogo de impressão comuns do Windows. Ele pode fornecer informações não contidas no nome da impressora, modelo ou propriedades de local, que também são visíveis nos mesmos locais; Por exemplo, "reservado para a folha de pagamento Depto. entre pm 3 e 4 pm". (O <xref:System.Printing.PrintQueue.Description%2A> propriedade permite que você armazene informações que os usuários não é possível exibir a menos que seu aplicativo torna visível.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava as propriedades atuais do objeto <see cref="T:System.Printing.PrintQueue" /> na fila de impressão real no servidor de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterações que o programa faz as propriedades de um <xref:System.Printing.PrintQueue> objeto realmente entrarão em vigor até que o programa é executado o <xref:System.Printing.PrintQueue.Commit%2A> método.  
+  
+ O método requer que o <xref:System.Printing.PrintQueue> objeto ser criado com <xref:System.Printing.PrintSystemDesiredAccess.AdministratePrinter> direitos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método ao mesclar duas permissões de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Algumas das propriedades não puderam ser confirmadas.</exception>
+        <exception cref="T:System.Printing.PrintCommitAttributesException">Algumas das propriedades não puderam ser confirmadas.  
+  
+ \- ou -  
+  
+ O objeto <see cref="T:System.Printing.PrintQueue" /> não foi criado com direitos suficientes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (ref System.Printing.PrintDocumentImageableArea documentImageableArea);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Printing.PrintDocumentImageableArea@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="documentImageableArea">Uma referência a um objeto que contém as dimensões da área da página em que o dispositivo pode imprimir. Como seu tipo de dados não tem nenhum construtor público, este parâmetro é passado não inicializado.</param>
+        <summary>Cria um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> objeto abre um diálogo de impressão comuns do Windows e retorna um <see langword="ref" /> (<see langword="ByRef" /> no Visual Basic) parâmetro que representa informações sobre a área de imagem e as dimensões da mídia.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> que grava dados XPS em um fluxo. Ele pode ser <see langword="null" />. (O parâmetro <paramref name="documentImageableArea" /> é um <see langword="ref" /> [<see langword="ByRef" /> no Visual Basic] retornado de parâmetro que é inicializado pelo método, portanto ele representa um segundo item.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitas impressoras necessário até um quarto de polegada ainda espaço ao redor das bordas de cada página para o papel da alça e movê-la por meio da impressora. Caso contrário, toner seria madrugada o mecanismo de fluxo de documento. O que pode ser impresso é a "área de geração de imagem".  
+  
+ O tipo <xref:System.Printing.PrintDocumentImageableArea> não tem construtor público. Portanto, a variável `documentImageableArea` deve ser declarado e atribuídos a `null` e só então passado para o método. Esse método exibe um <xref:System.Windows.Controls.PrintDialog> exigir entrada do usuário. Depois que o usuário tiver selecionado uma impressora, o tamanho do papel e a orientação e fechar a caixa de diálogo, `documentImageableArea` aponta para um objeto real e suas propriedades é inicializadas.  
+  
+ Se o usuário cancela ou fecha a caixa de diálogo, o valor de retorno é `null`. Como consequência, o valor de retorno deve ser verificado `null` pelo seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (System.Printing.PrintQueue printQueue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(class System.Printing.PrintQueue printQueue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Printing.PrintQueue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">Uma fila de impressão para imprimir o documento XPS.</param>
+        <summary>Cria um objeto <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> e o associa com a fila de impressão especificada.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> que grava em um fluxo de XPS.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para criar um <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+ [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (ref double width, ref double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(float64&amp; width, float64&amp; height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Double@,System.Double@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double&amp;" RefType="ref" />
+        <Parameter Name="height" Type="System.Double&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="width">A largura do documento XPS.</param>
+        <param name="height">A altura do documento XPS.</param>
+        <summary>Cria um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> objeto com as dimensões especificadas.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> que grava em um fluxo de XPS. Ele pode ser <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exibe um <xref:System.Windows.Controls.PrintDialog> exigir entrada do usuário. Se o usuário cancela ou fecha a caixa de diálogo, o valor de retorno é `null`. Como consequência, o valor de retorno deve ser verificado `null` pelo seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (string jobDescription, ref System.Printing.PrintDocumentImageableArea documentImageableArea);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(string jobDescription, class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.String,System.Printing.PrintDocumentImageableArea@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobDescription" Type="System.String" />
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="jobDescription">Um nome para o trabalho de impressão. Ele aparece na interface de usuário de impressão do Windows.</param>
+        <param name="documentImageableArea">Uma referência a um objeto que contém as dimensões da área da página em que o dispositivo pode imprimir. Como seu tipo de dados não tem nenhum construtor público, este parâmetro é passado não inicializado.</param>
+        <summary>Cria um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> do objeto (abre um diálogo de impressão comuns do Windows e fornece uma descrição do trabalho) e retorna um <see langword="ref" /> (<see langword="ByRef" /> no Visual Basic) parâmetro que representa informações sobre a área de imagem e as dimensões da mídia.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> que grava dados XPS em um fluxo. Ele pode ser <see langword="null" />. (O parâmetro <paramref name="documentImageableArea" /> é um <see langword="ref" /> [<see langword="ByRef" /> no Visual Basic] retornado de parâmetro que é inicializado pelo método, portanto ele representa um segundo item.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitas impressoras necessário até um quarto de polegada ainda espaço ao redor das bordas de cada página para o papel da alça e movê-la por meio da impressora. Caso contrário, toner seria madrugada o mecanismo de fluxo de documento. O que pode ser impresso é a "área de geração de imagem".  
+  
+ O tipo <xref:System.Printing.PrintDocumentImageableArea> não tem construtor público. Portanto, a variável `documentImageableArea` deve ser declarado e atribuídos a `null` e só então passado para o método. Esse método exibe um <xref:System.Windows.Controls.PrintDialog> exigir entrada do usuário. Depois que o usuário tiver selecionado uma impressora, o tamanho do papel e a orientação e fechar a caixa de diálogo, `documentImageableArea` aponta para um objeto real e as propriedades é inicializadas.  
+  
+ Se o usuário cancela ou fecha a caixa de diálogo, o valor de retorno é `null`. Como consequência, o valor de retorno deve ser verificado `null` pelo seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (ref System.Printing.PrintDocumentImageableArea documentImageableArea, ref System.Windows.Controls.PageRangeSelection pageRangeSelection, ref System.Windows.Controls.PageRange pageRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea, valuetype System.Windows.Controls.PageRangeSelection&amp; pageRangeSelection, valuetype System.Windows.Controls.PageRange&amp; pageRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Printing.PrintDocumentImageableArea@,System.Windows.Controls.PageRangeSelection@,System.Windows.Controls.PageRange@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+        <Parameter Name="pageRangeSelection" Type="System.Windows.Controls.PageRangeSelection&amp;" RefType="ref" />
+        <Parameter Name="pageRange" Type="System.Windows.Controls.PageRange&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="documentImageableArea">Uma referência a um objeto que contém as dimensões da área da página em que o dispositivo pode imprimir. Como seu tipo de dados não tem nenhum construtor público, este parâmetro é passado não inicializado.</param>
+        <param name="pageRangeSelection">Um valor que especifica se a impressão de todas as páginas ou apenas um intervalo especificado pelo usuário.</param>
+        <param name="pageRange">O intervalo de páginas é impresso.</param>
+        <summary>Cria um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> objeto, abre um diálogo de impressão comuns do Windows, fornece a caixa de diálogo com um intervalo de página e uma descrição do trabalho de impressão e retorna um <see langword="ref" /> (<see langword="ByRef" /> no Visual Basic) parâmetro que representa informações sobre a área de imagem e as dimensões da mídia.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> que grava dados XPS em um fluxo. Ele pode ser <see langword="null" />. (Os parâmetros <paramref name="documentImageableArea" />, <paramref name="pageRangeSelection" />, e <paramref name="pageRange" /> são todos <see langword="ref" /> [<see langword="ByRef" /> no Visual Basic] parâmetros que são inicializados pelo usuário e retornados quando a caixa de diálogo é fechada, portanto, cada uma representa adicional item retornado.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitas impressoras necessário até um quarto de polegada ainda espaço ao redor das bordas de cada página para o papel da alça e movê-la por meio da impressora. Caso contrário, toner seria madrugada o mecanismo de fluxo de documento. O que pode ser impresso é a "área de geração de imagem".  
+  
+ O tipo <xref:System.Printing.PrintDocumentImageableArea> não tem construtor público. Portanto, a variável `documentImageableArea` deve ser declarado e atribuídos a `null` e só então passado para o método. Esse método exibe um <xref:System.Windows.Controls.PrintDialog> exigir entrada do usuário. O usuário configura seu trabalho de impressão na caixa de diálogo (incluindo a selecionar uma impressora, tamanho do papel, orientação e intervalo de página). Quando a caixa de diálogo é fechada, `pageRangeSelection` e `pageRange` têm valores, e `documentImageableArea` aponta para um objeto real cujas propriedades são inicializadas.  
+  
+ Se o usuário cancela ou fecha a caixa de diálogo, o valor de retorno é `null`. Como consequência, o valor de retorno deve ser verificado `null` pelo seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (string jobDescription, ref System.Printing.PrintDocumentImageableArea documentImageableArea, ref System.Windows.Controls.PageRangeSelection pageRangeSelection, ref System.Windows.Controls.PageRange pageRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(string jobDescription, class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea, valuetype System.Windows.Controls.PageRangeSelection&amp; pageRangeSelection, valuetype System.Windows.Controls.PageRange&amp; pageRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.String,System.Printing.PrintDocumentImageableArea@,System.Windows.Controls.PageRangeSelection@,System.Windows.Controls.PageRange@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobDescription" Type="System.String" />
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+        <Parameter Name="pageRangeSelection" Type="System.Windows.Controls.PageRangeSelection&amp;" RefType="ref" />
+        <Parameter Name="pageRange" Type="System.Windows.Controls.PageRange&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="jobDescription">Um nome para o trabalho de impressão. Ele aparece na interface de usuário de impressão do Windows.</param>
+        <param name="documentImageableArea">Uma referência a um objeto que contém as dimensões da área da página em que o dispositivo pode imprimir. Como seu tipo de dados não tem nenhum construtor público, este parâmetro é passado não inicializado.</param>
+        <param name="pageRangeSelection">Um valor que especifica se a impressão de todas as páginas ou apenas um intervalo especificado pelo usuário.</param>
+        <param name="pageRange">O intervalo de páginas é impresso.</param>
+        <summary>Cria um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> objeto, abre um diálogo de impressão comuns do Windows, fornece a caixa de diálogo com um intervalo de páginas e retorna um <see langword="ref" /> (<see langword="ByRef" /> no Visual Basic) parâmetro que representa informações sobre a área de imagem e as dimensões da mídia.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> que grava dados XPS em um fluxo. Ele pode ser <see langword="null" />. (Os parâmetros <paramref name="documentImageableArea" />, <paramref name="pageRangeSelection" />, e <paramref name="pageRange" /> são todos <see langword="ref" /> [<see langword="ByRef" /> no Visual Basic] parâmetros que são inicializados pelo usuário e retornados quando a caixa de diálogo é fechada, portanto, cada uma representa adicional item retornado.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitas impressoras necessário até um quarto de polegada ainda espaço ao redor das bordas de cada página para o papel da alça e movê-la por meio da impressora. Caso contrário, toner seria madrugada o mecanismo de fluxo de documento. O que pode ser impresso é a "área de geração de imagem".  
+  
+ O tipo <xref:System.Printing.PrintDocumentImageableArea> não tem construtor público. Portanto, a variável `documentImageableArea` deve ser declarado e atribuídos a `null` e só então passado para o método. Esse método exibe um <xref:System.Windows.Controls.PrintDialog> exigir entrada do usuário. O usuário configura seu trabalho de impressão na caixa de diálogo (incluindo a selecionar uma impressora, tamanho do papel, orientação e intervalo de página). Quando a caixa de diálogo é fechada, `pageRangeSelection` e `pageRange` têm valores, e `documentImageableArea` aponta para um objeto real cujas propriedades são inicializadas.  
+  
+ Se o usuário cancela ou fecha a caixa de diálogo, o valor de retorno é `null`. Como consequência, o valor de retorno deve ser verificado `null` pelo seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentJobSettings">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintJobSettings CurrentJobSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintJobSettings CurrentJobSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.CurrentJobSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintJobSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que contém as definições de configuração para o trabalho de impressão atual.</summary>
+        <value>Um valor <see cref="T:System.Printing.PrintJobSettings" /> que contém as configurações do trabalho de impressão atual. Essas configurações incluem uma descrição do trabalho e uma referência para o <see cref="T:System.Printing.PrintTicket" /> do trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPrintTicket">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintTicket DefaultPrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket DefaultPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.DefaultPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções de impressora padrão associadas a essa <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <value>O <see cref="T:System.Printing.PrintTicket" /> padrão para a fila de impressão; ou <see langword="null" /> se ocorreu um erro na fila de impressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão <xref:System.Printing.PrintTicket> Especifica as opções de trabalho de impressão, como <xref:System.Printing.PrintTicket.CopyCount%2A>, <xref:System.Printing.PrintTicket.PageOrientation%2A>, <xref:System.Printing.PrintTicket.Duplexing%2A>, <xref:System.Printing.PrintTicket.Stapling%2A>e outros.  
+  
+ Cada <xref:System.Printing.PrintQueue> mantém seu próprio <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A>.  
+  
+ Em operação normal do <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> propriedade retorna um <xref:System.Printing.PrintTicket>.  Se o <xref:System.Printing.PrintQueue> detecta um estado inválido, <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> retorna `null`.  Se <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> retorna `null`, o aplicativo deve exibir uma caixa de diálogo informativa do usuário que ocorreu um erro nessa fila de impressão e que o trabalho de impressão deve ser reiniciado com a saída direcionada para uma fila de impressão diferente.  
+  
+ Obter ou definir o <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> propriedade não valida o <xref:System.Printing.PrintTicket>.  O <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método pode ser usado para validar um <xref:System.Printing.PrintTicket>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade ao testar as capacidades da impressora e configurar um trabalho de impressão para tirar proveito deles.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPriority">
+      <MemberSignature Language="C#" Value="public virtual int DefaultPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.DefaultPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade padrão que é fornecida para cada trabalho de impressão nova adicionado à fila.</summary>
+        <value>A prioridade padrão para trabalhos de impressão adicionado à fila. Os valores possíveis variam de 1 a 99. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prioridade de um trabalho de impressão pode ser alterada pelos usuários depois de entrar na fila de impressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição da fila de impressão.</summary>
+        <value>Uma descrição da fila de impressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a fila é criada, a descrição padrão é uma cadeia de caracteres de três partes que consiste o nome da fila, o modelo e o local separados por vírgulas. Contraste a <xref:System.Printing.PrintQueue.Description%2A> propriedade com o <xref:System.Printing.PrintQueue.Comment%2A> propriedade que é visível para os usuários na caixa de diálogo Imprimir comuns e a lista de impressoras e aparelhos de fax.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo da fila.</summary>
+        <value>O nome completo da fila de impressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para filas de impressão no servidor de impressão local, o valor desta propriedade é idêntico ao <xref:System.Printing.PrintQueue.Name%2A>, caso contrário, ele incluirá o nome completo da UNC (convenção de nomenclatura Universal).  
+  
+ O <xref:System.Printing.PrintQueue> objeto também tem gravável <xref:System.Printing.PrintQueue.Name%2A> e <xref:System.Printing.PrintQueue.ShareName%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade ao mesclar duas permissões de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo GetJob (int jobId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo GetJob(int32 jobId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetJob(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="jobId">O número do trabalho na fila.</param>
+        <summary>Obtém o trabalho de impressão com o número de ID especificado.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintSystemJobInfo" /> que especifica as propriedades do trabalho e seu status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode usar o <xref:System.Printing.PrintSystemJobInfo.Get%2A?displayProperty=nameWithType> método para a mesma finalidade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para diagnosticar um problema com um trabalho de impressão.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintCapabilities">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintCapabilities GetPrintCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintCapabilities GetPrintCapabilities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintCapabilities</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Printing.PrintCapabilities" /> que identifica os recursos da impressora.</summary>
+        <returns>Um objeto <see cref="T:System.Printing.PrintCapabilities" /> que especifica o que a impressora pode e não pode fazer, impressão em dois lados ou associação automática.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método ao mesclar duas permissões de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">O objeto <see cref="T:System.Printing.PrintCapabilities" /> não pôde ser recuperado.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">permissão obter recursos de impressão. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintCapabilities">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintCapabilities GetPrintCapabilities (System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintCapabilities GetPrintCapabilities(class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilities(System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintCapabilities</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">Um tíquete de impressão que fornece a base na qual os recursos de impressão são relatados.</param>
+        <summary>Obtém um objeto <see cref="T:System.Printing.PrintCapabilities" /> que identifica os recursos da impressora.</summary>
+        <returns>Um objeto <see cref="T:System.Printing.PrintCapabilities" /> que especifica o que a impressora pode e não pode fazer, impressão em dois lados ou associação automática.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintTicket> parâmetro é usado como a base na qual deseja construir o <xref:System.Printing.PrintCapabilities> objeto. Por exemplo, suponha que a impressora tem suporte apenas A de tipos de mídia e B do compartimento de entrada 1 e suporte apenas para o tipo de mídia C do compartimento de entrada 2. Se o `printTicket` parâmetro especificado bin entrada 1, o <xref:System.Printing.PrintCapabilities> objeto retornado inclui todos os tipos de três mídia, mas ela poderia informar o tipo C como "restrita". Se o `printTicket` parâmetro especificado bin entrada 2, então o <xref:System.Printing.PrintCapabilities> objeto retornado inclui todos os tipos de três mídia, mas ela poderia informar o tipo A e B como "restrita". Consulte o [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397) para obter mais informações sobre restrições.  
+  
+ Se `printTicket` é `null`, o <xref:System.Printing.PrintQueue.UserPrintTicket%2A> é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">O objeto <see cref="T:System.Printing.PrintCapabilities" /> não pôde ser recuperado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="printTicket" /> não é bem formado.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">permissão obter recursos de impressão. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetPrintCapabilitiesAsXml">
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.IO.MemoryStream" /> objeto que especifica as capacidades da impressora como um XML de fluxo que está em conformidade com a [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O esquema XML usado é chamado de "PrintCapabilities", uma parte do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetPrintCapabilitiesAsXml">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryStream GetPrintCapabilitiesAsXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryStream GetPrintCapabilitiesAsXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilitiesAsXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.IO.MemoryStream" /> objeto que especifica as capacidades da impressora como um XML de fluxo que está em conformidade com a [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <returns>Um <see cref="T:System.IO.MemoryStream" /> especificando as capacidades da impressora usando o esquema XML "PrintCapabilities", uma parte do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) sistema.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintQueueException">Não foi possível recuperar os recursos de impressão.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">permissão obter recursos de impressão. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintCapabilitiesAsXml">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryStream GetPrintCapabilitiesAsXml (System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryStream GetPrintCapabilitiesAsXml(class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilitiesAsXml(System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">Um tíquete de impressão que fornece a base na qual os recursos de impressão são relatados.</param>
+        <summary>Obtém um <see cref="T:System.IO.MemoryStream" /> objeto que especifica o formato de recursos da impressora em XML que esteja em conformidade com a [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <returns>Um <see cref="T:System.IO.MemoryStream" /> especificando as capacidades da impressora usando o esquema XML "PrintCapabilities", uma parte do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) sistema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintTicket> parâmetro é usado como a base na qual deseja construir os XML de recursos de impressão. Por exemplo, suponha que a impressora tem suporte apenas A de tipos de mídia e B do compartimento de entrada 1 e suporte apenas para o tipo de mídia C do compartimento de entrada 2. Se o `printTicket` parâmetro especificado bin entrada 1, em seguida, os recursos de impressão XML que é retornado inclui todos os tipos de três mídia, mas ela poderia informar o tipo C como "restrita". Se o `printTicket` parâmetro especificado bin entrada 2, e os recursos de impressão XML que é retornado inclui todos os tipos de três mídia, mas ela poderia informar o tipo A e B como "restrita". Consulte o [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397) para obter mais informações sobre restrições.  
+  
+ Se `printTicket` é `null`, o <xref:System.Printing.PrintQueue.UserPrintTicket%2A> é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">Não foi possível recuperar os recursos de impressão.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="printTicket" /> não é bem formado.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">permissão obter recursos de impressão. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintJobInfoCollection">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintJobInfoCollection GetPrintJobInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintJobInfoCollection GetPrintJobInfoCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintJobInfoCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintJobInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma coleção que contém um objeto <see cref="T:System.Printing.PrintSystemJobInfo" /> para cada trabalho na fila.</summary>
+        <returns>Retorna um <see cref="T:System.Printing.PrintJobInfoCollection" /> de <see cref="T:System.Printing.PrintSystemJobInfo" /> objetos. Há um para cada trabalho na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método ao executar a mesma ação em todos os trabalhos em uma fila.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPaperProblem">
+      <MemberSignature Language="C#" Value="public bool HasPaperProblem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPaperProblem" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.HasPaperProblem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está tendo um problema de papel não especificado.</summary>
+        <value>
+          <see langword="true" />Se houver um problema de papel não especificado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ O <xref:System.Printing.PrintQueue> objeto também tem <xref:System.Printing.PrintQueue.IsPaperJammed%2A> e <xref:System.Printing.PrintQueue.IsOutOfPaper%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasToner">
+      <MemberSignature Language="C#" Value="public bool HasToner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasToner" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.HasToner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora tem toner.</summary>
+        <value>
+          <see langword="true" /> se a impressora atual tiver toner; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns fabricantes de impressora podem usar esse sinal para indicar que toner não é baixo. Outras pessoas podem usá-lo para indicar que o cartucho está presente e inserido corretamente ao usar <xref:System.Printing.PrintQueue.IsTonerLow%2A> para indicar que toner é baixa.  
+  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingPrintServer">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintServer HostingPrintServer { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintServer HostingPrintServer" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.HostingPrintServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintServer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define (protegidos) o servidor de impressão que controla a fila de impressão.</summary>
+        <value>O nome e outras propriedades do <see cref="T:System.Printing.PrintServer" /> que está hospedando a fila de impressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser definida apenas por uma classe que deriva de <xref:System.Printing.PrintQueue> porque o setter da propriedade é `protected`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InPartialTrust">
+      <MemberSignature Language="C#" Value="public bool InPartialTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InPartialTrust" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.InPartialTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fila está operando em um modo parcialmente confiável, um nível mais alto de confiança.</summary>
+        <value>
+          <see langword="true" />Se a fila estiver operando em um modo parcialmente confiável; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Printing.PrintQueue.InPartialTrust%2A> é de propriedade `true`, seu programa não é possível criar um <xref:System.Printing.PrintQueue> objeto que representa esta impressora, a menos que o usuário tem permissões completas de impressão da impressora.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected override sealed void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Printing.PrintQueue" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBidiEnabled">
+      <MemberSignature Language="C#" Value="public bool IsBidiEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBidiEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsBidiEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a comunicação bidirecional com a impressora está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a comunicação bidirecional com a impressora estiver habilitada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBusy">
+      <MemberSignature Language="C#" Value="public bool IsBusy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBusy" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsBusy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o dispositivo de impressão está ocupado.</summary>
+        <value>
+          <see langword="true" />Se o dispositivo estiver ocupado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ocupado não significa necessariamente que está processando um trabalho de impressão. Se o dispositivo é uma combinação fax/impressora/copiadora, em seguida, talvez ele seja envie por fax ou copiar. Comparar com a <xref:System.Printing.PrintQueue.IsProcessing%2A> propriedade.  
+  
+ Se o dispositivo não oferece suporte a um sinal com o significado e, em seguida, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDevQueryEnabled">
+      <MemberSignature Language="C#" Value="public bool IsDevQueryEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDevQueryEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsDevQueryEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila contém documentos quando as configurações de documento e impressora não correspondem.</summary>
+        <value>
+          <see langword="true" />Se a fila contém configurações incompatíveis; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirect">
+      <MemberSignature Language="C#" Value="public bool IsDirect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirect" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsDirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila é impresso diretamente para os documentos de impressora ou spools primeiro e, em seguida, imprime-los.</summary>
+        <value>
+          <see langword="true" />Se a fila imprime diretamente à impressora; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser definida somente por meio do diálogo de impressão comuns do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDoorOpened">
+      <MemberSignature Language="C#" Value="public bool IsDoorOpened { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDoorOpened" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsDoorOpened" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma porta estiver aberta na impressora.</summary>
+        <value>
+          <see langword="true" />Se uma porta está aberta; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHidden">
+      <MemberSignature Language="C#" Value="public bool IsHidden { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHidden" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila de impressão está oculto na interface do usuário do seu aplicativo.</summary>
+        <value>
+          <see langword="true" />Se a fila de impressão está oculto na interface de usuário do Windows; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não ocultar automaticamente a fila de impressão quando você definir essa propriedade como `true`. Seu programa ainda deve tomar medidas para certificar-se de que ele não aparecer em qualquer lista de filas na interface do programa.  
+  
+ Filas de impressão não podem ser oculto na interface de usuário do Windows, como a lista de impressoras e aparelhos de fax.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInError">
+      <MemberSignature Language="C#" Value="public bool IsInError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInError" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsInError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora ou o dispositivo está em uma condição de erro.</summary>
+        <value>
+          <see langword="true" />Se o dispositivo estiver em uma condição de erro; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitializing">
+      <MemberSignature Language="C#" Value="public bool IsInitializing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitializing" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsInitializing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está inicializando a mesmo.</summary>
+        <value>
+          <see langword="true" />Se a impressora está inicializando; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIOActive">
+      <MemberSignature Language="C#" Value="public bool IsIOActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIOActive" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsIOActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está recebendo ou enviando dados ou sinais.</summary>
+        <value>
+          <see langword="true" />Se a impressora está recebendo ou enviando; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsManualFeedRequired">
+      <MemberSignature Language="C#" Value="public bool IsManualFeedRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsManualFeedRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsManualFeedRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora precisa ser alimentado manualmente o papel para o trabalho de impressão atual.</summary>
+        <value>
+          <see langword="true" />Se a impressora precisa ser manualmente alimentados papel; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNotAvailable">
+      <MemberSignature Language="C#" Value="public bool IsNotAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNotAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsNotAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está disponível.</summary>
+        <value>
+          <see langword="true" />Se a impressora está disponível. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffline">
+      <MemberSignature Language="C#" Value="public bool IsOffline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOffline" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOffline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está offline.</summary>
+        <value>
+          <see langword="true" /> se a impressora estiver offline; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutOfMemory">
+      <MemberSignature Language="C#" Value="public bool IsOutOfMemory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutOfMemory" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOutOfMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está sem memória.</summary>
+        <value>
+          <see langword="true" />Se a impressora está sem memória; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutOfPaper">
+      <MemberSignature Language="C#" Value="public bool IsOutOfPaper { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutOfPaper" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOutOfPaper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora precisa ser recarregada com papel do tamanho necessário para o trabalho atual.</summary>
+        <value>
+          <see langword="true" /> se a impressora precisar ser recarregada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutputBinFull">
+      <MemberSignature Language="C#" Value="public bool IsOutputBinFull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutputBinFull" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOutputBinFull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a área de saída da impressora está em risco de estouro.</summary>
+        <value>
+          <see langword="true" />Se a área de saída da impressora estiver completa; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaperJammed">
+      <MemberSignature Language="C#" Value="public bool IsPaperJammed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaperJammed" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPaperJammed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a planilha atual de papel está preso na impressora.</summary>
+        <value>
+          <see langword="true" />Se o papel está preso; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila de impressão foi pausada.</summary>
+        <value>
+          <see langword="true" />Se a fila de impressão foi pausada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPendingDeletion">
+      <MemberSignature Language="C#" Value="public bool IsPendingDeletion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPendingDeletion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPendingDeletion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está no processo de exclusão de um trabalho de impressão.</summary>
+        <value>
+          <see langword="true" />Se a impressora está excluindo um trabalho; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPowerSaveOn">
+      <MemberSignature Language="C#" Value="public bool IsPowerSaveOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPowerSaveOn" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPowerSaveOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está no modo de economia de energia.</summary>
+        <value>
+          <see langword="true" />Se a impressora estiver em power Salvar modo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrinting">
+      <MemberSignature Language="C#" Value="public bool IsPrinting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrinting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPrinting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um trabalho de impressão.</summary>
+        <value>
+          <see langword="true" />Se um trabalho está imprimindo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProcessing">
+      <MemberSignature Language="C#" Value="public bool IsProcessing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsProcessing" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsProcessing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está processando um trabalho de impressão.</summary>
+        <value>
+          <see langword="true" />Se a impressora está processando um trabalho de impressão Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns fabricantes de impressora oferecer suporte a esse sinal de menos específico em vez de <xref:System.Printing.PrintQueue.IsBusy%2A>.  
+  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublished">
+      <MemberSignature Language="C#" Value="public bool IsPublished { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublished" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPublished" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está visível para outros usuários da rede.</summary>
+        <value>
+          <see langword="true" />Se a impressora está visível para outros usuários da rede. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsQueued">
+      <MemberSignature Language="C#" Value="public bool IsQueued { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsQueued" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsQueued" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora pode dar suporte a uma fila com mais de um trabalho de impressão nele por vez.</summary>
+        <value>
+          <see langword="true" />Se a impressora não oferecer suporte a enfileiramento de vários trabalhos de impressão; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRawOnlyEnabled">
+      <MemberSignature Language="C#" Value="public bool IsRawOnlyEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRawOnlyEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsRawOnlyEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila de impressão pode usar EMF (arquivo de metadados aprimorada) que permite que o fluxo de dados mais rápido de um aplicativo de impressão para o spooler do Windows.</summary>
+        <value>
+          <see langword="true" />Se a impressora não é possível usar a impressão de EMF. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServerUnknown">
+      <MemberSignature Language="C#" Value="public bool IsServerUnknown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsServerUnknown" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsServerUnknown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está em um estado de erro.</summary>
+        <value>
+          <see langword="true" />Se a impressora está em um estado de erro; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está disponível para uso por outros computadores na rede.</summary>
+        <value>
+          <see langword="true" />Se a impressora estiver compartilhada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só pode ser definida com o diálogo de impressão comuns do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTonerLow">
+      <MemberSignature Language="C#" Value="public bool IsTonerLow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTonerLow" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsTonerLow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está em execução com pouca toner.</summary>
+        <value>
+          <see langword="true" />Se a impressora estiver em execução com pouca toner; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ O <xref:System.Printing.PrintQueue> objeto também tem um <xref:System.Printing.PrintQueue.HasToner%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWaiting">
+      <MemberSignature Language="C#" Value="public bool IsWaiting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWaiting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsWaiting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila está aguardando um trabalho a ser adicionado.</summary>
+        <value>
+          <see langword="true" />Se a fila estiver esperando por um trabalho; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarmingUp">
+      <MemberSignature Language="C#" Value="public bool IsWarmingUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarmingUp" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsWarmingUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora está aquecendo.</summary>
+        <value>
+          <see langword="true" />Se a impressora está aquecendo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXpsDevice">
+      <MemberSignature Language="C#" Value="public bool IsXpsDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsXpsDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsXpsDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o driver da impressora está criado [visão geral sobre impressão](~/docs/framework/wpf/advanced/printing-overview.md) para que ele use [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] como sua linguagem de descrição de página.</summary>
+        <value>
+          <see langword="true" />Se a impressora usa o [visão geral sobre impressão](~/docs/framework/wpf/advanced/printing-overview.md); caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepPrintedJobs">
+      <MemberSignature Language="C#" Value="public bool KeepPrintedJobs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepPrintedJobs" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.KeepPrintedJobs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fila está salvando o arquivo de linguagem de impressora em vez de excluí-lo após a impressão.</summary>
+        <value>
+          <see langword="true" />Se a fila está salvando o arquivo de linguagem de impressora; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public virtual string Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local físico da impressora.</summary>
+        <value>Local físico da impressora.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para listar um subconjunto de filas de impressão disponíveis.  
+  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPrintSchemaVersion">
+      <MemberSignature Language="C#" Value="public static int MaxPrintSchemaVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxPrintSchemaVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.MaxPrintSchemaVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número possível de versão mais recente do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) que pode usar a fila.</summary>
+        <value>O número da versão mais recente do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) que pode usar a fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão do [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) lançado com o Windows Vista é 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeAndValidatePrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.ValidationResult MergeAndValidatePrintTicket (System.Printing.PrintTicket basePrintTicket, System.Printing.PrintTicket deltaPrintTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Printing.ValidationResult MergeAndValidatePrintTicket(class System.Printing.PrintTicket basePrintTicket, class System.Printing.PrintTicket deltaPrintTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.MergeAndValidatePrintTicket(System.Printing.PrintTicket,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="deltaPrintTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="basePrintTicket">O primeiro tíquete de impressão.</param>
+        <param name="deltaPrintTicket">O segundo tíquete de impressão. Ele pode ser <see langword="null" />.</param>
+        <summary>Mescla dois <see cref="T:System.Printing.PrintTicket" />s e garante que o <see cref="T:System.Printing.PrintTicket" /> resultante seja válido e não solicita qualquer funcionalidade de impressão à qual impressora não dá suporte.</summary>
+        <returns>Um <see cref="T:System.Printing.ValidationResult" /> que inclui o <see cref="T:System.Printing.PrintTicket" /> mesclado e uma indicação de qualquer uma das suas configurações foram alteradas para assegurar viabilidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método gera um tíquete de impressão viável; ou seja, uma permissão que não solicitam recursos de impressão que a impressora não oferece suporte. O método primeiro valida os tíquetes de impressão entrados dois contra o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397). Se uma for inválido, uma exceção será lançada.  
+  
+ As duas permissões são mescladas. Se elas tiverem valores diferentes para uma determinada propriedade, em seguida, o tíquete mesclado resultante inicialmente usa o valor do tíquete delta de.  
+  
+ O tíquete mesclado será verificado em relação a recursos da impressora. Se houver configurações no tíquete são incompatíveis com as capacidades da impressora, o driver de impressora altera essas configurações usando qualquer lógica que deseja. Normalmente, ele substitui o valor de padrão do usuário ou da impressora para a configuração. Origem do driver de valores de substituição não é a mesma permissão como `basePrintTicket`, em seguida, o tíquete mesclado pode ter algumas configurações que são diferentes dos tíquetes de entrada. Se o driver de impressora tem que alterar quaisquer configurações, esse fato é informado no <xref:System.Printing.ValidationResult.ConflictStatus%2A> propriedade o <xref:System.Printing.ValidationResult>.  
+  
+ Ao mesclar e validar com base nas configurações padrão de uma fila de impressão, você deve definir `basePrintTicket` para o <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> ou <xref:System.Printing.PrintQueue.UserPrintTicket%2A>.  
+  
+ O `deltaPrintTicket` parâmetro pode ser `null`, caso em que o `basePrintTicket` é validada, verificados quanto a viabilidade e retornado, possivelmente com as alterações.  
+  
+ Com essa sobrecarga de <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>, ambos o `deltaPrintTicket` e <xref:System.Printing.PrintTicket> no <xref:System.Printing.ValidationResult> que é retornado têm escopo em todo o trabalho. Para especificar um escopo diferente use outra sobrecarga desse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para mesclar duas permissões de impressão e responder a <xref:System.Printing.ValidationResult> que é retornado.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Pelo menos um dos tíquetes de impressão de entrada não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="basePrintTicket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">As operação de verificação de validação, fusão e viabilidade falharam.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeAndValidatePrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.ValidationResult MergeAndValidatePrintTicket (System.Printing.PrintTicket basePrintTicket, System.Printing.PrintTicket deltaPrintTicket, System.Printing.PrintTicketScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Printing.ValidationResult MergeAndValidatePrintTicket(class System.Printing.PrintTicket basePrintTicket, class System.Printing.PrintTicket deltaPrintTicket, valuetype System.Printing.PrintTicketScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.MergeAndValidatePrintTicket(System.Printing.PrintTicket,System.Printing.PrintTicket,System.Printing.PrintTicketScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="deltaPrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="scope" Type="System.Printing.PrintTicketScope" />
+      </Parameters>
+      <Docs>
+        <param name="basePrintTicket">O primeiro tíquete de impressão.</param>
+        <param name="deltaPrintTicket">O segundo tíquete de impressão. Ele pode ser <see langword="null" />.</param>
+        <param name="scope">Um valor que indica se o escopo de <c>deltaPrintTicket</c>e o escopo de tíquete de impressão retornado no <see cref="T:System.Printing.ValidationResult" />, é uma página, um documento ou todo o trabalho.</param>
+        <summary>Mescla duas <see cref="T:System.Printing.PrintTicket" />s e garante que o resultante <see cref="T:System.Printing.PrintTicket" /> é válido, não solicita qualquer funcionalidade de impressão que a impressora não oferece suporte e está limitada ao escopo especificado.</summary>
+        <returns>Um <see cref="T:System.Printing.ValidationResult" /> que inclui o <see cref="T:System.Printing.PrintTicket" /> mesclado e uma indicação de qualquer uma das suas configurações foram alteradas para assegurar viabilidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método gera um tíquete de impressão viável; ou seja, uma permissão que não solicitam recursos de impressão que a impressora não oferece suporte. O método primeiro valida os tíquetes de impressão entrados dois contra o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397). Se uma for inválido, uma exceção será lançada.  
+  
+ As duas permissões são mescladas. Se elas tiverem valores diferentes para uma determinada propriedade, em seguida, o tíquete mesclado resultante inicialmente usa o valor do tíquete delta de.  
+  
+ O tíquete mesclado será verificado em relação a recursos da impressora. Se houver configurações no tíquete são incompatíveis com as capacidades da impressora, o driver de impressora altera essas configurações usando qualquer lógica que deseja. Normalmente, ele substitui o valor de padrão do usuário ou da impressora para a configuração. Origem do driver de valores de substituição não é a mesma permissão como `basePrintTicket`, em seguida, o tíquete mesclado pode ter algumas configurações que são diferentes dos tíquetes de entrada. Se o driver de impressora tem que alterar quaisquer configurações, esse fato é informado no <xref:System.Printing.ValidationResult.ConflictStatus%2A> propriedade o <xref:System.Printing.ValidationResult>.  
+  
+ Ao mesclar e validar com base nas configurações padrão de uma fila de impressão, você deve definir `basePrintTicket` para o <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> ou <xref:System.Printing.PrintQueue.UserPrintTicket%2A>.  
+  
+ O `deltaPrintTicket` parâmetro pode ser `null`, caso em que o `basePrintTicket` é validada, verificados quanto a viabilidade e retornado, possivelmente com as alterações.  
+  
+ Se o `scope` é um trabalho, o tíquete de impressão retornado no <xref:System.Printing.ValidationResult> pode incluir [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397) parâmetros com prefixos de trabalho, documentos e página. Se o `scope` é um documento e configurações por trabalho em `deltaPrintTicket` são ignoradas, a permissão retornada pode incluir parâmetros com o documento e prefixos de página. Se o `scope` é uma página, em seguida, as configurações por trabalho e as configurações de cada documento no `deltaPrintTicket` serão ignorados e o tíquete retornado pode incluir parâmetros com o prefixo de página.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Pelo menos um dos tíquetes de impressão de entrada não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="basePrintTicket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="scope" /> parâmetro não tem uma opção válida <see cref="T:System.Printing.PrintTicketScope" /> valor.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">As operação de verificação de validação, fusão e viabilidade falharam.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override sealed string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da fila de impressão.</summary>
+        <value>O nome da fila de impressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintQueue> objeto também tem apenas uma leitura <xref:System.Printing.PrintQueue.FullName%2A> propriedade e uma gravação <xref:System.Printing.PrintQueue.ShareName%2A> propriedade.  
+  
+ Para as filas no servidor de impressão local <xref:System.Printing.PrintQueue.Name%2A> e <xref:System.Printing.PrintQueue.FullName%2A> são os mesmos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para listar um subconjunto de filas de impressão disponíveis.  
+  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedUserIntervention">
+      <MemberSignature Language="C#" Value="public bool NeedUserIntervention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeedUserIntervention" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.NeedUserIntervention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora precisa de atenção de um ser humano.</summary>
+        <value>
+          <see langword="true" />Se a impressora precisa de atenção humana; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfJobs">
+      <MemberSignature Language="C#" Value="public virtual int NumberOfJobs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfJobs" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.NumberOfJobs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de trabalhos alinhados na fila de impressão.</summary>
+        <value>O número de trabalhos na fila.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagePunt">
+      <MemberSignature Language="C#" Value="public bool PagePunt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PagePunt" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.PagePunt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora não é possível imprimir a página atual.</summary>
+        <value>
+          <see langword="true" />Se a impressora não puder imprimir a página atual; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a impressora não oferece suporte a um sinal com o significado, a propriedade é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public virtual void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Pause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Pausa a fila de impressão. Permanece em pausa até a execução de <see cref="M:System.Printing.PrintQueue.Resume" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintSystemException">A impressora não pode ser colocada em pausa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintingIsCancelled">
+      <MemberSignature Language="C#" Value="public bool PrintingIsCancelled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrintingIsCancelled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.PrintingIsCancelled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o trabalho de impressão atual está sendo cancelado.</summary>
+        <value>
+          <see langword="true" />Se o trabalho de impressão está sendo cancelado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public virtual int Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade da fila de impressão em relação a outras filas de impressão que são hospedadas pelo mesmo servidor de impressão e que usam a mesma impressora física.</summary>
+        <value>A prioridade para a fila de impressão. Os valores possíveis são de 1 a 99. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compare essa propriedade com o <xref:System.Printing.PrintQueue.DefaultPriority%2A> propriedade que está prestes a prioridade relativa de trabalhos de impressão na fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Purge">
+      <MemberSignature Language="C#" Value="public virtual void Purge ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Purge() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Purge" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os trabalhos na fila de impressão.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Não foi possível remover alguns trabalhos de impressão da fila.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueAttributes">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueAttributes QueueAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintQueueAttributes QueueAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueueAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades da fila de impressão.</summary>
+        <value>Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Printing.PrintQueueAttributes" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueDriver">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintDriver QueueDriver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintDriver QueueDriver" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueueDriver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintDriver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o driver de impressora para a fila.</summary>
+        <value>O <see cref="T:System.Printing.PrintDriver" /> que usa a fila.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuePort">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintPort QueuePort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintPort QueuePort" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueuePort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintPort</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a porta que usa a fila.</summary>
+        <value>O <see cref="T:System.Printing.PrintPort" /> que é atribuído à fila de impressão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuePrintProcessor">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintProcessor QueuePrintProcessor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintProcessor QueuePrintProcessor" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueuePrintProcessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintProcessor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o processador de impressão que usa a fila.</summary>
+        <value>O <see cref="T:System.Printing.PrintProcessor" /> que usa a fila, como WinPrint ou ModiPrint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueStatus">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueStatus QueueStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintQueueStatus QueueStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueueStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o status da impressora. Esses incluem "aquecendo," "inicializando", "imprimindo" e outros.</summary>
+        <value>O valor <see cref="T:System.Printing.PrintQueueStatus" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueattributes)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueattributes)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza as propriedades do objeto <see cref="T:System.Printing.PrintQueue" /> com valores da impressora e do utilitário de fila de impressão executado no computador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterações feitas pelo seu programa para um <xref:System.Printing.PrintQueue> propriedades do objeto são perdidas quando <xref:System.Printing.PrintQueue.Refresh%2A> é executado, a menos que eles foram gravados para a impressora e a fila de impressão com <xref:System.Printing.PrintQueue.Commit%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método como parte de uma pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#surveyqueues)]
+ [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
+ [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Não foi possível atualizar algumas das propriedades.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="public virtual void Resume ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Resume() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Resume" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reinicia uma fila de impressão que foi pausada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retomar uma fila de impressão em pausa.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">A impressora não é possível retomar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScheduleCompletedJobsFirst">
+      <MemberSignature Language="C#" Value="public bool ScheduleCompletedJobsFirst { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScheduleCompletedJobsFirst" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.ScheduleCompletedJobsFirst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a impressora imprimirá trabalhos que concluíram o processo de spooling antes dos trabalhos que não têm spool totalmente mesmo se o último inserida na fila primeiro ou tem uma prioridade mais alta.</summary>
+        <value>
+          <see langword="true" />Se a impressora imprimirá trabalhos que concluíram o processo de spooling antes dos trabalhos que não têm spool totalmente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorFile">
+      <MemberSignature Language="C#" Value="public virtual string SeparatorFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeparatorFile" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.SeparatorFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho e o nome de um arquivo que é inserido no início de cada trabalho de impressão.</summary>
+        <value>O nome de arquivo e caminho do arquivo separador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, este é um arquivo de página única usado para tornar mais fácil separar a saída de trabalhos de impressão diferentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShareName">
+      <MemberSignature Language="C#" Value="public virtual string ShareName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShareName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.ShareName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um nome para a impressora que é visto pelos usuários da rede quando ele é compartilhado.</summary>
+        <value>O nome público de uma impressora compartilhada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintQueue> objeto também tem apenas uma leitura <xref:System.Printing.PrintQueue.FullName%2A> propriedade e uma gravação <xref:System.Printing.PrintQueue.Name%2A> propriedade. Para as filas no servidor de impressão local, essas propriedades não tem o mesmo valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTimeOfDay">
+      <MemberSignature Language="C#" Value="public virtual int StartTimeOfDay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartTimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.StartTimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a primeira hora do dia, expressada como o número de minutos após a meia-noite Tempo Universal Coordenado (UTC) (também chamada hora de Greenwich [GMT]), que a impressora imprimirá um trabalho.</summary>
+        <value>A hora do dia em que a impressora primeiro se torna disponível, expresso como o número de minutos após a meia-noite (UTC). O valor máximo é 1439. Quando uma impressora é instalada usando o [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Assistente para adicionar impressora, a impressora padrão é estar disponível o tempo todo, e essa propriedade retorna 0 em todos os fusos horários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não estiver no fuso horário UTC, você deve adicionar ou subtrair múltiplos de 60 para definir ou obter a hora correta para seu fuso horário. Por exemplo, se você estiver no horário fuso horário do Pacífico da América do Norte e o horário de verão não é de fato, e sua hora local é 8 horas anteriores ao UTC. Para definir <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 24 horas no seu fuso horário, você configurá-lo para 8: 00 UTC, que é 480 (= 8 * 60). Você também deve se lembrar que o tempo muda para zero após 24 horas (isto é; após o minuto 1439th). Para definir a 18: 00 no seu fuso horário, você defini-lo para 2H UTC, que é 120 (= 2 * 60). Consulte <xref:System.TimeZone>, <xref:System.TimeSpan>, e <xref:System.DateTime> classes para o fuso horário útil manipulando métodos.  
+  
+ Se a impressora está sempre disponível, essa propriedade retorna 0 em todos os fusos horários.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para determinar se uma impressora está disponível no momento.  
+  
+ [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
+ [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
+ [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UntilTimeOfDay">
+      <MemberSignature Language="C#" Value="public virtual int UntilTimeOfDay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UntilTimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.UntilTimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora mais recente, expressada como o número de minutos após a meia-noite Tempo Universal Coordenado (UTC) (também chamada hora de Greenwich [GMT]), que a impressora imprimirá um trabalho.</summary>
+        <value>A hora do dia em que a impressora não está mais disponível, expresso como o número de minutos após a meia-noite (UTC). O valor máximo é 1439. Quando uma impressora é instalada usando o [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Assistente para adicionar impressora, a impressora padrão é estar disponível o tempo todo, e essa propriedade retorna 0 em todos os fusos horários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não estiver no fuso horário UTC, você deve adicionar ou subtrair múltiplos de 60 para definir ou obter a hora correta para seu fuso horário. Por exemplo, se você estiver no horário fuso horário do Pacífico da América do Norte e o horário de verão não é de fato, e sua hora local é 8 horas anteriores ao UTC. Para definir <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 24 horas no seu fuso horário, você configurá-lo para 8: 00 UTC, que é 480 (= 8 * 60). Você também deve se lembrar que tempo muda para zero após a 24 horas (1439th minuto). Para definir a 18: 00 no seu fuso horário, você defini-lo para 2H UTC, que é 120 (= 2 * 60). Consulte <xref:System.TimeZone>, <xref:System.TimeSpan>, e <xref:System.DateTime> classes para o fuso horário útil manipulando métodos.  
+  
+ Se a impressora está sempre disponível, essa propriedade retorna 0 em todos os fusos horários.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para determinar se uma impressora está disponível no momento.  
+  
+ [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
+ [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
+ [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPrintTicket">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintTicket UserPrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket UserPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.UserPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto padrão <see cref="T:System.Printing.PrintTicket" /> atual do usuário que contém informações detalhadas sobre o trabalho de impressão.</summary>
+        <value>O <see cref="T:System.Printing.PrintTicket" /> para o usuário atual ou <see langword="null" /> se um <see cref="T:System.Printing.PrintTicket" /> de usuário não foi especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada usuário pode ter seu próprio padrão <xref:System.Printing.PrintTicket>.  
+  
+ Essa propriedade pode ser `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade ao mesclar duas permissões de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="MaskInputRejectedEventArgs" FullName="System.Windows.Forms.MaskInputRejectedEventArgs">
+  <TypeSignature Language="C#" Value="public class MaskInputRejectedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MaskInputRejectedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MaskInputRejectedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.MaskedTextBox.MaskInputRejected" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MaskInputRejectedEventArgs> classe fornece informações sobre o caractere de entrada inválido, ou seja, sua posição com base em zero na cadeia de caracteres formatada e uma descrição geral sobre por que o caractere foi rejeitado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.MaskedTextBox> chamado `MaskedTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#486](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#486)]
+ [!code-vb[System.Windows.Forms.EventExamples#486](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#486)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MaskInputRejectedEventArgs (int position, System.ComponentModel.MaskedTextResultHint rejectionHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 position, valuetype System.ComponentModel.MaskedTextResultHint rejectionHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MaskInputRejectedEventArgs.#ctor(System.Int32,System.ComponentModel.MaskedTextResultHint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="rejectionHint" Type="System.ComponentModel.MaskedTextResultHint" />
+      </Parameters>
+      <Docs>
+        <param name="position">Um <see cref="T:System.Int32" /> valor que contém a posição de base zero do caractere que não a máscara. A posição inclui caracteres literais.</param>
+        <param name="rejectionHint">Um <see cref="T:System.ComponentModel.MaskedTextResultHint" /> que geralmente descreve por que o caractere foi rejeitado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.MaskInputRejectedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MaskInputRejectedEventArgs.%23ctor%2A> construtor define os valores de <xref:System.Windows.Forms.MaskInputRejectedEventArgs.Position%2A> e <xref:System.Windows.Forms.MaskInputRejectedEventArgs.RejectionHint%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public int Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MaskInputRejectedEventArgs.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição da máscara correspondente ao caractere de entrada inválido.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que contém a posição de base zero do caractere que não a máscara. A posição inclui caracteres literais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MaskInputRejectedEventArgs.Position%2A> propriedade é definida no <xref:System.Windows.Forms.MaskInputRejectedEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.MaskedTextBox> chamado `MaskedTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#486](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#486)]
+ [!code-vb[System.Windows.Forms.EventExamples#486](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#486)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RejectionHint">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.MaskedTextResultHint RejectionHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.MaskedTextResultHint RejectionHint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MaskInputRejectedEventArgs.RejectionHint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor enumerado que descreve por que o caractere de entrada foi rejeitado.</summary>
+        <value>Um <see cref="T:System.ComponentModel.MaskedTextResultHint" /> que geralmente descreve por que o caractere foi rejeitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MaskInputRejectedEventArgs> propriedade é definida no <xref:System.Windows.Forms.MaskInputRejectedEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.MaskedTextBox> chamado `MaskedTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#486](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#486)]
+ [!code-vb[System.Windows.Forms.EventExamples#486](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#486)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

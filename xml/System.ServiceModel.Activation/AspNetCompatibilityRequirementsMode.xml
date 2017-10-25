@@ -1,0 +1,88 @@
+<Type Name="AspNetCompatibilityRequirementsMode" FullName="System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode">
+  <TypeSignature Language="C#" Value="public enum AspNetCompatibilityRequirementsMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AspNetCompatibilityRequirementsMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um Windows Communication Foundation (WCF) de serviço é executado ou pode executar em um modo que é compatível com o ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]o modo de compatibilidade permite [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviços para usar recursos ASP, como a representação de identidade. Ele está habilitado no nível do aplicativo por meio do arquivo Web. config e não pode ser substituído pelos arquivos Web. config aninhados no aplicativo. Quando o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> valor não for especificado para um serviço, ele obtém permitido comportamento por padrão. Para obter mais informações, consulte [ &lt;serviceHostingEnvironment&gt;](~/docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+  
+   
+  
+## Examples  
+ Os desenvolvedores de serviço podem garantir que seu serviço é executado apenas no modo de compatibilidade do ASP.NET, definindo o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> propriedade o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> em necessária, conforme mostrado no exemplo a seguir:  
+  
+ [!code-csharp[S_AspNetCompatibility#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_aspnetcompatibility/cs/service.cs#1)]
+ [!code-vb[S_AspNetCompatibility#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_aspnetcompatibility/vb/service.vb#1)]  
+  
+ [!code-csharp[S_AspNetCompatibility#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_aspnetcompatibility/cs/service.cs#2)]
+ [!code-vb[S_AspNetCompatibility#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_aspnetcompatibility/vb/service.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allowed">
+      <MemberSignature Language="C#" Value="Allowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode Allowed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os serviços [!INCLUDE[indigo2](~/includes/indigo2-md.md)] podem ser executados em um domínio de aplicativo com o modo de compatibilidade [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] definido como <see langword="true" /> ou <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAllowed">
+      <MemberSignature Language="C#" Value="NotAllowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode NotAllowed = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os serviços [!INCLUDE[indigo2](~/includes/indigo2-md.md)] devem ser executados em um domínio de aplicativo com o modo de compatibilidade [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] definido como <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode Required = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os serviços [!INCLUDE[indigo2](~/includes/indigo2-md.md)] devem ser executados em um domínio de aplicativo com o modo de compatibilidade [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] definido como <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

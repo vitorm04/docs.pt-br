@@ -1,0 +1,305 @@
+<Type Name="WebPartZoneCollection" FullName="System.Web.UI.WebControls.WebParts.WebPartZoneCollection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartZoneCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartZoneCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartZoneCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção somente leitura de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> controles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe contém a coleção de <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controles que existem em uma página de Web Parts. Ele é usado principalmente pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle para controlar e gerenciar todas as zonas. O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle mantém uma referência para o conjunto de zonas em uma página em seu somente leitura <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Zones%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe é útil quando você quiser executar operações em várias zonas ou seu conteúdo ao mesmo tempo, ou quando você precisa localizar uma zona específica e examinar ou alterar seu conteúdo. Embora o conjunto de zonas em si é somente leitura e não é possível alterar o tamanho do objeto da coleção em si, você ainda pode obter referências para as regiões individuais dentro da coleção e quando você tem uma referência a um objeto de zona individual, você pode alterar seus valores de propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> AspNetDevelopmentServer. O primeiro deles, <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.%23ctor>, simplesmente inicializa uma instância vazia de um novo <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection>. O outro, <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.%23ctor%28System.Collections.ICollection%29>, inicializa uma coleção, passando uma coleção existente de zonas.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe contém um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Item%2A> propriedade. Esta propriedade permite que você localize um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle dentro da coleção, passando um identificador de cadeia de caracteres. A zona está localizada por meio da correspondência de identificador de cadeia de caracteres para o valor da <xref:System.Web.UI.Control.ID%2A> propriedade em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe também tem vários métodos que são úteis para examinar ou acessar seu conteúdo. O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Contains%2A> método determina se uma determinada região existe na coleção. O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.CopyTo%2A> método copia a coleção para uma matriz de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> objetos. Por fim, o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.IndexOf%2A> método retorna o índice de uma zona específica na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe. O exemplo de código contém três partes: duas seções de código e uma explicação de como executar o exemplo.  
+  
+ A primeira parte do exemplo de código é uma página da Web que contém três <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controles, cada qual contendo um controle de servidor único. Embora esses controles de servidor são todos os controles do ASP.NET padrão, eles podem atuar como <xref:System.Web.UI.WebControls.WebParts.WebPart> controles em tempo de execução porque eles são colocados dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZoneCollection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/CS/webpartzonecollection_overview_cs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartZoneCollection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/VB/webpartzonecollection_overview_vb.aspx#1)]  
+  
+ A segunda parte do exemplo de código é a classe parcial que contém o código para demonstrar o uso da <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe. Esse código trata os eventos para a página da Web.  
+  
+ [!code-csharp[WebParts_WebPartZoneCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/CS/webpartzonecollection_overview.cs#2)]
+ [!code-vb[WebParts_WebPartZoneCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/VB/webpartzonecollection_overview.vb#2)]  
+  
+ Carregar a página em um navegador. Os três <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zonas são visíveis com seus controles de servidor independente. Na parte inferior da página são vários botões, cada um deles demonstra algum aspecto do trabalho com o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> objeto. Clique em cada botão para ver seu efeito sobre as zonas e seu conteúdo. Para exibir o código associado com cada botão que demonstra alguns aspectos do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> de objeto, exiba o código no arquivo de classe parcial mencionado acima, como a segunda parte deste exemplo de código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.%23ctor%2A> construtor é usado pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> control, por outros controles no conjunto de controle de Web Parts, ou pelo código do desenvolvedor personalizado, para criar uma coleção somente leitura do <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controles que existem em uma página de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartZoneCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância vazia da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle usa este construtor dentro de seu próprio construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> classe para uma página de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartZoneCollection (System.Collections.ICollection webPartZones);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection webPartZones) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPartZones" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="webPartZones">Um <see cref="T:System.Collections.ICollection" /> de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> objetos.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneCollection" /> classe, passando uma coleção de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.%23ctor%2A> construtor quando você deseja criar uma coleção personalizada do <xref:System.Web.UI.WebControls.WebParts.WebPartZone> objetos para executar operações programáticas neles. Por exemplo, você poderá acessar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Zones%2A> propriedade e criar um subconjunto de <xref:System.Web.UI.WebControls.WebParts.WebPartZone> objetos em uma página de Web Parts, atribuindo-os para uma <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> de objeto e, em seguida, executar operações em controles filho ou várias propriedades de apenas esse subconjunto de regiões.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.%23ctor%2A> construtor. O código completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que ele atribui um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> objeto a uma variável por recuperar o valor da <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Zones%2A> propriedade. Se desejar, em vez de atribuir todas as zonas do <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Zones%2A> propriedade, você pode criar uma matriz de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> objetos que contém um subconjunto de todas as zonas na página e atribuir a matriz a um novo <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> objeto.  
+  
+ [!code-csharp[WebParts_WebPartZoneCollection_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/CS/webpartzonecollection_overview.cs#6)]
+ [!code-vb[WebParts_WebPartZoneCollection_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/VB/webpartzonecollection_overview.vb#6)]  
+  
+ Depois que a coleção é criada, você pode facilmente iterar na coleção e executam operações em todas as zonas independentes ou seu conteúdo. Para executar o código de exemplo, carregue a página em um navegador e clique no **ativar/desativar modo de renderização de verbo** botão em cada região. Isso alterna como os verbos na barra de título de cada controle de servidor contida em uma zona são renderizados. Os verbos podem aparecer em um menu suspenso ou diretamente como links na barra de título.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A coleção de zonas é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um dos objetos na coleção é <see langword="null" /> ou não é do tipo <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPartZoneBase value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPartZoneBase value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Contains(System.Web.UI.WebControls.WebParts.WebPartZoneBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> que é verificada para determinar se ele está na coleção.</param>
+        <summary>Retorna um valor que indica se uma determinada região existe na coleção.</summary>
+        <returns>Um valor booliano que indica se uma determinada região está na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Contains%2A> método permite que você verifique se um determinado <xref:System.Web.UI.WebControls.WebParts.WebPartZone> do objeto e determinar se ele está em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Contains%2A> método. O código completo para o exemplo, incluindo um controle de usuário, uma página que contém as zonas e um arquivo de classe parcial que contém o código foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> visão geral da classe.  
+  
+ A seção de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Contains%2A> método. Para executar o código, carregar a página em um navegador e clique no **lei Contém WebPartZone2** botão.  
+  
+ [!code-csharp[WebParts_WebPartZoneCollection_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/CS/webpartzonecollection_overview.cs#3)]
+ [!code-vb[WebParts_WebPartZoneCollection_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/VB/webpartzonecollection_overview.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPartZoneBase[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPartZoneBase[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPartZoneBase[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPartZoneBase[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> matriz contém a coleção copiada.</param>
+        <param name="index">O ponto inicial na matriz na qual o conteúdo da coleção será colocado.</param>
+        <summary>Copia a coleção para uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.CopyTo%2A> método é útil quando você deseja criar um conjunto personalizado que pode conter as zonas no <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> coleção, um subconjunto dessas zonas, ou um subconjunto dessas zonas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.CopyTo%2A> método. O código completo para o exemplo, incluindo um controle de usuário, uma página que contém as zonas e um arquivo de classe parcial que contém o código foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> visão geral da classe.  
+  
+ A seção do código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.CopyTo%2A> método. Para executar o código, carregar a página em um navegador e clique no **nomes de zona da matriz** botão. O conjunto de zonas é carregado em uma matriz, e todas as IDs de zona são copiadas para um rótulo.  
+  
+ [!code-csharp[WebParts_WebPartZoneCollection_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/CS/webpartzonecollection_overview.cs#4)]
+ [!code-vb[WebParts_WebPartZoneCollection_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/VB/webpartzonecollection_overview.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPartZoneBase value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPartZoneBase value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPartZoneBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> que é um membro da coleção.</param>
+        <summary>Retorna a posição de um membro específico da coleção.</summary>
+        <returns>Um inteiro que indica a posição de um objeto específico da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.IndexOf%2A> método será útil se você tiver vários <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zonas em uma página de Web Parts e você precisam saber a posição ordinal de uma zona em relação a outras zonas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.IndexOf%2A> método. O código completo para o exemplo, incluindo um controle de usuário, uma página que contém as zonas e um arquivo de classe parcial que contém o código foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> visão geral da classe.  
+  
+ A seção de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.IndexOf%2A> método. Para executar o código, carregar a página em um navegador e clique no **WebPartZone1 índice** botão.  
+  
+ [!code-csharp[WebParts_WebPartZoneCollection_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/CS/webpartzonecollection_overview.cs#5)]
+ [!code-vb[WebParts_WebPartZoneCollection_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZoneCollection_Overview/VB/webpartzonecollection_overview.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartZoneBase this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartZoneBase Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartZoneBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O número de índice para um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> dentro de uma coleção.</param>
+        <summary>Retorna um membro específico da coleção, passando um inteiro.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Item%2A> propriedade permite que você acesse um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> objeto dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> coleção usando um número de índice que representa a posição ordinal na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartZoneBase this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartZoneBase Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartZoneBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O identificador exclusivo para um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> dentro da coleção.</param>
+        <summary>Retorna um membro específico da coleção, passando um identificador exclusivo.</summary>
+        <value>A primeira <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" /> na coleção cuja ID igual ao valor de <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection.Item%2A> propriedade permite que você acesse um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> objeto dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneCollection> coleção usando um identificador de cadeia de caracteres para uma zona específica. Correspondência de todos os identificadores de cadeia de caracteres diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

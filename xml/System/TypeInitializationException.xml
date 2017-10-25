@@ -1,0 +1,264 @@
+<Type Name="TypeInitializationException" FullName="System.TypeInitializationException">
+  <TypeSignature Language="C#" Value="public sealed class TypeInitializationException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit TypeInitializationException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.TypeInitializationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é gerada como um wrapper em torno da exceção lançada pelo inicializador de classe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um inicializador da classe não inicializa um tipo, uma <xref:System.TypeInitializationException> é criada e é passada uma referência à exceção gerada pelo inicializador da classe do tipo. O <xref:System.Exception.InnerException%2A> propriedade <xref:System.TypeInitializationException> contém a exceção subjacente.  
+  
+ Normalmente, o <xref:System.TypeInitializationException> exceção reflete uma condição catastrófica (o tempo de execução é impossível criar uma instância de um tipo) que impede que um aplicativo de continuar.  Normalmente, o <xref:System.TypeInitializationException> é gerada em resposta a uma alteração no ambiente de execução do aplicativo. Consequentemente, que possivelmente para solucionar problemas de depuração de código, a exceção não deve ser tratada em um `try` / `catch` bloco. Em vez disso, a causa da exceção deve ser investigada e eliminada.  
+  
+ <xref:System.TypeInitializationException>usa o HRESULT COR_E_TYPEINITIALIZATION, que tem o valor 0x80131534.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.TypeInitializationException>, consulte o <xref:System.TypeInitializationException.%23ctor%2A> construtores.  
+  
+ As seções a seguir descrevem algumas das situações nas quais um <xref:System.TypeInitializationException> exceção será lançada.  
+  
+ [Construtores estáticos e a exceção TypeInitializationException](#Static)   
+ [Valores de tempo limite de correspondência de expressão regular](#Timeout)   
+ [Calendários e dados culturais](#Calendars)  
+  
+<a name="Static"></a>   
+## <a name="static-constructors-and-the-typeinitializationexception-exception"></a>Construtores estáticos e a exceção TypeInitializationException  
+ Um construtor estático, se houver, é chamado automaticamente pelo tempo de execução antes de criar uma nova instância de um tipo. Construtores estáticos podem ser definidos explicitamente por um desenvolvedor. Se um construtor estático não é definido explicitamente, compiladores criar automaticamente uma para inicializar qualquer `static` (em c#) ou `Shared` (no Visual Basic) membros do tipo.  Para obter mais informações sobre os construtores estáticos, consulte [construtores estáticos](~/docs/csharp/programming-guide/classes-and-structs/static-constructors.md).  
+  
+ Normalmente, um <xref:System.TypeInitializationException> exceção é lançada quando um construtor estático não pode criar uma instância de um tipo.  O <xref:System.Exception.InnerException%2A> propriedade indica por que o construtor estático não pôde criar uma instância de tipo. Algumas das causas mais comuns de um <xref:System.TypeInitializationException> exceção são:  
+  
+ Uma exceção sem tratamento em um construtor estático  
+ Se uma exceção for lançada em um construtor estático, essa exceção é encapsulada em um <xref:System.TypeInitializationException> exceção e o tipo não podem ser instanciado.  
+  
+ O que torna essa exceção difíceis de solucionar é que os construtores estáticos não são definidos sempre explicitamente no código-fonte. Um construtor estático existe em um tipo se:  
+  
+-   Foi explicitamente definido como um membro de um tipo.  
+  
+-   O tipo tem `static` (em c#) ou `Shared` (no Visual Basic) variáveis que são declarados e inicializadas em uma única instrução. Nesse caso, o compilador de linguagem gera um construtor estático para o tipo. Você pode verificar isso usando um utilitário como [desmontador de IL](~/docs/framework/tools/ildasm-exe-il-disassembler.md). Por exemplo, quando o c# e VB compiladores compilar o exemplo a seguir, elas geram o IL para um construtor estático que é semelhante a este:  
+  
+    ```  
+  
+    .method private specialname rtspecialname static   
+            void  .cctor() cil managed  
+    {  
+      // Code size       12 (0xc)  
+      .maxstack  8  
+      IL_0000:  ldc.i4.3  
+      IL_0001:  newobj     instance void TestClass::.ctor(int32)  
+      IL_0006:  stsfld     class TestClass Example::test  
+      IL_000b:  ret  
+    } // end of method Example::.cctor  
+  
+    ```  
+  
+ A exemplo a seguir mostra um <xref:System.TypeInitializationException> exceção lançada por um construtor estático gerado pelo compilador. O `Example` classe inclui um `static` (em c#) ou `Shared` (no Visual Basic) campo do tipo `TestClass` instanciado, passando um valor de 3 para o construtor de classe.  No entanto, esse valor é inválido; são permitidos somente valores de 0 ou 1. Como resultado, o `TestClass` classe construtor lança um <xref:System.ArgumentOutOfRangeException>. Desde que essa exceção não é tratada, ele é encapsulado em um <xref:System.TypeInitializationException> exceção.  
+  
+ [!code-csharp[System.TypeInitializationException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.TypeInitializationException/cs/ctorException1.cs#3)]
+ [!code-vb[System.TypeInitializationException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.TypeInitializationException/vb/CtorException1.vb#3)]  
+  
+ Observe que a mensagem de exceção exibe informações sobre o <xref:System.Exception.InnerException%2A> propriedade.  
+  
+ Um arquivo de dados ou de assembly ausente  
+ Uma causa comum de um <xref:System.TypeInitializationException> exceção é que um assembly ou arquivo de dados que estava presente em ambientes de desenvolvimento e teste do aplicativo está ausente do seu ambiente de tempo de execução. Por exemplo, você pode compilar o exemplo a seguir para um assembly chamado Missing1a.dll usando a sintaxe de linha de comando:  
+  
+```csharp  
+csc /t:library Missing1a.cs  
+```  
+  
+```vb  
+vbc Missing1a.vb /t:library  
+```  
+  
+ [!code-csharp[System.TypeInitializationException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.TypeInitializationException/cs/Missing1a.cs#1)]
+ [!code-vb[System.TypeInitializationException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.TypeInitializationException/vb/Missing1a.vb#1)]  
+  
+ Em seguida, você pode compilar o exemplo a seguir para um executável chamado Missing1.exe, incluindo uma referência a Missing1a.dll:  
+  
+```csharp  
+csc Missing1.cs /r:Missing1a.dll  
+```  
+  
+```vb  
+vbc Missing1.vb /r:Missing1a.dll  
+```  
+  
+ No entanto, se você renomear, move, ou excluir Missing1a.dll e executa o exemplo, ele gerará uma <xref:System.TypeInitializationException> exceção e exibe a saída mostrada o exemplo.  Observe que a mensagem de exceção inclui informações sobre o <xref:System.Exception.InnerException%2A> propriedade. Nesse caso, a exceção interna é um <xref:System.IO.FileNotFoundException> que foi lançado porque o tempo de execução não é possível localizar o assembly dependente.  
+  
+ [!code-csharp[System.TypeInitializationException#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.TypeInitializationException/cs/Missing1.cs#2)]
+ [!code-vb[System.TypeInitializationException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.TypeInitializationException/vb/Missing1.vb#2)]  
+  
+> [!NOTE]
+>  Neste exemplo, um <xref:System.TypeInitializationException> exceção foi lançada porque não foi possível carregar um assembly. A exceção também pode ser gerada se um construtor estático tenta abrir um arquivo de dados, como um arquivo de configuração, um arquivo XML ou um arquivo que contém dados, que não é possível localizar de serializado.  
+  
+<a name="Timeout"></a>   
+## <a name="regular-expression-match-timeout-values"></a>Valores de tempo limite de correspondência de expressão regular  
+ Você pode definir o valor de tempo limite padrão para um padrão de expressão regular a operação em uma base por aplicativo domínio correspondente. O tempo limite é definido por uma especificação de um <xref:System.TimeSpan> valor para a propriedade "REGEX_DEFAULT_MATCH_TIMEOUT" para o <xref:System.AppDomain.SetData%2A?displayProperty=nameWithType> método. O intervalo de tempo deve ser um válido <xref:System.TimeSpan> objeto for maior que zero e menor que aproximadamente 24 dias. Se esses requisitos não forem atendidos, a tentativa de definir o valor de tempo limite padrão gera um <xref:System.ArgumentOutOfRangeException>, que por sua vez é encapsulado em um <xref:System.TypeInitializationException> exceção.  
+  
+ A exemplo a seguir mostra a <xref:System.TypeInitializationException> que é gerada quando o valor atribuído à propriedade "REGEX_DEFAULT_MATCH_TIMEOUT" é inválido. Para eliminar a exceção, defina a propriedade "REGEX_DEFAULT_MATCH_TIMEOUT" como um <xref:System.TimeSpan> valor maior que zero e menor que aproximadamente 24 dias.  
+  
+ [!code-csharp[System.TypeInitializationException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.TypeInitializationException/cs/Regex1.cs#4)]
+ [!code-vb[System.TypeInitializationException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.TypeInitializationException/vb/Regex1.vb#4)]  
+  
+<a name="Calendars"></a>   
+## <a name="calendars-and-cultural-data"></a>Calendários e dados culturais  
+ Se você tentar criar uma instância de um calendário, mas o tempo de execução é não é possível instanciar o <xref:System.Globalization.CultureInfo> objeto que corresponde ao calendário, ele lança uma <xref:System.TypeInitializationException> exceção. Essa exceção pode ser acionada por construtores de classe de calendário a seguir:  
+  
+-   O construtor padrão da <xref:System.Globalization.JapaneseCalendar> classe.  
+  
+-   O construtor padrão da <xref:System.Globalization.KoreanCalendar> classe.  
+  
+-   O construtor padrão da <xref:System.Globalization.TaiwanCalendar> classe.  
+  
+ Como dados culturais para essas culturas devem estar disponíveis em todos os sistemas, você deve raramente, ou nunca, encontrar esta exceção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeInitializationException (string fullTypeName, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fullTypeName, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeInitializationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fullTypeName" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="fullTypeName">Obtém o nome totalmente qualificado do tipo cuja inicialização falha.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> parâmetro não é uma referência nula (<see langword="Nothing" /> no Visual Basic), a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.TypeInitializationException" /> com a mensagem de erro padrão, o nome de tipo especificado e uma referência à exceção interna que é a causa raiz dessa exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior pode incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor ou uma referência nula (`Nothing` no Visual Basic) caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interna para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.TypeInitializationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+|<xref:System.TypeInitializationException.TypeName%2A>|O nome do tipo.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeInitializationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o nome do tipo e informações adicionais de exceção.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.TypeInitializationException.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome totalmente qualificado do tipo que não é inicializado.</summary>
+        <value>Obtém o nome totalmente qualificado do tipo cuja inicialização falha.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,613 @@
+<Type Name="Behavior" FullName="System.Windows.Forms.Design.Behavior.Behavior">
+  <TypeSignature Language="C#" Value="public abstract class Behavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Behavior extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.Behavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os objetos <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> gerenciados por um <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe pode ser estendida para desenvolver qualquer tipo de comportamento de interface do usuário, incluindo a seleção, arraste e redimensione comportamentos.  
+  
+ Para obter mais informações, consulte [visão geral do serviço de comportamento](http://msdn.microsoft.com/library/7c60cc41-4324-46b5-b444-b39eda7cb33f).  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Design.Behavior.Behavior> tipo deve ser associado com um <xref:System.Windows.Forms.Design.Behavior.Glyph> tipo. Comportamentos de glifo independentes não têm suporte.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar sua própria classe baseada o <xref:System.Windows.Forms.Design.Behavior.Behavior> classe responde a cliques do usuário. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#5)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Behavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar uma nova instância do <xref:System.Windows.Forms.Design.Behavior.Behavior> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#7)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Behavior (bool callParentBehavior, System.Windows.Forms.Design.Behavior.BehaviorService behaviorService);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool callParentBehavior, class System.Windows.Forms.Design.Behavior.BehaviorService behaviorService) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.#ctor(System.Boolean,System.Windows.Forms.Design.Behavior.BehaviorService)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callParentBehavior" Type="System.Boolean" />
+        <Parameter Name="behaviorService" Type="System.Windows.Forms.Design.Behavior.BehaviorService" />
+      </Parameters>
+      <Docs>
+        <param name="callParentBehavior">
+          <see langword="true" />Se o comportamento de pai deve ser chamado se ele existir. Caso contrário, <see langword="false" />.</param>
+        <param name="behaviorService">O <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" /> a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> classe com o determinado <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento de pai é o comportamento de Avançar na pilha de comportamento mantida pelo <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. Se o `callParentBehavior` parâmetro é `true`, em seguida, o `behaviorService` parâmetro não deve ser `null`.  
+  
+ `callParentBehavior`Indica se a base de <xref:System.Windows.Forms.Design.Behavior.Behavior> classe deve chamar o comportamento de pai e, em seguida, permitir que o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> selecione o comportamento correto de pai.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callParentBehavior" />is <see langword="true" />, and <paramref name="behaviorService" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Cursor Cursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor Cursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.Behavior.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cursor que deve ser exibido para esse comportamento.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Cursor" /> que representa o cursor deve ser exibido para esse comportamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAllCommands">
+      <MemberSignature Language="C#" Value="public virtual bool DisableAllCommands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableAllCommands" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.Behavior.DisableAllCommands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se <see cref="T:System.ComponentModel.Design.MenuCommand" /> objetos devem ser desabilitados.</summary>
+        <value>
+          <see langword="true" />Se todos os <see cref="T:System.ComponentModel.Design.MenuCommand" /> recebe o designer de objetos devem ter estados definidos como <c>Enabled = false</c> quando isso <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> estiver ativa; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `true` valor para o <xref:System.Windows.Forms.Design.Behavior.Behavior.DisableAllCommands%2A> propriedade indica para o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> que todos os <xref:System.ComponentModel.Design.MenuCommand> recebe o designer de objetos devem ter seu estado desabilitado quando esse comportamento está ativo.  
+  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.DisableAllCommands%2A> propriedade funciona em conjunto com o <xref:System.Windows.Forms.Design.Behavior.Behavior.FindCommand%2A> método para que você pode personalizar a interação entre glifos e comportamentos. A tabela a seguir resume os resultados de uma chamada para <xref:System.Windows.Forms.Design.Behavior.Behavior.FindCommand%2A> para um determinado <xref:System.ComponentModel.Design.MenuCommand>.  
+  
+||<xref:System.Windows.Forms.Design.Behavior.Behavior.DisableAllCommands%2A> é `true`|<xref:System.Windows.Forms.Design.Behavior.Behavior.DisableAllCommands%2A> é `false`|  
+|-|-|-|  
+|Testado acerto de glifo tem um comportamento atribuído|Se o <xref:System.ComponentModel.Design.MenuCommand> com especificado `command ID` foi encontrado no <xref:System.ComponentModel.Design.IMenuCommandService>, que <xref:System.ComponentModel.Design.MenuCommand> é desabilitada e retornado. Caso contrário, `null` será retornado.|<xref:System.ComponentModel.Design.MenuCommandService.FindCommand%2A>é chamado no comportamento e, se encontrado, o comportamento <xref:System.ComponentModel.Design.MenuCommand> é retornado. Caso contrário, o resultado de <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A?displayProperty=nameWithType> com especificado `command ID` é retornado.|  
+|Testado acerto de glifo não tem nenhum comportamento atribuído|O resultado de <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A?displayProperty=nameWithType> com especificado `command ID` é retornado.|O resultado de <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A?displayProperty=nameWithType> com especificado `command ID` é retornado.|  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A implementação padrão sempre retorna <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCommand">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.MenuCommand FindCommand (System.ComponentModel.Design.CommandID commandId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.MenuCommand FindCommand(class System.ComponentModel.Design.CommandID commandId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.FindCommand(System.ComponentModel.Design.CommandID)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">Um objeto <see cref="T:System.ComponentModel.Design.CommandID" />.</param>
+        <summary>Intercepta comandos.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.Design.MenuCommand" />. Por padrão, <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.FindCommand(System.ComponentModel.Design.CommandID)" /> retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.FindCommand%2A> método é chamado a partir de <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. Ele fornece uma oportunidade para o <xref:System.Windows.Forms.Design.Behavior.Behavior> para retornar o seu próprio personalizado <xref:System.ComponentModel.Design.MenuCommand>e, portanto, interceptando essa mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragDrop">
+      <MemberSignature Language="C#" Value="public virtual void OnDragDrop (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDragDrop(class System.Windows.Forms.Design.Behavior.Glyph g, class System.Windows.Forms.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragDrop(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> objeto no qual invocar o comportamento de arrastar e soltar.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Permite que o comportamento personalizado de arrastar e soltar.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragDrop(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.DragEventArgs)" /> método para que um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> pode especificar suas próprias regras de arrastar e soltar.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="public virtual void OnDragEnter (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDragEnter(class System.Windows.Forms.Design.Behavior.Glyph g, class System.Windows.Forms.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragEnter(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> que invocar arrastar-enter comportamento.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Permite personalizada digite arrastar o comportamento.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragEnter(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.DragEventArgs)" /> método para que um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> pode especificar suas próprias regras drag-enter.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragLeave">
+      <MemberSignature Language="C#" Value="public virtual void OnDragLeave (System.Windows.Forms.Design.Behavior.Glyph g, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDragLeave(class System.Windows.Forms.Design.Behavior.Glyph g, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragLeave(System.Windows.Forms.Design.Behavior.Glyph,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> que invocar o comportamento de deixar de arrastar.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Permite que o comportamento personalizado de deixar de arrastar.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragLeave(System.Windows.Forms.Design.Behavior.Glyph,System.EventArgs)" /> método para que um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> pode especificar suas próprias regras deixe de arrastar.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="public virtual void OnDragOver (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDragOver(class System.Windows.Forms.Design.Behavior.Glyph g, class System.Windows.Forms.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragOver(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> que invocar o comportamento de failover de arrastar.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Permite o failover de arrastar um comportamento personalizado.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.OnDragOver(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.DragEventArgs)" /> método para que um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> pode especificar suas próprias regras de failover de arrastar.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGiveFeedback">
+      <MemberSignature Language="C#" Value="public virtual void OnGiveFeedback (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.GiveFeedbackEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnGiveFeedback(class System.Windows.Forms.Design.Behavior.Glyph g, class System.Windows.Forms.GiveFeedbackEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnGiveFeedback(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.GiveFeedbackEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.Windows.Forms.GiveFeedbackEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> que invocar o comportamento de arrastar e soltar.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.GiveFeedbackEventArgs" /> que contém os dados do evento.</param>
+        <summary>Permite que o comportamento personalizado comentários de arrastar e soltar.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.OnGiveFeedback(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.GiveFeedbackEventArgs)" /> método para que um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> pode especificar suas próprias regras de arrastar e soltar.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoseCapture">
+      <MemberSignature Language="C#" Value="public virtual void OnLoseCapture (System.Windows.Forms.Design.Behavior.Glyph g, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnLoseCapture(class System.Windows.Forms.Design.Behavior.Glyph g, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnLoseCapture(System.Windows.Forms.Design.Behavior.Glyph,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> que invocar o comportamento de arrastar e soltar.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado pela janela de adorno quando ela perde a captura do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um comportamento pode solicitar a captura do mouse por meio do serviço de comportamento por push em si para a pilha de comportamento com o <xref:System.Windows.Forms.Design.Behavior.BehaviorService.PushCaptureBehavior%2A> método. Se ele faz isso, ele será notificado por meio de <xref:System.Windows.Forms.Design.Behavior.Behavior.OnLoseCapture%2A> método quando a captura é perdida. Geralmente o comportamento remove a próprio da pilha no momento. Captura é perdida quando uma das seguintes ações ocorrerá:  
+  
+-   Alguém solicitações de captura.  
+  
+-   Outro comportamento é enviada por push.  
+  
+-   Esse comportamento é removido.  
+  
+ Em cada um desses casos, <xref:System.Windows.Forms.Design.Behavior.Behavior.OnLoseCapture%2A> será chamado no comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDoubleClick">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseDoubleClick (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.MouseButtons button, System.Drawing.Point mouseLoc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseDoubleClick(class System.Windows.Forms.Design.Behavior.Glyph g, valuetype System.Windows.Forms.MouseButtons button, valuetype System.Drawing.Point mouseLoc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.MouseButtons,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="mouseLoc" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <param name="button">Um <see cref="T:System.Windows.Forms.MouseButtons" /> valor que indica qual botão foi clicado.</param>
+        <param name="mouseLoc">O local em que ocorreu o clique.</param>
+        <summary>Chamado quando uma mensagem de clique duplo entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando qualquer mensagem de clique duplo entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. A mensagem é passada pela primeira vez aqui, para o principal <xref:System.Windows.Forms.Design.Behavior.Behavior> na pilha de comportamento. Retornando `true` deste método significa que a mensagem foi tratada pelo <xref:System.Windows.Forms.Design.Behavior.Behavior> e não deve continuar a ser processado. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar uma mensagem de clique duplo. Para obter uma listagem de código completo, consulte [como: estender a aparência e comportamento de controles no modo de Design](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b).  
+  
+ [!code-csharp[System.Windows.Forms.Design.Behavior.Glyph.MarginBorderAnchorGlyphs#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.Glyph.MarginBorderAnchorGlyphs/CS/DesignerDemoControl.cs#10)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.Glyph.MarginBorderAnchorGlyphs#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.Glyph.MarginBorderAnchorGlyphs/VB/DesignerDemoControl.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseDown (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.MouseButtons button, System.Drawing.Point mouseLoc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseDown(class System.Windows.Forms.Design.Behavior.Glyph g, valuetype System.Windows.Forms.MouseButtons button, valuetype System.Drawing.Point mouseLoc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDown(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.MouseButtons,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="mouseLoc" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <param name="button">Um <see cref="T:System.Windows.Forms.MouseButtons" /> valor que indica qual botão foi clicado.</param>
+        <param name="mouseLoc">O local em que ocorreu o clique.</param>
+        <summary>Chamado quando qualquer mensagem suspensa mouse entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando qualquer mensagem suspensa mouse entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. A mensagem é passada pela primeira vez aqui, para o principal <xref:System.Windows.Forms.Design.Behavior.Behavior> na pilha de comportamento. Retornando `true` deste método significa que a mensagem foi tratada pelo <xref:System.Windows.Forms.Design.Behavior.Behavior> e não deve continuar a ser processado. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseEnter (System.Windows.Forms.Design.Behavior.Glyph g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseEnter(class System.Windows.Forms.Design.Behavior.Glyph g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseEnter(System.Windows.Forms.Design.Behavior.Glyph)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <summary>Chamado quando nenhuma mensagem mouse-enter entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando nenhuma mensagem mouse-enter entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+ Quando o local do ponteiro do mouse é positivamente ocorrências testados com outro <xref:System.Windows.Forms.Design.Behavior.Glyph> de testes de ocorrências anteriores, esse método é chamado no <xref:System.Windows.Forms.Design.Behavior.Behavior> associado a <xref:System.Windows.Forms.Design.Behavior.Glyph>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseHover">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseHover (System.Windows.Forms.Design.Behavior.Glyph g, System.Drawing.Point mouseLoc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseHover(class System.Windows.Forms.Design.Behavior.Glyph g, valuetype System.Drawing.Point mouseLoc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseHover(System.Windows.Forms.Design.Behavior.Glyph,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="mouseLoc" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <param name="mouseLoc">O local em que ocorreu o foco.</param>
+        <summary>Chamado quando uma mensagem de foco de mouse entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando uma mensagem de foco de mouse entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. A mensagem é passada pela primeira vez aqui, para o principal <xref:System.Windows.Forms.Design.Behavior.Behavior> na pilha de comportamento. Retornando `true` deste método significa que a mensagem foi tratada pelo <xref:System.Windows.Forms.Design.Behavior.Behavior> e não deve continuar a ser processado. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseLeave (System.Windows.Forms.Design.Behavior.Glyph g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseLeave(class System.Windows.Forms.Design.Behavior.Glyph g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseLeave(System.Windows.Forms.Design.Behavior.Glyph)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <summary>Chamado quando nenhuma mensagem deixe de mouse entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando nenhuma mensagem deixe de mouse entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+ Quando o ponteiro do mouse sai de um positivamente ocorrências testados <xref:System.Windows.Forms.Design.Behavior.Glyph> com uma validade <xref:System.Windows.Forms.Design.Behavior.Behavior>, esse método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseMove (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.MouseButtons button, System.Drawing.Point mouseLoc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseMove(class System.Windows.Forms.Design.Behavior.Glyph g, valuetype System.Windows.Forms.MouseButtons button, valuetype System.Drawing.Point mouseLoc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseMove(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.MouseButtons,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="mouseLoc" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <param name="button">Um <see cref="T:System.Windows.Forms.MouseButtons" /> valor que indica qual botão foi clicado.</param>
+        <param name="mouseLoc">O local em que a mudança ocorreu.</param>
+        <summary>Chamado quando uma mensagem de movimento do mouse entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando uma mensagem de movimento do mouse entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. A mensagem é passada pela primeira vez aqui, para o principal <xref:System.Windows.Forms.Design.Behavior.Behavior> na pilha de comportamento. Retornando `true` deste método significa que a mensagem foi tratada pelo <xref:System.Windows.Forms.Design.Behavior.Behavior> e não deve continuar a ser processado. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="public virtual bool OnMouseUp (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.MouseButtons button);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMouseUp(class System.Windows.Forms.Design.Behavior.Glyph g, valuetype System.Windows.Forms.MouseButtons button) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnMouseUp(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.MouseButtons)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <param name="button">Um <see cref="T:System.Windows.Forms.MouseButtons" /> valor que indica qual botão foi clicado.</param>
+        <summary>Chamado quando nenhuma mensagem o mouse entra a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Behavior.OnMouseDoubleClick%2A> método é chamado quando nenhuma mensagem o mouse entra o `WndProc` da janela de adorno a <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. A mensagem é passada pela primeira vez aqui, para o principal <xref:System.Windows.Forms.Design.Behavior.Behavior> na pilha de comportamento. Retornando `true` deste método significa que a mensagem foi tratada pelo <xref:System.Windows.Forms.Design.Behavior.Behavior> e não deve continuar a ser processado. Aqui, a mensagem é enviada para o comportamento apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryContinueDrag">
+      <MemberSignature Language="C#" Value="public virtual void OnQueryContinueDrag (System.Windows.Forms.Design.Behavior.Glyph g, System.Windows.Forms.QueryContinueDragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnQueryContinueDrag(class System.Windows.Forms.Design.Behavior.Glyph g, class System.Windows.Forms.QueryContinueDragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Behavior.OnQueryContinueDrag(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.QueryContinueDragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Windows.Forms.Design.Behavior.Glyph" />
+        <Parameter Name="e" Type="System.Windows.Forms.QueryContinueDragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.QueryContinueDragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Envia o evento de arrastar e soltar da janela de adorno ao apropriado <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> ou testado ocorrência <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Windows.Forms.Design.Behavior.Behavior.OnQueryContinueDrag(System.Windows.Forms.Design.Behavior.Glyph,System.Windows.Forms.QueryContinueDragEventArgs)" /> método para que um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> pode especificar suas próprias regras de arrastar e soltar.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,327 @@
+<Type Name="PnrpPermission" FullName="System.Net.PeerToPeer.PnrpPermission">
+  <TypeSignature Language="C#" Value="public sealed class PnrpPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PnrpPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PnrpPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Especifica os valores que são usados em <see cref="N:System.Net.PeerToPeer" /> as permissões de objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As permissões padrão permitem que todos os locais e aplicativos da zona da Intranet para acessar serviços PNRP. Se as permissões padrão não são alteradas, todos os aplicativos locais e o site local têm acesso aos serviços de ponto a ponto, mas aplicativos globais de (internet) não tem acesso.  
+  
+ As instâncias desse tipo têm dois estados de permissão: eles tem nenhum acesso para os recursos protegidos pela permissão, ou eles têm total acesso irrestrito aos recursos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PnrpPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores a <see cref="T:System.Security.Permissions.PermissionState" /> enumeração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> classe com o estado inicial de permissão fornecida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias desse tipo têm dois estados de permissão: eles tem nenhum acesso para os recursos protegidos pela permissão, ou eles têm total acesso irrestrito aos recursos.  
+  
+ Se `state` é irrestrito, a instância PnrpPermission passa todas as demandas. Se `state` contém qualquer outro valor, a instância de PnrpPermission falhar todas as demandas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica do atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" />.</summary>
+        <returns>Um objeto com uma interface IPermission, cuja instância contém uma cópia da instância atual do <see cref="T:System.Net.PeerToPeer.PnrpPermission" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+ As instâncias desse tipo têm dois estados de permissão: eles tem nenhum acesso para os recursos protegidos pela permissão, ou eles têm total acesso irrestrito aos recursos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   O parâmetro não é válido <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> elemento.  
+  
+-   Não há suporte para o número de versão do parâmetro.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro é um <see langword="null" /> referência (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="e">O XML de codificação a ser usada para reconstruir a permissão.</param>
+        <summary>Reconstrói um objeto de segurança com um estado especificado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o modelo de objeto para objetos de segurança de codificação XML. Essa classe não pode ser herdada.  
+  
+ Essa classe é destinada para ser uma simples implementação de um modelo de objeto XML simples para uso dentro do sistema de segurança e não para uso como um modelo de objeto XML geral.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   O parâmetro não é válido <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> elemento.  
+  
+-   Não há suporte para o número de versão do parâmetro.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro é um <see langword="null" /> referência (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para <see cref="M:System.Net.PeerToPeer.PnrpPermission.Intersect(System.Security.IPermission)" /> com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção do atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a interseção do atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> e a permissão especificada. Essa nova permissão é um <see langword="null" /> referência (<see langword="Nothing" /> no Visual Basic) se a interseção está vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o conjunto de operações que ambas descrevem em comum. Somente uma demanda que passa as permissões originais passará a interseção.  
+  
+ As instruções a seguir são necessárias para ser `true` para todas as implementações do método Intersect. X e Y representam <xref:System.Security.IPermission> referências de objeto que não são um `null` referência (Nothing no Visual Basic).  
+  
+-   X.Intersect(X) retorna um valor igual a X.  
+  
+-   X.Intersect(Y) retorna o mesmo valor como Y.Intersect(X).  
+  
+-   X.Intersect (um `null` referência (`Nothing` no Visual Basic)) retorna um `null` referência (`Nothing` no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro de destino não é um <see langword="null" /> referência (<see langword="Nothing" /> no Visual Basic) e não é uma instância da classe mesmo como a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Determina se o atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> é um subconjunto da permissão especificada.</summary>
+        <returns>
+          <see langword="True" />Se o atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> é um subconjunto da permissão especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atual <xref:System.Net.PeerToPeer.PnrpPermission> é um subconjunto da permissão especificada se a permissão atual especifica um conjunto de operações é totalmente contido pelo conjunto de permissões especificado. Por exemplo, uma permissão que representa acesso a "*C:\example.txt*"é um subconjunto de uma permissão que representa acesso a"*c:\\*". Se esse método retornar `true`, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+ As instruções a seguir são necessárias para ser `true` para todas as implementações do método IsSubsetOf. X, Y e Z representam <xref:System.Security.IPermission> objetos que não são um `null` referência (`Nothing` no Visual Basic).  
+  
+-   Retorna X.IsSubsetOf(X) `true`.  
+  
+-   X.IsSubsetOf(Y) retorna o mesmo valor que Y.IsSubsetOf(X) se e somente se X e Y representam o mesmo conjunto de permissões.  
+  
+-   Se X.IsSubsetOf(Y) e Y.IsSubsetOf(Z) retornam `true`, X.IsSubsetOf(Z) retorna `true`.  
+  
+-  
+  
+ Se X representa um objeto IPermission vazio com um estado de permissão de *nenhum* e Y representa um objeto de IPermission é um `null` referência (`Nothing` no Visual Basic), retorna X.IsSubsetOf(Y) `true`. Se Z também for uma permissão vazia, a compostas operação X.Union(Z) conjunto. Também retorna IsSubsetOf(Y) `true` porque o <xref:System.Net.PeerToPeer.PnrpPermission.Union%2A> de duas permissões vazias é uma permissão vazia.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro de destino não é um <see langword="null" /> referência (<see langword="Nothing" /> no Visual Basic) e não é uma instância da classe mesmo como a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que especifica se o atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> é irrestrita.</summary>
+        <returns>
+          <see langword="True" />Se a permissão atual é irrestrita; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma permissão irrestrita representa acesso a todos os recursos protegidos pela permissão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> e seu estado atual.</summary>
+        <returns>Um <see cref="T:System.Security.SecurityElement" /> objeto que contém uma codificação de XML de permissão, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PnrpPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa o <see cref="M:System.Net.PeerToPeer.PnrpPermission.Union(System.Security.IPermission)" /> do atual <see cref="T:System.Net.PeerToPeer.PnrpPermission" /> e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de uma chamada para <xref:System.Net.PeerToPeer.PnrpPermission.Union%2A> é uma permissão que representa todas as operações representadas pelo atual <xref:System.Net.PeerToPeer.PnrpPermission> e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union.  
+  
+ As instruções a seguir são necessárias para ser `true` para todas as implementações do método Union. X e Y representam <xref:System.Security.IPermission> objetos que não são um `null` referência (`Nothing` no Visual Basic).  
+  
+-   X.Union(X) retorna um objeto que tem o mesmo valor de X.  
+  
+-   X.Union(Y) retorna um objeto que tem o mesmo valor que o objeto retornado por Y.Union(X).  
+  
+-   X.Union (um `null` referência (`Nothing` no Visual Basic)) retorna um objeto que tem o mesmo valor de X.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />parâmetro é inválido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

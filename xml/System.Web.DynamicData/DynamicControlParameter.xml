@@ -1,0 +1,134 @@
+<Type Name="DynamicControlParameter" FullName="System.Web.DynamicData.DynamicControlParameter">
+  <TypeSignature Language="C#" Value="public class DynamicControlParameter : System.Web.UI.WebControls.Parameter, System.Web.DynamicData.IWhereParametersProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicControlParameter extends System.Web.UI.WebControls.Parameter implements class System.Web.DynamicData.IWhereParametersProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicControlParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Parameter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IWhereParametersProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um parâmetro usado para filtros mestre/de detalhes no qual uma fonte de dados obtém informações de outro controle de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.DynamicControlParameter> objeto é usado no `Where` coleção de parâmetros de consulta do controle de fonte de dados. O objeto de parâmetro filtra por chave primária ou chaves estrangeiras entre os dois controles e dá suporte a chaves de várias partes automaticamente automaticamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicControlParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicControlParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.DynamicControlParameter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicControlParameter (string controlId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string controlId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicControlParameter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="controlId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controlId">A ID do controle cujos valores de parâmetro representa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> classe associada ao controle especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlId">
+      <MemberSignature Language="C#" Value="public string ControlId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlId" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicControlParameter.ControlId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador exclusivo do controle que o <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> objeto associa a.</summary>
+        <value>O identificador exclusivo do controle do qual o <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> objeto obtém seus dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="protected override object Evaluate (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object Evaluate(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicControlParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto HTTP.</param>
+        <param name="control">O parâmetro de controle dinâmico.</param>
+        <summary>Gera um <see cref="T:System.InvalidOperationException" /> exceção para indicar que o <see cref="T:System.Web.DynamicData.DynamicDataManager" /> controle está ausente.</summary>
+        <returns>Um <see cref="T:System.InvalidOperationException" /> objeto que indica a <see cref="T:System.Web.DynamicData.DynamicDataManager" /> controle está ausente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não deve ser chamado pelo desenvolvedor de página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWhereParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Web.UI.WebControls.Parameter&gt; GetWhereParameters (System.Web.DynamicData.IDynamicDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.WebControls.Parameter&gt; GetWhereParameters(class System.Web.DynamicData.IDynamicDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicControlParameter.GetWhereParameters(System.Web.DynamicData.IDynamicDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.WebControls.Parameter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Web.DynamicData.IDynamicDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">O <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> instância para obter os parâmetros de.</param>
+        <summary>Retorna a coleção de parâmetros que são usados para criar um <see langword="Where" /> cláusula para quando a fonte de dados é consultada.</summary>
+        <returns>Uma coleção de <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos que representam os parâmetros de consulta especificado <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

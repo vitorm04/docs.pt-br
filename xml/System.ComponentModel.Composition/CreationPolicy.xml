@@ -1,0 +1,102 @@
+<Type Name="CreationPolicy" FullName="System.ComponentModel.Composition.CreationPolicy">
+  <TypeSignature Language="C#" Value="public enum CreationPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CreationPolicy extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.CreationPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quando e como uma parte será instanciada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No decorrer de composição, o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> precisa de instâncias de objetos descritos por exportações para preencher importações. Se uma exportação de um for usada para preencher várias importações, há dois comportamentos possíveis. Uma única instância do objeto exportado é criada e uma referência ao mesmo objeto é fornecida para cada importador, ou uma instância separada do objeto exportado é criada para cada importador.  
+  
+ Que ocorre depende o <xref:System.ComponentModel.Composition.PartCreationPolicyAttribute.CreationPolicy%2A> propriedade o <xref:System.ComponentModel.Composition.PartCreationPolicyAttribute> anexado à exportação e o <xref:System.ComponentModel.Composition.ImportAttribute.RequiredCreationPolicy%2A> do <xref:System.ComponentModel.Composition.ImportAttribute>. Que contém um valor da <xref:System.ComponentModel.Composition.CreationPolicy> enumeração. Se as políticas são incompatíveis, que a exportação não será considerada uma correspondência para a importação. A tabela a seguir resume a interação entre essas duas propriedades.  
+  
+|<xref:System.ComponentModel.Composition.ImportAttribute.RequiredCreationPolicy%2A>|Do exportação <xref:System.ComponentModel.Composition.PartCreationPolicyAttribute.CreationPolicy%2A> Especifica qualquer ou não há nenhuma especificada.|Do exportação <xref:System.ComponentModel.Composition.PartCreationPolicyAttribute.CreationPolicy%2A> Especifica compartilhado|Do exportação <xref:System.ComponentModel.Composition.PartCreationPolicyAttribute.CreationPolicy%2A> Especifica NonShared|  
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Qualquer|Uma instância única, compartilhada, do objeto exportado será criada.|Uma instância única, compartilhada, do objeto exportado será criada.|Uma nova instância do objeto exportado será criada para cada importador.|  
+|Compartilhado|Uma instância única, compartilhada, do objeto exportado será criada.|Uma instância única, compartilhada, do objeto exportado será criada.|A exportação não será considerada uma correspondência para a importação.|  
+|Não compartilhado|Uma nova instância do objeto exportado será criada para cada importador.|A exportação não será considerada uma correspondência para a importação.|Uma nova instância do objeto exportado será criada para cada importador.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.CreationPolicy Any = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.CreationPolicy.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.CreationPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> usará o <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> mais apropriado para a parte, considerando o contexto atual. Esse é o <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> padrão. Por padrão, <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> usará <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" />, a menos que o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> ou o importador solicite <see cref="F:System.ComponentModel.Composition.CreationPolicy.NonShared" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NewScope">
+      <MemberSignature Language="C#" Value="NewScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.CreationPolicy NewScope = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.CreationPolicy.NewScope" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.CreationPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonShared">
+      <MemberSignature Language="C#" Value="NonShared" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.CreationPolicy NonShared = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.CreationPolicy.NonShared" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.CreationPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma única instância não compartilhada do <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> associado será criada pelo <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> para cada solicitante.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="Shared" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.CreationPolicy Shared = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.CreationPolicy.Shared" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.CreationPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma única instância compartilhada do <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> associado será criada pelo <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> e compartilhada por todos os solicitantes.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

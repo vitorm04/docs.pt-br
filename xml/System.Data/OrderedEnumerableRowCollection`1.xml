@@ -1,0 +1,34 @@
+<Type Name="OrderedEnumerableRowCollection&lt;TRow&gt;" FullName="System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;">
+  <TypeSignature Language="C#" Value="public sealed class OrderedEnumerableRowCollection&lt;TRow&gt; : System.Data.EnumerableRowCollection&lt;TRow&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OrderedEnumerableRowCollection`1&lt;TRow&gt; extends System.Data.EnumerableRowCollection`1&lt;!TRow&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OrderedEnumerableRowCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TRow" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.EnumerableRowCollection&lt;TRow&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TRow">TRow</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TRow">O tipo de objetos na sequência de origem, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+    <summary>Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código. Representa uma coleção de ordenada <see cref="T:System.Data.DataRow" /> objetos retornados de uma consulta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OrderedEnumerableRowCollection%601>é usado para conter os resultados de uma consulta LINQ to DataSet que retorna uma sequência ordenada de linhas. Isso <xref:System.Data.EnumerableRowCollection%601> mantém um estado de operadores LINQ de chamada para a consulta de origem, e esse estado é usado para construir o predicado e classificando expressões para qualquer subsequentes <xref:System.Data.DataView>.  
+  
+ Um <xref:System.Data.OrderedEnumerableRowCollection%601> não pode ser instanciado diretamente porque não há nenhum construtor público para esta classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

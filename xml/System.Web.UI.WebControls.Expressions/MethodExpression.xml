@@ -1,0 +1,232 @@
+<Type Name="MethodExpression" FullName="System.Web.UI.WebControls.Expressions.MethodExpression">
+  <TypeSignature Language="C#" Value="public class MethodExpression : System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MethodExpression extends System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.MethodExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de especificar uma consulta LINQ personalizada que é definida em um método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.QueryExtender> controle oferece suporte a consultas LINQ personalizadas. Você pode definir uma consulta LINQ personalizada em um método e usar o <xref:System.Web.UI.WebControls.Expressions.MethodExpression> opção de filtro para chamar a consulta a <xref:System.Web.UI.WebControls.QueryExtender> controle.  
+  
+ O método que contém a consulta LINQ personalizada deve atender aos seguintes critérios:  
+  
+-   O método deve ser estático (`Shared` no Visual Basic). O primeiro parâmetro deve ser um <xref:System.Linq.IQueryable%601> ou <xref:System.Collections.Generic.IEnumerable%601> objeto. O método pode ter mais de um parâmetro.  
+  
+-   Não é possível alterar o valor de retorno de <xref:System.Linq.IQueryable%601> ou <xref:System.Collections.Generic.IEnumerable%601> tipo que é consultado.  
+  
+ O <xref:System.Web.UI.WebControls.Expressions.MethodExpression> procura o método que contém a consulta na seguinte ordem:  
+  
+1.  Se um <xref:System.Web.UI.WebControls.Expressions.MethodExpression.TypeName%2A> propriedade é especificada no <xref:System.Web.UI.WebControls.QueryExtender> controle, o <xref:System.Web.UI.WebControls.Expressions.MethodExpression> objeto procura o método no tipo especificado.  
+  
+2.  Se a fonte de dados implementa <xref:System.Web.DynamicData.IDynamicDataSource>, o método é para o método do tipo de contexto (<xref:System.Data.Linq.DataContext> ou <xref:System.Data.Objects.ObjectContext> objeto.)  
+  
+3.  O método procura o método em um modelo de controle, na classe base para a página ou em um controle de usuário.  
+  
+ O <xref:System.Web.UI.WebControls.Expressions.MethodExpression> classe é semelhante a <xref:System.Web.UI.WebControls.Expressions.CustomExpression> classe exceto que a expressão de método é executado em resposta a uma chamada de método e a expressão personalizada é executada em resposta a um evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como pesquisar o campo ListPrice da tabela Produtos no banco de dados AdventureWorks para produtos que têm um preço de lista de 400 ou mais. Este exemplo mostra como criar uma consulta LINQ personalizada em um método no código da página e como chamar o método de <xref:System.Web.UI.WebControls.QueryExtender> controle.  
+  
+```vb  
+Public Shared Function FilterStandardPrice(ByVal query As _  
+        IQueryable(Of Product)) As IQueryable(Of Product)  
+        Return From p In query _  
+            Where p.ListPrice >= 400 _  
+            Select p  
+    End Function  
+```  
+  
+```csharp  
+public static IQueryable<Product>   
+        FilterStandardPrice(IQueryable<Product> query)  
+{  
+        return from p in query  
+                  where p.ListPrice >= 400  
+                  select p;  
+  
+    }  
+```  
+  
+ O exemplo a seguir mostra como chamar o método na página.  
+  
+```  
+<html>  
+<head runat="server">  
+  <title>Custom Filter</title>  
+</head>  
+<body>  
+  <form id="form1" runat="server">  
+    <asp:LinqDataSource ID="LinqDataSource1" runat="server"   
+        ContextTypeName="AdventureworksDataContext" EntityTypeName=""   
+        TableName="Products">  
+    </asp:LinqDataSource>  
+  
+    <asp:QueryExtender ID="QueryExtender1" runat="server"   
+        TargetControlID="LinqDataSource1">  
+      <asp:MethodExpression MethodName="FilterStandardPrice" >  
+      </asp:MethodExpression>  
+    </asp:QueryExtender>  
+  
+    <asp:GridView ID="GridView1" runat="server"   
+        DataSourceID="LinqDataSource1"   
+        DataKeyNames="ProductID"   
+    </asp:GridView>  
+  </form>  
+</body>  
+</html>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.MethodExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Expressions.MethodExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.MethodExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">O controle da fonte de dados a ser usado.</param>
+        <summary>A expressão é resolvido usando especificado <see cref="T:System.Linq.IQueryable" /> objeto.</summary>
+        <returns>Uma instância do <see cref="T:System.Linq.IQueryable" /> objeto que foi usado para resolver a expressão.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O controle de fonte de dados é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método não foi encontrado.  
+  
+ -ou-  
+  
+ O método não é estático.  
+  
+ -ou-  
+  
+ O tipo de transmitido <see langword="IQuerable&lt;T&gt;" /> objeto foi alterado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreIfNotFound">
+      <MemberSignature Language="C#" Value="public bool IgnoreIfNotFound { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreIfNotFound" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.MethodExpression.IgnoreIfNotFound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a expressão deve ser ignorada.</summary>
+        <value>
+          <see langword="true" />Se a expressão for ignorada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.MethodExpression> objeto procura por um método que contém a consulta de busca em locais específicos e pesquisando em uma ordem específica. Você pode definir essa propriedade `false` para lançar uma exceção se o <xref:System.Web.UI.WebControls.Expressions.CustomExpression> objeto não localizar um método que contém um LINQ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.MethodExpression.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método que contém uma consulta LINQ personalizada.</summary>
+        <value>O nome do método que contém a consulta LINQ personalizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.MethodExpression> objeto permite que você chame uma consulta LINQ personalizada que é definida em um método. Especifique o método de <xref:System.Web.UI.WebControls.QueryExtender> controle na página.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar o `FilterStandardPrice` método o <xref:System.Web.UI.WebControls.QueryExtender> controle. A consulta LINQ personalizada é definida em um `FilterStandardPrice` método.  
+  
+```  
+<asp:QueryExtender ID="QueryExtender1" runat="server"   
+    TargetControlID="LinqDataSource1">  
+  <asp:MethodExpression MethodName="FilterStandardPrice">  
+  </asp:MethodExpression>  
+  </asp:QueryExtender>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.MethodExpression.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a classe cujo método contém a consulta personalizada.</summary>
+        <value>A classe que o método é membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.MethodExpression> classe permite que você especifique uma expressão personalizada para uma fonte de dados a <xref:System.Web.UI.WebControls.QueryExtender> controle. Você pode usar o <xref:System.Web.UI.WebControls.Expressions.MethodExpression.TypeName%2A> propriedade para especificar a classe à qual pertence o método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

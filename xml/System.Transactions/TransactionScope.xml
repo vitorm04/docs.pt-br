@@ -1,0 +1,605 @@
+<Type Name="TransactionScope" FullName="System.Transactions.TransactionScope">
+  <TypeSignature Language="C#" Value="public sealed class TransactionScope : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransactionScope extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.TransactionScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Torna um bloco de código transacional. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Transactions> infraestrutura fornece dois um modelo de programação explícito com base no <xref:System.Transactions.Transaction> classe, bem como um modelo de programação implícito usando a <xref:System.Transactions.TransactionScope> classe, no qual as transações são automaticamente gerenciadas pela infraestrutura.  
+  
+> [!IMPORTANT]
+>  É recomendável que você crie transações implícitas usando o <xref:System.Transactions.TransactionScope> de classe, para que o contexto de transação de ambiente é gerenciado automaticamente para você. Você também deve usar o <xref:System.Transactions.TransactionScope> e <xref:System.Transactions.DependentTransaction> classe para aplicativos que exigem o uso da mesma transação em várias chamadas de função ou várias chamadas do thread. Para obter mais informações sobre esse modelo, consulte o [implementando um implícita transação usando o escopo da transação](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tópico. Para obter mais informações sobre como escrever um aplicativo transacional, consulte [escrevendo um aplicativo transacional](~/docs/framework/data/transactions/writing-a-transactional-application.md).  
+  
+ Ao instanciar um <xref:System.Transactions.TransactionScope> pelo `new` instrução, o Gerenciador de transações determina qual transação participar. Uma vez determinado, o escopo sempre participa dessa transação. A decisão se baseia em dois fatores: se houver uma transação de ambiente e o valor de `TransactionScopeOption` parâmetro no construtor.  A transação de ambiente é a transação que é executado em seu código. Você pode obter uma referência para a transação de ambiente chamando estático <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> propriedade o <xref:System.Transactions.Transaction> classe. Para obter mais informações sobre como esse parâmetro é usado, consulte a seção "Gerenciamento de fluxo de transação" o [implementando um implícita transação usando o escopo da transação](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tópico.  
+  
+ Se nenhuma exceção ocorrer dentro do escopo da transação (isto é, entre a inicialização do <xref:System.Transactions.TransactionScope> objeto e a chamada de seu <xref:System.Transactions.TransactionScope.Dispose%2A> método), em seguida, a transação do qual participa o escopo pode continuar. Se uma exceção ocorrer dentro do escopo de transação, as transações nas quais ela participa serão revertida.  
+  
+ Quando seu aplicativo conclui todo o trabalho que deseja executar em uma transação, você deve chamar o <xref:System.Transactions.TransactionScope.Complete%2A> método apenas uma vez para informar que o Gerenciador de transação que é aceitável para confirmar a transação. Falha ao chamar este método anula a transação.  
+  
+ Uma chamada para o <xref:System.Transactions.TransactionScope.Dispose%2A> método marca o fim do escopo de transação. Exceções que ocorrem depois de chamar esse método não podem afetar a transação.  
+  
+ Se você modificar o valor de <xref:System.Transactions.Transaction.Current%2A> dentro de um escopo, uma exceção é lançada quando <xref:System.Transactions.TransactionScope.Dispose%2A> é chamado. No entanto, no final do escopo, o valor anterior é restaurado. Além disso, se você chamar <xref:System.Transactions.TransactionScope.Dispose%2A> em <xref:System.Transactions.Transaction.Current%2A> dentro de um escopo de transação que criou a transação, a transação é anulada no final do escopo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Transactions.TransactionScope> classe para definir um bloco de código para participar de uma transação.  
+  
+ [!code-csharp[TransactionScope#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
+ [!code-vb[TransactionScope#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um novo escopo de transação com a opção de escopo de transação igual a <xref:System.Transactions.TransactionScopeOption.Required>. Isso significa que uma transação é necessária para o novo escopo e a transação de ambiente será usada se já existir uma. Caso contrário, ele cria uma nova transação antes de inserir o escopo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactionToUse" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> e define a transação especificada como a transação de ambiente, de modo que o trabalho transacional realizado dentro do escopo use essa transação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeAsyncFlowOption asyncFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeAsyncFlowOption asyncFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeAsyncFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="asyncFlowOption" Type="System.Transactions.TransactionScopeAsyncFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="asyncFlow">To be added.</param>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com a opção de fluxo assíncrono especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption option);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption option) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+      </Parameters>
+      <Docs>
+        <param name="option">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com os requisitos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.Transaction transaction, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Transactions.Transaction transaction, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactionToUse" Type="System.Transactions.Transaction" />
+        <Parameter Name="scopeTimeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com o valor de tempo limite especificado e define a transação especificada como a transação de ambiente, de modo que o trabalho transacional realizado dentro do escopo use essa transação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.Transaction transactionToUse, System.Transactions.TransactionScopeAsyncFlowOption asyncFlowOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Transactions.Transaction transactionToUse, valuetype System.Transactions.TransactionScopeAsyncFlowOption asyncFlowOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction,System.Transactions.TransactionScopeAsyncFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactionToUse" Type="System.Transactions.Transaction" />
+        <Parameter Name="asyncFlowOption" Type="System.Transactions.TransactionScopeAsyncFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="transactionToUse">A transação a ser definida como a transação de ambiente, para que o trabalho transacional realizado dentro do escopo use essa transação.</param>
+        <param name="asyncFlowOption">Uma instância da enumeração <see cref="T:System.Transactions.TransactionScopeAsyncFlowOption" /> que descreve se a transação de ambiente associada ao escopo de transação fluirá pelas continuações de thread ao usar a Tarefa ou padrões de programação assíncrona/de espera .NET.</param>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> e define a transação especificada como a transação de ambiente, de modo que o trabalho transacional realizado dentro do escopo use essa transação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption option, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption option, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+        <Parameter Name="scopeTimeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="option">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com o valor e requisitos de tempo limite especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption scopeOption, System.Transactions.TransactionOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption scopeOption, valuetype System.Transactions.TransactionOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+        <Parameter Name="transactionOptions" Type="System.Transactions.TransactionOptions" />
+      </Parameters>
+      <Docs>
+        <param name="scopeOption">Uma instância da enumeração <see cref="T:System.Transactions.TransactionScopeOption" /> que descreve os requisitos de transação associados a este escopo de transação.</param>
+        <param name="options">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com os requisitos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa o `transactionOptions` parâmetro para especificar um <xref:System.Transactions.IsolationLevel>e o escopo cria uma transação posteriormente, a nova transação está associada com o nível de isolamento especificado. Se um nível de isolamento é passado junto com uma transação, a transação deve ter um nível de isolamento idênticos ou uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption option, System.Transactions.TransactionScopeAsyncFlowOption asyncFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption option, valuetype System.Transactions.TransactionScopeAsyncFlowOption asyncFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionScopeAsyncFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+        <Parameter Name="asyncFlowOption" Type="System.Transactions.TransactionScopeAsyncFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="option">To be added.</param>
+        <param name="asyncFlow">To be added.</param>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Inicializa uma nova instância do <see cref="T:System.Transactions.TransactionScope" /> classe com a opção de fluxo assíncrono e requisitos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.Transaction transaction, TimeSpan timeout, System.Transactions.EnterpriseServicesInteropOption opt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Transactions.Transaction transaction, valuetype System.TimeSpan timeout, valuetype System.Transactions.EnterpriseServicesInteropOption opt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction,System.TimeSpan,System.Transactions.EnterpriseServicesInteropOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactionToUse" Type="System.Transactions.Transaction" />
+        <Parameter Name="scopeTimeout" Type="System.TimeSpan" />
+        <Parameter Name="interopOption" Type="System.Transactions.EnterpriseServicesInteropOption" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <param name="opt">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com os requisitos de interoperabilidade COM+ e o valor de tempo limite especificados e define a transação especificada como a transação de ambiente, de modo que o trabalho transacional realizado dentro do escopo use essa transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método usa <xref:System.Security.Permissions.SecurityAction.LinkDemand> impedir que ele está sendo chamado de código não confiável; no entanto, apenas o chamador imediato é necessário ter o `FullTrust` conjunto de permissões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.Transaction transactionToUse, TimeSpan scopeTimeout, System.Transactions.TransactionScopeAsyncFlowOption asyncFlowOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Transactions.Transaction transactionToUse, valuetype System.TimeSpan scopeTimeout, valuetype System.Transactions.TransactionScopeAsyncFlowOption asyncFlowOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction,System.TimeSpan,System.Transactions.TransactionScopeAsyncFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactionToUse" Type="System.Transactions.Transaction" />
+        <Parameter Name="scopeTimeout" Type="System.TimeSpan" />
+        <Parameter Name="asyncFlowOption" Type="System.Transactions.TransactionScopeAsyncFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="transactionToUse">A transação a ser definida como a transação de ambiente, para que o trabalho transacional realizado dentro do escopo use essa transação.</param>
+        <param name="scopeTimeout">O <see cref="T:System.TimeSpan" /> após o qual o escopo da transação atinge o tempo limite e anula a transação.</param>
+        <param name="asyncFlowOption">Uma instância da enumeração <see cref="T:System.Transactions.TransactionScopeAsyncFlowOption" /> que descreve se a transação de ambiente associada ao escopo de transação fluirá pelas continuações de thread ao usar a Tarefa ou padrões de programação assíncrona/de espera .NET.</param>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com o valor de tempo limite especificado e define a transação especificada como a transação de ambiente, de modo que o trabalho transacional realizado dentro do escopo use essa transação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption option, TimeSpan timeout, System.Transactions.TransactionScopeAsyncFlowOption asyncFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption option, valuetype System.TimeSpan timeout, valuetype System.Transactions.TransactionScopeAsyncFlowOption asyncFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.TimeSpan,System.Transactions.TransactionScopeAsyncFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+        <Parameter Name="scopeTimeout" Type="System.TimeSpan" />
+        <Parameter Name="asyncFlowOption" Type="System.Transactions.TransactionScopeAsyncFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="option">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <param name="asyncFlow">To be added.</param>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Inicializa uma nova instância do <see cref="T:System.Transactions.TransactionScope" /> classe com o valor de tempo limite especificado, requisitos e opção de fluxo assíncrono.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption scopeOption, System.Transactions.TransactionOptions options, System.Transactions.EnterpriseServicesInteropOption opt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption scopeOption, valuetype System.Transactions.TransactionOptions options, valuetype System.Transactions.EnterpriseServicesInteropOption opt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,System.Transactions.EnterpriseServicesInteropOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+        <Parameter Name="transactionOptions" Type="System.Transactions.TransactionOptions" />
+        <Parameter Name="interopOption" Type="System.Transactions.EnterpriseServicesInteropOption" />
+      </Parameters>
+      <Docs>
+        <param name="scopeOption">Uma instância da enumeração <see cref="T:System.Transactions.TransactionScopeOption" /> que descreve os requisitos de transação associados a este escopo de transação.</param>
+        <param name="options">To be added.</param>
+        <param name="opt">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Transactions.TransactionScope" /> com o escopo especificado e os requisitos de interoperabilidade COM+ e opções de transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa o `transactionOptions` parâmetro para especificar um <xref:System.Transactions.IsolationLevel>e o escopo cria uma transação posteriormente, a nova transação está associada com o nível de isolamento especificado. Se um nível de isolamento é passado junto com uma transação, a transação deve ter um nível de isolamento idênticos ou uma exceção será lançada.  
+  
+ **Observação** esse método usa <xref:System.Security.Permissions.SecurityAction.LinkDemand> impedir que ele está sendo chamado de código não confiável; no entanto, apenas o chamador imediato é necessário ter o `FullTrust` conjunto de permissões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionScope (System.Transactions.TransactionScopeOption scopeOption, System.Transactions.TransactionOptions transactionOptions, System.Transactions.TransactionScopeAsyncFlowOption asyncFlowOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.TransactionScopeOption scopeOption, valuetype System.Transactions.TransactionOptions transactionOptions, valuetype System.Transactions.TransactionScopeAsyncFlowOption asyncFlowOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,System.Transactions.TransactionScopeAsyncFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeOption" Type="System.Transactions.TransactionScopeOption" />
+        <Parameter Name="transactionOptions" Type="System.Transactions.TransactionOptions" />
+        <Parameter Name="asyncFlowOption" Type="System.Transactions.TransactionScopeAsyncFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="scopeOption">Uma instância da enumeração <see cref="T:System.Transactions.TransactionScopeOption" /> que descreve os requisitos de transação associados a este escopo de transação.</param>
+        <param name="transactionOptions">Um <see cref="T:System.Transactions.TransactionOptions" /> estrutura que descreve as opções de transação a ser usado se uma nova transação é criada. Se uma transação existente for usada, o valor de tempo limite nesse parâmetro se aplica ao escopo de transação. Se esse período expirar antes de o escopo ser descartado, a transação será anulada.</param>
+        <param name="asyncFlowOption">Uma instância da enumeração <see cref="T:System.Transactions.TransactionScopeAsyncFlowOption" /> que descreve se a transação de ambiente associada ao escopo de transação fluirá pelas continuações de thread ao usar a Tarefa ou padrões de programação assíncrona/de espera .NET.</param>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Inicializa uma nova instância do <see cref="T:System.Transactions.TransactionScope" /> classe com a opção de fluxo assíncrono e requisitos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.Complete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que todas as operações dentro do escopo foram concluídas com êxito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando estiver satisfeito que todas as operações dentro do escopo são concluídas com êxito, você deve chamar esse método apenas uma vez para informar o Gerenciador de transações que o estado em todos os recursos seja consistente e a transação pode ser confirmada. É muito bom colocar a chamada como a última instrução no `using` bloco.  
+  
+ Para obter mais informações sobre como esse método é usado, consulte o [implementando um implícita transação usando o escopo da transação](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tópico.  
+  
+ Falha ao chamar este método anula a transação, porque o Gerenciador de transações interpreta como uma falha do sistema ou exceções lançadas dentro do escopo da transação. No entanto, observe também que a chamar esse método não garante uma confirmação da transação. É simplesmente uma maneira de informar o Gerenciador de transações do seu status. Depois de chamar esse método, você não pode mais acessar a transação de ambiente por meio de <xref:System.Transactions.Transaction.Current%2A> propriedade e tentar fazer isso resulta em uma exceção sendo lançada.  
+  
+ O trabalho real de confirmação entre o Gerenciador de recursos ocorre durante o `End Using` instrução se a <xref:System.Transactions.TransactionScope> objeto criou a transação. Se ele não criou a transação, a confirmação ocorre sempre que <xref:System.Transactions.CommittableTransaction.Commit%2A> é chamado pelo proprietário do <xref:System.Transactions.CommittableTransaction> objeto. Nesse ponto o Gerenciador de transações chama o recurso de gerentes e informa a confirmação ou reversão, com base em se esse método foi chamado no <xref:System.Transactions.TransactionScope> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Transactions.TransactionScope> classe para definir um bloco de código para participar de uma transação.  
+  
+ [!code-csharp[TransactionScope#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
+ [!code-vb[TransactionScope#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Este método já foi chamado uma vez.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionScope.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Encerra o escopo da transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método marca o fim do escopo de transação. Se o <xref:System.Transactions.TransactionScope> objeto criou a transação e <xref:System.Transactions.TransactionScope.Complete%2A> foi chamado no escopo, o <xref:System.Transactions.TransactionScope> objeto tenta confirmar a transação quando este método é chamado.  
+  
+ O uso de c# `using` construção garante que esse método é chamado, mesmo que ocorra uma exceção. Exceções que ocorrem depois de chamar esse método não podem afetar a transação. Esse método também restaura a transação de ambiente para ele estado original. Um <xref:System.Transactions.TransactionAbortedException> é gerada se a transação não é realmente confirmada.  
+  
+ Esse método é síncrono e bloqueia até que a transação foi confirmada ou anulada. Por isso, você deve ser extremamente cuidadoso ao usar esse método em um aplicativo Windows Form (WinForm) ou pode ocorrer um deadlock. Se você chamar esse método dentro de um evento de controle do WinForm (por exemplo, clicar em um botão) e usar o síncrona <xref:System.Windows.Forms.Control.Invoke%2A> método para direcionar o controle para executar algumas tarefas de interface do usuário (por exemplo, altera cores) no meio de processamento de transação, ocorrerá um deadlock. Isso ocorre porque o <xref:System.Windows.Forms.Control.Invoke%2A> método é síncrono e bloqueia o thread de trabalho até que o thread de interface do usuário de seu trabalho seja concluído. No entanto, em nosso cenário, o thread de interface do usuário também está esperando para o thread de trabalho confirmar a transação. O resultado é que nenhum é capaz de continuar e o escopo aguardará indefinidamente para conclusão da confirmação. Você deve usar <xref:System.Windows.Forms.Control.BeginInvoke%2A> em vez de <xref:System.Windows.Forms.Control.Invoke%2A> sempre que possível, porque ele é assíncrona e, portanto, menos propenso a deadlocks.  
+  
+ Para obter mais informações sobre como esse método é usado, consulte o [implementando um implícita transação usando o escopo da transação](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tópico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Transactions.TransactionScope> classe para definir um bloco de código para participar de uma transação.  
+  
+ [!code-csharp[TransactionScope#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
+ [!code-vb[TransactionScope#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

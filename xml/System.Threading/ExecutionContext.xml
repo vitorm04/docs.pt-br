@@ -1,0 +1,404 @@
+<Type Name="ExecutionContext" FullName="System.Threading.ExecutionContext">
+  <TypeSignature Language="C#" Value="public sealed class ExecutionContext : IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ExecutionContext extends System.Object implements class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ExecutionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia o contexto de execução do thread atual. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.ExecutionContext> classe fornece um único contêiner para todas as informações relevantes para um segmento lógico de execução. Isso inclui o contexto de segurança, o contexto de chamada e o contexto de sincronização.  
+  
+ O <xref:System.Threading.ExecutionContext> classe fornece a funcionalidade para código de usuário para capturar e transferir neste contexto pelos pontos assíncronos definido pelo usuário. O common language runtime garante que o <xref:System.Threading.ExecutionContext> consistentemente são transferidas entre pontos assíncronos definido em tempo de execução dentro do processo gerenciado.  
+  
+ Um contexto de execução é o equivalente gerenciado de um compartimento de COM. Em um domínio de aplicativo, o contexto de execução inteira deve ser transferido sempre que um thread é transferido. Essa situação ocorre durante as transferências feitas pelo <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> método, a maioria das operações de pool de thread e Windows Forms thread marshaling por meio a bomba de mensagens do Windows. Ele não ocorre em operações de pool de thread seguro (como o <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A> método), que não são transferidas a pilha compactada. Sempre que fluxos de pilha compactada, a entidade gerenciada, a sincronização, a localidade e o contexto de usuário também fluem. O <xref:System.Threading.ExecutionContext> classe fornece a <xref:System.Threading.ExecutionContext.Capture%2A> e <xref:System.Threading.ExecutionContext.CreateCopy%2A> métodos para obter o contexto de execução e o <xref:System.Threading.ExecutionContext.Run%2A> método para definir o contexto de execução do thread atual.  
+  
+ Um <xref:System.Threading.ExecutionContext> que está associado com um thread que não pode ser definida em outro thread. Tentar fazer isso resultará em uma exceção sendo lançada. Para propagar o <xref:System.Threading.ExecutionContext> de um thread para outro, faça uma cópia do <xref:System.Threading.ExecutionContext>.  
+  
+ Internamente, o <xref:System.Threading.ExecutionContext> armazena todos os dados que estão associados com o <xref:System.Runtime.Remoting.Messaging.LogicalCallContext>. Isso permite que o <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> dados sejam propagadas quando o <xref:System.Threading.ExecutionContext> é copiado e transferidos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public static System.Threading.ExecutionContext Capture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.ExecutionContext Capture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.Capture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.ExecutionContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Captura o contexto de execução do thread atual.</summary>
+        <returns>Um objeto <see cref="T:System.Threading.ExecutionContext" /> que representa o contexto de execução do thread atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto de execução capturada pode ser usado como o `executionContext` parâmetro para o <xref:System.Threading.ExecutionContext.Run%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.Threading.ExecutionContext CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.ExecutionContext CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.ExecutionContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do contexto de execução atual.</summary>
+        <returns>Um <see cref="T:System.Threading.ExecutionContext" /> objeto que representa o contexto de execução atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil para a propagação de um contexto de execução de um thread para outro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não é possível copiar neste contexto porque ele é usado. Apenas contextos recém-capturados podem ser copiados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Threading.ExecutionContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Threading.ExecutionContext>. O `Dispose` método deixa o <xref:System.Threading.ExecutionContext> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Threading.ExecutionContext> para o coletor de lixo possa recuperar a memória que o <xref:System.Threading.ExecutionContext> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Threading.ExecutionContext>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Threading.ExecutionContext> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto a ser preenchido com informações de serialização.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> estrutura que representa o contexto de destino da serialização.</param>
+        <summary>Define especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com as informações de contexto lógico necessários para recriar uma instância do contexto de execução atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.ExecutionContext.GetObjectData%2A>define um <xref:System.Runtime.Serialization.SerializationInfo> com a lógica de chamadas informações de contexto. Durante a desserialização, o objeto de contexto de execução é reconstituído do <xref:System.Runtime.Serialization.SerializationInfo> transmitido no fluxo.  
+  
+ Para obter mais informações, consulte <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFlowSuppressed">
+      <MemberSignature Language="C#" Value="public static bool IsFlowSuppressed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsFlowSuppressed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.IsFlowSuppressed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o fluxo do contexto de execução está suprimido atualmente.</summary>
+        <returns>
+          <see langword="true" />Se o fluxo é suprimido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.ExecutionContext.IsFlowSuppressed%2A> método é usado pelos componentes de infraestrutura para determinar se é preciso transferir a <xref:System.Threading.ExecutionContext> durante operações assíncronas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreFlow">
+      <MemberSignature Language="C#" Value="public static void RestoreFlow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RestoreFlow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.RestoreFlow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Restaura o fluxo do contexto de execução entre threads assíncronas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.ExecutionContext.RestoreFlow%2A>Inverte o efeito de um anterior <xref:System.Threading.ExecutionContext.SuppressFlow%2A> chamada de método.  
+  
+ Este método é chamado pelo <xref:System.Threading.AsyncFlowControl.Undo%2A> método o <xref:System.Threading.AsyncFlowControl> estrutura retornada pelo <xref:System.Threading.ExecutionContext.SuppressFlow%2A> método.  Você deve usar o <xref:System.Threading.AsyncFlowControl.Undo%2A> método para restaurar o fluxo do contexto de execução, não o <xref:System.Threading.ExecutionContext.RestoreFlow%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O fluxo do contexto não pode ser restaurado porque não está sendo suprimido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.Threading.ExecutionContext executionContext, class System.Threading.ContextCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext,System.Threading.ContextCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Threading.ExecutionContext" />
+        <Parameter Name="callback" Type="System.Threading.ContextCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">
+          <see cref="T:System.Threading.ExecutionContext" /> ao dataset.</param>
+        <param name="callback">Um <see cref="T:System.Threading.ContextCallback" /> delegado que representa o método a ser executado no contexto de execução fornecida.</param>
+        <param name="state">O objeto para passar para o método de retorno de chamada.</param>
+        <summary>Executa um método em um contexto de execução especificado no thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto de execução é retornado ao seu estado anterior quando o método é concluído.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="executionContext" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="executionContext" />não foi adquirido por meio de uma operação de captura.  
+  
+ -ou-  
+  
+ <paramref name="executionContext" /> já foi usado como argumento para uma chamada <see cref="M:System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext,System.Threading.ContextCallback,System.Object)" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressFlow">
+      <MemberSignature Language="C#" Value="public static System.Threading.AsyncFlowControl SuppressFlow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.AsyncFlowControl SuppressFlow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ExecutionContext.SuppressFlow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.AsyncFlowControl</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Suprime o fluxo do contexto de execução em threads assíncronos.</summary>
+        <returns>Uma estrutura <see cref="T:System.Threading.AsyncFlowControl" /> para restaurar o fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para suprimir o fluxo do <xref:System.Threading.ExecutionContext> no thread atual.  
+  
+ Você deve usar o <xref:System.Threading.AsyncFlowControl.Undo%2A> método retornado <xref:System.Threading.AsyncFlowControl> estrutura para restaurar o fluxo do <xref:System.Threading.ExecutionContext>.  
+  
+ Esse método é protegido com uma <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> permissão. Um componente totalmente confiável pode chamar esse método para suprimir o fluxo do <xref:System.Threading.ExecutionContext> durante chamadas assíncronas. Enquanto o fluxo é suprimido, a <xref:System.Security.SecurityContext.Capture%2A> método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O fluxo do contexto já suprimido.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,204 @@
+<Type Name="DesignerActionPropertyItem" FullName="System.ComponentModel.Design.DesignerActionPropertyItem">
+  <TypeSignature Language="C#" Value="public sealed class DesignerActionPropertyItem : System.ComponentModel.Design.DesignerActionItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerActionPropertyItem extends System.ComponentModel.Design.DesignerActionItem" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionPropertyItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerActionItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um item do painel que está associado uma propriedade em uma classe derivada de <see cref="T:System.ComponentModel.Design.DesignerActionList" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionPropertyItem> classe representa os itens individuais no painel de marcas inteligentes. Cada item é geralmente associado uma propriedade em uma classe que deriva de <xref:System.ComponentModel.Design.DesignerActionList> classe e fornecido pelo autor do componente. A associação é mantida por meio do nome da propriedade, conforme armazenado no <xref:System.ComponentModel.Design.DesignerActionPropertyItem.MemberName%2A> propriedade.  
+  
+ Itens do painel individuais associados para formar um painel por uma chamada para o <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> método o <xref:System.ComponentModel.Design.DesignerActionList> classe.  
+  
+ Para exibir o valor da propriedade associada, essa propriedade deve ter uma `get` método de acessador; para permitir a edição, a propriedade deve ter um `set` método do acessador. A maneira na qual o painel permite a edição direta de um item de propriedade do usuário depende das informações de tipo suporte presentes para o tipo de dados da propriedade associada. A tabela a seguir mostra o esquema de probabilidade.  
+  
+|Informações de tipo de propriedade|Propriedade item de edição de interface do usuário (IU)|  
+|-------------------------------|-------------------------------------------------|  
+|Tem um editor de tipo associado (<xref:System.Drawing.Design.UITypeEditor>)|O editor de tipo associado à propriedade subjacente é exibido para editar o valor da propriedade.|  
+|Possui um conversor de tipo associado a um tipo conhecido (<xref:System.ComponentModel.TypeConverter>)|O editor de tipo para o tipo conhecido é exibido para editar o valor da propriedade. Por exemplo, um conversor de tipo para <xref:System.String> provavelmente exibirá um <xref:System.Windows.Forms.TextBox>.|  
+|Valor booleano|O item é exibido usando uma interface de usuário binário, como uma marca de seleção.|  
+|Nenhum deles.|O item é exibido como uma cadeia de caracteres de texto não editável usando o tipo de dados <xref:System.Object.ToString%2A> método.|  
+  
+ Todos os tipos fundamentais, como <xref:System.Boolean?displayProperty=nameWithType>, comuns e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tipos de dados, como <xref:System.String?displayProperty=nameWithType>, fornecer editores e conversores de tipo padrão. Para obter mais informações sobre conversores de tipo, consulte [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56) ou [conversão do tipo generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada). Para obter mais informações sobre editores de tipo, consulte [como: implementar um Editor de tipo de interface do usuário](http://msdn.microsoft.com/library/ed961fb9-ee02-4666-b511-05f3204bb75c).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma coleção de <xref:System.ComponentModel.Design.DesignerActionItem> objetos. Para obter um exemplo completo de implementação de marcas inteligentes, consulte [como: Anexar marcas inteligentes para um componente de Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionPropertyItem (string memberName, string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName, string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionPropertyItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">O nome diferencia maiusculas de minúsculas da propriedade associada a este item de painel.</param>
+        <param name="displayName">O texto do painel para este item.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.DesignerActionPropertyItem" /> classe, com a propriedade especificada e nomes para exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionPropertyItem.%23ctor%28System.String%2CSystem.String%29> construtor define o <xref:System.ComponentModel.Design.DesignerActionItem.Category%2A> e <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> propriedades `null`.  
+  
+ O `memberName` parâmetro refere-se ao nome da propriedade associada é membro da classe fornecida pelo programador derivado de <xref:System.ComponentModel.Design.DesignerActionList> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionPropertyItem (string memberName, string displayName, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName, string displayName, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionPropertyItem.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">O nome diferencia maiusculas de minúsculas da propriedade associada a este item de painel.</param>
+        <param name="displayName">O texto do painel para este item.</param>
+        <param name="category">O diferencia maiusculas de minúsculas <see cref="T:System.String" /> usado para agrupar os itens semelhantes no painel.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.DesignerActionPropertyItem" /> classe, com a propriedade especificada e os nomes de categoria e exibir o texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionPropertyItem.%23ctor%28System.String%2CSystem.String%2CSystem.String%29> construtor define o <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> propriedade `null`.  
+  
+ Para obter mais informações sobre como o `category` parâmetro é usado para agrupar itens em um painel, consulte o <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> método.  
+  
+ O `memberName` parâmetro refere-se ao nome da propriedade associada é membro da classe fornecida pelo programador derivado de <xref:System.ComponentModel.Design.DesignerActionList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionPropertyItem (string memberName, string displayName, string category, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName, string displayName, string category, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionPropertyItem.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">O nome diferencia maiusculas de minúsculas da propriedade associada a este item de painel.</param>
+        <param name="displayName">O texto do painel para este item.</param>
+        <param name="category">O diferencia maiusculas de minúsculas <see cref="T:System.String" /> usado para agrupar os itens semelhantes no painel.</param>
+        <param name="description">Texto complementar para este item, usado em dicas de ferramenta ou a barra de status.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.DesignerActionPropertyItem" /> classe com o texto de exibição e a descrição e a nomes de propriedade e a categoria especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como o `category` parâmetro é usado para agrupar itens em um painel, consulte o <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> método.  
+  
+ O `memberName` parâmetro refere-se ao nome da propriedade associada é membro da classe fornecida pelo programador derivado de <xref:System.ComponentModel.Design.DesignerActionList> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma coleção de <xref:System.ComponentModel.Design.DesignerActionItem> objetos. Para obter um exemplo completo de implementação de marcas inteligentes, consulte [como: Anexar marcas inteligentes para um componente de Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionPropertyItem.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade que este item está associado.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome da propriedade associada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionPropertyItem.MemberName%2A> propriedade especifica qual propriedade — na classe derivada do <xref:System.ComponentModel.Design.DesignerActionList> classe — o item deve ser vinculado. Quando o programador interage com o item do painel por meio da interface do usuário (IU), essa propriedade associada será definida.  
+  
+ <xref:System.ComponentModel.Design.DesignerActionPropertyItem.MemberName%2A>é definido no construtor. Seu valor diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedComponent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent RelatedComponent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent RelatedComponent" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionPropertyItem.RelatedComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um componente que contribui com seus itens no painel atual.</summary>
+        <value>O componente de contribuição, que deve ter um designer associado que fornece <see cref="T:System.ComponentModel.Design.DesignerActionItem" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.ComponentModel.Design.DesignerActionPropertyItem.RelatedComponent%2A> propriedade, outro componente pode dar a seus itens de painel de modelo de pull para a lista atual. Por exemplo, um controle de usuário pode agregar o <xref:System.ComponentModel.Design.DesignerActionItem> objetos de um ou mais dos seus controles constituintes.  
+  
+ Esta propriedade funciona em conjunto com o <xref:System.ComponentModel.Design.DesignerActionItem.AllowAssociate%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

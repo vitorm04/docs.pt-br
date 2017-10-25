@@ -1,0 +1,269 @@
+<Type Name="BindingMemberInfo" FullName="System.Windows.Forms.BindingMemberInfo">
+  <TypeSignature Language="C#" Value="public struct BindingMemberInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit BindingMemberInfo extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.BindingMemberInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações que permitem que um <see cref="T:System.Windows.Forms.Binding" /> para resolver uma associação de dados para a propriedade de um objeto ou a propriedade do objeto atual em uma lista de objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingMemberInfo> é retornado pelo <xref:System.Windows.Forms.Binding.BindingMemberInfo%2A> propriedade o <xref:System.Windows.Forms.Binding> classe.  
+  
+ O <xref:System.Windows.Forms.BindingMemberInfo> é criada a partir de cadeia de caracteres passada para o <xref:System.Windows.Forms.BindingMemberInfo.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo imprime o <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> para cada controle em um formulário.  
+  
+ [!code-cpp[Classic BindingMemberInfo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingMemberInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingMemberInfo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingMemberInfo Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingMemberInfo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingMemberInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingMemberInfo (string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingMemberInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataMember">Um caminho de navegação que resolve para a propriedade de um objeto ou a propriedade do objeto atual em uma lista de objetos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.BindingMemberInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.BindingMemberInfo> é criada automaticamente quando você chama o <xref:System.Windows.Forms.BindingMemberInfo.%23ctor%2A> construtor com um nome de propriedade de controle, a fonte de dados e o caminho de navegação. O `dataMember` parâmetro contém o <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingField">
+      <MemberSignature Language="C#" Value="public string BindingField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BindingField" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingMemberInfo.BindingField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade do objeto associado a dados.</summary>
+        <value>O nome da propriedade do objeto associado a dados. Isso pode ser uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A> é o último item encontrado no caminho de navegação retornado pelo <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> propriedade. Por exemplo, se um novo <xref:System.Windows.Forms.Binding> é criado e tem um `dataMember` parâmetro de "Customers.custToOrders.OrderDate" <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> retornará "OrderDate".  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.BindingMemberInfo> de cada <xref:System.Windows.Forms.Binding> em um formulário e imprime o <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A>, e <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> valores de propriedade de <xref:System.Windows.Forms.BindingMemberInfo>.  
+  
+ [!code-cpp[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingMember">
+      <MemberSignature Language="C#" Value="public string BindingMember { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BindingMember" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingMemberInfo.BindingMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações que são usadas para especificar o nome da propriedade do objeto associado a dados.</summary>
+        <value>Uma cadeia de caracteres vazia (""), um nome de propriedade única, ou uma hierarquia de nomes de propriedade delimitados que resolve para o nome da propriedade do objeto de associação de dados final.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.BindingMemberInfo> é criada automaticamente quando você chama o <xref:System.Windows.Forms.BindingMemberInfo.%23ctor%2A> construtor com um nome de propriedade de controle, a fonte de dados e o caminho de navegação. O `dataMember` parâmetro contém o <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> cadeia de caracteres.  
+  
+ O <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> é a combinação de delimitated Períoda do <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A> e <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A> valores. Por exemplo, quando um novo <xref:System.Windows.Forms.Binding> é criado usando um `dataMember` parâmetro de "Customers.custToOrders.OrderDate" <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> retornará "Customers.custToOrders.OrderDate".  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.BindingMemberInfo> objeto de cada <xref:System.Windows.Forms.Binding> em um formulário e imprime o <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A>, e <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> valores de propriedade de <xref:System.Windows.Forms.BindingMemberInfo>.  
+  
+ [!code-cpp[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingPath">
+      <MemberSignature Language="C#" Value="public string BindingPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BindingPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingMemberInfo.BindingPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade ou a hierarquia de nomes de propriedade, delimitados que antecede o nome da propriedade do objeto associado a dados.</summary>
+        <value>O nome da propriedade, ou a hierarquia de nomes de propriedade, delimitados que antecede o nome da propriedade de objeto associado a dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A> é o período de combinação separada da propriedade nomes que antecede o <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A> no caminho de navegação retornado pelo <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> propriedade. Por exemplo, quando um novo <xref:System.Windows.Forms.Binding> é criado e tem um `dataMember` parâmetro de "Customers.custToOrders.OrderDate" <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A> retornará "Customers.custToOrders".  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.BindingMemberInfo> de cada <xref:System.Windows.Forms.Binding> em um formulário e imprime o <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A>, e <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> valores de propriedade de <xref:System.Windows.Forms.BindingMemberInfo>.  
+  
+ [!code-cpp[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingMemberInfo.BindingPath Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingMemberInfo.BindingPath Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object otherObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object otherObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingMemberInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="otherObject">O objeto a ser comparado para fins de igualdade.</param>
+        <summary>Determina se o objeto especificado é igual a este <see cref="T:System.Windows.Forms.BindingMemberInfo" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="otherObject" /> é um <see cref="T:System.Windows.Forms.BindingMemberInfo" /> e <see cref="P:System.Windows.Forms.BindingMemberInfo.BindingMember" /> cadeias de caracteres forem iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> cadeias de caracteres são comparadas com uma configuração de cultura <xref:System.Globalization.CultureInfo.InvariantCulture%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingMemberInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Windows.Forms.BindingMemberInfo" />.</summary>
+        <returns>O código hash para este <see cref="T:System.Windows.Forms.BindingMemberInfo" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.BindingMemberInfo a, System.Windows.Forms.BindingMemberInfo b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Forms.BindingMemberInfo a, valuetype System.Windows.Forms.BindingMemberInfo b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingMemberInfo.op_Equality(System.Windows.Forms.BindingMemberInfo,System.Windows.Forms.BindingMemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Windows.Forms.BindingMemberInfo" />
+        <Parameter Name="b" Type="System.Windows.Forms.BindingMemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="a">A primeira <see cref="T:System.Windows.Forms.BindingMemberInfo" /> para comparação de igualdade.</param>
+        <param name="b">O segundo <see cref="T:System.Windows.Forms.BindingMemberInfo" /> para comparação de igualdade.</param>
+        <summary>Determina se dois objetos <see cref="T:System.Windows.Forms.BindingMemberInfo" /> são iguais.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.BindingMemberInfo.BindingMember" /> cadeias de caracteres para <paramref name="a" /> e <paramref name="b" /> forem iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Windows.Forms.BindingMemberInfo.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.BindingMemberInfo a, System.Windows.Forms.BindingMemberInfo b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Forms.BindingMemberInfo a, valuetype System.Windows.Forms.BindingMemberInfo b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingMemberInfo.op_Inequality(System.Windows.Forms.BindingMemberInfo,System.Windows.Forms.BindingMemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Windows.Forms.BindingMemberInfo" />
+        <Parameter Name="b" Type="System.Windows.Forms.BindingMemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro <see cref="T:System.Windows.Forms.BindingMemberInfo" /> a ser comparado para fins de desigualdade.</param>
+        <param name="b">O segundo <see cref="T:System.Windows.Forms.BindingMemberInfo" /> a ser comparado para fins de desigualdade.</param>
+        <summary>Determina se dois <see cref="T:System.Windows.Forms.BindingMemberInfo" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.BindingMemberInfo.BindingMember" /> cadeias de caracteres para <paramref name="a" /> e <paramref name="b" /> não forem iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Windows.Forms.BindingMemberInfo.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,130 @@
+<Type Name="PipeAccessRule" FullName="System.IO.Pipes.PipeAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class PipeAccessRule : System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PipeAccessRule extends System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.PipeAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma abstração de uma entrada de controle de acesso (ACE) que define uma regra de acesso para um pipe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ O <xref:System.IO.Pipes.PipeAccessRule> classe representa uma abstração de uma base controle entrada de acesso (ACE) que especifica uma conta de usuário, o tipo de acesso para fornecer (leitura, gravação e assim por diante) e se deseja permitir ou negar esse direito.  Essa classe também pode especificar como as regras de acesso são propagadas para objetos filho.  
+  
+ Use o <xref:System.IO.Pipes.PipeAccessRule> classe para criar uma nova regra de acesso.  Você pode manter a regra usando o <xref:System.IO.Pipes.PipeSecurity> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipeAccessRule (System.Security.Principal.IdentityReference identity, System.IO.Pipes.PipeAccessRights rights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.IO.Pipes.PipeAccessRights rights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeAccessRule.#ctor(System.Security.Principal.IdentityReference,System.IO.Pipes.PipeAccessRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="rights" Type="System.IO.Pipes.PipeAccessRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que encapsula uma referência a uma conta de usuário.</param>
+        <param name="rights">Uma da <see cref="T:System.IO.Pipes.PipeAccessRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica se a operação será permitida ou negada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.PipeAccessRule" /> classe com a identidade especificada, direitos de acesso do pipe e tipo de controle de acesso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de controle de acesso que você pode persistir usando o <xref:System.IO.Pipes.PipeSecurity> classe. As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipeAccessRule (string identity, System.IO.Pipes.PipeAccessRights rights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.IO.Pipes.PipeAccessRights rights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeAccessRule.#ctor(System.String,System.IO.Pipes.PipeAccessRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="rights" Type="System.IO.Pipes.PipeAccessRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome da conta de usuário.</param>
+        <param name="rights">Uma da <see cref="T:System.IO.Pipes.PipeAccessRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica se a operação será permitida ou negada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.PipeAccessRule" /> classe com a identidade especificada, direitos de acesso do pipe e tipo de controle de acesso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de controle de acesso que você pode persistir usando o <xref:System.IO.Pipes.PipeSecurity> classe. As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipeAccessRights">
+      <MemberSignature Language="C#" Value="public System.IO.Pipes.PipeAccessRights PipeAccessRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeAccessRights PipeAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeAccessRule.PipeAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.IO.Pipes.PipeAccessRights" /> sinalizadores que estão associados com a atual <see cref="T:System.IO.Pipes.PipeAccessRule" /> objeto.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.IO.Pipes.PipeAccessRights" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

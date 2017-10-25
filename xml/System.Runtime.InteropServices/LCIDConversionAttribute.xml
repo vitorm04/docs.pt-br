@@ -1,0 +1,108 @@
+<Type Name="LCIDConversionAttribute" FullName="System.Runtime.InteropServices.LCIDConversionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LCIDConversionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LCIDConversionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.LCIDConversionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que a assinatura não gerenciada do método espera um parâmetro de localidade (LCID) do identificador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para métodos.  
+  
+ Esse atributo indica que o marshaler deve esperar um LCID para ser passados após o argumento de método designado. Ao fazer chamadas de código gerenciado para não gerenciado, o marshaler fornece o argumento LCID automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra as traduções de assinatura diferente com base em diferentes valores fornecidos para `LCIDConversionAttribute`.  
+  
+ [!code-cpp[LCIDConversionAttributeSample2#1](~/samples/snippets/cpp/VS_Snippets_CLR/LCIDConversionAttributeSample2/CPP/lcidattrsample.cpp#1)]
+ [!code-csharp[LCIDConversionAttributeSample2#1](~/samples/snippets/csharp/VS_Snippets_CLR/LCIDConversionAttributeSample2/CS/lcidattrsample.cs#1)]
+ [!code-vb[LCIDConversionAttributeSample2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/LCIDConversionAttributeSample2/VB/lcidattrsample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LCIDConversionAttribute (int lcid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 lcid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.LCIDConversionAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="lcid" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lcid">Indica a posição do argumento LCID na assinatura não gerenciada, onde 0 é o primeiro argumento.</param>
+        <summary>Inicializa uma nova instância do <see langword="LCIDConversionAttribute" /> classe com a posição do LCID na assinatura não gerenciada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.LCIDConversionAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do argumento LCID na assinatura não gerenciada.</summary>
+        <value>A posição do argumento LCID na assinatura não gerenciada, onde 0 é o primeiro argumento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

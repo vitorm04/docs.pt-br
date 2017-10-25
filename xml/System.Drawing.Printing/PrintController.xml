@@ -1,0 +1,200 @@
+<Type Name="PrintController" FullName="System.Drawing.Printing.PrintController">
+  <TypeSignature Language="C#" Value="public abstract class PrintController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PrintController extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PrintController" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Controla como o documento é impresso, durante a impressão por meio de um aplicativo do Windows Forms.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando implementado em uma classe derivada, <xref:System.Drawing.Printing.PrintController> controles como um <xref:System.Drawing.Printing.PrintDocument> é impresso. <xref:System.Drawing.Printing.PrintDocument.Print%2A?displayProperty=nameWithType>invoca o controlador impressão <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>, <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A>, <xref:System.Drawing.Printing.PrintController.OnStartPage%2A>, e <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> métodos, que por sua vez indicam a impressora como imprimir o documento. Visualização de impressão usa um especializado <xref:System.Drawing.Printing.PrintController>. Para obter um exemplo de um controlador de impressão é especializado para visualização de impressão, consulte o <xref:System.Drawing.Printing.PreviewPrintController>.  
+  
+ <xref:System.Drawing.Printing.PrintController>é usado pelo <xref:System.Drawing.Printing.PrintDocument>e normalmente não são usadas diretamente.  
+  
+ O .NET Framework inclui três controladores de impressão que são derivados de <xref:System.Drawing.Printing.PrintController> que ajudam a realizar tarefas comuns. O <xref:System.Drawing.Printing.StandardPrintController> imprime um documento para uma impressora. O <xref:System.Drawing.Printing.PreviewPrintController> gera uma visualização de documento aparência quando impresso e é usado pelo <xref:System.Windows.Forms.PrintPreviewControl> e <xref:System.Windows.Forms.PrintPreviewDialog> classes. O <xref:System.Windows.Forms.PrintControllerWithStatusDialog> fornece uma caixa de diálogo status impressão durante o processo de impressão.  
+  
+ Para obter mais informações sobre como imprimir com formulários do Windows, consulte o <xref:System.Drawing.Printing> visão geral do namespace. Se você quiser imprimir a partir de um aplicativo do Windows Presentation Foundation, consulte o <xref:System.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintController ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintController.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Printing.PrintController" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPreview">
+      <MemberSignature Language="C#" Value="public virtual bool IsPreview { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrintController.IsPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Drawing.Printing.PrintController" /> é usado para a visualização de impressão.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPage">
+      <MemberSignature Language="C#" Value="public virtual void OnEndPage (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnEndPage(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintController.OnEndPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento que está sendo impresso.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> que contém os dados do evento.</param>
+        <summary>Quando substituído em uma classe derivada, conclui a sequência de controle que determina quando e como imprimir uma página de um documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PrintController.OnEndPage%2A>é chamado imediatamente após o <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento. Se uma exceção é gerada dentro de um <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos de um <xref:System.Drawing.Printing.PrintDocument>, <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> não for chamado.  
+  
+ <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é enviado para a impressora. Depois de <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. (Use o <xref:System.Drawing.Printing.PrintController.OnStartPage%2A> método para definir como imprimir uma página em um documento. Por exemplo, você pode ajustar as configurações de página separadamente para cada página.) O <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPrint">
+      <MemberSignature Language="C#" Value="public virtual void OnEndPrint (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnEndPrint(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintController.OnEndPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento que está sendo impresso.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Quando substituído em uma classe derivada, conclui a sequência de controle que determina quando e como imprimir um documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A>é chamado imediatamente após o <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.EndPrint> evento.  
+  
+ <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é enviado para a impressora. Depois de <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. (Use o <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> método para determinar quando e como imprimir um documento. Por exemplo, você pode programar a impressão para 30 minutos ou ajustar as configurações de impressora para o documento.) O <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPage">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Graphics OnStartPage (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Graphics OnStartPage(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintController.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento que está sendo impresso.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> que contém os dados do evento.</param>
+        <summary>Quando substituído em uma classe derivada, começa a sequência de controle que determina quando e como imprimir uma página de um documento.</summary>
+        <returns>Um <see cref="T:System.Drawing.Graphics" /> que representa uma página de um <see cref="T:System.Drawing.Printing.PrintDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PrintController.OnStartPage%2A>é chamado imediatamente antes do <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento.  
+  
+ <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é enviado para a impressora. Depois de <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. O <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ Use o <xref:System.Drawing.Printing.PrintController.OnStartPage%2A> método para definir como imprimir uma página em um documento. Por exemplo, você pode ajustar as configurações de página separadamente para cada página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPrint">
+      <MemberSignature Language="C#" Value="public virtual void OnStartPrint (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnStartPrint(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintController.OnStartPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento que está sendo impresso.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Quando substituído em uma classe derivada, inicia a sequência de controle que determina quando e como imprimir um documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>é chamado imediatamente após o <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.BeginPrint> evento.  
+  
+ Use o <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> método para determinar quando e como imprimir um documento. Por exemplo, você pode programar a impressão para 30 minutos ou ajustar as configurações de impressora para o documento. <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é enviado para a impressora. Depois de <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> para um de uma única página. O <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ O <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A> método é um bom lugar para verificar se <xref:System.Drawing.Printing.PrinterSettings> são válidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

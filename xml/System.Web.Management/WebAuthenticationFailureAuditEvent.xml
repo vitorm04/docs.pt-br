@@ -1,0 +1,159 @@
+<Type Name="WebAuthenticationFailureAuditEvent" FullName="System.Web.Management.WebAuthenticationFailureAuditEvent">
+  <TypeSignature Language="C#" Value="public class WebAuthenticationFailureAuditEvent : System.Web.Management.WebFailureAuditEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebAuthenticationFailureAuditEvent extends System.Web.Management.WebFailureAuditEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebAuthenticationFailureAuditEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebFailureAuditEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre falhas de autenticação do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista a seguir descreve os recursos para os quais <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> os eventos são gerados por padrão pelo ASP.NET.  
+  
+> [!NOTE]
+>  Por padrão, que ASP.NET está configurado para condições de falha de auditoria de log condições de sucesso somente, como log podem severos sobrecarregar os recursos do sistema. Você sempre pode configurar o sistema para registrar em log as condições de sucesso.  
+  
+-   Autenticação de formulários. As auditorias com êxito inclui o nome de usuário era autenticado; As auditorias sem êxito não incluem o nome de usuário, desde que eles normalmente são provenientes de uma permissão que falharam na validação ou descriptografia. Ambos contêm o endereço IP do cliente. O código de auditoria do evento relacionado é <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure>.  
+  
+-   Associação. Auditorias de êxito e falha contêm o nome de usuário que foi tentada. Nenhuma forma de auditoria conterá a senha que foi tentada, porque que se arriscaria a persistência de uma senha válida no log. O código de auditoria do evento relacionado é <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationFailure>.  
+  
+ Quando um <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> é gerado, por padrão, ele atualiza o contador de desempenho eventos de falha de autenticação de auditoria gerados. Para exibir esse contador de desempenho no Monitor do sistema (PerfMon), no **adicionar contadores** janela Selecione `ASP.NET` no **desempenho** lista do objeto lista suspensa, selecione o **eventos de falha de autenticação gerado** contador de desempenho e clique no **adicionar** botão. Para obter mais informações, consulte [usando o Monitor do sistema (PerfMon) com aplicativos ASP.NET](http://go.microsoft.com/fwlink/?linkid=36882&clcid=0x409) no MSDN.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de derivar do <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> de classe, consulte o exemplo fornecido neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> classe.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationFailureAuditEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/CS/WebAuthenticationFailureAuditEvent.cs#1)]
+ [!code-vb[System.Web.Management.WebAuthenticationFailureAuditEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/VB/WebAuthenticationFailureAuditEvent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebAuthenticationFailureAuditEvent (string message, object eventSource, int eventCode, string nameToAuthenticate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, string nameToAuthenticate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebAuthenticationFailureAuditEvent.#ctor(System.String,System.Object,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="nameToAuthenticate" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O <see cref="T:System.Web.Management.WebEventCodes" /> valor associado ao evento.</param>
+        <param name="nameToAuthenticate">O nome do usuário para autenticar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebAuthenticationFailureAuditEvent" /> classe com os parâmetros de evento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebAuthenticationFailureAuditEvent.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET. Você pode chamar o <xref:System.Web.Management.WebAuthenticationFailureAuditEvent.%23ctor%2A> construtor ao derivar do <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como personalizar este construtor.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationFailureAuditEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/CS/WebAuthenticationFailureAuditEvent.cs#2)]
+ [!code-vb[System.Web.Management.WebAuthenticationFailureAuditEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/VB/WebAuthenticationFailureAuditEvent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebAuthenticationFailureAuditEvent (string message, object eventSource, int eventCode, int eventDetailCode, string nameToAuthenticate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode, string nameToAuthenticate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebAuthenticationFailureAuditEvent.#ctor(System.String,System.Object,System.Int32,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+        <Parameter Name="nameToAuthenticate" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">O <see cref="T:System.Web.Management.WebEventCodes" /> valor que especifica o identificador detalhado para o evento.</param>
+        <param name="nameToAuthenticate">O nome do usuário para autenticar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebAuthenticationFailureAuditEvent" /> classe com os parâmetros de evento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebAuthenticationFailureAuditEvent.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET. Você pode chamar o <xref:System.Web.Management.WebAuthenticationFailureAuditEvent.%23ctor%2A> construtor ao derivar do <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como personalizar este construtor.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationFailureAuditEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/CS/WebAuthenticationFailureAuditEvent.cs#3)]
+ [!code-vb[System.Web.Management.WebAuthenticationFailureAuditEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/VB/WebAuthenticationFailureAuditEvent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameToAuthenticate">
+      <MemberSignature Language="C#" Value="public string NameToAuthenticate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameToAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebAuthenticationFailureAuditEvent.NameToAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do usuário para autenticar.</summary>
+        <value>O nome do usuário para autenticar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente as auditorias com êxito devem incluir o nome do usuário autenticado. As auditorias de falha não devem incluir o nome de usuário, desde que eles normalmente são provenientes de validação ou com falha de descriptografia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar <xref:System.Web.Management.WebAuthenticationFailureAuditEvent.NameToAuthenticate%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationFailureAuditEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/CS/WebAuthenticationFailureAuditEvent.cs#3)]
+ [!code-vb[System.Web.Management.WebAuthenticationFailureAuditEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationFailureAuditEvent/VB/WebAuthenticationFailureAuditEvent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

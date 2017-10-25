@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.Adapters">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.Adapters" /> namespace contém as classes base para adaptadores de controle e de página. Você pode usar esses adaptadores para substituir os estados de ciclo de vida de páginas e controles. Isso é útil se você quiser modificar a marcação de um controle ou o comportamento para novos padrões de marcação ou navegadores específicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter?displayProperty=nameWithType> classe herda o <xref:System.Web.UI.Adapters.ControlAdapter> classe. O <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter?displayProperty=nameWithType> e <xref:System.Web.UI.WebControls.Adapters.MenuAdapter?displayProperty=nameWithType> classes herdam o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter?displayProperty=nameWithType> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,279 @@
+<Type Name="GridItem" FullName="System.Windows.Forms.GridItem">
+  <TypeSignature Language="C#" Value="public abstract class GridItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GridItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GridItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa uma linha em um <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itens de grade representam a hierarquia do modo de exibição em um <xref:System.Windows.Forms.PropertyGrid>. Você pode usar um <xref:System.Windows.Forms.GridItem> para obter informações sobre o estado e o conteúdo da grade.  
+  
+ <xref:System.Windows.Forms.GridItem>objetos não devem ter cache porque eles representam um instantâneo do estado do <xref:System.Windows.Forms.PropertyGrid> no momento em que eles são acessados e atividade de grade pode descartá-los. O <xref:System.Windows.Forms.PropertyGrid> geralmente recria <xref:System.Windows.Forms.GridItem> objetos internamente sem alterar o modo de exibição para o usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GridItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expandable">
+      <MemberSignature Language="C#" Value="public virtual bool Expandable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expandable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Expandable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se a propriedade especificada é expandida para mostrar as propriedades aninhadas.</summary>
+        <value>
+          <see langword="true" />Se a propriedade especificada pode ser expandida; Caso contrário, <see langword="false" />. O padrão é falso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma propriedade for expansível, um sinal de adição (+) sinal é exibido com o nome de propriedade no <xref:System.Windows.Forms.PropertyGrid>. Se clicar no sinal de adição e as propriedades aninhadas não estão disponíveis, o sinal de adição é então removido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public virtual bool Expanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expanded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Expanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.GridItem" /> está em um estado expandido.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="P:System.Windows.Forms.GridItem.Expanded" /> propriedade foi definida como <see langword="true" />, mas um <see cref="T:System.Windows.Forms.GridItem" /> não é expansível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GridItems">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.GridItemCollection GridItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItemCollection GridItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.GridItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a coleção de <see cref="T:System.Windows.Forms.GridItem" /> objetos, se houver, associado como um filho deste <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>A coleção de objetos <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridItemType">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.GridItemType GridItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.GridItemType GridItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.GridItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo deste <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.GridItemType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma <xref:System.Windows.Forms.GridItem> do tipo <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType>, você também deve garantir que o <xref:System.Windows.Forms.GridItem.PropertyDescriptor%2A> tem um valor válido. Para uma <xref:System.Windows.Forms.GridItem> do tipo <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType> o <xref:System.Windows.Forms.GridItem.Parent%2A> propriedade deve ser `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public abstract string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o texto deste <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o texto associado a esta <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe obtém o texto que é exibido na coluna esquerda da grade. O texto recuperado pode ser diferente do nome real da propriedade da propriedade representada por este <xref:System.Windows.Forms.GridItem>. Você pode obter o nome de um <xref:System.Windows.Forms.GridItem> do tipo <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType> recuperando o <xref:System.Windows.Forms.GridItem.PropertyDescriptor%2A> e verificando seu <xref:System.ComponentModel.MemberDescriptor.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.GridItem Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItem Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o pai <see cref="T:System.Windows.Forms.GridItem" /> deste <see cref="T:System.Windows.Forms.GridItem" />, se houver.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.GridItem" /> que representa o pai do <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.GridItem.GridItemType%2A> para o <xref:System.Windows.Forms.GridItem> é <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType>, esse valor será `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptor">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.PropertyDescriptor PropertyDescriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor PropertyDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.PropertyDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o <see cref="T:System.ComponentModel.PropertyDescriptor" /> que é associada a essa <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>O <see cref="T:System.ComponentModel.PropertyDescriptor" /> associado a este <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só é válida para um <xref:System.Windows.Forms.GridItem> do tipo <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType>.  
+  
+ Você pode usar essa propriedade para recuperar informações tais como o tipo de propriedade do item da grade, o nome do item da grade ou o conversor de tipo para o item de grade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public abstract bool Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridItem.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, seleciona esta opção <see cref="T:System.Windows.Forms.GridItem" /> no <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+        <returns>
+          <see langword="true" /> se a seleção for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define dados definidos pelo usuário sobre o <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém dados sobre o <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o valor atual deste <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>O valor atual deste <see cref="T:System.Windows.Forms.GridItem" />. Ele pode ser <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

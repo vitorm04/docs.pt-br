@@ -1,0 +1,373 @@
+<Type Name="BodyWriter" FullName="System.ServiceModel.Channels.BodyWriter">
+  <TypeSignature Language="C#" Value="public abstract class BodyWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BodyWriter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.BodyWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o gravador do corpo da mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem consiste em cabeçalhos e um corpo. Os cabeçalhos são armazenados no buffer e o corpo é transmitido. Porque o corpo é transmitido, o usuário não pode passar o conteúdo real do corpo de uma mensagem. Em vez disso, o usuário deve passar em uma classe que sabe como gravar o corpo quando for solicitado a fazê-lo. Isso é feito ao passar uma classe derivada de <xref:System.ServiceModel.Channels.BodyWriter> para o <xref:System.ServiceModel.Channels.Message>. Uma mensagem chama a classe derivada de <xref:System.ServiceModel.Channels.BodyWriter> sempre que ele requer que o corpo a ser gravado usando um <xref:System.Xml.XmlWriter>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como derivar uma classe de <xref:System.ServiceModel.Channels.BodyWriter>. Essa substituição usa uma matriz de cadeias de caracteres e grava-as para um <xref:System.Xml.XmlDictionaryWriter>.  
+  
+ [!code-csharp[S_UEBodyWriter#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/program.cs#1)]
+ [!code-vb[S_UEBodyWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BodyWriter (bool isBuffered);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isBuffered) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isBuffered" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isBuffered">
+          <see langword="true" />Se o gravador de corpo pode ser chamado várias vezes; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.BodyWriter" /> classe que indica se é para armazenar em buffer explicitamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `isBuffered` é `false` , em seguida, a mensagem chama o método de gravação de uma vez e buffers de conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWriteBodyContents">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWriteBodyContents (System.Xml.XmlDictionaryWriter writer, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginWriteBodyContents(class System.Xml.XmlDictionaryWriter writer, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.BeginWriteBodyContents(System.Xml.XmlDictionaryWriter,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador.</param>
+        <param name="callback">O retorno de chamada.</param>
+        <param name="state">O estado.</param>
+        <summary>Começa a gravar o conteúdo do corpo para o gravador de corpo com estado, o retorno de chamada e o gravador especificado.</summary>
+        <returns>O resultado da operação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBufferedCopy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.BodyWriter CreateBufferedCopy (int maxBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.BodyWriter CreateBufferedCopy(int32 maxBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.CreateBufferedCopy(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BodyWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxBufferSize">O tamanho máximo do buffer para o corpo.</param>
+        <summary>Cria uma cópia em buffer do corpo.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.BodyWriter" /> que contém uma cópia deste objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered%2A> é `true` o <xref:System.ServiceModel.Channels.BodyWriter> objeto é retornado. Se <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered%2A> é `false` , em seguida, o conteúdo do <xref:System.ServiceModel.Channels.BodyWriter> até `maxBufferSize` é retornado. Isso também chama <xref:System.ServiceModel.Channels.BodyWriter.OnCreateBufferedCopy%28System.Int32%29> como um ponto de extensibilidade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma cópia em buffer de um objeto existente <xref:System.ServiceModel.Channels.BodyWriter> instância.  
+  
+ [!code-csharp[S_UEBodyWriter#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/snippets.cs#2)]
+ [!code-vb[S_UEBodyWriter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="maxBufferSize" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">O corpo já foi gravado e não pode ser gravado novamente, ou o gravador de corpo não é armazenada em buffer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWriteBodyContents">
+      <MemberSignature Language="C#" Value="public void EndWriteBodyContents (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndWriteBodyContents(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.EndWriteBodyContents(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O resultado da operação.</param>
+        <summary>Termina a gravação de conteúdo do corpo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuffered">
+      <MemberSignature Language="C#" Value="public bool IsBuffered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BodyWriter.IsBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o método de gravação pode ser chamado várias vezes.</summary>
+        <value>
+          <see langword="true" />Se o gravador de corpo pode ser chamado várias vezes; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `isBuffered` é `false` , em seguida, a mensagem chama o método de gravação de uma vez e buffers de conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginWriteBodyContents (System.Xml.XmlDictionaryWriter writer, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginWriteBodyContents(class System.Xml.XmlDictionaryWriter writer, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.OnBeginWriteBodyContents(System.Xml.XmlDictionaryWriter,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador</param>
+        <param name="callback">O retorno de chamada</param>
+        <param name="state">O estado.</param>
+        <summary>Gera um evento quando o gravador de corpo começa a gravar o conteúdo do corpo com estado, o retorno de chamada e o gravador especificado.</summary>
+        <returns>O resultado assíncrono.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateBufferedCopy">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Channels.BodyWriter OnCreateBufferedCopy (int maxBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.BodyWriter OnCreateBufferedCopy(int32 maxBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.OnCreateBufferedCopy(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BodyWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxBufferSize">O tamanho máximo do buffer para o corpo.</param>
+        <summary>Fornece um ponto de extensibilidade quando o conteúdo do corpo é gravado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.BodyWriter" /> com o tamanho máximo do buffer especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada de <xref:System.ServiceModel.Channels.BodyWriter> pode substituir este método para criar uma cópia em buffer o <xref:System.ServiceModel.Channels.BodyWriter>. Mas a implementação padrão de <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> chamadas <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>, de modo a substituir apenas <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> deve ser mais fácil e para a maioria dos cenários.  
+  
+ Observe que o <xref:System.ServiceModel.Channels.BodyWriter> retornado deve ser armazenado em buffer, que é <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered%2A> devem ser `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndWriteBodyContents (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndWriteBodyContents(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.OnEndWriteBodyContents(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O resultado da operação.</param>
+        <summary>Gera um evento quando o gravador de corpo termina gravação corpo de conteúdo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected abstract void OnWriteBodyContents (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteBodyContents(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> usado para gravar o corpo da mensagem.</param>
+        <summary>Quando implementada, fornece um ponto de extensibilidade quando o conteúdo do corpo é gravado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser implementado por classes derivadas de <xref:System.ServiceModel.Channels.BodyWriter>. Esse é o método de chave que grava o corpo. Se o <xref:System.ServiceModel.Channels.BodyWriter> é armazenado em buffer, em seguida, esse método é chamado apenas uma vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra uma substituição do <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> método.  
+  
+ [!code-csharp[S_UEBodyWriter#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/program.cs#3)]
+ [!code-vb[S_UEBodyWriter#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBodyContents">
+      <MemberSignature Language="C#" Value="public void WriteBodyContents (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBodyContents(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BodyWriter.WriteBodyContents(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> usado para gravar o corpo da mensagem.</param>
+        <summary>Grava o conteúdo do corpo da mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão de <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> chamadas <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>, substituindo assim <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> fornece o melhor ponto de extensão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> método.  
+  
+ [!code-csharp[S_UEBodyWriter#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/program.cs#4)]
+ [!code-vb[S_UEBodyWriter#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

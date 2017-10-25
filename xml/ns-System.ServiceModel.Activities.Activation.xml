@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Activation">
+  <Docs>
+    <summary>O namespace System.ServiceModel.Activities.Activation contém o <see cref="T:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory" /> que fornece instâncias da <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> em ambientes em que a instância de host é criada dinamicamente em resposta a mensagens de entrada de hospedagem gerenciado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

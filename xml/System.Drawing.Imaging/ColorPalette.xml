@@ -1,0 +1,73 @@
+<Type Name="ColorPalette" FullName="System.Drawing.Imaging.ColorPalette">
+  <TypeSignature Language="C#" Value="public sealed class ColorPalette" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ColorPalette extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ColorPalette" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma matriz de cores que formam uma paleta de cores. As cores são as cores ARGB de 32 bits. Não herdável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não tem permissão para construir um <xref:System.Drawing.Imaging.ColorPalette> diretamente do objeto. Se você tiver criado um <xref:System.Drawing.Imaging.ColorPalette> do objeto, você pode manipular o tamanho da paleta de uma imagem específica, que não é permitido. Use o <xref:System.Drawing.Image.Palette%2A?displayProperty=nameWithType> propriedade para obter um <xref:System.Drawing.Imaging.ColorPalette> objeto.  
+  
+ As cores da paleta são limitadas a cores ARGB de 32 bits. Uma cor ARGB de 32-bit tem 8 bits cada para valores de alfa, vermelho, verde e azul. Os 8 bits mais baixos compõem o bit azul, os próximos 8 bits verdes, os próximos 8 bits são vermelhos, e os 8 bits mais significativos alfa. Isso significa que cada componente pode variar de 0 a 255. Totalmente é 255 e totalmente off é 0. Alfa é usada para tornar o valor de cor transparente (alfa = 0) ou opaco (alfa = 255). O número de níveis de intensidade da imagem pode ser aumentado sem aumentar o número de cores usadas. Esse processo cria o que é chamado de meio-tom e oferece maior contraste a um custo de resolução menor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Entries">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color[] Entries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color[] Entries" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorPalette.Entries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de estruturas <see cref="T:System.Drawing.Color" />.</summary>
+        <value>A matriz de estrutura <see cref="T:System.Drawing.Color" /> que compõe esse <see cref="T:System.Drawing.Imaging.ColorPalette" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public int Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorPalette.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica como interpretar as informações de cor na matriz de cores.</summary>
+        <value>Os seguintes valores de sinalizador são válidos:  
+  
+ 0x00000001  
+ Os valores de cor na matriz contêm informações alfa.  
+  
+ 0x00000002  
+ As cores na matriz são os valores de escala de cinza.  
+  
+ 0x00000004  
+ As cores na matriz são valores de meio-tom.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

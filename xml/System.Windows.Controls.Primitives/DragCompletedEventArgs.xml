@@ -1,0 +1,126 @@
+<Type Name="DragCompletedEventArgs" FullName="System.Windows.Controls.Primitives.DragCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class DragCompletedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DragCompletedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.DragCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre o <see cref="E:System.Windows.Controls.Primitives.Thumb.DragCompleted" /> evento que ocorre quando o usuário conclui uma operação de arrastar com o mouse de um <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controle.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DragCompletedEventArgs (double horizontalChange, double verticalChange, bool canceled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 horizontalChange, float64 verticalChange, bool canceled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DragCompletedEventArgs.#ctor(System.Double,System.Double,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="horizontalChange" Type="System.Double" />
+        <Parameter Name="verticalChange" Type="System.Double" />
+        <Parameter Name="canceled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="horizontalChange">A alteração horizontal na posição do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controle, resultante da operação de arrastar.</param>
+        <param name="verticalChange">A alteração vertical na posição do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controle, resultante da operação de arrastar.</param>
+        <param name="canceled">Um valor booliano que indica se a operação de arrastar foi cancelada por uma chamada para o <see cref="M:System.Windows.Controls.Primitives.Thumb.CancelDrag" /> método.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.DragCompletedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="public bool Canceled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Canceled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DragCompletedEventArgs.Canceled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se a operação de arrastar para uma <see cref="T:System.Windows.Controls.Primitives.Thumb" /> foi cancelada por uma chamada para o <see cref="M:System.Windows.Controls.Primitives.Thumb.CancelDrag" /> método.</summary>
+        <value>
+          <see langword="true" />Se uma operação de arrastar foi cancelada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalChange">
+      <MemberSignature Language="C#" Value="public double HorizontalChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DragCompletedEventArgs.HorizontalChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a alteração horizontal na posição do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> depois que o usuário arrasta o controle com o mouse.</summary>
+        <value>A diferença horizontal entre o ponto em que o usuário pressionou o botão esquerdo do mouse e o ponto em que o usuário lançada no botão durante uma operação de arrastar de um <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controle. Nenhum valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DragCompletedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O delegado de manipulador de eventos.</param>
+        <param name="genericTarget">O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> que usa o manipulador.</param>
+        <summary>Converte um método que manipula o <see cref="E:System.Windows.Controls.Primitives.Thumb.DragCompleted" /> eventos para o <see cref="T:System.Windows.Controls.Primitives.DragCompletedEventHandler" /> tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação converte o `genericHandler` como um <xref:System.Windows.Controls.Primitives.DragCompletedEventHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalChange">
+      <MemberSignature Language="C#" Value="public double VerticalChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DragCompletedEventArgs.VerticalChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a alteração vertical na posição do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> depois que o usuário arrasta o controle com o mouse.</summary>
+        <value>A diferença vertical entre o ponto em que o usuário pressionou o botão esquerdo do mouse e o ponto em que o usuário lançada no botão durante uma operação de arrastar de um <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controle. Nenhum valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

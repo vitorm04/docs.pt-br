@@ -1,0 +1,177 @@
+<Type Name="MaterialGroup" FullName="System.Windows.Media.Media3D.MaterialGroup">
+  <TypeSignature Language="C#" Value="public sealed class MaterialGroup : System.Windows.Media.Media3D.Material" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MaterialGroup extends System.Windows.Media.Media3D.Material" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.MaterialGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Material</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um <see cref="T:System.Windows.Media.Media3D.Material" /> que é uma composição de materiais em sua coleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Windows.Media.Media3D.DiffuseMaterial>, <xref:System.Windows.Media.Media3D.SpecularMaterial>, e <xref:System.Windows.Media.Media3D.EmissiveMaterial> apresentar efeitos distintos, é útil para combiná-las.  Por exemplo, você pode optar por aplicar uma textura complexa a uma malha usando DiffuseMaterial, ao adicionar um efeito de realce com um SpecularMaterial na mesma malha.  MaterialGroup permite que você trate essas materiais como uma textura única para sua conveniência.  
+  
+   
+  
+## Examples  
+ O seguinte trecho mostra um <xref:System.Windows.Media.Media3D.MaterialGroup>.  
+  
+ [!code-xaml[hittest3d#_MIL3D_HitTest3D_xaml_n1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/MyApp.xaml#_mil3d_hittest3d_xaml_n1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MaterialGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MaterialGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Media3D.MaterialGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O trecho a seguir mostra um MaterialGroup.  
+  
+ [!code-xaml[hittest3d#_MIL3D_HitTest3D_xaml_n1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/MyApp.xaml#_mil3d_hittest3d_xaml_n1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MaterialCollection Children { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.MaterialCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MaterialGroup.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MaterialCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de filhos <see cref="T:System.Windows.Media.Media3D.Material" /> objetos.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.MaterialCollection" />que contém o filho <see cref="T:System.Windows.Media.Media3D.Material" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Children"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.MaterialGroup.ChildrenProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar vários materiais para um <xref:System.Windows.Media.Media3D.MaterialGroup>.  
+  
+ [!code-csharp[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/EmissiveMaterialExample.cs#emissivematerialcodeexampleinline1)]
+ [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexampleinline1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildrenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildrenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.MaterialGroup.ChildrenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.MaterialGroup.Children" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MaterialGroup Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.MaterialGroup Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MaterialGroup.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MaterialGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia modificável do <see cref="T:System.Windows.Media.Media3D.MaterialGroup" />.</summary>
+        <returns>Uma cópia modificável do <see cref="T:System.Windows.Media.Media3D.MaterialGroup" />. A cópia retornada é efetivamente um clone profundo do objeto atual, embora alguns copiando pode ser adiada até que o necessário para melhorar o desempenho. A cópia <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MaterialGroup CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.MaterialGroup CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MaterialGroup.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MaterialGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma versão não animado a <see cref="T:System.Windows.Media.Media3D.MaterialGroup" />. Retornado <see cref="T:System.Windows.Media.Media3D.MaterialGroup" /> representa o estado do objeto atual no momento em que esse método foi chamado.</summary>
+        <returns>Retorna o valor atual de <see cref="T:System.Windows.Media.Media3D.MaterialGroup" />. Retornado <see cref="T:System.Windows.Media.Media3D.MaterialGroup" /> tem o mesmo valor que o valor de instantâneo do objeto atual, mas não é animada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MaterialGroup.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

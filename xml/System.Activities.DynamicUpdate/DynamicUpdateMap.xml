@@ -1,0 +1,236 @@
+<Type Name="DynamicUpdateMap" FullName="System.Activities.DynamicUpdate.DynamicUpdateMap">
+  <TypeSignature Language="C#" Value="public class DynamicUpdateMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicUpdateMap extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DynamicUpdate.DynamicUpdateMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.DynamicUpdateMapConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções para um mapa de atualização dinâmica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao controle de versão e à funcionalidade de atualização dinâmica do Windows Workflow Foundation. versão do fluxo de trabalho [!INCLUDE[crabout](~/includes/crabout-md.md)], identidade do fluxo de trabalho e atualização dinâmica, consulte os tópicos a seguir.  
+  
+ [Controle de versão de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Descreve a funcionalidade do controle de versão do fluxo de trabalho introduzida no [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Atualização dinâmica](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Descreve como atualizar a definição de fluxo de trabalho de uma instância de fluxo de trabalho persistente usando a atualização dinâmica.  
+  
+ [Usando WorkflowApplication identidade e controle de versão](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Descreve como usar <xref:System.Activities.WorkflowIdentity> para hospedar várias versões de um fluxo de trabalho lado a lado.  
+  
+ [Controle de versão lado a lado no WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Descreve como hospedar várias versões de um fluxo de trabalho em um único ponto de extremidade.  
+  
+ [Como hospedar várias versões de um fluxo de trabalho lado a lado](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra como atualizar uma definição de fluxo de trabalho e hospedagem de fluxos de trabalho usando a definição antiga e nova ao mesmo tempo.  
+  
+ [Como atualizar a definição de uma instância de fluxo de trabalho em execução](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra a atualização de instâncias de fluxo de trabalho persistentes para usar uma nova definição de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CalculateImplementationMapItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateImplementationMapItems (System.Activities.Activity activityDefinitionToBeUpdated);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;object, class System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateImplementationMapItems(class System.Activities.Activity activityDefinitionToBeUpdated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateImplementationMapItems(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activityDefinitionToBeUpdated" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activityDefinitionToBeUpdated">A definição da atividade a ser atualizada.</param>
+        <summary>Calcula os itens de mapa usados na implementação de <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMap" /> com especificado na definição de atividade.</summary>
+        <returns>Os itens de mapa calculados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateImplementationMapItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateImplementationMapItems (System.Activities.Activity activityDefinitionToBeUpdated, System.Activities.LocationReferenceEnvironment environment);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;object, class System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateImplementationMapItems(class System.Activities.Activity activityDefinitionToBeUpdated, class System.Activities.LocationReferenceEnvironment environment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateImplementationMapItems(System.Activities.Activity,System.Activities.LocationReferenceEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activityDefinitionToBeUpdated" Type="System.Activities.Activity" />
+        <Parameter Name="environment" Type="System.Activities.LocationReferenceEnvironment" />
+      </Parameters>
+      <Docs>
+        <param name="activityDefinitionToBeUpdated">A definição da atividade a ser atualizada.</param>
+        <param name="environment">O ambiente.</param>
+        <summary>Calcula os itens de mapa usados na implementação de <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMap" /> com especificado a definição de atividade e o ambiente.</summary>
+        <returns>Os itens de mapa calculados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateMapItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateMapItems (System.Activities.Activity workflowDefinitionToBeUpdated);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;object, class System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateMapItems(class System.Activities.Activity workflowDefinitionToBeUpdated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateMapItems(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionToBeUpdated" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionToBeUpdated">A definição da atividade a ser atualizada.</param>
+        <summary>Calcula os itens de mapa usados em <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMap" /> com especificado na definição de fluxo de trabalho.</summary>
+        <returns>Os itens de mapa calculados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateMapItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateMapItems (System.Activities.Activity workflowDefinitionToBeUpdated, System.Activities.LocationReferenceEnvironment environment);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;object, class System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; CalculateMapItems(class System.Activities.Activity workflowDefinitionToBeUpdated, class System.Activities.LocationReferenceEnvironment environment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateMapItems(System.Activities.Activity,System.Activities.LocationReferenceEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionToBeUpdated" Type="System.Activities.Activity" />
+        <Parameter Name="environment" Type="System.Activities.LocationReferenceEnvironment" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionToBeUpdated">A definição da atividade a ser atualizada.</param>
+        <param name="environment">O ambiente.</param>
+        <summary>Calcula os itens de mapa usados em <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMap" /> com especificado a definição de fluxo de trabalho e o ambiente.</summary>
+        <returns>Os itens de mapa calculados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="public static System.Activities.DynamicUpdate.DynamicUpdateMap Merge (params System.Activities.DynamicUpdate.DynamicUpdateMap[] maps);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.DynamicUpdate.DynamicUpdateMap Merge(class System.Activities.DynamicUpdate.DynamicUpdateMap[] maps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.Merge(System.Activities.DynamicUpdate.DynamicUpdateMap[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DynamicUpdate.DynamicUpdateMap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maps" Type="System.Activities.DynamicUpdate.DynamicUpdateMap[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="maps">A coleção de mapas a serem mesclados.</param>
+        <summary>Mescla o mapa de atualização dinâmica.</summary>
+        <returns>O mapa de atualização dinâmica mesclada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="public static System.Activities.DynamicUpdate.DynamicUpdateMap Merge (System.Collections.Generic.IEnumerable&lt;System.Activities.DynamicUpdate.DynamicUpdateMap&gt; maps);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.DynamicUpdate.DynamicUpdateMap Merge(class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.DynamicUpdate.DynamicUpdateMap&gt; maps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.Merge(System.Collections.Generic.IEnumerable{System.Activities.DynamicUpdate.DynamicUpdateMap})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DynamicUpdate.DynamicUpdateMap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maps" Type="System.Collections.Generic.IEnumerable&lt;System.Activities.DynamicUpdate.DynamicUpdateMap&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="maps">Os mapas a serem mesclados.</param>
+        <summary>Mescla o mapa de atualização dinâmica.</summary>
+        <returns>O mapa de atualização dinâmica mesclada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoChanges">
+      <MemberSignature Language="C#" Value="public static System.Activities.DynamicUpdate.DynamicUpdateMap NoChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Activities.DynamicUpdate.DynamicUpdateMap NoChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMap.NoChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DynamicUpdate.DynamicUpdateMap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mapa de atualização dinâmica sem alterações.</summary>
+        <value>O mapa de atualização dinâmica sem alterações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public System.Activities.DynamicUpdate.DynamicUpdateMapQuery Query (System.Activities.Activity updatedWorkflowDefinition, System.Activities.Activity originalWorkflowDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.DynamicUpdate.DynamicUpdateMapQuery Query(class System.Activities.Activity updatedWorkflowDefinition, class System.Activities.Activity originalWorkflowDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMap.Query(System.Activities.Activity,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DynamicUpdate.DynamicUpdateMapQuery</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updatedWorkflowDefinition" Type="System.Activities.Activity" />
+        <Parameter Name="originalWorkflowDefinition" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="updatedWorkflowDefinition">As informações de fluxo de trabalho atualizado.</param>
+        <param name="originalWorkflowDefinition">A definição de fluxo de trabalho original.</param>
+        <summary>Exibe a consulta de mapa de atualização dinâmica.</summary>
+        <returns>A consulta de mapa de atualização dinâmica.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

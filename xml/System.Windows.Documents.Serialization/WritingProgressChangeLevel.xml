@@ -1,0 +1,89 @@
+<Type Name="WritingProgressChangeLevel" FullName="System.Windows.Documents.Serialization.WritingProgressChangeLevel">
+  <TypeSignature Language="C#" Value="public enum WritingProgressChangeLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WritingProgressChangeLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.WritingProgressChangeLevel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o escopo de um <see cref="E:System.Windows.Documents.Serialization.SerializerWriter.WritingProgressChanged" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.WritingProgressChangeLevel> enumeração é usada para especificar <xref:System.Windows.Documents.Serialization.WritingProgressChangedEventArgs.WritingLevel%2A> propriedade o <xref:System.Windows.Documents.Serialization.WritingProgressChangedEventArgs> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FixedDocumentSequenceWritingProgress">
+      <MemberSignature Language="C#" Value="FixedDocumentSequenceWritingProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Documents.Serialization.WritingProgressChangeLevel FixedDocumentSequenceWritingProgress = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.FixedDocumentSequenceWritingProgress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingProgressChangeLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O progresso de saída de uma sequência de documento vários.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedDocumentWritingProgress">
+      <MemberSignature Language="C#" Value="FixedDocumentWritingProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Documents.Serialization.WritingProgressChangeLevel FixedDocumentWritingProgress = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.FixedDocumentWritingProgress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingProgressChangeLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O progresso de saída de um único documento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedPageWritingProgress">
+      <MemberSignature Language="C#" Value="FixedPageWritingProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Documents.Serialization.WritingProgressChangeLevel FixedPageWritingProgress = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.FixedPageWritingProgress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingProgressChangeLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O progresso de saída de uma única página.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Documents.Serialization.WritingProgressChangeLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingProgressChangeLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O progresso de saída é especificado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

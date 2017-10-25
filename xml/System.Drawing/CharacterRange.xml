@@ -1,0 +1,234 @@
+<Type Name="CharacterRange" FullName="System.Drawing.CharacterRange">
+  <TypeSignature Language="C#" Value="public struct CharacterRange" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CharacterRange extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.CharacterRange" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um intervalo de posições de caractere em uma cadeia de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Drawing.CharacterRange> e usá-lo para realçar a parte de uma cadeia de caracteres. Este exemplo é projetado para ser usado com o Windows Forms. Cole o exemplo em um formulário e a chamada a `HighlightACharacterRange` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.CharacterRangeExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.CharacterRangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.CharacterRangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterRange (int First, int Length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 First, int32 Length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.CharacterRange.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="First" Type="System.Int32" />
+        <Parameter Name="Length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="First">A posição do primeiro caractere no intervalo. Por exemplo, se <c>primeiro</c> é definido como 0, a primeira posição do intervalo é a posição 0 na cadeia de caracteres.</param>
+        <param name="Length">O número de posições no intervalo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.CharacterRange" /> estrutura, especificando um intervalo de posições de caractere em uma cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Drawing.CharacterRange> e usá-lo para realçar a parte de uma cadeia de caracteres. Este exemplo é projetado para ser usado com o Windows Forms. Cole o exemplo em um formulário e a chamada a `HighlightACharacterRange` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.CharacterRangeExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.CharacterRangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.CharacterRangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.CharacterRange.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto de comparação de igualdade.</param>
+        <summary>Obtém um valor que indica se este objeto é equivalente ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />para indicar que o objeto especificado for uma instância com o mesmo <see cref="P:System.Drawing.CharacterRange.First" /> e <see cref="P:System.Drawing.CharacterRange.Length" /> valor que esta instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode usar <xref:System.Drawing.CharacterRange.op_Equality%2A> para testar a igualdade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Drawing.CharacterRange.Equals%2A> método. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `CharacterRangeEquality2` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#2)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="public int First { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 First" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.CharacterRange.First" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição na cadeia de caracteres do primeiro caractere deste <see cref="T:System.Drawing.CharacterRange" />.</summary>
+        <value>A primeira posição deste <see cref="T:System.Drawing.CharacterRange" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.CharacterRange.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um inteiro com sinal de 32 bits que é o código hash para esta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.CharacterRange.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de posições neste <see cref="T:System.Drawing.CharacterRange" />.</summary>
+        <value>O número de posições neste <see cref="T:System.Drawing.CharacterRange" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Drawing.CharacterRange cr1, System.Drawing.CharacterRange cr2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Drawing.CharacterRange cr1, valuetype System.Drawing.CharacterRange cr2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.CharacterRange.op_Equality(System.Drawing.CharacterRange,System.Drawing.CharacterRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cr1" Type="System.Drawing.CharacterRange" />
+        <Parameter Name="cr2" Type="System.Drawing.CharacterRange" />
+      </Parameters>
+      <Docs>
+        <param name="cr1">Um <see cref="T:System.Drawing.CharacterRange" /> para comparação de igualdade.</param>
+        <param name="cr2">Um <see cref="T:System.Drawing.CharacterRange" /> para comparação de igualdade.</param>
+        <summary>Compara dois objetos <see cref="T:System.Drawing.CharacterRange" />. Obtém um valor que indica se o <see cref="P:System.Drawing.CharacterRange.First" /> e <see cref="P:System.Drawing.CharacterRange.Length" /> valores dos dois <see cref="T:System.Drawing.CharacterRange" /> objetos são iguais.</summary>
+        <returns>
+          <see langword="true" />para indicar os dois <see cref="T:System.Drawing.CharacterRange" /> objetos têm o mesmo <see cref="P:System.Drawing.CharacterRange.First" /> e <see cref="P:System.Drawing.CharacterRange.Length" /> valores; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode testar para igualdade usando o <xref:System.Drawing.CharacterRange.Equals%2A> método.  
+  
+ O método equivalente para esse operador é<xref:System.Drawing.CharacterRange.Equals%28System.Object%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Drawing.CharacterRange.op_Equality%2A> operador. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `CharacterRangeEquality1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Drawing.CharacterRange cr1, System.Drawing.CharacterRange cr2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Drawing.CharacterRange cr1, valuetype System.Drawing.CharacterRange cr2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.CharacterRange.op_Inequality(System.Drawing.CharacterRange,System.Drawing.CharacterRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cr1" Type="System.Drawing.CharacterRange" />
+        <Parameter Name="cr2" Type="System.Drawing.CharacterRange" />
+      </Parameters>
+      <Docs>
+        <param name="cr1">Um <see cref="T:System.Drawing.CharacterRange" /> para comparação de desigualdade.</param>
+        <param name="cr2">Um <see cref="T:System.Drawing.CharacterRange" /> para comparação de desigualdade.</param>
+        <summary>Compara dois objetos <see cref="T:System.Drawing.CharacterRange" />. Obtém um valor que indica se o <see cref="P:System.Drawing.CharacterRange.First" /> ou <see cref="P:System.Drawing.CharacterRange.Length" /> valores dos dois <see cref="T:System.Drawing.CharacterRange" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" />para indicar o o <see cref="P:System.Drawing.CharacterRange.First" /> ou <see cref="P:System.Drawing.CharacterRange.Length" /> valores dos dois <see cref="T:System.Drawing.CharacterRange" /> objetos forem diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.CharacterRange.op_Inequality%2A> método retorna o oposto do <xref:System.Drawing.CharacterRange.op_Equality%2A> método.  
+  
+ O método equivalente para esse operador é<xref:System.Drawing.CharacterRange.Equals%28System.Object%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Drawing.CharacterRange.op_Inequality%2A> método. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `CharacterRangeInequality` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#3)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

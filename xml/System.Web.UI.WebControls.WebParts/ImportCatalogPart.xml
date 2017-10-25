@@ -1,0 +1,677 @@
+<Type Name="ImportCatalogPart" FullName="System.Web.UI.WebControls.WebParts.ImportCatalogPart">
+  <TypeSignature Language="C#" Value="public sealed class ImportCatalogPart : System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImportCatalogPart extends System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.CatalogPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Importa um arquivo de descrição de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle (ou outro controle de servidor ASP.NET usado como um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle), de modo que os usuários podem adicionar o controle para uma página da Web com configurações predefinidas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle permite que os usuários importar um arquivo de descrição que descreve as configurações em um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle ou controle de servidor que um usuário deseja adicionar a um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona.  
+  
+ Depois que um usuário importa um arquivo de descrição, o <xref:System.Web.UI.WebControls.WebParts.WebPart> referenciado no arquivo de controle aparece dentro a <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle e um usuário podem adicionar o controle para a página.  
+  
+ O arquivo de descrição não é o mesmo que o próprio controle. É um arquivo XML que termina com um. Extensão de Web Part e contém pares de nome/valor – principalmente valores de propriedade – que descrevem o estado do controle. O arquivo de descrição é criado de acordo com um formato XML especificado, conforme descrito no tópico [controle de Web Parts descrição arquivos](http://msdn.microsoft.com/library/480992e4-8fc7-43f8-bffc-ae97bbdfe5b8).  
+  
+ Para que o arquivo de descrição refere-se ao controle, ele pode ser compilado em um assembly, ou pode ser um controle de usuário definido em um arquivo. ascx. Em ambos os casos, o controle referenciado em um arquivo de descrição importado deve existir no servidor Web que hospeda a página que está tentando importar o controle. O arquivo de descrição faz referência a controle nome e o assembly (ou arquivo) que contém o controle e o arquivo de descrição contém as configurações que afetam os valores de propriedade, a aparência e o comportamento do controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle permite que os usuários compartilhem as configurações em controles. Um controle complexo pode ter muitas propriedades e configurações. Por exemplo, em um site de intranet típico de uma grande empresa, um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle pode conter um número de propriedades que contêm valores específicos do ambiente dos usuários, como suas conexões de banco de dados, informações departamentais e assim por diante. O controle também pode conter um número de propriedades que afetam sua aparência. Um usuário pode personalizar o controle em um site específico e fazê-lo funcionar corretamente, exportar um arquivo de descrição para o controle e, em seguida, compartilhe o arquivo de descrição com outros usuários, o que foi possível importar o arquivo para adicionar o controle totalmente configurado para outros sites de intranet que eles têm permissão para personalizar. Como o assembly compilado ou o arquivo de controle de usuário que contém o controle existe no servidor Web que está hospedando o seu site, os usuários podem adicionar o controle para outros sites da Web.  
+  
+ O mecanismo pelo qual os usuários importar um arquivo de descrição (e, portanto, controlar o seu servidor associado) em uma página da Web é o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle que um desenvolvedor de página deve adicionar a uma página da Web. Quando um usuário alterna a página para o modo de exibição de catálogo, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle aparece e o usuário pode usar este controle para navegar até o. Arquivo de descrição de Web Part correspondente para o controle de servidor que desejam importar. A interface do usuário e instruções a seguir o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle, um usuário é capaz de adicionar o controle de servidor desejado na página da Web, com sua aparência e propriedades totalmente configuradas conforme especificado no arquivo de descrição importado.  
+  
+ Antes de um <xref:System.Web.UI.WebControls.WebParts.WebPart> arquivo de descrição do controle pode ser importado, um usuário deve primeiro criar (exportar) o arquivo com base em uma <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Um arquivo de descrição pode ser exportado para um controle se as seguintes condições forem atendidas:  
+  
+-   O controle tiver propriedades marcadas com o `Personalizable` atributo.  
+  
+-   O arquivo Web. config tem o `enableExport` valor definido como atributo `true` no `<webParts>` elemento.  
+  
+-   Um desenvolvedor define o valor da <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> propriedade no controle para um valor diferente do valor padrão de <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.None>, que proíbe de exportação. Se o <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> o valor da propriedade é definido como <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData>, qualquer propriedade que contém um <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> parâmetro com um `Personalizable` atributo não é exportado quando um usuário exportar um arquivo de descrição. Isso permite que os desenvolvedores de controle impedir que os dados confidenciais, como cadeias de caracteres de conexão, que está sendo exportado em determinadas situações.  
+  
+ Um usuário pode exportar um controle que tenha sido habilitado para exportação clicando o verbo de exportação que é exibido no menu de verbos do controle e seguindo as instruções para salvar um. Arquivo de descrição de Web Part para o controle. Outros usuários, em seguida, podem importar esse arquivo para configurar suas próprias instâncias do controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> classe contém várias propriedades. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> propriedade contém o texto com instruções para os usuários quando eles procuram para localizar o arquivo de descrição. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> propriedade contém o texto que serve como um rótulo para o controle importado como ele aparece no <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> contém o texto que será exibido se um erro ocorre quando uma descrição do controle está sendo importada. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> propriedade substitui a propriedade base para atribuir um título padrão para um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controlar se o desenvolvedor não atribuir um título. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> propriedade contém o texto do botão que o usuário clica para carregar o arquivo de descrição, e o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> propriedade contém as instruções para o processo de carregamento.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> classe também contém vários métodos exclusivos. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método recupera um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto para cada <xref:System.Web.UI.WebControls.WebParts.WebPart> controle no catálogo, que permite que um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle para exibir informações sobre cada controle de servidor sem a necessidade de criar uma instância dele. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método obtém uma instância de um determinado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, com base na descrição do passado para o método.  
+  
+ Há alguns riscos inerentes associados usando o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Um exemplo é a possibilidade de importar dados mal-intencionados para seu aplicativo da Web através dos arquivos de descrição usados para importar. Se alguém tiver colocado código mal-intencionado no script como o valor de uma propriedade de cadeia de caracteres no arquivo de descrição, em seguida, esse script pode ser potencialmente executado quando um usuário importa o arquivo de descrição e adiciona o controle de servidor referenciado a uma página da Web. Para minimizar o risco de importar arquivos de descrição com dados mal-intencionados, controles de servidor que possuem propriedades do tipo cadeia de caracteres devem sempre codificar os dados da propriedade. Outro risco envolve a importação de tipos através dos arquivos de descrição (consulte [controle de Web Parts descrição arquivos](http://msdn.microsoft.com/library/480992e4-8fc7-43f8-bffc-ae97bbdfe5b8)). Um usuário mal-intencionado poderia enviar solicitações para carregar vários assemblies para o <xref:System.AppDomain>, resultando em uma quantidade excessiva de memória sendo consumida.  
+  
+ Para evitar os riscos associados à importação, você pode desabilitar o recurso completamente por não usar o recurso de importação ou <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Ou você pode limitar quais usuários têm acesso ao controle. Você pode fazer isso programaticamente, usando o gerenciamento de função (consulte [Gerenciando autorização usando funções](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)). Por exemplo, quando a página for carregada, você pode testar para ver se um usuário está em uma determinada função, como a função de administrador. Se o usuário está na função, você poderá adicionar programaticamente o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle para a página para esse usuário. Você também pode usar uma abordagem declarativa para limitar o conjunto de usuários que podem usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle.  Na página da web que contém um catálogo, você pode colocar dois <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controles: um para os usuários que podem importar e outro para aqueles que não é possível. A zona para os usuários que podem importar conteria o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. A zona pode ser colocada dentro de um <xref:System.Web.UI.WebControls.LoginView> controle, que permitem que você limite o uso do controle na zona para somente aqueles autenticados usuários ou funções que você especificar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controlar declarativamente e por meio de programação em uma página da Web. O exemplo tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle.  
+  
+-   Um arquivo de código fonte que contém dois custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Você deve colocar o seguinte código-fonte em um arquivo e nomeie-Displaymodemenucs. ascx ou Displaymodemenuvb. ascx (dependendo do idioma que você está usando). Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior da página são dois `register` diretivas, uma para o controle de usuário e uma para o componente compilado que contém dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Observe que a página tem uma referência declarativa para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle aninhado dentro da hierarquia apropriada de elementos declarativos. Observe também que vários valores de propriedade são atribuídos em declarativamente o `<asp:importcatalogpart>` elemento. Além disso, o `Button1_Click` método atualiza um número de valores de propriedade sobre a <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle.  
+  
+ Na página de <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle, dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> os controles são declarados. O `<aspSample:userinfowebpart>` controle tem um `exportmode="all"` atributo nele. Esse atributo é necessário para permitir que os usuários exportar um arquivo de descrição para o controle, que pode ser importado por outros usuários aos quais deseja importar o controle usando o arquivo de descrição.  
+  
+> [!NOTE]
+>  Para permitir que os usuários de um aplicativo de Web Parts para exportar um arquivo de descrição de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, você também deve habilitar o recurso de exportação no aplicativo da Web adicionando um `enableExport="true"` de atributo para o `<webParts>` elemento (que é um filho de `<system.web>`elemento) no arquivo Web. config. Exportar é desabilitado por padrão, portanto, se você ainda não tiver habilitado exportação para o seu aplicativo, edite o arquivo Web. config e fazê-lo agora.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#1)]  
+  
+ A terceira parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Observe que algumas propriedades nesses controles são marcadas com o `WebBrowsable` atributo. Isso permite que o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle para gerar dinamicamente a interface do usuário (UI) para um usuário editar essas propriedades quando os controles estão no modo de edição. As propriedades também são marcadas com um `WebDisplayName` atributo, para especificar o texto do rótulo que aparece ao lado de cada controle na edição IU. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ O controle personalizado chamado `TextDisplayWebPart` é referenciado na página da Web com um `<aspSample:TextDisplayWebPart>` elemento. O outro controle, chamado `UserInfoWebPart`, também é declarado na página da Web inicialmente, embora você vai removê-lo posteriormente para demonstrar a capacidade de importar um arquivo de descrição de um controle.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ Agora execute o exemplo de código. Carregar a página da Web em um navegador. A primeira etapa é editar o `UserInfoWebPart` controle. Use o **modo de exibição** controle de lista suspensa e selecione **editar** para alternar a página para o modo de edição. Clique no menu de verbos do `UserInfoWebPart` controle (a seta para baixo na barra de título) e depois clique em **editar**. Quando a interface do usuário de edição é exibida, vários controles de edição aparecem abaixo do `UserInfoWebPart` controle que você pode usar para editar seus valores de campo. Editar alguns campos, clique em **Okey**e, em seguida, use o **modo de exibição** lista suspensa para retornar a página para o modo de procura.  
+  
+ A segunda etapa é exportar um. Arquivo de descrição de Web Part para o `UserInfoWebPart` controle. Clique no menu de verbos do controle personalizado (representada pela seta para baixo na barra de título) e, em seguida, clique em **exportar**. Siga as instruções para salvar um. Arquivo de descrição de Web Part para o controle. Agora, feche a página da Web e editar a origem da página em um editor. Excluir o `<aspSample:userinfowebpart>` controlar o elemento de declaração, em seguida, salve e feche o arquivo. (Você está realizando esta etapa para simular um usuário que ainda não tiver o `UserInfoWebPart` controlar, para que você pode importar o controle para a página).  
+  
+ Carregar a página da Web novamente em um navegador. O `UserInfoWebPart` controle não deve aparecer porque ele foi removido. Use o **modo de exibição** controle de lista suspensa e selecione **catálogo** para alternar a página para o modo de catálogo. No <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> de controle, clique no **procurar** botão e, em seguida, navegue até o. Web Part arquivo criado e clique no **carregar** botão. Uma referência para o controle deve aparecer uma caixa de seleção ao lado dele. Selecione a caixa de seleção, clique **adicionar** para adicionar o controle para a página.  
+  
+ Enquanto você estiver neste modo de exibição da página, clique no **atualização ImportCatalogPart** botão na parte inferior da página para ver o efeito de atualizar programaticamente um número de valores de propriedade no <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Depois de clicar no botão, observe como as várias propriedades são alteradas na interface de usuário.  
+  
+ Por fim, clique em **fechar** para sair do modo de catálogo e retornar a página para o modo de procura. O `UserInfoWebPart` controle agora deve aparecer na página, que contém os valores que tinha quando exportado anteriormente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportCatalogPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.%23ctor%2A> construtor é um padrão; nenhum construtor está declarado no <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> classe e tarefas especiais, portanto, não são executadas quando uma nova instância da classe é criada. O .NET Framework usa o construtor internamente para criar uma instância da classe.  
+  
+ Normalmente você não precisará usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.%23ctor%2A> construtor programaticamente em seu próprio código. O uso pretendido do controle é para desenvolvedores de página para adicioná-lo a uma página de forma declarativa em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowseHelpText">
+      <MemberSignature Language="C#" Value="public string BrowseHelpText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BrowseHelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma mensagem de texto que faz com que os usuários para navegar até o local de um arquivo de descrição.</summary>
+        <value>Uma cadeia de caracteres que contém o texto da mensagem. O valor padrão é uma mensagem específica da cultura fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> propriedade fornece aos usuários uma simples visão geral do que a primeira coisa que eles devem fazer no processo de adição de um controle importado: fornecer o local de um arquivo de descrição, digitando um caminho ou navegando até o arquivo. Um motivo comum para fornecer um valor personalizado para essa propriedade é se você tiver as instruções especiais para usuários, como um compartilhamento de rede específico para o qual deve procurar para localizar um arquivo de descrição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> propriedade declarativamente e programaticamente. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> o valor da propriedade é definido declarativamente para o controle.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ Nesta seção de código, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> o valor da propriedade é atribuído por meio de programação.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode usar o **modo de exibição** controle de lista suspensa para selecionar **catálogo modo** e alternar a página para o modo de catálogo. Com a página no modo de catálogo e o arquivo de descrição carregado, observe as várias cadeias de texto exibidas na interface do usuário (UI) para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Se você clicar no **carregar arquivo de descrição** botão, o texto para várias propriedades de interface do usuário for alterado, incluindo o texto para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o botão na interface do usuário (UI) é tratado como botão padrão que recebe o foco quando o formulário que contém o botão é renderizado. Essa propriedade não se destina a ser chamado no código do desenvolvedor de página.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do <see cref="T:System.Web.UI.WebControls.Button" /> que recebe o foco padrão em um <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código para essa propriedade substitui a propriedade base herdada do <xref:System.Web.UI.WebControls.Panel> classe para ocultar a propriedade de designers e impedir que sejam afetados por temas. Embora seja público, essa propriedade é usada internamente pelo controle Web Parts definido para a renderização padrão deste controle e não se destina a ser usado por desenvolvedores de página.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableWebPartDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de descrições de disponíveis <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles em um catálogo.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> que contém um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> para cada controle em um catálogo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método fornece uma implementação para o método de base abstrato declarado no <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método retorna informações de descrição de cada controle em um catálogo. Observe que no caso de um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controlar, pode haver apenas um servidor controle no catálogo de cada vez, mesmo que o método funcionaria se houver vários controles.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> é um objeto que contém informações essenciais sobre um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, incluindo sua ID, uma referência de objeto para o controle e os valores de várias propriedades importantes que são herdadas de <xref:System.Web.UI.WebControls.WebParts.Part> classe, como <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> e <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A>.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método melhora o desempenho. Quando um catálogo é criado, ele precisa de algumas informações sobre cada controle que ele contém, inclusive um título, uma descrição, um ícone (se houver) e uma ID. Em vez de criar uma instância de cada controle para obter essas informações, um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona que cria um catálogo de chamadas a <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método e a chamada retorna apenas as informações de descrição para o controle em vez de uma instância do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método em uma página da Web. O exemplo tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle, juntamente com o código que usa o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método.  
+  
+-   Um arquivo de código fonte que contém dois custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Você deve colocar o seguinte código-fonte em um arquivo e nomeie-Displaymodemenucs. ascx ou Displaymodemenuvb. ascx (dependendo do idioma que você está usando). Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior da página são dois `register` diretivas, uma para o controle de usuário e uma para o componente compilado que contém dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Esses dois controles são referenciadas declarativamente na marcação da página. Nas referências declarativas para o <xref:System.Web.UI.WebControls.WebParts.WebPart> controles (começando com um `aspSample` prefixo), observe que cada um tem um `exportMode="all"` atributo adicionado a ele. Este atributo permite que você exporte um. Arquivo de descrição de Web Part para o controle, que você usará em posterior para ir para importar o controle a uma página.  
+  
+> [!NOTE]
+>  Para permitir que os usuários de um aplicativo de Web Parts para exportar um arquivo de descrição de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, você também deve habilitar o recurso de exportação no aplicativo da Web adicionando um `enableExport="true"` de atributo para o `<webParts>` elemento (que é um filho de `<system.web>`elemento) no arquivo Web. config. Exportar é desabilitado por padrão, portanto, se você ainda não tiver habilitado exportação para o seu aplicativo, edite o arquivo Web. config e fazê-lo agora.  
+  
+ A página da Web também tem uma referência declarativa para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle aninhado dentro da hierarquia apropriada de elementos declarativos. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método é chamado dentro do código para o `Button1_Click` método.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/ImportCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/ImportCatalogPart_GetVB.aspx#1)]  
+  
+ A terceira parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ Agora execute o exemplo de código. Carregar a página da Web em um navegador. A primeira etapa é exportar um. Arquivo de descrição de Web Part para cada <xref:System.Web.UI.WebControls.WebParts.WebPart> controle (para o `TextDisplayWebPart` e para o `UserInfoWebPart` controle). Para cada controle, clique no menu de verbos do controle (representada pela seta para baixo na barra de título) e clique em **exportar**. Siga as instruções para salvar um. Arquivo de descrição de Web Part para o controle. Depois de exportar um arquivo de descrição de cada controle, feche a página da Web e editar a origem da página em um editor. Excluir o `<aspSample:userinfowebpart>` e `<aspSample:textdisplaywebpart>` elementos de declaração de controle, em seguida, salve e feche o arquivo. (Você está fazendo essa etapa para simular um usuário que ainda não tiver esses controles, para que você pode importar os controles para a página).  
+  
+ Carregar a página da Web novamente em um navegador. Use o **modo de exibição** controle de lista suspensa e selecione **catálogo** para alternar a página para o modo de catálogo. No <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> de controle, clique no **procurar** botão, navegue até o. Arquivos de Web Part que você criou, selecione um, clique o **carregar** botão. Uma referência para o controle deve aparecer uma caixa de seleção ao lado dele. Selecione a caixa de seleção, clique **adicionar** para adicionar o controle para a página. Repita esse processo para outro controle.  
+  
+ Enquanto você estiver neste modo de exibição da página, clique no **obter descrição de Web Part** botão na parte inferior da página para ver o efeito de acessar programaticamente o <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> do objeto para a descrição do controle atualmente carregados do <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. O método usado para acessar os detalhes de descrição, encontrado na `Button1_Click` método para a origem da página, é o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> método. Um rótulo abaixo do botão exibe detalhes básicos sobre o controle.  
+  
+ Depois de adicionar o primeiro controle, repita o processo para adicionar o segundo controle para a página. Por fim, clique em **fechar** para sair do modo de catálogo e retornar a página para o modo de procura. Ambos os controles personalizados agora devem aparecer na página, que contém os valores que tinham quando exportado anteriormente arquivos de descrição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPart">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPart GetWebPart (System.Web.UI.WebControls.WebParts.WebPartDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPart GetWebPart(class System.Web.UI.WebControls.WebParts.WebPartDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> que contém detalhes sobre o controle.</param>
+        <summary>Retorna uma referência a um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle com base nos valores na descrição do passado para o método.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle cuja descrição corresponde aos valores no <paramref name="description" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método retorna uma referência a um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle cujos detalhes de descrição correspondem aos valores do <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto passado para o método. Normalmente, esse método é usado junto com o <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> método, que é usado para recuperar as descrições dos controles no catálogo. Individuais <xref:System.Web.UI.WebControls.WebParts.WebPart> controles podem ser recuperados ou manipulados conforme necessário, passando individuais <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método em uma página da Web. O exemplo tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle, juntamente com o código que usa o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método.  
+  
+-   Um arquivo de código fonte que contém dois custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Você deve colocar o seguinte código-fonte em um arquivo e nomeie-Displaymodemenucs. ascx ou Displaymodemenuvb. ascx (dependendo do idioma que você está usando). Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior da página são dois `register` diretivas, uma para o controle de usuário e uma para o componente compilado que contém dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Esses dois controles são referenciadas declarativamente na marcação da página. Nas referências declarativas para o <xref:System.Web.UI.WebControls.WebParts.WebPart> controles (começando com um `aspSample` prefixo), observe que cada um tem um `exportMode="all"` atributo adicionado a ele. Este atributo permite que você exporte um. Arquivo de descrição de Web Part para o controle, que você usará em posterior para ir para importar o controle a uma página.  
+  
+> [!NOTE]
+>  Para permitir que os usuários de um aplicativo de Web Parts para exportar um arquivo de descrição de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, você também deve habilitar o recurso de exportação no aplicativo da Web adicionando um `enableExport="true"` de atributo para o `<webParts>` elemento (que é um filho de `<system.web>`elemento) no arquivo Web. config. Exportar é desabilitado por padrão, portanto, se você ainda não tiver habilitado exportação para o seu aplicativo, edite o arquivo Web. config e fazê-lo agora.  
+  
+ A página da Web também tem uma referência declarativa para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle aninhado dentro da hierarquia apropriada de elementos declarativos. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método é chamado dentro do código para o `Button2_Click` método.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/ImportCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/ImportCatalogPart_GetVB.aspx#1)]  
+  
+ A terceira parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ Agora execute o exemplo de código. Carregar a página da Web em um navegador. A primeira etapa é exportar um. Arquivo de descrição de Web Part para cada <xref:System.Web.UI.WebControls.WebParts.WebPart> controle (para o `TextDisplayWebPart` e para o `UserInfoWebPart` controle). Para cada controle, clique no menu de verbos do controle (representada pela seta para baixo na barra de título) e clique em **exportar**. Siga as instruções para salvar um. Arquivo de descrição de Web Part para o controle. Depois de exportar um arquivo de descrição de cada controle, feche a página da Web e editar a origem da página em um editor. Excluir o `<aspSample:userinfowebpart>` e `<aspSample:textdisplaywebpart>` elementos de declaração de controle, em seguida, salve e feche o arquivo. (Você está fazendo essa etapa para simular um usuário que ainda não tiver esses controles, para que você pode importar os controles para a página).  
+  
+ Carregar a página da Web novamente em um navegador. Use o **modo de exibição** controle de lista suspensa e selecione **catálogo** para alternar a página para o modo de catálogo. No <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> de controle, clique no **procurar** botão, navegue até o. Arquivos de Web Part que você criou, selecione um, clique o **carregar** botão. Uma referência para o controle deve aparecer uma caixa de seleção ao lado dele. Agora que a descrição do controle é carregada para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> de controle, clique no **GetWebPart de uso** botão na parte inferior da página. Isso demonstra o efeito da chamada a <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método e transmitindo a ele a descrição do controle atualmente carregada no <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Observe que o controle de servidor associado é adicionado imediatamente à página da Web, sem que o usuário tenha que clicar no **adicionar** botão. O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> método, que é chamado no `Button2_Click` método da fonte de página, retorna o <xref:System.Web.UI.WebControls.WebParts.WebPart> controle associado com a descrição atual que é carregada no <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Avançar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AddWebPart%2A> método é chamado e o <xref:System.Web.UI.WebControls.WebParts.WebPart> controle é adicionado diretamente para a página. Isso demonstra como adicionar um controle programaticamente a partir de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle sem intervenção do usuário.  
+  
+ Depois de adicionar o primeiro controle, repita o processo para adicionar o segundo controle para a página. Por fim, clique em **fechar** para sair do modo de catálogo e retornar a página para o modo de procura. Ambos os controles personalizados agora devem aparecer na página, que contém os valores que tinham quando exportado anteriormente arquivos de descrição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="description" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="description" />Não há um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportedPartLabelText">
+      <MemberSignature Language="C#" Value="public string ImportedPartLabelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImportedPartLabelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido após um usuário importar um arquivo de descrição para representar ou descrever o controle importado no catálogo de controles importados.</summary>
+        <value>Uma cadeia de caracteres que contém o texto do rótulo. O valor padrão é uma mensagem específica da cultura fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> propriedade normalmente é usada para conter um rótulo curto, geral que descreve o controle no <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> propriedade declarativamente e programaticamente. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> o valor da propriedade é definido declarativamente para o controle.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ Nesta seção de código, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> o valor da propriedade é atribuído por meio de programação.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode usar o **modo de exibição** controle de lista suspensa para selecionar **catálogo modo** e alternar a página para o modo de catálogo. Com a página no modo de catálogo e o arquivo de descrição carregado, observe as várias cadeias de texto exibidas na interface do usuário (UI) para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Se você clicar no **carregar arquivo de descrição** botão, o texto para várias propriedades de interface do usuário for alterado, incluindo o texto para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartImportErrorLabelText">
+      <MemberSignature Language="C#" Value="public string PartImportErrorLabelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PartImportErrorLabelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma mensagem de erro será exibida se ocorrer um erro durante o processo de importação.</summary>
+        <value>Uma cadeia de caracteres que contém o texto do rótulo. O valor padrão é uma mensagem específica da cultura fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> propriedade é útil para notificar o usuário se algum problema ou erro ocorrer enquanto a página tenta importar um arquivo de descrição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> propriedade declarativamente e programaticamente. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> o valor da propriedade é definido declarativamente para o controle.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ Nesta seção de código, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> o valor da propriedade é atribuído por meio de programação.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode usar o **modo de exibição** controle de lista suspensa para selecionar **catálogo modo** e alternar a página para o modo de catálogo. Com a página no modo de catálogo e o arquivo de descrição carregado, observe as várias cadeias de texto exibidas na interface do usuário (UI) para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Se você clicar no **carregar arquivo de descrição** botão, o texto para várias propriedades de interface do usuário for alterado, incluindo o texto para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título que aparece na barra de título de um <see cref="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" /> controle.</summary>
+        <value>Uma cadeia de caracteres que é usada como o título do controle. O valor padrão é um nome de controle calculado fornecidas pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> o valor da propriedade é exibido na barra de título de um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controlar quando o controle está visível no modo de catálogo. Quando o controle for declarado em uma página, você pode definir um valor para a propriedade usando o `Title` atributo. Se você não fornecer um valor para o título, um valor específico da cultura padrão é usado para descrever o tipo de propriedades que esse controle permite que os usuários editem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> propriedade declarativamente e programaticamente. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> o valor da propriedade é definido declarativamente para o controle.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ Nesta seção de código, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> o valor da propriedade é atribuído por meio de programação.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode usar o **modo de exibição** controle de lista suspensa para selecionar **catálogo modo** e alternar a página para o modo de catálogo. Com a página no modo de catálogo e o arquivo de descrição carregado, observe as várias cadeias de texto exibidas na interface do usuário (UI) para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Se você clicar no **carregar arquivo de descrição** botão, o texto para várias propriedades de interface do usuário for alterado, incluindo o texto para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UploadButtonText">
+      <MemberSignature Language="C#" Value="public string UploadButtonText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UploadButtonText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para o <see cref="T:System.Web.UI.WebControls.Button" /> controle que inicia o carregamento de um arquivo de descrição.</summary>
+        <value>Uma cadeia de caracteres que é usada como o texto para um <see cref="T:System.Web.UI.WebControls.Button" />. O valor padrão é uma cadeia de caracteres específicas da cultura fornecida pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> propriedade fornece o texto para o <xref:System.Web.UI.WebControls.Button> controle que inicia o processo de carregamento. Se você atribuir texto personalizado para essa propriedade, ou o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> propriedade, o texto deve deixar claro que o usuário está carregando um arquivo de descrição. O texto não deve dizer ou implica que o processo de carregamento está carregando, na verdade, o próprio controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> propriedade declarativamente e programaticamente. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> o valor da propriedade é definido declarativamente para o controle.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ Nesta seção de código, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> o valor da propriedade é atribuído por meio de programação.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode usar o **modo de exibição** controle de lista suspensa para selecionar **catálogo modo** e alternar a página para o modo de catálogo. Com a página no modo de catálogo e o arquivo de descrição carregado, observe as várias cadeias de texto exibidas na interface do usuário (UI) para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Se você clicar no **carregar arquivo de descrição** botão, o texto para várias propriedades de interface do usuário for alterado, incluindo o texto para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UploadHelpText">
+      <MemberSignature Language="C#" Value="public string UploadHelpText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UploadHelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto da mensagem que informa ao usuário como carregar um arquivo de descrição.</summary>
+        <value>Uma cadeia de caracteres que é usada como instruções para o usuário para carregar um arquivo de descrição. O valor padrão é uma cadeia de caracteres específicas da cultura fornecida pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> propriedade fornece uma breve frase ou frase de instruções para os usuários, informando que eles cliquem em um botão para carregar o arquivo de descrição. Se você atribuir texto personalizado para essa propriedade, ou o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> propriedade, o texto deve deixar claro que o usuário está carregando um arquivo de descrição. O texto não deve dizer ou implica que o processo de carregamento está carregando, na verdade, o próprio controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> propriedade declarativamente e programaticamente. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> visão geral da classe.  
+  
+ Na seção de código a seguir, observe que o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> o valor da propriedade é definido declarativamente para o controle.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ Nesta seção de código, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> o valor da propriedade é atribuído por meio de programação.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode usar o **modo de exibição** controle de lista suspensa para selecionar **catálogo modo** e alternar a página para o modo de catálogo. Com a página no modo de catálogo e o arquivo de descrição carregado, observe as várias cadeias de texto exibidas na interface do usuário (UI) para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Se você clicar no **carregar arquivo de descrição** botão, o texto para várias propriedades de interface do usuário for alterado, incluindo o texto para o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

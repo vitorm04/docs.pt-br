@@ -1,0 +1,125 @@
+<Type Name="AspNetHostingPermissionLevel" FullName="System.Web.AspNetHostingPermissionLevel">
+  <TypeSignature Language="C#" Value="public enum AspNetHostingPermissionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AspNetHostingPermissionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.AspNetHostingPermissionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de confiança que é concedido a um aplicativo Web ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [ASP.NET Code Access Security](http://msdn.microsoft.com/library/0001d062-f5cd-44e5-bb07-35155569fdb8) para obter informações detalhadas sobre as permissões que são concedidas a cada nível de confiança.  
+  
+ Os membros dessa enumeração definem níveis de segurança de aplicativo, variando de confiança total (o aplicativo sem restrição pela segurança de acesso do código) para confiança mínima (o aplicativo tem permissão somente para executar). Definir o nível de confiança para um recurso do ASP.NET com o [confiança](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) elemento de configuração em um arquivo Web. config ou Machine. config.  
+  
+ Se você desejar bloquear a política de segurança para um servidor específico ou site da Web, use o [local](http://msdn.microsoft.com/en-us/922ef7d5-da38-4661-b1c6-5b9e5ceda1d5) elemento em conjunto com o `allowOverride=false` atributo para garantir essa confiança configurações de política não pode ser substituído localmente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel High = int32(500)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que recursos protegidos com uma demanda de qualquer nível menor ou igual a <see langword="High" /> nível de confiança será bem-sucedida. Esse nível destina-se a aplicativos de código gerenciado altamente confiáveis que precisam usar a maioria das permissões gerenciadas que oferecem suporte a acesso de confiança parcial. Ele não concede alguns as permissões mais altas (por exemplo, a capacidade de chamar código nativo), mas fornece uma maneira para executar aplicativos confiáveis com menos privilégios ou para fornecer algum nível de restrições para aplicativos altamente confiáveis. Esse nível é concedido ao configurar pelo menos o <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /> nível de confiança a [confiança](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) seção em um arquivo de configuração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Low = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que recursos protegidos com uma demanda de qualquer nível menor ou igual a <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" /> nível será bem-sucedida. Esse nível destina-se a permitir acesso somente leitura aos recursos limitados em um ambiente restrito. Esse nível é concedido, especificando o <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" /> nível de confiança de [confiança](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) seção em um arquivo de configuração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Medium = int32(400)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que recursos protegidos com uma demanda de qualquer nível menor ou igual a <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> nível será bem-sucedida. Esse nível é concedido ao configurar pelo menos o <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> nível de confiança a [confiança](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) seção em um arquivo de configuração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimal">
+      <MemberSignature Language="C#" Value="Minimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Minimal = int32(200)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Minimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que recursos protegidos com uma demanda para o <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" /> nível será bem-sucedida. Esse nível permite que o código para executar, mas não para interagir com os recursos presentes no sistema. Esse nível é concedido ao configurar pelo menos o <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" /> usando o nível de confiança de [confiança](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) seção em um arquivo de configuração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel None = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que nenhuma permissão é concedida. Todas as demandas de <see cref="T:System.Web.AspNetHostingPermission" /> falhará.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unrestricted">
+      <MemberSignature Language="C#" Value="Unrestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Unrestricted = int32(600)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Unrestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que todas as solicitações de permissão para usar todos os recursos de um aplicativo receberá. Isso é equivalente a conceder <see langword="Full" /> nível de confiança de [confiança](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) seção em um arquivo de configuração.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

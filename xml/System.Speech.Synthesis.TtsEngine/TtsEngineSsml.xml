@@ -1,0 +1,405 @@
+<Type Name="TtsEngineSsml" FullName="System.Speech.Synthesis.TtsEngine.TtsEngineSsml">
+  <TypeSignature Language="C#" Value="public abstract class TtsEngineSsml" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TtsEngineSsml extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe base abstrata para ser implementada por todos os mecanismos de síntese de texto em fala.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para construir um mecanismo personalizado de texto em fala, um aplicativo sempre deve implementar uma classe derivada da classe base abstrata <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>.  
+  
+ Uma implementação corretamente registrada de <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml> , em seguida, pode ser usado como uma voz sintetizador por <xref:System.Speech.Synthesis> aplicativos baseados no espaço de nome.  
+  
+ Objetos herdando <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml> deve substituir os seguintes membros: <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.%23ctor%2A>, <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.AddLexicon%2A>, <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.RemoveLexicon%2A>, <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.GetOutputFormat%2A> e <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>.  
+  
+ O membro mais importante o <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml> classe a ser implementada é o <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A> método.  
+  
+ O <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A> método é chamado pelo analisador de texto infraestruturas recebimento:  
+  
+1.  Uma referência para o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> interface, que fornece acesso aos serviços do sistema, como o mesmo serviço de enfileiramento e gravar a saída de áudio.  
+  
+2.  Uma matriz de <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instância produzidos de entrada de linguagem de marcação de síntese de fala (SSML). Texto a ser processado como fala, além de analisar o SSML armazena informações sobre os atributos solicitados de fala em um <xref:System.Speech.Synthesis.TtsEngine.FragmentState> instância associada a cada entrada <xref:System.Speech.Synthesis.TtsEngine.TextFragment> objeto.  
+  
+ Um aplicativo do sintetizador de voz, opcionalmente, pode fazer solicitações para um formato de saída especificado implementando <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.GetOutputFormat%2A> a ser chamado pela plataforma quando ele tenta fornecer a saída de áudio correta.  
+  
+ Um implementador também pode fornecer suporte para gerenciar definições externas de pronúncia ou dicionários, por sua implementação de <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.AddLexicon%2A> e <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.RemoveLexicon%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TtsEngineSsml (string registryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string registryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registryKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="registryKey">Nome completo da chave do registro para o Token de voz associado com o <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> implementação. mecanismo.</param>
+        <summary>Constrói uma nova instância da <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> com base em uma chave de registro de Token de voz apropriada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamadas para esse construtor normalmente são geradas pelo <xref:System.Speech.Synthesis> com base em aplicativos selecionando uma voz sintetizador a ser usado por uma instância do <xref:System.Speech.Synthesis.SpeechSynthesizer>.  
+  
+ Um <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml> deve ser o registro em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLexicon">
+      <MemberSignature Language="C#" Value="public abstract void AddLexicon (Uri uri, string mediaType, System.Speech.Synthesis.TtsEngine.ITtsEngineSite site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLexicon(class System.Uri uri, string mediaType, class System.Speech.Synthesis.TtsEngine.ITtsEngineSite site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.AddLexicon(System.Uri,System.String,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="mediaType" Type="System.String" />
+        <Parameter Name="site" Type="System.Speech.Synthesis.TtsEngine.ITtsEngineSite" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Uma instância válida de <see langword="System.Uri" /> que indica o local das informações de léxico.</param>
+        <param name="mediaType">Uma cadeia de caracteres que contém o tipo de mídia do léxico. Tipos de mídia diferenciam maiusculas de minúsculas.</param>
+        <param name="site">Uma referência a um <see cref="T:System.Speech.Synthesis.TtsEngine.ITtsEngineSite" /> interface usada para interagir com a infraestrutura da plataforma.</param>
+        <summary>Adiciona um léxico para o <see langword="Synthesizer" /> <see langword="Voice" /> implementado pelo atual <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um léxico pronúncia é uma coleção de palavras ou frases junto com seu pronúncia especificada com uma letra de pronúncia apropriado.  
+  
+ Normalmente, esse método é chamado pela infraestrutura de plataforma em resposta a um <xref:System.Speech.Synthesis> com base em aplicativos que chamam <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.AddLexicon%2A> e usando a voz do sintetizador implementada pelo atual <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml> instância.  
+  
+ O valor de `mediaType` geralmente é uma especificação de MIME, pois a especificação SSML usa MIME para especificações de mídia.  
+  
+   
+  
+## Examples  
+ A implementação de <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.AddLexicon%2A> usa o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> interface passado para carregar um léxico de um recurso. Ele armazena uma `System.IO.Stream` para léxico em um `System.Collections.Generic.Dictionary` instância, indexada pelo URI léxico.  
+  
+```  
+public static Dictionary<Uri, Stream> _aLexicons = new Dictionary<Uri, Stream>();  
+  
+ public void AddLexicon(Uri uri, string mediaType, ITtsEngineSite site) {  
+    Stream stream = site.LoadResource(uri, mediaType);  
+    _aLexicons.Add(uri, stream);  
+}  
+  
+ public void RemoveLexicon(Uri uri, ITtsEngineSite site) {  
+     Stream stream;  
+     if (_aLexicons.TryGetValue(uri, out stream)) {  
+         stream.Close();  
+         _aLexicons.Remove(uri);  
+     }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>É responsabilidade da implementação para ser totalmente familiarizado com e ser capaz de processar o léxico armazenado em <paramref name="uri" />. A implementação também deve controlar e gerenciar os tempos de vida de todos os dicionários adiciona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutputFormat">
+      <MemberSignature Language="C#" Value="public abstract IntPtr GetOutputFormat (System.Speech.Synthesis.TtsEngine.SpeakOutputFormat speakOutputFormat, IntPtr targetWaveFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int GetOutputFormat(valuetype System.Speech.Synthesis.TtsEngine.SpeakOutputFormat speakOutputFormat, native int targetWaveFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.GetOutputFormat(System.Speech.Synthesis.TtsEngine.SpeakOutputFormat,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speakOutputFormat" Type="System.Speech.Synthesis.TtsEngine.SpeakOutputFormat" />
+        <Parameter Name="targetWaveFormat" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="speakOutputFormat">Membro válido do <see cref="T:System.Speech.Synthesis.TtsEngine.SpeakOutputFormat" /> enumeração que indica o tipo de formato de saída de áudio solicitado.</param>
+        <param name="targetWaveFormat">Um ponteiro para um <see langword="struct" /> que contém a configuração de detalhes para o tipo de formato de áudio solicitado pelo <c>speakOutputFormat</c> argumento.</param>
+        <summary>Retorna a melhor correspondência de saída de áudio com suporte por uma resposta de mecanismo synthesize fornecido a uma solicitação para o mecanismo do sintetizador para suporte a um determinado formato de saída.</summary>
+        <returns>Retorna um válidas <see langword="IntPtr" /> instância referindo-se a um <see langword="struct" /> que contém informações detalhadas sobre o formato de saída.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A estrutura usada como `targetWaveFormat` e retornado pelo método deve compatível com o `WAVEFORMATEX` disponível em SAPI, e o valor retornado deve ser alocado usando `CoTaskMemAlloc`.  
+  
+ O `struct` deve fornecer a funcionalidade equivalente a:  
+  
+```  
+internal struct WaveFormat  
+{  
+    public Int16 FormatTag;  
+    public Int16 Channels;  
+    public int SamplesPerSec;  
+    public int AvgBytesPerSec;  
+    public Int16 BlockAlign;  
+    public Int16 BitsPerSample;  
+    public Int16 Size;  
+}  
+```  
+  
+   
+  
+## Examples  
+ A implementação de exemplo a seguir valida entradas selecionadas, usá-los se eles estão dentro de tolerâncias, caso contrário, usando valores padrão.  
+  
+```  
+public IntPtr GetOutputFormat(SpeakOutputFormat format, IntPtr targetWaveFormat) {  
+    WaveFormat waveFormat = new WaveFormat();  
+    WaveFormat rq=new WaveFormat();  
+    Marshal.PtrToStructure(targetWaveFormat,rq);  
+  
+    waveFormat.AvgBytesPerSec = AvgBytesPerSec Min < rq.AvgBytesPerSec && rq.AvgBytesPerSec < AvgBytesPerSecMax? rq.AvgBytesPerSec : 3200;  
+    waveFormat.BitsPerSample = BitsPerSampleMin < rq.AvgBytesPerSec && rq.BitsPerSample < BitsPerSampleMax ? rq.AvgBytesPerSec : 3200; 16;  
+    waveFormat.BlockAlign = 2;  
+    waveFormat.Channels = 1;  
+    waveFormat.FormatTag = 1;  
+    waveFormat.SamplesPerSec = 16000;  
+    waveFormat.Size = 0;  
+  
+    IntPtr wfx = Marshal.AllocCoTaskMem(Marshal.SizeOf(waveFormat));  
+    Marshal.StructureToPtr(waveFormat, wfx, false);  
+  
+    //Console.WriteLine ("GetOutputFormat called");  
+    return wfx;  
+}  
+internal struct WaveFormat {  
+    public Int16 FormatTag;  
+    public Int16 Channels;  
+    public int SamplesPerSec;  
+    public int AvgBytesPerSec;  
+    public Int16 BlockAlign;  
+    public Int16 BitsPerSample;  
+    public Int16 Size;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Objeto herdado de <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> deve examinar o formato de saída solicitado conforme especificado pelas <paramref name="targetWaveFormat" /> e retornar o formato mais próximo que ele suporta.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLexicon">
+      <MemberSignature Language="C#" Value="public abstract void RemoveLexicon (Uri uri, System.Speech.Synthesis.TtsEngine.ITtsEngineSite site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveLexicon(class System.Uri uri, class System.Speech.Synthesis.TtsEngine.ITtsEngineSite site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.RemoveLexicon(System.Uri,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="site" Type="System.Speech.Synthesis.TtsEngine.ITtsEngineSite" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Uma instância válida de <see langword="System.Uri" /> que indica o local das informações de léxico.</param>
+        <param name="site">Uma referência a um <see cref="T:System.Speech.Synthesis.TtsEngine.ITtsEngineSite" /> interface passado pela infraestrutura de plataforma para permitir o acesso aos recursos de infraestrutura.</param>
+        <summary>Remove um léxico carregado no momento pelo <see langword="Synthesizer" /> <see langword="Voice" /> implementado pelo atual <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um léxico pronúncia é uma coleção de palavras ou frases junto com seu pronúncia especificada com uma letra de pronúncia apropriado.  
+  
+ Normalmente, esse método é chamado em resposta a um <xref:System.Speech.Synthesis> com base em aplicativos que chamam <xref:System.Speech.Synthesis.SpeechSynthesizer.RemoveLexicon%2A> e usando a voz do sintetizador implementada pelo atual <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml> instância.  
+  
+   
+  
+## Examples  
+ A implementação de <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.RemoveLexicon%2A> usa o URI do léxico para consultar uma instância `System.Collections.Generic.Dictionary` para o `System.IO.Stream`, fecha o fluxo e remove o uri que faz referência para o dicionário.  
+  
+```  
+public static Dictionary<Uri, Stream> _aLexicons = new Dictionary<Uri, Stream>();  
+  
+ public void AddLexicon(Uri uri, string mediaType, ITtsEngineSite site) {  
+    Stream stream = site.LoadResource(uri, mediaType);  
+    _aLexicons.Add(uri, stream);  
+}  
+  
+ public void RemoveLexicon(Uri uri, ITtsEngineSite site) {  
+     Stream stream;  
+     if (_aLexicons.TryGetValue(uri, out stream)) {  
+         stream.Close();  
+         _aLexicons.Remove(uri);  
+     }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>É responsabilidade da implementação para ser totalmente familiarizado com e ser capaz de processar o léxico armazenado em <paramref name="uri" />. A implementação também deve controlar e gerenciar os tempos de vida de todos os dicionários remove.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Speak">
+      <MemberSignature Language="C#" Value="public abstract void Speak (System.Speech.Synthesis.TtsEngine.TextFragment[] fragment, IntPtr waveHeader, System.Speech.Synthesis.TtsEngine.ITtsEngineSite site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Speak(class System.Speech.Synthesis.TtsEngine.TextFragment[] fragment, native int waveHeader, class System.Speech.Synthesis.TtsEngine.ITtsEngineSite site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak(System.Speech.Synthesis.TtsEngine.TextFragment[],System.IntPtr,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fragment" Type="System.Speech.Synthesis.TtsEngine.TextFragment[]" />
+        <Parameter Name="waveHeader" Type="System.IntPtr" />
+        <Parameter Name="site" Type="System.Speech.Synthesis.TtsEngine.ITtsEngineSite" />
+      </Parameters>
+      <Docs>
+        <param name="fragment">Uma matriz de <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> instâncias que contém o texto a ser processado para fala.</param>
+        <param name="waveHeader">Um <see langword="IntPtr" /> aponta para uma estrutura que contém o formato de saída de áudio.</param>
+        <param name="site">Uma referência a um <see cref="T:System.Speech.Synthesis.TtsEngine.ITtsEngineSite" /> interface passado pela infraestrutura de plataforma para permitir o acesso aos recursos de infraestrutura.</param>
+        <summary>Renderiza especificada <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> matriz no formato de saída especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A estrutura usada como `waveHeader` e retornado pelo método deve compatível com o `WAVEFORMATEX` disponível em SAPI.  
+  
+ O `struct` deve fornecer a funcionalidade equivalente a:  
+  
+```  
+internal struct WaveFormat  
+{  
+    public Int16 FormatTag;  
+    public Int16 Channels;  
+    public int SamplesPerSec;  
+    public int AvgBytesPerSec;  
+    public Int16 BlockAlign;  
+    public Int16 BitsPerSample;  
+    public Int16 Size;  
+}  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz parte de uma implementação de síntese de fala personalizado herdando <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>e use-o de <xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, e<xref:System.Speech.Synthesis.TtsEngine.TtsEventId>  
+  
+ A implementação de<xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>  
+  
+1.  Recebe uma matriz de <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instâncias e cria uma nova matriz de <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instâncias a serem passados para o `Speak` método em um mecanismo de síntese subjacente.  
+  
+2.  Se o <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> por encontrado valor de enumeração do <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> propriedade o <xref:System.Speech.Synthesis.TtsEngine.FragmentState> retornado pelo <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> propriedade de cada <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instância é <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction.Speak>, a implementação  
+  
+    -   Converte Americanism para Britishisms no texto a ser falado.  
+  
+    -   Se o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> propriedade no <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> fornecidos para o suporte de implementação de interfaces o <xref:System.Speech.Synthesis.TtsEngine.TtsEventId.WordBoundary> tipo de evento, um <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> instância é usada para criar um evento para a unidade de um medidor de progresso do sintetizador é criado.  
+  
+3.  Um mecanismo de processamento de fala é chamado com a modificação <xref:System.Speech.Synthesis.TtsEngine.TextFragment> matriz.  
+  
+```  
+private const int WordBoundaryFlag = 1 << (int)TtsEventId.WordBoundary;  
+private readonly char[] spaces = new char[] { ' ', '\t', '\r', '\n' };  
+internal struct UsVsUk  
+{  
+  internal string UK;  
+  internal string US;  
+}  
+  
+override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite site)  
+{  
+  TextFragment [] newFrags=new TextFragment[frags.Length];  
+  
+  for (int i=0;i<frags.Length;i++){  
+    newFrags[i].State=frags[i].State;  
+    //truncate  
+    newFrags[i].TextToSpeak = frags[i].TextToSpeak.Substring(frags[i].TextOffset,  
+                               frags[i].TextLength);  
+    newFrags[i].TextLength = newFrags[i].TextToSpeak.Length;  
+    newFrags[i].TextOffset = 0;  
+    if (newFrags[i].State.Action == TtsEngineAction.Speak) {  
+      //Us to UK conversion  
+      foreach (UsVsUk term in TransList) {  
+      newFrags[i].TextToSpeak.Replace(term.US, term.UK);  
+      }  
+      //Generate progress meter events if supported  
+      if ((site.EventInterest & WordBoundaryFlag) != 0) {  
+      string[] subs = newFrags[i].TextToSpeak.Split(spaces);  
+  
+      foreach (string s in subs) {  
+        int offset = newFrags[i].TextOffset;  
+        SpeechEventInfo spEvent = new SpeechEventInfo((Int16)TtsEventId.WordBoundary,   
+                (Int16)EventParameterType.Undefined,   
+                 s.Length, new IntPtr(offset));  
+        offset += s.Length;  
+        if (s.Trim().Length > 0) {  
+          SpeechEventInfo[] events = new SpeechEventInfo[1];  
+          events[0] = spEvent;  
+          site.AddEvents(events, 1);  
+        }  
+      }  
+      }  
+    }  
+  }  
+    _baseSynthesize.Speak(newFrags, wfx, site);  
+  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sintetizador personalizada implementa usando <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> e <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak(System.Speech.Synthesis.TtsEngine.TextFragment[],System.IntPtr,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" /> funcionam como intermediários entre aplicativos do sintetizador construídos usando a infraestrutura da plataforma através dos membros de ou de filtros a <see cref="N:System.Speech.Synthesis" /> namespace e mecanismos de síntese de fala de sistema subjacente.  
+  
+ Um <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak(System.Speech.Synthesis.TtsEngine.TextFragment[],System.IntPtr,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" /> implementação:  
+  
+1.  Armadilhas ou modificar os aspectos de entrada <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> objetos  
+  
+2.  Gera todos os eventos necessários usando a referência de site para um <see cref="T:System.Speech.Synthesis.TtsEngine.ITtsEngineSite" /> instância  
+  
+3.  Gera a falas sintetizadas real.  
+  
+ Geração de fala geralmente é feita chamando <c>Speak</c> em um a fala renderização mecanismos fornecidos pelo sistema operacional.  
+  
+ Se um dos mecanismos de renderização disponíveis de fala não for usado, um objeto que herda de <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" /> deve criar seu próprio mecanismo de renderização de fala.  
+  
+ Acesse o <c>Speak</c> método obtido usando o registro e reflexão. .  
+  
+ Ao herdar de <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEngineSsml" />, você deve substituir os seguintes membros: <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.#ctor(System.String)" />, <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.AddLexicon(System.Uri,System.String,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" />, <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.RemoveLexicon(System.Uri,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" />, <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.GetOutputFormat(System.Speech.Synthesis.TtsEngine.SpeakOutputFormat,System.IntPtr)" />, e <see cref="M:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak(System.Speech.Synthesis.TtsEngine.TextFragment[],System.IntPtr,System.Speech.Synthesis.TtsEngine.ITtsEngineSite)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

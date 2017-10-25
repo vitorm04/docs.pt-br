@@ -1,0 +1,240 @@
+<Type Name="CodeParameterDeclarationExpression" FullName="System.CodeDom.CodeParameterDeclarationExpression">
+  <TypeSignature Language="C#" Value="public class CodeParameterDeclarationExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeParameterDeclarationExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeParameterDeclarationExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma declaração de parâmetro para um método, propriedade ou construtor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeParameterDeclarationExpression>pode ser usado para representar o código declara um parâmetro para um método, propriedade ou construtor.  
+  
+ O <xref:System.CodeDom.CodeParameterDeclarationExpression.Name%2A> propriedade especifica o nome do parâmetro. O <xref:System.CodeDom.CodeParameterDeclarationExpression.Type%2A> propriedade especifica o tipo de dados do parâmetro. O <xref:System.CodeDom.CodeParameterDeclarationExpression.Direction%2A> propriedade especifica o modificador de direção do parâmetro. O <xref:System.CodeDom.CodeParameterDeclarationExpression.CustomAttributes%2A> propriedade especifica os atributos associados ao parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de <xref:System.CodeDom.CodeParameterDeclarationExpression> para declarar os parâmetros de um método usando diferentes <xref:System.CodeDom.FieldDirection> especificadores de tipo de referência de campo.  
+  
+ [!code-cpp[CodeParameterDeclarationExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeParameterDeclarationExample/CPP/codeparameterdeclarationexample.cpp#3)]
+ [!code-csharp[CodeParameterDeclarationExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeParameterDeclarationExample/CS/codeparameterdeclarationexample.cs#3)]
+ [!code-vb[CodeParameterDeclarationExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeParameterDeclarationExample/VB/codeparameterdeclarationexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression (System.CodeDom.CodeTypeReference type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor(System.CodeDom.CodeTypeReference,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um objeto que indica o tipo do parâmetro para declarar.</param>
+        <param name="name">O nome do parâmetro para declarar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" /> usando o tipo de parâmetro especificado e o nome de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression (string type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do parâmetro para declarar.</param>
+        <param name="name">O nome do parâmetro para declarar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" /> usando o tipo de parâmetro especificado e o nome de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `type` parâmetro faz referência a um tipo genérico, ela deve seguir as convenções de sintaxe para tipos genéricos. Tipos genéricos são formatados da seguinte maneira: o nome do tipo, seguido por um acento grave ("'"), seguido por uma contagem de argumentos de tipo genérico, seguido pelos parâmetros delimitados por colchetes.  
+  
+> [!NOTE]
+>  Você deve usar colchetes ([]) e não os c# colchetes angulares (<>) para delimitar os parâmetros genéricos.  
+  
+ Para evitar a possibilidade de cometer um erro de sintaxe, considere o uso de <xref:System.CodeDom.CodeParameterDeclarationExpression.%23ctor%28System.Type%2CSystem.String%29> construtor que usa um tipo em vez de uma cadeia de caracteres como um parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression (Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do parâmetro para declarar.</param>
+        <param name="name">O nome do parâmetro para declarar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" /> usando o tipo de parâmetro especificado e o nome de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomAttributes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeAttributeDeclarationCollection CustomAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeAttributeDeclarationCollection CustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.CustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeAttributeDeclarationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos personalizados para a declaração de parâmetro.</summary>
+        <value>Um objeto que indica os atributos personalizados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.CodeDom.FieldDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.FieldDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.FieldDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção do campo.</summary>
+        <value>Um objeto que indica a direção do campo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do parâmetro.</summary>
+        <value>O nome do parâmetro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Type" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do parâmetro.</summary>
+        <value>O tipo do parâmetro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

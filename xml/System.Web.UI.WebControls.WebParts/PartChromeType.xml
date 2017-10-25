@@ -1,0 +1,122 @@
+<Type Name="PartChromeType" FullName="System.Web.UI.WebControls.WebParts.PartChromeType">
+  <TypeSignature Language="C#" Value="public enum PartChromeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PartChromeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PartChromeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de borda ao redor de um controle de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma parte de um controle <xref:System.Web.UI.WebControls.WebParts.PartChromeType> enumeração determina que tipo de borda ao redor de um controle de Web Parts. As opções incluem mostrando uma barra de título apenas, somente uma borda, uma barra de título e borda ou nenhum deles.  
+  
+ Se o valor de enumeração é definido como padrão no <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> propriedade de um controle de parte, o controle herda sua configuração do <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> propriedade da zona que contém o controle.  
+  
+   
+  
+## Examples  
+ Os exemplos de código a seguir demonstram o uso declarativo do <xref:System.Web.UI.WebControls.WebParts.PartChromeType> enumeração usando um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle referenciado em uma página da Web do ASP.NET. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ A primeira parte do exemplo contém o código para o controle personalizado, chamado `TextDisplayWebPart`. Porque o controle é derivado de <xref:System.Web.UI.WebControls.WebParts.WebPart>, ele também herda as propriedades comuns que o <xref:System.Web.UI.WebControls.WebParts.Part> fornece a classe, incluindo o <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> propriedade, que usa o <xref:System.Web.UI.WebControls.WebParts.PartChromeType> enumeração como seu tipo de retorno.  
+  
+ [!code-csharp[WebParts_Part_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_Part_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/textdisplaywebpart.vb#2)]  
+  
+ Observe que, a marcação declarativa para a Web, página, a segunda instância do `TextDisplayWebPart` conjuntos de controles seu <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> TitleOnly valor da propriedade. Depois de carregar a página em um navegador, a segunda instância de controle aparece minimizada. Quando você expande o segundo controle, ele tem apenas uma barra de título sem uma borda.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BorderOnly">
+      <MemberSignature Language="C#" Value="BorderOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType BorderOnly = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.BorderOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente uma borda, sem uma barra de título.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma configuração de borda herdada da zona que contém o controle Part.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType None = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma borda e nenhuma barra de título.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleAndBorder">
+      <MemberSignature Language="C#" Value="TitleAndBorder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType TitleAndBorder = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.TitleAndBorder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma barra de título e uma borda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleOnly">
+      <MemberSignature Language="C#" Value="TitleOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType TitleOnly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.TitleOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma barra de título sem uma borda.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

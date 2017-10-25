@@ -1,0 +1,82 @@
+<Type Name="TabPage+TabPageControlCollection" FullName="System.Windows.Forms.TabPage+TabPageControlCollection">
+  <TypeSignature Language="C#" Value="public class TabPage.TabPageControlCollection : System.Windows.Forms.Control.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit TabPage/TabPageControlCollection extends System.Windows.Forms.Control/ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabPage.TabPageControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém a coleção de controles que o <see cref="T:System.Windows.Forms.TabPage" /> usa.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabPageControlCollection (System.Windows.Forms.TabPage owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TabPage owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.TabPageControlCollection.#ctor(System.Windows.Forms.TabPage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.TabPage" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.TabPage" /> que contém essa coleção de controles.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TabPage.TabPageControlCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Windows.Forms.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Windows.Forms.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.TabPageControlCollection.Add(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">O controle a se adicionar.</param>
+        <summary>Adiciona um controle à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle especificado é adicionado ao final da coleção. Se o controle já é filho de outro controle, ele é removido do outro controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>. Este exemplo usa o <xref:System.Windows.Forms.TabPage.TabPageControlCollection.Add%2A> método para adicionar um controle único, `button1`, para o `tabPage1`. O <xref:System.Windows.Forms.Control.Controls%2A> propriedade é usada para obter o `tabPage1` controles de coleção para adicionar controles à coleção.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[TabPageControlCollection.Add#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPageControlCollection.Add/CPP/add.cpp#1)]
+ [!code-csharp[TabPageControlCollection.Add#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPageControlCollection.Add/CS/add.cs#1)]
+ [!code-vb[TabPageControlCollection.Add#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPageControlCollection.Add/VB/add.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O controle especificado é um <see cref="T:System.Windows.Forms.TabPage" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

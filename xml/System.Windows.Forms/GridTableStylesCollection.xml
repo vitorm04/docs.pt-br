@@ -1,0 +1,746 @@
+<Type Name="GridTableStylesCollection" FullName="System.Windows.Forms.GridTableStylesCollection">
+  <TypeSignature Language="C#" Value="public class GridTableStylesCollection : System.Windows.Forms.BaseCollection, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridTableStylesCollection extends System.Windows.Forms.BaseCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GridTableStylesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.BaseCollection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de <see cref="T:System.Windows.Forms.DataGridTableStyle" /> objetos no <see cref="T:System.Windows.Forms.DataGrid" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.GridTableStylesCollection> contém <xref:System.Windows.Forms.DataGridTableStyle> objetos que permite a <xref:System.Windows.Forms.DataGrid> controle para exibir um estilo de grade personalizadas para cada <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>.  
+  
+ Sobre o <xref:System.Windows.Forms.DataGrid> controle, o <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade retorna o <xref:System.Windows.Forms.GridTableStylesCollection>.  
+  
+ Por padrão, o <xref:System.Windows.Forms.GridTableStylesCollection> não contém nenhum <xref:System.Windows.Forms.DataGridTableStyle> objetos. Em vez disso, o <xref:System.Windows.Forms.DataGrid> exibe cada tabela usando as configurações padrão para cor, a largura e a formatação. Todas as colunas de cada tabela são exibidas. Quando um <xref:System.Windows.Forms.DataGridTableStyle> é adicionado à coleção, o <xref:System.Windows.Forms.DataGrid> usa o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> para determinar qual objeto fornece os dados para a grade. Por exemplo, se a fonte de dados é um <xref:System.Data.DataSet> que contém três <xref:System.Data.DataTable> objetos, o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> devem corresponder a <xref:System.Data.DataTable.TableName%2A> de um dos objetos. Se o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> não corresponde a nenhum do <xref:System.Data.DataTable.TableName%2A> valores, o padrão de configurações serão usadas para exibir dados para cada tabela, e o <xref:System.Windows.Forms.DataGridTableStyle> configurações serão ignoradas.  
+  
+> [!CAUTION]
+>  Sempre criar <xref:System.Windows.Forms.DataGridColumnStyle> objetos e adicioná-los para o <xref:System.Windows.Forms.GridColumnStylesCollection> antes de adicionar <xref:System.Windows.Forms.DataGridTableStyle> objetos para o <xref:System.Windows.Forms.GridTableStylesCollection>. Quando você adiciona um vazio <xref:System.Windows.Forms.DataGridTableStyle> com uma validade <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valor à coleção, <xref:System.Windows.Forms.DataGridColumnStyle> objetos são gerados automaticamente para você. Consequentemente, uma exceção será lançada se você tentar adicionar uma nova <xref:System.Windows.Forms.DataGridColumnStyle> objetos com duplicata <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valores para o <xref:System.Windows.Forms.GridColumnStylesCollection>. Como alternativa, desmarque o <xref:System.Windows.Forms.GridColumnStylesCollection> usando o <xref:System.Windows.Forms.GridColumnStylesCollection.Clear%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria dois <xref:System.Windows.Forms.DataGridTableStyle> objetos e adiciona cada para o <xref:System.Windows.Forms.GridTableStylesCollection> retornado pelo <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade de um <xref:System.Windows.Forms.DataGrid> controle.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#1)]
+ [!code-csharp[GridTableStylesCollectionExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#1)]
+ [!code-vb[GridTableStylesCollectionExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (System.Windows.Forms.DataGridTableStyle table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class System.Windows.Forms.DataGridTableStyle table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.Add(System.Windows.Forms.DataGridTableStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Windows.Forms.DataGridTableStyle" />
+      </Parameters>
+      <Docs>
+        <param name="table">O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a adicionar à coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a esta coleção.</summary>
+        <returns>O índice do objeto recém-adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria dois <xref:System.Windows.Forms.DataGridTableStyle> objetos. O exemplo cria várias <xref:System.Windows.Forms.DataGridColumnStyle> objetos e adiciona-os para o <xref:System.Windows.Forms.GridColumnStylesCollection>. Por fim, o <xref:System.Windows.Forms.DataGridTableStyle> objetos são adicionados para o <xref:System.Windows.Forms.GridTableStylesCollection> usando o <xref:System.Windows.Forms.GridTableStylesCollection.Add%2A> método.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#4)]
+ [!code-csharp[GridTableStylesCollectionExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#4)]
+ [!code-vb[GridTableStylesCollectionExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public virtual void AddRange (System.Windows.Forms.DataGridTableStyle[] tables);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class System.Windows.Forms.DataGridTableStyle[] tables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.AddRange(System.Windows.Forms.DataGridTableStyle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tables" Type="System.Windows.Forms.DataGridTableStyle[]" />
+      </Parameters>
+      <Docs>
+        <param name="tables">Uma matriz de objetos de <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</param>
+        <summary>Adiciona uma matriz de estilos de tabela à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#5)]
+ [!code-csharp[GridTableStylesCollectionExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#5)]
+ [!code-vb[GridTableStylesCollectionExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo limpa o <xref:System.Windows.Forms.GridTableStylesCollection> antes de adicionar um novo <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ [!code-cpp[Classic GridTableStylesCollection.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic GridTableStylesCollection.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic GridTableStylesCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic GridTableStylesCollection.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic GridTableStylesCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridTableStylesCollection.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.GridTableStylesCollection.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a coleção foi alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona uma <xref:System.ComponentModel.CollectionChangeEventHandler> delegar a um <xref:System.Windows.Forms.GridTableStylesCollection.CollectionChanged> eventos.  
+  
+ [!code-cpp[Classic GridTableStylesCollection.CollectionChanged Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic GridTableStylesCollection.CollectionChanged Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic GridTableStylesCollection.CollectionChanged Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic GridTableStylesCollection.CollectionChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic GridTableStylesCollection.CollectionChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridTableStylesCollection.CollectionChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="P:System.Windows.Forms.DataGridTableStyle.MappingName" /> do <see cref="T:System.Windows.Forms.DataGridTableStyle" /> para procurar.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.GridTableStylesCollection" /> contém o <see cref="T:System.Windows.Forms.DataGridTableStyle" /> especificado pelo nome.</summary>
+        <returns>
+          <see langword="true" />Se o estilo de tabela especificado existir na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.GridTableStylesCollection.Contains%2A> método para determinar se um <xref:System.Windows.Forms.DataGridTableStyle> com especificado <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> existe na coleção.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#6)]
+ [!code-csharp[GridTableStylesCollectionExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#6)]
+ [!code-vb[GridTableStylesCollectionExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.DataGridTableStyle table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.DataGridTableStyle table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.Contains(System.Windows.Forms.DataGridTableStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Windows.Forms.DataGridTableStyle" />
+      </Parameters>
+      <Docs>
+        <param name="table">O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> para procurar.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.GridTableStylesCollection" /> contém especificado <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</summary>
+        <returns>
+          <see langword="true" />Se o estilo de tabela especificado existir na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridTableStyle this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridTableStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridTableStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Windows.Forms.DataGridTableStyle" /> obter.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataGridTableStyle" /> especificado pelo índice.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.GridTableStylesCollection.Add%2A> ou <xref:System.Windows.Forms.GridTableStylesCollection.AddRange%2A> para adicionar itens à coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo retorna um <xref:System.Windows.Forms.DataGridTableStyle> do <xref:System.Windows.Forms.GridTableStylesCollection> passando um índice para o <xref:System.Windows.Forms.GridTableStylesCollection.Item%2A> propriedade.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#2)]
+ [!code-csharp[GridTableStylesCollectionExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#2)]
+ [!code-vb[GridTableStylesCollectionExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Não há nenhum item no índice especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridTableStyle this[string tableName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridTableStyle Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridTableStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tableName">O <see cref="P:System.Windows.Forms.DataGridTableStyle.MappingName" /> do <see cref="T:System.Windows.Forms.DataGridTableStyle" /> para recuperar.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataGridTableStyle" /> com o nome especificado.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> com especificado <see cref="P:System.Windows.Forms.DataGridTableStyle.MappingName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao recuperar um <xref:System.Windows.Forms.DataGridTableStyle> por <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>, o <xref:System.Windows.Forms.GridTableStylesCollection.Item%2A> propriedade usa uma comparação que diferencia maiusculas de minúsculas.  
+  
+ Use o <xref:System.Windows.Forms.GridTableStylesCollection.Add%2A> ou <xref:System.Windows.Forms.GridTableStylesCollection.AddRange%2A> para adicionar itens à coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo retorna um <xref:System.Windows.Forms.DataGridTableStyle> do <xref:System.Windows.Forms.GridTableStylesCollection> , passando o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> para o <xref:System.Windows.Forms.GridTableStylesCollection.Item%2A> propriedade.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#3)]
+ [!code-csharp[GridTableStylesCollectionExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#3)]
+ [!code-vb[GridTableStylesCollectionExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ArrayList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList List" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista subjacente.</summary>
+        <value>Um <see cref="T:System.Collections.ArrayList" /> que contém os dados da tabela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollectionChanged">
+      <MemberSignature Language="C#" Value="protected void OnCollectionChanged (System.ComponentModel.CollectionChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnCollectionChanged(class System.ComponentModel.CollectionChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.CollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.CollectionChangeEventArgs" /> que contém os dados de evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.GridTableStylesCollection.CollectionChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.DataGridTableStyle table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.DataGridTableStyle table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.Remove(System.Windows.Forms.DataGridTableStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Windows.Forms.DataGridTableStyle" />
+      </Parameters>
+      <Docs>
+        <param name="table">O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.GridTableStylesCollection.Contains%2A> método para determinar se um determinado <xref:System.Windows.Forms.DataGridTableStyle> existe antes de usar o <xref:System.Windows.Forms.GridTableStylesCollection.Remove%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a ser removido.</param>
+        <summary>Remove um <see cref="T:System.Windows.Forms.DataGridTableStyle" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.GridTableStylesCollection.Contains%2A> método para determinar se um determinado <xref:System.Windows.Forms.DataGridTableStyle> existe antes de usar o <xref:System.Windows.Forms.GridTableStylesCollection.Remove%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O unidimensional <see cref="T:System.Array" /> que é o destino dos elementos copiados da coleção. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia a coleção para um unidimensional compatível <see cref="T:System.Array" />, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos de <see cref="T:System.Windows.Forms.GridTableStylesCollection" /> é maior que o espaço disponível do índice até o final da matriz de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo da coleção não pode ser convertido automaticamente para o tipo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>O número de itens contidos na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Windows.Forms.GridTableStylesCollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>O <see cref="T:System.Object" /> usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para a coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para a coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a adicionar à coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a esta coleção.</summary>
+        <returns>O índice do objeto recém-adicionado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="value" />não pode ser convertido em um <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />já foi atribuído a um <see cref="T:System.Windows.Forms.GridTableStylesCollection" />.  
+  
+ -ou-  
+  
+ Um <see cref="T:System.Windows.Forms.DataGridTableStyle" /> na <see cref="T:System.Windows.Forms.GridTableStylesCollection" /> tem o mesmo <see cref="P:System.Windows.Forms.DataGridTableStyle.MappingName" /> valor da propriedade como <paramref name="value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser localizado na coleção. O valor pode ser <see langword="null" />.</param>
+        <summary>Determina se um elemento está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o valor é encontrado na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser localizado na coleção. O valor pode ser <see langword="null" />.</param>
+        <summary>Retorna o índice com base em zero da primeira ocorrência do objeto especificado na coleção.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência do valor em toda a coleção, se encontrado; Caso contrário, retornará -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual o valor deve ser inserido.</param>
+        <param name="value">O objeto a ser inserido na coleção.</param>
+        <summary>Implementa o <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" /> método. Sempre gera <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não pode inserir um item no meio da coleção. Use o <xref:System.Windows.Forms.GridTableStylesCollection.Add%2A> método para adicionar um <xref:System.Windows.Forms.DataGridColumnStyle> à coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção tem um tamanho fixo.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento.</param>
+        <summary>Obtém ou define o elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">É possível definir a propriedade do item.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="value" />não pode ser convertido em um <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridTableStylesCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do <see cref="T:System.Windows.Forms.DataGridTableStyle" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> com o índice especificado da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

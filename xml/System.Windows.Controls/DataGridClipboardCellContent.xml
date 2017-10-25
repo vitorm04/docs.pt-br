@@ -1,0 +1,201 @@
+<Type Name="DataGridClipboardCellContent" FullName="System.Windows.Controls.DataGridClipboardCellContent">
+  <TypeSignature Language="C#" Value="public struct DataGridClipboardCellContent" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DataGridClipboardCellContent extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridClipboardCellContent" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula o valor e o local de um <see cref="T:System.Windows.Controls.DataGrid" /> célula para usar ao copiar o conteúdo para a área de transferência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa estrutura é usada pelo <xref:System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridClipboardCellContent (object item, System.Windows.Controls.DataGridColumn column, object content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object item, class System.Windows.Controls.DataGridColumn column, object content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridClipboardCellContent.#ctor(System.Object,System.Windows.Controls.DataGridColumn,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="column" Type="System.Windows.Controls.DataGridColumn" />
+        <Parameter Name="content" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item de dados para a linha que contém a célula que está sendo copiada.</param>
+        <param name="column">A coluna que contém a célula que está sendo copiada.</param>
+        <param name="content">O valor de texto da célula que está sendo copiado.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataGridColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridClipboardCellContent.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coluna que contém a célula que está sendo copiada.</summary>
+        <value>A coluna que contém a célula que está sendo copiada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public object Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridClipboardCellContent.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de texto da célula que está sendo copiado.</summary>
+        <value>O valor de texto da célula que está sendo copiado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridClipboardCellContent.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">O <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instância a ser comparado com o atual <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instância.</param>
+        <summary>Indica se o atual e especificadas <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instâncias forem equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se o atual e especificadas <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instâncias tiverem o mesmo <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Item" />, <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Column" />, e <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Content" /> valores de propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridClipboardCellContent.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" />.</summary>
+        <returns>O código hash para essa instância <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash se baseia o <xref:System.Windows.Controls.DataGridClipboardCellContent.Item%2A>, <xref:System.Windows.Controls.DataGridClipboardCellContent.Column%2A>, e <xref:System.Windows.Controls.DataGridClipboardCellContent.Content%2A> valores de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridClipboardCellContent.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item de dados para a linha que contém a célula que está sendo copiada.</summary>
+        <value>O item de dados para a linha que contém a célula que está sendo copiada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent1, System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent1, valuetype System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridClipboardCellContent.op_Equality(System.Windows.Controls.DataGridClipboardCellContent,System.Windows.Controls.DataGridClipboardCellContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clipboardCellContent1" Type="System.Windows.Controls.DataGridClipboardCellContent" />
+        <Parameter Name="clipboardCellContent2" Type="System.Windows.Controls.DataGridClipboardCellContent" />
+      </Parameters>
+      <Docs>
+        <param name="clipboardCellContent1">A primeira <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instância a ser comparado.</param>
+        <param name="clipboardCellContent2">O segundo <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instância a ser comparado.</param>
+        <summary>Indica se o especificado <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instâncias forem equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instâncias tiverem o mesmo <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Item" />, <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Column" />, e <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Content" /> valores de propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent1, System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent1, valuetype System.Windows.Controls.DataGridClipboardCellContent clipboardCellContent2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridClipboardCellContent.op_Inequality(System.Windows.Controls.DataGridClipboardCellContent,System.Windows.Controls.DataGridClipboardCellContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clipboardCellContent1" Type="System.Windows.Controls.DataGridClipboardCellContent" />
+        <Parameter Name="clipboardCellContent2" Type="System.Windows.Controls.DataGridClipboardCellContent" />
+      </Parameters>
+      <Docs>
+        <param name="clipboardCellContent1">A primeira <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instância a ser comparado.</param>
+        <param name="clipboardCellContent2">O segundo <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instância a ser comparado.</param>
+        <summary>Indica se o especificado <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instâncias não são equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se o atual e especificadas <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> instâncias não tiverem o mesmo <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Item" />, <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Column" />, e <see cref="P:System.Windows.Controls.DataGridClipboardCellContent.Content" /> valores de propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

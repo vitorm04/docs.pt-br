@@ -1,0 +1,123 @@
+<Type Name="JavaScriptTypeResolver" FullName="System.Web.Script.Serialization.JavaScriptTypeResolver">
+  <TypeSignature Language="C#" Value="public abstract class JavaScriptTypeResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit JavaScriptTypeResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Serialization.JavaScriptTypeResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base abstrata para implementar um resolvedor de tipo personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Script.Serialization.JavaScriptTypeResolver> classe fornece os serviços para:  
+  
+-   Convertendo tipo de informações para um valor de cadeia de caracteres por meio de <xref:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveTypeId%2A> método.  
+  
+-   Resolver um valor de cadeia de caracteres ao apropriado gerenciados tipo por meio de <xref:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveType%2A> método.  
+  
+ Quando o <xref:System.Web.Script.Serialization.JavaScriptSerializer> objeto serializa tipos personalizados, ele pode opcionalmente incluir na cadeia de caracteres serializada notação JSON (JavaScript Object) um valor que contém informações de tipo. Durante a desserialização, <xref:System.Web.Script.Serialization.JavaScriptSerializer> pode, então, referência gerenciada esse valor de cadeia de caracteres para determinar o tipo que a cadeia de caracteres JSON será convertida.  
+  
+ Se você fornecer um resolvedor de tipo para o <xref:System.Web.Script.Serialization.JavaScriptSerializer> instância, o serializador usará o <xref:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveTypeId%2A> e <xref:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveType%2A> métodos para mapear entre o tipo gerenciado e o valor de cadeia de caracteres durante o processo de serialização e desserialização, respectivamente.  
+  
+ O <xref:System.Web.Script.Serialization.JavaScriptTypeResolver> classe é a classe base para o <xref:System.Web.Script.Serialization.SimpleTypeResolver> classe, que fornece uma implementação de um resolvedor de tipo que usa o nome qualificado do assembly do tipo gerenciado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um resolvedor de tipo personalizado.  
+  
+ [!code-csharp[System.Web.Script.Serialization.TypeResolver#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Serialization.TypeResolver/CS/App_Code/TypeResolver.cs#2)]
+ [!code-vb[System.Web.Script.Serialization.TypeResolver#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Serialization.TypeResolver/VB/App_Code/TypeResolver.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você implementar um resolvedor de tipo, a cadeia de caracteres que é retornado pelo <see cref="M:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveTypeId(System.Type)" /> método deve mapear para o mesmo tipo gerenciado quando o valor de cadeia de caracteres é passado para o <see cref="M:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveType(System.String)" /> método.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected JavaScriptTypeResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptTypeResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Script.Serialization.JavaScriptTypeResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveType">
+      <MemberSignature Language="C#" Value="public abstract Type ResolveType (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type ResolveType(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O nome do tipo gerenciado.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o <see cref="T:System.Type" /> objeto que está associado com o nome do tipo especificado.</summary>
+        <returns>O <see cref="T:System.Type" /> objeto que está associado com o nome do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um resolvedor de tipo está associado com um <xref:System.Web.Script.Serialization.JavaScriptSerializer> o serializador de instância, usa o <xref:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveType%2A> método quando ele itera por meio de uma cadeia de caracteres JSON determinar o específicos gerenciados tipo ao qual o tipo JSON deve ser convertido.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Dado um valor de cadeia de caracteres, o resolvedor de tipo deve retornar um <see cref="T:System.Type" /> tipo gerenciado de objeto que representa o correspondente.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveTypeId">
+      <MemberSignature Language="C#" Value="public abstract string ResolveTypeId (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveTypeId(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveTypeId(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo gerenciado a ser resolvido.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o nome do tipo especificado <see cref="T:System.Type" /> objeto.</summary>
+        <returns>O nome do tipo gerenciado especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Script.Serialization.JavaScriptTypeResolver.ResolveTypeId%2A> método retorna um `null` ou <xref:System.String.Empty>, em seguida, o resolvedor de tipo não oferece suporte ao tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

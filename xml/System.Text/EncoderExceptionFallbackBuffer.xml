@@ -1,0 +1,257 @@
+<Type Name="EncoderExceptionFallbackBuffer" FullName="System.Text.EncoderExceptionFallbackBuffer">
+  <TypeSignature Language="C#" Value="public sealed class EncoderExceptionFallbackBuffer : System.Text.EncoderFallbackBuffer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EncoderExceptionFallbackBuffer extends System.Text.EncoderFallbackBuffer" />
+  <TypeSignature Language="DocId" Value="T:System.Text.EncoderExceptionFallbackBuffer" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.EncoderFallbackBuffer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera <see cref="T:System.Text.EncoderFallbackException" /> quando um caractere de entrada não pode ser convertido em uma sequência de bytes de saída codificada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um motivo comum para uma codificação ou decodificação de operação falhar é se a classe de codificação de base não fornece um mapeamento entre um caractere e uma sequência de bytes equivalente. Se o caractere de entrada não pode ser convertido em uma sequência de bytes de saída, a operação de codificação chama o <xref:System.Text.EncoderExceptionFallbackBuffer.Fallback%2A> método, que gera <xref:System.Text.EncoderFallbackException>.  
+  
+ O <xref:System.Text.EncoderFallbackBuffer?displayProperty=nameWithType> classe que representa um buffer de dados usado em uma operação de codificação, é a classe base para o <xref:System.Text.EncoderExceptionFallbackBuffer> classe. No entanto, em vez de um buffer de dados, a <xref:System.Text.EncoderExceptionFallbackBuffer> classe representa um comportamento padrão no qual uma exceção será lançada se uma operação de codificação falhar. Não existe nenhum buffer de dados reais e os membros projetados para manipular um buffer tal façam sem um trabalho significativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderExceptionFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallbackBuffer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.EncoderExceptionFallbackBuffer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fallback">
+      <MemberSignature Language="C#" Value="public override bool Fallback (char charUnknown, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Fallback(char charUnknown, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charUnknown" Type="System.Char" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="charUnknown">Um caractere de entrada.</param>
+        <param name="index">A posição de índice do caractere no buffer de entrada.</param>
+        <summary>Gera uma exceção porque o caractere de entrada não pode ser codificado. Parâmetros de especificam a posição de índice e o valor do caractere que não pode ser convertido.</summary>
+        <returns>nenhuma. Nenhum valor é retornado porque o <see cref="M:System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Int32)" /> método sempre lança uma exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.Encoding.GetBytes%2A> e <xref:System.Text.Encoder.Convert%2A> chamada de métodos <xref:System.Text.EncoderExceptionFallbackBuffer.Fallback%2A> se encontram um caractere desconhecido na entrada. Em resposta, <xref:System.Text.EncoderExceptionFallbackBuffer.Fallback%2A> sempre gera <xref:System.Text.EncoderFallbackException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.EncoderFallbackException">
+          <paramref name="charUnknown" />não pode ser codificado. Esse método sempre gera uma exceção que informa o valor da <paramref name="charUnknown" /> e <paramref name="index" /> parâmetros.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fallback">
+      <MemberSignature Language="C#" Value="public override bool Fallback (char charUnknownHigh, char charUnknownLow, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Fallback(char charUnknownHigh, char charUnknownLow, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Char,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charUnknownHigh" Type="System.Char" />
+        <Parameter Name="charUnknownLow" Type="System.Char" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="charUnknownHigh">O substituto alto do par de entrada.</param>
+        <param name="charUnknownLow">O substituto baixo do par de entrada.</param>
+        <param name="index">A posição de índice do par substituto no buffer de entrada.</param>
+        <summary>Gera uma exceção porque o caractere de entrada não pode ser codificado. Parâmetros de especificam a posição de índice e o valor do par substituto na entrada, e não será usado o valor de retorno nominal.</summary>
+        <returns>nenhuma. Nenhum valor é retornado porque o <see cref="M:System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Char,System.Int32)" /> método sempre lança uma exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.Encoding.GetBytes%2A> e <xref:System.Text.Encoder.Convert%2A> chamada de métodos <xref:System.Text.EncoderExceptionFallbackBuffer.Fallback%2A> se encontram um par substituto em sua entrada. Em resposta, <xref:System.Text.EncoderExceptionFallbackBuffer.Fallback%2A> sempre lança uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.EncoderFallbackException">O caractere representado por <paramref name="charUnknownHigh" /> e <paramref name="charUnknownLow" /> não pode ser codificado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="charUnknownHigh" /> ou <paramref name="charUnknownLow" /> é inválido. <paramref name="charUnknownHigh" />não está entre U + D800 e U + DBFF, inclusive, ou <paramref name="charUnknownLow" /> não está entre U + DC00 e U + DFFF, inclusive.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextChar">
+      <MemberSignature Language="C#" Value="public override char GetNextChar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetNextChar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallbackBuffer.GetNextChar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o próximo caractere no buffer de fallback de exceção.</summary>
+        <returns>O valor de retorno sempre é o caractere Unicode, NULL (U + 0000).  
+  
+ Um valor de retorno é definido, embora seja inalterável, como esse método implementa um método abstrato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Text.EncoderExceptionFallbackBuffer> não tem nenhum buffer de dados de exceção real, o <xref:System.Text.EncoderExceptionFallbackBuffer.GetNextChar%2A> método sempre retorna o caractere Unicode nulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovePrevious">
+      <MemberSignature Language="C#" Value="public override bool MovePrevious ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MovePrevious() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncoderExceptionFallbackBuffer.MovePrevious" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que a próxima chamada para o <see cref="M:System.Text.EncoderExceptionFallbackBuffer.GetNextChar" /> método para acessar a posição de caractere de buffer de dados de exceção que é anterior a posição atual.</summary>
+        <returns>O valor de retorno é sempre <see langword="false" />.  
+  
+ Um valor de retorno é definido, embora seja inalterável, como esse método implementa um método abstrato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Text.EncoderExceptionFallbackBuffer> não tem nenhum buffer de dados de exceção real, o <xref:System.Text.EncoderExceptionFallbackBuffer.MovePrevious%2A> método sempre retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remaining">
+      <MemberSignature Language="C#" Value="public override int Remaining { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Remaining" />
+      <MemberSignature Language="DocId" Value="P:System.Text.EncoderExceptionFallbackBuffer.Remaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de caracteres no atual <see cref="T:System.Text.EncoderExceptionFallbackBuffer" /> objeto permanecer para serem processados.</summary>
+        <value>O valor de retorno sempre será zero.  
+  
+ Um valor de retorno é definido, embora seja inalterável, como esse método implementa um método abstrato.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Text.EncoderExceptionFallbackBuffer> não tem nenhum buffer de dados de exceção real, o <xref:System.Text.EncoderExceptionFallbackBuffer.Remaining%2A> propriedade sempre retorna zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

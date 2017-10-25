@@ -1,0 +1,78 @@
+<Type Name="AudioLevelUpdatedEventArgs" FullName="System.Speech.Recognition.AudioLevelUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public class AudioLevelUpdatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioLevelUpdatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.AudioLevelUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see langword="AudioLevelUpdated" /> da classe <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando eles são gerados, o <xref:System.Speech.Recognition.SpeechRecognitionEngine.AudioLevelUpdated?displayProperty=nameWithType> e <xref:System.Speech.Recognition.SpeechRecognizer.AudioLevelUpdated?displayProperty=nameWithType> eventos passam uma instância de <xref:System.Speech.Recognition.AudioLevelUpdatedEventArgs> para o manipulador para o evento associado.  
+  
+ O <xref:System.Speech.Recognition.AudioLevelUpdatedEventArgs.AudioLevel%2A> propriedade obtém o novo nível de áudio de entrada quando o <xref:System.Speech.Recognition.SpeechRecognitionEngine.AudioLevelUpdated?displayProperty=nameWithType> ou <xref:System.Speech.Recognition.SpeechRecognizer.AudioLevelUpdated?displayProperty=nameWithType> é gerado.  
+  
+ O `AudioLevel` propriedade o <xref:System.Speech.Recognition.SpeechRecognizer> e <xref:System.Speech.Recognition.SpeechRecognitionEngine> classes fornece o nível atual de entrada de áudio para o mecanismo de reconhecimento de fala.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um manipulador de eventos para um <xref:System.Speech.Recognition.SpeechRecognitionEngine> objeto. O manipulador gera o novo nível de áudio para o console.  
+  
+ <xref:System.Speech.Recognition.AudioLevelUpdatedEventArgs> deriva de <xref:System.EventArgs>.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine sre;  
+  
+// Initialize the SpeechRecognitionEngine object.   
+private void Initialize()  
+{  
+  sre = new SpeechRecognitionEngine();  
+  
+  // Add an event handler for the AudioLevelUpdated event.  
+  sre.AudioLevelUpdated += new EventHandler<AudioLevelUpdatedEventArgs>(sre_AudioLevelUpdated);  
+  
+  // Add other initialization code here.  
+}  
+  
+// Write the audio level to the console when the AudioLevelUpdated event is raised.  
+void sre_AudioLevelUpdated(object sender, AudioLevelUpdatedEventArgs e)  
+{  
+  Console.WriteLine("The audio level is now: {0}.", e.AudioLevel);  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AudioLevel">
+      <MemberSignature Language="C#" Value="public int AudioLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AudioLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.AudioLevelUpdatedEventArgs.AudioLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo nível de entrada de áudio após o <see cref="E:System.Speech.Recognition.SpeechRecognitionEngine.AudioLevelUpdated" /> ou <see cref="E:System.Speech.Recognition.SpeechRecognizer.AudioLevelUpdated" /> é gerado.</summary>
+        <value>O novo nível de entrada de áudio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

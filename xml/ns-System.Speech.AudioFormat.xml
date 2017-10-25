@@ -1,0 +1,15 @@
+<Namespace Name="System.Speech.AudioFormat">
+  <Docs>
+    <summary>O <see cref="N:System.Speech.AudioFormat" /> namespace consiste em uma única classe, <see cref="T:System.Speech.AudioFormat.SpeechAudioFormatInfo" />, que contém informações sobre o formato de áudio que está sendo entrada para o mecanismo de reconhecimento de fala ou sendo de saída do mecanismo de síntese de fala.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar as propriedades de <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo> para obter informações sobre as características específicas de um formato de áudio. Essas propriedades são somente para leitura, exceto para <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo.BlockAlign%2A>, que pode ser usado para definir o alinhamento do bloco de áudio de entrada. Para obter todas as propriedades do formato de áudio de entrada, use o <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo.FormatSpecificData%2A> método.  
+  
+ Usando os construtores no <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo> classe, você pode especificar qualquer uma das propriedades do formato de áudio ao inicializar o objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

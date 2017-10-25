@@ -1,0 +1,41 @@
+<Type Name="ReceiveCompletedEventHandler" FullName="System.Messaging.ReceiveCompletedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ReceiveCompletedEventHandler(object sender, ReceiveCompletedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ReceiveCompletedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.ReceiveCompletedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Messaging.ReceiveCompletedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento, o <see cref="T:System.Messaging.MessageQueue" />.</param>
+    <param name="e">Um <see cref="T:System.Messaging.ReceiveCompletedEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Messaging.MessageQueue.ReceiveCompleted" /> de <see cref="T:System.Messaging.MessageQueue" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Messaging.ReceiveCompletedEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra como criar um representante do evento (<xref:System.Messaging.ReceiveCompletedEventHandler>) para o manipulador de eventos (`MyReceiveCompleted`) e associá-lo com o <xref:System.Messaging.MessageQueue.ReceiveCompleted?displayProperty=nameWithType> evento. O manipulador de eventos recebe uma mensagem de uma fila e grava seu rótulo para a tela.  
+  
+ [!code-cpp[MessageQueue.ReceiveCompleted#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.ReceiveCompleted/CPP/mqreceivecompletedeventhandler.cpp#1)]
+ [!code-csharp[MessageQueue.ReceiveCompleted#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.ReceiveCompleted/CS/mqreceivecompletedeventhandler.cs#1)]
+ [!code-vb[MessageQueue.ReceiveCompleted#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.ReceiveCompleted/VB/mqreceivecompletedeventhandler.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

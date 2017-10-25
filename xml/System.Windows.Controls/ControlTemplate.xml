@@ -1,0 +1,274 @@
+<Type Name="ControlTemplate" FullName="System.Windows.Controls.ControlTemplate">
+  <TypeSignature Language="C#" Value="public class ControlTemplate : System.Windows.FrameworkTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlTemplate extends System.Windows.FrameworkTemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ControlTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkTemplate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.DictionaryKeyProperty("TargetType")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a estrutura visual e aspectos comportamentais de um <see cref="T:System.Windows.Controls.Control" /> que podem ser compartilhados entre várias instâncias do controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ControlTemplate> permite que você especifique a estrutura visual de um controle. O autor do controle pode definir o padrão <xref:System.Windows.Controls.ControlTemplate> e o autor do aplicativo pode substituir o <xref:System.Windows.Controls.ControlTemplate> para reconstruir a estrutura visual do controle.  
+  
+ Modelos de controle é um dos muitos recursos oferecidos pelo [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de estilos e modelos. O modelo de estilos e modelagem fornece essa grande flexibilidade que em muitos casos você não precisa escrever seus próprios controles. Se você for um autor de aplicativos que deseja alterar a visualização de seu controle ou substituir o <xref:System.Windows.Controls.ControlTemplate> de um controle existente, consulte o [estilos e modelagem](~/docs/framework/wpf/controls/styling-and-templating.md) tópico para obter exemplos e uma discussão mais profunda.  
+  
+ Se você estiver escrevendo seu próprio controle, consulte "Criar um controle personalizado" o [visão geral de criação do controle](~/docs/framework/wpf/controls/control-authoring-overview.md).  
+  
+ Um <xref:System.Windows.Controls.ControlTemplate> deve ser uma unidade autossuficiente de detalhe de implementação que é invisível para fora de usuários e objetos, incluindo estilos. É a única maneira de manipular o conteúdo do modelo de controle de dentro do mesmo modelo de controle.  
+  
+<a name="xamlObjectElementUsage_VisualTree"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<ControlTemplate>  
+  <VisualTreeRootNode > VisualTreeNodeContents  
+  </VisualTreeRootNode >  
+</ControlTemplate>  
+```  
+  
+<a name="xamlValues_VisualTree"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *ControlTemplate*  
+ Elemento de objeto para <xref:System.Windows.Controls.ControlTemplate> ou uma classe derivada.  
+  
+ *VisualTreeRootNode*  
+ Um único [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] elemento como o filho imediato de <xref:System.Windows.Controls.ControlTemplate> (ou uma classe derivada). Modelos devem ter um único nó raiz. Para gerar um modelo útil, o elemento escolhido como *VisualTreeRootNode* é esperado para dar suporte a um modelo de conteúdo de seu próprio, geralmente um modelo que oferece suporte a vários elementos filho.  
+  
+ *VisualTreeNodeContents*  
+ Um ou mais elementos que concluir o modelo desejado. Se o elemento escolhido como *VisualTreeRootNode* dá suporte a apenas um único filho, em seguida, há só pode ser um elemento declarado como *VisualTreeNodeContents*. Também é possível (embora raro) fornecer o conteúdo de texto se escolhido *VisualTreeRootNode* oferece suporte a uma propriedade de conteúdo de texto.  
+  
+   
+  
+## Examples  
+ A seguir mostra um <xref:System.Windows.Controls.Button> <xref:System.Windows.Style> que define o <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.Button>:  
+  
+ [!code-xaml[StylingIntroSample_snippet#ButtonCT](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#buttonct)]     
+  
+ Quando isso é aplicado, o <xref:System.Windows.Controls.Button> aparece como um <xref:System.Windows.Shapes.Ellipse>:  
+  
+ ![Exemplo de botão ControlTemplate](~/add/media/stylingintro-buttoncontroltemplate.png "exemplo ControlTemplate de botão")  
+  
+ Quando você define o <xref:System.Windows.Controls.Control.Template%2A> propriedade de um <xref:System.Windows.Controls.Control> para um novo <xref:System.Windows.Controls.ControlTemplate> como no exemplo acima, você está substituindo o modelo inteiro. O que o <xref:System.Windows.Controls.Button> aparência quando ele está em foco ou pressionado faz parte da aparência padrão do botão que você está substituindo. Portanto, dependendo de suas necessidades, convém colocar em sua definição de que o botão deve ter aparência quando ele é pressionado e assim por diante, como no exemplo a seguir:  
+  
+ [!code-xaml[ControlTemplateExamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#1)]  
+  
+ Observe que esse exemplo faz referência a recursos que não são mostrados aqui. Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](http://go.microsoft.com/fwlink/?LinkID=160041). Esse exemplo fornece exemplos de modelos de controle de muitos controles e é a melhor maneira de você começar a criar modelos de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ControlTemplate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ControlTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlTemplate (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ControlTemplate.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">O tipo deste modelo é destinado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Controls.ControlTemplate" /> classe com o tipo de destino especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public Type TargetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ControlTemplate.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo para o qual esse <see cref="T:System.Windows.Controls.ControlTemplate" /> foi projetado.</summary>
+        <value>O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver um autônomo <xref:System.Windows.Controls.ControlTemplate> na seção de recursos com o <xref:System.Windows.Controls.ControlTemplate.TargetType%2A> propriedade definida como um tipo, o <xref:System.Windows.Controls.ControlTemplate> não é aplicado a esse tipo automaticamente. Em vez disso, você precisa especificar um `x:Key` e aplique o modelo explicitamente.  
+  
+ Observe também que o <xref:System.Windows.Controls.ControlTemplate.TargetType%2A> propriedade é necessária em uma <xref:System.Windows.Controls.ControlTemplate> se a definição de modelo contiver um <xref:System.Windows.Controls.ContentPresenter>.  
+  
+<a name="xamlAttributeUsage_TargetType"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object  TargetType="typeName"/>  
+```  
+  
+<a name="xamlValues_TargetType"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *typeName*  
+ O nome do tipo da classe. Para fazer referência a <xref:System.Type> nome da classe, use o [extensões de marcação e WPF XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso dessa propriedade:  
+  
+ [!code-xaml[ControlTemplateExamples#Label](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/label.xaml#label)]  
+  
+ O exemplo acima usa os seguintes recursos:  
+  
+  
+  
+ Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](http://go.microsoft.com/fwlink/?LinkID=160041).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <see cref="P:System.Windows.Controls.ControlTemplate.TargetType" /> propriedade não deve ser <see langword="null" /> se a definição do modelo tem um <see cref="T:System.Windows.Controls.ContentPresenter" />.</exception>
+        <exception cref="T:System.ArgumentException">Os tipos especificados não são válidos. O <see cref="P:System.Windows.Controls.ControlTemplate.TargetType" /> de um <see cref="T:System.Windows.Controls.ControlTemplate" /> deve ser ou herdar de um <see cref="T:System.Windows.Controls.Control" />, <see cref="T:System.Windows.Controls.Page" /> ou <see cref="T:System.Windows.Navigation.PageFunctionBase" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Triggers">
+      <MemberSignature Language="C#" Value="public System.Windows.TriggerCollection Triggers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TriggerCollection Triggers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ControlTemplate.Triggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("VisualTree")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Template")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.TriggerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Windows.TriggerBase" /> que aplicam alterações de propriedade ou executam ações com base nas condições especificadas.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.Windows.TriggerBase" /> . O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Triggers"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.Triggers>  
+    oneOrMoreTriggers  
+  </object.Triggers>  
+</object>  
+```  
+  
+<a name="xamlValues_Triggers"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *oneOrMoreTriggers*  
+ Um ou mais <xref:System.Windows.TriggerBase> objetos (normalmente eles são um <xref:System.Windows.Trigger>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso dessa propriedade:  
+  
+ [!code-xaml[ControlTemplateExamples#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
+  
+ O exemplo anterior usa os seguintes recursos:  
+  
+  
+  
+  
+ Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](http://go.microsoft.com/fwlink/?LinkID=160041).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTemplatedParent">
+      <MemberSignature Language="C#" Value="protected override void ValidateTemplatedParent (System.Windows.FrameworkElement templatedParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateTemplatedParent(class System.Windows.FrameworkElement templatedParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ControlTemplate.ValidateTemplatedParent(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templatedParent" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="templatedParent">O elemento que esse modelo é aplicado.</param>
+        <summary>Verifica o modelo pai em relação a um conjunto de regras.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método usa as seguintes regras:  
+  
+ 1. O `templatedParent` não pode ser do tipo <xref:System.Windows.FrameworkContentElement>.  
+  
+ 2. O `templatedParent` não pode ser do tipo <xref:System.Windows.FrameworkElement> que não é um <xref:System.Windows.Controls.Control>.  
+  
+ 3. O `templatedParent` não pode ser um <xref:System.Windows.Controls.Control> que não está associado a <xref:System.Windows.Controls.ControlTemplate>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="templatedParent" /> não deve ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Você deve associar o <see cref="T:System.Windows.Controls.ControlTemplate" /> com um <see cref="T:System.Windows.Controls.Control" /> definindo o <see cref="P:System.Windows.Controls.Control.Template" /> propriedade antes de usar o <see cref="T:System.Windows.Controls.ControlTemplate" /> no <see cref="T:System.Windows.Controls.Control" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

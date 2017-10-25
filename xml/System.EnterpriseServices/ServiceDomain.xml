@@ -1,0 +1,82 @@
+<Type Name="ServiceDomain" FullName="System.EnterpriseServices.ServiceDomain">
+  <TypeSignature Language="C#" Value="public sealed class ServiceDomain" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceDomain extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ServiceDomain" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que um segmento de código identificado por <see cref="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" /> e <see cref="M:System.EnterpriseServices.ServiceDomain.Leave" /> para executar em seu próprio contexto e se comportam como se fosse um método que é chamado em um objeto criado dentro do contexto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> e <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> métodos são usados em pares, coloque o código que pode usar serviços COM+. Código que é colocado entre as chamadas para <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> e <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> é executado em seu próprio contexto e se comporta como se fosse um método que é chamado em um objeto criado dentro do contexto. O <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> e <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> pares podem ser aninhados. Depende do usuário para certificar-se de que os pares de chamadas são balanceados para que todas as chamadas para <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> corresponde a uma chamada anterior para <xref:System.EnterpriseServices.ServiceDomain.Enter%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public static void Enter (System.EnterpriseServices.ServiceConfig cfg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Enter(class System.EnterpriseServices.ServiceConfig cfg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cfg" Type="System.EnterpriseServices.ServiceConfig" />
+      </Parameters>
+      <Docs>
+        <param name="cfg">Um <see cref="T:System.EnterpriseServices.ServiceConfig" /> que contém as informações de configuração para os serviços a serem usados no código incluído.</param>
+        <summary>Cria o contexto especificado pelo <see cref="T:System.EnterpriseServices.ServiceConfig" /> de objeto e envia-lo para a pilha de contexto para se tornar o contexto atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceDomain.Enter%2A>primeiro cria um contexto configurado conforme especificado pelo <xref:System.EnterpriseServices.ServiceConfig> objeto que é passado como o `cfg` parâmetro. Políticas nos lados do cliente e servidor, em seguida, são acionadas como se tivesse ocorrido uma chamada de método. O novo contexto enviada por push para uma pilha de contexto e se torna o contexto atual. Devido ao seu design eficiente e porque nenhum thread marshaling estiver envolvido, usando <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> e <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> envolve reduzido significativamente a sobrecarga em comparação com uma chamada de método equivalente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.EnterpriseServices.ServiceConfig" />Não há suporte na plataforma atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public static System.EnterpriseServices.TransactionStatus Leave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.EnterpriseServices.TransactionStatus Leave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServiceDomain.Leave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aciona o servidor e, em seguida, as políticas do lado do cliente, como se foram retornando uma chamada de método. O contexto atual é exibido, em seguida, a pilha de contexto e o contexto que estava executando quando <see cref="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" /> foi chamado torna-se o contexto atual.</summary>
+        <returns>Um dos valores de <see cref="T:System.EnterpriseServices.TransactionStatus" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.EnterpriseServices.ServiceConfig" />Não há suporte na plataforma atual.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

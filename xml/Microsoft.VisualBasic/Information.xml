@@ -1,0 +1,808 @@
+<Type Name="Information" FullName="Microsoft.VisualBasic.Information">
+  <TypeSignature Language="C#" Value="public sealed class Information" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Information extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Information" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="Information" /> contém os procedimentos usados para retornar, testar ou verificar informações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte a palavras-chave de linguagem Visual Basic e membros da biblioteca em tempo de execução que fornecem informações de erro, validam dados, determinam os limites da matriz e recuperar informações de tipo e a cor de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `VbTypeName` função para retornar nomes de tipo de dados para diversas variáveis.  
+  
+```  
+Dim sysDateName As String = "System.DateTime"  
+Dim sysShortName As String = "Int16"  
+Dim sysBadName As String = "Nonsense"  
+Dim testVbName As String  
+testVbName = VbTypeName(sysDateName)   
+' Returns "Date".  
+testVbName = VbTypeName(sysShortName)   
+' Returns "Short".  
+testVbName = VbTypeName(sysBadName)   
+' Returns Nothing.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Erl">
+      <MemberSignature Language="C#" Value="public static int Erl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Erl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.Erl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um inteiro que indica o número de linha da última instrução executada. Somente leitura.</summary>
+        <returns>Retorna um inteiro que indica o número de linha da última instrução executada. Somente leitura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o Visual Basic encontre sem números de linha, ele retornará 0.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Erl` propriedade para indicar o número da linha.  
+  
+ [!code-vb[VbVbalrErrorHandling#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Err">
+      <MemberSignature Language="C#" Value="public static Microsoft.VisualBasic.ErrObject Err ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.VisualBasic.ErrObject Err() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.Err" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.ErrObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Contém informações sobre erros de tempo de execução.</summary>
+        <returns>Contém informações sobre erros de tempo de execução.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades do `Err` objeto são definidas pelo gerador de um erro — Visual Basic, um objeto ou o programador.  
+  
+ Quando ocorre um erro de tempo de execução, as propriedades do `Err` são preenchidas com informações que identificam exclusivamente o erro do objeto e que você pode usar para manipular o erro. Para gerar um erro de tempo de execução em seu código, use o `Raise` método.  
+  
+ O `Err` propriedades do objeto são redefinidas para zero ou cadeias de caracteres de comprimento zero ("") após uma `Exit Sub`, `Exit Function`, `Exit Property`, ou `Resume Next` instrução dentro de uma rotina de tratamento de erros. Usando qualquer forma do `Resume` instrução fora de uma rotina de tratamento de erros não redefinirá o `Err` propriedades do objeto. Você pode usar o `Clear` método para redefinir explicitamente `Err`.  
+  
+ Use o `Raise` método em vez de `Error` instrução para gerar erros de tempo de execução de erros do sistema e módulos de classe. Sua decisão sobre a possibilidade de usar o `Raise` método no outro código depende a riqueza de informações que você deseja retornar.  
+  
+ O `Err` é um objeto intrínseco com escopo global. Portanto, você não precisa criar uma instância no seu código.  
+  
+   
+  
+## Examples  
+ Este exemplo usa as propriedades do `Err` objeto na construção de uma caixa de diálogo de mensagem de erro. Observe que, se você usar o `Clear` método primeiro, quando você gera um erro do Visual Basic com o `Raise` método, valores padrão do Visual Basic tornam-se as propriedades do `Err` objeto.  
+  
+ [!code-vb[VbVbalrErrorHandling#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsArray">
+      <MemberSignature Language="C#" Value="public static bool IsArray (object VarName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsArray(object VarName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsArray(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="VarName" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="VarName">Necessário. Variável <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma variável aponta para uma matriz.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma variável aponta para uma matriz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsArray`Retorna `True` se a variável aponta para uma matriz; caso contrário, retornará `False`. `IsArray`é especialmente útil com objetos que podem conter matrizes.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `IsArray` para verificar se diversas variáveis referenciam uma matriz.  
+  
+ [!code-vb[VbVbalrFunctions#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDate">
+      <MemberSignature Language="C#" Value="public static bool IsDate (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDate(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsDate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma expressão representa um valor de <see langword="Date" /> válido.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma expressão representa um valor de <see langword="Date" /> válido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsDate`Retorna `True` se `Expression` é o <xref:System.DateTime> dados digite ou pode ser convertido para ele; caso contrário, retornará `False`.  
+  
+ O <xref:System.DateTime> tipo de dados contém um valor de data e um valor de tempo. `IsDate`Retorna `True` se `Expression` representa uma data válida, uma hora válida, ou uma data válida e a hora.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `IsDate` função para determinar se diversas variáveis representam válido <xref:System.DateTime> valores.  
+  
+ [!code-vb[VbVbalrFunctions#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#35)]  
+  
+ No exemplo anterior, `IsDate` retorna `True` para as quatro primeiras chamadas e `False` para a última chamada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public static bool IsDBNull (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDBNull(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsDBNull(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma expressão é avaliada como a classe <see cref="T:System.DBNull" />.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma expressão é avaliada como a classe <see cref="T:System.DBNull" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsDBNull`Retorna `True` se o tipo de dados `Expression` é avaliada como o <xref:System.DBNull> tipo; caso contrário, `IsDBNull` retorna `False`.  
+  
+ O <xref:System.DBNull?displayProperty=nameWithType> valor indica que o `Object` representa dados ausentes ou inexistentes. `DBNull`não é o mesmo que `Nothing`, que indica que uma variável ainda não foi inicializada. `DBNull`também não é o mesmo que uma cadeia de caracteres de comprimento zero (`""`), que às vezes é conhecido como uma cadeia de caracteres nula.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `IsDBNull` função para determinar se uma variável for avaliada como `DBNull`.  
+  
+ [!code-vb[VbVbalrFunctions#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsError">
+      <MemberSignature Language="C#" Value="public static bool IsError (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsError(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsError(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma expressão é um tipo de exceção.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma expressão é um tipo de exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsError`Retorna `True` se a expressão representa um `Object` variável da qual deriva a <xref:System.Exception> classe no <xref:System> namespace.  
+  
+ Uma exceção que é derivada de <xref:System.Exception?displayProperty=nameWithType> pode ser detectada com a `Try...Catch...Finally` instruções.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `IsError` para verificar se uma expressão representa uma exceção do sistema.  
+  
+ [!code-vb[VbVbalrFunctions#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNothing">
+      <MemberSignature Language="C#" Value="public static bool IsNothing (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsNothing(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsNothing(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma expressão representa não tem nenhum objeto atribuído a ela.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma expressão representa não tem nenhum objeto atribuído a ela.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsNothing`Retorna `True` se a expressão representa uma variável de objeto que atualmente não tem nenhum objeto atribuído a ela; caso contrário, retornará `False`.  
+  
+ `IsNothing`tem como objetivo trabalhar em tipos de referência. Um tipo de valor não pode armazenar um valor e será revertido para seu valor padrão, se você atribuir `Nothing` a ele. Se você fornecer um tipo de valor em `Expression`, `IsNothing` sempre retorna `False`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `IsNothing` função para determinar se uma variável de objeto é associada a qualquer instância do objeto.  
+  
+ [!code-vb[VbVbalrFunctions#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNumeric">
+      <MemberSignature Language="C#" Value="public static bool IsNumeric (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsNumeric(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsNumeric(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma expressão pode ser avaliada como um número.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma expressão pode ser avaliada como um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsNumeric`returns `True` if the data type of `Expression` is `Boolean`, `Byte`, `Decimal`, `Double`, `Integer`, `Long`, `SByte`, `Short`, `Single`, `UInteger`, `ULong`, or `UShort`. Ele também retorna `True` se `Expression` é um `Char`, `String`, ou `Object` que pode ser convertido com êxito em um número. `Expression`pode conter caracteres não numéricos. `IsNumeric`Retorna `True` se `Expression` é uma cadeia de caracteres que contém um número hexadecimal ou octal válido. `IsNumeric`também retorna `True` se `Expression` contém uma expressão numérica válida que começa com um + ou - o caractere ou contiverem vírgulas.  
+  
+ `IsNumeric`Retorna `False` se `Expression` é do tipo de dados `Date`. Ele retorna `False` se `Expression` é um `Char`, `String`, ou `Object` que não pode ser convertido com êxito em um número.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `IsNumeric` função para determinar se o conteúdo de uma variável pode ser avaliado como um número.  
+  
+ [!code-vb[VbVbalrFunctions#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReference">
+      <MemberSignature Language="C#" Value="public static bool IsReference (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsReference(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.IsReference(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão <see langword="Object" />.</param>
+        <summary>Retorna um valor <see langword="Boolean" /> que indica se uma expressão avalia para um tipo de referência.</summary>
+        <returns>Retorna um valor <see langword="Boolean" /> que indica se uma expressão avalia para um tipo de referência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `IsReference`Retorna `True` se `Expression` representa um tipo de referência, como uma instância da classe, uma `String` tipo ou uma matriz de qualquer tipo; caso contrário, retornará `False`.  
+  
+ Um tipo de referência contém um ponteiro para dados armazenados em outro lugar na memória. Um tipo de valor contém seus próprios dados.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `IsReference` para verificar se diversas variáveis referenciam a tipos de referência.  
+  
+ [!code-vb[VbVbalrFunctions#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#40)]  
+  
+ No exemplo anterior, as três primeiras chamadas para `IsReference` retornar `True`. Retorna a última chamada `False`, pois `Integer` é um tipo de valor, não é um tipo de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LBound">
+      <MemberSignature Language="C#" Value="public static int LBound (Array Array, int Rank = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 LBound(class System.Array Array, int32 Rank) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.LBound(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Array" Type="System.Array" />
+        <Parameter Name="Rank" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Array">Necessário. Matriz de qualquer tipo de dados. A matriz na qual você deseja encontrar o subscrito mais baixo possível de uma dimensão.</param>
+        <param name="Rank">Opcional. <see langword="Integer" />. A dimensão para a qual o subscrito mais baixo possível deve ser retornado. Use 1 para a primeira dimensão, 2 para a segunda e assim por diante. Se <c>classificação</c> for omitido, 1 é assumido.</param>
+        <summary>Retorna o subscrito mais baixo disponível para a dimensão indicada de uma matriz.</summary>
+        <returns>
+          <see langword="Integer" />. O valor mais baixo da subscrição que a dimensão especificada pode conter. <see langword="LBound" /> sempre retorna 0, desde que <paramref name="Array" /> tenha sido inicializado, mesmo se não contiver elementos, como por exemplo, se for uma cadeia de comprimento zero. Se <paramref name="Array" /> for <see langword="Nothing" />, <see langword="LBound" /> gera um <see cref="T:System.ArgumentNullException" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como subscritos de matriz iniciam em 0, a menor subscrição disponível para cada dimensão é sempre 0.  
+  
+ Para uma matriz com as seguintes dimensões, `LBound` retorna os valores na tabela a seguir:  
+  
+```vb  
+Dim a(100, 5, 4) As Byte  
+```  
+  
+|Chamada para LBound|Valor retornado|  
+|--------------------|------------------|  
+|`LBound(a, 1)`|0|  
+|`LBound(a, 2)`|0|  
+|`LBound(a, 3)`|0|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `LBound` função para determinar a menor subscrição disponível para a dimensão indicada de uma matriz.  
+  
+ [!code-vb[VbVbalrFunctions#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Array" /> é <see langword="Nothing" />.</exception>
+        <exception cref="T:System.RankException">
+          <paramref name="Rank" /> é menor que 1 ou <paramref name="Rank" /> é maior que a classificação de <paramref name="Array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QBColor">
+      <MemberSignature Language="C#" Value="public static int QBColor (int Color);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 QBColor(int32 Color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.QBColor(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Color" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Color">Necessário. Um número inteiro no intervalo de 0 a 15.</param>
+        <summary>Retorna um valor <see langword="Integer" /> que representa o código de cor RGB correspondente ao número de cor especificado.</summary>
+        <returns>Retorna um valor <see langword="Integer" /> que representa o código de cor RGB correspondente ao número de cor especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o byte menos significativo, o valor retornado especifica os valores de vermelhos, verdes e azuis usados para definir a cor apropriada no sistema RGB usado pela linguagem Visual Basic.  
+  
+ O `Color` possui as seguintes configurações.  
+  
+|Número|Cor|Número|Cor|  
+|------------|-----------|------------|-----------|  
+|0|Preto|8|Cinza|  
+|1|Azul|9|Azul claro|  
+|2|Verde|10|Verde-claro|  
+|3|Ciano|11|Ciano-claro|  
+|4|Vermelho|12|Vermelho-claro|  
+|5|Magenta|13|Magenta claro|  
+|6|Amarelo|14|Amarelo-claro|  
+|7|Branco|15|Branco brilhante|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `QBColor` função para alterar para a cor indicada pelo `colorInteger`. `QBColor`aceita valores inteiros entre 0 e 15.  
+  
+ [!code-vb[VbVbalrCatRef#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Color" /> está fora do intervalo de 0 a 15, inclusive.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RGB">
+      <MemberSignature Language="C#" Value="public static int RGB (int Red, int Green, int Blue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 RGB(int32 Red, int32 Green, int32 Blue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.RGB(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Red" Type="System.Int32" />
+        <Parameter Name="Green" Type="System.Int32" />
+        <Parameter Name="Blue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Red">Necessário. <see langword="Integer" /> no intervalo 0 – 255, inclusive, que representa a intensidade do componente vermelho da cor.</param>
+        <param name="Green">Necessário. <see langword="Integer" /> no intervalo 0 – 255, inclusive, que representa a intensidade do componente verde da cor.</param>
+        <param name="Blue">Necessário. <see langword="Integer" /> no intervalo 0 – 255, inclusive, que representa a intensidade do componente azul da cor.</param>
+        <summary>Retorna um valor <see langword="Integer" /> que representa um valor de cor RGB de um conjunto de componentes de cor vermelho, verde e azul.</summary>
+        <returns>Retorna um valor <see langword="Integer" /> que representa um valor de cor RGB de um conjunto de componentes de cor vermelho, verde e azul.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Métodos do aplicativo e as propriedades que aceitam uma especificação de cor esperam que essa especificação seja um número que representa um RGB valor de cor. Um valor de cor RGB especifica a intensidade relativa de vermelho, verde e azul para fazer com que uma cor específica a ser exibido.  
+  
+ Se o valor de qualquer argumento para `RGB` é maior que 255, 255 será usado.  
+  
+ A tabela a seguir lista algumas cores padrão e os valores de vermelhos, verdes e azuis que elas incluem.  
+  
+|Cor|Valor de vermelho|Valor verde|Valor azul|  
+|-----------|---------------|-----------------|----------------|  
+|Preto|0|0|0|  
+|Azul|0|0|255|  
+|Verde|0|255|0|  
+|Ciano|0|255|255|  
+|Vermelho|255|0|0|  
+|Magenta|255|0|255|  
+|Amarelo|255|255|0|  
+|Branco|255|255|255|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como o `RGB` função é usada para retornar um número inteiro que representa um `RGB` valor de cor.  
+  
+ [!code-vb[VbVbalrCatRef#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Green" />, <paramref name="Blue" /> ou <paramref name="Red" /> está fora do intervalo de 0 a 255, inclusive.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemTypeName">
+      <MemberSignature Language="C#" Value="public static string SystemTypeName (string VbName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string SystemTypeName(string VbName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.SystemTypeName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="VbName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="VbName">Necessário. Um <see langword="String" /> variável que contém um nome de tipo de Visual Basic.</param>
+        <summary>Retorna um <see langword="String" /> valor que contém o nome de tipo de dados do sistema de uma variável.</summary>
+        <returns>Retorna um <see langword="String" /> valor que contém o nome de tipo de dados do sistema de uma variável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `SystemTypeName`Retorna o nome totalmente qualificado common language runtime (CLR) tipo correspondente ao nome do tipo de Visual Basic. Por exemplo, se `VbName` contém "Data", `SystemTypeName` retorna "System. DateTime". Se `SystemTypeName` não reconhece o valor de `VbName`, ele retorna `Nothing` (não a cadeia de caracteres "Nothing").  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `SystemTypeName` função para retornar nomes de tipo de dados para diversas variáveis.  
+  
+ [!code-vb[VbVbalrFunctions#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#49)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public static string TypeName (object VarName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string TypeName(object VarName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.TypeName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="VarName" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="VarName">Necessário. Variável <see langword="Object" />. Se <see langword="Option Strict" /> for <see langword="Off" />, você poderá passar uma variável de qualquer tipo de dados, exceto uma estrutura.</param>
+        <summary>Retorna um valor de <see langword="String" /> que contém informações de tipo de dados sobre uma variável.</summary>
+        <returns>Retorna um valor de <see langword="String" /> que contém informações de tipo de dados sobre uma variável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra o `String` valores retornados por `TypeName` para conteúdos diferentes de `VarName`.  
+  
+|`VarName`conteúdo|Cadeia de caracteres retornada|  
+|------------------------|---------------------|  
+|16-bit `True` ou `False` tipo de valor|"Boolean"|  
+|tipo de valor binário de 8 bits|"Bytes"|  
+|tipo de valor de caractere de 16 bits|"Char"|  
+|tipo de data de 64 bits e o valor de tempo|"Data"|  
+|Tipo de referência que indica dados ausentes ou inexistentes|"DBNull"|  
+|tipo de valor numérico ponto fixo de 128 bits|"Decimal"|  
+|tipo de valor numérico ponto flutuante de 64 bits|"Double"|  
+|tipo de valor inteiro de 32 bits|"Integer"|  
+|Tipo de referência que aponta para um objeto não-especializado|'Objeto'|  
+|Tipo de referência que aponta para um objeto especializado criado a partir de classe *objectclass*|"*objectclass*"|  
+|tipo de valor inteiro de 64 bits|"Longo"|  
+|Tipo de referência com nenhum objeto atualmente atribuído a ele|"Nada"|  
+|tipo de valor inteiro de 8 bits assinado|"SByte"|  
+|tipo de valor inteiro de 16 bits|"Curto"|  
+|tipo de valor numérico ponto flutuante de 32 bits|"Único"|  
+|Tipo de referência que aponta para uma cadeia de caracteres de 16 bits|"String"|  
+|tipo de valor inteiro não assinado de 32 bits|"UInteger"|  
+|tipo de valor inteiro não assinado de 64 bits|"ULong"|  
+|tipo de valor inteiro não assinado de 16 bits|"UShort"|  
+  
+ Se `VarName` é uma matriz, a cadeia de caracteres retornada poderá ser qualquer uma das cadeias de caracteres na tabela anterior com parênteses vazios anexados. Por exemplo, se `VarName` aponta para uma matriz de inteiros, `TypeName` retorna "Integer ()".  
+  
+ Quando `TypeName` retorna o nome de um tipo de referência como uma classe, ele retorna somente o nome em si, não o nome qualificado. Por exemplo, se `VarName` aponta para um objeto da classe <xref:System.Drawing.Printing.PaperSource?displayProperty=nameWithType>, `TypeName` retorna "PaperSource". Observe que, se a variável é declarada com um determinado tipo de classe, mas não tem um objeto atribuído a ele, `TypeName` retorna "Nada".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `TypeName` função para retornar informações sobre diversas variáveis de tipo de dados.  
+  
+ [!code-vb[VbVbalrFunctions#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#52)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UBound">
+      <MemberSignature Language="C#" Value="public static int UBound (Array Array, int Rank = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 UBound(class System.Array Array, int32 Rank) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.UBound(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Array" Type="System.Array" />
+        <Parameter Name="Rank" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Array">Necessário. Matriz de qualquer tipo de dados. A matriz na qual você deseja encontrar o subscrito mais alto possível de uma dimensão.</param>
+        <param name="Rank">Opcional. <see langword="Integer" />. A dimensão para a qual o subscrito mais alto possível deve ser retornado. Use 1 para a primeira dimensão, 2 para a segunda e assim por diante. Se <c>classificação</c> for omitido, 1 é assumido.</param>
+        <summary>Retorna o subscrito mais alto disponível para a dimensão indicada de uma matriz.</summary>
+        <returns>
+          <see langword="Integer" />. O valor mais alto da subscrição que a dimensão especificada pode conter. Se <paramref name="Array" /> tiver apenas um elemento, <see langword="UBound" /> retornará 0. Se <paramref name="Array" /> não tiver elementos (por exemplo, se for uma cadeia de tamanho zero), <see langword="UBound" /> retornará -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como subscritos de matriz iniciam em 0, o comprimento de uma dimensão é maior que o maior subscrito disponível para a dimensão.  
+  
+ Para uma matriz com as seguintes dimensões, `UBound` retorna os valores na tabela a seguir:  
+  
+```vb  
+Dim a(100, 5, 4) As Byte  
+```  
+  
+|Chamada para UBound|Valor retornado|  
+|--------------------|------------------|  
+|`UBound(a, 1)`|100|  
+|`UBound(a, 2)`|5|  
+|`UBound(a, 3)`|4|  
+  
+ Você pode usar `UBound` para determinar o total de número de elementos em uma matriz, mas você deve ajustar o valor retornado para compensar o fato de que o subscritos iniciam em 0. O exemplo a seguir calcula o tamanho total da matriz `a` no exemplo anterior:  
+  
+```vb  
+Dim total As Integer  
+total = (UBound(A, 1) + 1) * (UBound(A, 2) + 1) * (UBound(A, 3) + 1)  
+```  
+  
+ O valor calculado para `total` é 3030, que é 101 * 6 * 5.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `UBound` função para determinar a maior subscrição disponível para a dimensão indicada de uma matriz.  
+  
+ [!code-vb[VbVbalrFunctions#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#53)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Array" /> é <see langword="Nothing" />.</exception>
+        <exception cref="T:System.RankException">
+          <paramref name="Rank" /> é menor que 1 ou <paramref name="Rank" /> é maior que a classificação de <paramref name="Array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VarType">
+      <MemberSignature Language="C#" Value="public static Microsoft.VisualBasic.VariantType VarType (object VarName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.VisualBasic.VariantType VarType(object VarName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.VarType(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="VarName" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="VarName">Necessário. Variável <see langword="Object" />. Se <see langword="Option Strict" /> for <see langword="Off" />, você poderá passar uma variável de qualquer tipo de dados, exceto uma estrutura.</param>
+        <summary>Retorna um valor <see langword="Integer" /> que contém a classificação de tipo de dados de uma variável.</summary>
+        <returns>Retorna um valor <see langword="Integer" /> que contém a classificação de tipo de dados de uma variável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor inteiro retornado por `VarType` é membro de <xref:Microsoft.VisualBasic.VariantType>.  
+  
+ A tabela a seguir mostra os valores retornados por `VarType` para casos especiais de `VarName`.  
+  
+|Tipo de dados representado pelo`VarName`|Valor retornado pelo`VarType`|  
+|----------------------------------------|---------------------------------|  
+|[Nothing](~/docs/visual-basic/language-reference/nothing.md)|`VariantType.Object`|  
+|<xref:System.DBNull>|`VariantType.Null`|  
+|Enumeração|Tipo de dados subjacente (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, ou `ULong`)|  
+|Matriz|OR bit a bit de tipo de elemento de matriz e`VariantType.Array`|  
+|Matriz de matrizes|OR bit a bit de `VariantType.Object` e`VariantType.Array`|  
+|Estrutura (<xref:System.ValueType?displayProperty=nameWithType>)|`VariantType.UserDefinedType`|  
+|<xref:System.Exception>|`VariantType.Error`|  
+|Unknown|`VariantType.Object`|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `VarType` função para retornar informações de classificação de tipo de dados sobre diversas variáveis.  
+  
+ [!code-vb[VbVbalrFunctions#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#55)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VbTypeName">
+      <MemberSignature Language="C#" Value="public static string VbTypeName (string UrtName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string VbTypeName(string UrtName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Information.VbTypeName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="UrtName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="UrtName">Necessário. <see langword="String" />variável que contém um nome de tipo usado pelo common language runtime.</param>
+        <summary>Retorna um <see langword="String" /> valor que contém o nome de tipo de dados do Visual Basic de uma variável.</summary>
+        <returns>Retorna um <see langword="String" /> valor que contém o nome de tipo de dados do Visual Basic de uma variável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `VbTypeName`Retorna o nome do tipo de Visual Basic correspondente ao nome do tipo common language runtime. Por exemplo, se `UrtName` contiver "Int32" ou "System. Int32", `VbTypeName` retorna "Integer". Se `VbTypeName` não reconhece o valor de `UrtName`, ele retorna `Nothing` (não a cadeia de caracteres "Nothing").  
+  
+ O nome do tipo em `UrtName` pode ser obtido de várias fontes, por exemplo o <xref:System.Reflection.MemberInfo.Name%2A> propriedade o <xref:System.Reflection.MemberInfo> matriz do <xref:System.Type> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `VbTypeName` função para retornar nomes de tipo de dados para diversas variáveis.  
+  
+ [!code-vb[VbVbalrFunctions#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#56)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

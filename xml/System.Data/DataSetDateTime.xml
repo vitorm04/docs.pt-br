@@ -1,0 +1,140 @@
+<Type Name="DataSetDateTime" FullName="System.Data.DataSetDateTime">
+  <TypeSignature Language="C#" Value="public enum DataSetDateTime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSetDateTime extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataSetDateTime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o formato de serialização para colunas <see cref="T:System.DateTime" /> em um <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataSetDateTime>não pode ser definida em não -<xref:System.DateTime> colunas. Definindo o <xref:System.Data.DataColumn.DateTimeMode%2A> propriedade com o valor padrão a UnspecifiedLocall não<xref:System.DateTime> colunas é permitido. Modificando o tipo de dados de coluna de <xref:System.DateTime> para qualquer outro tipo redefine o <xref:System.Data.DataColumn.DateTimeMode%2A> UnspecifiedLocal de valor para o padrão.  
+  
+ Verificando o esquema para mesclar, relações e ForeignKeyConstraints pode ser executada entre <xref:System.DateTime> colunas com correspondência <xref:System.Data.DataColumn.DateTimeMode%2A> propriedades. Caso contrário, as colunas devem ser consideradas como não correspondente no esquema. A única exceção é entre UnspecifiedLocal e de não especificado. É permitido ter um parceiro ou uma `ForeignKeyConstraint` entre dois `DateTime` colunas com um `Unspecified` e outros em `UnspecifiedLocal` <xref:System.Data.DataColumn.DateTimeMode%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Local">
+      <MemberSignature Language="C#" Value="Local" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime Local = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.Local" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" /> sempre é armazenado no Local. Se <see cref="F:System.Data.DataSetDateTime.Utc" /> ou <see cref="F:System.Data.DataSetDateTime.Unspecified" /> for atribuído a uma coluna nesse modo, primeiro, ele será convertido em Local. A serialização nesse modo sempre é executada no Local. Há um deslocamento durante a serialização.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime Unspecified = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" /> sempre é armazenado em Não especificado. Se <see cref="F:System.Data.DataSetDateTime.Local" /> ou <see cref="F:System.Data.DataSetDateTime.Utc" /> for atribuído a uma coluna nesse modo, primeiro, ele será convertido em <see cref="F:System.Data.DataSetDateTime.Unspecified" />. A serialização nesse modo não causa um deslocamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnspecifiedLocal">
+      <MemberSignature Language="C#" Value="UnspecifiedLocal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime UnspecifiedLocal = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.UnspecifiedLocal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" /> é armazenado em Não especificado. Se <see cref="F:System.Data.DataSetDateTime.Local" /> ou <see cref="F:System.Data.DataSetDateTime.Utc" /> for atribuído a uma coluna nesse modo, primeiro, ele será convertido em <see cref="F:System.Data.DataSetDateTime.Unspecified" />. A serialização nesse modo causa um deslocamento. Esse é o comportamento padrão e é compatível com versões anteriores. Essa opção deve ser vista como sendo Não especificado no armazenamento, mas aplicando um deslocamento que é semelhante a <see cref="F:System.Data.DataSetDateTime.Local" /> durante a serialização.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Utc">
+      <MemberSignature Language="C#" Value="Utc" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime Utc = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.Utc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" /> é armazenado no UTC (Universal Coordinated Time). Se <see cref="F:System.Data.DataSetDateTime.Local" /> ou <see cref="F:System.Data.DataSetDateTime.Unspecified" /> for atribuído a uma coluna nesse modo, primeiro, ele será convertido no formato <see langword="Utc" />. A serialização nesse modo sempre é executada em <see langword="Utc" />. não há um deslocamento durante a serialização.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

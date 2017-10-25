@@ -1,0 +1,119 @@
+<Type Name="Format" FullName="Microsoft.SqlServer.Server.Format">
+  <TypeSignature Language="C#" Value="public enum Format" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Format extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.Format" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Usado por <see cref="T:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute" /> e <see cref="T:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute" /> para indicar o formato de serialização de um UDT (tipo definido pelo usuário) ou de uma agregação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado por <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> e <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute> para indicar o formato de serialização de um UDT (tipo definido pelo usuário) ou de uma agregação.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra o `UserDefinedType` atributo do UDT Point.  O UDT é ordenado por byte, chamado "Ponto", tem um método de validação chamado "ValidatePoint" e usa o formato de serialização nativa.  
+  
+ [!code-csharp[DataWorks SqlUserDefinedTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlUserDefinedTypeAttribute Example/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlUserDefinedTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlUserDefinedTypeAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Native">
+      <MemberSignature Language="C#" Value="Native" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.SqlServer.Server.Format Native = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.SqlServer.Server.Format.Native" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.Format</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de serialização <see langword="Native" /> usa um algoritmo muito simples que permite que o SQL Server armazene uma representação eficiente do UDT no disco. Os tipos marcados para a serialização <see langword="Native" /> podem ter apenas tipos de valor (structs no Microsoft Visual C# e estruturas no Microsoft Visual Basic .NET) como membros. Não há suporte para membros de tipos de referência (como classes no Visual C# e Visual Basic) definidos pelo usuário ou existentes na estrutura (como <see cref="T:System.String" />).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os requisitos para esse formato são:  
+  
+-   O `StructLayout.LayoutKindSequential` atributo deve ser aplicado à agregação ou se ele está definido em uma classe e não em uma estrutura UDT. Isso controla o layout físico dos campos de dados e é usado para obrigar os membros a ser dispostos sequencialmente na ordem em que aparecem. SQL Server usa esse atributo para determinar a ordem dos campos para UDTs com vários campos.  
+  
+-   O tipo deve conter pelo menos um membro (valores serializados não podem ser zero bytes de tamanho).  
+  
+-   Todos os campos de agregação devem ser *blittable*, ou seja, eles devem ter uma representação comum na memória gerenciada e e não exigem tratamento especial pelo interop marshaler.  
+  
+-   Todos os campos do UDT devem ser de um dos seguintes tipos de que podem ser serializados: `bool`, `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, <xref:System.Data.SqlTypes.SqlByte>, <xref:System.Data.SqlTypes.SqlInt16>, <xref:System.Data.SqlTypes.SqlInt32>, <xref:System.Data.SqlTypes.SqlInt64>, <xref:System.Data.SqlTypes.SqlDateTime>, <xref:System.Data.SqlTypes.SqlSingle>, <xref:System.Data.SqlTypes.SqlDouble>, <xref:System.Data.SqlTypes.SqlMoney>, ou outros tipos de valor definidos pelo usuário que contêm campos de um desses tipos.  
+  
+-   A agregação não deve especificar um valor para `MaxByteSize`.  
+  
+-   A agregação não deve ter quaisquer campos [NonSerialized].  
+  
+-   Campos não devem ser marcados como um layout explícito (<xref:System.Runtime.InteropServices.StructLayoutAttribute>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.SqlServer.Server.Format Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.SqlServer.Server.Format.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.Format</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de serialização é desconhecido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDefined">
+      <MemberSignature Language="C#" Value="UserDefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.SqlServer.Server.Format UserDefined = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.SqlServer.Server.Format.UserDefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.Format</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de serialização <see langword="UserDefined" /> dá ao desenvolvedor controle total sobre o formato binário por meio dos métodos <see cref="T:Microsoft.SqlServer.Server.IBinarySerialize" /><see langword=".Write" /> e <see cref="T:Microsoft.SqlServer.Server.IBinarySerialize" /><see langword=".Read" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A agregação deve especificar um valor para `MaxByteSize`.  
+  
+ Especifique o <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered%2A> a propriedade do atributo. O valor padrão é false.  
+  
+ Se você omitir qualquer campo o <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> ou <xref:Microsoft.SqlServer.Server.IBinarySerialize.Write%2A> métodos, o estado do campo não é serializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

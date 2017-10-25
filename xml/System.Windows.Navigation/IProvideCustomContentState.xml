@@ -1,0 +1,77 @@
+<Type Name="IProvideCustomContentState" FullName="System.Windows.Navigation.IProvideCustomContentState">
+  <TypeSignature Language="C#" Value="public interface IProvideCustomContentState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProvideCustomContentState" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.IProvideCustomContentState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Quando implementado por uma classe que precisa adicionar estado personalizado para a entrada de histórico de navegação de conteúdo antes do conteúdo é navegado para fora.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.IProvideCustomContentState>permite que você associe um pedaço de estado personalizado, implementado como um personalizado <xref:System.Windows.Navigation.CustomContentState> com a entrada do histórico de navegação para o conteúdo que navegou fora da classe.  
+  
+ Estado personalizado também pode ser associado dessa forma, usando o seguinte:  
+  
+-   Chamando **AddBackEntry**:  
+  
+    -   <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.AddBackEntry%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Frame.AddBackEntry%2A?displayProperty=nameWithType>.  
+  
+-   Configuração <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A?displayProperty=nameWithType> quando um dos seguintes eventos são gerados:  
+  
+    -   <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Frame.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+ Você deve implementar <xref:System.Windows.Navigation.IProvideCustomContentState> quando você adiciona estado personalizado para o histórico de navegação chamando **AddBackEntry**, caso contrário, o histórico de navegação não funcionarão corretamente; considere as seguintes etapas:  
+  
+1.  **AddBackEntry** é chamado para associar um estado personalizado com o conteúdo atual.  
+  
+2.  Navega-se a entrada do histórico de navegação e o <xref:System.Windows.Navigation.CustomContentState.Replay%2A> método do estado personalizado é chamado e o estado é aplicado ao conteúdo.  
+  
+3.  O conteúdo anterior é visitado no histórico de navegação de avanço.  
+  
+4.  Navega para a entrada do histórico de navegação, mas o estado personalizado não foi mantido desde a última vez em que a entrada do histórico de navegação que foi associado foi direcionada.  
+  
+ Este é o comportamento padrão, pois o estado registrado inicialmente no estado personalizado pode ser alterado depois que ele foi adicionado ao histórico de navegação. Se navega para o objeto de estado personalizadas e seu estado é aplicado, antes de algum aspecto sobre as alterações de estado antes da entrada no histórico de navegação é direcionada, a alteração no estado não pode ser refletida no objeto de estado personalizado. Além disso, <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A> não pode ser chamado explicitamente para adicionar um novo objeto de estado personalizado que reflete as alterações de estado. Consequentemente, para garantir que o atual estado para uma navegação em particular é sempre armazenado no histórico de navegação, <xref:System.Windows.Navigation.IProvideCustomContentState.GetContentState%2A> é chamado.  
+  
+> [!IMPORTANT]
+>  Ao armazenar informações no estado de conteúdo personalizado, você não pode armazenar todas as referências à instância da página para o qual você está Lembre-se de estado. Isso impede que [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Libere a instância de página e contraria o objetivo do comportamento de histórico de navegação padrão. Se você deve fazer isso, você pode considerar o uso <xref:System.Windows.Controls.Page.KeepAlive%2A> em vez disso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetContentState">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.CustomContentState GetContentState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Navigation.CustomContentState GetContentState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.IProvideCustomContentState.GetContentState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.CustomContentState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma instância de uma classe de estado personalizado a ser associado ao conteúdo no histórico de navegação.</summary>
+        <returns>Uma instância de um personalizado <see cref="T:System.Windows.Navigation.CustomContentState" /> classe a ser associado ao conteúdo no histórico de navegação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

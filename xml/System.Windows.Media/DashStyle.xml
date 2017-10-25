@@ -1,0 +1,281 @@
+<Type Name="DashStyle" FullName="System.Windows.Media.DashStyle">
+  <TypeSignature Language="C#" Value="public sealed class DashStyle : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DashStyle extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.DashStyle" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a sequência de traços e lacunas que será aplicada por uma <see cref="T:System.Windows.Media.Pen" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.DashStyle.Dashes%2A> propriedade dessa classe descreve o comprimento de alternadas traços e lacunas.  Os valores na coleção são em termos de múltiplos do <xref:System.Windows.Media.Pen.Thickness%2A> do <xref:System.Windows.Media.Pen>.  Por exemplo, uma matriz de `1`,`2` Especifica um traço de comprimento (`1` * <xref:System.Windows.Media.Pen.Thickness%2A>) seguido por um intervalo de comprimento (`2` * <xref:System.Windows.Media.Pen.Thickness%2A>).  
+  
+> [!NOTE]
+>  O comprimento real do traço que é desenhado depende do estilo de <xref:System.Windows.Media.Pen.DashCap%2A> que é adicionado a cada final de um traço. O padrão <xref:System.Windows.Media.Pen.DashCap%2A> valor para um <xref:System.Windows.Media.Pen> é <xref:System.Windows.Media.PenLineCap.Square>. Isso faz com que uma extremidade final que é metade a espessura da linha a ser adicionado em cada extremidade do traço caneta. (Consulte <xref:System.Windows.Media.PenLineCap> para obter um exemplo.) Portanto, se você especificar uma matriz de `0`, `2` e um quadrado <xref:System.Windows.Media.Pen.DashCap%2A>, será o comprimento real de traço (`0` * <xref:System.Windows.Media.Pen.Thickness%2A>) + (`2` * <xref:System.Windows.Media.Pen.DashCap%2A>).  
+  
+ Se houver um número ímpar de valores na coleção, os valores são interpretados como se tivesse sido repetidos uma vez para produzir um número par de valores.  Por exemplo, uma coleção que contém `2`,`3`,`5` é interpretado igual uma coleção que contém `2`,`3`,`5`,`2`,`3`,`5`.  
+  
+ Valores negativos na matriz são interpretados como o valor absoluto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Media.DashStyle> propriedade de um <xref:System.Windows.Media.Pen> para criar uma linha tracejada em texto.  
+  
+ [!code-xaml[DrawingMiscSnippets_snip#DashStyle](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DashStyleExample.xaml#dashstyle)]  
+  
+ A ilustração a seguir mostra o exemplo anterior produz.  
+  
+ ![Texto com uma linha tracejada abaixo. ] (~/add/media/graphicsdashstyle.gif "Texto com uma linha tracejada abaixo.")  
+  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DashStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.DashStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DashStyle (System.Collections.Generic.IEnumerable&lt;double&gt; dashes, double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;float64&gt; dashes, float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.#ctor(System.Collections.Generic.IEnumerable{System.Double},System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dashes" Type="System.Collections.Generic.IEnumerable&lt;System.Double&gt;" />
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dashes">O <see cref="P:System.Windows.Media.DashStyle.Dashes" /> do <see cref="T:System.Windows.Media.DashStyle" />.</param>
+        <param name="offset">O <see cref="P:System.Windows.Media.DashStyle.Offset" /> do <see cref="T:System.Windows.Media.DashStyle" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.DashStyle" /> com o <see cref="P:System.Windows.Media.DashStyle.Dashes" /> e <see cref="P:System.Windows.Media.DashStyle.Offset" /> especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DashStyle Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DashStyle Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.DashStyle" />, fazendo cópias em profundidade dos valores do objeto.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e as referências de recurso (eles podem não ser resolvidos) mas não animações ou seus valores atuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DashStyle CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DashStyle CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.DashStyle" />, fazendo cópias em profundidade dos valores do objeto atual.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dashes">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DoubleCollection Dashes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DoubleCollection Dashes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyle.Dashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DoubleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de traços e lacunas na <see cref="T:System.Windows.Media.DashStyle" />.</summary>
+        <value>A coleção de traços e lacunas.  O padrão é um <see cref="T:System.Windows.Media.DoubleCollection" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta coleção descreve o comprimento de alternadas traços e lacunas.  Os valores na coleção são em termos de múltiplos do <xref:System.Windows.Media.Pen.Thickness%2A> do <xref:System.Windows.Media.Pen>.  Por exemplo, uma matriz de `1`,`2` Especifica um traço de comprimento (`1` * <xref:System.Windows.Media.Pen.Thickness%2A>) seguido por um intervalo de comprimento (`2` * <xref:System.Windows.Media.Pen.Thickness%2A>).  
+  
+> [!NOTE]
+>  O comprimento real do traço que é desenhado depende do estilo de <xref:System.Windows.Media.Pen.DashCap%2A> que é adicionado a cada final de um traço. O padrão <xref:System.Windows.Media.Pen.DashCap%2A> valor para um <xref:System.Windows.Media.Pen> é <xref:System.Windows.Media.PenLineCap.Square>. Isso faz com que uma extremidade final que é metade a espessura da linha a ser adicionado em cada extremidade do traço caneta. (Consulte <xref:System.Windows.Media.PenLineCap> para obter um exemplo.) Portanto, se você especificar uma matriz de `0`, `2` e um quadrado <xref:System.Windows.Media.Pen.DashCap%2A>, será o comprimento real de traço (`0` * <xref:System.Windows.Media.Pen.Thickness%2A>) + (`2` * <xref:System.Windows.Media.Pen.DashCap%2A>).  
+  
+ Se houver um número ímpar de valores na coleção, os valores são interpretados como se tivesse sido repetidos uma vez para produzir um número par de valores.  Por exemplo, uma coleção que contém `2`,`3`,`5` é interpretado igual uma coleção que contém `2`,`3`,`5`,`2`,`3`,`5`.  
+  
+ Valores negativos na matriz são interpretados como o valor absoluto.  
+  
+<a name="dependencyPropertyInfo_Dashes"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DashStyle.DashesProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Media.DashStyle> propriedade de um <xref:System.Windows.Media.Pen> para criar uma linha tracejada em texto.  
+  
+ [!code-xaml[DrawingMiscSnippets_snip#DashStyle](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DashStyleExample.xaml#dashstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DashesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DashesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DashesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DashStyle.DashesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DashStyle.Dashes" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public double Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyle.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância na sequência de traço que traço será iniciado.</summary>
+        <value>O deslocamento para a sequência de traço.  O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É altamente recomendável usar um valor de deslocamento que resolve para o meio de qualquer traço.  Isso tornará a maioria dos traços de início e término em traço mid em vez de em um intervalo.  
+  
+<a name="dependencyPropertyInfo_Offset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DashStyle.OffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DashStyle.OffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DashStyle.Offset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

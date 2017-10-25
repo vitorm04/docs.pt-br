@@ -1,0 +1,122 @@
+<Type Name="SoapRpcServiceAttribute" FullName="System.Web.Services.Protocols.SoapRpcServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapRpcServiceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapRpcServiceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapRpcServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o formato padrão de solicitações e respostas SOAP enviadas para e de métodos de serviço Web XML dentro do serviço da Web em XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapRpcServiceAttribute> permite que você defina o padrão de codificação de estilo para métodos de serviço Web XML dentro de um serviço Web XML para `RPC` método codificação e <xref:System.Web.Services.Description.SoapBindingUse.Encoded> codificação de parâmetro.  
+  
+ WSDL Web Services Description Language () define dois estilos para como um método de serviço da Web em XML, ou a operação pode ser codificada em uma solicitação SOAP ou uma resposta SOAP: `RPC` e `Document`. O `RPC` estilo refere-se a codificação o método de serviço da Web em XML de acordo com a seção 7 da especificação de SOAP para usar o SOAP para RPC. Esse estilo especifica que todos os parâmetros são encapsulados em um único elemento nomeado de acordo com o método de serviço da Web em XML, e cada elemento dentro do elemento representa um parâmetro nomeado de acordo com seu nome de parâmetro do respectivos.  
+  
+ Para definir o método nível codificação padrão para `Document`, aplicar um <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> para a classe que implementa o serviço Web XML.  
+  
+ Para obter mais detalhes, consulte [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+ Esse atributo pode ser aplicado a uma classe de implementação de um serviço Web XML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Services.Protocols.SoapRpcServiceAttribute> classe.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapRpcServiceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapRpcServiceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapRpcServiceAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância do <xref:System.Web.Services.Protocols.SoapRpcServiceAttribute> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoutingStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapServiceRoutingStyle RoutingStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapServiceRoutingStyle RoutingStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcServiceAttribute.RoutingStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapServiceRoutingStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como as mensagens SOAP são roteadas para o serviço Web XML.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.SoapServiceRoutingStyle" /> que representa como as mensagens SOAP são roteadas para o serviço Web XML. O valor padrão é <see cref="F:System.Web.Services.Protocols.SoapServiceRoutingStyle.SoapAction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcServiceAttribute.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação usada ao chamar os métodos do serviço Web.</summary>
+        <value>Membro de <see cref="T:System.Web.Services.Description.SoapBindingUse" /> enumeração que especifica a associação usada ao chamar os métodos do serviço Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão dessa propriedade é <xref:System.Web.Services.Description.SoapBindingUse.Default>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

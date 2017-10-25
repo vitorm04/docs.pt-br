@@ -1,0 +1,257 @@
+<Type Name="IEndpointBehavior" FullName="System.ServiceModel.Description.IEndpointBehavior">
+  <TypeSignature Language="C#" Value="public interface IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IEndpointBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa métodos que podem ser usados para estender o comportamento de tempo de execução de ponto de extremidade em um serviço ou aplicativo cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IEndpointBehavior> interface para modificar, examinar ou estender algum aspecto da execução de todo o ponto de extremidade no nível do aplicativo para aplicativos cliente ou serviço.  
+  
+-   Use o <xref:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters%2A> método para passar dados personalizados em tempo de execução para habilitar associações dar suporte ao comportamento personalizado.  
+  
+-   Use o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> método para modificar, examinar ou insira as extensões para um ponto de extremidade em um aplicativo cliente.  
+  
+-   Use o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> método para modificar, examinar ou inserir extensões para a execução de todo o ponto de extremidade em um aplicativo de serviço.  
+  
+-   Use o <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> método para confirmar que um <xref:System.ServiceModel.Description.ServiceEndpoint> atende aos requisitos específicos. Isso pode ser usado para garantir que um ponto de extremidade tem uma determinada configuração habilitada, dá suporte a um determinado recurso e outros requisitos.  
+  
+ <xref:System.ServiceModel.Description.IEndpointBehavior>podem ser usados de qualquer um desses métodos, mas somente um é importante. Nesses casos, podem retornar os métodos não utilizados, não executar nenhuma ação.  
+  
+> [!NOTE]
+>  Todos os <xref:System.ServiceModel.Description.IEndpointBehavior> métodos passam uma <xref:System.ServiceModel.Description.ServiceEndpoint> objeto como um parâmetro. Esse parâmetro é para exame. Se você modificar o <xref:System.ServiceModel.Description.ServiceEndpoint> objeto o comportamento de execução é indefinido.  
+  
+ <xref:System.ServiceModel.Description.IEndpointBehavior>objetos geralmente são usados para acessar as várias propriedades do <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType>, <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher?displayProperty=nameWithType>, e <xref:System.ServiceModel.Dispatcher.ChannelDispatcher?displayProperty=nameWithType> objetos em um aplicativo de serviço e o <xref:System.ServiceModel.Dispatcher.ClientRuntime?displayProperty=nameWithType> e <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType> em um aplicativo cliente. Além disso, você pode acessar as propriedades de duplex clientes e serviços usando o <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime.CallbackClientRuntime%2A?displayProperty=nameWithType> propriedades, respectivamente.  
+  
+ Para obter uma descrição das várias propriedades e personalizações disponíveis, consulte [estendendo ServiceHost e a camada de modelo de serviço](~/docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+  
+ Depois que uma personalização foi decidida (e a interface de personalização implementada se necessário) e o <xref:System.ServiceModel.Description.IEndpointBehavior> foi decidiu é o escopo apropriado da personalização, a personalização deve ser inserida no [!INCLUDE[indigo1](~/includes/indigo1-md.md)] tempo de execução com a implementação de <xref:System.ServiceModel.Description.IEndpointBehavior> e adicionar o comportamento de ponto de extremidade para o tempo de execução.  
+  
+ Há duas maneiras de adicionar o comportamento no tempo de execução:  
+  
+-   Adicionar programaticamente o comportamento de ponto de extremidade personalizado para o <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> propriedade antes da abertura do host do serviço (em um aplicativo de serviço) ou a fábrica de canais (em um aplicativo de cliente).  
+  
+-   Configure o comportamento usando um arquivo de configuração do aplicativo. Para obter detalhes, consulte [ &lt;behaviorExtensions&gt;](~/docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md).  
+  
+ Para executar a tarefa de personalização de serviço para o qual é pretendido, o <xref:System.ServiceModel.Description.IEndpointBehavior> objeto deve ser adicionado para o <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A?displayProperty=nameWithType> propriedade antes da construção do tempo de execução de serviço, que ocorre quando <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método é chamado em <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>. Para executar uma tarefa de personalização do cliente, o <xref:System.ServiceModel.Description.IEndpointBehavior> objeto deve ser adicionado para o <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A?displayProperty=nameWithType> propriedade antes de chamar o <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> método ou o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método no <xref:System.ServiceModel.ChannelFactory%601>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação de um comportamento de ponto de extremidade que adiciona um <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> objeto em um aplicativo de serviço. Nesse caso, o `EndpointBehaviorMessageInspector` classe implementa <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> para inspecionar a mensagem de entrada e saída, o <xref:System.ServiceModel.Description.IEndpointBehavior> interface para inserir a classe do Inspetor o sistema de inspeção para todos os pontos de extremidade ao qual se aplica o comportamento e o <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType>para habilitar o comportamento do Inspetor de mensagem usando um arquivo de configuração do aplicativo.  
+  
+ A primeira etapa é implementar o Inspetor de mensagem.  
+  
+ [!code-csharp[IEndpointBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#2)]  
+  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> método para adicionar o Inspetor de mensagem para o <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-csharp[IEndpointBehavior#4](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#4)]  
+  
+ O exemplo de código a seguir mostra a implementação de <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType> para permitir o uso do comportamento do Inspetor de mensagem de um arquivo de configuração.  
+  
+ [!code-csharp[IEndpointBehavior#3](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#3)]  
+  
+ Por fim, o arquivo de configuração a seguir mostra como o exemplo anterior pode ser usado na configuração.  
+  
+ [!code-xml[IEndpointBehavior#5](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/hostapplication.exe.config#5)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade a ser modificado.</param>
+        <param name="bindingParameters">Os objetos que os elementos de associação necessitam para oferecer suporte ao comportamento.</param>
+        <summary>Implementar para passar dados em tempo de execução para associações a fim de dar suporte ao comportamento personalizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters%2A> método para fornecer elementos de associação com os objetos adicionais que precisam para suporte ao comportamento de ponto de extremidade. Quando a associação de parâmetros adicionadas aqui a associação pode localizar esses objetos quando o ouvinte de canal ou fábrica de canais é criada. Normalmente, você implementa o <xref:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters%2A> método para passar informações sobre o ponto de extremidade para um elemento de associação personalizada para que ele possa criar um suporte de canal corretamente. Nenhum valor de retorno se nenhuma modificação será necessária.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade que deve ser personalizado.</param>
+        <param name="clientRuntime">O tempo de execução do cliente a ser personalizado.</param>
+        <summary>Implementa uma modificação ou extensão do cliente em todo um ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> método para exibir, modificar ou Adicionar extensão personalizada para o tempo de execução do cliente em todas as mensagens usadas com um ponto de extremidade ou para operações específicas. Para obter detalhes sobre as personalizações que você pode fazer com que um objeto de tempo de execução do cliente, consulte <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation>.  
+  
+ É recomendável que o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> método throw um <xref:System.NotImplementedException> se o comportamento é destinado somente para uso em um aplicativo de serviço.  
+  
+ Como outros comportamentos podem ter adicionado ou removido algumas operações de tempo de execução já não há nenhuma garantia de que há o mesmo número de operações na descrição do que <xref:System.ServiceModel.Dispatcher.DispatchOperation> objetos no <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade que expõe o contrato.</param>
+        <param name="endpointDispatcher">O dispatcher do ponto de extremidade a ser modificado ou estendido.</param>
+        <summary>Implementa uma modificação ou extensão do serviço em um ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> método para exibir, modificar ou estender o tempo de execução do serviço em todas as mensagens ou para operações específicas em um ponto de extremidade. Para obter detalhes sobre as personalizações que você pode fazer em um aplicativo de serviço, consulte <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> e <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>.  
+  
+ É recomendável que o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> método throw um <xref:System.NotImplementedException> exceção se o comportamento é destinado somente para uso em um aplicativo cliente.  
+  
+ Observe que pode haver duas operações com o mesmo nome na descrição ao usar um contrato de retorno de chamada (uma operação em cada direção). Se você estiver iterando por meio de operações, você deve correlacionar a direção de mensagem entre o ponto de extremidade <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> e o que é retornado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.CallbackClientRuntime%2A?displayProperty=nameWithType> propriedade.  
+  
+ Além disso, como outros comportamentos tenha já adicionado ou removido algumas operações de tempo de execução, não há nenhuma garantia de que há o mesmo número de operações na descrição de como existem <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType> objetos no <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação de um comportamento de ponto de extremidade que adiciona um <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> objeto em um aplicativo de serviço. Nesse caso, o `EndpointBehaviorMessageInspector` classe implementa <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> para inspecionar a mensagem de entrada e saída, o <xref:System.ServiceModel.Description.IEndpointBehavior> interface para inserir a classe do Inspetor o sistema de inspeção para todos os pontos de extremidade ao qual se aplica o comportamento e o <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType>para habilitar o comportamento do Inspetor de mensagem usando um arquivo de configuração do aplicativo.  
+  
+ A primeira etapa é implementar o Inspetor de mensagem.  
+  
+ [!code-csharp[IEndpointBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#2)]  
+  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> método para adicionar o Inspetor de mensagem para o <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-csharp[IEndpointBehavior#4](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#4)]  
+  
+ O exemplo de código a seguir mostra a implementação de <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType> para permitir o uso do comportamento do Inspetor de mensagem de um arquivo de configuração.  
+  
+ [!code-csharp[IEndpointBehavior#3](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#3)]  
+  
+ Por fim, o arquivo de configuração a seguir mostra como o exemplo anterior pode ser usado na configuração.  
+  
+ [!code-xml[IEndpointBehavior#5](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/hostapplication.exe.config#5)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IEndpointBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade para validar.</param>
+        <summary>Implementar para confirmar se o ponto de extremidade atende alguns destinado critérios.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> método para examinar a estrutura para confirmar qualquer conjunto de critérios. Não é necessário executar as personalizações no <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> ou <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> para tornar o uso desse método. Se o ponto de extremidade passar na validação, return; Caso contrário, gera uma exceção.  
+  
+ Por exemplo, o <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> método pode ser usado para assegurar que todos os pontos de extremidade usam uma associação corporativa aprovada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

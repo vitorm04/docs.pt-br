@@ -1,0 +1,287 @@
+<Type Name="ObsoleteAttribute" FullName="System.ObsoleteAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ObsoleteAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ObsoleteAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ObsoleteAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Event | System.AttributeTargets.Interface | System.AttributeTargets.Delegate, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Marca os elementos do programa que não estão mais em uso. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ObsoleteAttribute>é aplicável a todos os elementos de programa, exceto os assemblies, módulos, parâmetros e valores de retorno. Marcar um elemento como obsoleto informa aos usuários que o elemento serão removidos em versões futuras do produto.  
+  
+ O <xref:System.ObsoleteAttribute> classe inclui duas propriedades:  
+  
+-   <xref:System.ObsoleteAttribute.Message%2A>. A cadeia de caracteres atribuída para o <xref:System.ObsoleteAttribute.Message%2A> propriedade é emitida pelo compilador quando o atributo de destino é usado no código. A cadeia de caracteres deve observar que o atributo de destino está obsoleto e, se possível, forneça alguns solução alternativa ou uma alternativa de código.  
+  
+-   <xref:System.ObsoleteAttribute.IsError%2A>. Este é um valor booliano que indica para o compilador seja usando o <xref:System.ObsoleteAttribute> atributo deve fazer com que ele emite um erro (<xref:System.ObsoleteAttribute.IsError%2A> é `true`) ou um aviso (<xref:System.ObsoleteAttribute.IsError%2A> é `false`).  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+ Quando você cria uma biblioteca de metadados do Windows (arquivo. winmd), o <xref:System.ObsoleteAttribute> é exportada como o <xref:System.ObsoleteAttribute> atributo e o [Windows.Foundation.Metadata.DeprecatedAttribute](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.deprecatedattribute.aspx) atributo se apenas o <xref:System.ObsoleteAttribute> está presente no código-fonte. O <xref:System.ObsoleteAttribute> for transformada para o `DeprecatedAttribute` da seguinte maneira:  
+  
+-   Se o `message` e `error` argumentos estiverem presentes, `message` é atribuído para o `DeprecatedAttribute` `message` argumento. Um valor de erro de `true` mapeia para [DeprecationType.Remove](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.deprecationtype.aspx)e um `error` valor `false` mapeia para [DeprecationType.Deprecate](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.deprecationtype.aspx).  
+  
+-   Se o `message` argumento não é fornecido no <xref:System.ObsoleteAttribute>, seu valor padrão no `DeprecatedAttribute` é "*element_name* foi preterido", onde *element_name* é o nome do elemento do programa de destino para o qual o atributo é aplicado.  
+  
+-   Se o `error` argumento não está presente no <xref:System.ObsoleteAttribute>, seu valor padrão no `DeprecatedAttribute` é [DeprecationType.Deprecate](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.deprecationtype.aspx).  
+  
+> [!IMPORTANT]
+>  Aplicar diretamente a [Windows.Foundation.Metadata.DeprecatedAttribute](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.deprecatedattribute.aspx) atributo para código gerenciado não é recomendado, porque essa exportação ocorre automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe que contém uma propriedade e um método que são marcados com o <xref:System.ObsoleteAttribute> atributo. Acessar o valor da `OldProperty` propriedade no código gera um compilador de aviso, mas ao chamar o `CallOldMethod` método gera um erro do compilador. O exemplo também mostra a saída que é gerada quando você tentar compilar o código-fonte.  
+  
+ [!code-csharp[ObsoleteAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObsoleteAttribute/CS/obsoleteattributeex1.cs#1)]
+ [!code-vb[ObsoleteAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObsoleteAttribute/vb/obsoleteattributeex1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObsoleteAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObsoleteAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ObsoleteAttribute" /> com propriedades padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ObsoleteAttribute>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.ObsoleteAttribute.IsError%2A>|`false`|  
+|<xref:System.ObsoleteAttribute.Message%2A>|`null`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObsoleteAttribute (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObsoleteAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A cadeia de caracteres de texto que descreve soluções alternativas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ObsoleteAttribute" /> classe com uma mensagem de solução especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ObsoleteAttribute>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.ObsoleteAttribute.IsError%2A>|`false`.|  
+|<xref:System.ObsoleteAttribute.Message%2A>|A mensagem de solução alternativa.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObsoleteAttribute (string message, bool error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, bool error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObsoleteAttribute.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="error" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="message">A cadeia de caracteres de texto que descreve soluções alternativas.</param>
+        <param name="error">
+          <see langword="true" /> se o uso do elemento obsoleto gera um erro do compilador; <see langword="false" /> se ele gera um aviso do compilador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ObsoleteAttribute" /> com uma mensagem de solução alternativa e um valor booliano indicando se o uso do elemento obsoleto é considerado um erro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ObsoleteAttribute>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.ObsoleteAttribute.IsError%2A>|O valor `error`.|  
+|<xref:System.ObsoleteAttribute.Message%2A>|O valor `message`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsError">
+      <MemberSignature Language="C#" Value="public bool IsError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsError" />
+      <MemberSignature Language="DocId" Value="P:System.ObsoleteAttribute.IsError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se o compilador tratará o uso do elemento obsoleto programa como um erro.</summary>
+        <value>
+          <see langword="true" />Se o uso do elemento obsoleto é considerado um erro; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define uma classe que contém dois membros marcados como obsoletos. O primeiro, uma propriedade chamada `OldProperty`, gera um aviso do compilador se ele é chamado. O segundo, um método chamado `CallOldMethod`, gera um erro do compilador. O exemplo usa reflexão para obter informações sobre o <xref:System.ObsoleteAttribute> atributos aplicados aos membros do tipo e exibe os valores de suas <xref:System.ObsoleteAttribute.Message%2A> e <xref:System.ObsoleteAttribute.IsError%2A> propriedades.  
+  
+ [!code-csharp[System.ObsoleteAttribute.Message#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.obsoleteattribute.message/cs/obsoleteattribute_message.cs#1)]
+ [!code-vb[System.ObsoleteAttribute.Message#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.obsoleteattribute.message/vb/obsoleteattribute_message.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.ObsoleteAttribute.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem para solucionar esse problema, incluindo uma descrição dos elementos do programa alternativo.</summary>
+        <value>A cadeia de caracteres de texto para solucionar esse problema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define uma classe que contém dois membros marcados como obsoletos. O primeiro, uma propriedade chamada `OldProperty`, gera um aviso do compilador se ele é chamado. O segundo, um método chamado `CallOldMethod`, gera um erro do compilador. O exemplo usa reflexão para obter informações sobre o <xref:System.ObsoleteAttribute> atributos aplicados aos membros do tipo e exibe os valores de suas <xref:System.ObsoleteAttribute.Message%2A> e <xref:System.ObsoleteAttribute.IsError%2A> propriedades.  
+  
+ [!code-csharp[System.ObsoleteAttribute.Message#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.obsoleteattribute.message/cs/obsoleteattribute_message.cs#1)]
+ [!code-vb[System.ObsoleteAttribute.Message#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.obsoleteattribute.message/vb/obsoleteattribute_message.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

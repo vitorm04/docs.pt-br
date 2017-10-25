@@ -1,0 +1,124 @@
+<Type Name="DesignTimeTemplateParser" FullName="System.Web.UI.DesignTimeTemplateParser">
+  <TypeSignature Language="C#" Value="public static class DesignTimeTemplateParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DesignTimeTemplateParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DesignTimeTemplateParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a análise em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DesignTimeTemplateParser> classe é destinada para uso apenas em um designer.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ParseControl">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Control ParseControl (System.Web.UI.DesignTimeParseData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Control ParseControl(class System.Web.UI.DesignTimeParseData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DesignTimeTemplateParser.ParseControl(System.Web.UI.DesignTimeParseData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Web.UI.DesignTimeParseData" />
+      </Parameters>
+      <Docs>
+        <param name="data">Informações usadas na criação do analisador.</param>
+        <summary>Analisa e cria um controle em tempo de design.</summary>
+        <returns>O <see cref="T:System.Web.UI.Control" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseControls">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Control[] ParseControls (System.Web.UI.DesignTimeParseData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Control[] ParseControls(class System.Web.UI.DesignTimeParseData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DesignTimeTemplateParser.ParseControls(System.Web.UI.DesignTimeParseData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Web.UI.DesignTimeParseData" />
+      </Parameters>
+      <Docs>
+        <param name="data">Informações usadas na criação do analisador.</param>
+        <summary>Analisa e cria um ou mais controles em tempo de design.</summary>
+        <returns>Uma matriz de compilado <see cref="T:System.Web.UI.Control" /> objetos.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTemplate">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ITemplate ParseTemplate (System.Web.UI.DesignTimeParseData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ITemplate ParseTemplate(class System.Web.UI.DesignTimeParseData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DesignTimeTemplateParser.ParseTemplate(System.Web.UI.DesignTimeParseData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Web.UI.DesignTimeParseData" />
+      </Parameters>
+      <Docs>
+        <param name="data">Informações usadas na criação do analisador.</param>
+        <summary>Analisa um modelo em tempo de design.</summary>
+        <returns>O <see cref="T:System.Web.UI.RootBuilder" /> do analisador que analisar o modelo.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTheme">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ControlBuilder ParseTheme (System.ComponentModel.Design.IDesignerHost host, string theme, string themePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ControlBuilder ParseTheme(class System.ComponentModel.Design.IDesignerHost host, string theme, string themePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DesignTimeTemplateParser.ParseTheme(System.ComponentModel.Design.IDesignerHost,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="theme" Type="System.String" />
+        <Parameter Name="themePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="host">Gerencia os componentes do designer.</param>
+        <param name="theme">O conteúdo para analisar.</param>
+        <param name="themePath">O caminho para o tema, que é usado na criação do analisador.</param>
+        <summary>Analisa um tema em tempo de design.</summary>
+        <returns>O <see cref="T:System.Web.UI.RootBuilder" /> do analisador que analisar o tema.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Ocorreu um erro ao analisar o tema.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

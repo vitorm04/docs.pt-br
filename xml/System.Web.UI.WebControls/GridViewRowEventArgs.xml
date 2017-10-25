@@ -1,0 +1,109 @@
+<Type Name="GridViewRowEventArgs" FullName="System.Web.UI.WebControls.GridViewRowEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewRowEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewRowEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewRowEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Web.UI.WebControls.GridView.RowCreated" /> e de <see cref="E:System.Web.UI.WebControls.GridView.RowDataBound" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do <xref:System.Web.UI.WebControls.GridView> controle pode ser processado, uma <xref:System.Web.UI.WebControls.GridViewRow> objeto deve ser criado para cada linha no controle. O <xref:System.Web.UI.WebControls.GridView.RowCreated> é gerado sempre que uma linha no <xref:System.Web.UI.WebControls.GridView> controle é criado. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como adicionar conteúdo personalizado a uma linha, sempre que esse evento ocorre.  
+  
+ Da mesma forma, cada linha no controle deve ser vinculada a um registro na fonte de dados antes do <xref:System.Web.UI.WebControls.GridView> controle pode ser processado. O <xref:System.Web.UI.WebControls.GridView.RowDataBound> evento é gerado quando uma linha de dados (representado por um <xref:System.Web.UI.WebControls.GridViewRow> objeto) está associada aos dados no <xref:System.Web.UI.WebControls.GridView> controle. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como modificar os valores de dados associados à linha, sempre que esse evento ocorre.  
+  
+ Um <xref:System.Web.UI.WebControls.GridViewRowEventArgs> objeto é passado para o método de manipulação de eventos, que permite acessar as propriedades da linha que gerou o evento. Para acessar uma célula específica na linha, use o <xref:System.Web.UI.WebControls.TableRow.Cells%2A> propriedade o <xref:System.Web.UI.WebControls.GridViewRow> objeto contido no <xref:System.Web.UI.WebControls.GridViewRowEventArgs.Row%2A> propriedade. Você também pode determinar que tipo de linha (linha de cabeçalho, linha de dados e assim por diante) que está sendo criado usando o <xref:System.Web.UI.WebControls.GridViewRow.RowType%2A> propriedade o <xref:System.Web.UI.WebControls.GridViewRow> objeto.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewRowEventArgs>, consulte o <xref:System.Web.UI.WebControls.GridViewRowEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewRowEventArgs> objeto passado para o método de manipulação de eventos para acessar as propriedades da linha que está sendo associada aos dados.  
+  
+ [!code-aspx-csharp[GridViewRowDataBound#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowDataBound/CS/gridviewrowdataboundcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowDataBound#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowDataBound/VB/gridviewrowdataboundvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewRowEventArgs (System.Web.UI.WebControls.GridViewRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.GridViewRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRowEventArgs.#ctor(System.Web.UI.WebControls.GridViewRow)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.WebControls.GridViewRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">Um objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> que representa a linha que está sendo criada ou associada a dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.GridViewRowEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.GridViewRowEventArgs> classe.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewRowEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewRowEventArgs.Row%2A>|O <xref:System.Web.UI.WebControls.GridViewRow> objeto contido no `row` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.GridViewRow Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.GridViewRow Row" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRowEventArgs.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.GridViewRow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha que está sendo criada ou associada a dados.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> que representa a linha que está sendo criada ou associada a dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewRowEventArgs.Row%2A> propriedade para acessar as propriedades da linha que está sendo criada ou associada a dados. Para acessar uma célula específica na linha, use o <xref:System.Web.UI.WebControls.TableRow.Cells%2A> propriedade o <xref:System.Web.UI.WebControls.GridViewRow> objeto contido no <xref:System.Web.UI.WebControls.GridViewRowEventArgs.Row%2A> propriedade. Você também pode determinar que tipo de linha (linha de cabeçalho, linha de dados e assim por diante) que está sendo criado usando o <xref:System.Web.UI.WebControls.GridViewRow.RowType%2A> propriedade o <xref:System.Web.UI.WebControls.GridViewRow> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewRowEventArgs.Row%2A> propriedade para acessar as propriedades da linha que está sendo associada aos dados.  
+  
+ [!code-aspx-csharp[GridViewRowDataBound#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowDataBound/CS/gridviewrowdataboundcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowDataBound#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowDataBound/VB/gridviewrowdataboundvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

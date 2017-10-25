@@ -1,0 +1,84 @@
+<Type Name="ClickMode" FullName="System.Windows.Controls.ClickMode">
+  <TypeSignature Language="C#" Value="public enum ClickMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClickMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ClickMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quando o evento <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> deve ser gerado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra três botões respondem a cliques de três maneiras diferentes.  
+  
+-   Passe - o primeiro botão altera cores quando o usuário passar o mouse sobre o botão.  
+  
+-   Pressione - o segundo botão requer que o mouse ser pressionado enquanto o ponteiro do mouse está no botão.  
+  
+-   Versão – o terceiro botão não redefine a cor do plano de fundo dos botões até que o mouse é pressionado e solto no botão.  
+  
+ [!code-xaml[ClickModes_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ClickModes_snip/CSharp/Pane1.xaml#1)]  
+  
+ [!code-csharp[ClickModes_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ClickModes_snip/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ClickModes_snip#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClickModes_snip/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hover">
+      <MemberSignature Language="C#" Value="Hover" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ClickMode Hover = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ClickMode.Hover" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ClickMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> evento deve ser gerado quando o mouse passa sobre um controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Press">
+      <MemberSignature Language="C#" Value="Press" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ClickMode Press = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ClickMode.Press" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ClickMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o evento <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> deve ser gerado assim que um botão for pressionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="Release" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ClickMode Release = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ClickMode.Release" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ClickMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o evento <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> deve ser gerado quando um botão for pressionado e liberado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2319 @@
+<Type Name="WorkflowDesignerColors" FullName="System.Activities.Presentation.WorkflowDesignerColors">
+  <TypeSignature Language="C#" Value="public static class WorkflowDesignerColors" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WorkflowDesignerColors extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.WorkflowDesignerColors" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que as cores e gradientes de cor a ser associado a aspectos dos elementos e barras de shell usadas na interface de usuário do Designer de fluxo de trabalho do Windows.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AnnotationBackgroundGradientBeginColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationBackgroundGradientBeginColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationBackgroundGradientBeginColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientBeginColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de início para o gradiente de cores do plano de fundo da anotação.</summary>
+        <value>A cor de início para o gradiente de cores do plano de fundo da anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBackgroundGradientBeginColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationBackgroundGradientBeginColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationBackgroundGradientBeginColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientBeginColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor de início para o gradiente de cores do plano de fundo da anotação. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBackgroundGradientEndColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationBackgroundGradientEndColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationBackgroundGradientEndColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientEndColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor final do gradiente de cores do plano de fundo da anotação.</summary>
+        <value>A cor final do gradiente de cores do plano de fundo da anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBackgroundGradientEndColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationBackgroundGradientEndColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationBackgroundGradientEndColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientEndColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor final do gradiente cor do plano de fundo da anotação. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBackgroundGradientMiddleColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationBackgroundGradientMiddleColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationBackgroundGradientMiddleColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientMiddleColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da seção intermediária para o gradiente de cores do plano de fundo da anotação.</summary>
+        <value>A cor da seção do meio de gradiente de cores do plano de fundo da anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBackgroundGradientMiddleColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationBackgroundGradientMiddleColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationBackgroundGradientMiddleColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientMiddleColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor da seção do meio para o gradiente de cores do plano de fundo da anotação. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da borda da anotação.</summary>
+        <value>A cor da borda da anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor da borda da anotação. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationDockButtonColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationDockButtonColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do botão de encaixe da anotação.</summary>
+        <value>A cor do botão de encaixe da anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationDockButtonColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationDockButtonColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor da anotação encaixar botão. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonHoverBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationDockButtonHoverBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationDockButtonHoverBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de plano de fundo em foco do botão de encaixe da anotação.</summary>
+        <value>A cor de plano de fundo em foco da anotação encaixe botão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonHoverBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationDockButtonHoverBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationDockButtonHoverBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor do plano de fundo em foco da anotação encaixar botão. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonHoverBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationDockButtonHoverBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationDockButtonHoverBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da borda em foco do botão de encaixe da anotação.</summary>
+        <value>A cor da borda ao focalizar da anotação encaixe botão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonHoverBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationDockButtonHoverBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationDockButtonHoverBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor de borda em foco da anotação encaixar botão. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonHoverColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationDockButtonHoverColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationDockButtonHoverColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor em foco do botão de encaixe da anotação.</summary>
+        <value>A cor em foco da anotação encaixe botão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockButtonHoverColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationDockButtonHoverColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationDockButtonHoverColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor em foco da anotação encaixar botão. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockTextColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationDockTextColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationDockTextColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockTextColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto de encaixe de uma anotação.</summary>
+        <value>A cor do texto de encaixe de uma anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationDockTextColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationDockTextColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationDockTextColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockTextColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o texto de encaixe de uma anotação. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationUndockTextColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color AnnotationUndockTextColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color AnnotationUndockTextColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.AnnotationUndockTextColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto desencaixar de uma anotação.</summary>
+        <value>A cor do texto desencaixar de uma anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationUndockTextColorKey">
+      <MemberSignature Language="C#" Value="public const string AnnotationUndockTextColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AnnotationUndockTextColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.AnnotationUndockTextColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor do texto desencaixar de uma anotação. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuBackgroundGradientBeginColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuBackgroundGradientBeginColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuBackgroundGradientBeginColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBackgroundGradientBeginColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor inicial do gradiente de cores do plano de fundo de menu de contexto.</summary>
+        <value>A cor inicial do gradiente de cores do plano de fundo de menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuBackgroundGradientBeginColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuBackgroundGradientBeginColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuBackgroundGradientBeginColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBackgroundGradientBeginColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor inicial do gradiente de cores do plano de fundo de menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuBackgroundGradientEndColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuBackgroundGradientEndColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuBackgroundGradientEndColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBackgroundGradientEndColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor final do gradiente de cores do plano de fundo de menu de contexto.</summary>
+        <value>A cor final do gradiente de cores do plano de fundo de menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuBackgroundGradientEndColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuBackgroundGradientEndColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuBackgroundGradientEndColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBackgroundGradientEndColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor final do gradiente de cores do plano de fundo de menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da borda do menu de contexto.</summary>
+        <value>A cor da borda do menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor da borda do menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuIconAreaColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuIconAreaColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuIconAreaColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuIconAreaColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para a área de ícone do menu de contexto.</summary>
+        <value>A cor da área do ícone de menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuIconAreaColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuIconAreaColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuIconAreaColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuIconAreaColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para a área de ícone do menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuItemTextColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuItemTextColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto do item no menu de contexto.</summary>
+        <value>A cor do texto do item no menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuItemTextColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuItemTextColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o texto do item no menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextDisabledColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuItemTextDisabledColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuItemTextDisabledColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextDisabledColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto do item desabilitado no menu de contexto.</summary>
+        <value>A cor do texto do item desabilitado no menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextDisabledColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuItemTextDisabledColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuItemTextDisabledColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextDisabledColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o texto do item desabilitado no menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextHoverColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuItemTextHoverColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuItemTextHoverColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextHoverColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de foco para o texto do item no menu de contexto.</summary>
+        <value>A cor de foco para o texto do item no menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextHoverColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuItemTextHoverColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuItemTextHoverColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextHoverColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor em foco para o texto do item no menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextSelectedColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuItemTextSelectedColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuItemTextSelectedColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextSelectedColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto do item selecionado no menu de contexto.</summary>
+        <value>A cor do texto do item selecionado no menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuItemTextSelectedColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuItemTextSelectedColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuItemTextSelectedColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextSelectedColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o texto do item selecionado no menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverBeginColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuMouseOverBeginColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuMouseOverBeginColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverBeginColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mouse começando pela cor do menu de contexto.</summary>
+        <value>O mouse começando pela cor do menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverBeginColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuMouseOverBeginColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuMouseOverBeginColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverBeginColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o mouse início sobre a chave de cor para o menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuMouseOverBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuMouseOverBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mouse sobre a cor da borda do menu de contexto.</summary>
+        <value>O mouse sobre a cor da borda do menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuMouseOverBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuMouseOverBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o mouse sobre a chave de cor da borda do menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverEndColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuMouseOverEndColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuMouseOverEndColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverEndColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o final do mouse sobre a cor do menu de contexto.</summary>
+        <value>O mouse final pela cor do menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverEndColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuMouseOverEndColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuMouseOverEndColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverEndColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o final do mouse sobre a chave de cor para o menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverMiddle1Color">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuMouseOverMiddle1Color { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuMouseOverMiddle1Color" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverMiddle1Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mouse sobre a cor para a contexto menu primeira seção intermediária, que vem depois do início da seção.</summary>
+        <value>O mouse sobre a cor de contexto menu primeira seção do meio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverMiddle1ColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuMouseOverMiddle1ColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuMouseOverMiddle1ColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverMiddle1ColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o mouse sobre a chave de cor para a contexto menu primeira seção intermediária, que vem depois do início da seção. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverMiddle2Color">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuMouseOverMiddle2Color { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuMouseOverMiddle2Color" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverMiddle2Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mouse sobre a cor de contexto menu segunda seção do meio, que vem após a primeira seção do meio e antes da seção final.</summary>
+        <value>O mouse sobre a cor da seção de meio segundo do menu contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuMouseOverMiddle2ColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuMouseOverMiddle2ColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuMouseOverMiddle2ColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverMiddle2ColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o mouse sobre a chave de cor para a contexto menu segunda seção intermediária, que vem após a primeira seção do meio e antes da seção final. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuSeparatorColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color ContextMenuSeparatorColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color ContextMenuSeparatorColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuSeparatorColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do separador de menu de contexto.</summary>
+        <value>A cor do separador de menu de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuSeparatorColorKey">
+      <MemberSignature Language="C#" Value="public const string ContextMenuSeparatorColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContextMenuSeparatorColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.ContextMenuSeparatorColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor do separador de menu de contexto. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o plano de fundo do designer de exibição.</summary>
+        <value>O <see cref="T:System.Windows.Media.Color" /> para o plano de fundo do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o plano de fundo do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewExpandAllCollapseAllButtonBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush DesignerViewExpandAllCollapseAllButtonBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush DesignerViewExpandAllCollapseAllButtonBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllButtonBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel para o **expandir toda/Recolher toda** botão na exibição do designer.</summary>
+        <value>O pincel para o **expandir toda/Recolher toda** botão na exibição do designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewExpandAllCollapseAllButtonColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewExpandAllCollapseAllButtonColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewExpandAllCollapseAllButtonColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllButtonColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o **expandir toda/Recolher toda** botão na exibição do designer. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewExpandAllCollapseAllButtonMouseOverBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush DesignerViewExpandAllCollapseAllButtonMouseOverBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush DesignerViewExpandAllCollapseAllButtonMouseOverBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllButtonMouseOverBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mouse sobre o pincel para o **expandir toda/Recolher toda** botão na exibição do designer.</summary>
+        <value>O mouse sobre o pincel para o **expandir toda/Recolher toda** botão na exibição do designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewExpandAllCollapseAllButtonMouseOverColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewExpandAllCollapseAllButtonMouseOverColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewExpandAllCollapseAllButtonMouseOverColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllButtonMouseOverColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o mouse sobre a chave de cor para o **expandir toda/Recolher toda** botão na exibição do designer. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewExpandAllCollapseAllPressedBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush DesignerViewExpandAllCollapseAllPressedBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush DesignerViewExpandAllCollapseAllPressedBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllPressedBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel para o **expandir toda/Recolher toda** pressionou o botão na exibição do designer.</summary>
+        <value>O pincel para o **expandir toda/Recolher toda** pressionou o botão na exibição do designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewExpandAllCollapseAllPressedColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewExpandAllCollapseAllPressedColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewExpandAllCollapseAllPressedColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllPressedColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o **expandir toda/Recolher toda** pressionou o botão na exibição do designer. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarCaptionActiveColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarCaptionActiveColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarCaptionActiveColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarCaptionActiveColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da legenda para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição ativo.</summary>
+        <value>O <see cref="T:System.Windows.Media.Color" /> da legenda para a barra de shell do designer de exibição ativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarCaptionActiveColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarCaptionActiveColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarCaptionActiveColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarCaptionActiveColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor ativa para a legenda da barra de shell do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarCaptionColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarCaptionColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarCaptionColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarCaptionColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da legenda para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>O <see cref="T:System.Windows.Media.Color" /> da legenda para a barra de shell do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarCaptionColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarCaptionColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarCaptionColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarCaptionColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para a legenda de barra do modo de exibição designer shell. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarColorGradientBeginColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarColorGradientBeginColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarColorGradientBeginColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarColorGradientBeginColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de início para o gradiente de cores do <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>Início <see cref="T:System.Windows.Media.Color" /> para o gradiente de cores da barra de shell do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarColorGradientBeginKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarColorGradientBeginKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarColorGradientBeginKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarColorGradientBeginKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor de início para o gradiente de cores da barra de shell do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarColorGradientEndColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarColorGradientEndColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarColorGradientEndColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarColorGradientEndColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor final do gradiente de cores do <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>O final <see cref="T:System.Windows.Media.Color" /> para o gradiente de cores da barra de shell do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarColorGradientEndKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarColorGradientEndKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarColorGradientEndKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarColorGradientEndKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor final do gradiente de cor da barra de shell do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarControlBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarControlBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarControlBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarControlBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de fundo a <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> controle de barra de shell do designer de exibição.</summary>
+        <value>O plano de fundo <see cref="T:System.Windows.Media.Color" /> do controle de barra de shell do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarControlBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarControlBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarControlBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarControlBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor do plano de fundo para o controle da barra de shell do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarHoverColorGradientBeginColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarHoverColorGradientBeginColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarHoverColorGradientBeginColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarHoverColorGradientBeginColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de início para o gradiente de cores em foco do <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>O foco inicial <see cref="T:System.Windows.Media.Color" /> para o gradiente de cores da barra de shell do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarHoverColorGradientBeginKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarHoverColorGradientBeginKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarHoverColorGradientBeginKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarHoverColorGradientBeginKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor em foco inicial para o gradiente de cores da barra de shell do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarHoverColorGradientEndColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarHoverColorGradientEndColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarHoverColorGradientEndColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarHoverColorGradientEndColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor final do gradiente de cores em foco do <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>O foco final <see cref="T:System.Windows.Media.Color" /> para o gradiente de cores para a barra de shell do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarHoverColorGradientEndKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarHoverColorGradientEndKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarHoverColorGradientEndKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarHoverColorGradientEndKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor final em foco para o gradiente de cores da barra de shell do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarSelectedColorGradientBeginColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarSelectedColorGradientBeginColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarSelectedColorGradientBeginColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientBeginColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor inicial do gradiente de cores selecionado <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>Início <see cref="T:System.Windows.Media.Color" /> para o gradiente de cores para a barra de shell do designer de exibição selecionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarSelectedColorGradientBeginKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarSelectedColorGradientBeginKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarSelectedColorGradientBeginKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientBeginKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor inicial do gradiente de cor da barra de shell do designer de exibição selecionado. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarSelectedColorGradientEndColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewShellBarSelectedColorGradientEndColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewShellBarSelectedColorGradientEndColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientEndColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor final do gradiente de cores selecionado <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> barra de shell do designer de exibição.</summary>
+        <value>O final <see cref="T:System.Windows.Media.Color" /> para o gradiente de cores para a barra de shell do designer de exibição selecionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewShellBarSelectedColorGradientEndKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewShellBarSelectedColorGradientEndKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewShellBarSelectedColorGradientEndKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientEndKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor final do gradiente de cor da barra de shell do designer de exibição selecionado. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewStatusBarBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color DesignerViewStatusBarBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color DesignerViewStatusBarBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewStatusBarBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o plano de fundo de barra de status do designer de exibição.</summary>
+        <value>O <see cref="T:System.Windows.Media.Color" /> para o plano de fundo de barra de status do designer de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerViewStatusBarBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string DesignerViewStatusBarBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DesignerViewStatusBarBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.DesignerViewStatusBarBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o plano de fundo de barra de status do designer de exibição. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowchartExpressionButtonBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush FlowchartExpressionButtonBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush FlowchartExpressionButtonBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel para o **fluxograma expressão** botão no designer.</summary>
+        <value>O pincel para o **fluxograma expressão** botão no designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowchartExpressionButtonColorKey">
+      <MemberSignature Language="C#" Value="public const string FlowchartExpressionButtonColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FlowchartExpressionButtonColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o **fluxograma expressão** botão no designer. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowchartExpressionButtonMouseOverBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush FlowchartExpressionButtonMouseOverBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush FlowchartExpressionButtonMouseOverBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonMouseOverBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mouse sobre o pincel para o **fluxograma expressão** botão no designer.</summary>
+        <value>O mouse sobre o pincel para o **fluxograma expressão** botão no designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowchartExpressionButtonMouseOverColorKey">
+      <MemberSignature Language="C#" Value="public const string FlowchartExpressionButtonMouseOverColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FlowchartExpressionButtonMouseOverColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonMouseOverColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o mouse sobre a chave de cor para o **fluxograma expressão** botão no designer. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowchartExpressionButtonPressedBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush FlowchartExpressionButtonPressedBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush FlowchartExpressionButtonPressedBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonPressedBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel para o **fluxograma expressão** pressionou o botão no designer.</summary>
+        <value>O pincel para o **fluxograma expressão** pressionou o botão no designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowchartExpressionButtonPressedColorKey">
+      <MemberSignature Language="C#" Value="public const string FlowchartExpressionButtonPressedColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FlowchartExpressionButtonPressedColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonPressedColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o **fluxograma expressão** pressionou o botão no designer. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.FontFamily FontFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a família de fonte para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" />.</summary>
+        <value>O <see cref="T:System.Windows.Media.FontFamily" /> para o elemento de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamilyKey">
+      <MemberSignature Language="C#" Value="public static readonly string FontFamilyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FontFamilyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.FontFamilyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave a ser usado para a família de fontes. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSize">
+      <MemberSignature Language="C#" Value="public static double FontSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property float64 FontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.FontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho da fonte para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" />.</summary>
+        <value>O <see cref="T:System.Double" /> que indica o tamanho da fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeKey">
+      <MemberSignature Language="C#" Value="public static readonly string FontSizeKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FontSizeKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.FontSizeKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave a ser usado para o tamanho da fonte. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeight">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight FontWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight FontWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.FontWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a espessura da fonte a ser usado para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" />.</summary>
+        <value>O <see cref="T:System.Windows.FontWeight" /> usado para o elemento de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightKey">
+      <MemberSignature Language="C#" Value="public static readonly string FontWeightKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FontWeightKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.FontWeightKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave a ser usado para a espessura da fonte. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridViewRowHoverColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color GridViewRowHoverColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color GridViewRowHoverColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.GridViewRowHoverColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de foco de uma linha na exibição de grade.</summary>
+        <value>A cor de foco de uma linha na exibição de grade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o plano de fundo de modo de exibição de estrutura de tópicos.</summary>
+        <value>A cor para o plano de fundo de modo de exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o plano de fundo de modo de exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewCollapsedArrowBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewCollapsedArrowBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewCollapsedArrowBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewCollapsedArrowBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da borda a seta recolhido do modo de exibição de estrutura de tópicos.</summary>
+        <value>A cor da borda a seta recolhido do modo de exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewCollapsedArrowBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewCollapsedArrowBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewCollapsedArrowBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewCollapsedArrowBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor de borda a seta recolhido do modo de exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewCollapsedArrowHoverBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewCollapsedArrowHoverBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewCollapsedArrowHoverBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewCollapsedArrowHoverBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da borda ao focalizar de seta recolhida do modo de exibição de estrutura de tópicos.</summary>
+        <value>A cor da borda ao focalizar de seta recolhida do modo de exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewCollapsedArrowHoverBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewCollapsedArrowHoverBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewCollapsedArrowHoverBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewCollapsedArrowHoverBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor de borda em foco de seta recolhido do modo de exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewExpandedArrowBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewExpandedArrowBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewExpandedArrowBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewExpandedArrowBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor da borda a seta expandida da exibição de estrutura de tópicos.</summary>
+        <value>A cor da borda a seta expandida da exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewExpandedArrowBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewExpandedArrowBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewExpandedArrowBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewExpandedArrowBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor de borda a seta expandida da exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewExpandedArrowColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewExpandedArrowColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewExpandedArrowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewExpandedArrowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor a seta expandida da exibição de estrutura de tópicos.</summary>
+        <value>A cor da seta expandida da exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewExpandedArrowColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewExpandedArrowColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewExpandedArrowColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewExpandedArrowColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para a seta expandida da exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewItemHighlightBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewItemHighlightBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewItemHighlightBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemHighlightBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do plano de fundo de um item realçado no modo de exibição de estrutura de tópicos.</summary>
+        <value>A cor do plano de fundo de um item realçado no modo de exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewItemHighlightBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewItemHighlightBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewItemHighlightBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemHighlightBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor do plano de fundo de um item realçado no modo de exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewItemSelectedTextColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewItemSelectedTextColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewItemSelectedTextColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemSelectedTextColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto de um item selecionado na exibição de estrutura de tópicos.</summary>
+        <value>A cor do texto de um item selecionado na exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewItemSelectedTextColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewItemSelectedTextColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewItemSelectedTextColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemSelectedTextColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o texto de um item selecionado na exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewItemTextColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color OutlineViewItemTextColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color OutlineViewItemTextColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemTextColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do texto de um item no modo de exibição de estrutura de tópicos.</summary>
+        <value>A cor do texto de um item no modo de exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewItemTextColorKey">
+      <MemberSignature Language="C#" Value="public const string OutlineViewItemTextColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutlineViewItemTextColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemTextColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o texto de um item no modo de exibição de estrutura de tópicos. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorBackgroundBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorBackgroundBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorBackgroundBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorBackgroundBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para o plano de fundo do Inspetor de propriedade.</summary>
+        <value>A chave de pincel para o plano de fundo do Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorBorderBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorBorderBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorBorderBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorBorderBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para a borda do Inspetor de propriedade.</summary>
+        <value>A chave de pincel para a borda do Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorCategoryCaptionTextBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorCategoryCaptionTextBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorCategoryCaptionTextBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorCategoryCaptionTextBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para o texto de legenda da categoria do Inspetor.</summary>
+        <value>A chave de pincel para o texto de legenda de categoria no Inspetor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorPaneBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorPaneBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorPaneBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorPaneBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para o painel do Inspetor de propriedade.</summary>
+        <value>A chave de pincel para o painel do Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorPopupBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorPopupBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorPopupBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorPopupBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para a janela pop-up do Inspetor de propriedade.</summary>
+        <value>A chave de pincel para a janela pop-up do Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorSelectedBackgroundBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorSelectedBackgroundBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorSelectedBackgroundBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorSelectedBackgroundBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para o plano de fundo selecionado no Inspetor.</summary>
+        <value>A chave de pincel para o plano de fundo selecionado no Inspetor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorSelectedForegroundBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorSelectedForegroundBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorSelectedForegroundBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorSelectedForegroundBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do pincel de primeiro plano selecionado no Inspetor.</summary>
+        <value>A chave do pincel de primeiro plano selecionado no Inspetor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorTextBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorTextBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorTextBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorTextBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para o texto do Inspetor de propriedade.</summary>
+        <value>A chave de pincel para o texto do Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarBackgroundBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarBackgroundBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarBackgroundBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarBackgroundBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do pincel de plano de fundo da barra de ferramentas no Inspetor.</summary>
+        <value>A chave do pincel de plano de fundo da barra de ferramentas do Inspetor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarItemHoverBackgroundBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarItemHoverBackgroundBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarItemHoverBackgroundBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemHoverBackgroundBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do pincel do plano de fundo de um item focalizado na barra de ferramentas de Inspetor de propriedade.</summary>
+        <value>A chave do pincel do plano de fundo de um item focalizado na barra de ferramentas de Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarItemHoverBorderBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarItemHoverBorderBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarItemHoverBorderBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemHoverBorderBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para a borda de um item focalizado na barra de ferramentas de Inspetor de propriedade.</summary>
+        <value>A chave de pincel para a borda de um item focalizado na barra de ferramentas de Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarItemSelectedBackgroundBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarItemSelectedBackgroundBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarItemSelectedBackgroundBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemSelectedBackgroundBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do pincel do plano de fundo de um item selecionado na barra de ferramentas de Inspetor de propriedade.</summary>
+        <value>A chave do pincel do plano de fundo de um item selecionado na barra de ferramentas de Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarItemSelectedBorderBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarItemSelectedBorderBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarItemSelectedBorderBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemSelectedBorderBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para a borda de um item selecionado na barra de ferramentas de Inspetor de propriedade.</summary>
+        <value>A chave de pincel para a borda de um item selecionado na barra de ferramentas de Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarSeparatorBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarSeparatorBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarSeparatorBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarSeparatorBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para o separador da barra de ferramentas do Inspetor de propriedade.</summary>
+        <value>A chave de pincel para o separador da barra de ferramentas do Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorToolBarTextBoxBorderBrushKey">
+      <MemberSignature Language="C#" Value="public static string PropertyInspectorToolBarTextBoxBorderBrushKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PropertyInspectorToolBarTextBoxBorderBrushKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarTextBoxBorderBrushKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de pincel para a borda da caixa de texto na barra de ferramentas de Inspetor de propriedade.</summary>
+        <value>A chave de pincel para a borda da caixa de texto na barra de ferramentas de Inspetor de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RubberBandRectangleColorKey">
+      <MemberSignature Language="C#" Value="public const string RubberBandRectangleColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RubberBandRectangleColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.RubberBandRectangleColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o retângulo Elástico. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color WorkflowViewElementBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color WorkflowViewElementBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do plano de fundo para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" />.</summary>
+        <value>A cor de plano de fundo para o elemento de exibição do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string WorkflowViewElementBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WorkflowViewElementBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> em segundo plano. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color WorkflowViewElementBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color WorkflowViewElementBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> borda.</summary>
+        <value>O <see cref="T:System.Windows.Media.Color" /> para a borda de elemento de exibição do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string WorkflowViewElementBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WorkflowViewElementBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> borda. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementCaptionColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color WorkflowViewElementCaptionColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color WorkflowViewElementCaptionColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementCaptionColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> legenda.</summary>
+        <value>O <see cref="T:System.Windows.Media.Color" /> para a legenda de elemento de exibição do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementCaptionColorKey">
+      <MemberSignature Language="C#" Value="public const string WorkflowViewElementCaptionColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WorkflowViewElementCaptionColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementCaptionColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> legenda. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementSelectedBackgroundColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color WorkflowViewElementSelectedBackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color WorkflowViewElementSelectedBackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedBackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> selecionado em segundo plano.</summary>
+        <value>A cor para o plano de fundo do elemento selecionado de exibição do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementSelectedBackgroundColorKey">
+      <MemberSignature Language="C#" Value="public const string WorkflowViewElementSelectedBackgroundColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WorkflowViewElementSelectedBackgroundColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedBackgroundColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor a ser usado para o plano de fundo selecionado do <see cref="T:System.Activities.Presentation.WorkflowViewElement" />. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementSelectedBorderColor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Color WorkflowViewElementSelectedBorderColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Color WorkflowViewElementSelectedBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> borda selecionado.</summary>
+        <value>A cor da borda do fluxo de trabalho exibição elemento selecionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowViewElementSelectedBorderColorKey">
+      <MemberSignature Language="C#" Value="public const string WorkflowViewElementSelectedBorderColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WorkflowViewElementSelectedBorderColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedBorderColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a chave de cor para o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> borda selecionado. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

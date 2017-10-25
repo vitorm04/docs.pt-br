@@ -1,0 +1,312 @@
+<Type Name="DataGridTemplateColumn" FullName="System.Windows.Controls.DataGridTemplateColumn">
+  <TypeSignature Language="C#" Value="public class DataGridTemplateColumn : System.Windows.Controls.DataGridColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridTemplateColumn extends System.Windows.Controls.DataGridColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridTemplateColumn" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DataGridColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coluna <see cref="T:System.Windows.Controls.DataGrid" /> que hospeda o conteúdo especificado do modelo em suas células.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.DataGridTemplateColumn> tipo permite que você crie seus próprios tipos de coluna especificando os modelos de célula a ser usado ao exibir e editar valores. Para especificar o modelo que é usado para exibir o conteúdo de uma célula que não está no modo de edição, defina a <xref:System.Windows.Controls.DataGridTemplateColumn.CellTemplate%2A> propriedade. Para especificar o modelo que é usado para exibir o conteúdo de uma célula que está no modo de edição, defina a <xref:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplate%2A> propriedade. Para obter mais informações sobre modelos, consulte [visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md) e [estilos e modelagem](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ Para sua conveniência, <xref:System.Windows.Controls.DataGrid> fornece os seguintes tipos de coluna predefinidos:  
+  
+|Tipo de coluna|Exibição de dados|  
+|-----------------|------------------|  
+|<xref:System.Windows.Controls.DataGridHyperlinkColumn>|Use para exibir dados URI.|  
+|<xref:System.Windows.Controls.DataGridComboBoxColumn>|Use para exibir dados de enumeração.|  
+|<xref:System.Windows.Controls.DataGridTextColumn>|Use para exibir o texto.|  
+|<xref:System.Windows.Controls.DataGridCheckBoxColumn>|Use para exibir dados booliano.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Controls.DataGridTemplateColumn>.  
+  
+ [!code-xaml[DataGrid_TemplateColumn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_templatecolumn/CS/window1.xaml#1)]   
+  
+ A ilustração a seguir mostra a saída do XAML anterior.  
+  
+ ![Uma coluna que usa um DataTemplate](~/add/media/ndp-wpf-templatecolumn.png "uma coluna usando um DataTemplate")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridTemplateColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTemplateColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataGridTemplateColumn" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellEditingTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate CellEditingTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate CellEditingTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo a ser usado para exibir o conteúdo de uma célula que está no modo de edição.</summary>
+        <value>O modelo usado para exibir o conteúdo de uma célula que está no modo de edição. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A modelo de edição de célula define como o conteúdo é exibido nas células de coluna quando no modo de edição. Para obter mais informações sobre modelos de dados, consulte [visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md) e [estilos e modelagem](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ Para definir o modelo para a célula que não está no modo de edição, use o <xref:System.Windows.Controls.DataGridTemplateColumn.CellTemplate%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o <xref:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplate%2A> para exibir e editar uma coluna de datas.  
+  
+ [!code-xaml[DataGrid_TemplateColumn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_templatecolumn/CS/window1.xaml#1)]   
+  
+ A ilustração a seguir mostra a saída do XAML anterior.  
+  
+ ![Uma coluna que usa um DataTemplate](~/add/media/ndp-wpf-templatecolumn.png "uma coluna usando um DataTemplate")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellEditingTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CellEditingTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CellEditingTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellEditingTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector CellEditingTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector CellEditingTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que determina qual modelo usar para exibir o conteúdo de uma célula que está no modo de edição.</summary>
+        <value>O objeto que determina qual modelo usar para exibir o conteúdo de uma célula que está no modo de edição. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellEditingTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CellEditingTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CellEditingTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate CellTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate CellTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTemplateColumn.CellTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo a ser usado para exibir o conteúdo de uma célula que não está no modo de edição.</summary>
+        <value>O modelo a ser usado para exibir o conteúdo de uma célula que não está no modo de edição. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de célula define como o conteúdo é exibido nas células da coluna. Para obter mais informações sobre modelos de dados, consulte [visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md) e [estilos e modelagem](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ Para definir o modelo para uma célula que está no modo de edição, use o <xref:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplate%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o <xref:System.Windows.Controls.DataGridTemplateColumn.CellTemplate%2A> para exibir uma coluna de datas.  
+  
+ [!code-xaml[DataGrid_TemplateColumn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_templatecolumn/CS/window1.xaml#1)]   
+  
+ A ilustração a seguir mostra a saída do XAML anterior.  
+  
+ ![Uma coluna que usa um DataTemplate](~/add/media/ndp-wpf-templatecolumn.png "uma coluna usando um DataTemplate")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CellTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CellTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTemplateColumn.CellTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridTemplateColumn.CellTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector CellTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector CellTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTemplateColumn.CellTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que determina qual modelo usar para exibir o conteúdo de uma célula que não está no modo de edição.</summary>
+        <value>O objeto que determina qual modelo usar. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CellTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CellTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTemplateColumn.CellTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEditingElement">
+      <MemberSignature Language="C#" Value="protected override System.Windows.FrameworkElement GenerateEditingElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.FrameworkElement GenerateEditingElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTemplateColumn.GenerateEditingElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">A célula que contém o elemento gerado.</param>
+        <param name="dataItem">Os dados de item é representados pela linha que contém a célula pretendida.</param>
+        <summary>Obtém um elemento definido pelo <see cref="P:System.Windows.Controls.DataGridTemplateColumn.CellEditingTemplate" /> que é associado à coluna de <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> valor da propriedade.</summary>
+        <returns>Um novo elemento de edição que está associado à coluna de <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> valor da propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateElement">
+      <MemberSignature Language="C#" Value="protected override System.Windows.FrameworkElement GenerateElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.FrameworkElement GenerateElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTemplateColumn.GenerateElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">A célula que contém o elemento gerado.</param>
+        <param name="dataItem">Os dados de item é representados pela linha que contém a célula pretendida.</param>
+        <summary>Obtém um elemento definido pelo <see cref="P:System.Windows.Controls.DataGridTemplateColumn.CellTemplate" /> que é associado à coluna de <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> valor da propriedade.</summary>
+        <returns>Um elemento de novo, somente leitura que está associado à coluna de <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> valor da propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCellContent">
+      <MemberSignature Language="C#" Value="protected override void RefreshCellContent (System.Windows.FrameworkElement element, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RefreshCellContent(class System.Windows.FrameworkElement element, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTemplateColumn.RefreshCellContent(System.Windows.FrameworkElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">A célula para atualizar.</param>
+        <param name="propertyName">O nome da propriedade de coluna foi alterada.</param>
+        <summary>Atualiza o conteúdo de uma célula na coluna em resposta a uma alteração de valor de propriedade do modelo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

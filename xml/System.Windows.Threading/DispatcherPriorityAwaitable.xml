@@ -1,0 +1,45 @@
+<Type Name="DispatcherPriorityAwaitable" FullName="System.Windows.Threading.DispatcherPriorityAwaitable">
+  <TypeSignature Language="C#" Value="public struct DispatcherPriorityAwaitable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DispatcherPriorityAwaitable extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherPriorityAwaitable" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto aguardável que transfere o controle de volta para o dispatcher atual e fornece uma oportunidade para o dispatcher processar outros eventos de forma assíncrona</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Threading.Dispatcher.Yield%2A?displayProperty=nameWithType> método retorna um <xref:System.Windows.Threading.DispatcherPriorityAwaitable>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAwaiter">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherPriorityAwaiter GetAwaiter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Threading.DispatcherPriorityAwaiter GetAwaiter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherPriorityAwaitable.GetAwaiter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriorityAwaiter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto que aguarda a conclusão de uma tarefa assíncrona.</summary>
+        <returns>Um objeto que aguarda a conclusão de uma tarefa assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

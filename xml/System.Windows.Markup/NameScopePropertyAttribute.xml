@@ -1,0 +1,131 @@
+<Type Name="NameScopePropertyAttribute" FullName="System.Windows.Markup.NameScopePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class NameScopePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NameScopePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.NameScopePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica uma propriedade da classe associada que fornece o valor de namescope XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um modelo de objeto típico combinação de modelo de aplicativo em que o XAML é usado, as classes que são usados como um namescope XAML são as classes que são geralmente usados como elementos raiz ou que dão suporte a uma metáfora da página. Essas classes geralmente implementam <xref:System.Windows.Markup.INameScope> e o namescope XAML é criado correspondente para a raiz pelo comportamento típico de processamento de XAML no contexto do modelo de programação de uma estrutura e modelo de aplicativo.  
+  
+ Se <xref:System.Windows.Markup.NameScopePropertyAttribute> é usado, o valor da propriedade namescope XAML deve ser um objeto que implementa <xref:System.Windows.Markup.INameScope> e mantém o namescope XAML real e seu comportamento.  
+  
+ Há duas formas para esse atributo: nome da propriedade apenas, ou o tipo e a propriedade. O segundo formulário deve ser usado apenas para casos em que a propriedade que contém o escopo do nome XAML é um membro anexável. A técnica de membro anexada tem a vantagem de que as classes de serviço podem implementar um conceito de namescope XAML que pode dar suporte a vários tipos de objeto diferente. Os tipos de objeto, em seguida, não precisam ser explicitamente relacionados de herança de classe.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.NameScopePropertyAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ No WPF, esse atributo é aplicado a apenas um único tipo <xref:System.Windows.DependencyObject>. Nesse caso, a propriedade de atributo é a classe de serviço <xref:System.Windows.NameScope> e sua <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> propriedade anexada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameScopePropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameScopePropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade no tipo de atributo que fornece o namescope XAML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.NameScopePropertyAttribute" /> com o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameScopePropertyAttribute (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameScopePropertyAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro anexável que fornece o escopo do nome XAML.</param>
+        <param name="type">O tipo de proprietário do membro anexável que fornece o escopo do nome XAML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.NameScopePropertyAttribute" /> com o nome e tipo especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NameScopePropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade que fornece o namescope XAML.</summary>
+        <value>Um valor de cadeia de caracteres que é o nome da propriedade que fornece o namescope XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O significado de <xref:System.Windows.Markup.NameScopePropertyAttribute.Name%2A> depende se <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A> está definido. Se <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A> for nulo, <xref:System.Windows.Markup.NameScopePropertyAttribute.Name%2A> faz referência a uma propriedade no tipo sendo atribuído. Se <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A> contém um valor, em seguida, <xref:System.Windows.Markup.NameScopePropertyAttribute.Name%2A> faz referência a uma propriedade do tipo <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NameScopePropertyAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de proprietário da propriedade anexada que fornece o suporte de namescope XAML.</summary>
+        <value>Um <see cref="T:System.Type" /> valor que é o tipo de proprietário da propriedade anexada que fornece o suporte de namescope XAML, ou <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só é relevante se a propriedade de implementação de namescope XAML é um membro anexável, caso em que esse é o tipo de proprietário do membro anexável. Caso contrário, esse valor pode ser nulo. Se precisar de lógica baseada em reflexão geral que relata uma propriedade namescope da definição de tipo em todos os casos, você pode substituir o tipo em que o atributo é aplicado sempre que você encontrar `null` para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

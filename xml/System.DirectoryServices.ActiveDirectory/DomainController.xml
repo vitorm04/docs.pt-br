@@ -1,0 +1,939 @@
+<Type Name="DomainController" FullName="System.DirectoryServices.ActiveDirectory.DomainController">
+  <TypeSignature Language="C#" Value="public class DomainController : System.DirectoryServices.ActiveDirectory.DirectoryServer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DomainController extends System.DirectoryServices.ActiveDirectory.DirectoryServer" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.DomainController" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectory.DirectoryServer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> representa um controlador de domínio em um domínio do Active Directory.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DomainController ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckReplicationConsistency">
+      <MemberSignature Language="C#" Value="public override void CheckReplicationConsistency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CheckReplicationConsistency() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.CheckReplicationConsistency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Usa o Knowledge Consistency Checker (KCC) para verificar a topologia de replicação para esse controlador de domínio.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTime">
+      <MemberSignature Language="C#" Value="public DateTime CurrentTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CurrentTime" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.CurrentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora atuais do controlador de domínio.</summary>
+        <value>Um <see cref="T:System.DateTime" /> objeto que contém a data e hora atuais do controlador de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Determina se os recursos gerenciados devem ser liberados. <see langword="true" />Se os recursos gerenciados são liberados; Caso contrário, <see langword="false" />.</param>
+        <summary>Faz com que o objeto liberar todos os recursos gerenciados e/ou não gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `disposing` parâmetro afeta somente a versão dos recursos gerenciados. Os recursos não gerenciados são liberados sempre por este método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.Domain Domain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.Domain Domain" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Domain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o que esse controlador de domínio é um membro do domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que representa o domínio em que esse controlador de domínio é membro do objeto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableGlobalCatalog">
+      <MemberSignature Language="C#" Value="public virtual System.DirectoryServices.ActiveDirectory.GlobalCatalog EnableGlobalCatalog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.DirectoryServices.ActiveDirectory.GlobalCatalog EnableGlobalCatalog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.EnableGlobalCatalog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Promove a esse controlador de domínio para um servidor de catálogo global.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> objeto que representa o servidor de catálogo global.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.ActiveDirectory.GlobalCatalog.DisableGlobalCatalog%2A?displayProperty=nameWithType> método é usado para rebaixar o controlador de domínio de um servidor de catálogo global.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~DomainController ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.Object.Finalize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAll (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAll(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.FindAll(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que contém o destino e as credenciais a serem usadas para a pesquisa. O destino deste <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto é o nome do domínio que será pesquisado para os controladores de domínio.</param>
+        <summary>Localiza todos os controladores de domínio no contexto especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> objeto que contém os controladores de domínio encontrado pela pesquisa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAll (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAll(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.FindAll(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que contém o destino e as credenciais a serem usadas para a pesquisa.</param>
+        <param name="siteName">O nome do site para procurar os controladores de domínio.</param>
+        <summary>Localiza todos os controladores de domínio no contexto especificado e o site.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> objeto que contém os controladores de domínio que foram encontrados pela pesquisa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="siteName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOne">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainController FindOne (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainController FindOne(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.FindOne(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que contém o destino e as credenciais a serem usadas para a pesquisa.</param>
+        <summary>Localiza um controlador de domínio único no contexto especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio foi encontrado pela pesquisa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhum controlador de domínio foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOne">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainController FindOne (System.DirectoryServices.ActiveDirectory.DirectoryContext context, System.DirectoryServices.ActiveDirectory.LocatorOptions flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainController FindOne(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, valuetype System.DirectoryServices.ActiveDirectory.LocatorOptions flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.FindOne(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.DirectoryServices.ActiveDirectory.LocatorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="flag" Type="System.DirectoryServices.ActiveDirectory.LocatorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que contém o destino e as credenciais a serem usadas para a pesquisa.</param>
+        <param name="flag">Uma combinação de um ou mais dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.LocatorOptions" /> que define o tipo de controlador de domínio a ser localizado.</param>
+        <summary>Localiza um controlador de domínio único no contexto especificado, permitindo opções adicionais de pesquisa.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio foi encontrado pela pesquisa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhum controlador de domínio foi encontrado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" />ou <paramref name="flag" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOne">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainController FindOne (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainController FindOne(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.FindOne(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que contém o destino e as credenciais a serem usadas para a pesquisa.</param>
+        <param name="siteName">O nome do site para procurar um controlador de domínio.</param>
+        <summary>Localiza um controlador de domínio único no contexto especificado e o site.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio foi encontrado pela pesquisa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhum controlador de domínio foi encontrado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" />ou <paramref name="siteName" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="siteName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOne">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainController FindOne (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName, System.DirectoryServices.ActiveDirectory.LocatorOptions flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainController FindOne(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName, valuetype System.DirectoryServices.ActiveDirectory.LocatorOptions flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.FindOne(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String,System.DirectoryServices.ActiveDirectory.LocatorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="siteName" Type="System.String" />
+        <Parameter Name="flag" Type="System.DirectoryServices.ActiveDirectory.LocatorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que contém o destino e as credenciais a serem usadas para a pesquisa.</param>
+        <param name="siteName">O nome do site para procurar um controlador de domínio.</param>
+        <param name="flag">Uma combinação de um ou mais dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.LocatorOptions" /> que define o tipo de controlador de domínio a ser localizado.</param>
+        <summary>Localiza um controlador de domínio único no contexto especificado e o site, permitindo opções adicionais de pesquisa.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio foi encontrado pela pesquisa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhum controlador de domínio foi encontrado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" />, <paramref name="siteName" />, ou <paramref name="flag" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="siteName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Forest">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.Forest Forest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.Forest Forest" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.Forest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Forest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a floresta que esse controlador de domínio é membro.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objeto que representa a floresta que esse controlador de domínio é membro.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllReplicationNeighbors">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetAllReplicationNeighbors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetAllReplicationNeighbors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetAllReplicationNeighbors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os vizinhos de replicação para esse controlador de domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection" /> objeto que contém os vizinhos de replicação para esse controlador de domínio.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectorySearcher">
+      <MemberSignature Language="C#" Value="public virtual System.DirectoryServices.DirectorySearcher GetDirectorySearcher ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.DirectoryServices.DirectorySearcher GetDirectorySearcher() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetDirectorySearcher" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySearcher</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um <see cref="T:System.DirectoryServices.DirectorySearcher" /> objeto para o controlador de domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.DirectorySearcher" /> objeto para o controlador de domínio.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDomainController">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.DomainController GetDomainController (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.DomainController GetDomainController(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetDomainController(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> que contém o destino e as credenciais a serem usados para recuperar o objeto. O destino desse contexto deve ser um controlador de domínio.</param>
+        <summary>Recupera um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> para o contexto especificado.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> que representa o controlador de domínio encontrado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma conexão com o destino especificado em <paramref name="context" /> não pôde ser realizada.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationConnectionFailures">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection GetReplicationConnectionFailures ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection GetReplicationConnectionFailures() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetReplicationConnectionFailures" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma lista das falhas de conexão de replicação registrados por este controlador de domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection" /> objeto que contém as falhas de conexão de replicação que foram registradas por este controlador de domínio.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationCursors">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection GetReplicationCursors (string partition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection GetReplicationCursors(string partition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetReplicationCursors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">O nome diferenciado da partição para o qual recuperar informações de cursor de replicação.</param>
+        <summary>Recupera as informações de cursor de replicação para a partição especificada.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection" /> que contém as informações de cursor de replicação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partition" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationMetadata">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata GetReplicationMetadata (string objectPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata GetReplicationMetadata(string objectPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetReplicationMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectPath">O caminho para o objeto para o qual recuperar os metadados de replicação.</param>
+        <summary>Recupera os metadados de replicação para um determinado objeto de serviços de domínio do Active Directory.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata" /> objeto que contém os metadados de replicação para o objeto especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="objectPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="objectPath" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationNeighbors">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetReplicationNeighbors (string partition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetReplicationNeighbors(string partition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetReplicationNeighbors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">O nome diferenciado da partição para o qual recuperar os vizinhos de replicação.</param>
+        <summary>Recupera os vizinhos de replicação para a partição especificada.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection" /> objeto que contém os vizinhos de replicação para esse objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partition" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationOperationInformation">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation GetReplicationOperationInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation GetReplicationOperationInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.GetReplicationOperationInformation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o atuais e pendentes operações de replicação para esse controlador de domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation" /> objeto que contém o atual e todas as operações de replicação pendentes.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HighestCommittedUsn">
+      <MemberSignature Language="C#" Value="public long HighestCommittedUsn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 HighestCommittedUsn" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.HighestCommittedUsn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência de atualização mais alto que foi confirmado para esse controlador de domínio.</summary>
+        <value>O USN (número de sequência de atualização) mais alto que foi confirmado para esse controlador de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InboundConnections">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.InboundConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as conexões de replicação de entrada para esse controlador de domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection" /> objeto que contém as conexões de replicação de entrada para esse controlador de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IPAddress">
+      <MemberSignature Language="C#" Value="public override string IPAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IPAddress" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.IPAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço IP deste controlador de domínio.</summary>
+        <value>O endereço de Internet protocol (IP) deste controlador de domínio no formato de cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGlobalCatalog">
+      <MemberSignature Language="C#" Value="public virtual bool IsGlobalCatalog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsGlobalCatalog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.IsGlobalCatalog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se esse controlador de domínio é um servidor de catálogo global.</summary>
+        <returns>
+          <see langword="true" />Se esse controlador de domínio é um servidor de catálogo global ou <see langword="false" /> caso contrário.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OSVersion">
+      <MemberSignature Language="C#" Value="public string OSVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSVersion" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.OSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do sistema operacional deste controlador de domínio.</summary>
+        <value>A versão do sistema operacional que está em uso nesse controlador de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnections">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.OutboundConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as conexões de replicação de saída para esse controlador de domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection" /> objeto que contém as conexões de replicação de saída para esse controlador de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Roles">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectoryRoleCollection Roles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectoryRoleCollection Roles" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.Roles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectoryRoleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as funções que atende a esse controlador de domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryRoleCollection" /> objeto que contém uma coleção de <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole" /> membros que indicam as funções que atende a esse controlador de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SeizeRoleOwnership">
+      <MemberSignature Language="C#" Value="public void SeizeRoleOwnership (System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SeizeRoleOwnership(valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.SeizeRoleOwnership(System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole" />
+      </Parameters>
+      <Docs>
+        <param name="role">Uma da <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole" /> que especifica qual função o controlador de domínio deve assumir a propriedade de membros.</param>
+        <summary>Faz com que esse controlador de domínio assumir a propriedade da função especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma operação destrutiva porque ele faz com que a função a ser executada sem a cooperação do servidor que possui a função. O <xref:System.DirectoryServices.ActiveDirectory.DomainController.TransferRoleOwnership%2A?displayProperty=nameWithType> método deve ser usado em vez disso, sempre que possível.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="role" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteName">
+      <MemberSignature Language="C#" Value="public override string SiteName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SiteName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.SiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do site que esse controlador de domínio pertence.</summary>
+        <value>O nome do site que esse controlador de domínio pertence.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">O nome do site não foi encontrado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncFromAllServersCallback">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DomainController.SyncFromAllServersCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncUpdateCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o delegado de sincronização para este controlador de domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" /> delegado que será usado para notificações de sincronização.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncReplicaFromAllServers">
+      <MemberSignature Language="C#" Value="public override void SyncReplicaFromAllServers (string partition, System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncReplicaFromAllServers(string partition, valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.SyncReplicaFromAllServers(System.String,System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+        <Parameter Name="options" Type="System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions" />
+      </Parameters>
+      <Docs>
+        <param name="partition">O nome diferenciado da partição do controlador de domínio a ser sincronizado.</param>
+        <param name="options">Uma combinação de um ou mais membros <see cref="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions" />.</param>
+        <summary>Faz com que esse controlador de domínio sincronize a partição especificada com todos os outros controladores de domínio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a replicação ocorrerá apenas com os outros controladores de domínio no mesmo site. Se o `options` parâmetro contém o <xref:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.CrossSite> de valor, em seguida, a replicação ocorrerá com todos os controladores de domínio na floresta.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partition" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException">Erro na operação de sincronização.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncReplicaFromServer">
+      <MemberSignature Language="C#" Value="public override void SyncReplicaFromServer (string partition, string sourceServer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncReplicaFromServer(string partition, string sourceServer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.SyncReplicaFromServer(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+        <Parameter Name="sourceServer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">O nome diferenciado da partição com a qual sincronizar o controlador de domínio.</param>
+        <param name="sourceServer">O nome do servidor com o qual sincronizar a partição.</param>
+        <summary>Faz com que esse controlador de domínio sincronizar a partição especificada com o controlador de domínio especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partition" /> ou <paramref name="sourceServer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partition" />ou <paramref name="sourceServer" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferRoleOwnership">
+      <MemberSignature Language="C#" Value="public void TransferRoleOwnership (System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransferRoleOwnership(valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.TransferRoleOwnership(System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole" />
+      </Parameters>
+      <Docs>
+        <param name="role">Uma da <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole" /> membros que especifica qual função será transferida para esse controlador de domínio.</param>
+        <summary>Faz com que a propriedade da função especificada a ser transferida para esse controlador de domínio.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="role" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerSyncReplicaFromNeighbors">
+      <MemberSignature Language="C#" Value="public override void TriggerSyncReplicaFromNeighbors (string partition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TriggerSyncReplicaFromNeighbors(string partition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DomainController.TriggerSyncReplicaFromNeighbors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">O nome diferenciado da partição para sincronizar.</param>
+        <summary>Inicia a sincronização da partição especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partition" /> não é válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

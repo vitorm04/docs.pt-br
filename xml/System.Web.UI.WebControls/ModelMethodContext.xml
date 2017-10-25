@@ -1,0 +1,290 @@
+<Type Name="ModelMethodContext" FullName="System.Web.UI.WebControls.ModelMethodContext">
+  <TypeSignature Language="C#" Value="public class ModelMethodContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModelMethodContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ModelMethodContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para chamar o <see cref="M:System.Web.UI.Page.UpdateModel``1(``0)" /> ou <see cref="M:System.Web.UI.Page.TryUpdateModel``1(``0)" /> método quando o <see cref="T:System.Web.UI.Page" /> objeto não é diretamente acessível.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, uma classe personalizada pode definir os métodos referenciados pelo `SelectMethod`, `UpdateMethod`, `DeleteMethod`, e `InsertMethod` propriedades de associação de dados e esses métodos podem ter um parâmetro deste tipo e usá-lo para chamar o <xref:System.Web.UI.Page.UpdateModel%2A> método. Como alternativa, em vez de um parâmetro de método, o <xref:System.Web.UI.WebControls.ModelMethodContext.Current%2A> propriedade pode ser usada dentro de um método para invocar o <xref:System.Web.UI.Page.UpdateModel%2A> método.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModelMethodContext (System.Web.UI.Page page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Page page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelMethodContext.#ctor(System.Web.UI.Page)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="page" Type="System.Web.UI.Page" />
+      </Parameters>
+      <Docs>
+        <param name="page">O objeto de página.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ModelMethodContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="page" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.ModelMethodContext Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.UI.WebControls.ModelMethodContext Current" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelMethodContext.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelMethodContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.ModelMethodContext" /> que corresponde ao objeto de <see cref="T:System.Web.UI.Page" /> objeto que está sendo o <see cref="P:System.Web.HttpContext.Current" /> propriedade.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.ModelMethodContext" /> objeto. ou <see langword="null" /> se a solicitação atual não é para uma página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelState">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ModelStateDictionary ModelState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelStateDictionary ModelState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelMethodContext.ModelState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelStateDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do modelo.</summary>
+        <value>O estado do modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TryUpdateModel&lt;TModel&gt;">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Atualiza a instância de modelo especificada usando valores do provedor de valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TryUpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool TryUpdateModel&lt;TModel&gt; (TModel model) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryUpdateModel&lt;class TModel&gt;(!!TModel model) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelMethodContext.TryUpdateModel``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">O tipo do modelo.</typeparam>
+        <param name="model">O modelo.</param>
+        <summary>Atualiza a instância de modelo especificada usando valores do provedor de valor.</summary>
+        <returns>
+          <see langword="true" />Se a associação de modelo for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool TryUpdateModel&lt;TModel&gt; (TModel model, System.Web.ModelBinding.IValueProvider valueProvider) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryUpdateModel&lt;class TModel&gt;(!!TModel model, class System.Web.ModelBinding.IValueProvider valueProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelMethodContext.TryUpdateModel``1(``0,System.Web.ModelBinding.IValueProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+        <Parameter Name="valueProvider" Type="System.Web.ModelBinding.IValueProvider" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">O tipo do modelo.</typeparam>
+        <param name="model">O modelo.</param>
+        <param name="valueProvider">O provedor de valor.</param>
+        <summary>Atualiza a instância de modelo especificada usando valores do provedor de valor especificado.</summary>
+        <returns>
+          <see langword="true" />Se a associação de modelo for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="UpdateModel&lt;TModel&gt;">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Atualiza a instância de modelo especificada usando valores do provedor de valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="UpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual void UpdateModel&lt;TModel&gt; (TModel model) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateModel&lt;class TModel&gt;(!!TModel model) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelMethodContext.UpdateModel``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">O tipo do modelo.</typeparam>
+        <param name="model">O modelo.</param>
+        <summary>Atualiza a instância de modelo especificada usando valores do provedor de valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual void UpdateModel&lt;TModel&gt; (TModel model, System.Web.ModelBinding.IValueProvider valueProvider) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateModel&lt;class TModel&gt;(!!TModel model, class System.Web.ModelBinding.IValueProvider valueProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelMethodContext.UpdateModel``1(``0,System.Web.ModelBinding.IValueProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+        <Parameter Name="valueProvider" Type="System.Web.ModelBinding.IValueProvider" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">O tipo do modelo.</typeparam>
+        <param name="model">O modelo.</param>
+        <param name="valueProvider">O provedor de valor.</param>
+        <summary>Atualiza a instância de modelo especificada usando valores do provedor de valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

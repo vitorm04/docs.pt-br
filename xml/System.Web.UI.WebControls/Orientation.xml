@@ -1,0 +1,60 @@
+<Type Name="Orientation" FullName="System.Web.UI.WebControls.Orientation">
+  <TypeSignature Language="C#" Value="public enum Orientation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Orientation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Orientation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o layout geral de itens dentro de um controle composto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra os resultados da aplicação de diferentes <xref:System.Web.UI.WebControls.Orientation> configurações de enumeração para o <xref:System.Web.UI.WebControls.Login> controle.  
+  
+ [!code-aspx-csharp[LoginLoginLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginLoginLayout/CS/loginloginlayoutcs.aspx#1)]
+ [!code-aspx-vb[LoginLoginLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginLoginLayout/VB/loginloginlayoutvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.Orientation Horizontal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.Orientation.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Apresenta os elementos do controle de forma horizontal. A maioria dos controles são lado a lado, com muito pouco de empilhamento de controles.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.Orientation Vertical = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.Orientation.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Apresenta os elementos do controle de forma vertical. A maioria dos controles são empilhadas, com alguns controles lado a lado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,245 @@
+<Type Name="DynamicUpdateMapBuilder" FullName="System.Activities.DynamicUpdate.DynamicUpdateMapBuilder">
+  <TypeSignature Language="C#" Value="public class DynamicUpdateMapBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicUpdateMapBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um construtor de mapa de atualização dinâmica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao controle de versão e à funcionalidade de atualização dinâmica do Windows Workflow Foundation. versão do fluxo de trabalho [!INCLUDE[crabout](~/includes/crabout-md.md)], identidade do fluxo de trabalho e atualização dinâmica, consulte os tópicos a seguir.  
+  
+ [Controle de versão de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Descreve a funcionalidade do controle de versão do fluxo de trabalho introduzida no [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Atualização dinâmica](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Descreve como atualizar a definição de fluxo de trabalho de uma instância de fluxo de trabalho persistente usando a atualização dinâmica.  
+  
+ [Usando WorkflowApplication identidade e controle de versão](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Descreve como usar <xref:System.Activities.WorkflowIdentity> para hospedar várias versões de um fluxo de trabalho lado a lado.  
+  
+ [Controle de versão lado a lado no WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Descreve como hospedar várias versões de um fluxo de trabalho em um único ponto de extremidade.  
+  
+ [Como hospedar várias versões de um fluxo de trabalho lado a lado](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra como atualizar uma definição de fluxo de trabalho e hospedagem de fluxos de trabalho usando a definição antiga e nova ao mesmo tempo.  
+  
+ [Como atualizar a definição de uma instância de fluxo de trabalho em execução](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra a atualização de instâncias de fluxo de trabalho persistentes para usar uma nova definição de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicUpdateMapBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMap">
+      <MemberSignature Language="C#" Value="public System.Activities.DynamicUpdate.DynamicUpdateMap CreateMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.DynamicUpdate.DynamicUpdateMap CreateMap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.CreateMap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DynamicUpdate.DynamicUpdateMap</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um mapa para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <returns>O mapa criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMap">
+      <MemberSignature Language="C#" Value="public System.Activities.DynamicUpdate.DynamicUpdateMap CreateMap (out System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt; activitiesBlockingUpdate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.DynamicUpdate.DynamicUpdateMap CreateMap([out] class System.Collections.Generic.IList`1&lt;class System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt;&amp; activitiesBlockingUpdate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.CreateMap(System.Collections.Generic.IList{System.Activities.DynamicUpdate.ActivityBlockingUpdate}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DynamicUpdate.DynamicUpdateMap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activitiesBlockingUpdate" Type="System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="activitiesBlockingUpdate">As atividades de bloqueio de atualização.</param>
+        <summary>Cria um mapa para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" /> com bloqueio de atualização de atividades especificadas.</summary>
+        <returns>O mapa criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisallowUpdateInside">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ISet&lt;System.Activities.Activity&gt; DisallowUpdateInside { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ISet`1&lt;class System.Activities.Activity&gt; DisallowUpdateInside" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.DisallowUpdateInside" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ISet&lt;System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atualização não permitir dentro de para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <value>A atualização não permitir dentro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForImplementation">
+      <MemberSignature Language="C#" Value="public bool ForImplementation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ForImplementation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.ForImplementation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" /> para implementação.</summary>
+        <value>
+          <see langword="True" />Se o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" /> para implementação; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupImplementationMap">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Activities.Activity,System.Activities.DynamicUpdate.DynamicUpdateMap&gt; LookupImplementationMap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Activities.Activity, class System.Activities.DynamicUpdate.DynamicUpdateMap&gt; LookupImplementationMap" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupImplementationMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Activity,System.Activities.DynamicUpdate.DynamicUpdateMap&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mapa de implementação de pesquisa para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <value>O mapa de implementação de pesquisa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupMapItem">
+      <MemberSignature Language="C#" Value="public Func&lt;object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; LookupMapItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;object, class System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt; LookupMapItem" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupMapItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Object,System.Activities.DynamicUpdate.DynamicUpdateMapItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o item de mapa de pesquisa para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <value>O item de mapa de pesquisa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalEnvironment">
+      <MemberSignature Language="C#" Value="public System.Activities.LocationReferenceEnvironment OriginalEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReferenceEnvironment OriginalEnvironment" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.OriginalEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReferenceEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ambiente de referência local para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <value>O ambiente de referência local.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalWorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity OriginalWorkflowDefinition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity OriginalWorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.OriginalWorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a definição de fluxo de trabalho original.</summary>
+        <value>A definição de fluxo de trabalho original.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedEnvironment">
+      <MemberSignature Language="C#" Value="public System.Activities.LocationReferenceEnvironment UpdatedEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReferenceEnvironment UpdatedEnvironment" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.UpdatedEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReferenceEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ambiente atualizado para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <value>O ambiente atualizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedWorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity UpdatedWorkflowDefinition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity UpdatedWorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.UpdatedWorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a definição de fluxo de trabalho atualizado para o <see cref="T:System.Activities.DynamicUpdate.DynamicUpdateMapBuilder" />.</summary>
+        <value>A definição do fluxo de trabalho atualizada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

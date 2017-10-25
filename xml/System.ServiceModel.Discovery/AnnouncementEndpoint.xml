@@ -1,0 +1,160 @@
+<Type Name="AnnouncementEndpoint" FullName="System.ServiceModel.Discovery.AnnouncementEndpoint">
+  <TypeSignature Language="C#" Value="public class AnnouncementEndpoint : System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnnouncementEndpoint extends System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.AnnouncementEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Description.ServiceEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um ponto de extremidade padrão usado pelos serviços para enviar mensagens de comunicado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa um ponto de extremidade que tem um contrato fixado, portanto, quando você cria pontos de extremidade de anúncio só especificar a associação e o endereço.  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>dá suporte a duas versões de protocolos de descoberta: WS-Discovery de abril de 2005 e WS-Discovery julho de 2008. Qualquer instância do ponto de extremidade oferece suporte a apenas uma dessas versões. Escolha de qual versão é suportada pelo ponto de extremidade, fornecendo o `discoveryVersion` parâmetro apropriado `AnnouncementEndpoint` construtor. A versão de descoberta padrão é WS-Discovery de abril de 2005.  
+  
+ <xref:System.ServiceModel.Discovery.AnnouncementClient>usa <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> para enviar anúncios.  <xref:System.ServiceModel.Discovery.AnnouncementService>e todas as classes derivadas de ele usam <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> para escuta de anúncios.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementEndpoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">A versão de descoberta para usar.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" /> classe que dá suporte a especificado <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>dá suporte a duas versões de protocolos de descoberta: WS-Discovery de abril de 2005 e WS-Discovery julho de 2008. A versão com suporte por uma instância específica é especificada por este ou qualquer construtor que usa um <xref:System.ServiceModel.Discovery.DiscoveryVersion> parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementEndpoint (System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementEndpoint.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="binding">A associação.</param>
+        <param name="address">O endereço.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" /> classe com o endereço e associação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">A versão de descoberta para usar.</param>
+        <param name="binding">A associação a ser usada.</param>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" /> classe que dá suporte a especificado <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> com o endereço e associação especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>dá suporte a duas versões de protocolos de descoberta: WS-Discovery de abril de 2005 e WS-Discovery julho de 2008. A versão com suporte por uma instância específica é especificada por este ou qualquer construtor que usa um <xref:System.ServiceModel.Discovery.DiscoveryVersion> parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscoveryVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.DiscoveryVersion DiscoveryVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.DiscoveryVersion DiscoveryVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementEndpoint.DiscoveryVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de descoberta que oferece suporte a esse ponto de extremidade de anúncio.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAnnouncementDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxAnnouncementDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxAnnouncementDelay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementEndpoint.MaxAnnouncementDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atraso máximo de anúncio.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> instância que contém o atraso máximo de anúncio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é um <xref:System.TimeSpan> que especifica um atraso aleatório, pequeno para evitar excesso de rede quando sai de uma rede e todos os serviços voltam a ficar online ao mesmo tempo. Consulte o [WS-Discovery especificação de abril de 2005](http://go.microsoft.com/fwlink/?LinkId=127029) seção 2.4 atribuições de protocolo para obter mais detalhes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

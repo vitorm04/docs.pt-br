@@ -1,0 +1,193 @@
+<Type Name="HtmlTitle" FullName="System.Web.UI.HtmlControls.HtmlTitle">
+  <TypeSignature Language="C#" Value="public class HtmlTitle : System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlTitle extends System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlTitle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite o acesso programático ao elemento <see langword="&lt;title&gt;" /> HTML no servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlTitle> classe para especificar o HTML de forma programática `<title>` elemento de uma página de Web Forms.  
+  
+> [!NOTE]
+>  Você também pode definir o título da página, usando o `title` atributo do [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) diretiva, ou definindo o <xref:System.Web.UI.Page.Title%2A> propriedade do <xref:System.Web.UI.Page> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir a data e hora atuais na barra de título da página da Web.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlTitleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlTitleClass/CS/htmltitlecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlTitleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlTitleClass/VB/htmltitlevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlTitle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTitle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HtmlControls.HtmlTitle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.HtmlControls.HtmlTitle> controlar usando valores padrão. Ele cria um HTML `<title>` elemento na página da Web. A tabela a seguir mostra o valor da propriedade inicial para uma instância de <xref:System.Web.UI.HtmlControls.HtmlTitle> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Cadeia de caracteres literal a "title".|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir a data e hora atuais na barra de título da página da Web.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlTitleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlTitleClass/CS/htmltitlecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlTitleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlTitleClass/VB/htmltitlevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTitle.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> que representa o elemento analisado.</param>
+        <summary>Notifica o <see cref="T:System.Web.UI.HtmlControls.HtmlTitle" /> controle de um elemento XML ou HTML é analisado e adiciona esse elemento para o <see cref="T:System.Web.UI.ControlCollection" /> coleção do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o elemento é adicionado ao <xref:System.Web.UI.HtmlControls.HtmlTitle> controle é um <xref:System.Web.UI.LiteralControl> controle, o <xref:System.Web.UI.HtmlControls.HtmlTitle.AddParsedSubObject%2A> método define o <xref:System.Web.UI.HtmlControls.HtmlTitle.Text%2A> propriedade com o valor da cadeia de caracteres literal; caso contrário, a base de <xref:System.Web.UI.Control.AddParsedSubObject%2A> método é chamado. O <xref:System.Web.UI.HtmlControls.HtmlTitle.AddParsedSubObject%2A> método é usado principalmente por desenvolvedores de controle estender a funcionalidade do <xref:System.Web.UI.HtmlControls.HtmlTitle> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTitle.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Web.UI.ControlCollection" /> coleta para o <see cref="T:System.Web.UI.HtmlControls.HtmlTitle" /> controle.</summary>
+        <returns>Um objeto <see cref="T:System.Web.UI.ControlCollection" /> para conter controles de servidor filho do controle de servidor atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTitle.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém o fluxo de saída para renderizar no cliente.</param>
+        <summary>Renderiza o controle <see cref="T:System.Web.UI.HtmlControls.HtmlTitle" /> no objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlTitle.Render%2A> chamadas de método primeiro o <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%2A> usando o método de `Title` membro do <xref:System.Web.UI.HtmlTextWriterTag> enumeração. Em seguida, com controles de qualquer filho a <xref:System.Web.UI.HtmlControls.HtmlTitle> controle são renderizados. Por fim, o <xref:System.Web.UI.HtmlTextWriter.RenderEndTag%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTitle.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de HTML <see langword="&lt;title&gt;" /> elemento.</summary>
+        <value>O texto de HTML <see langword="&lt;title&gt;" /> elemento. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlTitle.Text%2A> para especificar ou determinar o título da página da Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTitle.Text%2A> propriedade de um <xref:System.Web.UI.HtmlControls.HtmlTitle> controle para alterar dinamicamente o título de uma página da Web.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlTitleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlTitleClass/CS/htmltitlecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlTitleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlTitleClass/VB/htmltitlevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

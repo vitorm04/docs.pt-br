@@ -1,0 +1,152 @@
+<Type Name="DataGridViewAutoSizeRowsMode" FullName="System.Windows.Forms.DataGridViewAutoSizeRowsMode">
+  <TypeSignature Language="C#" Value="public enum DataGridViewAutoSizeRowsMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewAutoSizeRowsMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeRowsMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os valores para especificar como as alturas das linhas são ajustadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView> controle pode redimensionar suas linhas com base na altura preferencial de cada linha. A altura da linha preferencial é a altura mínima necessária para exibir o maior valor de célula nessa linha. Modos de tamanho diferente permitem que você indique quais células são usadas para calcular os níveis mais altos (células de cabeçalho ou células de cabeçalho) e se deseja redimensionar todas as linhas ou somente as linhas que estão atualmente exibidas. Redimensionar um subconjunto de linhas é útil para evitar uma penalidade de desempenho ao trabalhar com muitas linhas de dados.  
+  
+ Redimensionamento automático com base em conteúdo impede usuários de ajustar a altura de linha com o mouse.  
+  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A> propriedade e <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A> método.  
+  
+ Para obter mais informações sobre modos de dimensionamento, consulte [opções de dimensionamento no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as linhas para redimensionar sua altura automaticamente sempre que o conteúdo da célula é alterado. A altura da linha nova é determinada pelo conteúdo de todas as linhas e colunas. Este exemplo de código é parte de um exemplo maior fornecido em [como: automaticamente redimensionar células quando o conteúdo é alterado no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#9)]
+ [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#9)]
+ [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCells">
+      <MemberSignature Language="C#" Value="AllCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode AllCells = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha é ajustada para se adequar ao conteúdo de todas as células nas linhas, inclusive as células de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllCellsExceptHeaders">
+      <MemberSignature Language="C#" Value="AllCellsExceptHeaders" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode AllCellsExceptHeaders = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha é ajustada para se adequar ao conteúdo de todas as células nas linhas, excluindo as células de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllHeaders">
+      <MemberSignature Language="C#" Value="AllHeaders" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode AllHeaders = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha é ajustada para se adequar ao conteúdo do cabeçalho da linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedCells">
+      <MemberSignature Language="C#" Value="DisplayedCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode DisplayedCells = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha é ajustada para se adequar ao conteúdo de todas as células nas linhas exibidas na tela no momento, incluindo células de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedCellsExceptHeaders">
+      <MemberSignature Language="C#" Value="DisplayedCellsExceptHeaders" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode DisplayedCellsExceptHeaders = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha é ajustada para se adequar ao conteúdo de todas as células nas linhas exibidas na tela no momento, excluindo células de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedHeaders">
+      <MemberSignature Language="C#" Value="DisplayedHeaders" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode DisplayedHeaders = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha é ajustada para se adequar ao conteúdo dos cabeçalhos de linha atualmente exibidos na tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowsMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A altura da linha não é ajustada automaticamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

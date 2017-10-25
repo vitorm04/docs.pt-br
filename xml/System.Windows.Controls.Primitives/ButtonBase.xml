@@ -1,0 +1,895 @@
+<Type Name="ButtonBase" FullName="System.Windows.Controls.Primitives.ButtonBase">
+  <TypeSignature Language="C#" Value="public abstract class ButtonBase : System.Windows.Controls.ContentControl, System.Windows.Input.ICommandSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract ButtonBase extends System.Windows.Controls.ContentControl implements class System.Windows.Input.ICommandSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ButtonBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Input.ICommandSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Button)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base de todos os controles <see cref="T:System.Windows.Controls.Button" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento para responder quando o usuário clica em um <xref:System.Windows.Controls.Primitives.ButtonBase>. O usuário pode gerar o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos usando um <xref:System.Windows.Controls.AccessText> ou pressionando ENTER ou a barra de espaços quando o controle tem foco.  Quando o usuário pressiona a barra de espaços, os conjuntos de controle <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> para `true` e captura o mouse.  Como resultado, o controle gera eventos de mouse como <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.UIElement.IsMouseDirectlyOverChanged>. Observe que o uso de <xref:System.Windows.Controls.AccessText> ou ENTER não alterar <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> ou captura o mouse, mas ele gere o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ O <xref:System.Windows.Controls.Primitives.ButtonBase> define o <xref:System.Windows.Input.KeyboardNavigation.AcceptsReturn%2A> anexado propriedade `true`.  
+  
+ O <xref:System.Windows.Controls.Primitives.ButtonBase> define o <xref:System.Windows.UIElement.IsInputMethodEnabled%2A> propriedade `false`.  
+  
+ Um <xref:System.Windows.Controls.Primitives.ButtonBase> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ButtonBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.ButtonBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.ButtonBase.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.Button" /> é clicado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O usuário pode gerar o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos usando um <xref:System.Windows.Controls.AccessText> ou pressionando ENTER ou a barra de espaços quando o controle tem foco.  Quando o usuário pressiona a barra de espaços, os conjuntos de controle <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> para `true` e captura o mouse.  Como resultado, o controle gera eventos de mouse como <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.UIElement.IsMouseDirectlyOverChanged>. Observe que o uso de <xref:System.Windows.Controls.AccessText> ou ENTER não alterar <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> ou captura o mouse, mas ele gere o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ O <xref:System.Windows.Controls.Primitives.ButtonBase> marcas a <xref:System.Windows.UIElement.MouseLeftButtonDown> eventos tratados no <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonDown%2A> método e gera o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Portanto, o <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonDown%2A> evento nunca ocorrerá para um controle que herda de <xref:System.Windows.Controls.Primitives.ButtonBase>. Em vez disso, anexe um manipulador de eventos para o <xref:System.Windows.ContentElement.PreviewMouseLeftButtonDown> evento ou chamada <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> com `handledEventsToo` definido como `true`.  
+  
+<a name="routedEventInfo_Click"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ButtonBase.ClickEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra três botões respondem a cliques de três maneiras diferentes.  
+  
+-   Passe - o primeiro botão altera cores quando o usuário passar o mouse sobre o botão  
+  
+-   Pressione - o segundo botão requer que o mouse ser pressionado enquanto o ponteiro do mouse está no botão.  
+  
+-   Versão – a terceira não redefine a cor do plano de fundo dos botões até que o mouse é pressionado e solto no botão.  
+  
+ [!code-xaml[ClickModes_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ClickModes_snip/CSharp/Pane1.xaml#1)]  
+  
+ [!code-csharp[ClickModes_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ClickModes_snip/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ClickModes_snip#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClickModes_snip/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClickEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ClickEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ClickEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ButtonBase.ClickEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento corresponde a um clique de botão esquerdo do mouse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClickMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ClickMode ClickMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ClickMode ClickMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ButtonBase.ClickMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ClickMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define quando o evento <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> ocorre.</summary>
+        <value>Quando o evento <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> ocorre. O valor padrão é <see cref="F:System.Windows.Controls.ClickMode.Release" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ClickMode"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ButtonBase.ClickModeProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClickModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ClickModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ClickModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ButtonBase.ClickModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ButtonBase.ClickMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ButtonBase.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comando a ser chamado quando este botão é pressionado.</summary>
+        <value>Um comando a ser invocado quando esse botão é pressionado. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para associar um comando com uma instância específica do botão.  
+  
+ Em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], geralmente, essa propriedade é definida para ser um valor de comando estático de uma das bibliotecas do comando existente, como <xref:System.Windows.Input.ApplicationCommands> ou <xref:System.Windows.Input.NavigationCommands>. Para obter detalhes, consulte [visão geral de comandos](~/docs/framework/wpf/advanced/commanding-overview.md) ou <xref:System.Windows.Input.ICommand>.  
+  
+<a name="xamlAttributeUsage_Command"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Command="commandName"/>  
+```  
+  
+<a name="xamlValues_Command"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *commandName*  
+ O comando a ser invocado quando esse botão é pressionado.  
+  
+<a name="dependencyPropertyInfo_Command"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ButtonBase.CommandProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameter">
+      <MemberSignature Language="C#" Value="public object CommandParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ButtonBase.CommandParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro a ser passado para a propriedade <see cref="P:System.Windows.Controls.Primitives.ButtonBase.Command" />.</summary>
+        <value>Parâmetro a ser passado para a propriedade <see cref="P:System.Windows.Controls.Primitives.ButtonBase.Command" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria dos comandos existentes de bibliotecas do comando não usa um parâmetro de comando. Dos comandos que usam um parâmetro de comando, a maioria deles ter um parâmetro com algum valor de tipo primitivo, como um número inteiro ou uma cadeia de caracteres. No entanto, é possível criar um comando personalizado onde esse comando espera um tipo não-primitivo como seu parâmetro de comando. Para um caso de comando personalizado como esta configuração <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> no código pode exigir uma instância de objeto novo ou existente. Configuração <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> na marcação pode exigir sintaxe de elemento de propriedade, onde o objeto preenchendo a sintaxe de elemento de propriedade é um novo elemento do tipo esperado pelo comando. Como alternativa, a configuração na marcação pode exigir uma referência por meio de uma extensão de marcação para um objeto existente (normalmente, essas referências serão feitas com [associação de extensão de marcação](~/docs/framework/wpf/advanced/binding-markup-extension.md) ou [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md)).  
+  
+<a name="xamlAttributeUsage_CommandParameter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object CommandParameter="commandParameter" />  
+```  
+  
+<a name="xamlValues_CommandParameter"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *commandParameter*  
+ Um valor do mesmo tipo que o comando particular especificado no <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> propriedade espera. Se você usar um comando de biblioteca existente do comando, consulte a documentação da biblioteca de comando para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações de uso, incluindo o tipo de <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> espera que o comando. Se você usar um comando personalizado, consulte comentários.  
+  
+<a name="dependencyPropertyInfo_CommandParameter"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameterProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameterProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandParameterProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandParameterProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ButtonBase.CommandParameterProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ButtonBase.CommandParameter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ButtonBase.CommandProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o roteados <see cref="P:System.Windows.Controls.Primitives.ButtonBase.Command" /> propriedade de dependência.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement CommandTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement CommandTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ButtonBase.CommandTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento no qual gerar o comando especificado.</summary>
+        <value>Elemento no qual gerar um comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.ButtonBase.CommandTarget%2A> propriedade não pode ser usada para definir um <xref:System.Windows.UIElement>. O <xref:System.Windows.Controls.Primitives.ButtonBase.CommandTarget%2A> propriedade fornece uma referência a um elemento que já está definida em algum lugar no seu aplicativo.  
+  
+<a name="xamlAttributeUsage_Target"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<ButtonBase CommandTarget="{Binding ElementName= elementName }"/>  
+```  
+  
+<a name="xamlValues_CommandTarget"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *elementName*  
+ O nome do <xref:System.Windows.IInputElement> que recebe o comando.  
+  
+<a name="dependencyPropertyInfo_CommandTarget"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ButtonBase.CommandTargetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ButtonBase.CommandTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ButtonBase.CommandTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabledCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ButtonBase.IsEnabledCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de <see cref="P:System.Windows.ContentElement.IsEnabled" /> propriedade.</summary>
+        <value>
+          <see langword="true" /> se o controle estiver habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você optar por substituir essa implementação, certifique-se de que você chamar o método base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressed">
+      <MemberSignature Language="C#" Value="public bool IsPressed { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ButtonBase.IsPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma <see cref="T:System.Windows.Controls.Primitives.ButtonBase" /> está ativada no momento.</summary>
+        <value>
+          <see langword="true" /> se a <see cref="T:System.Windows.Controls.Primitives.ButtonBase" /> está ativada, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A>é o estado de um botão que indica o botão esquerdo do mouse ou a barra de espaços é pressionada sobre o botão. Quando <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> é `true`, o controle captura o mouse.  Como resultado, o controle gera eventos de mouse como <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.UIElement.IsMouseDirectlyOverChanged>. Observe que o uso de <xref:System.Windows.Controls.AccessText> ou ENTER não alterar <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> ou captura o mouse, mas é gerar faz o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ Começando com o .NET Framework versão 3.0 Service Pack 1, <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> tem um setter protegido. Para usar essa funcionalidade, seu aplicativo deve ter como destino o .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="dependencyPropertyInfo_IsPressed"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ButtonBase.IsPressedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> propriedade em um estilo de gatilho.  
+  
+ [!code-xaml[BtnColor#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsPressedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsPressedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ButtonBase.IsPressedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ButtonBase.IsPressed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAccessKey">
+      <MemberSignature Language="C#" Value="protected override void OnAccessKey (System.Windows.Input.AccessKeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAccessKey(class System.Windows.Input.AccessKeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.AccessKeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.AccessKeyManager.AccessKeyPressed" />.</param>
+        <summary>Responde quando a <see cref="P:System.Windows.Controls.AccessText.AccessKey" /> para este controle é chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Input.AccessKeyEventArgs.IsMultiple%2A> é `true`, este método chama a implementação base, o que coloca o foco neste controle.  Caso contrário, esse método gerará o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aciona o evento roteado <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle gera o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento chamando <xref:System.Windows.UIElement.RaiseEvent%2A>. Para obter mais informações, consulte [Visão geral de eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnClick" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnClick" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsPressedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnIsPressedChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIsPressedChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnIsPressedChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.Primitives.ButtonBase.IsPressed" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.KeyDown" /> eventos roteados que ocorre quando o usuário pressiona uma tecla enquanto este controle tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação marca o <xref:System.Windows.UIElement.KeyDown> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> não está definido como <xref:System.Windows.Controls.ClickMode.Hover> e uma das seguintes situações for verdadeira:  
+  
+-   O usuário pressiona a barra de espaços.  
+  
+-   O usuário pressiona ENTER e <xref:System.Windows.Input.KeyboardNavigation.AcceptsReturn%2A> é `true` para este controle.  
+  
+ Em todos os outros casos, essa implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.UIElement.KeyDown> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.KeyUp" />.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.KeyUp" /> eventos roteados que ocorre quando o usuário solta uma tecla enquanto este controle tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação marca o <xref:System.Windows.UIElement.KeyUp> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` quando o usuário libera a barra de espaços. Caso contrário, essa implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.UIElement.KeyUp> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnKeyUp(System.Windows.Input.KeyEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnKeyUp(System.Windows.Input.KeyEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.IInputElement.LostKeyboardFocus" />.</param>
+        <summary>Chamado quando um elemento perde o foco do teclado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostMouseCapture">
+      <MemberSignature Language="C#" Value="protected override void OnLostMouseCapture (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostMouseCapture(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.Mouse.LostMouseCapture" />.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.LostMouseCapture" /> eventos roteados que ocorre quando esse controle não está recebendo mensagens de eventos de mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.UIElement.LostMouseCapture> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseEnter(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.Mouse.MouseEnter" />.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="P:System.Windows.Controls.Primitives.ButtonBase.ClickMode" /> eventos roteados que ocorre quando o mouse entra este controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> é definido como <xref:System.Windows.Controls.ClickMode.Hover>, essa implementação marca o <xref:System.Windows.UIElement.MouseEnter> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` e gera o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseEnter(System.Windows.Input.MouseEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseEnter(System.Windows.Input.MouseEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.Mouse.MouseLeave" />.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseLeave" /> eventos roteados que ocorre quando o mouse sai de um elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação marca o <xref:System.Windows.UIElement.MouseLeave> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> é definido como <xref:System.Windows.Controls.ClickMode.Hover>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseLeftButtonDown" /> eventos roteados que ocorre quando o botão esquerdo do mouse é pressionado enquanto o ponteiro do mouse está sobre este controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação marca o <xref:System.Windows.UIElement.MouseLeftButtonDown> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> não está definido como <xref:System.Windows.Controls.ClickMode.Hover>. Para responder ao <xref:System.Windows.UIElement.MouseLeftButtonDown> eventos, anexar um manipulador de eventos para o <xref:System.Windows.ContentElement.PreviewMouseLeftButtonDown> evento ou chamada <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> com `handledEventsToo` definido como `true`.  
+  
+ Quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> é definido como <xref:System.Windows.Controls.ClickMode.Press>, esse método dispara o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseLeftButtonUp" /> eventos roteados que ocorre quando o botão esquerdo do mouse é liberado enquanto o ponteiro do mouse está sobre este controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação marca o <xref:System.Windows.UIElement.MouseLeftButtonUp> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> não está definido como <xref:System.Windows.Controls.ClickMode.Hover>. Para responder ao <xref:System.Windows.UIElement.MouseLeftButtonUp> eventos, anexar um manipulador de eventos para o <xref:System.Windows.ContentElement.PreviewMouseLeftButtonUp> evento ou chamada <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> com `handledEventsToo` definido como `true`.  
+  
+ Quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> é definido como <xref:System.Windows.Controls.ClickMode.Release> é <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> é `true`, esse método dispara o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseMove" /> eventos roteados que ocorre quando o ponteiro do mouse se move enquanto está sobre este elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação marca o <xref:System.Windows.UIElement.MouseMove> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true` quando <xref:System.Windows.Controls.Primitives.ButtonBase.ClickMode%2A> não está definido como <xref:System.Windows.Controls.ClickMode.Hover> e <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> é `true`. Para responder ao <xref:System.Windows.UIElement.MouseMove> eventos, anexar um manipulador de eventos para o <xref:System.Windows.ContentElement.PreviewMouseMove> evento ou chamada <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> com `handledEventsToo` definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseMove(System.Windows.Input.MouseEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.ButtonBase.OnMouseMove(System.Windows.Input.MouseEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderSizeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRenderSizeChanged (System.Windows.SizeChangedInfo sizeInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnRenderSizeChanged(class System.Windows.SizeChangedInfo sizeInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ButtonBase.OnRenderSizeChanged(System.Windows.SizeChangedInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sizeInfo" Type="System.Windows.SizeChangedInfo" />
+      </Parameters>
+      <Docs>
+        <param name="sizeInfo">Especifica as alterações de tamanho.</param>
+        <summary>Chamado quando o tamanho renderizado de um controle é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substitui o <xref:System.Windows.Controls.Primitives.ButtonBase.OnRenderSizeChanged%2A> método o <xref:System.Windows.UIElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media.Media3D.Converters">
+  <Docs>
+    <summary>Contém classes que são usadas pelo <see cref="T:System.Windows.Markup.Primitives.MarkupWriter" /> para a serialização de XAML Extensible Application Markup Language ().</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

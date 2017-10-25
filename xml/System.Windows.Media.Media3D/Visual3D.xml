@@ -1,0 +1,631 @@
+<Type Name="Visual3D" FullName="System.Windows.Media.Media3D.Visual3D">
+  <TypeSignature Language="C#" Value="public abstract class Visual3D : System.Windows.DependencyObject, System.Windows.Media.Animation.IAnimatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Visual3D extends System.Windows.DependencyObject implements class System.Windows.Media.Animation.IAnimatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Visual3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Media.Animation.IAnimatable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece serviços e propriedades que são comuns a objetos visuais 3D, incluindo testes de clique, transformação de coordenada e cálculos de caixa delimitadora.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de <xref:System.Windows.Media.Media3D.Model3D> classe <xref:System.Windows.Media.Media3D.Visual3D> objetos não podem ser compartilhados ou reutilizados.  
+  
+ Acesso <xref:System.Windows.Media.Media3D.Visual3D> serviços usando métodos estáticos no <xref:System.Windows.Media.VisualTreeHelper> classe.  
+  
+ <xref:System.Windows.Media.Media3D.Visual3D>objetos são otimizados para nós de cena. Por exemplo, eles armazenam em cache dos limites. Sempre que você pode usar <xref:System.Windows.Media.Media3D.Visual3D> objetos de instâncias exclusivas de objetos dentro de sua cena. Esse uso é diferente do <xref:System.Windows.Media.Media3D.Model3D> objetos, que são objetos simples que são otimizados para ser compartilhado e reutilizado. Por exemplo, usar um <xref:System.Windows.Media.Media3D.Model3D> objeto para criar um modelo de um carro; e use dez <xref:System.Windows.Media.Media3D.ModelVisual3D> objetos para colocar dez carros em sua cena.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddVisual3DChild">
+      <MemberSignature Language="C#" Value="protected void AddVisual3DChild (System.Windows.Media.Media3D.Visual3D child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddVisual3DChild(class System.Windows.Media.Media3D.Visual3D child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.AddVisual3DChild(System.Windows.Media.Media3D.Visual3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.Media.Media3D.Visual3D" />
+      </Parameters>
+      <Docs>
+        <param name="child">O filho 3D objeto visual para adicionar ao objeto pai de visual 3D.</param>
+        <summary>Define a relação pai-filho entre os dois elementos visuais 3D.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.AddVisual3DChild%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção de filhos não pode ser modificada quando uma iteração visual filho está em andamento.</exception>
+        <block subset="none" type="overrides">
+          <para>Uma classe que deriva de <see cref="T:System.Windows.Media.Media3D.Visual3D" /> devem chamar este método para notificar o <see cref="T:System.Windows.Media.Media3D.Visual3D" /> camada que um novo filho apareceu na coleção de filhos. O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> camada, em seguida, chama o <see cref="M:System.Windows.Media.Media3D.Visual3D.GetVisual3DChild(System.Int32)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyAnimationClock">
+      <MemberSignature Language="C#" Value="public void ApplyAnimationClock (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationClock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyAnimationClock(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationClock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O <see cref="T:System.Windows.DependencyProperty" /> para animar.</param>
+        <param name="clock">O <see cref="T:System.Windows.Media.Animation.AnimationClock" /> que anima a propriedade.</param>
+        <summary>Aplica o efeito de um determinado <see cref="T:System.Windows.Media.Animation.AnimationClock" /> a uma propriedade de dependência.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyAnimationClock">
+      <MemberSignature Language="C#" Value="public void ApplyAnimationClock (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationClock clock, System.Windows.Media.Animation.HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyAnimationClock(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationClock clock, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock,System.Windows.Media.Animation.HandoffBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="handoffBehavior" Type="System.Windows.Media.Animation.HandoffBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O <see cref="T:System.Windows.DependencyProperty" /> para animar.</param>
+        <param name="clock">O <see cref="T:System.Windows.Media.Animation.AnimationClock" /> que anima a propriedade.</param>
+        <param name="handoffBehavior">O objeto que especifica como interagir com todas as sequências de animação relevantes.</param>
+        <summary>Aplica o efeito de um determinado <see cref="T:System.Windows.Media.Animation.AnimationClock" /> a uma propriedade de dependência. O efeito do novo <see cref="T:System.Windows.Media.Animation.AnimationClock" /> em qualquer animações atuais é determinado pelo valor da <paramref name="handoffBehavior" /> parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAnimation">
+      <MemberSignature Language="C#" Value="public void BeginAnimation (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationTimeline animation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginAnimation(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationTimeline animation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="animation" Type="System.Windows.Media.Animation.AnimationTimeline" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O objeto <see cref="T:System.Windows.DependencyProperty" /> a ser animado.</param>
+        <param name="animation">A linha de tempo que tem a funcionalidade necessária para animar a propriedade.</param>
+        <summary>Inicia uma sequência de animação para o objeto <see cref="T:System.Windows.DependencyProperty" /> com base no <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A sequência de animação é disparada quando o próximo quadro é processado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAnimation">
+      <MemberSignature Language="C#" Value="public void BeginAnimation (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationTimeline animation, System.Windows.Media.Animation.HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginAnimation(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationTimeline animation, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline,System.Windows.Media.Animation.HandoffBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="animation" Type="System.Windows.Media.Animation.AnimationTimeline" />
+        <Parameter Name="handoffBehavior" Type="System.Windows.Media.Animation.HandoffBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O objeto <see cref="T:System.Windows.DependencyProperty" /> a ser animado.</param>
+        <param name="animation">A linha de tempo que tem a funcionalidade necessária para personalizar a nova animação.</param>
+        <param name="handoffBehavior">O objeto que especifica como interagir com todas as sequências de animação relevantes.</param>
+        <summary>Inicia uma sequência de animação para o <see cref="T:System.Windows.DependencyProperty" /> objeto, com base em ambas as especificado <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> e <see cref="T:System.Windows.Media.Animation.HandoffBehavior" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A sequência de animação é disparada quando o próximo quadro é processado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCommonVisualAncestor">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject FindCommonVisualAncestor (System.Windows.DependencyObject otherVisual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.DependencyObject FindCommonVisualAncestor(class System.Windows.DependencyObject otherVisual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.FindCommonVisualAncestor(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherVisual" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="otherVisual">O objeto visual com os quais encontrar um ancestral comum.</param>
+        <summary>Retorna o ancestral comum do objeto visual e outro objeto visual.</summary>
+        <returns>O ancestral comum do objeto visual atual e <paramref name="otherVisual" />; ou <see langword="null" /> se nenhum ancestral comum for encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnimationBaseValue">
+      <MemberSignature Language="C#" Value="public object GetAnimationBaseValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetAnimationBaseValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.GetAnimationBaseValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O objeto para o qual o valor base está sendo solicitado.</param>
+        <summary>Recupera o valor base do objeto <see cref="T:System.Windows.DependencyProperty" /> especificado.</summary>
+        <returns>O objeto que representa o valor base de <paramref name="dp" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisual3DChild">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Media.Media3D.Visual3D GetVisual3DChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Media.Media3D.Visual3D GetVisual3DChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.GetVisual3DChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Visual3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto visual 3D na coleção.</param>
+        <summary>Retorna a <see cref="T:System.Windows.Media.Media3D.Visual3D" /> no pai <see cref="T:System.Windows.Media.Media3D.Visual3DCollection" />.</summary>
+        <returns>O filho na coleção no local especificado <paramref name="index" /> valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um <xref:System.Windows.Media.Visual> não tem filhos.  
+  
+ O <xref:System.Windows.Media.Media3D.Visual3D.GetVisual3DChild%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor <paramref name="index" /> não é válido.</exception>
+        <block subset="none" type="overrides">
+          <para>Enumerar corretamente a árvore visual, uma classe que deriva de <see cref="T:System.Windows.Media.Media3D.Visual3D" /> deve substituir este método e também substituir o <see cref="P:System.Windows.Media.Media3D.Visual3D.Visual3DChildrenCount" /> propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAnimatedProperties">
+      <MemberSignature Language="C#" Value="public bool HasAnimatedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAnimatedProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Visual3D.HasAnimatedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Windows.Media.Media3D.Visual3D" /> tem quaisquer propriedades de animação.</summary>
+        <value>
+          <see langword="true" />Se este elemento tem animações; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAncestorOf">
+      <MemberSignature Language="C#" Value="public bool IsAncestorOf (System.Windows.DependencyObject descendant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsAncestorOf(class System.Windows.DependencyObject descendant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.IsAncestorOf(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descendant" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="descendant">Um objeto visual que é um descendente possíveis.</param>
+        <summary>Determina se o objeto visual é um ancestral do objeto visual descendente.</summary>
+        <returns>
+          <see langword="true" /> se o objeto visual for um ancestral de <paramref name="descendant" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDescendantOf">
+      <MemberSignature Language="C#" Value="public bool IsDescendantOf (System.Windows.DependencyObject ancestor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsDescendantOf(class System.Windows.DependencyObject ancestor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.IsDescendantOf(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ancestor" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="ancestor">Um objeto visual que é um ancestral possíveis.</param>
+        <summary>Determina se o objeto visual é um descendente do objeto visual ancestral.</summary>
+        <returns>
+          <see langword="true" /> se o objeto visual for um descendente do <paramref name="ancestor" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualChildrenChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnVisualChildrenChanged (System.Windows.DependencyObject visualAdded, System.Windows.DependencyObject visualRemoved);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnVisualChildrenChanged(class System.Windows.DependencyObject visualAdded, class System.Windows.DependencyObject visualRemoved) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visualAdded" Type="System.Windows.DependencyObject" />
+        <Parameter Name="visualRemoved" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="visualAdded">O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> adicionado à coleção.</param>
+        <param name="visualRemoved">O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> removido da coleção.</param>
+        <summary>Chamado quando o <see cref="T:System.Windows.Media.Media3D.Visual3DCollection" /> de um objeto visual é modificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">Um valor do tipo <see cref="T:System.Windows.DependencyObject" /> que representa o pai anterior do <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto. Se o <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto não tem um pai anterior, o valor do parâmetro é <see langword="null" />.</param>
+        <summary>Chamado quando o pai do objeto visual 3D é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.OnVisualParentChanged%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveVisual3DChild">
+      <MemberSignature Language="C#" Value="protected void RemoveVisual3DChild (System.Windows.Media.Media3D.Visual3D child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveVisual3DChild(class System.Windows.Media.Media3D.Visual3D child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.RemoveVisual3DChild(System.Windows.Media.Media3D.Visual3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.Media.Media3D.Visual3D" />
+      </Parameters>
+      <Docs>
+        <param name="child">O filho 3D visual objeto a ser removido do visual pai.</param>
+        <summary>Remove a relação pai-filho entre os dois elementos visuais 3D.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.RemoveVisual3DChild%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Uma classe que deriva de <see cref="T:System.Windows.Media.Media3D.Visual3D" /> devem chamar este método para notificar o <see cref="T:System.Windows.Media.Media3D.Visual3D" /> camada que um filho foi removido da coleção de filhos. O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> camada, em seguida, chama o <see cref="M:System.Windows.Media.Media3D.Visual3D.GetVisual3DChild(System.Int32)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Transform3D Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Transform3D Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Visual3D.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Transform3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a transformação que é aplicada ao objeto 3D.</summary>
+        <value>A transformação a ser aplicada ao objeto 3D. O padrão é o <see cref="P:System.Windows.Media.Media3D.Transform3D.Identity" /> transformação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.Transform%2A> propriedade foi introduzida no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="dependencyPropertyInfo_Transform"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.Visual3D.TransformProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Visual3D.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.Visual3D.Transform" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Visual3D.TransformProperty>é introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TransformToAncestor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna uma transformação que pode ser usada para transformar as coordenadas do objeto para o ancestral especificado do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Visual3D.TransformToAncestor%2A>é introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TransformToAncestor">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.GeneralTransform3D TransformToAncestor (System.Windows.Media.Media3D.Visual3D ancestor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.GeneralTransform3D TransformToAncestor(class System.Windows.Media.Media3D.Visual3D ancestor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.TransformToAncestor(System.Windows.Media.Media3D.Visual3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.GeneralTransform3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ancestor" Type="System.Windows.Media.Media3D.Visual3D" />
+      </Parameters>
+      <Docs>
+        <param name="ancestor">O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> para o qual as coordenadas são transformadas.</param>
+        <summary>Retorna uma transformação que pode ser usada para transformar coordenadas neste <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto especificado <see cref="T:System.Windows.Media.Media3D.Visual3D" /> ancestral do objeto.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.GeneralTransform3D" /> objeto; ou <see langword="null" />, se a transformação não pode ser criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.TransformToAncestor%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ancestor" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Especificado <paramref name="ancestor" /> objeto não é um ancestral deste objeto.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objetos não estão relacionados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformToAncestor">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.GeneralTransform3DTo2D TransformToAncestor (System.Windows.Media.Visual ancestor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.GeneralTransform3DTo2D TransformToAncestor(class System.Windows.Media.Visual ancestor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.TransformToAncestor(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.GeneralTransform3DTo2D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ancestor" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="ancestor">O <see cref="T:System.Windows.Media.Visual" /> para o qual as coordenadas são transformadas.</param>
+        <summary>Retorna uma transformação que pode ser usada para transformar coordenadas neste <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto especificado <see cref="T:System.Windows.Media.Visual" /> ancestral do objeto.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.GeneralTransform3DTo2D" /> objeto; ou <see langword="null" />, se a transformação não pode ser criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa transformação projeta um ponto 3D a um espaço de 2D. O ponto resultante é o ponto 3D transformado no espaço de coordenadas do ancestral especificado.  
+  
+ O <xref:System.Windows.Media.Media3D.Visual3D.TransformToAncestor%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ancestor" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Especificado <paramref name="ancestor" /> objeto não é um ancestral deste objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformToDescendant">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.GeneralTransform3D TransformToDescendant (System.Windows.Media.Media3D.Visual3D descendant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.GeneralTransform3D TransformToDescendant(class System.Windows.Media.Media3D.Visual3D descendant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Visual3D.TransformToDescendant(System.Windows.Media.Media3D.Visual3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.GeneralTransform3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descendant" Type="System.Windows.Media.Media3D.Visual3D" />
+      </Parameters>
+      <Docs>
+        <param name="descendant">O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> para o qual as coordenadas são transformadas.</param>
+        <summary>Retorna uma transformação que pode ser usada para transformar coordenadas neste <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto especificado <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto descendente.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.GeneralTransform3D" /> objeto; ou <see langword="null" />, se a transformação de <paramref name="descendant" /> a este objeto está não pode ser invertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.TransformToDescendant%2A> método foi introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="descendant" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Este objeto não é um ancestral do <paramref name="descendant" /> objeto.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objetos não estão relacionados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual3DChildrenCount">
+      <MemberSignature Language="C#" Value="protected virtual int Visual3DChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Visual3DChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Visual3D.Visual3DChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos filho para o <see cref="T:System.Windows.Media.Media3D.Visual3D" /> objeto.</summary>
+        <value>O número de elementos filho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um <xref:System.Windows.Media.Media3D.Visual3D> não possui elementos filho. Portanto, a implementação padrão sempre retorna 0.  
+  
+ O <xref:System.Windows.Media.Media3D.Visual3D.Visual3DChildrenCount%2A> propriedade foi introduzida no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Enumerar corretamente a árvore visual, uma classe que deriva de <see cref="T:System.Windows.Media.Media3D.Visual3D" /> devem substituir essa propriedade e também substituir o <see cref="M:System.Windows.Media.Media3D.Visual3D.GetVisual3DChild(System.Int32)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual3DModel">
+      <MemberSignature Language="C#" Value="protected System.Windows.Media.Media3D.Model3D Visual3DModel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Model3D Visual3DModel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Visual3D.Visual3DModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Model3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto <see cref="T:System.Windows.Media.Media3D.Model3D" /> a ser renderizado.</summary>
+        <value>O objeto <see cref="T:System.Windows.Media.Media3D.Model3D" /> a ser renderizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.Visual3D.Visual3DModel%2A> propriedade foi introduzida no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

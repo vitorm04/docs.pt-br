@@ -1,0 +1,139 @@
+<Type Name="EventTrackingEnabledAttribute" FullName="System.EnterpriseServices.EventTrackingEnabledAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EventTrackingEnabledAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventTrackingEnabledAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.EventTrackingEnabledAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite o acompanhamento de evento para um componente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.EnterpriseServices.EventTrackingEnabledAttribute> tipo.  
+  
+ [!code-csharp[EnterpriseServicesEventTrackingEnabledAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServicesEventTrackingEnabledAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/VB/class1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.EventTrackingEnabledAttribute" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventTrackingEnabledAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.EventTrackingEnabledAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.EventTrackingEnabledAttribute" /> classe, habilitando o rastreamento de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão permite o acompanhamento de evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.EventTrackingEnabledAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesEventTrackingEnabledAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesEventTrackingEnabledAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventTrackingEnabledAttribute (bool val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.EventTrackingEnabledAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="val">
+          <see langword="true" />Para habilitar o evento de rastreamento; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.EventTrackingEnabledAttribute" /> classe, opcionalmente, desabilitando o controle de evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.EventTrackingEnabledAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesEventTrackingEnabledAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesEventTrackingEnabledAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.EventTrackingEnabledAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de <see cref="P:System.EnterpriseServices.EventTrackingEnabledAttribute.Value" /> propriedade, que indica se o rastreamento está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o rastreamento estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um `EventTrackingEnabled` do atributo <xref:System.EnterpriseServices.EventTrackingEnabledAttribute.Value%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesEventTrackingEnabledAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/CS/class1.cs#3)]
+ [!code-vb[EnterpriseServicesEventTrackingEnabledAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesEventTrackingEnabledAttribute/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

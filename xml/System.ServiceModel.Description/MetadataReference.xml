@@ -1,0 +1,176 @@
+<Type Name="MetadataReference" FullName="System.ServiceModel.Description.MetadataReference">
+  <TypeSignature Language="C#" Value="public class MetadataReference : System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetadataReference extends System.Object implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("MetadataReference", Namespace="http://schemas.xmlsoap.org/ws/2004/09/mex")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma referência a um documento de metadados retornado de um ponto de extremidade de troca de metadados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar [!INCLUDE[indigo1](~/includes/indigo1-md.md)], um ponto de extremidade de metadados pode ser criado para qualquer serviço. O ponto de extremidade pode ser consultado por metadados que permite que um cliente para se comunicar com o ponto de extremidade. Por exemplo, um ponto de extremidade de metadados pode retornar um documento WSDL Web Services Description Language () que descreve os métodos e os tipos de dados de um serviço.  
+  
+ O <xref:System.ServiceModel.Description.MetadataReference> classe é usada com o WS-MetadataExchange respostas onde referências diretamente são codificadas como `<mex:MetadataReference>` ou `<mex:MetadataLocation>`.  
+  
+ Documentos de metadados podem fazer referência a muitos outros documentos que descrevem os tipos e os documentos podem conter referências ainda mais. O <xref:System.ServiceModel.Description.MetadataReference> classe representa um único ponto de extremidade que retorna um documento que pode conter vários WSDL ou XSD itens, bem como outras referências de metadados para outros pontos de extremidade do WS-MetadataExchange.  
+  
+ Instâncias do <xref:System.ServiceModel.Description.MetadataReference> classe são usadas durante o processamento de um <xref:System.ServiceModel.Description.MetadataSet>, que representa o ponto de troca de metadados total. O <xref:System.ServiceModel.Description.MetadataResolver> classe foi projetada para resolver todas as referências usadas para retornar os metadados. Se, no entanto, você precisa examinar cada referência, use o <xref:System.ServiceModel.Description.MetadataReference> classe que representa cada ponto de extremidade.  
+  
+## <a name="specifications"></a>Especificações  
+ [!INCLUDE[indigo2](~/includes/indigo2-md.md)]implementa a especificação de troca de metadados de serviços da Web (WS-MetadataExchange) para retornar metadados. Essa especificação mais usa a especificação Web Services Transfer (transferência de WS) para definir o mecanismo para recuperar dados com base em XML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Description.MetadataReference" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataReference (System.ServiceModel.EndpointAddress address, System.ServiceModel.Channels.AddressingVersion addressVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, class System.ServiceModel.Channels.AddressingVersion addressVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataReference.#ctor(System.ServiceModel.EndpointAddress,System.ServiceModel.Channels.AddressingVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="addressVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.ServiceModel.EndpointAddress" /> que contém o URI do ponto de extremidade.</param>
+        <param name="addressVersion">Um <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> que contém a versão do WS-Addressing implementada pelo ponto de extremidade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.MetadataReference" /> classe e especifica o endereço de rede e a versão do endereço do ponto de extremidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataReference.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de rede de um serviço que retorna metadados.</summary>
+        <value>Um ponto de extremidade que retorna metadados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.AddressingVersion AddressVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.AddressingVersion AddressVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataReference.AddressVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão implementado no ou usado pelo ponto de extremidade.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> que representa a versão implementado no ou usado pelo ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataReference.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um documento de esquema XML para o ponto de extremidade de referência de metadados.</summary>
+        <returns>Um <see cref="T:System.Xml.Schema.XmlSchema" /> que representa o documento de esquema XML (XSD) para a referência de ponto de extremidade de metadados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataReference.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> usado para ler.</param>
+        <summary>Lê usando o objeto do leitor fornecido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataReference.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> usado para gravar.</param>
+        <summary>Grava um fluxo XML com o objeto gravador especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

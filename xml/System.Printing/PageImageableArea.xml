@@ -1,0 +1,147 @@
+<Type Name="PageImageableArea" FullName="System.Printing.PageImageableArea">
+  <TypeSignature Language="C#" Value="public sealed class PageImageableArea" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageImageableArea extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageImageableArea" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a área de uma página que pode ser impressa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das impressoras a laser e jato devem deixar uma área ainda ao redor das bordas de uma página para impedir o toner de nas partes da impressora que mover as planilhas. Para muitas impressoras photographic, no entanto, a página inteira é representável.  
+  
+ Para uma classe que inclui as mesmas informações sobre a área de imagem como <xref:System.Printing.PageImageableArea> e também inclui o tamanho da página, consulte <xref:System.Printing.PrintDocumentImageableArea>.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageImageableArea.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura da área de imagem.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a altura da área de imagem em pixels (1/96 de polegada).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PageImageableArea.ExtentHeight%2A> propriedade obtém a distância do canto superior esquerdo da área de imagem (também chamado de "origem" da área de imagem) para o canto inferior esquerdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageImageableArea.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura da área de imagem.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a largura da área de imagem em pixels (1/96 de polegada).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PageImageableArea.ExtentWidth%2A> propriedade obtém a distância do canto superior esquerdo da área de imagem (também chamado de "origem" da área de imagem) para o canto superior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginHeight">
+      <MemberSignature Language="C#" Value="public double OriginHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OriginHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageImageableArea.OriginHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura de origem, que é a distância do canto superior esquerdo da área de imagem (também chamado de "origem" da área de imagem) para o ponto mais próximo na borda superior da página.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a distância da parte superior da página na parte superior da área de imagem em pixels (1/96 de polegada).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginWidth">
+      <MemberSignature Language="C#" Value="public double OriginWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OriginWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageImageableArea.OriginWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura de origem, que é a distância da borda esquerda da página para o canto superior esquerdo da área de imagem (também chamado de "origem" da área de imagem).</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a distância da borda esquerda da página com a borda esquerda da área de imagem em pixels (1/96 de polegada).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageImageableArea.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.String" /> representação de <see cref="T:System.Printing.PageImageableArea" />.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa os valores de propriedade de <see cref="T:System.Printing.PageImageableArea" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada tem o seguinte formato:  
+  
+ (<xref:System.Printing.PageImageableArea.OriginWidth%2A>, <xref:System.Printing.PageImageableArea.OriginHeight%2A>), (<xref:System.Printing.PageImageableArea.ExtentWidth%2A>, <xref:System.Printing.PageImageableArea.ExtentHeight%2A>)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

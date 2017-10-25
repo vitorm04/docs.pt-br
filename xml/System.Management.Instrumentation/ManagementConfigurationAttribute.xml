@@ -1,0 +1,117 @@
+<Type Name="ManagementConfigurationAttribute" FullName="System.Management.Instrumentation.ManagementConfigurationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementConfigurationAttribute : System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementConfigurationAttribute extends System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementConfigurationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O atributo ManagementConfiguration indica que uma propriedade ou campo representa uma propriedade WMI de leitura / gravação.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade ou campo deve ser público. A classe que contém a propriedade deve ser marcada com o <xref:System.Management.Instrumentation.ManagementEntityAttribute> atributo.  
+  
+ Quaisquer campos ou propriedades na classe que não estão marcadas com esse ou outro atributo de extensões do provedor WMI não serão instrumentadas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o atributo ManagementConfiguration para marcar uma propriedade. Essa propriedade é exposta ao WMI.  
+  
+```csharp  
+// Use the ManagementConfiguration attribute to specify that a property  
+// is a read/write property in the provider. Consumers will be  
+// able to get and set this property value through WMI.  
+[ManagementConfiguration]  
+public double ReadableWritableProperty  
+{  
+    get { return this.propertyValue; }  
+    set { this.propertyValue = value; }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementConfigurationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementConfigurationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementConfigurationAttribute" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Management.Instrumentation.ManagementConfigurationType Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Instrumentation.ManagementConfigurationType Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementConfigurationAttribute.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementConfigurationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo da propriedade, que especifica se as alterações são aplicadas assim que possível, ou quando um método de confirmação é chamado.</summary>
+        <value>Retorna um <see cref="T:System.Management.Instrumentation.ManagementConfigurationType" /> que indica se a propriedade WMI usa <see cref="F:System.Management.Instrumentation.ManagementConfigurationType.Apply" /> ou <see cref="F:System.Management.Instrumentation.ManagementConfigurationType.OnCommit" /> modo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um método de confirmação definido, ele é responsável por atualizar todas as propriedades WMI de leitura / gravação que usam o <xref:System.Management.Instrumentation.ManagementConfigurationType.OnCommit> modo. Ela é identificada pelo <xref:System.Management.Instrumentation.ManagementCommitAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public Type Schema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementConfigurationAttribute.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que define o tipo de saída que retorna a propriedade que é marcada com o atributo ManagementConfiguration.</summary>
+        <value>Um <see cref="T:System.Type" /> retornará o valor que representa o tipo de saída que a propriedade é marcada com o atributo ManagementConfiguration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tipo retornado é <xref:System.Object?displayProperty=nameWithType>, em seguida, a saída deve ser tratada como um valor do tipo <xref:System.Object?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

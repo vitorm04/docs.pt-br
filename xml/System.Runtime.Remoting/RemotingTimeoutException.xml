@@ -1,0 +1,132 @@
+<Type Name="RemotingTimeoutException" FullName="System.Runtime.Remoting.RemotingTimeoutException">
+  <TypeSignature Language="C#" Value="public class RemotingTimeoutException : System.Runtime.Remoting.RemotingException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RemotingTimeoutException extends System.Runtime.Remoting.RemotingException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.RemotingTimeoutException" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.RemotingException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção lançada quando o servidor ou o cliente não pode ser alcançado por um período de tempo previamente especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.RemotingTimeoutException> é gerada quando uma chamada de comunicação remota não é concluída no tempo limite especificado.  
+  
+ <xref:System.Runtime.Remoting.RemotingTimeoutException>usa o HRESULT COR_E_REMOTING, que tem o valor 0x8013150B.  
+  
+ <xref:System.Runtime.Remoting.RemotingTimeoutException>usa o padrão <xref:System.Object.Equals%2A> implementação, que oferece suporte a igualdade de referência.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Runtime.Remoting.RemotingTimeoutException>, consulte o <xref:System.Runtime.Remoting.RemotingTimeoutException> construtores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotingTimeoutException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingTimeoutException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.RemotingTimeoutException" /> com propriedades padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.RemotingTimeoutException>herda o <xref:System.Exception> classe. A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Runtime.Remoting.RemotingTimeoutException> classe:  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`|  
+|<xref:System.Exception.Message%2A>|Mensagem de erro localizada<xref:System.Runtime.Remoting.RemotingTimeoutException>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotingTimeoutException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingTimeoutException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que indica o motivo por que ocorreu a exceção.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Runtime.Remoting.RemotingTimeoutException" /> classe com uma mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.RemotingTimeoutException>herda o <xref:System.Exception> classe. A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Runtime.Remoting.RemotingTimeoutException> classe:  
+  
+|Tipo de propriedade|Condição|  
+|-------------------|---------------|  
+|<xref:System.Exception.InnerException%2A>|`null`|  
+|<xref:System.Exception.Message%2A>|O `message` cadeia de caracteres|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotingTimeoutException (string message, Exception InnerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception InnerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingTimeoutException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="InnerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="InnerException">A exceção que é a causa da exceção atual. Se o <c>InnerException</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.RemotingTimeoutException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência à exceção anterior no <xref:System.Exception.InnerException%2A> propriedade. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Runtime.Remoting.RemotingTimeoutException> classe:  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência à exceção interna|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres de mensagem de erro|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,196 @@
+<Type Name="MetadataImporter" FullName="System.ServiceModel.Description.MetadataImporter">
+  <TypeSignature Language="C#" Value="public abstract class MetadataImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MetadataImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Importa os metadados em <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use uma implementação do <xref:System.ServiceModel.Description.MetadataImporter> abstrato de classe para importar os metadados de serviço. Tipos que derivam de <xref:System.ServiceModel.Description.MetadataImporter> classe implementa o suporte para formatos de metadados de importação que aproveitam o WS-Policy importar lógica em [!INCLUDE[indigo1](~/includes/indigo1-md.md)].  
+  
+ Um <xref:System.ServiceModel.Description.MetadataImporter> implementação coleta as expressões de política anexadas aos metadados do serviço em um <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> objeto. O <xref:System.ServiceModel.Description.MetadataImporter> , em seguida, processa as diretivas como parte da importação de metadados chamando as implementações do <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interface o <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> propriedade.  
+  
+ Você pode adicionar suporte para importar novo declarações de política para um <xref:System.ServiceModel.Description.MetadataImporter> adicionando sua própria implementação do <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interface para o <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> propriedade em um <xref:System.ServiceModel.Description.MetadataImporter> instância. Como alternativa, você pode registrar a sua extensão de importação de política em seu arquivo de configuração do aplicativo.  
+  
+ O <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> tipo é a implementação do <xref:System.ServiceModel.Description.MetadataImporter> acompanha de classe abstrata [!INCLUDE[indigo2](~/includes/indigo2-md.md)]. O <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> tipo importa os metadados WSDL anexado políticas que são empacotadas em um <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> objeto.  
+  
+ Você pode adicionar suporte para a importação de extensões WSDL Implementando o <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interface e, em seguida, adicionar a implementação para o <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A?displayProperty=nameWithType> propriedade em seu <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> instância. O <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> também pode carregar implementações do <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interface registrada no arquivo de configuração de aplicativo.  
+  
+> [!NOTE]
+>  Porque o <xref:System.ServiceModel.Description.MetadataImporter> construtor é interno, você não pode derivar de <xref:System.ServiceModel.Description.MetadataImporter> nesta versão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> derivado da classe para importar metadados usando estado personalizado, verificando o <xref:System.ServiceModel.Description.MetadataImporter.Errors%2A> propriedade, compilar metadados importados para tipos gerenciados e salvar o resultado em um arquivo de código.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#8](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/client.cs#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MetadataConversionError&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MetadataConversionError&gt; Errors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataImporter.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MetadataConversionError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se houve erros ao importar os metadados.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.ServiceModel.Description.MetadataConversionError" /> .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sempre verifique o <xref:System.ServiceModel.Description.MetadataImporter.Errors%2A> após a importação de metadados e antes de usar os metadados de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportAllContracts">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ContractDescription&gt; ImportAllContracts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ContractDescription&gt; ImportAllContracts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataImporter.ImportAllContracts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ContractDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna uma coleção de contratos importados dos metadados.</summary>
+        <returns>Os contratos importados dos metadados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportAllEndpoints">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.ServiceEndpointCollection ImportAllEndpoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.ServiceEndpointCollection ImportAllEndpoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataImporter.ImportAllEndpoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna todos os pontos de extremidade nos metadados.</summary>
+        <returns>Uma coleção de <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> objetos que são publicados por um serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.MetadataImporter.ImportAllEndpoints%2A> método para retornar todos os pontos de extremidade de metadados importado. Metadados que foram importados como pontos de extremidade de serviço não podem ser usado para criar um tempo de execução ou exportar os metadados porque os pontos de extremidade importados não contêm nenhuma informação de tipo gerenciado. Para usar os metadados para criar um tempo de execução do cliente ou serviço ou gerar metadados, você deve primeiro gerar e compilar o código do metadados e usar esse tipo de informações para criar um novo <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> objeto usando <xref:System.ServiceModel.Description.ContractDescription.GetContract%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownContracts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.ServiceModel.Description.ContractDescription&gt; KnownContracts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.Xml.XmlQualifiedName, class System.ServiceModel.Description.ContractDescription&gt; KnownContracts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataImporter.KnownContracts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.ServiceModel.Description.ContractDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de contratos pelo nome que o importador conhece.</summary>
+        <value>Um dicionário de contratos listados por nome qualificado de XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> propriedade para adicionar ou remover descrições de contrato e seus nomes XML associados que pode referenciar o importador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyImportExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IPolicyImportExtension&gt; PolicyImportExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.KeyedByTypeCollection`1&lt;class System.ServiceModel.Description.IPolicyImportExtension&gt; PolicyImportExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IPolicyImportExtension&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de importadores de políticas que o importador de chamadas para declarações de política de processo.</summary>
+        <value>Uma coleção de importadores de políticas que o <see cref="T:System.ServiceModel.Description.MetadataImporter" /> usa para processar as declarações de política.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> propriedade para adicionar ou remover importadores de políticas que são invocados para processar as declarações de política nos metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;object,object&gt; State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;object, object&gt; State" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataImporter.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Object,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de objetos usados na importação de metadados.</summary>
+        <value>Um dicionário de objetos por tipo de chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `State` propriedade para adicionar ou remover objetos usados na importação de metadados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.ServiceModel.Description.MetadataImporter.State%2A> propriedade para adicionar um personalizado <xref:System.Runtime.Serialization.XsdDataContractImporter?displayProperty=nameWithType> para importar as estruturas de dados de uma maneira específica.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#8](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/client.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

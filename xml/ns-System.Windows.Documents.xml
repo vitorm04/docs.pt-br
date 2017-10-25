@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Documents">
+  <Docs>
+    <summary>Contém tipos que oferecem suporte a <see cref="T:System.Windows.Documents.FixedDocument" />, <see cref="T:System.Windows.Documents.FlowDocument" />, e a criação de documento XML Paper Specification (XPS).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,285 @@
+<Type Name="MulticastIPAddressInformation" FullName="System.Net.NetworkInformation.MulticastIPAddressInformation">
+  <TypeSignature Language="C#" Value="public abstract class MulticastIPAddressInformation : System.Net.NetworkInformation.IPAddressInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MulticastIPAddressInformation extends System.Net.NetworkInformation.IPAddressInformation" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.MulticastIPAddressInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.NetworkInformation.IPAddressInformation</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre um endereço de multicast da interface de rede.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não criar instâncias dessa classe; instâncias são retornadas na matriz retornada pelo <xref:System.Net.NetworkInformation.IPInterfaceProperties.MulticastAddresses%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MulticastIPAddressInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.MulticastIPAddressInformation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.MulticastIPAddressInformation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes que derivam de <xref:System.Net.NetworkInformation.MulticastIPAddressInformation> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressPreferredLifetime">
+      <MemberSignature Language="C#" Value="public abstract long AddressPreferredLifetime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AddressPreferredLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.MulticastIPAddressInformation.AddressPreferredLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segundos restantes durante o qual esse é o endereço preferencial.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número de segundos restantes para esse endereço deve permanecer preferencial.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o valor retornado por essa propriedade para determinar por quanto tempo o endereço preferencial permanece válido. Sempre que possível, os aplicativos devem usar um endereço preferencial. Use <xref:System.Net.NetworkInformation.MulticastIPAddressInformation.DuplicateAddressDetectionState%2A> para determinar o endereço preferencial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Essa propriedade não é válida em computadores que executam sistemas operacionais anteriores ao Windows XP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressValidLifetime">
+      <MemberSignature Language="C#" Value="public abstract long AddressValidLifetime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AddressValidLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.MulticastIPAddressInformation.AddressValidLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segundos restantes durante o qual esse endereço é válido.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número de segundos restantes para esse endereço deve permanecer atribuído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o valor retornado por essa propriedade para determinar se este endereço pode ser usado pelo seu aplicativo. Sempre que possível, os aplicativos devem usar um endereço preferencial. Use <xref:System.Net.NetworkInformation.MulticastIPAddressInformation.DuplicateAddressDetectionState%2A> para determinar o endereço preferencial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Essa propriedade não é válida em computadores que executam sistemas operacionais anteriores ao Windows XP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DhcpLeaseLifetime">
+      <MemberSignature Language="C#" Value="public abstract long DhcpLeaseLifetime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DhcpLeaseLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.MulticastIPAddressInformation.DhcpLeaseLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a quantidade de tempo restante da concessão do protocolo de configuração de Host dinâmico (DHCP) para este endereço IP.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que contém o número de segundos restantes antes do computador deve liberar o <see cref="T:System.Net.IPAddress" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Protocolo de configuração de Host dinâmico (DHCP) permite que um computador obter um endereço de rede de um endereço de rede do servidor, em vez de usar um static (fixo) de DHCP. O servidor DHCP não atribui permanentemente endereços; em vez disso, "conceder" um de um número de endereços disponíveis para o computador. Em um determinado período de tempo, conhecido como o tempo de vida de concessão para o endereço, o computador libera o endereço, deixando o servidor DHCP livre atribuí-lo a um computador diferente.  
+  
+ Essa propriedade retorna o número de segundos deixadas no tempo de vida de concessão para o endereço IP identificado no <xref:System.Net.NetworkInformation.IPAddressInformation.Address%2A> propriedade. Observe que o computador pode enviar solicitações ao servidor DHCP para estender a concessão, para que possa aumentar o tempo de vida de concessão ao longo do tempo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplicateAddressDetectionState">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.DuplicateAddressDetectionState DuplicateAddressDetectionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.NetworkInformation.DuplicateAddressDetectionState DuplicateAddressDetectionState" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.MulticastIPAddressInformation.DuplicateAddressDetectionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.DuplicateAddressDetectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o estado do algoritmo de detecção de endereço duplicado.</summary>
+        <value>Uma da <see cref="T:System.Net.NetworkInformation.DuplicateAddressDetectionState" /> valores que indica o andamento do algoritmo para determinar a exclusividade desse endereço IP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir que todas as interfaces de rede em uma rede tem um endereço exclusivo, o host de interface é responsável pela execução de um algoritmo de "endereço detecção de duplicidades" em endereços Multicast. A finalidade desse algoritmo é tentar evitar endereços não exclusivo na rede. Esse processo é definido em IETF RFC 1971.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Essa propriedade não é válida em computadores que executam sistemas operacionais anteriores ao Windows XP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrefixOrigin">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.PrefixOrigin PrefixOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.NetworkInformation.PrefixOrigin PrefixOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.MulticastIPAddressInformation.PrefixOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica a origem de um prefixo de endereço de Multicast IP (Internet Protocol).</summary>
+        <value>Uma da <see cref="T:System.Net.NetworkInformation.PrefixOrigin" /> valores que identifica como as informações de prefixo foi obtidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Endereços IP são divididos em duas partes: o prefixo e o sufixo. O prefixo de endereço identifica a parte de um endereço IP de rede e o sufixo de endereço identifica a parte do host. Prefixos são atribuídos por autoridades global e sufixos são atribuídos por administradores de sistema local.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Essa propriedade não é válida em computadores que executam sistemas operacionais anteriores ao Windows XP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SuffixOrigin">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.SuffixOrigin SuffixOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.NetworkInformation.SuffixOrigin SuffixOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.MulticastIPAddressInformation.SuffixOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica a origem de um sufixo de endereço de Multicast IP (Internet Protocol).</summary>
+        <value>Uma da <see cref="T:System.Net.NetworkInformation.SuffixOrigin" /> valores que identifica como as informações de sufixo foi obtidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Endereços IP são divididos em duas partes: o prefixo e o sufixo. O prefixo de endereço identifica a parte de um endereço IP de rede e o sufixo de endereço identifica a parte do host. Prefixos são atribuídos por autoridades global e sufixos são atribuídos por administradores de sistema local.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Essa propriedade não é válida em computadores que executam sistemas operacionais anteriores ao Windows XP.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

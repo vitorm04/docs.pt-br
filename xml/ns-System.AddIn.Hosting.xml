@@ -1,0 +1,6 @@
+<Namespace Name="System.AddIn.Hosting">
+  <Docs>
+    <summary>O <see cref="N:System.AddIn.Hosting" /> namespace fornece classes para descobrir, registrar, ativar e controlar suplementos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

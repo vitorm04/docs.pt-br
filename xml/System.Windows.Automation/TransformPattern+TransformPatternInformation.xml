@@ -1,0 +1,127 @@
+<Type Name="TransformPattern+TransformPatternInformation" FullName="System.Windows.Automation.TransformPattern+TransformPatternInformation">
+  <TypeSignature Language="C#" Value="public struct TransformPattern.TransformPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit TransformPattern/TransformPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TransformPattern.TransformPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso aos valores de propriedade de um <see cref="T:System.Windows.Automation.TransformPattern" /> objeto usando seu <see cref="P:System.Windows.Automation.TransformPattern.Current" /> ou <see cref="P:System.Windows.Automation.TransformPattern.Cached" /> acessadores.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanMove">
+      <MemberSignature Language="C#" Value="public bool CanMove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMove" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanMove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento pode ser movido.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser movido; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente usada para mover o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#103)]
+[!code-vb[UIATransformPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResize">
+      <MemberSignature Language="C#" Value="public bool CanResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanResize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento pode ser redimensionado.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser redimensionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente usada para redimensionar o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#104)]
+[!code-vb[UIATransformPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRotate">
+      <MemberSignature Language="C#" Value="public bool CanRotate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRotate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanRotate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento pode ser girado.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser girado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TransformPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente usada para girar o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#102)]
+[!code-vb[UIATransformPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

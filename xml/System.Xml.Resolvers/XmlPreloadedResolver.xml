@@ -1,0 +1,574 @@
+<Type Name="XmlPreloadedResolver" FullName="System.Xml.Resolvers.XmlPreloadedResolver">
+  <TypeSignature Language="C#" Value="public class XmlPreloadedResolver : System.Xml.XmlResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlPreloadedResolver extends System.Xml.XmlResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Resolvers.XmlPreloadedResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe usada para pré-popular o cache com DTDs ou fluxos XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Resolvers.XmlPreloadedResolver> tipo é usado como um resolvedor quando chamadas automática para a rede não desejadas ou não são possíveis. Por exemplo, esse tipo pode ser usado para carregar DTDs externos armazenadas em cache. Ou, você pode usar <xref:System.Xml.Resolvers.XmlPreloadedResolver> para pré-carregar DTDs bem conhecidos que são definidos em XHTML 1.0. Pré-carregamento DTDs conhecidos não iniciar qualquer conexão de rede porque esses DTDs já são inseridos no assembly System.Xml.Utils. Atualmente, <xref:System.Xml.Resolvers.XmlPreloadedResolver> inclui que são definidos no XHTML 1.0 e RSS 0.91 DTDs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlPreloadedResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlPreloadedResolver (System.Xml.Resolvers.XmlKnownDtds preloadedDtds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Xml.Resolvers.XmlKnownDtds preloadedDtds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.#ctor(System.Xml.Resolvers.XmlKnownDtds)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="preloadedDtds" Type="System.Xml.Resolvers.XmlKnownDtds" />
+      </Parameters>
+      <Docs>
+        <param name="preloadedDtds">DTDs bem conhecidos que devem ser preenchida previamente em cache.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> classe com especificado pré-carregados DTDs bem conhecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlPreloadedResolver (System.Xml.XmlResolver fallbackResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlResolver fallbackResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.#ctor(System.Xml.XmlResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fallbackResolver" Type="System.Xml.XmlResolver" />
+      </Parameters>
+      <Docs>
+        <param name="fallbackResolver">O <see langword="XmlResolver" />, <see langword="XmlXapResolver" />, ou seu próprio resolvedor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> classe com o resolvedor de fallback especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlPreloadedResolver (System.Xml.XmlResolver fallbackResolver, System.Xml.Resolvers.XmlKnownDtds preloadedDtds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlResolver fallbackResolver, valuetype System.Xml.Resolvers.XmlKnownDtds preloadedDtds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.#ctor(System.Xml.XmlResolver,System.Xml.Resolvers.XmlKnownDtds)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fallbackResolver" Type="System.Xml.XmlResolver" />
+        <Parameter Name="preloadedDtds" Type="System.Xml.Resolvers.XmlKnownDtds" />
+      </Parameters>
+      <Docs>
+        <param name="fallbackResolver">O <see langword="XmlResolver" />, <see langword="XmlXapResolver" />, ou seu próprio resolvedor.</param>
+        <param name="preloadedDtds">DTDs bem conhecidos que devem ser preenchida previamente em cache.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> classe com o resolvedor de fallback especificado e pré-carregados DTDs bem conhecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlPreloadedResolver (System.Xml.XmlResolver fallbackResolver, System.Xml.Resolvers.XmlKnownDtds preloadedDtds, System.Collections.Generic.IEqualityComparer&lt;Uri&gt; uriComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlResolver fallbackResolver, valuetype System.Xml.Resolvers.XmlKnownDtds preloadedDtds, class System.Collections.Generic.IEqualityComparer`1&lt;class System.Uri&gt; uriComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.#ctor(System.Xml.XmlResolver,System.Xml.Resolvers.XmlKnownDtds,System.Collections.Generic.IEqualityComparer{System.Uri})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fallbackResolver" Type="System.Xml.XmlResolver" />
+        <Parameter Name="preloadedDtds" Type="System.Xml.Resolvers.XmlKnownDtds" />
+        <Parameter Name="uriComparer" Type="System.Collections.Generic.IEqualityComparer&lt;System.Uri&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fallbackResolver">O <see langword="XmlResolver" />, <see langword="XmlXapResolver" />, ou seu próprio resolvedor.</param>
+        <param name="preloadedDtds">DTDs bem conhecidos que devem ser preenchida previamente em cache.</param>
+        <param name="uriComparer">A implementação do <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> interface genérica para usar ao comparar os URIs.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> classe com o resolvedor de fallback especificado, pré-carregados DTDs conhecidos e o comparador de igualdade do URI.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de construtor, se você quiser personalizar a comparação do URI.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Uri uri, byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Uri uri, unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.Add(System.Uri,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI dos dados que está sendo adicionados para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar.</param>
+        <param name="value">Uma matriz de bytes com os dados que corresponde ao URI fornecido.</param>
+        <summary>Adiciona uma matriz de bytes para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar e mapeia para um URI. Se o repositório já contém um mapeamento para o mesmo URI, o mapeamento existente será substituído.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Uri uri, System.IO.Stream value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Uri uri, class System.IO.Stream value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.Add(System.Uri,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="value" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI dos dados que está sendo adicionados para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar.</param>
+        <param name="value">Um <see cref="T:System.IO.Stream" /> com os dados que corresponde ao URI fornecido.</param>
+        <summary>Adiciona um <see cref="T:System.IO.Stream" /> para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar e mapeia para um URI. Se o repositório já contém um mapeamento para o mesmo URI, o mapeamento existente será substituído.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Uri uri, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Uri uri, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.Add(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI dos dados que está sendo adicionados para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar.</param>
+        <param name="value">Um <see langword="String" /> com os dados que corresponde ao URI fornecido.</param>
+        <summary>Adiciona uma cadeia de caracteres com os dados previamente carregados para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar e mapeia para um URI. Se o repositório já contém um mapeamento para o mesmo URI, o mapeamento existente será substituído.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Uri uri, byte[] value, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Uri uri, unsigned int8[] value, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.Add(System.Uri,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI dos dados que está sendo adicionados para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar.</param>
+        <param name="value">Uma matriz de bytes com os dados que corresponde ao URI fornecido.</param>
+        <param name="offset">O deslocamento da matriz de bytes fornecido em que os dados é iniciado.</param>
+        <param name="count">O número de bytes a serem lidos da matriz de bytes, começando no deslocamento fornecido.</param>
+        <summary>Adiciona uma matriz de bytes para o <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar e mapeia para um URI. Se o repositório já contém um mapeamento para o mesmo URI, o mapeamento existente será substituído.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é menor que 0.  
+  
+ -ou-  
+  
+ O comprimento do <paramref name="value" /> menos <paramref name="offset" /> é menor que<paramref name="count." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public override System.Net.ICredentials Credentials { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Resolvers.XmlPreloadedResolver.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define as credenciais que são usadas para autenticar subjacente <see cref="T:System.Net.WebRequest" />.</summary>
+        <value>As credenciais que são usadas para autenticar a solicitação da web subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntity">
+      <MemberSignature Language="C#" Value="public override object GetEntity (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetEntity(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.GetEntity(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">O URI retornado de <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" />.</param>
+        <param name="role">A versão atual do .NET Framework para Silverlight não usa esse parâmetro durante a resolução de URIs. Esse parâmetro é fornecido para fins de extensibilidade futura. Por exemplo, esse parâmetro pode ser mapeado para o xlink:role e usado como um argumento específico de implementação em outros cenários.</param>
+        <param name="ofObjectToReturn">O tipo de objeto a ser retornado. O <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> dá suporte a objetos <see cref="T:System.IO.Stream" /> e a objetos <see cref="T:System.IO.TextReader" /> para URIs que foram adicionados como <see langword="String" />. Se o tipo solicitado não tiver suporte no resolvedor, uma exceção será gerada. Use o método <see cref="M:System.Xml.Resolvers.XmlPreloadedResolver.SupportsType(System.Uri,System.Type)" /> para determinar se um certo <see langword="Type" /> tem suporte nesse resolvedor.</param>
+        <summary>Mapeia um URI para um objeto que contém o recurso real.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> ou <see cref="T:System.IO.TextReader" /> que corresponde à fonte atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A <xref:System.Xml.Resolvers.XmlPreloadedResolver> tentará primeiro consultar o recurso em seu repositório de dados previamente carregados. Se ele não é possível encontrá-la, ele chamará o resolvedor de fallback `GetEntity` método. Se nenhum resolvedor fallback foi fornecida no <xref:System.Xml.Resolvers.XmlPreloadedResolver> construtor, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="absoluteUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">Não é possível resolver o URI passado em <paramref name="absoluteUri" />.  
+  
+ -ou-  
+  
+ <paramref name="ofObjectToReturn" /> não é de um tipo com suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;object&gt; GetEntityAsync (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; GetEntityAsync(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.GetEntityAsync(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">O URI retornado de <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" />.</param>
+        <param name="role">A versão atual do .NET Framework para Silverlight não usa esse parâmetro durante a resolução de URIs. Esse parâmetro é fornecido para fins de extensibilidade futura. Por exemplo, esse parâmetro pode ser mapeado para o xlink:role e usado como um argumento específico de implementação em outros cenários.</param>
+        <param name="ofObjectToReturn">O tipo de objeto a ser retornado. O <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> dá suporte a objetos <see cref="T:System.IO.Stream" /> e a objetos <see cref="T:System.IO.TextReader" /> para URIs que foram adicionados como <see langword="String" />. Se o tipo solicitado não tiver suporte no resolvedor, uma exceção será gerada. Use o método <see cref="M:System.Xml.Resolvers.XmlPreloadedResolver.SupportsType(System.Uri,System.Type)" /> para determinar se um certo <see langword="Type" /> tem suporte nesse resolvedor.</param>
+        <summary>Assincronamente mapeia um URI para um objeto que contém o recurso real.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> ou <see cref="T:System.IO.TextReader" /> que corresponde à fonte atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreloadedUris">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Uri&gt; PreloadedUris { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; PreloadedUris" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Resolvers.XmlPreloadedResolver.PreloadedUris" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de URIs pré-carregados.</summary>
+        <value>A coleção de URIs pré-carregados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.Remove(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI dos dados que devem ser removidos do <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" /> armazenar.</param>
+        <summary>Remove os dados que corresponde ao URI a partir de <see cref="T:System.Xml.Resolvers.XmlPreloadedResolver" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma exceção é lançada se os dados não existe no repositório.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveUri">
+      <MemberSignature Language="C#" Value="public override Uri ResolveUri (Uri baseUri, string relativeUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Uri ResolveUri(class System.Uri baseUri, string relativeUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.ResolveUri(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="relativeUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">O URI base usado para resolver o URI relativo.</param>
+        <param name="relativeUri">O URI para resolver. O URI pode ser absoluto ou relativo. Se absoluto, esse valor substitui com eficiência o <c>baseUri</c> valor. Se relativo, ele combina com o <c>baseUri</c> para tornar um URI absoluto.</param>
+        <summary>Resolve o URI absoluto dos URIs de base e relativo.</summary>
+        <returns>O <see cref="T:System.Uri" /> que representa o URI absoluto ou <see langword="null" /> se o URI relativo não pode ser resolvido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsType">
+      <MemberSignature Language="C#" Value="public override bool SupportsType (Uri absoluteUri, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool SupportsType(class System.Uri absoluteUri, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Resolvers.XmlPreloadedResolver.SupportsType(System.Uri,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">O URI absoluto para verificar.</param>
+        <param name="type">O <see cref="T:System.Type" /> para retornar.</param>
+        <summary>Determina se o resolvedor dá suporte a outros <see cref="T:System.Type" />s que apenas <see cref="T:System.IO.Stream" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Type" /> com suporte; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

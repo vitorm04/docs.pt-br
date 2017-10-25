@@ -1,0 +1,159 @@
+<Type Name="ActivityDesignerPaintEventArgs" FullName="System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs">
+  <TypeSignature Language="C#" Value="public class ActivityDesignerPaintEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityDesignerPaintEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs)" />, <see cref="M:System.Workflow.ComponentModel.Design.ConnectionPoint.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs,System.Boolean)" />, <see cref="M:System.Workflow.ComponentModel.Design.Connector.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs)" />, e <see cref="M:System.Workflow.ComponentModel.Design.DesignerGlyph.OnPaint(System.Drawing.Graphics,System.Boolean,System.Workflow.ComponentModel.Design.AmbientTheme,System.Workflow.ComponentModel.Design.ActivityDesigner)" /> métodos e as versões substituídas do <see langword="OnPaint" /> nas classes que derivam delas, quando eles são desenhados em uma superfície de design do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ `OnPaint`chamadas de método ocorrem quando um designer de atividade, o glifo ou o conector é redesenhado em uma superfície de design do fluxo de trabalho. <xref:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs>Especifica os elementos gráficos para usar para desenhar o objeto e o retângulo de recorte no qual desenhar a ele.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerPaintEventArgs (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipRectangle, System.Drawing.Rectangle viewPort, System.Workflow.ComponentModel.Design.ActivityDesignerTheme designerTheme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipRectangle, valuetype System.Drawing.Rectangle viewPort, class System.Workflow.ComponentModel.Design.ActivityDesignerTheme designerTheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Workflow.ComponentModel.Design.ActivityDesignerTheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="viewPort" Type="System.Drawing.Rectangle" />
+        <Parameter Name="designerTheme" Type="System.Workflow.ComponentModel.Design.ActivityDesignerTheme" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o item.</param>
+        <param name="clipRectangle">O <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo na qual desenhar.</param>
+        <param name="viewPort">A porta de modo de exibição na qual desenhar.</param>
+        <param name="designerTheme">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> associado ao objeto para desenhar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" /> classe com o gráfico especificado, o retângulo de recorte, o visor e o tema de designer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmbientTheme">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.AmbientTheme AmbientTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.AmbientTheme AmbientTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs.AmbientTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.AmbientTheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> associado com a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> que contém informações de tema do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.AmbientTheme> é usado para descrever as propriedades de aparência do fluxo de trabalho, como planos de fundo, estilos e cores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ClipRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ClipRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs.ClipRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Rectangle" /> na qual desenhar.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que descreve a área para desenhar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O descrito pelo retângulo de recorte é a área na tela que irá redesenhada usando o <xref:System.Drawing.Graphics> fornecido pelo <xref:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerTheme">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.ActivityDesignerTheme DesignerTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesignerTheme DesignerTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs.DesignerTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerTheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> associada com o designer.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> que descreve a aparência designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se tiver um designer de um <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme> associados a ele, o designer usará as propriedades de aparência descritas pelo <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme> para pintar em si. Se nenhum <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme> está associado com o designer, o designer usará o <xref:System.Workflow.ComponentModel.Design.AmbientTheme> para redesenhar suas propriedades de aparência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Graphics" /> usado para desenhar o item na superfície de design de fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o item na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Graphics>fornece métodos para desenhar objetos na superfície de design de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

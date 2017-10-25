@@ -1,0 +1,741 @@
+<Type Name="SoundPlayer" FullName="System.Media.SoundPlayer">
+  <TypeSignature Language="C#" Value="public class SoundPlayer : System.ComponentModel.Component, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable SoundPlayer extends System.ComponentModel.Component implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Media.SoundPlayer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla a reprodução de um som de um arquivo.wav.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Media.SoundPlayer> classe fornece uma interface simples para carregar e reproduzir um arquivo. O <xref:System.Media.SoundPlayer> classe dá suporte ao carregamento de um arquivo de um caminho de arquivo, uma URL, um <xref:System.IO.Stream> que contém um arquivo. wav ou um recurso incorporado que contém um arquivo.  
+  
+ Para executar um som usando o <xref:System.Media.SoundPlayer> classe, configure um <xref:System.Media.SoundPlayer> com um caminho para o arquivo. wav e chamar um dos métodos play. Você pode identificar o arquivo. wav reproduzir usando um dos construtores ou configuração de <xref:System.Media.SoundPlayer.SoundLocation%2A> ou <xref:System.Media.SoundPlayer.Stream%2A> propriedade. O arquivo pode ser carregado antes da reprodução, usando um dos métodos de carga ou carregamento pode ser adiado até que um dos métodos play seja chamado. Um <xref:System.Media.SoundPlayer> configurado para carregar um arquivo de um <xref:System.IO.Stream> ou a URL deve carregar o arquivo. wav na memória antes do início da reprodução.  
+  
+ Você pode carregar ou executar um arquivo de forma síncrona ou assíncrona. Se você chamar uma carga síncrona ou executar o método, o thread de chamada aguardará até que o método retorna, o que pode fazer com que os eventos de pintura e outros seja interrompida. Ligar para o carregamento assíncrono ou método play permitirá que o thread de chamada continuar sem interrupções. Para obter mais informações sobre chamadas de método assíncrono, consulte [como: executar uma operação em segundo plano](~/docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+  
+ Quando um <xref:System.Media.SoundPlayer> terminou de carregar um arquivo, ele gera o <xref:System.Media.SoundPlayer.LoadCompleted> evento. Você pode examinar o <xref:System.ComponentModel.AsyncCompletedEventArgs> no seu manipulador de eventos para determinar se a carga de êxito ou falha. O <xref:System.Media.SoundPlayer.SoundLocationChanged> é gerado quando a fonte de áudio é definida como um novo caminho do arquivo ou URL. O <xref:System.Media.SoundPlayer.StreamChanged> é gerado quando a fonte de áudio é definida como um novo <xref:System.IO.Stream>. Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter mais informações sobre <xref:System.Media.SoundPlayer>, consulte [visão geral da classe SoundPlayer](~/docs/framework/winforms/controls/soundplayer-class-overview.md).  
+  
+> [!NOTE]
+>  O <xref:System.Media.SoundPlayer> classe não pode executar outros tipos de arquivo, como. wma ou. mp3. Se você quiser executar outros tipos de arquivo, você pode usar o controle do Windows Media Player. Para obter mais informações, consulte [usando os controles do Windows Media Player em uma solução do .NET Framework](http://go.microsoft.com/fwlink/?LinkId=131267) e [referência de modelo de objeto do Windows Media Player para .NET de Visual Basic e c#](http://go.microsoft.com/fwlink/?LinkId=131269) no Windows Media Player SDK.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.Media.SoundPlayer> classe para reproduzir arquivos. wav de um caminho local ou um identificador de recurso uniforme (URI).  
+  
+ [!code-cpp[System.Windows.Forms.Sound#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Sound#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#1)]
+ [!code-vb[System.Windows.Forms.Sound#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoundPlayer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Media.SoundPlayer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Media.SoundPlayer> sem fonte de áudio. Até que ele está configurado com um caminho de origem de áudio, o <xref:System.Media.SoundPlayer> reproduzirá um som som quando um dos seus métodos de reprodução é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoundPlayer (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> para um arquivo .wav.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Media.SoundPlayer" /> e anexa o arquivo .wav dentro do <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Stream> passado para o `stream` parâmetro deve ser um <xref:System.IO.Stream> que contém um arquivo. Os dados retornados pelo <xref:System.IO.Stream.Read%2A> método o <xref:System.IO.Stream> devem ser os dados dentro de um arquivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoundPlayer (string soundLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string soundLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="soundLocation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="soundLocation">O local de um arquivo .wav a ser carregado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Media.SoundPlayer" /> e anexa o arquivo .wav especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres passada para o `soundLocation` parâmetro pode ser um caminho de arquivo ou uma URL para um arquivo. Se o caminho ou URL não é válido, o <xref:System.Media.SoundPlayer> ainda será construídas, mas subsequentes chamadas para uma carga ou método play irá falhar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">O valor da URL especificado por <paramref name="soundLocation" /> não pode ser resolvido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoundPlayer (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser usado para desserialização.</param>
+        <param name="context">O destino a ser usado para desserialização.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Media.SoundPlayer" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.UriFormatException">O <see cref="P:System.Media.SoundPlayer.SoundLocation" /> especificada em <paramref name="serializationInfo" /> não pode ser resolvido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoadCompleted">
+      <MemberSignature Language="C#" Value="public bool IsLoadCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoadCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SoundPlayer.IsLoadCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o carregamento de um arquivo. wav foi concluída com êxito.</summary>
+        <value>
+          <see langword="true" />Se um arquivo for carregado; <see langword="false" /> se um arquivo. wav ainda não foram carregado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.Load" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega um som de forma síncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Media.SoundPlayer.Load%2A> método usa o thread atual para carregar um arquivo, impedindo que o thread de manipulação de outras mensagens até que a carga seja concluída.  
+  
+> [!CAUTION]
+>  O <xref:System.Media.SoundPlayer.Load%2A> método pode gerar um atraso ao carregar um arquivo grande. Além disso, eventos de pintura e serão bloqueados até que a carga seja concluída. Use o <xref:System.Media.SoundPlayer.LoadAsync%2A> método para carregar um som de forma assíncrona, que permite que o thread de chamada continuar sem interrupções.  
+  
+ Este método gera o <xref:System.Media.SoundPlayer.LoadCompleted> eventos durante o carregamento for concluído, mesmo se a carga não foi bem-sucedida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.LoadAsync%2A> método para anexar um arquivo a uma instância do <xref:System.Media.SoundPlayer> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#2)]
+ [!code-csharp[System.Windows.Forms.Sound#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#2)]
+ [!code-vb[System.Windows.Forms.Sound#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceProcess.TimeoutException">O tempo decorrido durante o carregamento excede o tempo, em milissegundos, especificado por <see cref="P:System.Media.SoundPlayer.LoadTimeout" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não foi encontrado.</exception>
+        <permission cref="T:System.Net.WebPermission">para acessar recursos de HTTP Internet. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAsync">
+      <MemberSignature Language="C#" Value="public void LoadAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.LoadAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega um arquivo .wav de um fluxo ou um recurso da Web usando um novo thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:System.Media.SoundPlayer> for configurada para carregar um arquivo de um <xref:System.IO.Stream> ou recurso da Web, este método começa a carregar um arquivo do local usando um novo thread.  
+  
+ Este método gera o <xref:System.Media.SoundPlayer.LoadCompleted> eventos durante o carregamento for concluído, mesmo se a carga não foi bem-sucedida.  
+  
+ Se um <xref:System.Media.SoundPlayer> está configurado para carregar um arquivo de um caminho de arquivo local, esse método não fará nada, porque o carregamento é adiado até que a execução começa.  
+  
+ Para obter mais informações sobre o carregamento assíncrono, consulte [como: carregar um som assincronamente dentro de um formulário do Windows](~/docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.LoadAsync%2A> método assincronamente carregar um arquivo para uso por uma instância do <xref:System.Media.SoundPlayer> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Sound#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#3)]
+ [!code-vb[System.Windows.Forms.Sound#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceProcess.TimeoutException">O tempo decorrido durante o carregamento excede o tempo, em milissegundos, especificado por <see cref="P:System.Media.SoundPlayer.LoadTimeout" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompleted">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.AsyncCompletedEventHandler LoadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.AsyncCompletedEventHandler LoadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Media.SoundPlayer.LoadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AsyncCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um arquivo foi com êxito ou não carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando o carregamento de um arquivo. wav é concluído. Os argumentos do evento indicam se a carga do som foi concluída com êxito ou falha.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> manipulador de eventos para receber uma notificação indicando que o conteúdo de um arquivo. wav tenha sido carregado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#8)]
+ [!code-csharp[System.Windows.Forms.Sound#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#8)]
+ [!code-vb[System.Windows.Forms.Sound#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadTimeout">
+      <MemberSignature Language="C#" Value="public int LoadTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LoadTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SoundPlayer.LoadTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em milissegundos, em que o arquivo. wav deve carregar.</summary>
+        <value>O número de milissegundos de espera. O padrão é 10000 (10 segundos).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após esse período, o carregamento será cancelado e um <xref:System.ServiceProcess.TimeoutException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoadCompleted (System.ComponentModel.AsyncCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoadCompleted(class System.ComponentModel.AsyncCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.OnLoadCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Media.SoundPlayer.LoadCompleted" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando o carregamento de um arquivo. wav é concluído.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Media.SoundPlayer.OnLoadCompleted(System.ComponentModel.AsyncCompletedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Media.SoundPlayer.OnLoadCompleted(System.ComponentModel.AsyncCompletedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSoundLocationChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSoundLocationChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSoundLocationChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.OnSoundLocationChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Media.SoundPlayer.SoundLocationChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando um novo caminho de origem de áudio para este <xref:System.Media.SoundPlayer> foi definido.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte como: funcionalidade fornecer eventos e [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Media.SoundPlayer.OnSoundLocationChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Media.SoundPlayer.OnSoundLocationChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Media.SoundPlayer.OnSoundLocationChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStreamChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnStreamChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStreamChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.OnStreamChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Media.SoundPlayer.StreamChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando um novo <xref:System.IO.Stream> para essa fonte de áudio <xref:System.Media.SoundPlayer> foi definido.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Media.SoundPlayer.OnStreamChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Media.SoundPlayer.OnStreamChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Media.SoundPlayer.OnStreamChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Play() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.Play" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o arquivo .wav usando um novo thread e carrega o arquivo .wav primeiro se ele não tiver sido carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Media.SoundPlayer.Play%2A> método toca um som usando um novo thread. Se você chamar <xref:System.Media.SoundPlayer.Play%2A> antes do arquivo. wav forem carregado na memória, o arquivo será carregado antes do início da reprodução. Você pode usar o <xref:System.Media.SoundPlayer.LoadAsync%2A> ou <xref:System.Media.SoundPlayer.Load%2A> método para carregar o arquivo de WAV para a memória com antecedência. Após um wav arquivo é carregado com êxito de um <xref:System.IO.Stream> ou URL, futuras chamadas para métodos de reprodução para o <xref:System.Media.SoundPlayer> não será necessário recarregar o arquivo. wav até o caminho para que as alterações de som.  
+  
+ Se o arquivo não foi especificado ou não carregar, o <xref:System.Media.SoundPlayer.Play%2A> método reproduzirá o aviso sonoro do som.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.Play%2A> método assincronamente reproduzir um arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#5)]
+ [!code-csharp[System.Windows.Forms.Sound#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#5)]
+ [!code-vb[System.Windows.Forms.Sound#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceProcess.TimeoutException">O tempo decorrido durante o carregamento excede o tempo, em milissegundos, especificado por <see cref="P:System.Media.SoundPlayer.LoadTimeout" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não foi encontrado.</exception>
+        <exception cref="T:System.InvalidOperationException">O cabeçalho .wav está corrompido; o arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não é um arquivo .wav PCM.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar código nativo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PlayLooping">
+      <MemberSignature Language="C#" Value="public void PlayLooping ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PlayLooping() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.PlayLooping" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reproduz e executa em loop o arquivo .wav usando um novo thread e carrega o arquivo .wav primeiro se ele não tiver sido carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Media.SoundPlayer.PlayLooping%2A> método desempenha e loops de som usando um novo thread. Se você chamar <xref:System.Media.SoundPlayer.PlayLooping%2A> antes do arquivo. wav forem carregado na memória, o arquivo será carregado antes do início da reprodução. Você pode usar o <xref:System.Media.SoundPlayer.LoadAsync%2A> ou <xref:System.Media.SoundPlayer.Load%2A> método para carregar o arquivo de WAV para a memória com antecedência. Após um wav arquivo é carregado com êxito de um <xref:System.IO.Stream> ou URL, futuras chamadas para métodos de reprodução para o <xref:System.Media.SoundPlayer> não será necessário recarregar o arquivo. wav até o caminho para que as alterações de som.  
+  
+ Se o arquivo não foi especificado ou não carregar, o <xref:System.Media.SoundPlayer.PlayLooping%2A> método reproduzirá o aviso sonoro do som.  
+  
+ Para obter mais informações sobre <xref:System.Media.SoundPlayer.PlayLooping%2A>, consulte [como: Loop um som reproduzido em um Windows Form](~/docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.PlayLooping%2A> método repetidamente reproduzir um arquivo. A. wav será executado até que o <xref:System.Media.SoundPlayer.Stop%2A> método é chamado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#6)]
+ [!code-csharp[System.Windows.Forms.Sound#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#6)]
+ [!code-vb[System.Windows.Forms.Sound#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceProcess.TimeoutException">O tempo decorrido durante o carregamento excede o tempo, em milissegundos, especificado por <see cref="P:System.Media.SoundPlayer.LoadTimeout" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não foi encontrado.</exception>
+        <exception cref="T:System.InvalidOperationException">O cabeçalho .wav está corrompido; o arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não é um arquivo .wav PCM.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar código nativo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaySync">
+      <MemberSignature Language="C#" Value="public void PlaySync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PlaySync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.PlaySync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o arquivo .wav e carrega o arquivo .wav primeiro se ele não tiver sido carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Media.SoundPlayer.PlaySync%2A> método usa o thread atual para reproduzir um arquivo. wav, impedindo que o thread de manipulação de outras mensagens até que a carga seja concluída. Você pode usar o <xref:System.Media.SoundPlayer.LoadAsync%2A> ou <xref:System.Media.SoundPlayer.Load%2A> método para carregar o arquivo de WAV para a memória com antecedência. Após um wav arquivo é carregado com êxito de um <xref:System.IO.Stream> ou URL, futuras chamadas para métodos de reprodução para o <xref:System.Media.SoundPlayer> não será necessário recarregar o arquivo. wav até o caminho para que as alterações de som.  
+  
+ Se o arquivo não foi especificado ou não carregar, o <xref:System.Media.SoundPlayer.PlaySync%2A> método reproduzirá o aviso sonoro do som.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.PlaySync%2A> método sincronicamente reproduzir um arquivo.  
+  
+ [!code-cpp[System.Windows.Forms.PlaySync#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PlaySync/CPP/system.windows.forms.sound.playasync.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PlaySync#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PlaySync/CS/system.windows.forms.sound.playasync.cs#1)]
+ [!code-vb[System.Windows.Forms.PlaySync#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PlaySync/VB/system.windows.forms.sound.playasync.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceProcess.TimeoutException">O tempo decorrido durante o carregamento excede o tempo, em milissegundos, especificado por <see cref="P:System.Media.SoundPlayer.LoadTimeout" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não foi encontrado.</exception>
+        <exception cref="T:System.InvalidOperationException">O cabeçalho .wav está corrompido; o arquivo especificado por <see cref="P:System.Media.SoundPlayer.SoundLocation" /> não é um arquivo .wav PCM.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar código nativo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SoundLocation">
+      <MemberSignature Language="C#" Value="public string SoundLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SoundLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SoundPlayer.SoundLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo ou URL do arquivo .wav a ser carregado.</summary>
+        <value>O caminho do arquivo ou a URL da qual carregar um arquivo .wav ou <see cref="F:System.String.Empty" /> se nenhum caminho de arquivo estiver presente. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida como <xref:System.String?displayProperty=nameWithType> quando o <xref:System.Media.SoundPlayer.Stream%2A> está definida como um <xref:System.IO.Stream>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.SoundLocation%2A> propriedade para atribuir a origem do arquivo WAV a uma instância do <xref:System.Media.SoundPlayer> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#2)]
+ [!code-csharp[System.Windows.Forms.Sound#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#2)]
+ [!code-vb[System.Windows.Forms.Sound#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para localizar os arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SoundLocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SoundLocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SoundLocationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Media.SoundPlayer.SoundLocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um novo caminho de origem de áudio para este <see cref="T:System.Media.SoundPlayer" /> foi definido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um novo caminho de origem de áudio para este <xref:System.Media.SoundPlayer> foi definido.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.OnSoundLocationChanged%2A> manipulador de eventos para receber uma notificação quando o <xref:System.Media.SoundPlayer> foi anexada a um arquivo diferente. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#9)]
+ [!code-csharp[System.Windows.Forms.Sound#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#9)]
+ [!code-vb[System.Windows.Forms.Sound#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe a reprodução do som se a reprodução está ocorrendo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Media.SoundPlayer.Stop%2A> método para interromper um arquivo que está sendo executado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Media.SoundPlayer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Sound#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CPP/soundtestform.cpp#7)]
+ [!code-csharp[System.Windows.Forms.Sound#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#7)]
+ [!code-vb[System.Windows.Forms.Sound#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar código nativo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Stream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Stream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Stream" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SoundPlayer.Stream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.IO.Stream" /> do qual carregar o arquivo .wav.</summary>
+        <value>Um <see cref="T:System.IO.Stream" /> do qual carregar o arquivo .wav ou <see langword="null" /> se nenhum fluxo estiver disponível. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida como `null` quando o <xref:System.Media.SoundPlayer.SoundLocation%2A> propriedade é definida como um local de som novo e válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler StreamChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler StreamChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Media.SoundPlayer.StreamChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um novo <see cref="T:System.IO.Stream" /> para essa fonte de áudio <see cref="T:System.Media.SoundPlayer" /> foi definido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um novo <xref:System.IO.Stream> para essa fonte de áudio <xref:System.Media.SoundPlayer> foi definido.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Media.SoundPlayer.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Para obter uma descrição desse membro, consulte o método <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Media.SoundPlayer> é convertida em uma interface de <xref:System.Runtime.Serialization.ISerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Media.SoundPlayer.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Object" /> que contém dados sobre o <see cref="T:System.Media.SoundPlayer" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém dados sobre o <see cref="T:System.Media.SoundPlayer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

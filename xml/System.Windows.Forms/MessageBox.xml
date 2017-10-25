@@ -1,0 +1,1365 @@
+<Type Name="MessageBox" FullName="System.Windows.Forms.MessageBox">
+  <TypeSignature Language="C#" Value="public class MessageBox" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageBox extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MessageBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Exibe uma janela de mensagem, também conhecido como uma caixa de diálogo que apresenta uma mensagem para o usuário. É uma janela modal, bloqueando outras ações no aplicativo até que o usuário o feche. Um <see cref="T:System.Windows.Forms.MessageBox" /> pode conter texto, botões e símbolos que informam e instruem o usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma nova instância do <xref:System.Windows.Forms.MessageBox> classe. Para exibir uma caixa de mensagem, chame o `static` método <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>. O título, mensagem, botões e ícones exibidos na caixa de mensagem são determinados pelos parâmetros que você passa para este método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar um <xref:System.Windows.Forms.MessageBox> para informar o usuário de uma entrada ausente em um <xref:System.Windows.Forms.TextBox>. Este exemplo requer que o método é chamado de um formulário existente com um <xref:System.Windows.Forms.TextBox> chamado **ServerName** nele.  
+  
+ [!code-cpp[MessageBox.Show Variations#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#1)]
+ [!code-csharp[MessageBox.Show Variations#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#1)]
+ [!code-vb[MessageBox.Show Variations#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#1)]  
+  
+ O exemplo de código a seguir mostra como pedir ao usuário uma pergunta Sim ou não e tomar uma decisão com base na resposta.  
+  
+ [!code-cpp[Classic MessageBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MessageBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MessageBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MessageBox Example/CS/source.cs#1)]
+ [!code-vb[Classic MessageBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MessageBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a caixa de mensagem exibe uma **Okey** botão. A caixa de mensagem não contém uma legenda do título.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe uma caixa de mensagem simples.  
+  
+ [!code-csharp[MessageBox.Show Variations#6](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#6)]
+ [!code-vb[MessageBox.Show Variations#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras definir essa propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem com o texto e a legenda especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a caixa de mensagem exibe uma **Okey** botão.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem na frente do objeto especificado e com o texto especificado.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo. Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Por padrão, a caixa de mensagem exibe uma **Okey** botão. A caixa de mensagem não contém uma legenda do título.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem com o texto, a legenda os botões especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox>, oferecendo a opção de cancelar a operação de usuário. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#1)]
+ [!code-csharp[MessageBox.Show Variations#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#1)]
+ [!code-vb[MessageBox.Show Variations#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O parâmetro <paramref name="buttons" /> especificado não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem na frente do objeto especificado e com o texto e a legenda especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo. Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Por padrão, a caixa de mensagem exibe uma **Okey** botão.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem com o texto, legenda, botões e ícone especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um do <xref:System.Windows.Forms.MessageBox.Show%2A> métodos ao tratar o <xref:System.Windows.Forms.ComboBox.DropDown?displayProperty=nameWithType> evento. Para executar o exemplo, cole o seguinte código em um formulário e a chamada a `InitializeComboBox` método de construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O parâmetro <paramref name="buttons" /> especificado não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="icon" /> especificado não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem na frente do objeto especificado e com o texto, a legenda e os botões especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo. Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox>, oferecendo a opção de cancelar a operação de usuário. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#5](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#5)]
+ [!code-csharp[MessageBox.Show Variations#5](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#5)]
+ [!code-vb[MessageBox.Show Variations#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem com o texto, a legenda, os botões, o ícone e o botão padrão especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox> com um ícone de caixa de pergunta, oferecendo o usuário a opção de cancelar a operação. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#3](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#3)]
+ [!code-csharp[MessageBox.Show Variations#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#3)]
+ [!code-vb[MessageBox.Show Variations#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ <paramref name="defaultButton" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem na frente do objeto especificado e com o texto especificado, legenda, botões e ícone.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo. Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox>, oferecendo a opção de cancelar a operação de usuário. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#4](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#4)]
+ [!code-csharp[MessageBox.Show Variations#4](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#4)]
+ [!code-vb[MessageBox.Show Variations#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <summary>Exibe uma caixa de mensagem com o texto, legenda, botões, ícone, botão padrão e opções especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox> com um ícone de caixa de pergunta, oferecendo o usuário a opção de cancelar a operação. O exemplo usa o <xref:System.Windows.Forms.MessageBoxOptions.RightAlign> membro o <xref:System.Windows.Forms.MessageBoxOptions> enumeração para alinhar o texto para a borda direita da caixa de diálogo. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#2)]
+ [!code-csharp[MessageBox.Show Variations#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#2)]
+ [!code-vb[MessageBox.Show Variations#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <summary>Exibe uma caixa de mensagem na frente do objeto especificado e com o texto, legenda, botões, ícone e o botão padrão.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo. Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox>, oferecendo a opção de cancelar a operação de usuário. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#2)]
+ [!code-csharp[MessageBox.Show Variations#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#2)]
+ [!code-vb[MessageBox.Show Variations#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ <paramref name="defaultButton" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, bool displayHelpButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, bool displayHelpButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="displayHelpButton" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="displayHelpButton">
+          <see langword="true" />Mostrar botão Ajuda; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Quando o usuário clica no botão Ajuda, o formulário que possui a caixa de mensagem (ou o formulário ativo) recebe o <xref:System.Windows.Forms.Control.HelpRequested> evento. Manipular o <xref:System.Windows.Forms.Control.HelpRequested> evento para executar ações personalizadas de Ajuda.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem com um botão de Ajuda, tratar o <xref:System.Windows.Forms.Control.HelpRequested?displayProperty=nameWithType> evento e mostrar uma janela de ajuda personalizada em resposta ao evento.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda, usando o arquivo de Ajuda especificado.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Quando o usuário clica o botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+ O `helpFilePath` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem com um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` arquivo de Ajuda é aberto. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#3)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#3)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores o Especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <summary>Exibe uma caixa de mensagem na frente do objeto especificado e com o texto, legenda, botões, ícone, botão padrão e opções especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo. Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Você pode ter um máximo de três botões na caixa de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir um <xref:System.Windows.Forms.MessageBox> com as opções de suporte por essa sobrecarga de <xref:System.Windows.Forms.MessageBox.Show%2A>. Depois de verificar que uma variável de cadeia de caracteres, `ServerName`, está vazio, o exemplo exibe um <xref:System.Windows.Forms.MessageBox>, oferecendo a opção de cancelar a operação de usuário. Se o <xref:System.Windows.Forms.MessageBox.Show%2A> o valor de retorno do método é avaliada como <xref:System.Windows.Forms.DialogResult.Yes>, o formulário que é exibido o <xref:System.Windows.Forms.MessageBox> está fechado.  
+  
+ [!code-cpp[MessageBox.Show Variations#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#2)]
+ [!code-csharp[MessageBox.Show Variations#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#2)]
+ [!code-vb[MessageBox.Show Variations#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ <paramref name="defaultButton" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="options" />especificado <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> ou <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" /> e especificado um valor de <paramref name="owner" /> parâmetro. Essas duas opções devem ser usadas somente se você chamar a versão desse método que não tem um <paramref name="owner" /> parâmetro.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <param name="keyword">A palavra-chave ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <summary>Exibe uma caixa de mensagem com o texto, a legenda, os botões, o ícone, o botão padrão, as opções e o botão de Ajuda especificados, usando o arquivo de Ajuda e a palavra-chave de Ajuda especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto e o tópico de palavra-chave da Ajuda é identificado pelo `keyword` parâmetro é exibido. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem com um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` arquivo de Ajuda é aberto e o tópico identificado pelo `mspaint.chm::/paint_brush.htm` palavra-chave é exibida. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#9)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#9)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <param name="navigator">Um dos valores de <see cref="T:System.Windows.Forms.HelpNavigator" />.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda, usando o arquivo de Ajuda especificado e <see langword="HelpNavigator" />.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto e o conteúdo da Ajuda é identificado pelo `navigator` parâmetro é exibido. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+ Compilado ajuda arquivos fornecem sumário, índice, pesquisa e links de palavra-chave em páginas. Você pode usar os seguintes valores para `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ O `helpFilePath` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem com um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` arquivo de Ajuda é aberto e a guia de índice da Ajuda é exibida. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#5)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#5)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda, usando o arquivo de Ajuda especificado.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer. Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+ O `helpFilePath` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem pai para o formulário principal. A caixa de mensagem exibe um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` arquivo de Ajuda é aberto. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#4)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#4)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator, object param);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator, object param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+        <Parameter Name="param" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <param name="navigator">Um dos valores de <see cref="T:System.Windows.Forms.HelpNavigator" />.</param>
+        <param name="param">A ID numérica do tópico da ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda, usando o arquivo de Ajuda especificado, <see langword="HelpNavigator" /> e o tópico da Ajuda.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto e o conteúdo da Ajuda é identificado pelo `navigator` parâmetro é exibido. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+ Compilado ajuda arquivos fornecem sumário, índice, pesquisa e links de palavra-chave em páginas. Você pode usar os seguintes valores para `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ Você pode usar `param` para fornecer mais refinamento do <xref:System.Windows.Forms.HelpNavigator.Topic> comando. Se o valor especificado no `navigator` parâmetro é <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Find>, esse valor deve ser `null`. Se o `navigator` referências de parâmetro <xref:System.Windows.Forms.HelpNavigator.Topic>, esse valor deve fazer referência a um objeto que contém o valor numérico do tópico a ser exibido.  
+  
+ O `helpFilePath` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem com um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` ajuda arquivo é aberto e a guia de índice da Ajuda e o tópico identificado pelo `ovals` palavra-chave são exibidas. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#7)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#7)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <param name="keyword">A palavra-chave ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <summary>Exibe uma caixa de mensagem com o texto, a legenda, os botões, o ícone, o botão padrão, as opções e o botão de Ajuda especificados, usando o arquivo de Ajuda e a palavra-chave de Ajuda especificados.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer. Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como o proprietário de nível superior da caixa de diálogo.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto e o tópico de palavra-chave da Ajuda é identificado pelo `keyword` parâmetro é exibido. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem pai para a janela principal. A caixa de mensagem exibe um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` arquivo de Ajuda é aberto e o tópico identificado pelo `mspaint.chm::/paint_brush.htm` palavra-chave é exibida. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#10)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#10)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <param name="navigator">Um dos valores de <see cref="T:System.Windows.Forms.HelpNavigator" />.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda, usando o arquivo de Ajuda especificado e <see langword="HelpNavigator" />.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer. Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto e o conteúdo da Ajuda é identificado pelo `navigator` parâmetro é exibido. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+ Compilado ajuda arquivos fornecem sumário, índice, pesquisa e links de palavra-chave em páginas. Você pode usar os seguintes valores para `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ O `helpFilePath` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem pai para a janela principal. A caixa de mensagem exibe um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` arquivo de Ajuda é aberto e a guia de índice da Ajuda é exibida. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#6)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#6)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator, object param);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator, object param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+        <Parameter Name="param" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Uma implementação de <see cref="T:System.Windows.Forms.IWin32Window" /> que possuirá a caixa de diálogo modal.</param>
+        <param name="text">O texto a ser exibido na caixa de mensagem.</param>
+        <param name="caption">O texto a ser exibido na barra de título da caixa de mensagem.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores que especifica quais botões devem ser exibidos na caixa de mensagem.</param>
+        <param name="icon">Uma da <see cref="T:System.Windows.Forms.MessageBoxIcon" /> valores que especifica qual ícone será exibido na caixa de mensagem.</param>
+        <param name="defaultButton">Uma da <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" /> valores que especifica o botão padrão da caixa de mensagem.</param>
+        <param name="options">Uma da <see cref="T:System.Windows.Forms.MessageBoxOptions" /> valores que especifica quais opções de exibição e associação serão usadas para a caixa de mensagem. Você pode passar 0 se você quiser usar os padrões.</param>
+        <param name="helpFilePath">O caminho e o nome do arquivo de ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <param name="navigator">Um dos valores de <see cref="T:System.Windows.Forms.HelpNavigator" />.</param>
+        <param name="param">A ID numérica do tópico da ajuda a ser exibido quando o usuário clica no botão Ajuda.</param>
+        <summary>Exibe uma caixa de mensagem com o texto especificado, legenda, botões, ícone, botão padrão, opções e botão Ajuda, usando o arquivo de Ajuda especificado, <see langword="HelpNavigator" /> e o tópico da Ajuda.</summary>
+        <returns>Um dos valores de <see cref="T:System.Windows.Forms.DialogResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de mensagem é uma caixa de diálogo modal, o que significa que nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos no formulário modal. O programa deve ocultar ou fechar um formulário restrito (normalmente em resposta a uma ação do usuário) antes de entrada para outra forma pode ocorrer. Você pode usar o `owner` parâmetro para especificar um determinado objeto que implementa o <xref:System.Windows.Forms.IWin32Window> interface, que servirá como a janela de nível superior e o proprietário da caixa de diálogo.  
+  
+ Quando o usuário clica no botão Ajuda, o arquivo de ajuda especificado no `helpFilePath` parâmetro é aberto e o conteúdo da Ajuda é identificado pelo `navigator` parâmetro é exibido. O formulário que possui a caixa de mensagem (ou o formulário ativo) também recebe a <xref:System.Windows.Forms.Control.HelpRequested> eventos.  
+  
+ Compilado ajuda arquivos fornecem sumário, índice, pesquisa e links de palavra-chave em páginas. Você pode usar os seguintes valores para `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ Você pode usar `param` para fornecer mais refinamento do <xref:System.Windows.Forms.HelpNavigator.Topic> comando. Se o valor especificado no `navigator` parâmetro é <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Find>, esse valor deve ser `null`. Se o `navigator` referências de parâmetro <xref:System.Windows.Forms.HelpNavigator.Topic>, esse valor deve fazer referência a um objeto que contém o valor numérico do tópico a ser exibido.  
+  
+ O `helpFilePath` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir uma caixa de mensagem pai para a janela principal. A caixa de mensagem exibe um botão de Ajuda. Quando o usuário clica no botão de Ajuda, o `Mspaint.chm` ajuda arquivo é aberto e a guia de índice da Ajuda e o tópico identificado pelo `ovals` palavra-chave são exibidas. O exemplo requer que o `Mspaint.chm` arquivo de Ajuda está instalado.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#8)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#8)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ -ou-  
+  
+ <paramref name="icon" /> não é membro de <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ -ou-  
+  
+ O <paramref name="defaultButton" /> especificado não é membro do <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de exibir o <see cref="T:System.Windows.Forms.MessageBox" /> em um processo que não está em execução no modo Interativo do Usuário. Isso é especificado pela propriedade <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />especificado ambos <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> e <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ -ou-  
+  
+ <paramref name="buttons" />especificada uma combinação inválida de <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

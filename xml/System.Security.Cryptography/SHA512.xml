@@ -1,0 +1,161 @@
+<Type Name="SHA512" FullName="System.Security.Cryptography.SHA512">
+  <TypeSignature Language="C#" Value="public abstract class SHA512 : System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SHA512 extends System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.SHA512" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Calcula o hash <see cref="T:System.Security.Cryptography.SHA512" /> para os dados de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O hash é usado como um valor exclusivo de tamanho fixo que representa uma grande quantidade de dados. Hashes de dois conjuntos de dados devem corresponder somente se os dados correspondentes também correspondem. Pequenas alterações aos dados resultar em grandes alterações imprevisíveis no hash.  
+  
+ Tamanho de hash para o <xref:System.Security.Cryptography.SHA512> algoritmo é 512 bits.  
+  
+ Esta é uma classe abstrata. É a única implementação desta classe <xref:System.Security.Cryptography.SHA512Managed>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir calcula o <xref:System.Security.Cryptography.SHA512> hash `data` e armazena em `result`. Este exemplo assume que há uma constante predefinida `DATA_SIZE`.  
+  
+ [!code-cpp[Classic SHA512 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic SHA512 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SHA512 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic SHA512 Example/CS/source.cs#1)]
+ [!code-vb[Classic SHA512 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic SHA512 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SHA512 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Security.Cryptography.SHA512" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo crie uma nova instância de uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SHA512 Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SHA512 Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SHA512</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da implementação padrão do <see cref="T:System.Security.Cryptography.SHA512" />.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Security.Cryptography.SHA512" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">O algoritmo foi usado com o modo FIPS (Federal Information Processing Standards) habilitado, mas ele não é compatível com FIPS.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SHA512 Create (string hashName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SHA512 Create(string hashName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SHA512</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hashName">O nome da implementação específica do <see cref="T:System.Security.Cryptography.SHA512" /> a ser usado.</param>
+        <summary>Cria uma nova instância de uma implementação especificada de <see cref="T:System.Security.Cryptography.SHA512" />.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Security.Cryptography.SHA512" /> usando a implementação especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores possíveis para `hashName` são SHA512, System.Security.Cryptography.SHA51, System.Security.Cryptography.SHA512Managed e System.Security.Cryptography.SHA512CryptoServiceProvider.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">O algoritmo descrito pelo parâmetro <paramref name="hashName" /> foi usado com o modo FIPS (Federal Information Processing Standards) habilitado, mas ele não é compatível com FIPS.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

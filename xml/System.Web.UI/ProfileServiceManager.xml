@@ -1,0 +1,162 @@
+<Type Name="ProfileServiceManager" FullName="System.Web.UI.ProfileServiceManager">
+  <TypeSignature Language="C#" Value="public class ProfileServiceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfileServiceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ProfileServiceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um conjunto de propriedades de perfil pré-carregados e o local de uma implementação personalizada do serviço de perfil.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ProfileServiceManager> classe corresponde ao <xref:System.Web.UI.ScriptManager.ProfileService%2A> propriedades que podem ser adicionadas para o <xref:System.Web.UI.ScriptManager> ou <xref:System.Web.UI.ScriptManagerProxy> controle.  
+  
+ Você pode usar <xref:System.Web.UI.ProfileServiceManager> para especificar um conjunto de propriedades de perfil que será pré-carregada quando a página é renderizada e estará disponível para o script de cliente. Além disso, em vez de usar o perfil interno de serviço Web fornecido pelos recursos do AJAX do ASP.NET, você pode usar essa classe para fornecer o caminho de uma implementação alternativa do serviço Web que será usada para carregar ou salvar as propriedades de perfil de script.  
+  
+ Para usar o serviço de perfil em seu aplicativo, você deve habilitá-la no arquivo de configuração. Se você usar o serviço Web de perfil interno e não precisa pré-carregar propriedades, você não precisa declarar explicitamente o perfil do service manager na página.  
+  
+ Para especificar declarativamente um conjunto de propriedades pré-carregados ou um perfil personalizado do serviço Web, inclua uma `<ProfileService>` elemento dentro do `<asp:ScriptManager>` elemento na página, conforme mostrado no exemplo a seguir.  
+  
+```  
+<asp:ScriptManager ID="SM1" runat="server">  
+  <ProfileService LoadProperties="propertyA,propertyB" Path="MyProfileService.asmx" />  
+</asp:ScriptManager>  
+```  
+  
+ Também por meio de programação, você pode configurar o serviço de perfil para pré-carregar propriedades ou para usar um perfil personalizado do serviço Web.  
+  
+ O exemplo a seguir mostra a estrutura de classe básica que deve ser implementada em um serviço Web de perfil personalizado.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ProfileServiceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ProfileServiceManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperties">
+      <MemberSignature Language="C#" Value="public string[] LoadProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LoadProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ProfileServiceManager.LoadProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz que contém as propriedades de perfil que serão disponibilizadas para o script de cliente.</summary>
+        <value>Uma matriz de cadeia de caracteres que contém os nomes das propriedades de perfil que serão pré-carregados e disponibilizados para o script de cliente. O padrão é uma matriz vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> contém pelo menos uma cadeia de caracteres que corresponde ao nome de uma propriedade de perfil, em seguida, o serviço de perfil interno no aplicativo Web recupera dados de perfil do usuário atual para cada uma das propriedades do perfil especificado. Os valores de propriedade de perfil são serializados e disponibilizados para o script de cliente por meio de [propriedades de campo](http://msdn.microsoft.com/library/ebce3c40-7017-482b-94df-91f7448fda05) coleção.  
+  
+> [!NOTE]
+>  Para definir essa propriedade declarativamente, use uma lista separada por vírgulas de nomes de propriedade. Para valores de propriedade agrupados, use a sintaxe *GroupName*.* PropertyName*.  
+  
+ Quando <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> é uma matriz vazia, nenhum perfil de dados esteja pré-carregado.  
+  
+ O <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> propriedade pode ser especificada no <xref:System.Web.UI.ScriptManager> controle ou em um associado <xref:System.Web.UI.ScriptManagerProxy> controle. Quando <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> é definido em ambos os <xref:System.Web.UI.ScriptManager> controle e, em um ou mais <xref:System.Web.UI.ScriptManagerProxy> controles, o conjunto de propriedades é determinada pela combinação de todas as propriedades especificadas. Propriedades duplicadas são ignoradas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Web.UI.ProfileServiceManager.LoadProperties" /> propriedade inclui nomes de propriedade que não estão no esquema de perfil do aplicativo atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ProfileServiceManager.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho de uma implementação personalizada do perfil de serviço da Web.</summary>
+        <value>O caminho de uma implementação personalizada do perfil de serviço da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Caminhos virtuais relativos, absolutos caminhos virtuais e caminhos totalmente qualificados são permitidos.  
+  
+ Se o <xref:System.Web.UI.ProfileServiceManager.Path%2A> propriedade não for definida, o valor de retorno é <xref:System.String.Empty>. Nesse caso, os recursos do AJAX do ASP.NET, em seguida, usará o perfil interno serviço da Web que corresponde ao caminho padrão interno seguintes: ~ / ScriptServices_ProfileService.asmx. O mesmo comportamento ocorre se você definir <xref:System.Web.UI.ProfileServiceManager.Path%2A> para ser um valor vazio ou `null`.  
+  
+ <xref:System.Web.UI.ProfileServiceManager.Path%2A>pode ser especificado no <xref:System.Web.UI.ScriptManager> controle ou em um associado <xref:System.Web.UI.ScriptManagerProxy> controle. Quando <xref:System.Web.UI.ProfileServiceManager.Path%2A> é definida como o <xref:System.Web.UI.ScriptManagerProxy> aplicam do nível, as seguintes condições:  
+  
+-   Se houver vários proxies na hierarquia de controle, <xref:System.Web.UI.ProfileServiceManager.Path%2A> não precisa ser definida em cada instância do proxy.  
+  
+-   Se <xref:System.Web.UI.ProfileServiceManager.Path%2A> é explicitamente definido em uma instância do proxy, o valor deve ser o mesmo para todos os outros proxies no qual essa propriedade é definida explicitamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Foi definido mais de um caminho exclusivo na hierarquia do controle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

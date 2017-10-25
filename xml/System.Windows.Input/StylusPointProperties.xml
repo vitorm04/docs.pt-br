@@ -1,0 +1,498 @@
+<Type Name="StylusPointProperties" FullName="System.Windows.Input.StylusPointProperties">
+  <TypeSignature Language="C#" Value="public static class StylusPointProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit StylusPointProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPointProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém um <see cref="T:System.Windows.Input.StylusPointProperty" /> para cada propriedade que dá suporte a WPF.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] acompanha predefinido <xref:System.Windows.Input.StylusPointProperty> objetos para propriedades que normalmente são coletados por uma caneta e um digitalizador. Você pode usar essas propriedades internas para criar um <xref:System.Windows.Input.StylusPointDescription>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Input.StylusPointDescription> usando o <xref:System.Windows.Input.StylusPointProperties> campos.  
+  
+ [!code-csharp[PacketSpy#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[PacketSpy#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AltitudeOrientation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty AltitudeOrientation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty AltitudeOrientation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.AltitudeOrientation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o ângulo entre o eixo da caneta e a superfície do Tablet PC.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Input.StylusPointProperties.AltitudeOrientation> é 0 quando a caneta é paralela à superfície e 90 quando a caneta é perpendicular à superfície de. Os valores são negativos quando a caneta é invertida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzimuthOrientation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty AzimuthOrientation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty AzimuthOrientation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.AzimuthOrientation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a rotação horária do cursor, por meio de um intervalo completo circular em torno do eixo z.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BarrelButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty BarrelButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty BarrelButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.BarrelButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o botão de fora de uma caneta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressure">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty ButtonPressure;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty ButtonPressure" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.ButtonPressure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a pressão sobre um botão sensível à pressão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty Height;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty Height" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.Height" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a altura do ponto de contato no digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A altura do ponto de contato depende do tipo de instrumento que é usado. O valor de <xref:System.Windows.Input.StylusPointProperties.Height> podem variar quando toque é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalPressure">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty NormalPressure;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty NormalPressure" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.NormalPressure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a pressão da ponta da caneta perpendicular à superfície do Tablet PC.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketStatus">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty PacketStatus;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty PacketStatus" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.PacketStatus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status atual do cursor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Input.StylusPointProperties.PacketStatus> campo contém um ou mais dos seguintes valores de sinalizador em um campo de bits. Use os operadores de bit para verificar o status desses valores.  
+  
+-   O cursor estiver tocando a superfície de desenho (valor = 1).  
+  
+-   O cursor é invertido. Por exemplo, o fim de borracha da caneta é apontando para a superfície (valor = 2).  
+  
+-   Não usado (valor = 4).  
+  
+-   O botão de rosca é pressionado (valor = 8).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PitchRotation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty PitchRotation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty PitchRotation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.PitchRotation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a dica é acima ou abaixo de uma linha horizontal perpendicular à superfície de escrita.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Isso requer um digitalizador tridimensional.  
+  
+ O valor é negativo se ele estiver abaixo da linha e positivo se a dica de está acima da linha. Por exemplo, se você mantenha a caneta você e gravar em uma parede imaginária, a densidade é positiva se a dica é acima de uma linha se estende por você na parede.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RollRotation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty RollRotation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty RollRotation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.RollRotation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a rotação horária da caneta ao redor de seu próprio eixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Isso requer um digitalizador tridimensional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryTipButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty SecondaryTipButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty SecondaryTipButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.SecondaryTipButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o botão de ponta secundária de uma caneta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialNumber">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty SerialNumber;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty SerialNumber" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.SerialNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse valor para recuperar o <xref:System.Windows.Input.StylusPoint> da fila de pacotes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemTouch">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty SystemTouch;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty SystemTouch" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.SystemTouch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o ponto de contato que gera a <see cref="T:System.Windows.Input.StylusPoint" />, independentemente de serem iniciados por um dedo, palma ou qualquer outro toque.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TangentPressure">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty TangentPressure;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty TangentPressure" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.TangentPressure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a pressão dica ao longo do plano da superfície do Tablet PC.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.StylusPointProperties.TangentPressure> campo representa pressão ao longo do plano da superfície do Tablet PC. O <xref:System.Windows.Input.StylusPointProperties.NormalPressure> campo representa pressão perpendicular ao plano de superfície do Tablet PC.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TipButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty TipButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty TipButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.TipButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o botão de dica de uma caneta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TwistOrientation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty TwistOrientation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty TwistOrientation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.TwistOrientation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a rotação horária do cursor em torno de seu próprio eixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty Width;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty Width" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.Width" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a largura do ponto de contato no digitalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura do ponto de contato depende do tipo de instrumento que é usado.  O valor de <xref:System.Windows.Input.StylusPointProperties.Width> podem variar quando toque é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty X;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty X" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a coordenada x no espaço de coordenadas do tablet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XTiltOrientation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty XTiltOrientation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty XTiltOrientation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.XTiltOrientation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o ângulo entre o (<paramref name="y,z" />) plano e o plano de caneta e o eixo y.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty Y;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty Y" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a coordenada y no espaço de coordenadas do tablet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YawRotation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty YawRotation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty YawRotation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.YawRotation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o ângulo da caneta à esquerda ou à direita em torno do centro do eixo horizontal quando a caneta é horizontal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Isso requer um digitalizador tridimensional.  
+  
+ Se você mantiver a caneta na frente você e a gravação em uma parede imaginária, zero desvio indica que a caneta perpendicular na parede. O valor é negativo se a dica é à esquerda do perpendicular e positivo se a dica é à direita do perpendicular.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YTiltOrientation">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty YTiltOrientation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty YTiltOrientation" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.YTiltOrientation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o ângulo entre (x, z) plano e o plano de caneta e o eixo x.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso se aplica a um cursor da caneta.  
+  
+ O valor é 0 quando a caneta é perpendicular à superfície de desenho. O valor é positivo quando a caneta é para cima ou do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.StylusPointProperty Z;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.StylusPointProperty Z" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPointProperties.Z" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a coordenada z ou a distância da ponta da caneta da superfície do tablet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,122 @@
+<Type Name="ValidationState" FullName="System.Activities.Presentation.Validation.ValidationState">
+  <TypeSignature Language="C#" Value="public enum ValidationState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Validation.ValidationState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Uma enumeração de valores que representam os estados de validação de atividades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores numéricos de cada um dos valores de enumeração indicam a severidade do erro.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChildInvalid">
+      <MemberSignature Language="C#" Value="ChildInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Validation.ValidationState ChildInvalid = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Validation.ValidationState.ChildInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Validation.ValidationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor que representa que a validação encontrada uma atividade filho inválido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores numéricos de cada um dos valores de enumeração indicam a severidade do erro. O valor associado à atividade filho inválido é 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Validation.ValidationState Error = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Validation.ValidationState.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Validation.ValidationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor que indica que ocorreu um erro durante a validação de uma atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores numéricos de cada um dos valores de enumeração indicam a severidade do erro. O valor associado com o estado de erro é 3.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Valid">
+      <MemberSignature Language="C#" Value="Valid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Validation.ValidationState Valid = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Validation.ValidationState.Valid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Validation.ValidationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor que indica que uma atividade é válida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores numéricos de cada um dos valores de enumeração indicam a severidade do erro. O valor associado com o estado válido é 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Validation.ValidationState Warning = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Validation.ValidationState.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Validation.ValidationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor que indica que ocorreu um aviso durante a validação de uma atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores numéricos de cada um dos valores de enumeração indicam a severidade do erro. O valor associado com o estado de aviso é 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

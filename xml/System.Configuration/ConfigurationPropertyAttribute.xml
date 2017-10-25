@@ -1,0 +1,282 @@
+<Type Name="ConfigurationPropertyAttribute" FullName="System.Configuration.ConfigurationPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ConfigurationPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Declarativamente instrui o .NET Framework para instanciar uma propriedade de configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Configuration.ConfigurationPropertyAttribute> para decorar uma propriedade de configuração, que instruirá o .NET Framework para criar uma instância e inicializar a propriedade usando o valor do parâmetro decoração.  
+  
+> [!NOTE]
+>  A maneira mais simples para criar um elemento de configuração personalizada é usar o modelo (declarativo) atribuída. Declare as propriedades públicas personalizadas e decorá-los com o <xref:System.Configuration.ConfigurationPropertyAttribute> atributo. Para cada propriedade marcada com esse atributo, o .NET Framework usa reflexão para ler os parâmetros de decoração e criar um relacionados <xref:System.Configuration.ConfigurationProperty> instância. Você também pode usar o modelo de programação, nesse caso, é sua responsabilidade declarar as propriedades públicas personalizadas e retornar sua coleção.  
+  
+ O sistema de configuração do .NET Framework fornece tipos de atributos que podem ser usados durante a criação de elementos de configuração personalizada. Há dois tipos de tipos de atributo:  
+  
+1.  Os tipos de instruindo o .NET Framework como instanciar as propriedades do elemento de configuração personalizado. Esses tipos incluem:  
+  
+    -   <xref:System.Configuration.ConfigurationCollectionAttribute>  
+  
+    -   <xref:System.Configuration.ConfigurationPropertyAttribute>  
+  
+2.  Os tipos de instruindo o .NET Framework como validar as propriedades de elemento de configuração personalizado. Esses tipos incluem:  
+  
+    -   <xref:System.Configuration.IntegerValidatorAttribute>  
+  
+    -   <xref:System.Configuration.LongValidatorAttribute>  
+  
+    -   <xref:System.Configuration.RegexStringValidatorAttribute>  
+  
+    -   <xref:System.Configuration.StringValidatorAttribute>  
+  
+    -   <xref:System.Configuration.TimeSpanValidatorAttribute>  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir as propriedades de um personalizado <xref:System.Configuration.ConfigurationSection> objeto usando o <xref:System.Configuration.ConfigurationPropertyAttribute> atributo.  
+  
+ O exemplo contém duas classes. O `UrlsSection` classe personalizada usa o <xref:System.Configuration.ConfigurationPropertyAttribute> para definir suas próprias propriedades. O `UsingConfigurationPropertyAttribute` classe usa a `UrlsSection` para ler e gravar a seção personalizada no arquivo de configuração do aplicativo.  
+  
+ [!code-csharp[System.Configuration.ConfigurationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/CS/customsection.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/VB/customsection.vb#1)]  
+  
+ [!code-csharp[System.Configuration.ConfigurationPropertyAttribute#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/CS/ConfigurationPropertyAttribute.cs#21)]
+ [!code-vb[System.Configuration.ConfigurationPropertyAttribute#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/VB/ConfigurationPropertyAttribute.vb#21)]  
+  
+ A seguir está um trecho do arquivo de configuração que contém a seção personalizada conforme definido no exemplo anterior.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+    <configSections>  
+        <section name="CustomSection" type="UrlsSection, UsingConfigurationPropertyAttribute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
+    </configSections>  
+    <CustomSection name="Contoso" url="http://www.contoso.com" />  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationPropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome do <see cref="T:System.Configuration.ConfigurationProperty" /> objeto definido.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationPropertyAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyAttribute.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor padrão para a propriedade decorada.</summary>
+        <value>O objeto que representa o valor padrão da propriedade decorada do elemento de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Configuration.ConfigurationPropertyAttribute.DefaultValue%2A> propriedade.  
+  
+ [!code-csharp[System.Configuration.ConfigurationPropertyAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/CS/customsection.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationPropertyAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/VB/customsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultCollection">
+      <MemberSignature Language="C#" Value="public bool IsDefaultCollection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefaultCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyAttribute.IsDefaultCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se esta é a coleção de propriedade padrão para a propriedade de configuração realçada.</summary>
+        <value>
+          <see langword="true" />Se a propriedade representa a coleção padrão de um elemento. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationPropertyAttribute.IsDefaultCollection%2A> o valor da propriedade será ignorado se a propriedade realçada não é uma coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKey">
+      <MemberSignature Language="C#" Value="public bool IsKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyAttribute.IsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se esta é uma propriedade de chave para a propriedade de elemento decorado.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é uma propriedade de chave para um elemento da coleção; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationPropertyAttribute.IsKey%2A> a propriedade se aplica somente se a propriedade é decora é uma coleção. Ele não tem nenhum efeito se a propriedade não é uma coleção. Vários elementos podem ser marcados como <xref:System.Configuration.ConfigurationPropertyAttribute.IsKey%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Configuration.ConfigurationPropertyAttribute.IsKey%2A> propriedade.  
+  
+ [!code-csharp[System.Configuration.ConfigurationPropertyAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/CS/customsection.cs#2)]
+ [!code-vb[System.Configuration.ConfigurationPropertyAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/VB/customsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public bool IsRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyAttribute.IsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade do elemento decorado é necessária.</summary>
+        <value>
+          <see langword="true" /> se a propriedade for necessária; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Configuration.ConfigurationPropertyAttribute.DefaultValue%2A> propriedade.  
+  
+ [!code-csharp[System.Configuration.ConfigurationPropertyAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/CS/customsection.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationPropertyAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationPropertyAttribute/VB/customsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade decorado do elemento de configuração.</summary>
+        <value>O nome da propriedade decorado do elemento de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationPropertyOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationPropertyOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyAttribute.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Configuration.ConfigurationPropertyOptions" /> para a propriedade do elemento de configuração realçada.</summary>
+        <value>Uma da <see cref="T:System.Configuration.ConfigurationPropertyOptions" /> associados com a propriedade de valores de enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,56 @@
+<Type Name="IOrderedQueryable&lt;T&gt;" FullName="System.Linq.IOrderedQueryable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IOrderedQueryable&lt;out T&gt; : System.Collections.Generic.IEnumerable&lt;out T&gt;, System.Linq.IOrderedQueryable, System.Linq.IQueryable&lt;out T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOrderedQueryable`1&lt;+ T&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable, class System.Linq.IOrderedQueryable, class System.Linq.IQueryable, class System.Linq.IQueryable`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IOrderedQueryable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IOrderedQueryable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de conteúdo da fonte de dados.</typeparam>
+    <summary>Representa o resultado de uma operação de classificação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IOrderedQueryable%601> interface destina implementação por provedores de consulta.  
+  
+ Essa interface representa o resultado de uma consulta de classificação que chama o método <xref:System.Linq.Queryable.OrderBy%2A>, <xref:System.Linq.Queryable.OrderByDescending%2A>, <xref:System.Linq.Queryable.ThenBy%2A> ou <xref:System.Linq.Queryable.ThenByDescending%2A>. Quando <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> é chamado e passado a uma árvore de expressão que representa uma consulta de classificação resultante <xref:System.Linq.IQueryable%601> objeto deve ser de um tipo que implementa <xref:System.Linq.IOrderedQueryable%601>.  
+  
+ Para obter mais informações sobre como criar seu próprio provedor LINQ, consulte [LINQ: Criando um provedor IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) blogs do MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

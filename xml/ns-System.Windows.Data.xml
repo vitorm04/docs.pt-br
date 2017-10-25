@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Data">
+  <Docs>
+    <summary>Contém classes usadas para propriedades de associação para fontes de dados, classes de provedor de fonte de dados e implementações de dados específicos de coleções e modos de exibição.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

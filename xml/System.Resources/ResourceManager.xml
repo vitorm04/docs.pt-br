@@ -1,0 +1,1820 @@
+<Type Name="ResourceManager" FullName="System.Resources.ResourceManager">
+  <TypeSignature Language="C#" Value="public class ResourceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ResourceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResourceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um gerenciador de recursos que fornece acesso conveniente aos recursos específicos da cultura no tempo de execução.  
+  
+ **Observação de segurança**: chamar métodos nesta classe com dados não confiáveis é um risco de segurança. Chame os métodos na classe somente com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](https://docs.com/rick-anderson-1/8710/untrusted-data-security-risks).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager> classe recupera os recursos de um arquivo. Resources binários que é inserido em um assembly ou de um arquivo. Resources de autônomo. Se um aplicativo foi localizado e recursos localizados foram implantados em [assemblies satélite](~/docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md), ele procura recursos específicos de cultura, fornece recursos de fallback quando não existe um recurso localizado e dá suporte a serialização de recurso.  
+  
+ Para obter mais informações sobre como criar e gerenciar recursos em aplicativos de área de trabalho e [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, consulte as seções a seguir:  
+  
+-   [Aplicativos de área de trabalho](#desktop)  
+  
+    -   [Criando recursos](#creating_resources)  
+  
+    -   [Instanciar um objeto de ResourceManager](#instantiating)  
+  
+    -   [ResourceManager e recursos específicos de cultura](#CultureSpecific)  
+  
+    -   [Recuperando recursos](#retrieving)  
+  
+    -   [Tratamento de exceções de MissingSatelliteAssemblyException e MissingManifestResourceException](#exception)  
+  
+    -   [Controle de versão do recurso](#versioning)  
+  
+    -   [\<satelliteassemblies > nó do arquivo de configuração](#config)  
+  
+-   [Aplicativos da Windows Store](#ws)  
+  
+<a name="desktop"></a>   
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Para aplicativos de área de trabalho, o <xref:System.Resources.ResourceManager> classe recupera os recursos de arquivos de recurso binário (. resources). Normalmente, um compilador de idioma ou o [Assembly Linker (AL.exe)](~/docs/framework/tools/al-exe-assembly-linker.md) incorpora esses arquivos de recurso em um assembly. Você também pode usar um <xref:System.Resources.ResourceManager> objeto para recuperar recursos diretamente de um arquivo. Resources que não é inserido em um assembly, ao chamar o <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A> método.  
+  
+> [!CAUTION]
+>  Usar arquivos. Resources autônomo em um aplicativo ASP.NET interromperá a implantação de XCOPY, porque os recursos permanecerem bloqueados até que eles sejam liberados explicitamente pelo <xref:System.Resources.ResourceManager.ReleaseAllResources%2A> método. Se você quiser implantar recursos em seus aplicativos ASP.NET, você deve compilar os arquivos. Resources em assemblies satélite.  
+  
+ Em um aplicativo com base em recursos, um arquivo. Resources contém os recursos da cultura padrão cujos recursos serão usados se não há recursos específicos de cultura podem ser encontrados. Por exemplo, se a cultura padrão de um aplicativo for inglês (en), os recursos do idioma inglês são usados sempre que não não possível encontrar recursos localizados para uma cultura específica, como inglês (Estados Unidos) (en-US) ou francês (França) (fr-FR). Normalmente, os recursos para a cultura padrão são inseridos no assembly principal do aplicativo e recursos para outras culturas localizadas são inseridos em assemblies de satélite. Assemblies satélites contêm apenas os recursos. Eles têm o mesmo nome de arquivo raiz como o assembly principal e uma extensão de. Resources. Para aplicativos cujos assemblies não são registrados no cache de assembly global, os assemblies satélite são armazenados em um subdiretório do aplicativo cujo nome corresponde a cultura do assembly.  
+  
+<a name="creating_resources"></a>   
+### <a name="creating-resources"></a>Criando recursos  
+ Quando você desenvolve um aplicativo com base em recursos, você armazena informações sobre o recurso em arquivos de texto (arquivos que têm uma extensão. txt ou .restext) ou XML (arquivos que têm uma extensão. resx). Em seguida, compilar o texto ou arquivos XML com o [gerador de arquivo (Resgen.exe)](~/docs/framework/tools/resgen-exe-resource-file-generator.md) para criar um arquivo. Resources binário. Em seguida, você pode inserir o arquivo. Resources resultante em um arquivo executável ou biblioteca usando uma opção de compilador como `/resources` para os compiladores c# e Visual Basic, ou você pode incorporá-lo em um assembly satélite usando o. Se você incluir um arquivo. resx no projeto do Visual Studio, o Visual Studio trata a compilação e a incorporação de padrão e recursos localizados automaticamente como parte do processo de compilação.  
+  
+ Idealmente, você deve criar os recursos de cada idioma seu aplicativo dá suporte a, ou pelo menos um subconjunto significativo de cada idioma. Os nomes dos arquivos binários siga a convenção de nomenclatura *nome base*.* cultureName*. Resources, onde *nome base* é o nome do aplicativo ou o nome de uma classe, dependendo do nível de detalhe que você deseja. O <xref:System.Globalization.CultureInfo.Name%2A?displayProperty=nameWithType> propriedade é usada para determinar *cultureName*. Um recurso para a cultura do padrão do aplicativo deve ser nomeado *nome base*. Resources.  
+  
+ Por exemplo, suponha que um assembly tem vários recursos em um arquivo de recurso que tem o nome base MyResources. Esses arquivos de recurso devem ter nomes como MyResources.ja-JP.resources para a cultura Japão (japonês), MyResources.de.resources para a cultura alemã, MyResources.zh CHS.resources para a cultura de chinês simplificada e MyResources.fr BE.resources para a cultura Francês (Bélgica). O arquivo de recurso padrão deve ser nomeado MyResources.resources. Os arquivos de recursos específicos de cultura normalmente são empacotados em assemblies de satélite para cada cultura. O arquivo de recurso padrão deve ser inserido no assembly principal do aplicativo.  
+  
+ Observe que permite que os recursos a ser marcado como privado, mas você deve sempre marcá-los como public para que eles possam ser acessados por outros assemblies. (Porque um assembly satélite não contém nenhum código, recursos que são marcados como particulares estão disponíveis para seu aplicativo por meio de qualquer mecanismo.)  
+  
+ Para obter mais informações sobre como criar, empacotamento e implantação de recursos, consulte os artigos [criar arquivos de recurso](~/docs/framework/resources/creating-resource-files-for-desktop-apps.md), [Criando Assemblies Satélites](~/docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md), e [Empacotando e implantando recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+  
+<a name="instantiating"></a>   
+### <a name="instantiating-a-resourcemanager-object"></a>Criando uma instância de um objeto ResourceManager  
+ Você instancia um <xref:System.Resources.ResourceManager> objeto que recupera os recursos de um arquivo. Resources incorporado chamando um dos seus sobrecargas do construtor de classe. Isso agrupa rigidamente uma <xref:System.Resources.ResourceManager> objeto com um arquivo. Resources específico e associadas localizado arquivos. Resources em assemblies de satélite.  
+  
+ Os dois mais comumente chamado de construtores são:  
+  
+-   <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>procura a recursos com base em duas partes de informações que você forneça: o nome base do arquivo. Resources e o assembly no qual reside o arquivo. Resources padrão. O nome de base inclui o nome de namespace e raiz do arquivo. Resources, sem sua cultura ou extensão. Observe que os arquivos. Resources que são compilados na linha de comando geralmente não incluem um nome de namespace, enquanto os arquivos. Resources que são criados no ambiente do Visual Studio. Por exemplo, se um arquivo de recurso é chamado MyCompany.StringResources.resources e o <xref:System.Resources.ResourceManager> construtor é chamado de um método estático denominado `Example.Main`, o código a seguir cria um <xref:System.Resources.ResourceManager> objeto que pode recuperar os recursos do arquivo. Resources:  
+  
+     [!code-csharp[Conceptual.Resources.Retrieving#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/ctor1.cs#1)]
+     [!code-vb[Conceptual.Resources.Retrieving#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/ctor1.vb#1)]  
+  
+-   <xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>pesquisa os recursos em assemblies de satélite com base nas informações de um objeto de tipo. Nome totalmente qualificado do tipo corresponde ao nome base do arquivo sem a extensão de nome de arquivo. Resources. Em aplicativos de área de trabalho que são criados usando o Designer de recursos do Visual Studio, o Visual Studio cria uma classe wrapper cujo nome totalmente qualificado é o mesmo que o nome da raiz do arquivo. Resources. Por exemplo, se um arquivo de recurso é chamado MyCompany.StringResources.resources e há uma classe wrapper denominada `MyCompany.StringResources`, o código a seguir cria um <xref:System.Resources.ResourceManager> objeto que pode recuperar os recursos do arquivo. Resources:  
+  
+     [!code-csharp[Conceptual.Resources.Retrieving#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/ctor1.cs#2)]
+     [!code-vb[Conceptual.Resources.Retrieving#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/ctor1.vb#2)]  
+  
+ Se os recursos apropriados não for encontrados, a chamada de construtor cria um válido <xref:System.Resources.ResourceManager> objeto. No entanto, a tentativa de recuperar um recurso gera um <xref:System.Resources.MissingManifestResourceException> exceção. Para obter informações sobre como lidar com a exceção, consulte o [MissingManifestResourceException tratamento e exceções MissingSatelliteAssembly](#exception) seção mais adiante neste artigo.  
+  
+ O exemplo a seguir mostra como instanciar um <xref:System.Resources.ResourceManager> objeto. Ele contém o código-fonte para um executável chamado ShowTime.exe. Ele também inclui o seguinte arquivo de texto denominado strings que contém um recurso de cadeia de caracteres único, `TimeHeader`:  
+  
+```  
+TimeHeader=The current time is  
+```  
+  
+ Você pode usar um arquivo em lotes para gerar o arquivo de recurso e inseri-lo no executável. Aqui está o arquivo em lotes para gerar um arquivo executável, usando o compilador c#:  
+  
+```  
+  
+resgen strings.txt  
+csc ShowTime.cs /resource:strings.resources  
+  
+```  
+  
+ Para o compilador do Visual Basic, você pode usar o arquivo de lote a seguir:  
+  
+```  
+  
+resgen strings.txt  
+vbc ShowTime.vb /resource:strings.resources  
+  
+```  
+  
+ [!code-csharp[System.Resources.ResourceManager.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/showtime.cs#1)]
+ [!code-vb[System.Resources.ResourceManager.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/showtime.vb#1)]  
+  
+<a name="CultureSpecific"></a>   
+### <a name="resourcemanager-and-culture-specific-resources"></a>ResourceManager e recursos específicos de cultura  
+ Um aplicativo localizado requer recursos a serem implantados, conforme descrito no artigo [Empacotando e implantando recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Se os assemblies estão configurados corretamente, o Gerenciador de recursos determina quais recursos para recuperar com base no thread atual <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> propriedade. (Essa propriedade também retorna a atual cultura do thread da interface do usuário). Por exemplo, se um aplicativo é compilado com o padrão no assembly principal e com recursos de idioma francês e russo em dois assemblies de satélite, de recursos do idioma inglês e o <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> propriedade é definida para fr-FR, o Gerenciador de recursos recupera os recursos em francês.  
+  
+ Você pode definir o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> propriedade explicitamente ou implicitamente. Determina a maneira como você configurá-lo como o <xref:System.Resources.ResourceManager> objeto recupera os recursos com base na cultura:  
+  
+-   Se você definir explicitamente o <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> propriedade para uma cultura específica, o Gerenciador de recursos sempre recupera os recursos para aquela cultura, independentemente do idioma do navegador ou sistema operacional do usuário. Considere um aplicativo que é compilado com recursos de idioma inglês padrão e três assemblies de satélite que contêm recursos para inglês (Estados Unidos), francês (França) e russo (Rússia). Se o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> propriedade é definida para fr-FR, o <xref:System.Resources.ResourceManager> objeto sempre recupera os recursos de francês (França), mesmo se o usuário a operacional do idioma do sistema não é francês. Certifique-se de que esse é o comportamento desejado antes de você definir a propriedade explicitamente.  
+  
+     Em aplicativos ASP.NET, você deve definir o <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> propriedade explicitamente, porque é improvável que a configuração do servidor corresponderá a solicitações de cliente recebidas. Um aplicativo ASP.NET pode definir o <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> idioma aceito de propriedade explicitamente para o navegador do usuário.  
+  
+     Definir explicitamente o <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> propriedade define a cultura de interface do usuário atual para esse thread. Ele não afeta a cultura de interface do usuário atual de quaisquer outros threads em um aplicativo.  
+  
+-   Você pode definir a cultura de interface do usuário de todos os threads em um domínio de aplicativo, atribuindo um <xref:System.Globalization.CultureInfo> objeto que representa essa cultura para estático <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Se você não definir explicitamente a cultura de interface do usuário atual e você não pode definir uma cultura padrão para o domínio de aplicativo atual, o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade é definida implicitamente pelo Windows `GetUserDefaultUILanguage` função. Esta função é fornecida, a Interface MUI (Multilingual User), que permite ao usuário definir o idioma padrão. Se o idioma da interface do usuário não é definido pelo usuário, o padrão é o idioma do sistema instalado, que é o idioma dos recursos do sistema operacional.  
+  
+ O exemplo simples "Hello world" a seguir define a cultura de interface do usuário atual explicitamente. Ele contém recursos para três culturas: inglês (Estados Unidos) ou en-US, francês (França) ou fr-FR e russo (Rússia) ou ru-RU. Os recursos de en-US estão contidos em um arquivo de texto chamado Greetings.txt:  
+  
+```  
+HelloString=Hello world!  
+```  
+  
+ Os recursos de fr-FR estão contidos em um arquivo de texto chamado Greetings.fr-FR.txt:  
+  
+```  
+HelloString=Salut tout le monde!  
+```  
+  
+ Os recursos de ru-RU estão contidos em um arquivo de texto chamado Greetings.ru-RU.txt:  
+  
+```  
+HelloString=Всем привет!  
+```  
+  
+ Aqui está o código-fonte para o exemplo (Example.vb para a versão do Visual Basic) ou Example.cs para a versão c#:  
+  
+ [!code-csharp[Conceptual.Resources.CurrentCulture#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.currentculture/cs/example.cs#1)]
+ [!code-vb[Conceptual.Resources.CurrentCulture#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.currentculture/vb/example.vb#1)]  
+  
+ Para compilar este exemplo, crie um arquivo em lotes (. bat) que contém os comandos a seguir e execute-o do prompt de comando. Se você estiver usando c#, especifique `csc` em vez de `vbc` e `Example.cs` em vez de `Example.vb`.  
+  
+```  
+resgen Greetings.txt   
+vbc Example.vb /resource:Greetings.resources  
+  
+resgen Greetings.fr-FR.txt  
+Md fr-FR  
+al /embed:Greetings.fr-FR.resources /culture:fr-FR /out:fr-FR\Example.resources.dll  
+  
+resgen Greetings.ru-RU.txt  
+Md ru-RU  
+al /embed:Greetings.ru-RU.resources /culture:ru-RU /out:ru-RU\Example.resources.dll  
+```  
+  
+<a name="retrieving"></a>   
+### <a name="retrieving-resources"></a>Recuperando recursos  
+ Você chama o <xref:System.Resources.ResourceManager.GetObject%28System.String%29> e <xref:System.Resources.ResourceManager.GetString%28System.String%29> métodos para acessar um recurso específico. Você também pode chamar o <xref:System.Resources.ResourceManager.GetStream%28System.String%29> método para recuperar os recursos de cadeia de caracteres não como uma matriz de bytes. Por padrão, em um aplicativo que foi localizado recursos, esses métodos retornam o recurso para a cultura determinado pela cultura da interface do usuário atual do thread que fez a chamada. Consulte a seção anterior, [ResourceManager e recursos específicos de cultura](#CultureSpecific), para obter mais informações sobre como a cultura de interface do usuário atual de um thread é definida. Se o Gerenciador de recursos não é possível localizar o recurso para a cultura de interface do usuário do thread atual, ele usa um processo de fallback para recuperar o recurso especificado. Se o Gerenciador de recursos não é possível encontrar nenhum recurso localizado, ele usa os recursos da cultura padrão. Para obter mais informações sobre regras de fallback de recurso, consulte a seção de "Processo de Fallback de recurso" do artigo [Empacotando e implantando recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+  
+> [!NOTE]
+>  Se o arquivo. Resources foi especificado no <xref:System.Resources.ResourceManager> construtor de classe não pode ser encontrado, a tentativa de recuperar um recurso gera um <xref:System.Resources.MissingManifestResourceException> ou <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Para obter informações sobre como lidar com a exceção, consulte o [MissingManifestResourceException tratamento e exceções MissingSatelliteAssemblyException](#exception) seção mais adiante neste tópico.  
+  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceManager.GetString%2A> método para recuperar recursos específicos de cultura. Ele consiste em recursos compilados a partir de arquivos. txt para o inglês (en), francês (França) (fr-FR) e russo (Rússia) (ru-RU) culturas. O exemplo altera a cultura atual e a cultura de interface do usuário atual para inglês (Estados Unidos), francês (França), russo (Rússia) e sueco (Suécia). Depois, ele chama o <xref:System.Resources.ResourceManager.GetString%2A> método para recuperar a cadeia de caracteres localizada, ele exibe junto com o mês e dia atual. Observe que a saída exibe a cadeia de caracteres localizada apropriada, exceto quando a cultura de interface do usuário atual estiver sueco (Suécia). Porque os recursos de idioma sueco estão indisponíveis, o aplicativo usa em vez disso, os recursos da cultura padrão, que é o inglês.  
+  
+ O exemplo requer os arquivos de recursos com base em texto listados na tabela a seguir. Cada um tem um recurso de cadeia de caracteres único chamado `DateStart`.  
+  
+|Cultura|Nome do arquivo|Nome do recurso|Valor do recurso|  
+|-------------|---------------|-------------------|--------------------|  
+|pt-BR|DateStrings.txt|`DateStart`|Hoje é|  
+|fr-FR|DateStrings.fr FR.txt|`DateStart`|Aujourd'hui, le c'est|  
+|ru-RU|DateStrings.ru RU.txt|`DateStart`|СЕГОДНЯ|  
+  
+ Aqui está o código-fonte para o exemplo (ShowDate.vb para a versão do Visual Basic) ou ShowDate.cs para a versão c# do código.  
+  
+ [!code-csharp[System.Resources.ResourceManager.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/showdate.cs#2)]
+ [!code-vb[System.Resources.ResourceManager.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/showdate.vb#2)]  
+  
+ Para compilar este exemplo, crie um arquivo em lotes que contém os comandos a seguir e execute-o do prompt de comando. Se você estiver usando c#, especifique `csc` em vez de `vbc` e `showdate.cs` em vez de `showdate.vb`.  
+  
+```  
+  
+resgen DateStrings.txt  
+vbc showdate.vb /resource:DateStrings.resources  
+  
+md fr-FR  
+resgen DateStrings.fr-FR.txt  
+al /out:fr-FR\Showdate.resources.dll /culture:fr-FR /embed:DateStrings.fr-FR.resources   
+  
+md ru-RU  
+resgen DateStrings.ru-RU.txt  
+al /out:ru-RU\Showdate.resources.dll /culture:ru-RU /embed:DateStrings.ru-RU.resources  
+  
+```  
+  
+ Há duas maneiras de recuperar os recursos de uma cultura específica que não seja a cultura de interface do usuário atual:  
+  
+-   Você pode chamar o <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, ou <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> método para recuperar um recurso para uma cultura específica. Se um recurso localizado não pode ser encontrado, o Gerenciador de recursos usa o processo de fallback de recurso para localizar um recurso apropriado.  
+  
+-   Você pode chamar o <xref:System.Resources.ResourceManager.GetResourceSet%2A> método para obter um <xref:System.Resources.ResourceSet> objeto que representa os recursos para uma determinada cultura. Na chamada do método, você pode determinar se o Gerenciador de recursos de investigações para culturas pai se não for possível localizar recursos localizados, ou se ele simplesmente volta para os recursos da cultura padrão. Você pode usar o <xref:System.Resources.ResourceSet> métodos para acessar os recursos (localizados para aquela cultura) por nome ou para enumerar os recursos do conjunto.  
+  
+<a name="exception"></a>   
+### <a name="handling-missingmanifestresourceexception-and-missingsatelliteassemblyexception-exceptions"></a>Identificando MissingManifestResourceException e exceções de MissingSatelliteAssemblyException  
+ Se você tentar recuperar um recurso específico, mas o Gerenciador de recursos não é possível localizar o recurso e qualquer cultura de padrão não foi definida ou os recursos da cultura padrão não podem ser localizados, o Gerenciador de recursos gera um <xref:System.Resources.MissingManifestResourceException> exceção se ele espera localizar os recursos no assembly principal ou um <xref:System.Resources.MissingSatelliteAssemblyException> se ele espera localizar os recursos em um assembly satélite. Observe que a exceção é gerada quando você chamar um método de recuperação de recursos como <xref:System.Resources.ResourceManager.GetString%2A> ou <xref:System.Resources.ResourceManager.GetObject%2A>, e não quando você instancia um <xref:System.Resources.ResourceManager> objeto.  
+  
+ Normalmente, a exceção é lançada sob as seguintes condições:  
+  
+-   O assembly satélite ou de arquivo de recurso apropriado não existe. Se o Gerenciador de recursos espera os recursos do aplicativo padrão a ser inserido no assembly principal do aplicativo, eles estão ausentes. Se o <xref:System.Resources.NeutralResourcesLanguageAttribute> atributo indica que os recursos do aplicativo padrão residam em um assembly satélite, se o assembly não pode ser encontrado. Quando você compila seu aplicativo, certifique-se de que os recursos são inseridos no assembly principal ou que o assembly satélite necessário é gerado e é denominado adequadamente. O nome deve ter o formato *appName*. Resources e ele devem estar localizado em um diretório nomeado de acordo com a cultura cujos recursos que ele contém.  
+  
+-   Seu aplicativo não tiver um padrão ou a cultura neutra definido. Adicionar o <xref:System.Resources.NeutralResourcesLanguageAttribute> atributo para um arquivo de código fonte ou o arquivo de arquivo (VB para um aplicativo do Visual Basic) ou AssemblyInfo.cs para um aplicativo c# de informações do projeto.  
+  
+-   O `baseName` parâmetro o <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29> construtor não especifica o nome de um arquivo. Resources. O nome deve incluir o namespace totalmente qualificado do arquivo de recursos, mas não sua extensão de nome de arquivo. Normalmente, arquivos de recursos que são criados no Visual Studio incluem nomes de namespace, mas não os arquivos de recursos que são criados e compilados no prompt de comando. Você pode determinar os nomes dos arquivos. Resources foi inserido por compilar e executar o utilitário a seguir. Este é um aplicativo de console que aceita o nome de um assembly principal ou assembly satélite como um parâmetro de linha de comando. Ele exibe as cadeias de caracteres que devem ser fornecidas como o `baseName` parâmetro para que o Gerenciador de recursos pode identificar corretamente o recurso.  
+  
+     [!code-csharp[System.Resources.ResourceManager.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/resourcenames.cs#4)]
+     [!code-vb[System.Resources.ResourceManager.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/resourcenames.vb#4)]  
+  
+ Se você estiver alterando a cultura atual do seu aplicativo explicitamente, você também deve se lembrar que o Gerenciador de recursos recupera um conjunto de recursos com base no valor da <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade e não o <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> propriedade. Normalmente, se você alterar um valor, você deve também alterar a outra.  
+  
+<a name="versioning"></a>   
+### <a name="resource-versioning"></a>Controle de versão do recurso  
+ Porque o assembly principal que contém recursos de padrão do aplicativo é separado de assemblies de satélite do aplicativo, você pode liberar uma nova versão do assembly principal sem reimplantar os assemblies satélite. Você usa o <xref:System.Resources.SatelliteContractVersionAttribute> atributo usar assemblies satélite existentes e instruir o Gerenciador de recursos não reimplantá-los com uma nova versão do seu assembly principal,  
+  
+ Para obter mais informações sobre o suporte a controle de versão para assemblies de satélite, consulte o artigo [recuperando recursos](~/docs/framework/resources/retrieving-resources-in-desktop-apps.md).  
+  
+<a name="config"></a>   
+### <a name="satelliteassemblies-configuration-file-node"></a>\<satelliteassemblies > nó do arquivo de configuração  
+ Para executáveis que são implantados e executar a partir de um site (arquivos de .exe HREF), o <xref:System.Resources.ResourceManager> objeto pode sondar para assemblies satélite pela web, o que pode prejudicar o desempenho do aplicativo. Para eliminar o problema de desempenho, você pode limitar essa investigação para os assemblies de satélite que você implantou com seu aplicativo. Para fazer isso, você cria um `<satelliteassemblies>` nó no arquivo de configuração do aplicativo para especificar que você implantou um conjunto específico de culturas para seu aplicativo e que o <xref:System.Resources.ResourceManager> objeto não deve tentar investigação para qualquer cultura que não esteja listada no nó.  
+  
+> [!NOTE]
+>  A opção preferencial para criar um `<satelliteassemblies>` nó é usar o [manifesto de implantação do ClickOnce](http://msdn.microsoft.com/library/8457e615-e3b6-4990-8dcf-11bc590e4e9b) recurso.  
+  
+ No arquivo de configuração do aplicativo, crie uma seção semelhante à seguinte:  
+  
+```  
+<?xml version ="1.0"?>  
+<configuration>  
+    <satelliteassemblies>  
+        <assembly name="MainAssemblyName, Version=versionNumber, Culture=neutral, PublicKeyToken=null|yourPublicKeyToken">  
+            <culture>cultureName1</culture>  
+            <culture>cultureName2</culture>  
+            <culture>cultureName3</culture>  
+        </assembly>  
+    </satelliteassemblies>  
+</configuration>  
+```  
+  
+ Edite essas informações de configuração da seguinte maneira:  
+  
+-   Especifique um ou mais `<assembly>` nós para cada assembly principal que você implanta, onde cada nó Especifica um nome de assembly totalmente qualificado. Especifique o nome do seu assembly principal no lugar de *MainAssemblyName*e especifique o `Version`, `PublicKeyToken`, e `Culture` valores de atributo que correspondem ao seu assembly principal.  
+  
+     Para o `Version` do atributo, especifique o número de versão do seu assembly. Por exemplo, a primeira versão do assembly pode ser o número de versão 1.0.0.0.  
+  
+     Para o `PublicKeyToken` de atributo, especifique a palavra-chave `null` se você não tiver assinado o assembly com um nome forte ou especifique seu token de chave pública, se você tiver assinado o seu assembly.  
+  
+     Para o `Culture` de atributo, especifique a palavra-chave `neutral` para designar o assembly principal e fazer com que o <xref:System.Resources.ResourceManager> classe de teste somente para as culturas listadas no `<culture>` nós.  
+  
+     Para obter mais informações sobre nomes de assembly totalmente qualificado, consulte o artigo [nomes de Assembly](~/docs/framework/app-domains/assembly-names.md). Para obter mais informações sobre assemblies de nomes fortes, consulte o artigo [Creating and Using Strong-Named Assemblies](~/docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+  
+-   Especifique um ou mais `<culture>` nós com um nome de cultura específica, como "fr-FR", ou um nome de cultura neutra, como "fr".  
+  
+ Se os recursos são necessários para qualquer assembly não listado no `<satelliteassemblies>` nó, a <xref:System.Resources.ResourceManager> classe investigações para culturas usando regras de probing padrão.  
+  
+<a name="ws"></a>   
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+  
+> [!IMPORTANT]
+>  Embora o <xref:System.Resources.ResourceManager> classe tem suporte no [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, não recomendamos seu uso. Use esta classe somente quando você desenvolve [!INCLUDE[net_portable](~/includes/net-portable-md.md)] projetos que podem ser usados com [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Para recuperar os recursos de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, use o [Windows.ApplicationModel.Resources.ResourceLoader](http://go.microsoft.com/fwlink/p/?LinkId=238182) classe em vez disso.  
+  
+ Para [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, a <xref:System.Resources.ResourceManager> classe recupera os recursos de arquivos de índice (PRI) de recurso do pacote. Um único arquivo PRI (o arquivo pacote de aplicativos PRI) contém os recursos para a cultura padrão e qualquer localizado culturas. Você pode usar o utilitário MakePRI para criar um arquivo PRI um ou mais dos arquivos de recursos que estão no formato de recursos (. resw) do XML. Para recursos que estão incluídos em um projeto do Visual Studio, o Visual Studio trata o processo de criar e empacotar o arquivo PRI automaticamente. Você pode usar o .NET Framework <xref:System.Resources.ResourceManager> classe para acessar recursos do aplicativo ou da biblioteca.  
+  
+ Você pode instanciar uma <xref:System.Resources.ResourceManager> de objeto para um [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativo da mesma maneira que faria para um aplicativo de área de trabalho.  
+  
+ Você pode acessar os recursos para uma cultura específica, passando o nome do recurso a ser recuperado para o <xref:System.Resources.ResourceManager.GetString%28System.String%29> método. Por padrão, esse método retornará o recurso para a cultura determinado pela cultura da interface do usuário atual do thread que fez a chamada. Você também pode recuperar os recursos para uma cultura específica, passando o nome do recurso e um <xref:System.Globalization.CultureInfo> objeto que representa a cultura é cujo recurso a ser recuperado para o <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> método. Se o recurso para a cultura de interface do usuário atual ou a cultura especificada não pode ser encontrado, o Gerenciador de recursos usa uma lista de fallback de idioma da interface do usuário para localizar um recurso adequado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar uma cultura explícita e implícita cultura da interface do usuário atual para obter recursos de cadeia de caracteres de um assembly principal e um assembly satélite. Para obter mais informações, consulte a seção "Diretórios locais para satélite Assemblies não instalado no Cache de Assembly Global" o [Criando Assemblies Satélites](~/docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) tópico.  
+  
+ Para executar este exemplo:  
+  
+1.  No diretório do aplicativo, crie um arquivo chamado rmc.txt que contém as seguintes cadeias de caracteres de recurso:  
+  
+    ```  
+  
+    day=Friday  
+    year=2006  
+    holiday="Cinco de Mayo"  
+  
+    ```  
+  
+2.  Use o [gerador de arquivo](~/docs/framework/tools/resgen-exe-resource-file-generator.md) para gerar o arquivo de recurso rmc.resources do arquivo de entrada rmc.txt da seguinte maneira:  
+  
+    ```  
+    resgen rmc.txt  
+    ```  
+  
+3.  Crie um subdiretório do diretório do aplicativo e nomeie-a "es-MX". Esse é o nome de cultura do assembly satélite que você criará as três etapas.  
+  
+4.  Crie um arquivo chamado rmc.es-MX.txt no diretório de es-MX que contém as seguintes cadeias de caracteres de recurso:  
+  
+    ```  
+  
+    day=Viernes  
+    year=2006  
+    holiday="Cinco de Mayo"  
+  
+    ```  
+  
+5.  Use o [gerador de arquivo](~/docs/framework/tools/resgen-exe-resource-file-generator.md) para gerar o arquivo de recurso rmc.es MX.resources do arquivo de entrada rmc.es MX.txt da seguinte maneira:  
+  
+    ```  
+    resgen rmc.es-MX.txt  
+    ```  
+  
+6.  Suponha que o nome do arquivo para este exemplo é rmc.vb ou rmc.cs. Copie o seguinte código-fonte para um arquivo. Em seguida, compilá-lo e inserir o arquivo de recurso de assembly principal, rmc.resources, no assembly executável. Se você estiver usando o compilador do Visual Basic, a sintaxe é:  
+  
+    ```  
+    vbc rmc.vb /resource:rmc.resources  
+    ```  
+  
+     A sintaxe correspondente para o compilador c# é:  
+  
+    ```  
+    csc /resource:rmc.resources rmc.cs  
+    ```  
+  
+7.  Use o [Assembly Linker](~/docs/framework/tools/al-exe-assembly-linker.md) para criar um assembly satélite. Se o nome base do aplicativo é rmc, o nome do assembly satélite deve ser rmc.resources.dll. O assembly satélite deve ser criado no diretório de es-MX. Se es-MX é o diretório atual, use este comando:  
+  
+    ```  
+    al /embed:rmc.es-MX.resources /c:es-MX /out:rmc.resources.dll   
+    ```  
+  
+8.  Execute rmc.exe para obter e exibir as cadeias de caracteres de recurso inserido.  
+  
+ [!code-csharp[ResourceManager_Class#1](~/samples/snippets/csharp/VS_Snippets_CLR/ResourceManager_Class/cs/rmc.cs#1)]
+ [!code-vb[ResourceManager_Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ResourceManager_Class/vb/rmc.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ResourceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResourceManager" /> com valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor é útil apenas se você escrever sua própria classe que deriva de <xref:System.Resources.ResourceManager> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceManager (Type resourceSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type resourceSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceSource" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="resourceSource">Um tipo do qual o gerenciador de recursos deriva todas as informações para localizar arquivos .resources.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResourceManager" /> que procura recursos em assemblies satélites com base nas informações do objeto do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Em aplicativos de área de trabalho, o Gerenciador de recursos usa o `resourceSource` parâmetro para carregar um arquivo de recurso específico da seguinte maneira:  
+  
+-   Se o <xref:System.Resources.NeutralResourcesLanguageAttribute> atributo não é usado para indicar que os recursos da cultura padrão residem em um assembly satélite, o Gerenciador de recursos pressupõe que o arquivo de recurso para a cultura padrão está localizado no mesmo assembly como o tipo especificado pelo `resourceSource` parâmetro.  
+  
+-   O Gerenciador de recursos presume que o arquivo de recurso padrão tem o mesmo nome base do tipo especificado pelo `resourceSource` parâmetro.  
+  
+-   O Gerenciador de recursos usa o padrão <xref:System.Resources.ResourceSet> classe para manipular o arquivo de recurso.  
+  
+ Por exemplo, o Gerenciador de recursos devido a um tipo denominado MyCompany.MyProduct.MyType, procurará um arquivo. Resources chamado MyCompany.MyProduct.MyType.resources no assembly que define MyType.  
+  
+ No Visual Studio, o Designer de recursos gera automaticamente o código que define um `internal` (em c#) ou `Friend` (no Visual Basic) classe cujo nome é o mesmo que o nome base do arquivo. Resources para a cultura padrão. Isso torna possível instanciar uma <xref:System.Resources.ResourceManager> de objeto e Junte-o com um determinado conjunto de recursos fazendo com que um objeto de tipo cujo nome corresponde ao nome do recurso, porque a classe é visível para o compilador, desde que os recursos devem ser bem. Por exemplo, se um arquivo. Resources é denominado Resource1, a instrução a seguir cria um <xref:System.Resources.ResourceManager> objeto para gerenciar o arquivo. Resources chamado Resource1:  
+  
+ [!code-csharp[System.Resources.ResourceManager.ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.ctor/cs/ctor1.cs#2)]  
+  
+ Se você não estiver usando o Visual Studio, você pode criar uma classe com não membros cujo namespace e nome são as mesmas que o arquivo. Resources padrão. O exemplo fornece uma ilustração.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+  
+> [!IMPORTANT]
+>  Embora o <xref:System.Resources.ResourceManager> classe tem suporte no [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, não recomendamos seu uso. Use esta classe somente quando você desenvolve [!INCLUDE[net_portable](~/includes/net-portable-md.md)] projetos que podem ser usados com [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Para recuperar os recursos de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, use o [Windows.ApplicationModel.Resources.ResourceLoader](http://go.microsoft.com/fwlink/p/?LinkId=238182) classe em vez disso.  
+  
+ Em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, <xref:System.Resources.ResourceManager> usa o `resourceSource` parâmetro para inferir o assembly, o nome de base e o namespace em que os itens de recursos podem ser localizados no arquivo de índice (PRI) de recurso de pacote do aplicativo. Por exemplo, dado um tipo chamado MyCompany.MyProduct.MyType que é definido em `MyAssembly`, o Gerenciador de recursos de pesquisa para um recurso do conjunto de identificador nomeada MyAssembly e procura um escopo MyCompany.MyProduct.MyType nesse conjunto de recursos. O Gerenciador de recursos de pesquisa para itens de recurso sob o contexto padrão (cultura atual, configuração atual de alto contraste e assim por diante) dentro desse escopo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceManager.%23ctor%28System.Type%29> construtor para instanciar um <xref:System.Resources.ResourceManager> objeto. Ele consiste em recursos compilados a partir de arquivos. txt para o inglês (en), francês (França) (fr-FR) e russo (Rússia) (ru-RU) culturas. O exemplo altera a cultura atual e a cultura de interface do usuário atual para inglês (Estados Unidos), francês (França), russo (Rússia) e sueco (Suécia). Depois, ele chama o <xref:System.Resources.ResourceManager.GetString%28System.String%29> método para recuperar a cadeia de caracteres localizada, que exibe uma mensagem que depende da hora do dia.  
+  
+ O exemplo requer três arquivos de recurso baseado em texto, conforme listado na tabela a seguir. Cada arquivo inclui recursos de cadeia de caracteres denominados `Morning`, `Afternoon`, e `Evening`.  
+  
+|Cultura|Nome do arquivo|Nome do recurso|Valor do recurso|  
+|-------------|---------------|-------------------|--------------------|  
+|pt-BR|GreetingResources.txt|`Morning`|Bom dia|  
+|pt-BR|GreetingResources.txt|`Afternoon`|Boa tarde|  
+|pt-BR|GreetingResources.txt|`Evening`|Boa noite|  
+|fr-FR|GreetingResources.fr FR.txt|`Morning`|Bon jour|  
+|fr-FR|GreetingResources.fr FR.txt|`Afternoon`|Bon jour|  
+|fr-FR|GreetingResources.fr FR.txt|`Evening`|Bonsoir|  
+|ru-RU|GreetingResources.ru RU.txt|`Morning`|ДОБРОЕ УТРО|  
+|ru-RU|GreetingResources.ru RU.txt|`Afternoon`|ДОБРЫЙ ДЕНЬ|  
+|ru-RU|GreetingResources.ru RU.txt|`Evening`|ДОБРЫЙ ВЕЧЕР|  
+  
+ Você pode usar o seguinte arquivo de lote para compilar o exemplo do Visual Basic e criar um executável chamado Greet.exe. Para compilar com c#, altere o nome do compilador de `vbc` para `csc` e a extensão de arquivo de `.vb` para `.cs`.  
+  
+```  
+  
+resgen GreetingResources.txt  
+vbc Greet.vb /resource: GreetingResources.resources  
+  
+md fr-FR  
+resgen GreetingResources.fr-FR.txt  
+al /out:fr-FR\Greet.resources.dll /culture:fr-FR /embed: GreetingResources.fr-FR.resources   
+  
+md ru-RU  
+resgen GreetingResources.ru-RU.txt  
+al /out:ru-RU\Greet.resources.dll /culture:ru-RU /embed: GreetingResources.ru-RU.resources  
+  
+```  
+  
+ Aqui está o código-fonte para o exemplo (ShowDate.vb para a versão do Visual Basic) ou ShowDate.cs para a versão c# do código.  
+  
+ [!code-csharp[System.Resources.ResourceManager.Ctor#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.ctor/cs/greet.cs#3)]
+ [!code-vb[System.Resources.ResourceManager.Ctor#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.ctor/vb/greet.vb#3)]  
+  
+ Além de definir uma classe de aplicativo chamada `Example`, o código-fonte define uma classe interna cujo nome `GreetingResources`, é o mesmo que o nome de base dos arquivos de recursos. Isso torna possível instanciar com êxito um <xref:System.Resources.ResourceManager> objeto chamando o <xref:System.Resources.ResourceManager.%23ctor%28System.Type%29> construtor.  
+  
+ Observe que as exibições de saída localizada apropriada de cadeia de caracteres, exceto quando a cultura de interface do usuário atual estiver sueco (Suécia), caso em que ele usa recursos do idioma inglês. Porque os recursos de idioma sueco estão indisponíveis, o aplicativo usa os recursos da cultura padrão, conforme definido pelo <xref:System.Resources.NeutralResourcesLanguageAttribute> atributo, em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="resourceSource" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceManager (string baseName, System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string baseName, class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.#ctor(System.String,System.Reflection.Assembly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="baseName">O nome raiz do arquivo de recurso sem sua extensão, mas incluindo um nome de namespace totalmente qualificado. Por exemplo, o nome raiz do arquivo de recurso chamado MyApplication.MyResource.en-us.resources é MyApplication.MyResource.</param>
+        <param name="assembly">O assembly principal dos recursos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResourceManager" /> que pesquisa os recursos contidos em arquivos com o nome raiz especificado no assembly especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Em aplicativos de área de trabalho, os arquivos de recursos específicos de cultura individuais devem estar contidos em assemblies satélite e arquivo de recursos da cultura padrão deve estar contido no assembly principal. Um assembly satélite deve para conter recursos para uma única cultura especificada no manifesto do assembly e é carregado conforme necessário.  
+  
+> [!NOTE]
+>  Para recuperar os recursos de arquivos. Resources diretamente, em vez de recuperá-los de assemblies, você deve chamar o <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A> método em vez disso, para criar uma instância de um <xref:System.Resources.ResourceManager> objeto.  
+  
+ Se o arquivo de recurso identificado por `baseName` não foi encontrado no `assembly`, o método cria um <xref:System.Resources.ResourceManager> objeto, mas a tentativa de recuperar um recurso específico lança uma exceção, normalmente <xref:System.Resources.MissingManifestResourceException>. Para obter informações sobre como diagnosticar a causa da exceção, consulte a seção "Manipulando a exceção MissingManifestResourceException" o <xref:System.Resources.ResourceManager> tópico sobre a classe.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+  
+> [!IMPORTANT]
+>  Embora o <xref:System.Resources.ResourceManager> classe tem suporte no [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, não recomendamos seu uso. Use esta classe somente quando você desenvolve [!INCLUDE[net_portable](~/includes/net-portable-md.md)] projetos que podem ser usados com [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Para recuperar os recursos de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, use o [Windows.ApplicationModel.Resources.ResourceLoader](http://go.microsoft.com/fwlink/p/?LinkId=238182) classe em vez disso.  
+  
+ Em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, o Gerenciador de recursos usa o nome simples do `assembly` parâmetro para procurar um recurso correspondente definido no arquivo de índice (PRI) de recurso de pacote do aplicativo. O `baseName` parâmetro é usado para pesquisar um item de recurso dentro do conjunto de recursos. Por exemplo, o nome raiz Folder1 PortableLibrary1.Resource1.de é PortableLibrary1.Resource1.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa um aplicativo "Hello World" simples não localizada para ilustrar o <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29> construtor. O exemplo a seguir mostra o conteúdo de um arquivo de texto denominado ExampleResources.txt. Quando o aplicativo é compilado, o recurso é inserido no assembly principal do aplicativo.  
+  
+```  
+Greeting=Hello  
+```  
+  
+ O arquivo de texto pode ser convertido em um arquivo de recurso binário usando no prompt de comando da seguinte maneira:  
+  
+```  
+resgen ExampleResources.txt  
+```  
+  
+ O exemplo a seguir fornece o código executável que instancia um <xref:System.Resources.ResourceManager> solicita que o usuário insira um nome de objeto e exibe uma saudação.  
+  
+ [!code-csharp[System.Resources.ResourceManager.ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.ctor/cs/example.cs#1)]
+ [!code-vb[System.Resources.ResourceManager.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.ctor/vb/example.vb#1)]  
+  
+ Ele pode ser compilado usando o seguinte comando no Visual Basic:  
+  
+```  
+vbc Example.vb /resource:ExampleResources.resources  
+```  
+  
+ ou, usando o seguinte comando em c#:  
+  
+```  
+csc Example.cs /resource:ExampleResources.resources  
+```  
+  
+ Observe que o exemplo recupera uma referência ao assembly que contém o arquivo de recurso, passando um tipo definido no assembly para o `typeof` função (em c#) ou o `GetType` de função (no Visual Basic) e recuperar o valor de seu <xref:System.Type.Assembly%2A?displayProperty=nameWithType>propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="baseName" /> ou <paramref name="assembly" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Este construtor usa o fornecida pelo sistema <see cref="T:System.Resources.ResourceSet" /> implementação. Para usar um formato de arquivo de recurso personalizado, você deve derivar do <see cref="T:System.Resources.ResourceSet" /> classe, substitua o <see cref="M:System.Resources.ResourceSet.GetDefaultReader" /> e <see cref="M:System.Resources.ResourceSet.GetDefaultWriter" /> métodos e que tipo de <see cref="M:System.Resources.ResourceManager.#ctor(System.String,System.Reflection.Assembly,System.Type)" /> construtor. Usando um personalizado <see cref="T:System.Resources.ResourceSet" /> pode ser útil para controlar o recurso política de cache ou o suporte a seu próprio formato de arquivo de recurso, mas geralmente não é necessário.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceManager (string baseName, System.Reflection.Assembly assembly, Type usingResourceSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string baseName, class System.Reflection.Assembly assembly, class System.Type usingResourceSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.#ctor(System.String,System.Reflection.Assembly,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="usingResourceSet" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="baseName">O nome raiz do arquivo de recurso sem sua extensão, mas incluindo um nome de namespace totalmente qualificado. Por exemplo, o nome raiz do arquivo de recurso chamado MyApplication.MyResource.en-us.resources é MyApplication.MyResource.</param>
+        <param name="assembly">O assembly principal dos recursos.</param>
+        <param name="usingResourceSet">O tipo do <see cref="T:System.Resources.ResourceSet" /> personalizado a ser usado. Se <see langword="null" />, o objeto <see cref="T:System.Resources.ResourceSet" /> do tempo de execução padrão será usado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResourceManager" /> que usa um classe <see cref="T:System.Resources.ResourceSet" /> especificada para pesquisar os recursos contidos em arquivos com o nome raiz especificado no assembly fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os arquivos de recursos específicos de cultura individuais devem estar contidos em assemblies de satélite, e o arquivo de recursos da cultura padrão deve estar contido no assembly principal. Um assembly satélite deve para conter recursos para uma única cultura especificada no manifesto do assembly e é carregado conforme necessário.  
+  
+> [!NOTE]
+>  Para recuperar os recursos de arquivos. Resources diretamente, em vez de recuperá-los de assemblies, você deve chamar o <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A> método em vez disso, para criar uma instância de um <xref:System.Resources.ResourceManager> objeto.  
+  
+ Se o arquivo de recurso identificado por `baseName` não foi encontrado no `assembly`, o método cria um <xref:System.Resources.ResourceManager> objeto, mas a tentativa de recuperar um recurso específico lança uma exceção, normalmente <xref:System.Resources.MissingManifestResourceException>. Para obter informações sobre como diagnosticar a causa da exceção, consulte a seção "Manipulando a exceção MissingManifestResourceException" o <xref:System.Resources.ResourceManager> tópico sobre a classe.  
+  
+> [!NOTE]
+>  O `usingResourceSet` parâmetro é usado para dar suporte a seu próprio formato de recurso e geralmente será `null`. Isso é diferente do construtor que usa um <xref:System.Type> somente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usingResourceset" /> não é uma classe derivada de <see cref="T:System.Resources.ResourceSet" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="baseName" /> ou <paramref name="assembly" /> é <see langword="null" />.</exception>
+        <block subset="none" type="usage">
+          <para>Este construtor permite que você especifique um <see cref="T:System.Resources.ResourceSet" /> implementação. Se você não quiser que um determinado <see cref="T:System.Resources.ResourceSet" /> implementação mas seria semelhante ao usar um formato de arquivo de recurso personalizado, você deve derivar do <see cref="T:System.Resources.ResourceSet" /> classe, substitua o <see cref="M:System.Resources.ResourceSet.GetDefaultReader" /> e <see cref="M:System.Resources.ResourceSet.GetDefaultWriter" /> métodos e passagem de tipo para o construtor.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseName">
+      <MemberSignature Language="C#" Value="public virtual string BaseName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseName" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResourceManager.BaseName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome raiz dos arquivos de recursos que o <see cref="T:System.Resources.ResourceManager" /> pesquisa nos recursos.</summary>
+        <value>O nome raiz dos arquivos de recursos que o <see cref="T:System.Resources.ResourceManager" /> pesquisa nos recursos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.BaseName%2A> propriedade reflete o nome totalmente qualificado de namespace e o nome do recurso de raiz de um arquivo de recurso, sem a extensão de nome de cultura ou arquivo. Por exemplo, se o arquivo de recurso padrão do aplicativo é denominado `SampleApps.StringResources.resources`, o valor de <xref:System.Resources.ResourceManager.BaseName%2A> propriedade é "SampleApps.StringResources". Se o arquivo de recurso padrão do aplicativo é denominado `SampleApps.StringResources.en-US.resources` e é inserido em um assembly satélite, o valor de <xref:System.Resources.ResourceManager.BaseName%2A> propriedade ainda é "SampleApps.StringResources".  
+  
+> [!IMPORTANT]
+>  O <xref:System.Resources.ResourceManager.BaseName%2A> valor da propriedade de um arquivo de recurso que é compilado e inserido na linha de comando não inclui um nome de namespace, a menos que você explicitamente incluir um ao compilar o arquivo. Por outro lado, o <xref:System.Resources.ResourceManager.BaseName%2A> valor da propriedade de um arquivo de recurso que é compilado e inserido no ambiente do Visual Studio normalmente incluem o nome do namespace padrão.  
+  
+ O <xref:System.Resources.ResourceManager.BaseName%2A> o valor da propriedade é o mesmo que a cadeia de caracteres passados para o <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29> ou <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%2CSystem.Type%29> construtor ao instanciar um <xref:System.Resources.ResourceManager> instância.  
+  
+   
+  
+## Examples  
+ Você pode determinar os nomes dos arquivos. Resources foi inserido por compilar e executar o utilitário a seguir. Este é um aplicativo de console que aceita o nome de um assembly principal ou assembly satélite como um parâmetro de linha de comando. Ele exibe as cadeias de caracteres que devem ser fornecidas como o `baseName` parâmetro o <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29> ou <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%2CSystem.Type%29> construtor para que o Gerenciador de recursos pode identificar corretamente o recurso.  
+  
+ [!code-csharp[System.Resources.ResourceManager.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/resourcenames.cs#4)]
+ [!code-vb[System.Resources.ResourceManager.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/resourcenames.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseNameField">
+      <MemberSignature Language="C#" Value="protected string BaseNameField;" />
+      <MemberSignature Language="ILAsm" Value=".field family string BaseNameField" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceManager.BaseNameField" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nome da raiz do recurso de arquivos que o <see cref="T:System.Resources.ResourceManager" /> pesquisas de recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.BaseNameField> campo é útil apenas se você escrever sua própria classe que deriva de <xref:System.Resources.ResourceManager> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFileBasedResourceManager">
+      <MemberSignature Language="C#" Value="public static System.Resources.ResourceManager CreateFileBasedResourceManager (string baseName, string resourceDir, Type usingResourceSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Resources.ResourceManager CreateFileBasedResourceManager(string baseName, string resourceDir, class System.Type usingResourceSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.CreateFileBasedResourceManager(System.String,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="resourceDir" Type="System.String" />
+        <Parameter Name="usingResourceSet" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="baseName">O nome raiz dos recursos. Por exemplo, o nome raiz para o arquivo de recurso chamado "MyResource.en-US.resources" é "MyResource".</param>
+        <param name="resourceDir">O nome do diretório para pesquisar os recursos. <c>resourceDir</c> pode ser um caminho absoluto ou um caminho relativo do diretório do aplicativo.</param>
+        <param name="usingResourceSet">O tipo do <see cref="T:System.Resources.ResourceSet" /> personalizado a ser usado. Se <see langword="null" />, o objeto <see cref="T:System.Resources.ResourceSet" /> do tempo de execução padrão será usado.</param>
+        <summary>Retorna um objeto <see cref="T:System.Resources.ResourceManager" /> que pesquisa um diretório específico em vez de um manifesto do assembly para recursos.</summary>
+        <returns>Uma nova instância de um gerenciador de recursos que pesquisa o diretório especificado em vez de um manifesto do assembly para recursos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um Gerenciador de recursos que recupera os recursos de um arquivo. Resources não é inserido em um assembly. Você pode usar isso <xref:System.Resources.ResourceManager> objeto carregar recursos de uma página ASP.NET ou testar um <xref:System.Resources.ResourceSet> implementação.  Para obter um exemplo que recupera os recursos de um arquivo. Resources autônomo, consulte o [recuperando recursos](~/docs/framework/resources/retrieving-resources-in-desktop-apps.md) artigo.  
+  
+ Esse método permite que você especifique um <xref:System.Resources.ResourceSet> implementação. Se você não quiser que um determinado <xref:System.Resources.ResourceSet> implementação, mas deseja usar um formato de arquivo de recurso personalizado, você deve derivar do <xref:System.Resources.ResourceSet> classe, substitua o <xref:System.Resources.ResourceSet.GetDefaultReader%2A> e <xref:System.Resources.ResourceSet.GetDefaultWriter%2A> métodos e passagem de tipo para o construtor.  
+  
+> [!CAUTION]
+>  Usar arquivos. Resources autônomo em um aplicativo ASP.NET interromperá a implantação de XCOPY, porque os recursos permanecerem bloqueados até que eles sejam liberados explicitamente pelo <xref:System.Resources.ResourceManager.ReleaseAllResources%2A> método. Se você quiser implantar recursos em seus aplicativos ASP.NET, compile os arquivos. Resources em assemblies satélite.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="baseName" /> ou <paramref name="resourceDir" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackLocation">
+      <MemberSignature Language="C#" Value="protected System.Resources.UltimateResourceFallbackLocation FallbackLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Resources.UltimateResourceFallbackLocation FallbackLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResourceManager.FallbackLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.UltimateResourceFallbackLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do qual recuperar os recursos de fallback padrão.</summary>
+        <value>Um dos valores de enumeração que especifica onde pesquisar o Gerenciador de recursos para recursos de fallback.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.FallbackLocation%2A> propriedade é útil apenas se você escrever sua própria classe que deriva de <xref:System.Resources.ResourceManager> classe.  
+  
+ Você pode usar o <xref:System.Resources.NeutralResourcesLanguageAttribute> atributo para informar o Gerenciador de recursos onde encontrar a cultura padrão para um aplicativo: no assembly principal (padrão) ou em um assembly satélite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNeutralResourcesLanguage">
+      <MemberSignature Language="C#" Value="protected static System.Globalization.CultureInfo GetNeutralResourcesLanguage (System.Reflection.Assembly a);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Globalization.CultureInfo GetNeutralResourcesLanguage(class System.Reflection.Assembly a) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetNeutralResourcesLanguage(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="a">O assembly do qual retornar informações específicas de cultura.</param>
+        <summary>Retorna informações específicas de cultura para recursos de padrão do assembly principal, recuperando o valor da <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> atributo em um assembly específico.</summary>
+        <returns>A cultura do <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> atributo, se encontrado; caso contrário, a cultura invariável.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso a ser obtido.</param>
+        <summary>Retorna o valor do recurso diferente de cadeia de caracteres especificado.</summary>
+        <returns>O valor do recurso localizado para as configurações de cultura atual do chamador. Se existir um conjunto de recursos apropriado, mas <paramref name="name" /> não for encontrado, o método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.GetObject%2A> método é usado para recuperar os recursos de cadeia de caracteres não. Isso inclui valores que pertencem aos tipos de dados primitivos como <xref:System.Int32> ou <xref:System.Double>, bitmaps (como uma <xref:System.Drawing.Bitmap?displayProperty=nameWithType> objeto), ou personalizado serializado objetos. Normalmente, o objeto retornado deve ser convertido (em c#) ou convertido (no Visual Basic) em um objeto do tipo apropriado.  
+  
+ O recurso retornado é localizado para a cultura de interface do usuário do thread atual, que é definido como o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade. Se o recurso não está localizado para aquela cultura, o Gerenciador de recursos usa regras de fallback para carregar um recurso apropriado. Se nenhum conjunto de recursos localizados de utilizável for encontrado, o <xref:System.Resources.ResourceManager> recai em recursos da cultura padrão. Se um conjunto de recursos para a cultura padrão não for encontrado, o método gera uma <xref:System.Resources.MissingManifestResourceException> exceção ou, se o conjunto de recursos deve residir em um assembly satélite, um <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Se o Gerenciador de recursos pode carregar um recurso apropriado definido, mas não é possível encontrar um recurso chamado `name`, o método retornará `null`.  
+  
+ O <xref:System.Resources.ResourceManager.IgnoreCase%2A> propriedade determina se a comparação de `name` com os nomes dos recursos diferencia maiusculas de minúsculas (o padrão) ou diferencia maiusculas de minúsculas.  
+  
+> [!CAUTION]
+>  Esse método pode gerar mais exceções que são listadas. Um motivo que isso pode ocorrer é se um método que chama esse método lançará uma exceção.  Por exemplo, um <xref:System.IO.FileLoadException> exceção pode ser gerada se o erro foi feito a implantação ou instalação de um assembly satélite, ou um <xref:System.Runtime.Serialization.SerializationException> exceção pode ser gerada se um tipo definido pelo usuário lança uma exceção definido pelo usuário quando o tipo é desserializado.  
+  
+## <a name="performance-considerations"></a>Considerações sobre desempenho  
+ Se você chamar o <xref:System.Resources.ResourceManager.GetObject%2A> método várias vezes com o mesmo `name` parâmetro, não dependem do método de retorno de uma referência ao mesmo objeto com cada chamada. Isso ocorre porque o <xref:System.Resources.ResourceManager.GetObject%2A> método pode retornar uma referência a um objeto de recurso existente em um cache, ou pode recarregar o recurso e retornar uma referência a um novo objeto de recurso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o método <xref:System.Resources.ResourceManager.GetObject%28System.String%29> para desserializar um objeto personalizado. O exemplo inclui um arquivo de código fonte denominado UIElements.cs (UIElements.vb se você estiver usando o Visual Basic) que define a seguinte estrutura denominada `PersonTable`. Essa estrutura destina-se a ser usada por uma rotina de exibição geral da tabela que exibe os nomes localizados das colunas da tabela. Observe que a estrutura `PersonTable` é marcada com o atributo <xref:System.SerializableAttribute>.  
+  
+ [!code-csharp[Conceptual.Resources.Retrieving#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
+ [!code-vb[Conceptual.Resources.Retrieving#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
+  
+ O código a seguir de um arquivo chamado CreateResources.cs (CreateResources.vb para o Visual Basic) cria um arquivo de recurso XML chamado UIResources.resx que armazena um título de tabela e um objeto `PersonTable` que contém informações para um aplicativo localizado para o idioma inglês.  
+  
+ [!code-csharp[Conceptual.Resources.Retrieving#7](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example1.cs#7)]
+ [!code-vb[Conceptual.Resources.Retrieving#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#7)]  
+  
+ O código a seguir em um arquivo de código-fonte chamado GetObject.cs (GetObject.vb), em seguida, recupera os recursos e os exibe no console.  
+  
+ [!code-csharp[Conceptual.Resources.Retrieving#8](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example2.cs#8)]
+ [!code-vb[Conceptual.Resources.Retrieving#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example2.vb#8)]  
+  
+ Você pode criar o arquivo de recurso necessário e os assemblies e executar o aplicativo, executando o seguinte arquivo em lotes. Você deve usar a opção `/r` para fornecer ao arquivo Resgen.exe uma referência para UIElements.dll para que ele possa acessar informações sobre a estrutura `PersonTable`. Se você estiver usando C#, substitua o nome do compilador `vbc` por `csc` e substitua a extensão `.vb` por `.cs`.  
+  
+```  
+  
+vbc /t:library UIElements.vb  
+vbc CreateResources.vb /r:UIElements.dll  
+CreateResources  
+  
+resgen UIResources.resx  /r:UIElements.dll  
+vbc GetObject.vb /r:UIElements.dll /resource:UIResources.resources  
+  
+GetObject.exe  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">Não foi encontrado nenhum conjunto utilizável de recursos localizados e não há nenhum recurso de cultura padrão. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Os recursos da cultura padrão residem em um assembly satélite que não pôde ser encontrado. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (string name, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string name, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetObject(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso a ser obtido.</param>
+        <param name="culture">A cultura para a qual o recurso é localizado. Se o recurso não estiver localizado para essa cultura, o Resource Manager usa regras de fallback para encontrar um recurso apropriado.  
+  
+ Se esse valor for <see langword="null" />, o objeto <see cref="T:System.Globalization.CultureInfo" /> será obtido usando a propriedade <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />.</param>
+        <summary>Obtém o valor do recurso sem cadeia de caracteres especificado localizado para a cultura indicada.</summary>
+        <returns>O valor do recurso, localizado para a cultura especificada. Se existir um conjunto de recursos apropriado, mas <paramref name="name" /> não for encontrado, o método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> método é usado para recuperar os recursos de cadeia de caracteres não. Isso inclui valores que pertencem aos tipos de dados primitivos como <xref:System.Int32> ou <xref:System.Double>, bitmaps (como uma <xref:System.Drawing.Bitmap?displayProperty=nameWithType> objeto), ou personalizado serializado objetos. Normalmente, o objeto retornado deve ser convertido (em c#) ou convertido (no Visual Basic) em um objeto do tipo apropriado.  
+  
+ O recurso retornado é localizado para a cultura especificada pelo `culture`, ou para a cultura especificada pelo <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade se `culture` é `null`. Se o recurso não está localizado para aquela cultura, o Gerenciador de recursos usa regras de fallback para carregar um recurso apropriado. Se nenhum conjunto de recursos localizados de utilizável for encontrado, o Gerenciador de recursos de volta em recursos da cultura padrão. Se um conjunto de recursos para a cultura padrão não for encontrado, o método gera uma <xref:System.Resources.MissingManifestResourceException> exceção ou, se o conjunto de recursos deve residir em um assembly satélite, um <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Se o Gerenciador de recursos pode carregar um recurso apropriado definido, mas não é possível encontrar um recurso chamado `name`, o método retornará `null`.  
+  
+ O <xref:System.Resources.ResourceManager.IgnoreCase%2A> propriedade determina se a comparação de `name` com os nomes dos recursos diferencia maiusculas de minúsculas (o padrão) ou diferencia maiusculas de minúsculas.  
+  
+> [!CAUTION]
+>  Esse método pode gerar mais exceções que são listadas. Um motivo que isso pode ocorrer é se um método que chama esse método lançará uma exceção.  Por exemplo, um <xref:System.IO.FileLoadException> exceção pode ser gerada se o erro foi feito a implantação ou instalação de um assembly satélite, ou um <xref:System.Runtime.Serialization.SerializationException> exceção pode ser gerada se um tipo definido pelo usuário lança uma exceção definido pelo usuário quando o tipo é desserializado.  
+  
+## <a name="performance-considerations"></a>Considerações sobre desempenho  
+ Se você chamar o <xref:System.Resources.ResourceManager.GetObject%2A> método várias vezes com o mesmo `name` parâmetro, não dependem do método de retorno de uma referência ao mesmo objeto com cada chamada. Isso ocorre porque o <xref:System.Resources.ResourceManager.GetObject%2A> método pode retornar uma referência a um objeto de recurso existente em um cache, ou pode recarregar o recurso e retornar uma referência a um novo objeto de recurso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o método <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> para desserializar um objeto personalizado. O exemplo inclui um arquivo de código fonte denominado NumberInfo.cs (NumberInfo.vb se você estiver usando o Visual Basic) que define a seguinte estrutura denominada `Numbers`. Essa estrutura destina-se a ser usado por um aplicativo simples de educacional que ensina diferentes do inglês falando para contar como 10 em inglês. Observe que o `Numbers` classe está marcada com o <xref:System.SerializableAttribute> atributo.  
+  
+ [!code-csharp[System.Resources.ResourceManager.GetObject#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.getobject/cs/numberinfo.cs#1)]
+ [!code-vb[System.Resources.ResourceManager.GetObject#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.getobject/vb/numberinfo.vb#1)]  
+  
+ O seguinte código-fonte de um arquivo nomeado CreateResources.cs (CreateResources.vb do Visual Basic) cria arquivos de recursos do XML para o idioma inglês padrão, bem como para os idiomas russo, português e francês.  
+  
+ [!code-csharp[System.Resources.ResourceManager.GetObject#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.getobject/cs/createresources.cs#2)]
+ [!code-vb[System.Resources.ResourceManager.GetObject#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.getobject/vb/createresources.vb#2)]  
+  
+ Os recursos são consumidos pelo aplicativo a seguir, que define a cultura de interface do usuário atual como francês (França), português (Brasil) ou russo (Rússia). Ele chama o <xref:System.Resources.ResourceManager.GetObject%28System.String%29> método para obter um `Numbers` objeto que contém números localizados e <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> método para obter um `Numbers` objeto que contém números de idioma inglês. Ele exibe números ímpares usando a cultura de interface do usuário atual e o idioma inglês. O arquivo de código fonte é denominado ShowNumbers.cs (ShowNumbers.vb).  
+  
+ [!code-csharp[System.Resources.ResourceManager.GetObject#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.getobject/cs/shownumbers.cs#3)]
+ [!code-vb[System.Resources.ResourceManager.GetObject#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.getobject/vb/shownumbers.vb#3)]  
+  
+ Você pode usar o seguinte arquivo de lote para compilar e executar a versão do Visual Basic do exemplo. Se você estiver usando c#, substitua `vbc` com `csc`e substitua o `.vb` extensão com `.cs`.  
+  
+```  
+  
+vbc /t:library NumberInfo.vb  
+  
+vbc CreateResources.vb /r:NumberInfo.dll  
+CreateResources  
+  
+resgen NumberResources.resx /r:NumberInfo.dll  
+  
+resgen NumberResources.fr.resx /r:Numberinfo.dll  
+Md fr  
+al /embed:NumberResources.fr.resources /culture:fr /t:lib /out:fr\ShowNumbers.resources.dll  
+  
+resgen NumberResources.pt.resx  /r:Numberinfo.dll  
+Md pt  
+al /embed:NumberResources.pt.resources /culture:pt /t:lib /out:pt\ShowNumbers.resources.dll  
+  
+resgen NumberResources.ru.resx /r:Numberinfo.dll  
+Md ru  
+al /embed:NumberResources.ru.resources /culture:ru /t:lib /out:ru\ShowNumbers.resources.dll  
+  
+vbc ShowNumbers.vb /r:NumberInfo.dll /resource:NumberResources.resources  
+ShowNumbers.exe  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">Não foi encontrado nenhum conjunto utilizável de recursos e não há nenhum recurso de cultura padrão. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Os recursos da cultura padrão residem em um assembly satélite que não pôde ser encontrado. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <threadsafe>O <see cref="M:System.Resources.ResourceManager.GetObject(System.String,System.Globalization.CultureInfo)" /> método é thread-safe.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceFileName">
+      <MemberSignature Language="C#" Value="protected virtual string GetResourceFileName (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetResourceFileName(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetResourceFileName(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">O objeto de cultura para o qual um recurso de nome de arquivo é construído.</param>
+        <summary>Gera o nome do arquivo de recurso para o objeto <see cref="T:System.Globalization.CultureInfo" /> fornecido.</summary>
+        <returns>O nome que pode ser usado para um arquivo de recursos para o objeto <see cref="T:System.Globalization.CultureInfo" /> fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.GetResourceFileName%2A> método é útil apenas se você escrever sua própria classe que deriva de <xref:System.Resources.ResourceManager> classe.  
+  
+ Esse método usa o <xref:System.Globalization.CultureInfo.Name%2A?displayProperty=nameWithType> propriedade como parte do nome do arquivo para todas as culturas diferentes a cultura invariável. Este método não tem uma aparência no manifesto de um assembly ou o disco de toque e é usado somente para construir um nome de arquivo de recurso (adequado para passar para o <xref:System.Resources.ResourceReader> construtor) ou um nome de blob de recurso de manifesto.  
+  
+ Uma classe derivada pode substituir este método para procurar uma extensão diferente, como ". ResX", ou um esquema completamente diferente para nomeação de arquivos de recurso. Observe que o método pode ser usado para personalizar o nome de um arquivo de recurso em um assembly satélite e não para personalizar o nome do próprio assembly satélite.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceSet">
+      <MemberSignature Language="C#" Value="public virtual System.Resources.ResourceSet GetResourceSet (System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Resources.ResourceSet GetResourceSet(class System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetResourceSet(System.Globalization.CultureInfo,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="createIfNotExists" Type="System.Boolean" />
+        <Parameter Name="tryParents" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="culture">A cultura cujos recursos devem ser recuperados.</param>
+        <param name="createIfNotExists">
+          <see langword="true" /> carregar o recurso definido, se ele ainda não foi carregado; caso contrário, <see langword="false" />.</param>
+        <param name="tryParents">
+          <see langword="true" /> usar o recurso de fallback para carregar um recurso apropriado se o conjunto de recursos não pode ser encontrado; <see langword="false" /> para ignorar o processo de fallback de recurso.</param>
+        <summary>Recupera um conjunto de recursos para uma cultura específica.</summary>
+        <returns>Conjunto de recursos para a cultura especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conjunto de recursos que é retornado representa os recursos que são localizados para a cultura especificada. Se os recursos não foram localizados para aquela cultura e `tryParents` é `true`, <xref:System.Resources.ResourceManager.GetResourceSet%2A> usa regras de fallback de recurso para carregar um recurso apropriado. Se `tryParents` é `false` e um conjunto de recursos específicos de cultura não for encontrado, o método retornará `null`. Para obter mais informações sobre o fallback de recurso, consulte a seção "O processo de Fallback de recurso" a [Empacotando e implantando recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) artigo.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Resources.ResourceManager.GetResourceSet%2A> método para recuperar recursos específicos de cultura para a cultura Francês (França). Em seguida, enumera todos os recursos no conjunto de recursos. Ele contém o código-fonte para um executável chamado ShowNumbers.exe. Ele também inclui dois arquivo de texto que contém os nomes de números. A primeira, NumberResources.txt, contém os nomes dos números de 1 a 10 em inglês:  
+  
+```  
+  
+one=one  
+two=two  
+three=three  
+four=four  
+five=five  
+six=six  
+seven=seven  
+eight=eight  
+nine=nine  
+ten=ten  
+  
+```  
+  
+ O segundo, NumberResources.fr-FR.txt contém os nomes dos números de uma a quatro em idioma francês:  
+  
+```  
+  
+one=un  
+two=deux  
+three=trois  
+four=quatre  
+  
+```  
+  
+ Você pode usar um arquivo em lotes para gerar os arquivos de recurso, inserir o arquivo de recurso do idioma inglês para o executável e criar um assembly satélite para os recursos de idioma francês. Aqui está o arquivo em lotes para gerar um arquivo executável, usando o compilador do Visual Basic:  
+  
+```  
+  
+resgen NumberResources.txt  
+vbc shownumbers.vb /resource:NumberResources.resources  
+  
+md fr-FR  
+resgen NumberResources.fr-FR.txt  
+al /out:fr-FR\ShowNumbers.resources.dll /culture:fr-FR /embed:NumberResources.fr-FR.resources  
+```  
+  
+ Para o compilador c#, você pode usar o arquivo de lote a seguir:  
+  
+```  
+  
+resgen NumberResources.txt  
+csc shownumbers.cs /resource:NumberResources.resources  
+  
+md fr-FR  
+resgen NumberResources.fr-FR.txt  
+al /out:fr-FR\ShowNumbers.resources.dll /culture:fr-FR /embed:NumberResources.fr-FR.resources  
+  
+```  
+  
+ [!code-csharp[System.Resources.ResourceManager.GetResourceSet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.getresourceset/cs/shownumbers.cs#1)]
+ [!code-vb[System.Resources.ResourceManager.GetResourceSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.getresourceset/vb/shownumbers.vb#1)]  
+  
+ Observe que, se você alterar o valor da `createIfNotExists` argumento `false`, retorna a chamada do método `null`, pois o Gerenciador de recursos já não carregar os recursos de idioma francês.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="culture" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">
+          <paramref name="tryParents" /> é <see langword="true" />, não foi encontrado nenhum conjunto utilizável de recursos e não há nenhum recurso de cultura padrão.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSatelliteContractVersion">
+      <MemberSignature Language="C#" Value="protected static Version GetSatelliteContractVersion (System.Reflection.Assembly a);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Version GetSatelliteContractVersion(class System.Reflection.Assembly a) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetSatelliteContractVersion(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="a">O assembly para verificar o <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> atributo.</param>
+        <summary>Retorna a versão especificada pelo <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> atributo no assembly especificado.</summary>
+        <returns>A versão do contrato satélite do assembly fornecido, ou <see langword="null" /> se nenhuma versão foi encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre controle de versão de assembly satélite, consulte o <xref:System.Resources.SatelliteContractVersionAttribute> tópico de referência.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Version" /> encontrado no assembly <paramref name="a" /> é inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="a" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.UnmanagedMemoryStream GetStream (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.UnmanagedMemoryStream GetStream(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.UnmanagedMemoryStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um recurso.</param>
+        <summary>Retorna um objeto de fluxo de memória não gerenciada do recurso especificado.</summary>
+        <returns>Um objeto de fluxo de memória não gerenciado que representa um recurso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.GetStream%2A> método usa o nome de um recurso que é armazenado como um <xref:System.IO.MemoryStream> de objeto, obtém o valor da <xref:System.Object> recursos e retorna um <xref:System.IO.UnmanagedMemoryStream> objeto. Isso requer que você trabalhe diretamente com um fluxo de bytes, que, em seguida, converter em um objeto. Esse método é útil principalmente por razões de desempenho: recuperação de um recurso como um fluxo de bytes em vez de um objeto explícito pode melhorar o desempenho.  
+  
+ O recurso retornado é localizado para a cultura de interface do usuário do thread atual, que é definido como o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade. Se o recurso não está localizado para aquela cultura, o Gerenciador de recursos usa regras de fallback para carregar um recurso apropriado. Se nenhum conjunto de recursos localizados de utilizável for encontrado, o <xref:System.Resources.ResourceManager> recai em recursos da cultura padrão. Se um conjunto de recursos para a cultura padrão não for encontrado, o método gera uma <xref:System.Resources.MissingManifestResourceException> exceção ou, se o conjunto de recursos deve residir em um assembly satélite, um <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Se o Gerenciador de recursos pode carregar um recurso apropriado definido, mas não é possível encontrar um recurso chamado `name`, o método retornará `null`.  
+  
+ O <xref:System.Resources.ResourceManager.IgnoreCase%2A> propriedade determina se a comparação de `name` com os nomes dos recursos diferencia maiusculas de minúsculas (o padrão) ou diferencia maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o método <xref:System.Resources.ResourceManager.GetStream%28System.String%29> para recuperar um bitmap que é usado em uma janela inicial de abertura do aplicativo. O seguinte código de um arquivo chamado CreateResources.cs (para c#) ou CreateResources.vb (para Visual Basic) gera um arquivo. resx denominado AppResources. resx que contém a imagem serializada. Nesse caso, a imagem é carregada a partir de um arquivo chamado SplashScreen.jpg; você pode modificar o nome do arquivo para substituir sua própria imagem.  
+  
+ [!code-csharp[Conceptual.Resources.Retrieving#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
+ [!code-vb[Conceptual.Resources.Retrieving#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
+  
+ O código a seguir de um arquivo chamado GetStream.cs (para c#) ou GetStream.vb (para Visual Basic), em seguida, recupera o recurso e exibe a imagem em um <xref:System.Windows.Forms.PictureBox?displayProperty=nameWithType> controle.  
+  
+ [!code-csharp[Conceptual.Resources.Retrieving#5](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
+ [!code-vb[Conceptual.Resources.Retrieving#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
+  
+ Você pode usar o seguinte arquivo em lotes para criar o exemplo de C#. Para o Visual Basic, alterar `csc` para `vbc`e altere a extensão do arquivo de código fonte do `.cs` para `.vb`.  
+  
+```  
+  
+csc CreateResources.cs  
+CreateResources  
+  
+resgen AppResources.resx  
+  
+csc GetStream.cs /resource:AppResources.resources  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor do recurso especificado não é um objeto <see cref="T:System.IO.MemoryStream" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">Não foi encontrado nenhum conjunto de recursos utilizável e não existem recursos padrão. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Os recursos da cultura padrão residem em um assembly satélite que não pôde ser encontrado. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.UnmanagedMemoryStream GetStream (string name, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.UnmanagedMemoryStream GetStream(string name, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetStream(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.UnmanagedMemoryStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um recurso.</param>
+        <param name="culture">Um objeto que especifica a cultura a ser usada para a pesquisa de recursos. Se <c>cultura</c> é <see langword="null" />, a cultura do thread atual é usada.</param>
+        <summary>Retorna um objeto de fluxo de memória não gerenciada do recurso especificado, usando a cultura especificada.</summary>
+        <returns>Um objeto de fluxo de memória não gerenciada que representa um recurso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.GetStream%2A> método usa o nome de um recurso que é armazenado como um <xref:System.IO.MemoryStream> de objeto, obtém o valor da <xref:System.Object> recursos e retorna um <xref:System.IO.UnmanagedMemoryStream> objeto. Isso requer que você trabalhe diretamente com um fluxo de bytes, que, em seguida, converter em um objeto. Esse método é útil principalmente por razões de desempenho: recuperação de um recurso como um fluxo de bytes em vez de um objeto explícito pode melhorar o desempenho.  
+  
+ O recurso retornado é localizado para a cultura especificada pelo `culture`, ou para a cultura especificada pelo <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade se `culture` é `null`. Se o recurso não está localizado para aquela cultura, o Gerenciador de recursos usa regras de fallback para carregar um recurso apropriado. Se nenhum conjunto de recursos localizados de utilizável for encontrado, o <xref:System.Resources.ResourceManager> recai em recursos da cultura padrão. Se um conjunto de recursos para a cultura padrão não for encontrado, o método gera uma <xref:System.Resources.MissingManifestResourceException> exceção ou, se o conjunto de recursos deve residir em um assembly satélite, um <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Se o Gerenciador de recursos pode carregar um recurso apropriado definido, mas não é possível encontrar um recurso chamado `name`, o método retornará `null`.  
+  
+ O <xref:System.Resources.ResourceManager.IgnoreCase%2A> propriedade determina se a comparação de `name` com os nomes dos recursos diferencia maiusculas de minúsculas (o padrão) ou diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor do recurso especificado não é um objeto <see cref="T:System.IO.MemoryStream" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">Não foi encontrado nenhum conjunto de recursos utilizável e não existem recursos padrão. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Os recursos da cultura padrão residem em um assembly satélite que não pôde ser encontrado. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public virtual string GetString (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetString(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso a ser recuperado.</param>
+        <summary>Retorna o valor do recurso de cadeia de caracteres especificado.</summary>
+        <returns>O valor do recurso localizado para a cultura da interface do usuário atual do chamador, ou <see langword="null" />, se não for possível encontrar <paramref name="name" /> em um conjunto de recursos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Em aplicativos de área de trabalho, o recurso que é retornado é localizado para a cultura de interface do usuário do thread atual, conforme definido pelo <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade. Se o recurso não foi localizado para aquela cultura, o Gerenciador de recursos de testes para um recurso seguindo as etapas descritas na seção "Processo de Fallback de recurso" a [Empacotando e implantando recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) artigo. Se nenhum conjunto de recursos localizados de utilizável for encontrado, o Gerenciador de recursos de volta em recursos da cultura padrão. Se o Gerenciador de recursos não é possível carregar o conjunto de recursos da cultura padrão, o método gera uma <xref:System.Resources.MissingManifestResourceException> exceção ou, se o conjunto de recursos deve residir em um assembly satélite, um <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Se o Gerenciador de recursos pode carregar um recurso apropriado definido, mas não é possível encontrar um recurso chamado `name`, o método retornará `null`.  
+  
+ O <xref:System.Resources.ResourceManager.IgnoreCase%2A> propriedade determina se a comparação de `name` com os nomes dos recursos diferencia maiusculas de minúsculas (o padrão) ou diferencia maiusculas de minúsculas.  
+  
+> [!CAUTION]
+>  Esse método pode gerar mais exceções que são listadas. Um motivo que isso pode ocorrer é se um método que chama esse método lançará uma exceção.  Por exemplo, um <xref:System.IO.FileLoadException> exceção pode ser gerada se o erro foi feito a implantação ou instalação de um assembly satélite, ou um <xref:System.Runtime.Serialization.SerializationException> exceção pode ser gerada se um tipo definido pelo usuário lança uma exceção definido pelo usuário quando o tipo é desserializado.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+  
+> [!IMPORTANT]
+>  Embora o <xref:System.Resources.ResourceManager> classe tem suporte no [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, não recomendamos seu uso. Use esta classe somente quando você desenvolve [!INCLUDE[net_portable](~/includes/net-portable-md.md)] projetos que podem ser usados com [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Para recuperar os recursos de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, use o [Windows.ApplicationModel.Resources.ResourceLoader](http://go.microsoft.com/fwlink/p/?LinkId=238182) classe em vez disso.  
+  
+ Em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, o <xref:System.Resources.ResourceManager.GetString%28System.String%29> método retornará o valor da `name` recurso localizado para configurações de cultura de interface do usuário atuais do chamador de cadeia de caracteres. A lista das culturas é derivada da lista de idiomas de interface do usuário preferencial do sistema operacional. Se o Gerenciador de recursos não pode corresponder `name`, o método retornará `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceManager.GetString%2A> método para recuperar recursos específicos de cultura. Ele consiste em recursos compilados a partir de arquivos. txt para o inglês (en), francês (França) (fr-FR) e russo (Rússia) (ru-RU) culturas. O exemplo altera a cultura atual e a cultura de interface do usuário atual para inglês (Estados Unidos), francês (França), russo (Rússia) e sueco (Suécia). Depois, ele chama o <xref:System.Resources.ResourceManager.GetString%2A> método para recuperar a cadeia de caracteres localizada, ele exibe junto com o mês e dia atual. Observe que a saída exibe a cadeia de caracteres localizada apropriada, exceto quando a cultura de interface do usuário atual estiver sueco (Suécia). Porque os recursos de idioma sueco estão indisponíveis, o aplicativo usa em vez disso, os recursos da cultura padrão, que é o inglês. O exemplo requer os arquivos de recursos com base em texto listados na tabela a seguir. Cada um tem um recurso de cadeia de caracteres único chamado `DateStart`.  
+  
+|Cultura|Nome do arquivo|Nome do recurso|Valor do recurso|  
+|-------------|---------------|-------------------|--------------------|  
+|pt-BR|DateStrings.txt|`DateStart`|Hoje é|  
+|fr-FR|DateStrings.fr FR.txt|`DateStart`|Aujourd'hui, le c'est|  
+|ru-RU|DateStrings.ru RU.txt|`DateStart`|СЕГОДНЯ|  
+  
+ Você pode usar o seguinte arquivo de lote para compilar o exemplo c#. Para o Visual Basic, altere `csc` para `vbc` e altere a extensão do arquivo de código-fonte de `.cs` para `.vb`.  
+  
+```  
+resgen DateStrings.txt  
+csc showdate.cs /resource:DateStrings.resources  
+  
+md fr-FR  
+resgen DateStrings.fr-FR.txt  
+al /out:fr-FR\Showdate.resources.dll /culture:fr-FR /embed:DateStrings.fr-FR.resources   
+  
+md ru-RU  
+resgen DateStrings.ru-RU.txt  
+al /out:ru-RU\Showdate.resources.dll /culture:ru-RU /embed:DateStrings.ru-RU.resources  
+```  
+  
+ Aqui está o código-fonte para o exemplo (ShowDate.vb para a versão do Visual Basic) ou ShowDate.cs para a versão c#.  
+  
+ [!code-csharp[System.Resources.ResourceManager.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/showdate.cs#2)]
+ [!code-vb[System.Resources.ResourceManager.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/showdate.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O valor do recurso especificado não é uma cadeia de caracteres.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">Não foi encontrado conjunto utilizável de recursos e não há recursos para a cultura padrão. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Os recursos da cultura padrão residem em um assembly satélite que não pôde ser encontrado. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <threadsafe>O <see cref="M:System.Resources.ResourceManager.GetString(System.String)" /> método é thread-safe.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public virtual string GetString (string name, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetString(string name, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.GetString(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso a ser recuperado.</param>
+        <param name="culture">Um objeto que representa a cultura para a qual o recurso está localizado.</param>
+        <summary>Retorna o valor do recurso de cadeia de caracteres localizado para a cultura especificada.</summary>
+        <returns>O valor do recurso localizado para a cultura especificada, ou <see langword="null" />, se não for possível encontrar <paramref name="name" /> em um conjunto de recursos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Em aplicativos de área de trabalho, se `culture` é `null`, o <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> método usa a cultura de interface do usuário atual obtida o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade.  
+  
+ O recurso que é retornado é localizado para a cultura especificada pelo `culture` parâmetro. Se o recurso não foi localizado para `culture`, o Gerenciador de recursos de testes para um recurso seguindo as etapas descritas na seção "Processo de Fallback de recurso" a [Empacotando e implantando recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) tópico. Se nenhum utilizável conjunto de recursos for encontrado, o Gerenciador de recursos de volta em recursos da cultura padrão. Se o Gerenciador de recursos não é possível carregar o conjunto de recursos da cultura padrão, o método gera uma <xref:System.Resources.MissingManifestResourceException> exceção ou, se o conjunto de recursos deve residir em um assembly satélite, um <xref:System.Resources.MissingSatelliteAssemblyException> exceção. Se o Gerenciador de recursos pode carregar um recurso apropriado definido, mas não é possível encontrar um recurso chamado `name`, o método retornará `null`.  
+  
+ O <xref:System.Resources.ResourceManager.IgnoreCase%2A> propriedade determina se a comparação de `name` com os nomes dos recursos diferencia maiusculas de minúsculas (o padrão) ou diferencia maiusculas de minúsculas.  
+  
+> [!CAUTION]
+>  Esse método pode gerar mais exceções que são listadas. Um motivo que isso pode ocorrer é se um método que chama esse método lançará uma exceção.  Por exemplo, um <xref:System.IO.FileLoadException> exceção pode ser gerada se o erro foi feito a implantação ou instalação de um assembly satélite, ou um <xref:System.Runtime.Serialization.SerializationException> exceção pode ser gerada se um tipo definido pelo usuário lança uma exceção definido pelo usuário quando o tipo é desserializado.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+  
+> [!IMPORTANT]
+>  Embora o <xref:System.Resources.ResourceManager> classe tem suporte no [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, não recomendamos seu uso. Use esta classe somente quando você desenvolve [!INCLUDE[net_portable](~/includes/net-portable-md.md)] projetos que podem ser usados com [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Para recuperar os recursos de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, use o [Windows.ApplicationModel.Resources.ResourceLoader](http://go.microsoft.com/fwlink/p/?LinkId=238182) classe em vez disso.  
+  
+ Em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, o <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> método retornará o valor da `name` localizado para a cultura especificada pelo recurso de cadeia de caracteres de `culture` parâmetro. Se o recurso não está localizado para o `culture` cultura, a pesquisa usa todo o [!INCLUDE[win8](~/includes/win8-md.md)] lista de fallback de idioma e será interrompido depois de verificar a cultura padrão. Se o Gerenciador de recursos não pode corresponder `name`, o método retornará `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> método para recuperar recursos específicos de cultura. Cultura do padrão de exemplo é em inglês (en) e inclui assemblies satélite para o francês (França) (fr-FR) e russo (Rússia) (ru-RU) culturas. O exemplo altera a cultura atual e a cultura de interface do usuário atual para Russo (Rússia) antes de chamar <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>. Depois, ele chama o <xref:System.Resources.ResourceManager.GetString%2A> método e o <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> método e passa <xref:System.Globalization.CultureInfo> objetos que representam o francês (França) e culturas sueco (Suécia) para cada método. Na saída, o mês e dia do mês, bem como a cadeia de caracteres que precede aparecem em francês, porque o <xref:System.Resources.ResourceManager.GetString%2A> método é capaz de recuperar o recurso de idioma francês. No entanto, quando a cultura sueco (Suécia) é usada, o mês e dia do mês aparecem em sueco, embora a cadeia de caracteres que precede está em inglês. Isso ocorre porque o Gerenciador de recursos não é possível encontrar recursos de idioma sueco localizados, para que ela retorne um recurso para a cultura inglesa padrão em vez disso.  
+  
+ O exemplo requer os arquivos de recursos com base em texto listados na tabela a seguir. Cada um tem um recurso de cadeia de caracteres único chamado `DateStart`.  
+  
+|Cultura|Nome do arquivo|Nome do recurso|Valor do recurso|  
+|-------------|---------------|-------------------|--------------------|  
+|pt-BR|DateStrings.txt|`DateStart`|Hoje é|  
+|fr-FR|DateStrings.fr FR.txt|`DateStart`|Aujourd'hui, le c'est|  
+|ru-RU|DateStrings.ru RU.txt|`DateStart`|СЕГОДНЯ|  
+  
+ Você pode usar o seguinte arquivo de lote para compilar o exemplo do Visual Basic. Para compilar em c#, alterar `vbc` para `csc`e altere a extensão do arquivo de código fonte do `.vb` para `.cs`.  
+  
+```  
+resgen DateStrings.txt  
+vbc showdate.vb /resource:DateStrings.resources  
+  
+md fr-FR  
+resgen DateStrings.fr-FR.txt  
+al /out:fr-FR\Showdate.resources.dll /culture:fr-FR /embed:DateStrings.fr-FR.resources   
+  
+md ru-RU  
+resgen DateStrings.ru-RU.txt  
+al /out:ru-RU\Showdate.resources.dll /culture:ru-RU /embed:DateStrings.ru-RU.resources  
+```  
+  
+ Aqui está o código-fonte para o exemplo (ShowDate.vb para a versão do Visual Basic) ou ShowDate.cs para a versão c#.  
+  
+ [!code-csharp[System.Resources.ResourceManager.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/showdate2.cs#3)]
+ [!code-vb[System.Resources.ResourceManager.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/showdate2.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O valor do recurso especificado não é uma cadeia de caracteres.</exception>
+        <exception cref="T:System.Resources.MissingManifestResourceException">Não foi encontrado conjunto utilizável de recursos e não existem recursos para uma cultura padrão. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Os recursos da cultura padrão residem em um assembly satélite que não pôde ser encontrado. Para obter informações sobre como lidar com essa exceção, consulte a seção "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" (Tratando as exceções MissingManifestResourceException e MissingSatelliteAssemblyException) no tópico sobre a classe <see cref="T:System.Resources.ResourceManager" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <threadsafe>O <see cref="M:System.Resources.ResourceManager.GetString(System.String,System.Globalization.CultureInfo)" /> método é thread-safe.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderVersionNumber">
+      <MemberSignature Language="C#" Value="public static readonly int HeaderVersionNumber;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 HeaderVersionNumber" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceManager.HeaderVersionNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a versão de cabeçalhos de arquivo de recurso que a implementação atual de <see cref="T:System.Resources.ResourceManager" /> pode interpretar e produzir.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="public virtual bool IgnoreCase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreCase" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResourceManager.IgnoreCase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o gerenciador de recursos permite pesquisas de recurso que diferenciam maiúsculas de minúsculas nos métodos <see cref="M:System.Resources.ResourceManager.GetString(System.String)" /> e <see cref="M:System.Resources.ResourceManager.GetObject(System.String)" />.</summary>
+        <value>
+          <see langword="true" /> para ignorar maiúsculas e minúsculas durante a pesquisa de recursos; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor de <xref:System.Resources.ResourceManager.IgnoreCase%2A> é de propriedade `false`, um recurso com o nome "Recurso" não é equivalente ao recurso com o recurso"nome". Se <xref:System.Resources.ResourceManager.IgnoreCase%2A> é `true`, um recurso com o nome "Recurso" é equivalente ao recurso com o recurso"nome". No entanto, observe que, quando <xref:System.Resources.ResourceManager.IgnoreCase%2A> é `true`, o <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> e <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> métodos executam comparações de cadeia de caracteres de maiusculas e minúsculas, usando a cultura invariável. A vantagem é que os resultados das comparações de cadeia de caracteres de maiusculas e minúsculas executadas por esses métodos são os mesmos em todos os computadores, independentemente da cultura. A desvantagem é que os resultados não são consistentes com as regras de maiusculas e minúsculas de todas as culturas.  
+  
+ Por exemplo, o alfabeto turco tem duas versões do caractere i: uma com um ponto e sem um ponto. Turco, o caractere I (Unicode 0049) é considerado a versão maiuscula de um caractere diferente ı (0131 Unicode). O caractere i (0069 Unicode) é considerado a versão minúscula de outro caractere İ (0130 Unicode). Acordo com essas regras de maiusculas e minúsculas, uma comparação de cadeia de caracteres de maiusculas e minúsculas dos caracteres i (0069 Unicode) e (Unicode 0049) deve falhar para a cultura "tr-TR" (turco na Turquia). No entanto, porque a comparação é realizada usando as regras de maiusculas e minúsculas da cultura invariável se <xref:System.Resources.ResourceManager.IgnoreCase%2A> é `true`, essa comparação é bem-sucedida.  
+  
+> [!NOTE]
+>  Por motivos de desempenho, é melhor especificar sempre o caso correto para seus nomes de recursos. Configuração <xref:System.Resources.ResourceManager.IgnoreCase%2A> para `true` pode causar um aumento significativo no conjunto de trabalho e uma queda significativa no desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalGetResourceSet">
+      <MemberSignature Language="C#" Value="protected virtual System.Resources.ResourceSet InternalGetResourceSet (System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Resources.ResourceSet InternalGetResourceSet(class System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.InternalGetResourceSet(System.Globalization.CultureInfo,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="createIfNotExists" Type="System.Boolean" />
+        <Parameter Name="tryParents" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="culture">O objeto de cultura a ser pesquisado.</param>
+        <param name="createIfNotExists">
+          <see langword="true" /> para carregar o conjunto de recursos caso ainda não tenha sido carregado; caso contrário, <see langword="false" />.</param>
+        <param name="tryParents">
+          <see langword="true" /> para verificar objetos <see cref="T:System.Globalization.CultureInfo" /> pai se o conjunto de recursos não puder ser carregado; caso contrário, <see langword="false" />.</param>
+        <summary>Fornece a implementação para localizar um conjunto de recursos.</summary>
+        <returns>O conjunto de recursos especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Resources.MissingManifestResourceException">O assembly principal não contém um arquivo .resources, que é necessário para pesquisar um recurso.</exception>
+        <exception cref="T:System.ExecutionEngineException">Ocorreu um erro interno no tempo de execução.</exception>
+        <exception cref="T:System.Resources.MissingSatelliteAssemblyException">Não foi possível localizar o assembly satélite associado a <paramref name="culture" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <block subset="none" type="overrides">
+          <para>Esse método é concluído em todo o trabalho necessário para localizar um recurso de conjunto e pode ser recursivo e reentrante. Em outras palavras, esse método pode carregar um assembly e o gatilho um <see cref="E:System.AppDomain.AssemblyLoad" /> evento, que, em seguida, chama de volta um <see cref="T:System.Resources.ResourceManager" /> objeto que não foi completamente inicializado. Para evitar colocar bloqueios extras, esse método não é thread-safe. O <see cref="M:System.Resources.ResourceManager.GetResourceSet(System.Globalization.CultureInfo,System.Boolean,System.Boolean)" />, <see cref="M:System.Resources.ResourceManager.GetString(System.String)" />, e <see cref="M:System.Resources.ResourceManager.GetObject(System.String)" /> métodos fazem a sincronização necessário.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MagicNumber">
+      <MemberSignature Language="C#" Value="public static readonly int MagicNumber;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 MagicNumber" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceManager.MagicNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o número usado para identificar arquivos de recurso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor é definido como 0xBEEFCACE. Os primeiros quatro bytes do formato de arquivo do sistema padrão contém um inteiro assinado de 32 bits no formato little-endian (consulte <xref:System.Text.Encoding>).  
+  
+ Se o <xref:System.Resources.ResourceManager.MagicNumber> for encontrado, os bytes após ele será um número de versão para um <xref:System.Resources.ResourceManager> cabeçalho, seguido por um número que indica o número de bytes deve ser ignorado para passar esse cabeçalho. O próximo número indica a versão do <xref:System.Resources.ResourceManager> que criou o cabeçalho, seguido por informações específicas da versão.  
+  
+ O número de versão para a implementação atual é um. Os bytes são uma cadeia de caracteres de prefixo de comprimento que contém o nome de um <xref:System.Resources.IResourceReader>, que pode ler este arquivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainAssembly">
+      <MemberSignature Language="C#" Value="protected System.Reflection.Assembly MainAssembly;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Reflection.Assembly MainAssembly" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceManager.MainAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o assembly principal que contém os recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager.MainAssembly> campo é útil apenas se você escrever sua própria classe que deriva de <xref:System.Resources.ResourceManager> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseAllResources">
+      <MemberSignature Language="C#" Value="public virtual void ReleaseAllResources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseAllResources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceManager.ReleaseAllResources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica ao gerenciador de recursos para chamar o método <see cref="M:System.Resources.ResourceSet.Close" /> em todos os objetos <see cref="T:System.Resources.ResourceSet" /> e liberar todos os recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método irá reduzir o conjunto de trabalho em um aplicativo em execução. As pesquisas de recursos no futuro neste <xref:System.Resources.ResourceManager> objeto será mais caro que a pesquisa primeiro, pois o Gerenciador de recursos precisarão pesquisar e carregar recursos novamente. Isso pode ser útil em algumas situações complexas de threads, onde a criação de um novo <xref:System.Resources.ResourceManager> objeto é o comportamento apropriado.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, o <xref:System.Resources.ResourceManager.ReleaseAllResources%2A> método não é thread-safe em relação ao <xref:System.Resources.ResourceManager.GetObject%2A>, <xref:System.Resources.ResourceManager.GetString%2A>, e <xref:System.Resources.ResourceManager.GetStream%2A> operações. A vantagem dessa alteração é uma melhoria de desempenho de vários threads que acessam os recursos. No entanto, se você chamar o <xref:System.Resources.ResourceManager.ReleaseAllResources%2A> método em um thread ao obter simultaneamente um recurso em outro thread, a operação pode lançar um <xref:System.ObjectDisposedException> exceção.  
+  
+ Você também pode usar esse método em situações em que as instâncias gerenciadas para os recursos criados pelo Gerenciador de recursos atual precisam ser liberados de forma determinista, sem esperar que o Gerenciador de recursos completamente fora do escopo e coleta de lixo.  
+  
+> [!NOTE]
+>  Chamar esse método não descarregar assemblies satélite. Para descarregar assemblies de satélite, use o <xref:System.AppDomain.Unload%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceSets">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable ResourceSets;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Hashtable ResourceSets" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceManager.ResourceSets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("call InternalGetResourceSet instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém uma <see cref="T:System.Collections.Hashtable" /> que retorna um mapeamento de culturas para <see cref="T:System.Resources.ResourceSet" /> objetos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceSetType">
+      <MemberSignature Language="C#" Value="public virtual Type ResourceSetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ResourceSetType" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResourceManager.ResourceSetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do objeto de conjunto de recursos que o gerenciador de recursos usa para construir um objeto <see cref="T:System.Resources.ResourceSet" />.</summary>
+        <value>O tipo do objeto de conjunto de recursos que o gerenciador de recursos usa para construir um objeto <see cref="T:System.Resources.ResourceSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

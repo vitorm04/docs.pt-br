@@ -1,0 +1,123 @@
+<Type Name="TypeLibVersionAttribute" FullName="System.Runtime.InteropServices.TypeLibVersionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeLibVersionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeLibVersionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibVersionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o número de versão de uma biblioteca de tipos exportada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para assemblies.  
+  
+ Por padrão, o [Tlbexp.exe (exportador da biblioteca)](~/docs/framework/tools/tlbexp-exe-type-library-exporter.md) gera uma versão da biblioteca de tipo dos primeiros dois números de uma versão do assembly. Por exemplo, Tlb.exe exporta o assembly versão 1.2.5000.0 como uma versão de biblioteca de tipo 1.2, eliminando os números de compilação e revisão do assembly. Se esse comportamento é desejável, você pode controlar a geração do número de biblioteca de tipo explicitamente, aplicando o <xref:System.Runtime.InteropServices.TypeLibVersionAttribute>.  
+  
+ É útil controlar a geração de uma versão da biblioteca de tipo explicitamente quando duas versões de assembly produzem a mesma versão de biblioteca de tipo. Por exemplo, a versão do assembly 1.2.0.0 e versão do assembly 1.2.500.0 ambos produzem uma versão de biblioteca de tipo de 1,2, que pode causar problemas quando você desinstala um dos assemblies. Para diferenciar as versões da biblioteca de tipo, você pode forçar o segundo conjunto (versão 1.2.500.0) para produzir uma versão de biblioteca de tipo de 1,25.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar o <xref:System.Runtime.InteropServices.TypeLibVersionAttribute> para definir explicitamente a versão da biblioteca de tipo para 1,25.  
+  
+ [!code-cpp[System.Runtime.InteropServices.TypeLibVersionAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.typelibversionattribute/cpp/source.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.TypeLibVersionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.typelibversionattribute/cs/source.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.TypeLibVersionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.typelibversionattribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibVersionAttribute (int major, int minor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibVersionAttribute.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">O número de versão principal da biblioteca de tipos.</param>
+        <param name="minor">O número de versão secundária da biblioteca de tipos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.TypeLibVersionAttribute" /> classe com os números de versão primária e secundária da biblioteca de tipos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersion">
+      <MemberSignature Language="C#" Value="public int MajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.TypeLibVersionAttribute.MajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão principal da biblioteca de tipos.</summary>
+        <value>O número de versão principal da biblioteca de tipos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersion">
+      <MemberSignature Language="C#" Value="public int MinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.TypeLibVersionAttribute.MinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão secundária da biblioteca de tipos.</summary>
+        <value>O número de versão secundária da biblioteca de tipos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="IExtensibleObject&lt;T&gt;" FullName="System.ServiceModel.IExtensibleObject&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IExtensibleObject&lt;T&gt; where T : IExtensibleObject&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtensibleObject`1&lt;(class System.ServiceModel.IExtensibleObject`1&lt;!T&gt;) T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.IExtensibleObject`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.IExtensibleObject&lt;T&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo da classe de extensão.</typeparam>
+    <summary>Permitir que um objeto participe de comportamento personalizado, como registrar-se para eventos ou observar as transições de estado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar <xref:System.ServiceModel.IExtensibleObject%601> habilitem da agregação de extensões.  
+  
+ Por exemplo, se você estiver implementando um `TreeNode` classe e deseja permitir que o código externo adicionar anotações e métodos para algumas instâncias de `TreeNode`, você pode ter `TreeNode` implementar `IExtensibleObject<TreeNode>`. Isso permite que o código que usa `TreeNode` adicionar os objetos que implementam `IExtensibleObject<TreeNode>` para o <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> coleção.  
+  
+ Há quatro objetos extensíveis em [!INCLUDE[indigo1](~/includes/indigo1-md.md)]:  
+  
+-   <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>  
+  
+-   <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>  
+  
+-   <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>  
+  
+-   <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>  
+  
+ Para obter uma discussão sobre como criar a extensão para trabalhar com esses objetos, consulte [objetos extensíveis](~/docs/framework/wcf/extending/extensible-objects.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IExtensionCollection&lt;T&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IExtensionCollection`1&lt;!T&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IExtensibleObject`1.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IExtensionCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos de extensão para este objeto extensível.</summary>
+        <value>Um <see cref="T:System.ServiceModel.IExtensionCollection`1" /> de objetos de extensão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

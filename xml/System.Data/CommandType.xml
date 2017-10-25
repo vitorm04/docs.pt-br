@@ -1,0 +1,120 @@
+<Type Name="CommandType" FullName="System.Data.CommandType">
+  <TypeSignature Language="C#" Value="public enum CommandType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CommandType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.CommandType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como uma cadeia de caracteres de comando é interpretada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Data.CommandType> está definida como o procedimento armazenado, o <xref:System.Data.IDbCommand.CommandText%2A> propriedade deve ser definida como o nome do procedimento armazenado para ser acessado. O usuário pode ser necessário para usar a sintaxe de caractere de escape ou incluir caracteres qualificadores se alguma das tabelas especificadas denominadas contiver caracteres especiais. Todas as linhas e colunas da tabela nomeada ou tabelas serão retornadas quando você chama um dos métodos de execução de um objeto de comando.  
+  
+ Quando o <xref:System.Data.CommandType> está definida como TableDirect, o <xref:System.Data.IDbCommand.CommandText%2A> propriedade deve ser definida para o nome da tabela a ser acessado. O usuário pode ser necessário para usar a sintaxe de caractere de escape ou incluir caracteres qualificadores se alguma das tabelas nomeadas contiver caracteres especiais. Todas as linhas e colunas da tabela nomeada serão retornadas ao chamar um dos métodos Execute.  
+  
+ Para acessar várias tabelas, use uma lista delimitada por vírgulas, sem espaços ou preenchimento, contendo os nomes de tabelas a serem acessadas. Quando o `CommandText` nomes de propriedades várias tabelas, uma junção das tabelas especificadas é retornada.  
+  
+> [!NOTE]
+>  `TableDirect`Somente há suporte pelo provedor de dados .NET Framework para OLE DB. Acesso múltiplo de tabela não é suportado quando <xref:System.Data.CommandType.TableDirect> é definido como `TableDirect`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="StoredProcedure">
+      <MemberSignature Language="C#" Value="StoredProcedure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.CommandType StoredProcedure = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.CommandType.StoredProcedure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.CommandType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome de um procedimento armazenado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TableDirect">
+      <MemberSignature Language="C#" Value="TableDirect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.CommandType TableDirect = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.CommandType.TableDirect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.CommandType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome de uma tabela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.CommandType Text = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.CommandType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.CommandType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um comando de texto SQL. (Padrão.)</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

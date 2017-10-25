@@ -1,0 +1,21 @@
+<Namespace Name="System.Data">
+  <Docs>
+    <summary>O namespace <see cref="N:System.Data" /> fornece acesso às classes que representam a arquitetura ADO.NET. ADO.NET permite que você crie componentes que gerenciam dados de várias fontes de dados com eficiência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um cenário desconectado, como a Internet, ADO.NET fornece as ferramentas para solicitar, atualizar e reconciliar dados em vários sistemas da camada. A arquitetura ADO.NET é implementada em aplicativos cliente, como formulários do Windows, ou páginas HTML criadas pelo ASP.NET.  
+  
+ A parte central da arquitetura do ADO.NET é a <xref:System.Data.DataSet> classe. Cada <xref:System.Data.DataSet> pode conter vários <xref:System.Data.DataTable> objetos, com cada <xref:System.Data.DataTable> contendo dados de uma fonte de dados, como o SQL Server.  
+  
+ Cada <xref:System.Data.DataTable> contém um <xref:System.Data.DataColumnCollection>– uma coleção de <xref:System.Data.DataColumn> objetos que determina o esquema de cada <xref:System.Data.DataTable>. O <xref:System.Data.DataColumn.DataType%2A> propriedade determina o tipo de dados mantidos pelo <xref:System.Data.DataColumn>. O <xref:System.Data.DataColumn.ReadOnly%2A> e <xref:System.Data.DataColumn.AllowDBNull%2A> propriedades permitem que você mais garante a integridade dos dados. O <xref:System.Data.DataColumn.Expression%2A> propriedade permite que você criar colunas calculadas.  
+  
+ Se um <xref:System.Data.DataTable> participa de uma relação pai/filho com outro <xref:System.Data.DataTable>, a relação é construída com a adição de um <xref:System.Data.DataRelation> para o <xref:System.Data.DataRelationCollection> de um <xref:System.Data.DataSet> objeto. Quando uma relação de termos for adicionada, um <xref:System.Data.UniqueConstraint> e um <xref:System.Data.ForeignKeyConstraint> são criados automaticamente, dependendo das configurações de parâmetro para o construtor. O <xref:System.Data.UniqueConstraint> garante que os valores que estão contidos em uma coluna sejam exclusivos. O <xref:System.Data.ForeignKeyConstraint> determina qual ação ocorrerá para a coluna ou linha filho quando um valor de chave primária é alterado ou excluído.  
+  
+ Usando o <xref:System.Data.SqlClient> namespace (.NET Framework Data Provider para SQL Server), o <xref:System.Data.Odbc> namespace (.NET Framework Data Provider para ODBC), o <xref:System.Data.OleDb> namespace (.NET Framework Data Provider para OLE DB) ou o <xref:System.Data.OracleClient> namespace (o .NET Framework Data Provider for Oracle), você pode acessar dados de um fonte para usar em conjunto com um <xref:System.Data.DataSet>. Provedor de dados Each.NET Framework tem um correspondente **DataAdapter** que você pode usar como uma ponte entre uma fonte de dados e um <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

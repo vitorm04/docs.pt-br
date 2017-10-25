@@ -1,0 +1,98 @@
+<Type Name="RepeaterItemEventArgs" FullName="System.Web.UI.WebControls.RepeaterItemEventArgs">
+  <TypeSignature Language="C#" Value="public class RepeaterItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RepeaterItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeaterItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos <see cref="E:System.Web.UI.WebControls.Repeater.ItemCreated" /> e <see cref="E:System.Web.UI.WebControls.Repeater.ItemDataBound" /> de um <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.RepeaterItemEventArgs>, consulte o <xref:System.Web.UI.WebControls.RepeaterItemEventArgs.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.Repeater.ItemCreated> evento o <xref:System.Web.UI.WebControls.Repeater>. Uma nova linha de texto que indica o tipo de item é exibida sempre que um <xref:System.Web.UI.WebControls.Repeater> item é criado.  
+  
+ [!code-aspx-csharp[Classic RepeaterItemEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterItemEventArgs Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RepeaterItemEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterItemEventArgs Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RepeaterItemEventArgs (System.Web.UI.WebControls.RepeaterItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.RepeaterItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterItemEventArgs.#ctor(System.Web.UI.WebControls.RepeaterItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.RepeaterItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> associado ao evento. O <see cref="P:System.Web.UI.WebControls.RepeaterItemEventArgs.Item" /> propriedade é definida para esse valor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.RepeaterItemEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.RepeaterItemEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Item`|`item`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RepeaterItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.RepeaterItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItemEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> associado ao evento.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> associado ao evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para acessar as propriedades do <xref:System.Web.UI.WebControls.RepeaterItem> associado ao evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como determinar o <xref:System.Web.UI.WebControls.RepeaterItem.ItemType%2A> do item associado ao evento do <xref:System.Web.UI.WebControls.RepeaterCommandEventArgs.Item%2A> propriedade.  
+  
+ [!code-aspx-csharp[Classic RepeaterItemEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterItemEventArgs Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RepeaterItemEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterItemEventArgs Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

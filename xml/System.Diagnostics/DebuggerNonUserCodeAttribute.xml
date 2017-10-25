@@ -1,0 +1,99 @@
+<Type Name="DebuggerNonUserCodeAttribute" FullName="System.Diagnostics.DebuggerNonUserCodeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerNonUserCodeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DebuggerNonUserCodeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerNonUserCodeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica um tipo ou membro que não faz parte do código de usuário para um aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designer fornecido tipos e membros que não fazem parte do código criado especificamente pelo usuário podem complicar a experiência de depuração. Esse atributo suprime a exibição desses complementar tipos e membros na janela do depurador e automaticamente etapas por meio de, em vez de em fornecidos o código de designer.  Quando o depurador encontra esse atributo ao percorrer o código do usuário, a experiência do usuário é não consultar o designer fornecido o código e passar para a próxima instrução de código fornecido pelo usuário.  
+  
+> [!NOTE]
+>  O common language runtime não anexa nenhuma semântica para esse atributo. Ele é fornecido para uso por depuradores de código fonte. Por exemplo, em [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], o depurador não mostra um elemento com esse atributo na janela do depurador, não parar em um método com esse atributo e não permite que um ponto de interrupção a ser definido no método.  
+  
+ O comportamento do depurador quando o <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> está presente é semelhante a usar uma combinação da <xref:System.Diagnostics.DebuggerHiddenAttribute> atributo, que oculta o código do depurador, e o <xref:System.Diagnostics.DebuggerStepThroughAttribute> de atributo, que informa o depurador para percorrer, em vez de, o código é aplicado para.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso desse atributo em um projeto do Visual Basic.  
+  
+```  
+' Form overrides Dispose to clean up the component list.  
+<System.Diagnostics.DebuggerNonUserCode()> _  
+Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)  
+    If disposing AndAlso components IsNot Nothing Then  
+        components.Dispose()  
+    End If  
+    MyBase.Dispose(disposing)  
+End Sub  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerNonUserCodeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerNonUserCodeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerNonUserCodeAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição da função deste construtor e um exemplo de uso, consulte o <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

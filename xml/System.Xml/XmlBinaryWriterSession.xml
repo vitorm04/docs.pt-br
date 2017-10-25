@@ -1,0 +1,142 @@
+<Type Name="XmlBinaryWriterSession" FullName="System.Xml.XmlBinaryWriterSession">
+  <TypeSignature Language="C#" Value="public class XmlBinaryWriterSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlBinaryWriterSession extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlBinaryWriterSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite usar um dicionário dinâmico para compactar cadeias de caracteres comuns que aparecem em uma mensagem e mantém o estado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de sessão (esta classe junto com <xref:System.Xml.XmlBinaryReaderSession>) habilitar atomização de cadeia de caracteres dinâmica que pode abranger uma conversação inteira. Esses objetos de sessão gerenciam dicionários dinâmicos. Para obter mais informações sobre dicionários dinâmicos consulte <xref:System.Xml.XmlDictionary>.  
+  
+ Devido ao processamento assíncrono, é possível que as mensagens que chegam de forma síncrona a serem processados em uma ordem diferente da ordem em que foram enviadas. Atomização de cadeia de caracteres que abrange mensagens Verifique as mensagens são processadas na ordem original ou atomizadas as cadeias de caracteres devem ser transmitidas usando um mecanismo diferente.  
+  
+ Para usá-las, você cria um objeto de sessão e passá-lo para o construtor ou inicializador para um leitor XML binário ou gravador.  
+  
+ Para reutilizar um dicionário dinâmico passar o mesmo objeto de sessão para todas as subsequentes leitores e gravadores.  
+  
+ O objeto de sessão pode ser redefinido para permitir que o pool.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlBinaryWriterSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlBinaryWriterSession.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlBinaryWriterSession.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa as coleções internas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAdd">
+      <MemberSignature Language="C#" Value="public virtual bool TryAdd (System.Xml.XmlDictionaryString value, out int key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryAdd(class System.Xml.XmlDictionaryString value, [out] int32&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlBinaryWriterSession.TryAdd(System.Xml.XmlDictionaryString,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="key" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Xml.XmlDictionaryString" /> a ser adicionado.</param>
+        <param name="key">A chave do <see cref="T:System.Xml.XmlDictionaryString" /> que foi adicionado com êxito.</param>
+        <summary>Tenta adicionar um <see cref="T:System.Xml.XmlDictionaryString" /> à coleção interna.</summary>
+        <returns>
+          <see langword="true" />Se a cadeia de caracteres pode ser adicionada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usar essa classe deve substituir este método para enviar a coleção de chaves junto com a mensagem. Sem substituição, uma nova chave é adicionada à coleção, que é salvo, mas não enviada com a mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma entrada com chave = <paramref name="key" /> já existe.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

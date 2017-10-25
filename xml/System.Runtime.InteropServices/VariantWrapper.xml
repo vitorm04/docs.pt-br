@@ -1,0 +1,128 @@
+<Type Name="VariantWrapper" FullName="System.Runtime.InteropServices.VariantWrapper">
+  <TypeSignature Language="C#" Value="public sealed class VariantWrapper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit VariantWrapper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.VariantWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Realiza marshaling de dados do tipo <see langword="VT_VARIANT | VT_BYREF" /> de código gerenciado para código não gerenciado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade de <xref:System.Runtime.InteropServices.VariantWrapper> é adicionar um nível de indireção ao empacotamento de um tipo gerenciado para o correspondente `VARIANT` tipo.  
+  
+ Você pode usar essa classe para encapsular um <xref:System.Object> que o marshaler interoperabilidade passa como `VT_VARIANT | VT_BYREF`. Nas versões 1.0 e 1.1 do .NET Framework, não foi possível realizar marshaling de dados variante do tipo `VT_VARIANT | VT_BYREF` para código não gerenciado. O empacotador de interoperabilidade passada uma variante do tipo gerenciado (por exemplo, `VT_BSTR | VT_BYREF` para <xref:System.String>, ou `VT_I4 | VT_BYREF` para <xref:System.Int32>), mas não `VT_VARIANT | VT_BYREF`.  
+  
+ Uma vantagem de usar `VT_VARIANT | VT_BYREF` tipos variantes é que o tipo de dados pode ser alterado durante uma chamada de método. Por exemplo, você pode passar um `VT_VARIANT | VT_BYREF` tipo variant que contém uma `VT_BSTR` e get retornou um tipo variant que contém uma `VT_I4` após uma chamada de método. Porque o empacotador de interoperabilidade COM não tem como saber quando passar `VT_BSTR | VT_BYREF` e quando passar `VT_VARIANT | VT_BYREF`, que aponta para um tipo variant que contém uma `BSTR` para parâmetros declarados como `VARIANT *`, você pode instruir o marshaler usando <xref:System.Runtime.InteropServices.VariantWrapper>.  
+  
+ Observe que a associação inicial não é suportado; Você pode usar <xref:System.Runtime.InteropServices.VariantWrapper> apenas ao chamar <xref:System.Type.InvokeMember%2A> ou com uma interface somente de expedição, chamado de forma antecipada associada. Em c#, você também deve usar o `ref` palavra-chave para especificar `ByRef` semântica para qualquer parâmetro do tipo <xref:System.Runtime.InteropServices.VariantWrapper>. No Visual Basic, `ByRef` semântica é adicionada automaticamente para cada chamada de associação tardia implícita. Observe também que o aninhamento <xref:System.Runtime.InteropServices.VariantWrapper> objetos e matrizes de <xref:System.Runtime.InteropServices.VariantWrapper> não há suporte para objetos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Runtime.InteropServices.VariantWrapper> classe para encapsular um <xref:System.Object> que o marshaler interoperabilidade passa como `VT_VARIANT | VT_BYREF`.  
+  
+ [!code-csharp[System.Runtime.InteropServices.VariantWrapper#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.VariantWrapper/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.VariantWrapper#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.VariantWrapper/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VariantWrapper (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.VariantWrapper.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para realizar marshaling.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.VariantWrapper" /> classe especificado <see cref="T:System.Object" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Runtime.InteropServices.VariantWrapper> classe para encapsular um <xref:System.Object> que o marshaler interoperabilidade passa como `VT_VARIANT | VT_BYREF`.  
+  
+ [!code-csharp[System.Runtime.InteropServices.VariantWrapper#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.VariantWrapper/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.VariantWrapper#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.VariantWrapper/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedObject">
+      <MemberSignature Language="C#" Value="public object WrappedObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WrappedObject" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.VariantWrapper.WrappedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto encapsulado pelo <see cref="T:System.Runtime.InteropServices.VariantWrapper" /> objeto.</summary>
+        <value>O objeto encapsulado pelo <see cref="T:System.Runtime.InteropServices.VariantWrapper" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

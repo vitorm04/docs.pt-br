@@ -1,0 +1,719 @@
+<Type Name="WindowChrome" FullName="System.Windows.Shell.WindowChrome">
+  <TypeSignature Language="C#" Value="public class WindowChrome : System.Windows.Freezable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowChrome extends System.Windows.Freezable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.WindowChrome" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto que descreve as personalizações para a área não cliente de uma janela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Shell.WindowChrome> classe permite que você estenda o conteúdo do Windows Presentation Foundation (WPF) para a área não cliente de uma janela que normalmente é reservada para o Gerenciador de janelas do sistema operacional.  
+  
+## <a name="standard-windows"></a>Windows padrão  
+ Padrão do windows é composta de dois retângulos sobrepostos. O retângulo exterior é o *área não cliente*, que é conhecido como *chrome*. Ela é desenhada e gerenciada pelo Gerenciador de janelas do sistema operacional. As dimensões são determinadas pelas configurações do sistema operacional padrão. O quadro de cliente não fornece recursos de janela padrão e comportamentos. Isso inclui botões de legenda (minimizar, maximizar e fechar), a borda da janela, redimensione e mova os comportamentos, o ícone do aplicativo e título e o menu do sistema. O retângulo interno é o *área cliente*. Contém o conteúdo do seu aplicativo, e é desenhada e gerenciada pelo aplicativo. Para obter mais informações sobre o windows em aplicativos WPF, consulte [visão geral do Windows WPF](~/docs/framework/wpf/app-development/wpf-windows-overview.md).  
+  
+ A ilustração a seguir mostra as partes de uma janela padrão.  
+  
+ ![Elementos de janela](~/add/media/windowoverviewfigure1.PNG "elementos da janela")  
+  
+## <a name="custom-windows"></a>Windows personalizado  
+ Você pode personalizar uma borda da janela, definindo o <xref:System.Windows.Window.WindowStyle%2A?displayProperty=nameWithType> propriedade <xref:System.Windows.WindowStyle.None> ou usando o <xref:System.Windows.Shell.WindowChrome> classe.  
+  
+### <a name="windowstylenone"></a>WindowStyle.None  
+ Uma maneira de personalizar a aparência de uma janela de aplicativo do WPF é definir o <xref:System.Windows.Window.WindowStyle%2A?displayProperty=nameWithType> propriedade <xref:System.Windows.WindowStyle.None>. Isso remove o quadro não-cliente da janela e deixa somente a área de cliente, para que você pode aplicar um estilo personalizado. No entanto, quando o quadro de cliente não é removido, você também perde os recursos de sistema e comportamentos que ele fornece, como botões de legenda e redimensionamento de janela. Outro efeito colateral é que a janela abordará a barra de tarefas do Windows quando ele é maximizado. Configuração <xref:System.Windows.WindowStyle?displayProperty=nameWithType> permite que você crie um aplicativo totalmente personalizado, mas também requer que você implemente a lógica personalizada em seu aplicativo para emular o comportamento de janela padrão.  
+  
+### <a name="windowchrome"></a>WindowChrome  
+ Para personalizar uma janela, mantendo sua funcionalidade padrão, você pode usar o <xref:System.Windows.Shell.WindowChrome> classe. O <xref:System.Windows.Shell.WindowChrome> classe separa a funcionalidade do quadro da janela de visuais e lhe permite controlar o limite entre o cliente e o cliente não áreas da janela do aplicativo. O <xref:System.Windows.Shell.WindowChrome> classe permite que você coloque o conteúdo no quadro da janela do WPF, estendendo a área de cliente para cobrir a área não cliente. Ao mesmo tempo, ele retém os comportamentos de sistema por meio de duas áreas invisíveis; the                                          *resize border* and                                          *caption* areas                                         .  
+  
+ Há duas partes principais para a criação de uma janela personalizada usando o <xref:System.Windows.Shell.WindowChrome> classe. Primeiro, você personalizar a parte do cliente não da janela, definindo as propriedades expostas no <xref:System.Windows.Shell.WindowChrome> objeto. Em seguida, você deve fornecer um modelo para a janela que define a parte de seu aplicativo que é estendido para a área não cliente. The properties exposed on the                                          <xref:System.Windows.Shell.WindowChrome> object are                                          <xref:System.Windows.Shell.WindowChrome.ResizeBorderThickness%2A>,                                          <xref:System.Windows.Shell.WindowChrome.CaptionHeight%2A>,                                          <xref:System.Windows.Shell.WindowChrome.CornerRadius%2A>, and                                          <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A>.  
+  
+ O <xref:System.Windows.Shell.WindowChrome.ResizeBorderThickness%2A> propriedade especifica uma borda invisível para fora da janela do aplicativo que o usuário pode clicar e arrastar para redimensionar a janela.  
+  
+ O <xref:System.Windows.Shell.WindowChrome.CaptionHeight%2A> propriedade especifica uma área invisível na parte superior da janela que permite que os comportamentos de sistema geralmente associados à barra de título. Esses comportamentos incluem: clicar e arrastar para mover a janela, clique duas vezes para maximizar a janela e clique para mostrar o menu do sistema.  
+  
+ A área de borda e a legenda de redimensionamento não tem elementos visuais; eles definem somente áreas que respondem a entrada e habilitar os comportamentos de janela padrão fornecido pelo sistema.  
+  
+ O <xref:System.Windows.Shell.WindowChrome.CornerRadius%2A> propriedade especifica a quantidade que os cantos da janela são arredondados. Essa propriedade não terá efeito se o quadro transparente está habilitado para uma janela.  
+  
+ O <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade especifica a largura do quadro de vidro a janela. Por padrão, ele usa o valor de sistema especificado pelo <xref:System.Windows.SystemParameters.WindowNonClientFrameThickness%2A> propriedade emular a aparência de uma janela padrão. Quando o quadro de vidro é usado, os botões de legenda para minimizar, maximizar e fechar estão visíveis e interativo. O aplicativo é responsável por exibir o texto de ícone e a legenda do aplicativo. Você pode definir o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade para tornar o quadro de vidro mais largo ou mais estreito do que o padrão.  
+  
+> [!CAUTION]
+>  O tamanho dos botões de legenda não é alterado quando o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade é alterada. Se a altura da parte superior do quadro de vidro for menor que a altura dos botões de legenda, os botões de legenda não será completamente visíveis.  
+  
+ Para fazer uma janela personalizada que não tem um quadro de vidro, defina o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade para um valor uniforme de 0. Isso irá desabilitar e ocultar os botões de legenda padrão.  
+  
+ Para estender o quadro transparente para abranger toda a janela, defina o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade com um valor negativo em qualquer lado. Quando o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade é definida como um valor negativo para qualquer lado, seu valor forçado será igual a <xref:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness%2A>.  
+  
+> [!NOTE]
+>  Aero é um conjunto de aprimoramentos visuais a aparência e a funcionalidade de trabalho do Windows que foi introduzido no Windows Vista. Um dos recursos do Aero visualmente mais óbvios é transparente vidro limites da janela. O Windows Aero é habilitado pelo recurso de composição de área de trabalho do Desktop Window Manager (DWM).  
+  
+ Efeitos de vidro Windows Aero não têm suporte em todos os sistemas operacionais e podem ser desabilitados em sistemas operacionais com suporte. Se o Windows Aero não estiver disponível, o quadro de vidro não será exibido independentemente do <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> o valor da propriedade. A área de borda especificada por essa propriedade aparecerá em preta em vez disso. Verifique o <xref:System.Windows.SystemParameters.IsGlassEnabled%2A> propriedade para verificar se o Windows Aero efeitos de vidro estão disponíveis. Se os efeitos de vidro não estiverem disponíveis, você deve fornecer um estilo de janela alternativo que não usam o quadro de vidro ou janela padrão definindo o estilo da janela como null.  
+  
+ Você pode estender seu conteúdo WPF no quadro de janela, especificando um ControlTemplate que define a aparência e comportamento do conteúdo do quadro. Você pode definir o TargetType de ControlTemplate para o tipo de janela que você está personalizando.  
+  
+```  
+<ControlTemplate TargetType="{x:Type local:MainWindow}">  
+```  
+  
+ Por padrão, as partes de elementos visuais que estão dentro da área não cliente da janela não são interativas. Para habilitar elementos interativos na área não cliente, anexar a propriedade WindowsChrome.IsHitTestVisibleInChrome anexados ao elemento e defina-a como true.  
+  
+ A marcação XAML a seguir mostra os principais elementos necessários para personalizar uma janela usando a classe WindowChrome.  
+  
+```  
+<Style x:Key="StandardStyle" TargetType="{x:Type local:MainWindow}">  
+    <Setter Property="shell:WindowChrome.WindowChrome">  
+        <Setter.Value>  
+            <shell:WindowChrome />  
+        </Setter.Value>  
+    </Setter>  
+    <Setter Property="Template">  
+        <Setter.Value>  
+            <ControlTemplate TargetType="{x:Type local:MainWindow}">  
+                <Grid>  
+                    <Border Background="White"  
+                            Margin="{Binding Source={x:Static shell:SystemParameters2.Current}, Path=WindowNonClientFrameThickness}">  
+                        <ContentPresenter Content="{TemplateBinding Content}" />  
+                    </Border>  
+                    <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"   
+                               VerticalAlignment="Top" HorizontalAlignment="Left"   
+                               Margin="36,8,0,0"/>  
+                    <Image Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Icon}"  
+                           VerticalAlignment="Top" HorizontalAlignment="Left"  
+                           Margin="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(shell:WindowChrome.WindowChrome).ResizeBorderThickness}"   
+                           Width="{Binding Source={x:Static shell:SystemParameters2.Current}, Path=SmallIconSize.Width}"  
+                           shell:WindowChrome.IsHitTestVisibleInChrome="True"/>  
+                </Grid>  
+            </ControlTemplate>  
+        </Setter.Value>  
+    </Setter>  
+</Style>  
+```  
+  
+ O primeiro setter anexa o WindowChrome à janela. Ele usa todos os valores padrão para as propriedades de WindowChrome, que faz com que a janela se parecer com uma janela padrão.  
+  
+```  
+<Setter Property="shell:WindowChrome.WindowChrome">  
+    <Setter.Value>  
+        <shell:WindowChrome />  
+    </Setter.Value>  
+</Setter>  
+```  
+  
+ O modelo de janela deve especificar um apresentador conteúdo para exibir o conteúdo da janela especificada em seu aplicativo. Por padrão o WindowChrome classe estende a área de cliente para cobrir a borda do cliente não. Para descobrir o quadro transparente, você precisa especificar uma margem ao redor de ContentPresenter. Essa marcação especifica uma borda com um plano de fundo branco em torno do conteúdo apresentador para emular a aparência de uma janela padrão. Ela também especifica uma margem que está associada à propriedade WindowNonClientFrameThickness, que obtém a largura de sistema padrão para o quadro.  
+  
+```  
+<Border Background="White"  
+    Margin="{Binding Source={x:Static shell:SystemParameters2.Current}, Path=WindowNonClientFrameThickness}">  
+    <ContentPresenter Content="{TemplateBinding Content}" />  
+</Border>  
+```  
+  
+ O ícone do aplicativo e o título não são exibidos pela classe WindowChrome; eles precisam ser adicionados à borda como conteúdo personalizado. O XAML a seguir adiciona uma imagem e um textblock para exibir o ícone e o título. Ambos os elementos são vinculados para as propriedades correspondentes na janela. A largura da imagem está associada à largura SmallIconSize, que obtém o tamanho padrão do sistema para o ícone. A propriedade IsHitTestVisibleInChrome anexado é definida na imagem para que ele possa receber eventos de mouse.  
+  
+```  
+<Image Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Icon}"  
+       VerticalAlignment="Top" HorizontalAlignment="Left"  
+       Margin="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(shell:WindowChrome.WindowChrome).ResizeBorderThickness}"   
+       Width="{Binding Source={x:Static shell:SystemParameters2.Current}, Path=SmallIconSize.Width}"  
+       shell:WindowChrome.IsHitTestVisibleInChrome="True"/>  
+  
+<TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"   
+           VerticalAlignment="Top" HorizontalAlignment="Left"   
+           Margin="36,8,0,0"/>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowChrome ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Shell.WindowChrome" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptionHeight">
+      <MemberSignature Language="C#" Value="public double CaptionHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CaptionHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.CaptionHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura da área de legenda na parte superior de uma janela.</summary>
+        <value>A altura da área de legenda.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Shell.WindowChrome.CaptionHeight%2A> propriedade para especificar a área na parte superior da janela que permite que os comportamentos de sistema geralmente associados à barra de título. Esses comportamentos incluem clique duas vezes para maximizar a janela, clique com botão direito para abrir o menu do sistema e clique e arraste para mover a janela. Essa propriedade pode ser definida como qualquer valor duplo positivo.  
+  
+ A área definida pelo <xref:System.Windows.Shell.WindowChrome.CaptionHeight%2A> propriedade começa com a borda inferior da borda superior de redimensionamento e para baixo estende a quantidade especificada. Ultrapassa a largura da janela dentro à direita e esquerda redimensionar bordas. Essa área não tem elementos visuais associados a ele; ele só é usado para definir a região que responde aos comportamentos de barra de título. Por padrão, as partes de elementos visuais que estão dentro da área de legenda da janela não são interativas. Para habilitar elementos interativos na área de legenda, anexe o <xref:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChrome%2A> propriedade anexada ao elemento e defina-a como `true`.  
+  
+<a name="dependencyPropertyInfo_CaptionHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Shell.WindowChrome.CaptionHeightProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptionHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CaptionHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CaptionHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.CaptionHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.CaptionHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CornerRadius">
+      <MemberSignature Language="C#" Value="public System.Windows.CornerRadius CornerRadius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.CornerRadius CornerRadius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.CornerRadius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.CornerRadius</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a quantidade que os cantos de uma janela são arredondados.</summary>
+        <value>Um valor que descreve a quantidade que cantos são arredondados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Shell.WindowChrome.CornerRadius%2A> propriedade para especificar o valor de arredondamento nos cantos de uma janela. Essa propriedade pode ser definida como qualquer valor duplo positivo. Os valores podem ser não-uniforme.  
+  
+ Essa propriedade não afeta maximizadas windows ou windows que têm um quadro de vidro Windows Aero. Tem um efeito somente quando o Windows Aero (também chamado de Gerenciador de janelas da área de trabalho) não está habilitado ou o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade é definida como 0. Teste de clique na área não cliente não tem o <xref:System.Windows.Shell.WindowChrome.CornerRadius%2A> em consideração ao determinar se o mouse estiver sobre uma borda de redimensionamento. Se o raio for muito grande, relativo a <xref:System.Windows.Shell.WindowChrome.ResizeBorderThickness%2A> , em seguida, é possível que o usuário não pode executar um redimensionamento diagonal usando o mouse.  
+  
+<a name="dependencyPropertyInfo_CornerRadius"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Shell.WindowChrome.CornerRadiusProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CornerRadiusProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CornerRadiusProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CornerRadiusProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.CornerRadiusProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.CornerRadius" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Windows.Shell.WindowChrome" />.</summary>
+        <returns>A nova instância dessa classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsHitTestVisibleInChrome">
+      <MemberSignature Language="C#" Value="public static bool GetIsHitTestVisibleInChrome (System.Windows.IInputElement inputElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsHitTestVisibleInChrome(class System.Windows.IInputElement inputElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.GetIsHitTestVisibleInChrome(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">O elemento de entrada do qual ler o valor da propriedade.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChrome" /> anexados a propriedade de elemento de entrada especificado.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChrome" /> propriedade anexada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputElement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputElement" /> não é um <see cref="T:System.Windows.DependencyObject" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResizeGripDirection">
+      <MemberSignature Language="C#" Value="public static System.Windows.Shell.ResizeGripDirection GetResizeGripDirection (System.Windows.IInputElement inputElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Shell.ResizeGripDirection GetResizeGripDirection(class System.Windows.IInputElement inputElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.GetResizeGripDirection(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.ResizeGripDirection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">O elemento de entrada do qual ler o valor da propriedade.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Shell.WindowChrome.ResizeGripDirection" /> anexados a propriedade de elemento de entrada especificado.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Shell.WindowChrome.ResizeGripDirection" /> propriedade anexada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputElement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputElement" /> não é um <see cref="T:System.Windows.DependencyObject" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWindowChrome">
+      <MemberSignature Language="C#" Value="public static System.Windows.Shell.WindowChrome GetWindowChrome (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Shell.WindowChrome GetWindowChrome(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.GetWindowChrome(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.WindowChrome</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">O <see cref="T:System.Windows.Window" /> do qual ler o valor da propriedade.</param>
+        <summary>Obtém o valor da <see cref="P:System.Windows.Shell.WindowChrome.WindowChrome" /> propriedade anexada especificado <see cref="T:System.Windows.Window" />.</summary>
+        <returns>A instância do <see cref="T:System.Windows.Shell.WindowChrome" /> que é anexado ao especificado <see cref="T:System.Windows.Window" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="window" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GlassFrameCompleteThickness">
+      <MemberSignature Language="C#" Value="public static System.Windows.Thickness GlassFrameCompleteThickness { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Thickness GlassFrameCompleteThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma espessura uniforme de -1.</summary>
+        <value>Uma espessura uniforme de -1 em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness%2A> é fornecida como um utilitário para que você possa definir a espessura do quadro de transparência para uma propriedade nomeada. Definir o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> igual da propriedade <xref:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness%2A> para estender o quadro transparente em toda a janela. Se o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade é definida como um valor negativo para qualquer lado, seu valor forçado será igual a <xref:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlassFrameThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness GlassFrameThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness GlassFrameThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.GlassFrameThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a largura da borda de vidro ao redor de uma janela.</summary>
+        <value>A largura da borda de vidro ao redor de uma janela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade para especificar a quantidade que estende o Windows Aero quadro de transparência para a área cliente de uma janela. Por padrão, o quadro de vidro usará os valores de sistema para emular a aparência de uma janela padrão. Se o Windows Aero estiver habilitado, os botões de legenda padrão (maximizar, minimizar fechamento) são interativos e habilitado. Para criar uma janela personalizada que não tem um quadro de vidro, definido nesta espessura como um valor uniforme de 0. Isso irá desabilitar os botões de legenda padrão.  
+  
+ Para estender o quadro transparente para abranger toda a janela, defina o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade com um valor negativo em qualquer lado. Se o <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> propriedade é definida como um valor negativo para qualquer lado, seu valor forçado será igual a <xref:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness%2A>. O <xref:System.Windows.Shell.WindowChrome.GlassFrameCompleteThickness%2A> é fornecida como um utilitário para que você possa definir a espessura do quadro de vidro a uma propriedade nomeada que estende o vidro por toda a janela.  
+  
+ Efeitos de vidro Windows Aero não têm suporte em todos os sistemas operacionais e podem ser desabilitados em sistemas operacionais com suporte. Se o Windows Aero não estiver disponível, o quadro de vidro não será exibido independentemente do <xref:System.Windows.Shell.WindowChrome.GlassFrameThickness%2A> o valor da propriedade. Você deve verificar o <xref:System.Windows.SystemParameters.IsGlassEnabled%2A> propriedade para verificar se o Windows Aero efeitos de vidro estão disponíveis. Se os efeitos de vidro não estiverem disponíveis, você deve fornecer um estilo de janela alternativo que não usa o quadro transparente.  
+  
+<a name="dependencyPropertyInfo_GlassFrameThickness"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Shell.WindowChrome.GlassFrameThicknessProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlassFrameThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GlassFrameThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GlassFrameThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.GlassFrameThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.GlassFrameThickness" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHitTestVisibleInChromeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHitTestVisibleInChromeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHitTestVisibleInChromeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChromeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChrome" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonClientFrameEdges">
+      <MemberSignature Language="C#" Value="public System.Windows.Shell.NonClientFrameEdges NonClientFrameEdges { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Shell.NonClientFrameEdges NonClientFrameEdges" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.NonClientFrameEdges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.NonClientFrameEdges</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica quais bordas do quadro de janela não pertencem ao cliente.</summary>
+        <value>Uma combinação bit a bit dos valores de enumeração que especifica quais bordas do quadro não pertencem ao cliente.  
+  
+ O padrão registrado é <see cref="F:System.Windows.Shell.NonClientFrameEdges.None" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_NonClientFrameEdges"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Shell.WindowChrome.NonClientFrameEdgesProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">'Esquerda, direita, superior, inferior' não é um valor válido. Pelo menos uma borda deve pertencer ao cliente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NonClientFrameEdgesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NonClientFrameEdgesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NonClientFrameEdgesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.NonClientFrameEdgesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.NonClientFrameEdges" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeBorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness ResizeBorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness ResizeBorderThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.ResizeBorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a largura da borda que é usada para redimensionar a janela.</summary>
+        <value>A largura da borda que é usada para redimensionar a janela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Shell.WindowChrome.ResizeBorderThickness%2A> propriedade para especificar a largura da área em que um usuário pode clicar e arrastar para redimensionar a janela. O ponteiro do mouse muda para redimensionar setas quando ele é movido sobre a borda de redimensionamento.  
+  
+ Essa propriedade pode ser definida como qualquer valor duplo positivo. Os valores podem ser não-uniforme. Por padrão, a borda de redimensionamento usará os valores de sistema para emular o comportamento de uma janela padrão.  
+  
+ Essa área é usada apenas para definir a região que é usada para redimensionar a janela. ele não tem elementos visuais associados a ele. No entanto, ele afeta o layout dos elementos dentro da borda de redimensionamento.  
+  
+<a name="dependencyPropertyInfo_ResizeBorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Shell.WindowChrome.ResizeBorderThicknessProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeBorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ResizeBorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ResizeBorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.ResizeBorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.ResizeBorderThickness" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeGripDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ResizeGripDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ResizeGripDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.ResizeGripDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.ResizeGripDirection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsHitTestVisibleInChrome">
+      <MemberSignature Language="C#" Value="public static void SetIsHitTestVisibleInChrome (System.Windows.IInputElement inputElement, bool hitTestVisible);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsHitTestVisibleInChrome(class System.Windows.IInputElement inputElement, bool hitTestVisible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.SetIsHitTestVisibleInChrome(System.Windows.IInputElement,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Windows.IInputElement" />
+        <Parameter Name="hitTestVisible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">O elemento no qual definir o <see cref="P:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChrome" /> propriedade anexada.</param>
+        <param name="hitTestVisible">O valor da propriedade a ser definido.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Shell.WindowChrome.IsHitTestVisibleInChrome" /> anexado a propriedade no elemento de entrada especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputElement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputElement" /> não é um <see cref="T:System.Windows.DependencyObject" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResizeGripDirection">
+      <MemberSignature Language="C#" Value="public static void SetResizeGripDirection (System.Windows.IInputElement inputElement, System.Windows.Shell.ResizeGripDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetResizeGripDirection(class System.Windows.IInputElement inputElement, valuetype System.Windows.Shell.ResizeGripDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.SetResizeGripDirection(System.Windows.IInputElement,System.Windows.Shell.ResizeGripDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Windows.IInputElement" />
+        <Parameter Name="direction" Type="System.Windows.Shell.ResizeGripDirection" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">O elemento no qual definir o <see cref="P:System.Windows.Shell.WindowChrome.ResizeGripDirection" /> propriedade anexada.</param>
+        <param name="direction">O valor da propriedade a ser definido.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Shell.WindowChrome.ResizeGripDirection" /> anexado a propriedade no elemento de entrada especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputElement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputElement" /> não é um <see cref="T:System.Windows.DependencyObject" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWindowChrome">
+      <MemberSignature Language="C#" Value="public static void SetWindowChrome (System.Windows.Window window, System.Windows.Shell.WindowChrome chrome);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetWindowChrome(class System.Windows.Window window, class System.Windows.Shell.WindowChrome chrome) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.WindowChrome.SetWindowChrome(System.Windows.Window,System.Windows.Shell.WindowChrome)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+        <Parameter Name="chrome" Type="System.Windows.Shell.WindowChrome" />
+      </Parameters>
+      <Docs>
+        <param name="window">O <see cref="T:System.Windows.Window" /> no qual definir o <see cref="P:System.Windows.Shell.WindowChrome.WindowChrome" /> propriedade anexada.</param>
+        <param name="chrome">A instância de <see cref="T:System.Windows.Shell.WindowChrome" /> para definir.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Shell.WindowChrome.WindowChrome" /> anexado a propriedade especificada <see cref="T:System.Windows.Window" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="window" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAeroCaptionButtons">
+      <MemberSignature Language="C#" Value="public bool UseAeroCaptionButtons { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAeroCaptionButtons" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.WindowChrome.UseAeroCaptionButtons" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o teste de clique está habilitado nos botões de legenda Windows Aero.</summary>
+        <value>
+          <see langword="true" />Se o teste de clique estiver habilitado nos botões de legenda; Caso contrário, <see langword="false" />. O padrão registrado é <see langword="true" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os botões de legenda Windows Aero padrão são minimizar, maximizar/restaurar e fechar. Se você não use os botões de legendas Windows Aero, você deve fornecer um método alternativo para um usuário executar essas tarefas.  
+  
+<a name="dependencyPropertyInfo_UseAeroCaptionButtons"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Shell.WindowChrome.UseAeroCaptionButtonsProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAeroCaptionButtonsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UseAeroCaptionButtonsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UseAeroCaptionButtonsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.UseAeroCaptionButtonsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.UseAeroCaptionButtons" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowChromeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WindowChromeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WindowChromeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.WindowChrome.WindowChromeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Shell.WindowChrome.WindowChrome" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

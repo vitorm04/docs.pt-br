@@ -1,0 +1,25 @@
+<Type Name="StartupEventHandler" FullName="System.Windows.StartupEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StartupEventHandler(object sender, StartupEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StartupEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.StartupEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.StartupEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto que gerencie o evento.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipula o evento <see cref="E:System.Windows.Application.Startup" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

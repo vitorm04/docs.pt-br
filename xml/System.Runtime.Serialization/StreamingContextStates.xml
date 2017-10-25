@@ -1,0 +1,270 @@
+<Type Name="StreamingContextStates" FullName="System.Runtime.Serialization.StreamingContextStates">
+  <TypeSignature Language="C#" Value="public enum StreamingContextStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed StreamingContextStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.StreamingContextStates" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um conjunto de sinalizadores que especifica o contexto de origem ou de destino para o fluxo durante a serialização.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Serialization.StreamingContextStates> enum.  
+  
+ [!code-csharp[StreamingContext Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/StreamingContext Example/CS/streamingcontext.cs#1)]
+ [!code-vb[StreamingContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/StreamingContext Example/VB/streamingcontext.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates All = int32(255)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os dados serializados podem ser transmitidos para a ou recebidos de qualquer um dos outros contextos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="Clone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates Clone = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.Clone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o grafo do objeto está sendo clonado. Os usuários podem assumir que o grafo clonado continuará a existir dentro do mesmo processo e estar seguro para acessar identificadores ou outras referências para recursos não gerenciados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossAppDomain">
+      <MemberSignature Language="C#" Value="CrossAppDomain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates CrossAppDomain = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.CrossAppDomain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contexto de origem ou destino é um AppDomain diferente. (Para obter uma descrição de AppDomains, consulte [Domínios de aplicativo](http://msdn.microsoft.com/en-us/39e57d07-a740-4cd4-ae82-e119ea3856c1)).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossMachine">
+      <MemberSignature Language="C#" Value="CrossMachine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates CrossMachine = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.CrossMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contexto de origem ou destino é um computador diferente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossProcess">
+      <MemberSignature Language="C#" Value="CrossProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates CrossProcess = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.CrossProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contexto de origem ou destino é um processo diferente no mesmo computador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="File">
+      <MemberSignature Language="C#" Value="File" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates File = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.File" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contexto de origem ou destino é um arquivo. Os usuários podem assumir que os arquivos durarão mais do que o processo que os criou e não serializar objetos de tal maneira que a desserialização precisará acessar nenhum dado do processo atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates Other = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contexto de serialização é desconhecido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Persistence">
+      <MemberSignature Language="C#" Value="Persistence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates Persistence = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.Persistence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contexto de origem ou destino é um repositório persistente, que pode incluir bancos de dados, arquivos ou outros repositórios de backup. Os usuários podem assumir que os dados persistentes durarão mais do que o processo que os criou e não serializar objetos de forma que a desserialização precisará acessar nenhum dado do processo atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Remoting">
+      <MemberSignature Language="C#" Value="Remoting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.StreamingContextStates Remoting = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.StreamingContextStates.Remoting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os dados são processados remotamente em um contexto em um local desconhecido. Os usuários não podem supor se isso está no mesmo computador.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Deployment.Internal.CodeSigning">
+  <Docs>
+    <summary>O <see cref="N:System.Deployment.Internal.CodeSigning" /> namespace contém classes para o processamento de assinaturas digitais.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

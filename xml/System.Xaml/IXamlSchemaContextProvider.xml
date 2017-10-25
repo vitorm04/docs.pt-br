@@ -1,0 +1,52 @@
+<Type Name="IXamlSchemaContextProvider" FullName="System.Xaml.IXamlSchemaContextProvider">
+  <TypeSignature Language="C#" Value="public interface IXamlSchemaContextProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXamlSchemaContextProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IXamlSchemaContextProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um serviço que fornece informações de contexto de esquema XAML para conversores de tipo e extensões de marcação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xaml.IXamlSchemaContextProvider> serviço fornece uma propriedade, <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>.  
+  
+ Use o <xref:System.Xaml.IXamlSchemaContextProvider> serviço e sua <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A> propriedade quando precisar o contexto do esquema XAML ativo de uma extensão de marcação ou implementação de conversor de tipo. Muitas operações relacionadas a XAML, mais notoriamente resolver um tipo XAML em seu tipo de backup para a criação do gráfico de objeto, contam com um contexto de esquema XAML disponível. No entanto, para muitos cenários, você pode usar o contexto do esquema XAML que é fornecido por uma estrutura específica. Ou você pode usar o contexto do esquema XAML padrão fornecido por serviços de XAML do .NET Framework, que usa CLR e reflexão fazendo e pode fornecer o contexto do esquema XAML necessário para qualquer tipo definido pelo CLR.  
+  
+ O <xref:System.Xaml.IXamlSchemaContextProvider> service é principalmente relevante para implementações que prevê que sua implementação de conversor de valor pode ser chamada quando é suportada pelo contextos de esquema XAML personalizados. Você pode obter o serviço de parâmetros de ponto de entrada de métodos virtuais de <xref:System.ComponentModel.TypeConverter> ou <xref:System.Windows.Markup.MarkupExtension> nesse contexto do serviço de relatório. Ou, em vez disso, você pode obter o contexto do esquema diretamente de propriedades dedicadas de leitores XAML específicos ou gravadores XAML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IXamlSchemaContextProvider.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xaml.XamlSchemaContext" /> que é relatado pelo contexto de serviço.</summary>
+        <value>O contexto do esquema XAML que é relatado pelo contexto de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use retornado <xref:System.Xaml.XamlSchemaContext> para operações como obter a lista de todos os tipos em um assembly ou para obter informações específicas sobre o mapeamento de assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

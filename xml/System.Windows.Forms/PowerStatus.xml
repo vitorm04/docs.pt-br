@@ -1,0 +1,141 @@
+<Type Name="PowerStatus" FullName="System.Windows.Forms.PowerStatus">
+  <TypeSignature Language="C#" Value="public class PowerStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PowerStatus extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PowerStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica informações atuais de status de energia do sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.PowerStatus> classe representa informações sobre o status atual de alimentação de linha AC, status do carregamento da bateria e status de carga da bateria.  
+  
+ Essa classe é usada pelo <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> propriedade o <xref:System.Windows.Forms.SystemInformation> classe para indicar as informações atuais de energia do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lista todas as propriedades do <xref:System.Windows.Forms.PowerStatus> classe em uma <xref:System.Windows.Forms.ListBox> controlar e exibe o valor atual da propriedade associada em um <xref:System.Windows.Forms.TextBox> controlar quando uma item da lista selecionado.  
+  
+ [!code-cpp[PowerStatusBrowser#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PowerStatusBrowser/CPP/powerstatusbrowser.cpp#1)]
+ [!code-csharp[PowerStatusBrowser#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PowerStatusBrowser/CS/powerstatusbrowser.cs#1)]
+ [!code-vb[PowerStatusBrowser#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PowerStatusBrowser/VB/powerstatusbrowser.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BatteryChargeStatus">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BatteryChargeStatus BatteryChargeStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BatteryChargeStatus BatteryChargeStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PowerStatus.BatteryChargeStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BatteryChargeStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status atual da carga da bateria.</summary>
+        <value>Um dos valores <see cref="T:System.Windows.Forms.BatteryChargeStatus" /> que indica o nível da carga ou o status de carga da bateria atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica o nível atual de carga da bateria ou o status do carregamento da bateria.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BatteryFullLifetime">
+      <MemberSignature Language="C#" Value="public int BatteryFullLifetime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BatteryFullLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PowerStatus.BatteryFullLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo de vida de carga total relatado da fonte de energia da bateria primária em segundos.</summary>
+        <value>O número de segundos relatado da vida útil da bateria disponível quando a bateria está totalmente carregada ou -1 se a vida útil da bateria for desconhecida.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BatteryLifePercent">
+      <MemberSignature Language="C#" Value="public float BatteryLifePercent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 BatteryLifePercent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PowerStatus.BatteryLifePercent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade aproximada de carga da bateria cheia restante.</summary>
+        <value>A quantidade aproximada, de 0,0 a 1,0, de carga da bateria cheia restante.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BatteryLifeRemaining">
+      <MemberSignature Language="C#" Value="public int BatteryLifeRemaining { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BatteryLifeRemaining" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PowerStatus.BatteryLifeRemaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número aproximado de segundos de tempo restante da bateria.</summary>
+        <value>O número aproximado de segundos de vida útil restante da bateria ou -1 se a vida útil restante aproximada da bateria for desconhecida.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerLineStatus">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.PowerLineStatus PowerLineStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.PowerLineStatus PowerLineStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PowerStatus.PowerLineStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PowerLineStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status atual de energia do sistema.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.PowerLineStatus" /> que indica o status de energia do sistema atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica se o sistema está online ou que o status de energia do sistema é desconhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,333 @@
+<Type Name="CompareOptions" FullName="System.Globalization.CompareOptions">
+  <TypeSignature Language="C#" Value="public enum CompareOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CompareOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CompareOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as opções de comparação da cadeia de caracteres que serão usadas com <see cref="T:System.Globalization.CompareInfo" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas opções denotam a diferenciação de maiusculas e minúsculas ou a necessidade de ignorar os tipos de caracteres.  
+  
+ O .NET Framework usa três maneiras diferentes de classificação: classificação, classificação de cadeia de caracteres e a classificação ordinal do word. Classificação do Word executa uma comparação de cultura de cadeias de caracteres. Determinados caracteres não alfanuméricos podem ter especiais pesos atribuídos a eles. Por exemplo, o hífen ("-") pode ter um peso muito pequeno atribuído a ele para que "cooperação" e "cooperação" aparecem ao lado do outro em uma lista classificada. Classificação de cadeia de caracteres é semelhante a classificação do word, exceto que não há nenhum casos especiais. Portanto, todos os símbolos não alfanuméricos vir antes de todos os caracteres alfanuméricos. A classificação ordinal compara cadeias de caracteres com base nos valores de cada elemento da cadeia de caracteres Unicode.  
+  
+ O valor de StringSort só pode ser usado com <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> e <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>. <xref:System.ArgumentException>será gerada se o valor de StringSort é usado com <xref:System.Globalization.CompareInfo.IsPrefix%2A?displayProperty=nameWithType>, <xref:System.Globalization.CompareInfo.IsSuffix%2A?displayProperty=nameWithType>, <xref:System.Globalization.CompareInfo.IndexOf%2A?displayProperty=nameWithType>, ou <xref:System.Globalization.CompareInfo.LastIndexOf%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Quando possível, o aplicativo deve usar métodos de comparação de cadeia de caracteres que aceitam um <xref:System.Globalization.CompareOptions> valor para especificar o tipo de comparação esperado. Como regra geral, as comparações de voltado ao usuário são melhor atendidas pelo uso das opções linguísticas (usando a cultura atual), enquanto a segurança comparações devem especificar Ordinal ou OrdinalIgnoreCase.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como classificar com StringSort difere de classificação sem StringSort.  
+  
+ [!code-cpp[System.Globalization.CompareOptions.StringSort#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CompareOptions.StringSort/CPP/compareoptions_stringsort.cpp#1)]
+ [!code-csharp[System.Globalization.CompareOptions.StringSort#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CompareOptions.StringSort/CS/compareoptions_stringsort.cs#1)]
+ [!code-vb[System.Globalization.CompareOptions.StringSort#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CompareOptions.StringSort/VB/compareoptions_stringsort.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="IgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreCase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a comparação de cadeia de caracteres deve ignorar a diferenciação entre maiúsculas e minúsculas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreKanaType">
+      <MemberSignature Language="C#" Value="IgnoreKanaType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreKanaType = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreKanaType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a comparação de cadeia de caracteres deve ignorar o tipo Kana. O tipo Kana refere-se aos caracteres japoneses Hiragana e Katakana que representam sons fonéticos em japonês. O Hiragana é usado em expressões e palavras japonesas nativas, enquanto o Katakana é usado para palavras emprestadas de outros idiomas, como “computador” ou “Internet”. Um som fonético pode ser expresso em Hiragana e em Katakana. Se esse valor estiver selecionado, o caractere Hiragana de um som será considerado igual ao caractere Katakana do mesmo som.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreNonSpace">
+      <MemberSignature Language="C#" Value="IgnoreNonSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreNonSpace = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreNonSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a comparação de cadeia de caracteres deve ignorar caracteres sem espaçamento, como sinais diacríticos. O [padrão Unicode](http://go.microsoft.com/fwlink/?linkid=37123) define a combinação de caracteres como caracteres que são combinados com caracteres de base para produzir um caractere de nova. Caracteres sem espaçamento não ocupam uma posição de espaçamento por si só quando renderizados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSymbols">
+      <MemberSignature Language="C#" Value="IgnoreSymbols" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreSymbols = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreSymbols" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a comparação de cadeia de caracteres deve ignorar símbolos, como caracteres de espaço em branco, pontuação, símbolos de moeda, o sinal de porcentagem, símbolos matemáticos, o E comercial e assim por diante.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreWidth">
+      <MemberSignature Language="C#" Value="IgnoreWidth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreWidth = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreWidth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a comparação de cadeia de caracteres deve ignorar a largura do caractere. Por exemplo, os caracteres japoneses Katakana podem ser escritos em largura inteira ou em meia largura. Se esse valor for selecionado, os caracteres Katakana escritos como largura inteira serão considerados iguais aos mesmos caracteres escritos em meia largura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica as configurações padrão das opções para comparações de cadeia de caracteres.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinal">
+      <MemberSignature Language="C#" Value="Ordinal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions Ordinal = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.Ordinal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a comparação de cadeia de caracteres deve usar valores Unicode UTF-16 codificados e sucessivos da cadeia de caracteres (unidade de código por comparação de unidade de código), levando a uma comparação rápida, mas que não leva em conta a cultura. Uma cadeia de caracteres começando com um XXXX16 de unidade de código vem antes de uma cadeia de caracteres começando com YYYY16, se XXXX16 for menor que YYYY16. Esse valor não pode ser combinado com outros valores <see cref="T:System.Globalization.CompareOptions" /> e deve ser usada sozinho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrdinalIgnoreCase">
+      <MemberSignature Language="C#" Value="OrdinalIgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions OrdinalIgnoreCase = int32(268435456)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.OrdinalIgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A comparação de cadeia de caracteres deve ignorar a diferenciação entre maiúsculas e minúsculas, então faça uma comparação ordinal. Essa técnica é equivalente a converter a cadeia de caracteres em letras maiúsculas usando a cultura invariável e, em seguida, executar uma comparação ordinal no resultado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StringSort">
+      <MemberSignature Language="C#" Value="StringSort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions StringSort = int32(536870912)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.StringSort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a comparação de cadeia de caracteres deve usar o algoritmo de classificação de cadeia de caracteres. Em uma classificação de cadeia de caracteres, o hífen e o apóstrofo, bem como outros símbolos não alfanuméricos, vêm antes de caracteres alfanuméricos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

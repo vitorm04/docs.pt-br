@@ -1,0 +1,232 @@
+<Type Name="ECDiffieHellmanCngPublicKey" FullName="System.Security.Cryptography.ECDiffieHellmanCngPublicKey">
+  <TypeSignature Language="C#" Value="public sealed class ECDiffieHellmanCngPublicKey : System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ECDiffieHellmanCngPublicKey extends System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.ECDiffieHellmanPublicKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma chave pública ECDH (Diffie-Hellman de curva elíptica) a ser usada com a classe <see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey>objetos são usados em trocas de chave com <xref:System.Security.Cryptography.ECDiffieHellmanCng> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BlobFormat">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngKeyBlobFormat BlobFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngKeyBlobFormat BlobFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.BlobFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o formato BLOB de chave para um <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> objeto.</summary>
+        <value>O formato que o BLOB de chave é expresso em.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportExplicitParameters">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ECParameters ExportExplicitParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Security.Cryptography.ECParameters ExportExplicitParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.ExportExplicitParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exporta os parâmetros de chave e curva explícita usados pelo objeto <see cref="T:System.Security.Cryptography.ECCurve" /> em um objeto <see cref="T:System.Security.Cryptography.ECParameters" />.</summary>
+        <returns>Os parâmetros de chave e curva explícita usados pelo objeto <see cref="T:System.Security.Cryptography.ECCurve" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O método não pode obter valores de curva.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A exportação explícita não tem suporte nesta plataforma. O Windows 10 ou superior é necessário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ECParameters ExportParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Security.Cryptography.ECParameters ExportParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.ExportParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exporta a chave usada pelo objeto <see cref="T:System.Security.Cryptography.ECCurve" /> em um objeto <see cref="T:System.Security.Cryptography.ECParameters" />.</summary>
+        <returns>A chave e os parâmetros de curva nomeada usados pelo objeto <see cref="T:System.Security.Cryptography.ECCurve" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave foi criada como uma curva nomeada, o <xref:System.Security.Cryptography.ECParameters?displayProperty=nameWithType> campo contém parâmetros nomeados curva;          Caso contrário, ele contém parâmetros explícitos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O método não pode obter valores de curva.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromByteArray">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDiffieHellmanPublicKey FromByteArray (byte[] publicKeyBlob, System.Security.Cryptography.CngKeyBlobFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDiffieHellmanPublicKey FromByteArray(unsigned int8[] publicKeyBlob, class System.Security.Cryptography.CngKeyBlobFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.FromByteArray(System.Byte[],System.Security.Cryptography.CngKeyBlobFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanPublicKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publicKeyBlob" Type="System.Byte[]" />
+        <Parameter Name="format" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+      </Parameters>
+      <Docs>
+        <param name="publicKeyBlob">Uma matriz de bytes que contém uma chave pública Diffie-Hellman de curva elíptica (ECDH).</param>
+        <param name="format">Um objeto que especifica o formato do BLOB de chaves.</param>
+        <summary>Converte uma matriz de bytes que contém uma chave pública para um <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> objeto de acordo com o formato especificado.</summary>
+        <returns>Um objeto que contém a chave pública ECDH é serializado da matriz de bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é compartilhado entre todos <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> instâncias.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="publicKeyBlob" /> ou <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="publicKeyBlob" /> parâmetro não tem um <see cref="T:System.Security.Cryptography.ECDiffieHellman" /> chave.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXmlString">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDiffieHellmanCngPublicKey FromXmlString (string xml);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDiffieHellmanCngPublicKey FromXmlString(string xml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.FromXmlString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanCngPublicKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xml">Uma cadeia de caracteres XML que contém uma chave Diffie-Hellman de curva elíptica (ECDH).</param>
+        <summary>Converte uma cadeia de caracteres XML para uma <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> objeto.</summary>
+        <returns>Um objeto que contém a chave pública ECDH especificado pelo XML fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método estático é compartilhado entre todos <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> instâncias.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="xml" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="xml" /> parâmetro não especificar um <see cref="T:System.Security.Cryptography.ECDiffieHellman" /> chave.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngKey Import ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.CngKey Import() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.Import" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> o objeto para um <see cref="T:System.Security.Cryptography.CngKey" /> objeto.</summary>
+        <returns>Um objeto que contém a chave representada pelo <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlString">
+      <MemberSignature Language="C#" Value="public override string ToXmlString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToXmlString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCngPublicKey.ToXmlString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serializa o <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> chave pública para uma cadeia de caracteres XML no formato RFC 4050.</summary>
+        <returns>Uma cadeia de caracteres XML que contém a serializada <see cref="T:System.Security.Cryptography.ECDiffieHellmanCngPublicKey" /> chave pública.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Security.Cryptography.ECKeyXmlFormat?displayProperty=nameWithType> para obter informações sobre o formato XML que usa esse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

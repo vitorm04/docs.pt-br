@@ -1,0 +1,119 @@
+<Type Name="X509SubjectKeyIdentifierHashAlgorithm" FullName="System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm">
+  <TypeSignature Language="C#" Value="public enum X509SubjectKeyIdentifierHashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed X509SubjectKeyIdentifierHashAlgorithm extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define o tipo de algoritmo de hash a ser usado com o <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador de chave de assunto (SKI) fornece uma identificação exclusiva para a entidade do certificado ao trabalhar com a assinatura digital XML.  Um SKI é um hash SHA-1 das informações de chave pública da entidade.  
+  
+ Use o <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm> enumeração para definir o tipo de algoritmo de hash a ser usado com o <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension> ao criar um SKI de classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CapiSha1">
+      <MemberSignature Language="C#" Value="CapiSha1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm CapiSha1 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm.CapiSha1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O identificador de chave de assunto (SKI) é composto de um hash SHA-1 de 160 bits da chave pública codificada (incluindo a marca, o comprimento e o número de bits não utilizados).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sha1">
+      <MemberSignature Language="C#" Value="Sha1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm Sha1 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm.Sha1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O SKI é composto de hash de SHA-1 de 160 bits do valor da chave pública (excluindo a marca, o comprimento e o número de bits não utilizados).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortSha1">
+      <MemberSignature Language="C#" Value="ShortSha1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm ShortSha1 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm.ShortSha1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O SKI é composto de um campo de tipo de quatro bits com o valor 0100, seguido por 60 bits menos significativos de hash SHA-1 do valor da chave pública (excluindo a marca, o comprimento e o número de bits de cadeia de caracteres de bit não utilizado)</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

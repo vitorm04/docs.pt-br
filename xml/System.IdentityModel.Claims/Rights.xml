@@ -1,0 +1,73 @@
+<Type Name="Rights" FullName="System.IdentityModel.Claims.Rights">
+  <TypeSignature Language="C#" Value="public static class Rights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Rights extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.Rights" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define os tipos predefinidos de direitos que podem ser associados a um objeto <see cref="T:System.IdentityModel.Claims.Claim" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static string Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Identity" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Rights.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que especifica que o direito representa uma identidade.</summary>
+        <value>O direito que representa uma identidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres que é retornada pelo <xref:System.IdentityModel.Claims.Rights.Identity%2A> propriedade é http://schemas.xmlsoap.org/ws/2005/05/identity/right/Identity.  
+  
+ Em geral, um típico <xref:System.IdentityModel.Claims.ClaimSet> tem uma declaração com o <xref:System.IdentityModel.Claims.Rights.Identity%2A> à direita. Esta declaração representa a identidade do <xref:System.IdentityModel.Claims.ClaimSet>. Por exemplo, um <xref:System.IdentityModel.Claims.WindowsClaimSet> tem uma declaração de SID que representa o SID do usuário. Da mesma forma, o <xref:System.IdentityModel.Claims.X509CertificateClaimSet> tem um <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A> declaração que representa a identidade que está associada com um certificado x. 509.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PossessProperty">
+      <MemberSignature Language="C#" Value="public static string PossessProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PossessProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Rights.PossessProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que especifica que o direito representa uma propriedade que a entidade associada a uma declaração possui.</summary>
+        <value>O direito que representa uma propriedade que a entidade associada a um objeto <see cref="T:System.IdentityModel.Claims.Claim" /> possui.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres que é retornada pelo <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> propriedade é http://schemas.xmlsoap.org/ws/2005/05/identity/right/PossessProperty.  
+  
+ Uma declaração de tipo <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> com direito <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> sobre o valor `Martin` indica que a entidade à qual como uma declaração está associada possui um `Name` propriedade com o valor `Martin`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

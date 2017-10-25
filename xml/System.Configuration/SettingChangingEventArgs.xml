@@ -1,0 +1,186 @@
+<Type Name="SettingChangingEventArgs" FullName="System.Configuration.SettingChangingEventArgs">
+  <TypeSignature Language="C#" Value="public class SettingChangingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingChangingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingChangingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Configuration.ApplicationSettingsBase.SettingChanging" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingChangingEventArgs> classe fornece dados para o <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento, que indica que o valor de uma propriedade de configurações do aplicativo está prestes a ser alterada. A origem mais comum para esse evento é o `get` acessador do <xref:System.Configuration.ApplicationSettingsBase.Item%2A> método o <xref:System.Configuration.ApplicationSettingsBase> classe.  
+  
+ Porque <xref:System.Configuration.SettingChangingEventArgs> é derivado de <xref:System.ComponentModel.CancelEventArgs>, o manipulador tem a opção de cancelar a operação de gravação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingChangingEventArgs (string settingName, string settingClass, string settingKey, object newValue, bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string settingName, string settingClass, string settingKey, object newValue, bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingChangingEventArgs.#ctor(System.String,System.String,System.String,System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settingName" Type="System.String" />
+        <Parameter Name="settingClass" Type="System.String" />
+        <Parameter Name="settingKey" Type="System.String" />
+        <Parameter Name="newValue" Type="System.Object" />
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="settingName">Um <see cref="T:System.String" /> que contém o nome da configuração do aplicativo.</param>
+        <param name="settingClass">Um <see cref="T:System.String" /> que contém uma descrição da categoria da configuração. Geralmente, esse parâmetro é definido para o nome de grupo de configurações do aplicativo.</param>
+        <param name="settingKey">Um <see cref="T:System.String" /> que contém a chave de configurações do aplicativo.</param>
+        <param name="newValue">Um <see cref="T:System.Object" /> que contém o novo valor a ser atribuído à propriedade de configurações do aplicativo.</param>
+        <param name="cancel">
+          <see langword="true" />Para cancelar o evento; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Configuration.SettingChangingEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingChangingEventArgs.%23ctor%2A> construtor apenas atribui os valores dos parâmetros para as propriedades correspondentes na <xref:System.Configuration.SettingChangingEventArgs> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo valor que está sendo atribuído à propriedade de configurações do aplicativo.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém o novo valor a ser atribuído à propriedade de configurações do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo real do <xref:System.Configuration.SettingChangingEventArgs.NewValue%2A> propriedade deve ser compatível com a propriedade de configurações está sendo definida. Este último está disponível por meio de <xref:System.Configuration.SettingsProperty.PropertyType%2A> propriedade o <xref:System.Configuration.SettingsProperty> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingClass">
+      <MemberSignature Language="C#" Value="public string SettingClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingClass" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.SettingClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a categoria de propriedade de configurações do aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que contém uma descrição da categoria da configuração. Normalmente, esse parâmetro é definido como o nome de grupo de configurações do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as configurações de aplicativo pertencem a um grupo de configurações do aplicativo. O nome do grupo pode ser fornecido explicitamente decorando a classe com um <xref:System.Configuration.SettingsGroupNameAttribute>; caso contrário, um é gerado usando o nome da classe de invólucro de configurações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingKey">
+      <MemberSignature Language="C#" Value="public string SettingKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.SettingKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de configurações do aplicativo associada à propriedade.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a chave de configurações do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada classe de wrapper de configurações, derivada de <xref:System.Configuration.ApplicationSettingsBase>, tem uma chave de configurações associadas, que é uma cadeia de caracteres que ajuda a resolver a ambiguidade de instâncias diferentes do mesmo wrapper em um único aplicativo. Como cada classe wrapper define um conjunto de propriedades que representam as configurações do aplicativo, a chave de configurações da mesma forma pode ajudar a resolver a ambiguidade de seu uso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingName">
+      <MemberSignature Language="C#" Value="public string SettingName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.SettingName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da configuração do aplicativo associado à propriedade de configurações do aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome da configuração do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente a classe de invólucro de configurações, é derivada de <xref:System.Configuration.ApplicationSettingsBase>, será construído para que o nome da propriedade de configurações do aplicativo será o mesmo que sua configuração de aplicativo associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,100 @@
+<Type Name="IDataSourceViewSchema" FullName="System.Web.UI.Design.IDataSourceViewSchema">
+  <TypeSignature Language="C#" Value="public interface IDataSourceViewSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceViewSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDataSourceViewSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um conjunto de métodos e propriedades usadas para examinar uma fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes que implementam o <xref:System.Web.UI.Design.IDataSourceSchema> classe são usados pelos componentes do designer de controle personalizado para fornecer a lista de modos de exibição da fonte de dados para controles associados a dados em tempo de design. Em uma classe que deriva de <xref:System.Web.UI.Design.IDataSourceSchema>, use o <xref:System.Web.UI.Design.IDataSourceSchema.GetViews%2A> método para obter uma matriz de <xref:System.Web.UI.Design.IDataSourceViewSchema> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceViewSchema.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz que representa os modos de exibição filho contidos na exibição atual.</summary>
+        <returns>Uma matriz de <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> objetos que representam os modos de exibição filho contidos na exibição atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe <xref:System.Web.UI.Design.XmlDocumentSchema> implementa a interface <xref:System.Web.UI.Design.IDataSourceViewSchema>. Ele usa sua implementação do <xref:System.Web.UI.Design.IDataSourceViewSchema.GetChildren%2A> método para criar uma matriz de <xref:System.Web.UI.Design.IDataSourceViewSchema> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceFieldSchema[] GetFields ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceFieldSchema[] GetFields() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceViewSchema.GetFields" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceFieldSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz que contém informações sobre cada campo na fonte de dados.</summary>
+        <returns>Uma matriz de <see cref="T:System.Web.UI.Design.IDataSourceFieldSchema" /> objetos que representam cada um dos campos na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetSchema> classe implementa o <xref:System.Web.UI.Design.IDataSourceViewSchema> interface; sua implementação do <xref:System.Web.UI.Design.DataSetViewSchema.GetFields%2A> método retorna uma matriz de <xref:System.Web.UI.Design.DataSetFieldSchema> objetos, cada uma delas deriva o <xref:System.Web.UI.Design.IDataSourceFieldSchema> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceViewSchema.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do modo de exibição.</summary>
+        <value>O nome da exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma <xref:System.Data.DataTable> de objeto, essa propriedade corresponde do <xref:System.Data.DataTable.TableName%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

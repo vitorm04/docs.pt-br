@@ -1,0 +1,340 @@
+<Type Name="CalendarDay" FullName="System.Web.UI.WebControls.CalendarDay">
+  <TypeSignature Language="C#" Value="public class CalendarDay" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CalendarDay extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CalendarDay" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma data no controle <see cref="T:System.Web.UI.WebControls.Calendar" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.CalendarDay> objeto representa uma data no <xref:System.Web.UI.WebControls.Calendar> controle. Você pode usar essa classe no <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos para acessar as propriedades de uma data de forma programática quando ele é processado no <xref:System.Web.UI.WebControls.Calendar> controle. Isso permite que você determinar as propriedades do dia (como se a data é selecionável, selecionada, a data de hoje ou uma data de fim de semana) e controle programaticamente a aparência ou o comportamento do dia.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.CalendarDay>, consulte o <xref:System.Web.UI.WebControls.CalendarDay.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar as propriedades de um <xref:System.Web.UI.WebControls.CalendarDay> objeto para determinar se a data está sendo processado no <xref:System.Web.UI.WebControls.Calendar.DayRender> evento é o mês exibido e não se encaixam no sábado ou domingo. Essas datas são exibidas em amarelo. Observe que o <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> propriedade o <xref:System.Web.UI.WebControls.DayRenderEventArgs> objeto passado para o <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos é o <xref:System.Web.UI.WebControls.CalendarDay> objeto.  
+  
+ [!code-aspx-csharp[Classic CalendarDay Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayRender/CS/calendardayrendercs.aspx#1)]
+ [!code-aspx-vb[CalendarDayRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayRender/VB/calendardayrendervb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CalendarDay (DateTime date, bool isWeekend, bool isToday, bool isSelected, bool isOtherMonth, string dayNumberText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime date, bool isWeekend, bool isToday, bool isSelected, bool isOtherMonth, string dayNumberText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CalendarDay.#ctor(System.DateTime,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+        <Parameter Name="isWeekend" Type="System.Boolean" />
+        <Parameter Name="isToday" Type="System.Boolean" />
+        <Parameter Name="isSelected" Type="System.Boolean" />
+        <Parameter Name="isOtherMonth" Type="System.Boolean" />
+        <Parameter Name="dayNumberText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="date">Um objeto <see cref="T:System.DateTime" /> que contém a data representada por uma instância dessa classe.</param>
+        <param name="isWeekend">
+          <see langword="true" />para indicar que a data representada por uma instância dessa classe é um sábado ou em um domingo; Caso contrário, <see langword="false" />.</param>
+        <param name="isToday">
+          <see langword="true" />para indicar que a data representada por uma instância dessa classe é a data atual; Caso contrário, <see langword="false" />.</param>
+        <param name="isSelected">
+          <see langword="true" />para indicar que a data representada por uma instância dessa classe é selecionada no <see cref="T:System.Web.UI.WebControls.Calendar" /> controle; caso contrário, <see langword="false" />.</param>
+        <param name="isOtherMonth">
+          <see langword="true" />para indicar que a data representada por uma instância dessa classe é em um mês que não seja o mês exibido no <see cref="T:System.Web.UI.WebControls.Calendar" /> controle; caso contrário, <see langword="false" />.</param>
+        <param name="dayNumberText">O número de dias para a data representado por essa classe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CalendarDay" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.CalendarDay> classe.  
+  
+> [!NOTE]
+>  Embora esse construtor está disponível, uma instância do <xref:System.Web.UI.WebControls.CalendarDay> classe não é normalmente criada dinamicamente.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.CalendarDay>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|Date|O valor de `date` parâmetro.|  
+|DayNumberText|O valor de `dayNumberText` parâmetro.|  
+|IsOtherMonth|O valor de `isOtherMonth` parâmetro.|  
+|IsSelected|O valor de `isSelected` parâmetro.|  
+|IsToday|O valor de `isToday` parâmetro.|  
+|IsWeekend|O valor de `isWeekEnd` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="public DateTime Date { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Date" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.Date" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data representada por uma instância dessa classe. Esta propriedade é somente para leitura.</summary>
+        <value>Um objeto <see cref="T:System.DateTime" /> que contém a data representada por uma instância dessa classe. Isso permite que você controle de forma programática a aparência ou o comportamento do dia, com base nesse valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.Date%2A> propriedade para determinar programaticamente a data representada por uma instância dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CalendarDay.Date%2A> propriedade a ser comparada a data em que está sendo processada no <xref:System.Web.UI.WebControls.Calendar.DayRender> eventos com data de hoje. Se a data é a data de hoje, ele é exibido em uma célula amarela com texto vermelho a <xref:System.Web.UI.WebControls.Calendar> controle.  
+  
+ [!code-aspx-csharp[Classic CalendarDay.Date Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay.Date Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay.Date Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay.Date Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayRender/CS/calendardayrendercs.aspx#1)]
+ [!code-aspx-vb[CalendarDayRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayRender/VB/calendardayrendervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DayNumberText">
+      <MemberSignature Language="C#" Value="public string DayNumberText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DayNumberText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.DayNumberText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres equivalente do número de dias da data representada por uma instância de <see cref="T:System.Web.UI.WebControls.CalendarDay" /> classe. Esta propriedade é somente para leitura.</summary>
+        <value>O equivalente de cadeia de caracteres do número de dias para a data representada por uma instância dessa classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.DayNumberText%2A> para determinar o equivalente de cadeia de caracteres do número de dias para a data representada por uma instância dessa classe. Isso permite que você controle de forma programática a aparência ou o comportamento do dia, com base nesse valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CalendarDay.DayNumberText%2A> propriedade para exibir o número do dia selecionado no <xref:System.Web.UI.WebControls.Calendar> controle.  
+  
+ [!code-aspx-csharp[Classic CalendarDay.DayNumberText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay.DayNumberText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay.DayNumberText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay.DayNumberText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOtherMonth">
+      <MemberSignature Language="C#" Value="public bool IsOtherMonth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOtherMonth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.IsOtherMonth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a data representada por uma instância dessa classe está em um mês que não sejam exibido no mês de <see cref="T:System.Web.UI.WebControls.Calendar" /> controle. Esta propriedade é somente para leitura.</summary>
+        <value>
+          <see langword="true" />Se a data representada por uma instância dessa classe é em um mês que não sejam exibido no mês de <see cref="T:System.Web.UI.WebControls.Calendar" /> controle; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.IsOtherMonth%2A> propriedade para determinar programaticamente se a data representada por uma instância dessa classe é um mês que não sejam exibido no mês de <xref:System.Web.UI.WebControls.Calendar> controle. Isso permite que você controle programaticamente a aparência ou o comportamento do dia com base nesse valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar as propriedades de um <xref:System.Web.UI.WebControls.CalendarDay> objeto para determinar se a data está sendo processado no <xref:System.Web.UI.WebControls.Calendar.DayRender> evento é o mês exibido e não são um sábado ou em um domingo. Essas datas são exibidas em amarelo. Observe que o <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> propriedade o <xref:System.Web.UI.WebControls.DayRenderEventArgs> objeto passado para o <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos é o <xref:System.Web.UI.WebControls.CalendarDay> objeto.  
+  
+ [!code-aspx-csharp[Classic CalendarDay Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayRender/CS/calendardayrendercs.aspx#1)]
+ [!code-aspx-vb[CalendarDayRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayRender/VB/calendardayrendervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectable">
+      <MemberSignature Language="C#" Value="public bool IsSelectable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.IsSelectable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a data representada por uma instância desta classe pode ser selecionada no <see cref="T:System.Web.UI.WebControls.Calendar" /> controle.</summary>
+        <value>
+          <see langword="true" />Se a data pode ser selecionada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.IsSelectable%2A> para especificar ou determinar se a data representada por uma instância desta classe pode ser selecionada no <xref:System.Web.UI.WebControls.Calendar> controle. Isso permite que você controle programaticamente o comportamento de aparência do dia, com base nesse valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CalendarDay.IsSelectable%2A> propriedade para desabilitar a capacidade de selecionar a data atual no <xref:System.Web.UI.WebControls.Calendar> controle. Observe que o <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> propriedade o <xref:System.Web.UI.WebControls.DayRenderEventArgs> objeto passado para o <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos é o <xref:System.Web.UI.WebControls.CalendarDay> objeto.  
+  
+ [!code-aspx-csharp[Classic CalendarDay.IsSelectable Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay.IsSelectable Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay.IsSelectable Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay.IsSelectable Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a data representada por uma instância dessa classe é marcada no <see cref="T:System.Web.UI.WebControls.Calendar" /> controle. Esta propriedade é somente para leitura.</summary>
+        <value>
+          <see langword="true" />Se a data representada por uma instância dessa classe é selecionada no <see cref="T:System.Web.UI.WebControls.Calendar" /> controle; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.IsSelected%2A> propriedade para determinar programaticamente se a data representada por uma instância dessa classe é selecionada no <xref:System.Web.UI.WebControls.Calendar> controle. Isso permite que você controle de forma programática a aparência ou o comportamento do dia, com base nesse valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CalendarDay.IsSelected%2A> propriedade para determinar se a data atual está selecionada no <xref:System.Web.UI.WebControls.Calendar>. Observe que o <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> propriedade o <xref:System.Web.UI.WebControls.DayRenderEventArgs> objeto passado para o <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos é o <xref:System.Web.UI.WebControls.CalendarDay> objeto.  
+  
+ [!code-aspx-csharp[Classic CalendarDay.IsSelected Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay.IsSelected Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay.IsSelected Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay.IsSelected Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToday">
+      <MemberSignature Language="C#" Value="public bool IsToday { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsToday" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.IsToday" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a data representada por uma instância dessa classe é o mesmo especificado pelo <see cref="P:System.Web.UI.WebControls.Calendar.TodaysDate" /> propriedade o <see cref="T:System.Web.UI.WebControls.Calendar" /> controle. Esta propriedade é somente para leitura.</summary>
+        <value>
+          <see langword="true" />Se a data representada por uma instância dessa classe é o mesmo especificado pelo <see cref="P:System.Web.UI.WebControls.Calendar.TodaysDate" /> propriedade o <see cref="T:System.Web.UI.WebControls.Calendar" /> controle; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.IsToday%2A> propriedade para determinar programaticamente se a data representada por uma instância dessa classe é o mesmo especificado pelo <xref:System.Web.UI.WebControls.Calendar.TodaysDate%2A> propriedade o <xref:System.Web.UI.WebControls.Calendar> controle. Isso permite que você controle de forma programática a aparência ou o comportamento do dia, com base nesse valor.  
+  
+> [!NOTE]
+>  Embora a data especificada o <xref:System.Web.UI.WebControls.Calendar.TodaysDate%2A> é geralmente a data do sistema no servidor, é possível alterá-la, se necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CalendarDay.IsToday%2A> para determinar se a data está sendo processado no <xref:System.Web.UI.WebControls.Calendar.DayRender> evento é a data atual. Se a data é a data atual, ele é exibido em uma célula amarela com texto vermelho a <xref:System.Web.UI.WebControls.Calendar>. Observe que o <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> propriedade o <xref:System.Web.UI.WebControls.DayRenderEventArgs> objeto passado para o <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos é o <xref:System.Web.UI.WebControls.CalendarDay> objeto.  
+  
+ [!code-aspx-csharp[Classic CalendarDay.IsToday Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay.IsToday Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay.IsToday Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay.IsToday Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWeekend">
+      <MemberSignature Language="C#" Value="public bool IsWeekend { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWeekend" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CalendarDay.IsWeekend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a data representada por uma instância dessa classe é um sábado ou domingo. Esta propriedade é somente para leitura.</summary>
+        <value>
+          <see langword="true" />Se a data representada por uma instância dessa classe é um sábado ou em um domingo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CalendarDay.IsWeekend%2A> propriedade para determinar programaticamente se a data representada por uma instância dessa classe é um sábado ou em um domingo. Isso permite que você controle de forma programática a aparência ou o comportamento do dia, com base nesse valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar as propriedades de um <xref:System.Web.UI.WebControls.CalendarDay> objeto para determinar se a data está sendo processado no <xref:System.Web.UI.WebControls.Calendar.DayRender> evento é o mês exibido e não são um sábado ou em um domingo. Essas datas são exibidas em amarelo. Observe que o <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> propriedade o <xref:System.Web.UI.WebControls.DayRenderEventArgs> objeto passado para o <xref:System.Web.UI.WebControls.Calendar.DayRender> manipulador de eventos é o <xref:System.Web.UI.WebControls.CalendarDay> objeto.  
+  
+ [!code-aspx-csharp[Classic CalendarDay Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CalendarDay Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CalendarDay Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CalendarDay Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayRender/CS/calendardayrendercs.aspx#1)]
+ [!code-aspx-vb[CalendarDayRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayRender/VB/calendardayrendervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

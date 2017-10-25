@@ -1,0 +1,188 @@
+<Type Name="NamespaceInfo" FullName="System.Web.Configuration.NamespaceInfo">
+  <TypeSignature Language="C#" Value="public sealed class NamespaceInfo : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NamespaceInfo extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.NamespaceInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma única referência ao namespace de configuração, semelhante à diretiva <see langword="Import" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.NamespaceCollection> contém <xref:System.Web.Configuration.NamespaceInfo> objetos que correspondem ao `add` elementos dentro de `namespaces` seção. Cada <xref:System.Web.Configuration.NamespaceInfo> objeto é o mesmo que um `Import` (<`%@ Import %`>) diretiva que se aplica a todas as páginas e controles no escopo do arquivo de configuração. O `Import` diretiva permite que você importar um namespace em sua página ASP.NET, fazendo com que todas as suas classes disponíveis para uso na sua página.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como especificar valores declarativamente para propriedades do <xref:System.Web.Configuration.NamespaceCollection> e <xref:System.Web.Configuration.NamespaceInfo> classes.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar valores declarativamente para o `namespaces` seção.  
+  
+```  
+  
+<system.web>  
+  <pages>  
+    <namespaces>  
+      <add namespace="System" />  
+      <add namespace="System.Collections" />  
+      <add namespace="System.Collections.Specialized" />  
+      <add namespace="System.ComponentModel" />  
+      <add namespace="System.Configuration" />  
+      <add namespace="System.Web" />  
+    </namespaces>  
+  </pages>  
+</system.web>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.NamespaceInfo> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#22)]
+ [!code-vb[System.Web.Configuration.PagesSection#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#22)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceInfo (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma referência de namespace para o novo <see cref="T:System.Web.Configuration.NamespaceInfo" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.NamespaceInfo" /> classe com a referência ao namespace especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma validação é executada para verificar se a referência do namespace é válida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar <xref:System.Web.Configuration.NamespaceInfo.%23ctor%2A> construtor. Ele é parte de um exemplo maior para o <xref:System.Web.Configuration.PagesSection> tipo.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#23](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#23)]
+ [!code-vb[System.Web.Configuration.PagesSection#23](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object namespaceInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object namespaceInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceInformation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceInformation">Um <see cref="T:System.Web.Configuration.NamespaceInfo" /> objeto a ser comparado.</param>
+        <summary>Compara a instância atual seja transmitido <see cref="T:System.Web.Configuration.NamespaceInfo" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se os dois objetos são idênticos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de hash para a instância atual.</summary>
+        <returns>Um valor de hash para a instância atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.NamespaceInfo.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("namespace", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a referência ao namespace.</summary>
+        <value>Uma cadeia de caracteres que especifica o nome do namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma validação é executada para verificar se a referência do namespace é válida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.NamespaceInfo.Namespace%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#29](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#29)]
+ [!code-vb[System.Web.Configuration.PagesSection#29](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.NamespaceInfo.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

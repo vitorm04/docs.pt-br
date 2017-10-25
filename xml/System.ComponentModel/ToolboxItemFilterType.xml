@@ -1,0 +1,171 @@
+<Type Name="ToolboxItemFilterType" FullName="System.ComponentModel.ToolboxItemFilterType">
+  <TypeSignature Language="C#" Value="public enum ToolboxItemFilterType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolboxItemFilterType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ToolboxItemFilterType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os identificadores usados para indicar o tipo de filtro que um <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> usa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.ComponentModel.ToolboxItemFilterAttribute>.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="Allow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Allow = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Allow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres de filtro de item de caixa de ferramentas é permitida, mas não é necessário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Custom = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o processamento personalizado é necessário para determinar se deve usar uma cadeia de caracteres de filtro de item de caixa de ferramentas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo de <xref:System.ComponentModel.ToolboxItemFilterType> geralmente é especificado em uma classe do designer raiz para indicar que o designer deseja aceitar ou rejeitar um item de caixa de ferramentas por meio de código. O designer deve implementar o <xref:System.Drawing.Design.IToolboxUser.GetToolSupported%2A> método o <xref:System.Drawing.Design.IToolboxUser> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.ComponentModel.ToolboxItemFilterAttribute>.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prevent">
+      <MemberSignature Language="C#" Value="Prevent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Prevent = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Prevent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres de filtro de item de caixa de ferramentas não é permitida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um designer e uma classe de componente tem uma cadeia de caracteres de filtro e um tem um <xref:System.ComponentModel.ToolboxItemFilterType> impedir, o item de caixa de ferramentas não estará disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Require">
+      <MemberSignature Language="C#" Value="Require" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Require = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Require" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres de filtro de item de caixa de ferramentas deve estar presente para um item de caixa de ferramentas a ser habilitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para um item de caixa de ferramentas com um tipo de filtro de precisar ser habilitado, o designer e a classe do componente devem ter uma correspondência de cadeia de caracteres de filtro. Além disso, nem o designer ou classe de componente pode ter um <xref:System.ComponentModel.ToolboxItemFilterType.Require> de impedir que o item de caixa de ferramentas para ser habilitado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

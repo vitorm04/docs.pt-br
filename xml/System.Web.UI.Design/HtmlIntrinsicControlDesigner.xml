@@ -1,0 +1,41 @@
+<Type Name="HtmlIntrinsicControlDesigner" FullName="System.Web.UI.Design.HtmlIntrinsicControlDesigner">
+  <TypeSignature Language="C#" Value="public class HtmlIntrinsicControlDesigner : System.Web.UI.Design.HtmlControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlIntrinsicControlDesigner extends System.Web.UI.Design.HtmlControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.HtmlIntrinsicControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.HtmlControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um designer de base para todos os controles HTML intrínsecos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles HTML intrínsecos são definidos em ou derivados de classes definidas no, o <xref:System.Web.UI.HtmlControls?displayProperty=nameWithType> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlIntrinsicControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlIntrinsicControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Web.UI.Design.HtmlIntrinsicControlDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

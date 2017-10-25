@@ -1,0 +1,89 @@
+<Type Name="CompletedEventArgs" FullName="System.Management.CompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class CompletedEventArgs : System.Management.ManagementEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompletedEventArgs extends System.Management.ManagementEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.CompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Reter dados de evento para o evento <see cref="E:System.Management.ManagementOperationObserver.Completed" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir chama um método de forma assíncrona. O **Win32_Process.Create** método é chamado para criar um novo processo para Calc.exe.  
+  
+ [!code-csharp[wminet_CompletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_CompletedEventArgs/cs/CompletedEventArgs.cs#1)]
+ [!code-vb[wminet_CompletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_CompletedEventArgs/vb/CompletedEventArgs.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.ManagementStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Management.CompletedEventArgs.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status de conclusão da operação.</summary>
+        <value>Retorna um <see cref="T:System.Management.ManagementStatus" /> valor de enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Um <xref:System.Management.ManagementStatus> valor que indica o status da operação.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusObject">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject StatusObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementBaseObject StatusObject" />
+      <MemberSignature Language="DocId" Value="P:System.Management.CompletedEventArgs.StatusObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de status adicionais dentro de um objeto WMI. Isso pode ser nulo.</summary>
+        <value>Retorna um <see cref="T:System.Management.ManagementBaseObject" /> que contém informações de status sobre a conclusão de uma operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `null`Se um erro não tivesse ocorrido. Caso contrário, podem ser nulos se o provedor oferece suporte a informações de erro estendidas.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

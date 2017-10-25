@@ -1,0 +1,97 @@
+<Type Name="UpdateSourceTrigger" FullName="System.Windows.Data.UpdateSourceTrigger">
+  <TypeSignature Language="C#" Value="public enum UpdateSourceTrigger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdateSourceTrigger extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.UpdateSourceTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o tempo das atualizações de fonte de associação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usa o valor padrão de <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> da propriedade do destino de associação. O valor padrão para a maioria das propriedades de dependência é <see cref="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />, enquanto a propriedade <see cref="P:System.Windows.Controls.TextBox.Text" /> tem um valor padrão de <see cref="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma maneira programática de determinar se o valor <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> padrão de uma propriedade de dependência deve obter os metadados da propriedade usando <xref:System.Windows.DependencyProperty.GetMetadata%2A> e verificar o valor booliano da propriedade <xref:System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Explicit">
+      <MemberSignature Language="C#" Value="Explicit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger Explicit = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.Explicit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualiza a origem da associação somente quando você chama o método <see cref="M:System.Windows.Data.BindingExpression.UpdateSource" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocus">
+      <MemberSignature Language="C#" Value="LostFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger LostFocus = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualiza a origem da associação sempre que o elemento de destino da associação perde o foco.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="PropertyChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger PropertyChanged = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualiza a origem da associação imediatamente sempre que a propriedade do destino da associação é alterada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

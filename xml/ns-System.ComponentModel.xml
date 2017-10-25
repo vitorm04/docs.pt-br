@@ -1,0 +1,23 @@
+<Namespace Name="System.ComponentModel">
+  <Docs>
+    <summary>O namespace <see cref="N:System.ComponentModel" /> fornece classes que são usadas para implementar o comportamento de tempo de design e tempo de execução de componentes e controles. Este namespace inclui as classes e interfaces base para implementar atributos e conversores de tipo, associar a fontes de dados e licenciar componentes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes neste namespace dividem-se nas seguintes categorias:  
+  
+-   Classes de componente principal. Consulte o <xref:System.ComponentModel.Component>, <xref:System.ComponentModel.IComponent>, <xref:System.ComponentModel.Container>, e <xref:System.ComponentModel.IContainer> classes.  
+  
+-   Licenciamento de componente. Consulte o <xref:System.ComponentModel.License>, <xref:System.ComponentModel.LicenseManager>, <xref:System.ComponentModel.LicenseProvider>, e <xref:System.ComponentModel.LicenseProviderAttribute> classes.  
+  
+-   Atributos. Consulte a classe <xref:System.Attribute>.  
+  
+-   Descritores e persistência. Consulte o <xref:System.ComponentModel.TypeDescriptor>, <xref:System.ComponentModel.EventDescriptor>, e <xref:System.ComponentModel.PropertyDescriptor> classes.  
+  
+-   Conversores de tipo. Consulte a classe <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

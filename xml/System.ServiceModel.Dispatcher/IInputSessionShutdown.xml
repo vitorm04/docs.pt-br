@@ -1,0 +1,72 @@
+<Type Name="IInputSessionShutdown" FullName="System.ServiceModel.Dispatcher.IInputSessionShutdown">
+  <TypeSignature Language="C#" Value="public interface IInputSessionShutdown" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInputSessionShutdown" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IInputSessionShutdown" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o contrato que deve ser implementado para encerrar uma sessão de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.IInputSessionShutdown> interface dentro de uma sessão duplex para enviar mensagens de saída antes de fechar a sessão. Por exemplo, se um cliente fecha uma sessão pode implementar o serviço <xref:System.ServiceModel.Dispatcher.IInputSessionShutdown.DoneReceiving%2A> para ser notificado antes do desligamento, habilitando o serviço enviar uma mensagem de notificação antes de retornar. O cliente recebe a notificação antes da confirmação de que o cliente pode fechar o canal.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChannelFaulted">
+      <MemberSignature Language="C#" Value="public void ChannelFaulted (System.ServiceModel.IDuplexContextChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ChannelFaulted(class System.ServiceModel.IDuplexContextChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInputSessionShutdown.ChannelFaulted(System.ServiceModel.IDuplexContextChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.ServiceModel.IDuplexContextChannel" />
+      </Parameters>
+      <Docs>
+        <param name="channel">O <see cref="T:System.ServiceModel.IDuplexContextChannel" /> que apresentou falha.</param>
+        <summary>Indica que houve falha no canal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.IInputSessionShutdown.ChannelFaulted%2A> método para executar alguns comportamentos personalizados quando um canal foi interrompido. Normalmente, o canal foi anulado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoneReceiving">
+      <MemberSignature Language="C#" Value="public void DoneReceiving (System.ServiceModel.IDuplexContextChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DoneReceiving(class System.ServiceModel.IDuplexContextChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInputSessionShutdown.DoneReceiving(System.ServiceModel.IDuplexContextChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.ServiceModel.IDuplexContextChannel" />
+      </Parameters>
+      <Docs>
+        <param name="channel">O <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> que é feito recebimento.</param>
+        <summary>Indica quando o canal do cliente é feito o recebimento de mensagens como parte da troca de mensagens duplex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,285 @@
+<Type Name="RawSecurityDescriptor" FullName="System.Security.AccessControl.RawSecurityDescriptor">
+  <TypeSignature Language="C#" Value="public sealed class RawSecurityDescriptor : System.Security.AccessControl.GenericSecurityDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RawSecurityDescriptor extends System.Security.AccessControl.GenericSecurityDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.RawSecurityDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.GenericSecurityDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um descritor de segurança. Um descritor de segurança inclui um proprietário, um grupo primário, uma DACL (Lista de Controle de Acesso Discricionário) e uma SACL (Lista de Controle de Acesso do Sistema).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RawSecurityDescriptor (string sddlForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sddlForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawSecurityDescriptor.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sddlForm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sddlForm">A cadeia de caracteres SDDL do qual criar o novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> classe de cadeia de caracteres de linguagem de definição do descritor de segurança (SDDL) especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RawSecurityDescriptor (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawSecurityDescriptor.#ctor(System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">A matriz de valores de byte do qual criar o novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <param name="offset">O deslocamento no <c>binaryForm</c> matriz no qual começar a copiar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> classe da matriz especificada de valores de byte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RawSecurityDescriptor (System.Security.AccessControl.ControlFlags flags, System.Security.Principal.SecurityIdentifier owner, System.Security.Principal.SecurityIdentifier group, System.Security.AccessControl.RawAcl systemAcl, System.Security.AccessControl.RawAcl discretionaryAcl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.AccessControl.ControlFlags flags, class System.Security.Principal.SecurityIdentifier owner, class System.Security.Principal.SecurityIdentifier group, class System.Security.AccessControl.RawAcl systemAcl, class System.Security.AccessControl.RawAcl discretionaryAcl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawSecurityDescriptor.#ctor(System.Security.AccessControl.ControlFlags,System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.RawAcl,System.Security.AccessControl.RawAcl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Security.AccessControl.ControlFlags" />
+        <Parameter Name="owner" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="group" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="systemAcl" Type="System.Security.AccessControl.RawAcl" />
+        <Parameter Name="discretionaryAcl" Type="System.Security.AccessControl.RawAcl" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Sinalizadores que especificam o comportamento do novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <param name="owner">O proprietário do novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <param name="group">O grupo primário para o novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <param name="systemAcl">O acesso controle lista SACL (sistema) para o novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <param name="discretionaryAcl">O acesso controle DACL (lista discricionário) para o novo <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> classe com os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlFlags">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.ControlFlags ControlFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.ControlFlags ControlFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawSecurityDescriptor.ControlFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ControlFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores que especificam o comportamento do <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</summary>
+        <value>Um ou mais valores da <see cref="T:System.Security.AccessControl.ControlFlags" /> enumeração combinado com uma operação OR lógica.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscretionaryAcl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.RawAcl DiscretionaryAcl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.AccessControl.RawAcl DiscretionaryAcl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawSecurityDescriptor.DiscretionaryAcl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RawAcl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de controle acesso discricionário (DACL) para este <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto. A DACL contém regras de acesso.</summary>
+        <value>A DACL para este <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.SecurityIdentifier Group { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Group" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawSecurityDescriptor.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o grupo primário para este <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</summary>
+        <value>O grupo primário <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.SecurityIdentifier Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawSecurityDescriptor.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o proprietário do objeto associado a esta <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</summary>
+        <value>O proprietário do objeto associado a esta <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceManagerControl">
+      <MemberSignature Language="C#" Value="public byte ResourceManagerControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ResourceManagerControl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawSecurityDescriptor.ResourceManagerControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de byte que representa os bits de controle do Gerenciador de recursos associados a esta <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</summary>
+        <value>Um valor de byte que representa o Gerenciador de recursos de controle bits associados a esta <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os bits de controle do Gerenciador de recursos contém informações específicas para o Gerenciador de recursos de acessar o descritor de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFlags">
+      <MemberSignature Language="C#" Value="public void SetFlags (System.Security.AccessControl.ControlFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFlags(valuetype System.Security.AccessControl.ControlFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawSecurityDescriptor.SetFlags(System.Security.AccessControl.ControlFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Security.AccessControl.ControlFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Um ou mais valores da <see cref="T:System.Security.AccessControl.ControlFlags" /> enumeração combinado com uma operação OR lógica.</param>
+        <summary>Conjuntos de <see cref="P:System.Security.AccessControl.RawSecurityDescriptor.ControlFlags" /> propriedade deste <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto para o valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAcl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.RawAcl SystemAcl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.AccessControl.RawAcl SystemAcl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawSecurityDescriptor.SystemAcl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RawAcl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de controle de acesso (SACL) do sistema para este <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto. A SACL contém regras de auditoria.</summary>
+        <value>A SACL para este <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

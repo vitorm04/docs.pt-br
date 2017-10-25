@@ -1,0 +1,157 @@
+<Type Name="AttachedPropertyBrowsableForChildrenAttribute" FullName="System.Windows.AttachedPropertyBrowsableForChildrenAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AttachedPropertyBrowsableForChildrenAttribute : System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttachedPropertyBrowsableForChildrenAttribute extends System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.AttachedPropertyBrowsableAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que uma propriedade anexada tem um escopo navegável que se estende aos elementos filho na árvore lógica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O significado do termo `browsable` como usado nas descrições para este [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] é análogo às descrições fornecidas para <xref:System.ComponentModel.BrowsableAttribute>, mas o estado navegável de uma propriedade anexada é particularmente relevante para informações de propriedade de [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], porque uma propriedade anexada é principalmente um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] conceito.  
+  
+ Quando isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] é aplicada para o acessador get para uma propriedade anexada, isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Especifica que uma propriedade anexada é navegável quando o proprietário da propriedade anexada é um elemento pai de outros elementos.  
+  
+ Interpretado por um designer que usa informações do descritor de tipo, o designer deve adicionar essa propriedade como uma propriedade navegável para todos os elementos filho na árvore lógica, com base no elemento pai com este [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] aplicado.  
+  
+ Em geral, o estado navegável paralelo à funcionalidade. Por exemplo, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> designado navegável em elementos que são elementos filho de um <xref:System.Windows.Controls.Canvas>, pois <xref:System.Windows.Controls.Canvas> inclui código para verificar todos os valores de conjunto <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> nos elementos filho.  
+  
+ Isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] oferece suporte a dois tipos de modos de detecção de árvore para posições do elemento pai: um modo superficial e um modo detalhado. O modo superficial, que é o modo padrão para um aplicado <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], requer que o elemento pai imediato ser o tipo de proprietário da propriedade em ordem para a propriedade anexada ao ser navegável. O modo detalhado é declarado, aplicando o atributo com <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> como `true`. O modo detalhado é menos restritivo, porque ele requer apenas que o tipo de proprietário ser em algum lugar na direção ancestral da árvore lógica. e portanto é navegável em todos os elementos filho, os elementos filho imediato não apenas a propriedade anexada. O modo detalhado é aplicado para usos de propriedade anexada onde os elementos na árvore lógica não devem ser relatados como o elemento pai true. Coleções implícita (por exemplo, o <xref:System.Windows.Controls.UIElementCollection> que está implícito no <xref:System.Windows.Controls.Panel.Children%2A> de um <xref:System.Windows.Controls.Panel>) não são considerados para serem elementos pai para fins de como isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] declara o modo de detecção de árvore.  
+  
+ Isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] só deve ser aplicada no acessador get de definições de propriedade anexada. Não se aplicam a esse [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] para o acessador set. Embora intuitivamente é a operação de conjunto que está sendo feita navegável para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] nos elementos filho, é a presença e as características do acessador get no elemento pai que controla o comportamento de true.  
+  
+ Se uma propriedade anexada é navegável em um elemento filho não é uma garantia de absoluta que o valor da propriedade anexada realmente é processado pelo elemento pai de alguma maneira. Além disso, o <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> valor não é uma garantia absoluta que o escopo de processamento ou não ultrapasse o elemento pai imediato. Tudo isso é específico da implementação. No entanto, isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] para relatar o estado navegável é o melhor mecanismo disponível para relatar as informações de uso e funcional para uma propriedade anexada. Portanto, você geralmente pode presumir que o estado navegável de uma propriedade anexada é análogo ao comportamento de como um valor da propriedade anexada em um elemento filho é processado ou interpretado pelo elemento pai relevantes no código do aplicativo.  
+  
+ Para obter informações gerais sobre propriedades anexadas declarativa, consulte [visão geral de propriedades anexado](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+<a name="xamlTextUsage_AttachedPropertyBrowsableForChildrenAttribute"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros desse tipo não são usados normalmente em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttachedPropertyBrowsableForChildrenAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão para <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> para comparar com a atual <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />.</param>
+        <summary>Determina se o atual <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> especificado for igual ao <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação oferece suporte a igualdade de valor do possíveis definível pelo valor exposto por este [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <returns>Um valor inteiro de 32 bits sem sinal.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação oferece suporte a dois valores de hash possíveis com base em possíveis definível pelo valor exposto por este [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDescendants">
+      <MemberSignature Language="C#" Value="public bool IncludeDescendants { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeDescendants" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que declara se deve usar o modo detalhado para a detecção de elementos pai na propriedade anexada onde isso [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] é aplicada.</summary>
+        <value>
+          <see langword="true" />Se a propriedade anexada é navegável para todos os elementos filho na árvore lógica do elemento pai que possui a propriedade anexada. <see langword="false" />Se a propriedade anexada for navegável para elementos filho imediato de um elemento pai que possui a propriedade anexada. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das propriedades anexadas definidas pelo [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] que se aplicam <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> fazê-lo com o padrão de <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> como `false`.  
+  
+<a name="xamlTextUsage_IncludeDescendants"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros desse tipo não são usados normalmente em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

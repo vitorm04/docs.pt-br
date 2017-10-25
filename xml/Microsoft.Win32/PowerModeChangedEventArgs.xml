@@ -1,0 +1,78 @@
+<Type Name="PowerModeChangedEventArgs" FullName="Microsoft.Win32.PowerModeChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PowerModeChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PowerModeChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.PowerModeChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Win32.SystemEvents.PowerModeChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> é gerado quando o usuário suspende ou reinicia o sistema operacional, ou quando ocorre uma notificação de status de energia do sistema. Uma notificação de status de energia do sistema pode ocorrer quando uma fonte de alimentação fraca ou carregamento é detectada, ou quando ocorre uma transição da fonte de alimentação de CA ou bateria.  
+  
+ O <xref:Microsoft.Win32.PowerModeChangedEventArgs.Mode%2A> propriedade de um <xref:Microsoft.Win32.PowerModeChangedEventArgs> indica o tipo de evento de modo de energia que ocorreu.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerModeChangedEventArgs (Microsoft.Win32.PowerModes mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Win32.PowerModes mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.PowerModeChangedEventArgs.#ctor(Microsoft.Win32.PowerModes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.Win32.PowerModes" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Uma da <see cref="T:Microsoft.Win32.PowerModes" /> valores que representa o tipo de evento de modo de energia.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Win32.PowerModeChangedEventArgs" /> classe usando o tipo de evento de modo de energia especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser usado para criar um <xref:Microsoft.Win32.PowerModeChangedEventArgs> que indica um tipo de evento de modo de energia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.PowerModes Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.PowerModes Mode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.PowerModeChangedEventArgs.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador que indica o tipo do evento de modo de energia ocorrido.</summary>
+        <value>Um dos valores de <see cref="T:Microsoft.Win32.PowerModes" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica o tipo de transição de modo de energia que está ocorrendo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,268 @@
+<Type Name="AttributeCallbackBuilder" FullName="System.Activities.Presentation.Metadata.AttributeCallbackBuilder">
+  <TypeSignature Language="C#" Value="public sealed class AttributeCallbackBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttributeCallbackBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.AttributeCallbackBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso para adicionar atributos para um tipo específico para um específico <see cref="T:System.Activities.Presentation.Metadata.AttributeTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na primeira vez que um <xref:System.Activities.Presentation.Metadata.AttributeTable> é consultada para atributos de um tipo, se o <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> foi preenchido usando <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCallback%2A> para o tipo, o representante é passado um <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder>. O <xref:System.Activities.Presentation.Metadata.AttributeTable> remove a referência de retorno de chamada e adiciona informações de atributo fornecidas por chamadas para <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.AddCustomAttributes%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="AddCustomAttributes">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona o conteúdo dos atributos fornecidos para a tabela de atributos que criou este construtor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo está em conflito com outro atributo já incluído na tabela, o último atributo adicionado substitui atributos anteriores.  
+  
+ Atributos podem ser adicionados somente para o tipo especificado pelo <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddCustomAttributes">
+      <MemberSignature Language="C#" Value="public void AddCustomAttributes (params Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCustomAttributes(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="attributes">Os atributos que são adicionados à tabela.</param>
+        <summary>Adiciona o conteúdo dos atributos fornecidos para a tabela de atributos que criou este construtor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo está em conflito com outro atributo já incluído na tabela, o último atributo adicionado substitui atributos anteriores.  
+  
+ Atributos podem ser adicionados somente para o tipo especificado pelo <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCustomAttributes">
+      <MemberSignature Language="C#" Value="public void AddCustomAttributes (System.ComponentModel.MemberDescriptor descriptor, params Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCustomAttributes(class System.ComponentModel.MemberDescriptor descriptor, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.ComponentModel.MemberDescriptor,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descriptor" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="attributes" Type="System.Attribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="descriptor">O membro ao qual os atributos são adicionados.</param>
+        <param name="attributes">Os atributos que são adicionados à tabela.</param>
+        <summary>Adiciona o conteúdo dos atributos fornecidos para a tabela de atributos que criou este construtor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo está em conflito com outro atributo já incluído na tabela, o último atributo adicionado substitui atributos anteriores.  
+  
+ Atributos podem ser adicionados somente para o tipo especificado pelo <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="descriptor" /> ou <paramref name="attributes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCustomAttributes">
+      <MemberSignature Language="C#" Value="public void AddCustomAttributes (System.Reflection.MemberInfo member, params Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCustomAttributes(class System.Reflection.MemberInfo member, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.Reflection.MemberInfo,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="attributes" Type="System.Attribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="member">O membro ao qual os atributos são adicionados.</param>
+        <param name="attributes">Os atributos que são adicionados à tabela.</param>
+        <summary>Adiciona o conteúdo dos atributos fornecidos para a tabela de atributos que criou este construtor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo está em conflito com outro atributo já incluído na tabela, o último atributo adicionado substitui atributos anteriores.  
+  
+ Atributos podem ser adicionados somente para o tipo especificado pelo <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="member" /> ou <paramref name="attributes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCustomAttributes">
+      <MemberSignature Language="C#" Value="public void AddCustomAttributes (string memberName, params Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCustomAttributes(string memberName, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.String,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Attribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="memberName">O nome do membro para o qual os atributos são adicionados.</param>
+        <param name="attributes">Os atributos que são adicionados à tabela.</param>
+        <summary>Adiciona o conteúdo dos atributos fornecidos para a tabela de atributos que criou este construtor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo está em conflito com outro atributo já incluído na tabela, o último atributo adicionado substitui atributos anteriores.  
+  
+ Atributos podem ser adicionados somente para o tipo especificado pelo <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="memberName" /> ou <paramref name="attributes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCustomAttributes">
+      <MemberSignature Language="C#" Value="public void AddCustomAttributes (System.Windows.DependencyProperty dp, params Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCustomAttributes(class System.Windows.DependencyProperty dp, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.Windows.DependencyProperty,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="attributes" Type="System.Attribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="dp">A dependência para o qual os atributos são adicionados.</param>
+        <param name="attributes">Os atributos que são adicionados à tabela.</param>
+        <summary>Adiciona o conteúdo dos atributos fornecidos para a tabela de atributos que criou este construtor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo está em conflito com outro atributo já incluído na tabela, o último atributo adicionado substitui atributos anteriores.  
+  
+ Atributos podem ser adicionados somente para o tipo especificado pelo <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dp" /> ou <paramref name="attributes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackType">
+      <MemberSignature Language="C#" Value="public Type CallbackType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CallbackType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Metadata.AttributeCallbackBuilder.CallbackType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo ao qual os atributos serão adicionados.</summary>
+        <value>O tipo ao qual os atributos serão adicionados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo é definido no construtor e não pode ser alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

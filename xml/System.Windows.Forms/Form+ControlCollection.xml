@@ -1,0 +1,134 @@
+<Type Name="Form+ControlCollection" FullName="System.Windows.Forms.Form+ControlCollection">
+  <TypeSignature Language="C#" Value="public class Form.ControlCollection : System.Windows.Forms.Control.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit Form/ControlCollection extends System.Windows.Forms.Control/ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Form.ControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de controles no formulário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa a coleção de controles contidos em um formulário. Você pode usar o <xref:System.Windows.Forms.Form.ControlCollection.Add%2A> método para adicionar um controle para o formulário e o <xref:System.Windows.Forms.Form.ControlCollection.Remove%2A> método para remover o controle do formulário. A coleção de controle representada por essa classe não pode ser criada sem associação a um formulário específico. Como resultado, você não pode criar várias instâncias dessa coleção de controle e intercâmbio-los com um formulário ativo para fornecer layouts de controle diferentes.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona uma <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Label> controle para a coleção de controle de um formulário. O exemplo requer que um formulário foi criado e nomeado `Form1`.  
+  
+ [!code-cpp[Classic Form.ControlCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Form.ControlCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic Form.ControlCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Form.ControlCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlCollection (System.Windows.Forms.Form owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Form owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Form.ControlCollection.#ctor(System.Windows.Forms.Form)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.Form" /> para conter os controles adicionados à coleção de controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Form.ControlCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite vincular corretamente a coleção de controles ao formulário para ativar os controles a ser adicionado ao formulário.  
+  
+> [!NOTE]
+>  Porque a coleção de controle deve ser criada com um formulário especificado, não é possível criar várias coleções de controles e intercâmbio-los com o formulário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Windows.Forms.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Windows.Forms.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Form.ControlCollection.Add(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.Control" /> a ser adicionado ao formulário.</param>
+        <summary>Adiciona um controle ao formulário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para adicionar controles ao formulário. Se você deseja adicionar um grupo de controles já criados para o formulário, use o <xref:System.Windows.Forms.Control.ControlCollection.AddRange%2A?displayProperty=nameWithType> método o <xref:System.Windows.Forms.Control.ControlCollection> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona uma <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Label> controle para a coleção de controle de um formulário. O exemplo requer que um formulário foi criado e nomeado `Form1`.  
+  
+ [!code-cpp[Classic Form.ControlCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Form.ControlCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic Form.ControlCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Form.ControlCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Um formulário de pai da interface MDI não pode ter controles adicionados a ele.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (System.Windows.Forms.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(class System.Windows.Forms.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Form.ControlCollection.Remove(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.Control" /> para remover do formulário.</param>
+        <summary>Remove um controle do formulário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para remover os controles que você não precisa mais no formulário. Se você quiser exibir um controle depois que ele for removido, você precisará adicionar o controle voltará a usar o formulário de <xref:System.Windows.Forms.Form.ControlCollection.Add%2A> método. Para ter um controle permanecem no formulário, mas não exibido, use o <xref:System.Windows.Forms.Control.Visible%2A> propriedade do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

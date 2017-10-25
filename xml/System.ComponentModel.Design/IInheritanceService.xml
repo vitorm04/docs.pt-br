@@ -1,0 +1,113 @@
+<Type Name="IInheritanceService" FullName="System.ComponentModel.Design.IInheritanceService">
+  <TypeSignature Language="C#" Value="public interface IInheritanceService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInheritanceService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IInheritanceService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para identificar os componentes de um componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface fornece métodos que podem ser usados para identificar os componentes de um componente que são herdadas de uma classe base.  
+  
+ Para determinar quais componentes são herdados, chame o <xref:System.ComponentModel.Design.IInheritanceService.AddInheritedComponents%2A> método e passar o componente de pesquisa e um <xref:System.ComponentModel.IContainer> para armazenar as referências para os componentes identificados. Chamar o <xref:System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute%2A> método para recuperar um <xref:System.ComponentModel.InheritanceAttribute> para um componente que foi identificado pelo <xref:System.ComponentModel.Design.IInheritanceService.AddInheritedComponents%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddInheritedComponents">
+      <MemberSignature Language="C#" Value="public void AddInheritedComponents (System.ComponentModel.IComponent component, System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddInheritedComponents(class System.ComponentModel.IComponent component, class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IInheritanceService.AddInheritedComponents(System.ComponentModel.IComponent,System.ComponentModel.IContainer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> para pesquisar. Pesquisa começa com este componente.</param>
+        <param name="container">O <see cref="T:System.ComponentModel.IContainer" /> para adicionar componentes a.</param>
+        <summary>Procura o componente especificado para os campos que implementam o <see cref="T:System.ComponentModel.IComponent" /> interface e adiciona cada para o contêiner especificado, armazenando o nível de herança de cada que podem ser recuperados usando o <see cref="M:System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute(System.ComponentModel.IComponent)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método pesquisa o componente especificado para todos os campos que implementam o <xref:System.ComponentModel.IComponent>, adiciona cada para o contêiner especificado e armazena um <xref:System.ComponentModel.InheritanceAttribute> para cada um. O <xref:System.ComponentModel.InheritanceAttribute> para um componente indica se o campo é herdado de uma classe base e pode ser recuperado usando o <xref:System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInheritanceAttribute">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.InheritanceAttribute GetInheritanceAttribute (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.InheritanceAttribute GetInheritanceAttribute(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.InheritanceAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> para o qual recuperar o atributo de herança.</param>
+        <summary>Obtém o atributo de herança para o componente especificado.</summary>
+        <returns>Uma instância de <see cref="T:System.ComponentModel.InheritanceAttribute" /> que descreve o nível de herança do componente especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o componente tem sido atribuído pelo <xref:System.ComponentModel.Design.IInheritanceService.AddInheritedComponents%2A> método, esse método retornará o valor <xref:System.ComponentModel.InheritanceAttribute.NotInherited?displayProperty=nameWithType>. Caso contrário, ele retorna o atributo de herança para este componente.  
+  
+ Você deve chamar <xref:System.ComponentModel.Design.IInheritanceService.AddInheritedComponents%2A> no componente especificado ou um pai do componente especificado antes de tentar obter um <xref:System.ComponentModel.InheritanceAttribute> que reflete o nível de herança do componente especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

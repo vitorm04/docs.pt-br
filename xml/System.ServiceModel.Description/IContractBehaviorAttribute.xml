@@ -1,0 +1,72 @@
+<Type Name="IContractBehaviorAttribute" FullName="System.ServiceModel.Description.IContractBehaviorAttribute">
+  <TypeSignature Language="C#" Value="public interface IContractBehaviorAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContractBehaviorAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IContractBehaviorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica o contrato para o qual um atributo que implementa o <see cref="T:System.ServiceModel.Description.IContractBehavior" /> interface está ativa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehaviorAttribute> interface em um atributo que é também um <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> objeto para permitir o uso desse atributo de comportamento de contrato em um tipo de serviço, mas restringe o seu aplicativo para o contrato especificado no <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> propriedade.  
+  
+ Não há nenhum requisito para implementar <xref:System.ServiceModel.Description.IContractBehaviorAttribute> em Personalizar os atributos de comportamento de contrato e se o atributo é aplicado a uma interface de contrato ou para um retorno de chamada duplex classe o valor da <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> propriedade será ignorada.  
+  
+ Para obter mais informações, consulte <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir pressupõe um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceProvider?displayProperty=nameWithType> implementação chamado `ObjectProviderBehavior` que fornece um comportamento de "simples"; ele sempre retorna a mesma instância de serviço e não reciclar.  
+  
+ Para inserir a personalização do provedor de instância, o exemplo mostra como implementar um atributo personalizado (`SingletonBehaviorAttribute`) que implementa <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> para inserir o provedor de instância de serviço personalizado. Ele também implementa <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, que associa o seu aplicativo para o `ISampleService` contrato.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TargetContract">
+      <MemberSignature Language="C#" Value="public Type TargetContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do contrato ao qual o comportamento de contrato é aplicável.</summary>
+        <value>O contrato ao qual o comportamento de contrato é aplicável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> propriedade para especificar o contrato ao qual o comportamento de contrato é aplicado quando a implementação <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> atributo é aplicado a uma classe de serviço.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir pressupõe um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceProvider?displayProperty=nameWithType> implementação chamado `ObjectProviderBehavior` que fornece um comportamento de "simples"; ele sempre retorna a mesma instância de serviço e não reciclar.  
+  
+ Para inserir a personalização do provedor de instância, o exemplo mostra como implementar um atributo personalizado (`SingletonBehaviorAttribute`) que implementa <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> para inserir o provedor de instância de serviço personalizado. Ele também implementa <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, que associa o seu aplicativo para o `ISampleService` contrato.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

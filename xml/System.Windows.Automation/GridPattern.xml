@@ -1,0 +1,228 @@
+<Type Name="GridPattern" FullName="System.Windows.Automation.GridPattern">
+  <TypeSignature Language="C#" Value="public class GridPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.GridPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste controle dão suporte a <see cref="T:System.Windows.Automation.GridItemPattern" /> e são organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido por linha e coluna.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.GridPattern>não oferece suporte a manipulação ativa de uma grade; o <xref:System.Windows.Automation.TransformPattern> padrão de controle é necessária para essa funcionalidade.  
+  
+ Consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](~/docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md) para obter exemplos de controles que podem dar suporte a esse padrão de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.GridPattern.GridPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.GridPattern/GridPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.GridPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.GridPattern+GridPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.GridPattern" />.</summary>
+        <value>Uma estrutura que contém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Use <xref:System.Windows.Automation.GridPattern.Current%2A> para obter o valor atual de uma propriedade.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.GridPattern.GridPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnCountProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ColumnCountProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ColumnCountProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.GridPattern.ColumnCountProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.GridPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de elementos de automação de interface do usuário que são descendentes da raiz e atender a um conjunto de condições de propriedade.  
+  
+ [!code-csharp[UIAGridPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#100)]
+ [!code-vb[UIAGridPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.GridPattern.GridPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.GridPattern/GridPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.GridPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.GridPattern+GridPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.GridPattern" />.</summary>
+        <value>Uma estrutura que contém atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.GridPattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.GridPattern.GridPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetItem (int row, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetItem(int32 row, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.GridPattern.GetItem(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="row">O número ordinal da linha de interesse.</param>
+        <param name="column">O número ordinal da coluna de interesse.</param>
+        <summary>Recupera um <see cref="T:System.Windows.Automation.AutomationElement" /> que representa a célula especificada.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.AutomationElement" /> que representa a célula recuperada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coordenadas da grade são baseadas em zero com o superior esquerda (ou célula superior direita dependendo da localidade) tendo as coordenadas (0,0).  
+  
+ Se uma célula estiver vazia, um [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento ainda será retornado para dar suporte à recuperação do <xref:System.Windows.Automation.GridItemPattern.GridItemPatternInformation.ContainingGrid%2A> propriedade daquela célula. Isso é possível quando o layout dos elementos filho na grade é semelhante a uma matriz irregular, conforme mostrado aqui.  
+  
+ ![Windows Explorer exibir mostrando desbalanceada layout. ] (~/add/media/uia-gridpattern-ragged-array.PNG "Desbalanceada layout do Windows Explorer exibição mostrando.")  
+Exemplo de um controle de grade com coordenadas vazios  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> ouvinte é declarado para controlar a travessia de itens de grade dentro de um contêiner de grade. Propriedades de item são exibidas no console após a cada evento de alteração de foco.  
+  
+ [!code-csharp[UIAGridItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridItemPattern_snip/CSharp/UIAGridItemPattern_snippets.cs#102)]
+ [!code-vb[UIAGridItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridItemPattern_snip/VisualBasic/UIAGridItemPattern_snippets.vb#102)]  
+[!code-csharp[UIAGridItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridItemPattern_snip/CSharp/UIAGridItemPattern_snippets.cs#103)]
+[!code-vb[UIAGridItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridItemPattern_snip/VisualBasic/UIAGridItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A coordenada da linha solicitada é maior do que o <see cref="P:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount" /> ou a coordenada da coluna é maior do que o <see cref="P:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.GridPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.GridPattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.GridPatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um <xref:System.Windows.Automation.GridPattern> padrão de controle é obtido de um elemento de automação de interface do usuário.  
+  
+ [!code-csharp[UIAGridPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#101)]
+ [!code-vb[UIAGridPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCountProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty RowCountProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty RowCountProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.GridPattern.RowCountProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.GridPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de elementos de automação que são descendentes da raiz e atender a um conjunto de condições de propriedade. Este exemplo recupera os elementos de automação de interface do usuário que oferecem suporte a <xref:System.Windows.Automation.GridPattern> , mas atualmente tem apenas um item na árvore.  
+  
+ [!code-csharp[UIAGridPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#100)]
+ [!code-vb[UIAGridPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

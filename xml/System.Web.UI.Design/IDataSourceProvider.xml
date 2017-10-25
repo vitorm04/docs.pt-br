@@ -1,0 +1,86 @@
+<Type Name="IDataSourceProvider" FullName="System.Web.UI.Design.IDataSourceProvider">
+  <TypeSignature Language="C#" Value="public interface IDataSourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDataSourceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma interface que pode implementar um designer de controle para fornecer acesso a uma fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe que é capaz de fornecer uma fonte de dados pode implementar essa interface para habilitar o acesso à fonte de dados com objetos que usam o <xref:System.Web.UI.Design.IDataSourceProvider> interface. Essa interface é usada pelo <xref:System.Web.UI.Design.DataFieldConverter> e <xref:System.Web.UI.Design.DataMemberConverter> classes.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma classe personalizada, denominada `TemplatedListDesigner`, que herda do <xref:System.Web.UI.Design.TemplatedControlDesigner> classe e implemente o `IDataSourceProvider` interface.  
+  
+ [!code-xml[System.Web.UI.Design_Samples1#1](~/samples/snippets/common/VS_Snippets_WebNet/system.web.ui.design_samples1/Common/System.Web.UI.Design_Samples1.xml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResolvedSelectedDataSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetResolvedSelectedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable GetResolvedSelectedDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceProvider.GetResolvedSelectedDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o membro de dados selecionados da fonte de dados selecionado.</summary>
+        <returns>O membro de dados selecionados da fonte de dados selecionada, se o controle permite que o usuário selecione um <see cref="T:System.ComponentModel.IListSource" /> (como um <see cref="T:System.Data.DataSet" />) para a fonte de dados e fornece um <see langword="DataMember" /> propriedade para selecionar uma lista específica (ou <see cref="T:System.Data.DataTable" />) na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte código exemplo implementa o `GetResolvedSelectedDataSource` e <xref:System.Web.UI.Design.IDataSourceProvider.GetSelectedDataSource%2A> métodos do <xref:System.Web.UI.Design.IDataSourceProvider> interface. O `GetSelectedDataSource` método obtém um objeto arbitrário como a fonte de dados e essa implementação do `GetResolvedSelectedDataSource` método converte o objeto em um <xref:System.Collections.IEnumerable> objeto.  
+  
+ [!code-xml[System.Web.UI.Design_Samples1#17](~/samples/snippets/common/VS_Snippets_WebNet/system.web.ui.design_samples1/Common/System.Web.UI.Design_Samples1.xml#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedDataSource">
+      <MemberSignature Language="C#" Value="public object GetSelectedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSelectedDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceProvider.GetSelectedDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma referência à fonte de dados selecionado do provedor de fonte de dados.</summary>
+        <returns>O objeto de fonte de dados selecionado no momento desse provedor de fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir implementa ambos o `GetSelectedDataSource` e <xref:System.Web.UI.Design.IDataSourceProvider.GetResolvedSelectedDataSource%2A> métodos do <xref:System.Web.UI.Design.IDataSourceProvider> interface. O `GetSelectedDataSource` método é usado para garantir que a fonte de dados associada ao controle em tempo de design é um objeto que implementa o <xref:System.Collections.IEnumerable> interface. Isso permite que os usuários iterar por meio da fonte de dados.  
+  
+ [!code-xml[System.Web.UI.Design_Samples1#17](~/samples/snippets/common/VS_Snippets_WebNet/system.web.ui.design_samples1/Common/System.Web.UI.Design_Samples1.xml#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

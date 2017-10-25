@@ -1,0 +1,134 @@
+<Type Name="FlagsAttribute" FullName="System.FlagsAttribute">
+  <TypeSignature Language="C#" Value="public class FlagsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FlagsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.FlagsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Enum, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que uma enumeração pode ser tratada como um campo de bits; isto é, um conjunto de sinalizadores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Campos de bit são geralmente usados para listas de elementos que podem ocorrer em combinação, enquanto as constantes de enumeração são geralmente usadas para listas de elementos mutuamente exclusivos. Portanto, os campos de bits são projetados para ser combinado com uma operação OR bit a bit para gerar valores sem nome, enquanto que não são de constantes enumeradas. Os idiomas variam em seu uso de campos de bits em comparação às constantes de enumeração.  
+  
+## <a name="attributes-of-the-flagsattribute"></a>Atributos do FlagsAttribute  
+ <xref:System.AttributeUsageAttribute>é aplicado a esta classe e sua <xref:System.AttributeUsageAttribute.Inherited%2A> propriedade especifica `false`. Esse atributo só pode ser aplicado para enumerações.  
+  
+## <a name="guidelines-for-flagsattribute-and-enum"></a>Diretrizes para FlagsAttribute e Enum  
+  
+-   Use o <xref:System.FlagsAttribute> atributo personalizado para uma enumeração somente se for uma operação bit a bit (AND, OR exclusivo ou) a ser executada em um valor numérico.  
+  
+-   Defina constantes de enumeração em potências de dois, ou seja, 1, 2, 4, 8 e assim por diante. Isso significa que os sinalizadores individuais em constantes de enumeração combinado não se sobrepõem.  
+  
+-   Considere a criação de uma constante enumerada para combinações de sinalizador usadas com frequência. Por exemplo, se você tiver uma enumeração usada para operações de e/s de arquivo que contém as constantes enumeradas `Read = 1` e `Write = 2`, considere a criação de constante enumerada `ReadWrite = Read OR Write`, que combina o `Read` e `Write` sinalizadores. Além disso, a operação OR bit a bit usada para combinar os sinalizadores pode ser considerada um conceito avançado em algumas circunstâncias que não devem ser necessários para tarefas simples.  
+  
+-   Tenha cuidado se você definir um número negativo como uma constante enumerada sinalizador porque várias posições de sinalizador podem ser definidas como 1, o que pode tornar o código confuso e incentivar erros de codificação.  
+  
+-   Uma maneira conveniente para testar se um sinalizador é definido em um valor numérico é realizar um bit a bit e operação entre o valor numérico e a constante enumerada sinalizador, que define todos os bits no valor numérico para zero não corresponde ao sinalizador, teste se o resultado dessa operação é igual a constante enumerada de sinalizador.  
+  
+-   Use `None` o nome do sinalizador enumerados constante cujo valor é zero. Não é possível usar o `None` constante enumerada em uma operação AND bit a bit para testar um sinalizador porque o resultado sempre será zero. No entanto, você pode executar uma operação lógica, não uma comparação bit a bit entre o valor numérico e `None` constante enumerado para determinar se qualquer bit no valor numérico está definida.  
+  
+     Se você criar uma enumeração do valor em vez de uma enumeração de sinalizadores, vale a pena ainda para criar um `None` constante enumerada. O motivo é que, por padrão, a memória usada para a enumeração é inicializada com zero, o common language runtime. Consequentemente, se você não definir uma constante cujo valor é zero, a enumeração conterá um valor ilegal quando ele é criado.  
+  
+     Se houver um caso de padrão óbvio que seu aplicativo precisa para representar, considere o uso de uma constante enumerada cujo valor é zero para representar o padrão. Se não houver nenhum caso padrão, considere usar uma constante enumerada cujo valor é zero, que significa que não é representado por qualquer uma das outras constantes enumeradas.  
+  
+-   Não defina um valor de enumeração exclusivamente para espelhar o estado de enumeração em si. Por exemplo, não definem uma constante enumerada que simplesmente marca o fim da enumeração. Se você precisar determinar o último valor da enumeração, verificar esse valor explicitamente. Além disso, você pode executar uma verificação de intervalo para a constante enumerada primeira e o última se todos os valores dentro do intervalo válidos.  
+  
+-   Não especifique constantes enumeradas são reservados para uso futuro.  
+  
+-   Quando você define um método ou propriedade que utiliza uma constante enumerada como um valor, considere a possibilidade de validação do valor. O motivo é que você pode converter um valor numérico para o tipo de enumeração, mesmo se esse valor numérico não está definido na enumeração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do `FlagsAttribute` de atributos e mostra o efeito no <xref:System.Enum.ToString%2A> método de usar `FlagsAttribute` em um <xref:System.Enum> declaração.  
+  
+ [!code-cpp[System.FlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags.cpp#1)]
+ [!code-csharp[System.FlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags.cs#1)]
+ [!code-vb[System.FlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags.vb#1)]  
+  
+ O exemplo a seguir define duas enumerações relacionadas à cor `SingleHue` e `MultiHue`. O segundo tem o `FlagsAttribute` atributo; o primeiro não. O exemplo mostra a diferença no comportamento quando um intervalo de inteiros, incluindo números inteiros que representam valores subjacentes do tipo de enumeração, são convertidos para o tipo de enumeração e suas representações de cadeia de caracteres exibidas.   Por exemplo, observe que 3 não pode ser representado como um `SingleHue` valor porque 3 não é o valor subjacente de qualquer `SingleHue` membro, enquanto o `FlagsAttribute` atributo torna possível representar 3 como um `MultiHue` valor `Black, Red`.  
+  
+ [!code-cpp[System.FlagsAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags1.cpp#2)]
+ [!code-csharp[System.FlagsAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags1.cs#2)]
+ [!code-vb[System.FlagsAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlagsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FlagsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.FlagsAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define um `PhoneService` enumeração que representa as formas de comunicação fornecida por uma empresa de telefone. Ele inicializa três variáveis que representam o serviço fornecido aos três residências diferentes e indica quais residências não possui serviço, quais residências têm apenas o serviço de telefone celular, e quais residências tem o serviço de linha de telefone celular e terra. Finalmente, ele chama implicitamente o <xref:System.Enum.ToString%28System.String%29?displayProperty=nameWithType> método para exibir os tipos de serviço fornecido para cada família.  
+  
+ [!code-cpp[System.FlagsAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags1.cpp#2)]
+ [!code-csharp[System.FlagsAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags1.cs#2)]
+ [!code-vb[System.FlagsAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags1.vb#2)]  
+  
+ O exemplo a seguir ilustra o uso do `FlagsAttribute` de atributos e mostra o efeito no <xref:System.Enum.ToString%2A> método de usar `FlagsAttribute` em um <xref:System.Enum> declaração.  
+  
+ [!code-cpp[System.FlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags.cpp#1)]
+ [!code-csharp[System.FlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags.cs#1)]
+ [!code-vb[System.FlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

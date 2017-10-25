@@ -1,0 +1,1210 @@
+<Type Name="Binding" FullName="System.Windows.Forms.Binding">
+  <TypeSignature Language="C#" Value="public class Binding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Binding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Binding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ListBindingConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a associação simples entre o valor da propriedade de um objeto e o valor da propriedade de um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Binding> classe para criar e manter uma ligação simples entre a propriedade de um controle e a propriedade de um objeto ou a propriedade do objeto atual em uma lista de objetos.  
+  
+ Como um exemplo do primeiro caso, você pode vincular o <xref:System.Windows.Forms.Control.Text%2A> propriedade de um <xref:System.Windows.Forms.TextBox> o controle para o `FirstName` propriedade de um `Customer` objeto. Como um exemplo de segundo caso, você pode vincular o <xref:System.Windows.Forms.Control.Text%2A> propriedade de um <xref:System.Windows.Forms.TextBox> o controle para o `FirstName` propriedade de um <xref:System.Data.DataTable> que contém os clientes.  
+  
+ O <xref:System.Windows.Forms.Binding> classe também permite que você formate os valores são exibidos por meio de <xref:System.Windows.Forms.Binding.Format> eventos e para recuperar valores formatados por meio do <xref:System.Windows.Forms.Binding.Parse> evento.  
+  
+ Ao construir um <xref:System.Windows.Forms.Binding> instância com <xref:System.Windows.Forms.Binding.%23ctor%2A> construtor, você deve especificar três itens:  
+  
+-   O nome da propriedade para associar ao controle.  
+  
+-   A fonte de dados.  
+  
+-   O caminho de navegação que resolve para uma lista ou a propriedade da fonte de dados. O caminho de navegação também é usado para criar o objeto <xref:System.Windows.Forms.Binding.BindingMemberInfo%2A> propriedade.  
+  
+ Primeiro, você deve especificar o nome da propriedade de controle que você deseja associar os dados. Por exemplo, para exibir dados em um <xref:System.Windows.Forms.TextBox> controlar, especifique o <xref:System.Windows.Forms.TextBoxBase.Text%2A> propriedade.  
+  
+ Em seguida, você pode especificar uma instância de qualquer uma das classes na tabela a seguir como a fonte de dados.  
+  
+  Em terceiro lugar, você deve especificar o caminho de navegação, que pode ser uma cadeia de caracteres vazia (""), um nome de propriedade único ou uma hierarquia delimitados de nomes. Se você definir o caminho de navegação para uma cadeia de caracteres vazia, o <xref:System.Object.ToString%2A> método será chamado no objeto de fonte de dados subjacente.  
+  
+ Se a fonte de dados for um <xref:System.Data.DataTable>, que pode conter vários <xref:System.Data.DataColumn> objetos, o caminho de navegação deve ser usado para resolver para uma coluna específica.  
+  
+> [!NOTE]
+>  Quando a fonte de dados é um <xref:System.Data.DataSet>, <xref:System.Data.DataViewManager>, ou <xref:System.Data.DataTable>, na verdade você está associando a um <xref:System.Data.DataView>. Consequentemente, as linhas associadas são realmente <xref:System.Data.DataRowView> objetos.  
+  
+ Um caminho de navegação delimitados é necessário quando a fonte de dados é definida como um objeto que contém várias <xref:System.Data.DataTable> objetos (como uma <xref:System.Data.DataSet> ou <xref:System.Data.DataViewManager>). Você também pode usar um caminho de navegação delimitados quando você vincula a um objeto cujas propriedades retornam referências para outros objetos (como uma classe com propriedades que retornam outros objetos de classe). Por exemplo, os seguintes caminhos de navegação todas as descrevem os campos de dados válidos:  
+  
+-   "Size.Height"  
+  
+-   "Suppliers.CompanyName"  
+  
+-   "Regions.regionsToCustomers.CustomerFirstName"  
+  
+-   "Regions.regionsToCustomers.customersToOrders.ordersToDetails.Quantity"  
+  
+ Cada membro do caminho pode retornar uma propriedade que seja resolvido para um único valor (como um inteiro) ou uma lista de valores (como uma matriz de cadeias de caracteres). Embora cada membro no caminho pode ser uma lista ou propriedade, o membro final deve ser resolvido para uma propriedade. Cada membro amplia o membro anterior: "Size.Height" resolve para o <xref:System.Drawing.Size.Height%2A> propriedade atual <xref:System.Drawing.Size>; "Regions.regionsToCustomers.CustomerFirstName" resolve para o nome do cliente atual, em que o cliente é um dos clientes para a região atual.  
+  
+ Um <xref:System.Data.DataRelation> retorna uma lista de valores vinculando um <xref:System.Data.DataTable> para a segunda <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>. Se o <xref:System.Data.DataSet> contém <xref:System.Data.DataRelation> objetos, você pode especificar o membro de dados como um <xref:System.Data.DataTable.TableName%2A> seguido por um <xref:System.Data.DataRelation.RelationName%2A>e, em seguida, um <xref:System.Data.DataColumn.ColumnName%2A>. Por exemplo, se o <xref:System.Data.DataTable> chamado "Fornecedores" contém um <xref:System.Data.DataRelation> denominado "suppliers2products", o membro de dados pode ser "Suppliers.suppliers2products.ProductName".  
+  
+ A fonte de dados pode consistir em um conjunto de classes relacionadas. Por exemplo, imagine um conjunto de classes que catálogos solar sistemas. A classe denominada `System` contém uma propriedade chamada `Stars` que retorna uma coleção de `Star` objetos. Cada `Star` objeto tem `Name` e `Mass` propriedades, bem como `Planets` propriedade que retorna uma coleção de `Planet` objetos. Nesse sistema, cada planeta também tem `Mass` e `Name` propriedades. Cada `Planet` ainda mais o objeto tem um `Moons` propriedade que retorna uma coleção de `Moon` objetos, cada um deles também tem `Name` e `Mass` propriedades. Se você especificar um `System` do objeto da fonte de dados, você pode especificar qualquer um dos seguintes como o membro de dados:  
+  
+-   "Stars.Name"  
+  
+-   "Stars.Mass"  
+  
+-   "Stars.Planets.Name"  
+  
+-   "Stars.Planets.Mass"  
+  
+-   "Stars.Planets.Moons.Name"  
+  
+-   "Stars.Planets.Moons.Mass"  
+  
+ Controles que podem ser associada a um simples recurso de uma coleção de <xref:System.Windows.Forms.Binding> objetos em um <xref:System.Windows.Forms.ControlBindingsCollection>, que pode ser acessado por meio do controle <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade. Adicionar um <xref:System.Windows.Forms.Binding> à coleção ao chamar o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método, assim, associando uma propriedade do controle a uma propriedade de um objeto (ou a uma propriedade do objeto atual em uma lista).  
+  
+ Você pode simples vincular a qualquer objeto que deriva de <xref:System.Windows.Forms.Control?displayProperty=nameWithType> classe, por exemplo, os seguintes controles de Windows:  
+  
+-   <xref:System.Windows.Forms.Button>  
+  
+-   <xref:System.Windows.Forms.CheckBox>  
+  
+-   <xref:System.Windows.Forms.CheckedListBox>  
+  
+-   <xref:System.Windows.Forms.ComboBox>  
+  
+-   <xref:System.Windows.Forms.DateTimePicker>  
+  
+-   <xref:System.Windows.Forms.DomainUpDown>  
+  
+-   <xref:System.Windows.Forms.GroupBox>  
+  
+-   <xref:System.Windows.Forms.HScrollBar>  
+  
+-   <xref:System.Windows.Forms.Label>  
+  
+-   <xref:System.Windows.Forms.LinkLabel>  
+  
+-   <xref:System.Windows.Forms.ListBox>  
+  
+-   <xref:System.Windows.Forms.ListView>  
+  
+-   <xref:System.Windows.Forms.MonthCalendar>  
+  
+-   <xref:System.Windows.Forms.NumericUpDown>  
+  
+-   <xref:System.Windows.Forms.PictureBox>  
+  
+-   <xref:System.Windows.Forms.ProgressBar>  
+  
+-   <xref:System.Windows.Forms.RadioButton>  
+  
+-   <xref:System.Windows.Forms.RichTextBox>  
+  
+-   <xref:System.Windows.Forms.ScrollBar>  
+  
+-   <xref:System.Windows.Forms.StatusBar>  
+  
+-   <xref:System.Windows.Forms.TextBox>  
+  
+-   <xref:System.Windows.Forms.TreeView>  
+  
+-   <xref:System.Windows.Forms.VScrollBar>  
+  
+> [!NOTE]
+>  Somente o <xref:System.Windows.Forms.ListControl.SelectedValue%2A> propriedade o <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.CheckedListBox>, e <xref:System.Windows.Forms.ListBox> controle está vinculado simple.  
+  
+ O <xref:System.Windows.Forms.BindingManagerBase> classe é uma classe abstrata que gerencia todos os <xref:System.Windows.Forms.Binding> objetos para uma determinada fonte de dados e um membro de dados. Classes que derivam de <xref:System.Windows.Forms.BindingManagerBase> são o <xref:System.Windows.Forms.CurrencyManager> e <xref:System.Windows.Forms.PropertyManager> classes. Como um <xref:System.Windows.Forms.Binding> gerenciado depende se o <xref:System.Windows.Forms.Binding> é uma associação de lista ou de uma associação de propriedade. Por exemplo, se for uma associação de lista, você pode usar o <xref:System.Windows.Forms.BindingManagerBase> para especificar um <xref:System.Windows.Forms.BindingManagerBase.Position%2A> na lista; o <xref:System.Windows.Forms.BindingManagerBase.Position%2A>, portanto, determina qual item (fora de todos os itens na lista), na verdade, está associado a um controle. Para retornar as <xref:System.Windows.Forms.BindingManagerBase>, use o <xref:System.Windows.Forms.BindingContext>.  
+  
+ Para adicionar uma nova linha a um conjunto de controles associados à mesma <xref:System.Windows.Forms.Binding.DataSource%2A>, use o <xref:System.Windows.Forms.BindingManagerBase.AddNew%2A> método o <xref:System.Windows.Forms.BindingManagerBase> classe. Use o <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade o <xref:System.Windows.Forms.BindingContext> classe para retornar as <xref:System.Windows.Forms.CurrencyManager>. Para cancelar a adição de uma nova linha, use o <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um formulário do Windows com vários controles que demonstram a associação de dados simples. O exemplo cria um <xref:System.Data.DataSet> com duas tabelas nomeadas `Customers` e `Orders`e um <xref:System.Data.DataRelation> chamado `custToOrders`. Quatro controles (um <xref:System.Windows.Forms.DateTimePicker> e três <xref:System.Windows.Forms.TextBox> controles) dados associados a colunas nas tabelas. Para cada controle, o exemplo cria e adiciona um <xref:System.Windows.Forms.Binding> para o controle por meio de <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade. O exemplo retorna um <xref:System.Windows.Forms.BindingManagerBase> para cada tabela por meio do formulário <xref:System.Windows.Forms.BindingContext>. Quatro <xref:System.Windows.Forms.Button> controla o incremento ou decremento o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> propriedade o <xref:System.Windows.Forms.BindingManagerBase> objetos.  
+  
+ [!code-cpp[Classic Binding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Binding" /> que gera uma associação simples entre a propriedade do controle indicada e o membro de dados da fonte de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma instância de qualquer uma das seguintes classes para a fonte de dados:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Qualquer classe que implementa o <xref:System.Collections.IList> interface  
+  
+-   Qualquer classe  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para obter mais informações sobre como criar o `dataMember` cadeia de caracteres.  
+  
+ Quando você cria uma associação para a propriedade do controle, o novo <xref:System.Windows.Forms.Binding> inspeciona os eventos expostos pelo controle de limite e anexa a dois eventos específicos:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Um evento chamado *PropertyName* `Changed` (por exemplo, <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ Se você tentar associar a uma propriedade que não existe, uma <xref:System.ArgumentException> será lançada quando o <xref:System.Windows.Forms.Binding> é adicionado ao controle de <xref:System.Windows.Forms.Control.DataBindings%2A?displayProperty=nameWithType> coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo associa um <xref:System.Windows.Forms.TextBox> controle a uma coluna de tabela em uma <xref:System.Data.DataSet> chamado `myDataSet`. O exemplo requer que você tenha declarado `myDataSet` na seção de declarações do módulo.  
+  
+ [!code-cpp[Classic Binding.Binding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Binding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Binding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Binding Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Binding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Binding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">
+          <paramref name="propertyName" /> não é uma propriedade válida de um controle nem uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Binding" /> que associa a propriedade de controle indicada ao membro de dados especificado da fonte de dados e, opcionalmente, permite que a formatação seja aplicada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.  
+  
+ - ou -  
+  
+ A propriedade especificada é uma propriedade somente leitura.</exception>
+        <exception cref="T:System.Exception">A formatação está desabilitada e <paramref name="propertyName" /> não é uma propriedade válida de um controle nem uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Binding" /> que associa a propriedade do controle indicada ao membro de dados da fonte de dados especificado. Opcionalmente, permite formatar e propaga valores para a fonte de dados com base na configuração de atualização especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma instância de qualquer uma das seguintes classes para a fonte de dados:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Qualquer classe que implementa o <xref:System.Collections.IList> interface  
+  
+-   Qualquer classe  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para obter mais informações sobre como criar o `dataMember` cadeia de caracteres.  
+  
+ Quando você cria uma associação para a propriedade do controle, o novo <xref:System.Windows.Forms.Binding> inspeciona os eventos expostos pelo controle de limite e anexa a dois eventos específicos:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>.  
+  
+-   Um evento chamado *PropertyName* `Changed` (por exemplo, <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.  
+  
+ - ou -  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificados estão associados a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <param name="nullValue">O <see cref="T:System.Object" /> a ser aplicado à propriedade de controle associado se o valor da fonte de dados for <see cref="T:System.DBNull" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Binding" /> classe que associa a propriedade de controle indicado para o membro de dados especificado da fonte de dados especificado. Opcionalmente, permite a formatação, propaga valores para a fonte de dados com base na configuração de atualização especificado e define a propriedade especificado quando um <see cref="T:System.DBNull" /> é retornado da fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma instância de qualquer uma das seguintes classes para a fonte de dados:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Qualquer classe que implementa o <xref:System.Collections.IList> interface  
+  
+-   Qualquer classe  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para obter mais informações sobre como criar o `dataMember` cadeia de caracteres.  
+  
+ Quando você cria uma associação para a propriedade do controle, o novo <xref:System.Windows.Forms.Binding> inspeciona os eventos expostos pelo controle de limite e anexa a dois eventos específicos:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Um evento chamado *PropertyName* `Changed` (por exemplo, <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.  
+  
+ - ou -  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificados estão associados a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+        <Parameter Name="formatString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <param name="nullValue">O <see cref="T:System.Object" /> a ser aplicado à propriedade de controle associado se o valor da fonte de dados for <see cref="T:System.DBNull" />.</param>
+        <param name="formatString">Um ou mais caracteres especificadores de formato que indicam como um valor deve ser exibido.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Binding" /> que associa a propriedade do controle indicada ao membro de dados da fonte de dados especificado. Opcionalmente, permite que a formatação com a cadeia de caracteres de formato especificado; propaga valores para a fonte de dados com base na configuração de atualização especificado; e define a propriedade para o valor quando um <see cref="T:System.DBNull" /> é retornado da fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma instância de qualquer uma das seguintes classes para a fonte de dados:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Qualquer classe que implementa o <xref:System.Collections.IList> interface  
+  
+-   Qualquer classe  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para obter mais informações sobre como criar o `dataMember` cadeia de caracteres.  
+  
+ Quando você cria uma associação para a propriedade do controle, o novo <xref:System.Windows.Forms.Binding> inspeciona os eventos expostos pelo controle de limite e anexa a dois eventos específicos:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Um evento chamado *PropertyName* `Changed` (por exemplo, <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.  
+  
+ - ou -  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificados estão associados a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString, IFormatProvider formatInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString, class System.IFormatProvider formatInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object,System.String,System.IFormatProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+        <Parameter Name="formatString" Type="System.String" />
+        <Parameter Name="formatInfo" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <param name="nullValue">O <see cref="T:System.Object" /> a ser aplicado à propriedade de controle associado se o valor da fonte de dados for <see cref="T:System.DBNull" />.</param>
+        <param name="formatString">Um ou mais caracteres especificadores de formato que indicam como um valor deve ser exibido.</param>
+        <param name="formatInfo">Uma implementação de <see cref="T:System.IFormatProvider" /> para substituir o comportamento de formatação padrão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Binding" /> com a propriedade do controle especificada para o membro de dados especificado da fonte de dados especificada. Opcionalmente, permite a formatação com a cadeia de formato especificada; propaga valores para a fonte de dados de acordo com a configuração de atualização especificada; permite a formatação com a cadeia de formato especificada; define a propriedade com o valor especificado quando um <see cref="T:System.DBNull" /> é retornado da fonte de dados e define o provedor de formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma instância de qualquer uma das seguintes classes para a fonte de dados:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Qualquer classe que implementa o <xref:System.Collections.IList> interface  
+  
+-   Qualquer classe  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para obter mais informações sobre como criar o `dataMember` cadeia de caracteres.  
+  
+ Quando você cria uma associação para a propriedade do controle, o novo <xref:System.Windows.Forms.Binding> inspeciona os eventos expostos pelo controle de limite e anexa a dois eventos específicos:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Um evento chamado *PropertyName* `Changed` (por exemplo, <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.  
+  
+ - ou -  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificados estão associados a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindableComponent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IBindableComponent BindableComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IBindableComponent BindableComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.BindableComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IBindableComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de <see cref="T:System.Windows.Forms.Binding" /> está associado.</summary>
+        <value>O <see cref="T:System.Windows.Forms.IBindableComponent" /> o <see cref="T:System.Windows.Forms.Binding" /> está associado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingComplete">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.BindingCompleteEventHandler BindingComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.BindingCompleteEventHandler BindingComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Binding.BindingComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingCompleteEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Binding.FormattingEnabled" /> está definida como <see langword="true" /> e uma operação de associação é concluída, como quando os dados são retirados do controle para a fonte de dados ou vice-versa</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado em qualquer uma das seguintes condições quando <xref:System.Windows.Forms.Binding.FormattingEnabled%2A> é `true`:  
+  
+-   Dados da fonte de dados são enviados para a propriedade de controle.  
+  
+-   Dados da propriedade de controle são passados para a fonte de dados.  
+  
+ Esse evento é gerado após a conclusão dessas operações, independentemente do status de conclusão. Por exemplo, se uma operação de associação vincula um valor nulo em uma <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade, uma exceção será lançada, mas o <xref:System.Windows.Forms.Binding.BindingComplete> evento ainda ocorre. O manipulador desse evento pode tomar a ação apropriada, com base no êxito, erros ou exceções no processo de associação, examinando o <xref:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState%2A> propriedade o <xref:System.Windows.Forms.BindingCompleteEventArgs> parâmetro.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Windows.Forms.Binding.BindingComplete> evento.  
+  
+ [!code-cpp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingManagerBase">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingManagerBase BindingManagerBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingManagerBase BindingManagerBase" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.BindingManagerBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingManagerBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.BindingManagerBase" /> para este <see cref="T:System.Windows.Forms.Binding" />.</summary>
+        <value>O <see cref="T:System.Windows.Forms.BindingManagerBase" /> que gerencia o <see cref="T:System.Windows.Forms.Binding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.BindingManagerBase> para iterar por meio de uma lista de associação de dados, aumentando ou diminuindo o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> propriedade. O <xref:System.Windows.Forms.BindingManagerBase> classe é abstrata. O <xref:System.Windows.Forms.CurrencyManager> herda de classe, que gerencia as listas de associação de dados, a <xref:System.Windows.Forms.BindingManagerBase> classe.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.BindingManagerBase> de cada <xref:System.Windows.Forms.Binding> no formulário e imprime o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> propriedade para cada <xref:System.Windows.Forms.BindingManagerBase>.  
+  
+ [!code-cpp[Classic Binding.BindingManagerBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.BindingManagerBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.BindingManagerBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.BindingManagerBase Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.BindingManagerBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.BindingManagerBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingMemberInfo">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingMemberInfo BindingMemberInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BindingMemberInfo BindingMemberInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.BindingMemberInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingMemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que contém informações sobre esta associação com base no <paramref name="dataMember" /> parâmetro o <see cref="Overload:System.Windows.Forms.Binding.#ctor" /> construtor.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.BindingMemberInfo" /> que contém informações sobre essa <see cref="T:System.Windows.Forms.Binding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingMemberInfo> é criada a partir de `dataMember` cadeia de caracteres passada para o <xref:System.Windows.Forms.Binding.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.BindingMemberInfo> de cada <xref:System.Windows.Forms.Binding> em um formulário e imprime o <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A>, e <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> valores de propriedade para que <xref:System.Windows.Forms.Binding>.  
+  
+ [!code-cpp[Classic Binding.BindingMemberInfo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.BindingMemberInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.BindingMemberInfo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.BindingMemberInfo Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.BindingMemberInfo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.BindingMemberInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle ao qual pertence a associação.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Control" /> que pertence a associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.BindingManagerBase> para uma fonte de dados específica e imprime informações sobre cada <xref:System.Windows.Forms.Binding.Control%2A> propriedade que está associada à fonte de dados. O exemplo usa o <xref:System.Windows.Forms.BindingManagerBase.Bindings%2A> propriedade o <xref:System.Windows.Forms.BindingManagerBase> para obter todos os controles.  
+  
+ [!code-cpp[Classic Binding.Control Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Control Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Control Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Control Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Control Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Control Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ControlUpdateMode ControlUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ControlUpdateMode ControlUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.ControlUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define quando as alterações na fonte de dados são propagadas para a propriedade do controle associado.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ControlUpdateMode" />. O padrão é <see cref="F:System.Windows.Forms.ControlUpdateMode.OnPropertyChanged" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fonte de dados desta associação.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa a fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fontes de dados possíveis incluem:  
+  
+-   Um <xref:System.Data.DataSet>  
+  
+-   Um <xref:System.Data.DataTable>  
+  
+-   Um <xref:System.Data.DataView>  
+  
+-   Um <xref:System.Data.DataViewManager>  
+  
+-   Qualquer objeto que implementa o <xref:System.Collections.IList> interface  
+  
+-   Qualquer objeto  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.Binding.DataSource%2A> propriedade para retornar um <xref:System.Data.DataSet>.  
+  
+ [!code-cpp[Classic Binding.DataSource Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.DataSource Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.DataSource Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.DataSource Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.DataSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.DataSource Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceNullValue">
+      <MemberSignature Language="C#" Value="public object DataSourceNullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSourceNullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.DataSourceNullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor a ser armazenado na fonte de dados se o valor do controle é <see langword="null" /> ou vazio.</summary>
+        <value>O <see cref="T:System.Object" /> a ser armazenado na fonte de dados quando a propriedade do controle está vazia ou <see langword="null" />. O padrão é <see cref="T:System.DBNull" /> para tipos de valor e <see langword="null" /> para tipos de valor não.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.Binding.NullValue%2A> propriedade para especificar o valor exibido em um controle associado quando a fonte de dados contém <xref:System.DBNull>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataSourceUpdateMode DataSourceUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataSourceUpdateMode DataSourceUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.DataSourceUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica quando as alterações da propriedade do controle associado são propagadas para a fonte de dados.</summary>
+        <value>Um valor que indica quando as alterações são propagadas. O padrão é <see cref="F:System.Windows.Forms.DataSourceUpdateMode.OnValidation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que, mesmo se essa propriedade é definida como <xref:System.Windows.Forms.DataSourceUpdateMode.Never>, a associação será atualizado pelo menos uma vez, quando é estabelecida pela primeira vez.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ConvertEventHandler Format;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ConvertEventHandler Format" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Binding.Format" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ConvertEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade de um controle é associada a um valor de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Binding.Format> evento é gerado quando os dados forem retirados da fonte de dados no controle. Você pode manipular o <xref:System.Windows.Forms.Binding.Format> formatado de evento para converter dados não formatados da fonte de dados em dados para exibição. Quando os dados são retirados do controle na fonte de dados, o <xref:System.Windows.Forms.Binding.Parse> é gerado para unformat o valor exibido, em seguida, o <xref:System.Windows.Forms.Binding.Format> evento ocorre para reformatar os dados para exibição. Isso garante que o controle associado exibe dados formatados corretamente, independentemente se o usuário insere dados formatados ou no controle.  
+  
+ O <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos permitem que você criar formatos personalizados para exibir dados. Por exemplo, se os dados em uma tabela são do tipo <xref:System.Decimal>, você pode exibir os dados no formato de moeda local, definindo o <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> propriedade o <xref:System.Windows.Forms.ConvertEventArgs> para o valor formatado no <xref:System.Windows.Forms.Binding.Format> evento. Você deve unformat Consequentemente o valor exibido no <xref:System.Windows.Forms.Binding.Parse> evento.  
+  
+ O <xref:System.Windows.Forms.Binding.Format> evento ocorre sempre que o <xref:System.Windows.Forms.BindingManagerBase.Current%2A> valor o <xref:System.Windows.Forms.BindingManagerBase> alterações, que inclui:  
+  
+-   Na primeira vez em que a propriedade está associada.  
+  
+-   Sempre que o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> alterações.  
+  
+-   Sempre que a lista de associação de dados é classificada ou filtrada, que é realizado quando um <xref:System.Data.DataView> fornece a lista.  
+  
+ O <xref:System.Windows.Forms.Binding.Format> evento também ocorre após o <xref:System.Windows.Forms.Binding.Parse> evento. Por exemplo, quando um controle perde o foco, seu conteúdo é analisado. Depois disso, como novos dados é enviada por push para o controle, o <xref:System.Windows.Forms.Binding.Format> evento ocorrer, permitindo que o novo conteúdo a ser formatado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.Binding>, adiciona um <xref:System.Windows.Forms.ConvertEventHandler> delegado para ambos os <xref:System.Windows.Forms.Binding.Parse> e <xref:System.Windows.Forms.Binding.Format> eventos e adiciona o <xref:System.Windows.Forms.Binding> para o <xref:System.Windows.Forms.BindingsCollection> de um <xref:System.Windows.Forms.TextBox> controlar por meio do <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade. O `DecimalToCurrencyString` delegado do evento, adicionado ao <xref:System.Windows.Forms.Binding.Format> evento, formata o valor limite (um <xref:System.Decimal> tipo) como moeda usando o <xref:System.Decimal.ToString%2A> método. O `CurrencyStringToDecimal` delegado do evento, adicionado ao <xref:System.Windows.Forms.Binding.Parse> evento, converte o valor exibido pelo controle de volta para o <xref:System.Decimal> tipo.  
+  
+ Este exemplo supõe que a presença de um <xref:System.Data.DataSet> chamado `ds`.  
+  
+ [!code-cpp[Classic Binding.Format Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Format Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Format Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Format Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Format Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Format Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatInfo">
+      <MemberSignature Language="C#" Value="public IFormatProvider FormatInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IFormatProvider FormatInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.FormatInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IFormatProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.IFormatProvider" /> que fornece o comportamento da formatação personalizada.</summary>
+        <value>A implementação <see cref="T:System.IFormatProvider" /> que fornece o comportamento da formatação personalizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade substituirá a formatação de comportamento, que usa o padrão de <xref:System.Windows.Forms.Application.CurrentCulture%2A?displayProperty=nameWithType> configuração de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatString">
+      <MemberSignature Language="C#" Value="public string FormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.FormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os caracteres especificadores de formato que indicam como um valor deve ser exibido.</summary>
+        <value>A cadeia de caracteres especificadores de formato que indicam como um valor deve ser exibido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres de formato usada deve seguir as especificações de formato padrão do .NET Framework. Para obter mais informações, consulte [tipos de formatação do .NET Framework](~/docs/standard/base-types/formatting-types.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattingEnabled">
+      <MemberSignature Language="C#" Value="public bool FormattingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FormattingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.FormattingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a formatação e conversão de tipo é aplicada a dados de propriedade de controle.</summary>
+        <value>
+          <see langword="true" /> se a formatação e conversão do tipo de dados da propriedade de controle estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como `true` também permite que o comportamento de tratamento de erros e faz com que o <xref:System.Windows.Forms.Binding.BindingComplete> evento ser gerado. O manipulador desse evento pode tomar a ação apropriada, com base no êxito, erros ou exceções no processo de associação, examinando o <xref:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState%2A> propriedade o <xref:System.Windows.Forms.BindingCompleteEventArgs> parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBinding">
+      <MemberSignature Language="C#" Value="public bool IsBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.IsBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação está ativa.</summary>
+        <value>
+          <see langword="true" />Se a associação está ativa; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma associação está ativa quando ele atende às seguintes condições:  
+  
+-   Todas as suas propriedades são definidas.  
+  
+-   O usuário não chamou <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> ou <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> no <xref:System.Windows.Forms.BindingManagerBase> que o <xref:System.Windows.Forms.Binding> pertence.  
+  
+-   O controle ao qual o <xref:System.Windows.Forms.Binding> pertence foi criado.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo imprime o <xref:System.Windows.Forms.Binding.PropertyName%2A> e <xref:System.Windows.Forms.Binding.IsBinding%2A> valor para cada <xref:System.Windows.Forms.Binding> em um formulário.  
+  
+ [!code-cpp[Classic Binding.IsBinding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.IsBinding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.IsBinding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.IsBinding Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.IsBinding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.IsBinding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullValue">
+      <MemberSignature Language="C#" Value="public object NullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.NullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Object" /> a ser definido como a propriedade de controle quando a fonte de dados contém um valor <see cref="T:System.DBNull" />.</summary>
+        <value>O <see cref="T:System.Object" /> a ser definido como a propriedade de controle quando a fonte de dados contém um valor <see cref="T:System.DBNull" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte de dados deve conter <xref:System.DBNull> para o <xref:System.Windows.Forms.Binding.NullValue%2A> propriedade a ser aplicada corretamente. Se o tipo de fonte de dados é um tipo como uma cadeia de caracteres ou inteiro o valor de <xref:System.Windows.Forms.Binding.NullValue%2A> propriedade será ignorada. Além disso, o <xref:System.Windows.Forms.Binding.NullValue%2A> propriedade será ignorada se for definido como `null`.  
+  
+ Um valor nulo será adicionado à fonte de dados quando a propriedade do controle é definida como o objeto de <xref:System.Windows.Forms.Binding.NullValue%2A>. Se <xref:System.Windows.Forms.Binding.NullValue%2A> for definido como um valor de cadeia de caracteres, as comparações diferenciam maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnBindingComplete (System.Windows.Forms.BindingCompleteEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBindingComplete(class System.Windows.Forms.BindingCompleteEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.BindingCompleteEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Binding.BindingComplete" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Binding.OnBindingComplete%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFormat">
+      <MemberSignature Language="C#" Value="protected virtual void OnFormat (System.Windows.Forms.ConvertEventArgs cevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFormat(class System.Windows.Forms.ConvertEventArgs cevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.OnFormat(System.Windows.Forms.ConvertEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cevent" Type="System.Windows.Forms.ConvertEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="cevent">Um <see cref="T:System.Windows.Forms.ConvertEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Binding.Format" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Binding.OnFormat%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Binding.OnFormat(System.Windows.Forms.ConvertEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Binding.OnFormat(System.Windows.Forms.ConvertEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParse">
+      <MemberSignature Language="C#" Value="protected virtual void OnParse (System.Windows.Forms.ConvertEventArgs cevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnParse(class System.Windows.Forms.ConvertEventArgs cevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.OnParse(System.Windows.Forms.ConvertEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cevent" Type="System.Windows.Forms.ConvertEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="cevent">Um <see cref="T:System.Windows.Forms.ConvertEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Binding.Parse" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Binding.OnParse%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Binding.OnParse(System.Windows.Forms.ConvertEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Binding.OnParse(System.Windows.Forms.ConvertEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ConvertEventHandler Parse;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ConvertEventHandler Parse" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Binding.Parse" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ConvertEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor de um controle de limite de dados é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos permitem que você criar formatos personalizados para exibir dados. Por exemplo, se os dados em uma tabela são do tipo <xref:System.Decimal>, você pode exibir os dados no formato de moeda local, definindo o <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> propriedade o <xref:System.Windows.Forms.ConvertEventArgs> para o valor formatado no <xref:System.Windows.Forms.Binding.Format> evento. Você deve unformat Consequentemente o valor exibido no <xref:System.Windows.Forms.Binding.Parse> evento.  
+  
+ O <xref:System.Windows.Forms.Binding.Parse> evento ocorrer sob as seguintes condições:  
+  
+-   Após o <xref:System.Windows.Forms.Control.Validated> evento o <xref:System.Windows.Forms.Control> ocorre.  
+  
+-   Quando o <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> método o <xref:System.Windows.Forms.BindingManagerBase> é chamado.  
+  
+-   Quando o <xref:System.Windows.Forms.BindingManagerBase.Current%2A> do <xref:System.Windows.Forms.BindingManagerBase> alterações (em outras palavras, quando o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> alterações).  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.Binding>, adiciona um <xref:System.Windows.Forms.ConvertEventHandler> delegado para ambos os <xref:System.Windows.Forms.Binding.Parse> e <xref:System.Windows.Forms.Binding.Format> eventos e adiciona o <xref:System.Windows.Forms.Binding> para o <xref:System.Windows.Forms.BindingsCollection> de um <xref:System.Windows.Forms.TextBox> controlar por meio do <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade. O `DecimalToCurrencyString` delegado do evento, adicionado ao <xref:System.Windows.Forms.Binding.Format> evento, formata o valor limite (um <xref:System.Decimal> tipo) como moeda usando o <xref:System.Decimal.ToString%2A> método. O `CurrencyStringToDecimal` delegado do evento, adicionado ao <xref:System.Windows.Forms.Binding.Parse> evento, converte o valor exibido pelo controle de volta para o <xref:System.Decimal> tipo.  
+  
+ [!code-cpp[Classic Binding.Parse Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Parse Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Parse Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Parse Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Parse Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Parse Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade de associação de dados do controle.</summary>
+        <value>O nome de uma propriedade de controle para associar ao.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Binding.PropertyName%2A> para especificar a propriedade de controle que você deseja associar a uma lista em uma fonte de dados. Mais comumente, associar uma propriedade de exibição, como o <xref:System.Windows.Forms.Control.Text%2A> propriedade de um <xref:System.Windows.Forms.TextBox> controle. No entanto, porque você pode vincular qualquer propriedade de um controle, você pode criar programaticamente controles em tempo de execução usando os dados de um banco de dados.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo imprime o <xref:System.Windows.Forms.Binding.PropertyName%2A> valor de cada <xref:System.Windows.Forms.Binding> para cada controle em um formulário.  
+  
+ [!code-cpp[Classic Binding.PropertyName Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.PropertyName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.PropertyName Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.PropertyName Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.PropertyName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.PropertyName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadValue">
+      <MemberSignature Language="C#" Value="public void ReadValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.ReadValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define a propriedade de controle com o valor lido da fonte de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteValue">
+      <MemberSignature Language="C#" Value="public void WriteValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.WriteValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o valor atual da propriedade de controle e o grava na fonte de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

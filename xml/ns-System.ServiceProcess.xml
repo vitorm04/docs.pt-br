@@ -1,0 +1,15 @@
+<Namespace Name="System.ServiceProcess">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceProcess" /> namespace fornece classes que permitem que você implemente, instalar e controlar aplicativos de serviço do Windows. Os serviços são executáveis de longa execução que são executados sem uma interface do usuário. Implementar um serviço envolve herdando de <see cref="T:System.ServiceProcess.ServiceBase" /> classe e definindo um comportamento específico para processar quando iniciar, parar, pausar e continuar comandos são passados, bem como comportamento personalizado e ações a serem tomadas quando o sistema é desligado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os serviços são instalados usando um utilitário de instalação, como o InstallUtil.exe. O <xref:System.ServiceProcess> namespace fornece classes de instalação que gravar informações de serviço no registro. O <xref:System.ServiceProcess.ServiceProcessInstaller> classe fornece uma classe abrangente que instala os componentes comuns a todos os serviços em uma instalação. Para cada serviço, você cria uma instância do <xref:System.ServiceProcess.ServiceInstaller> classe para instalar a funcionalidade específica do serviço.  
+  
+ O <xref:System.ServiceProcess.ServiceController> classe permite que você se conectar a um serviço existente e manipulá-los ou obter informações sobre ele. Esta classe é normalmente usado em uma capacidade administrativa e permite iniciar, parar, pausar, continuar ou executar comandos personalizados em um serviço. Onde o <xref:System.ServiceProcess.ServiceBase> classe define o processamento de um serviço executa quando ocorre um comando, o <xref:System.ServiceProcess.ServiceController> é o agente que permite que você chame os comandos no serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.CodeAnalysis">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics.CodeAnalysis" /> namespace contém classes para interação com as ferramentas de análise de código. Essas ferramentas são usadas para analisar o código para conformidade com as convenções, como regras de nomenclatura ou segurança de codificação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

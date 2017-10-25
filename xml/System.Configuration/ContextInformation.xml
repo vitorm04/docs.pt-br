@@ -1,0 +1,146 @@
+<Type Name="ContextInformation" FullName="System.Configuration.ContextInformation">
+  <TypeSignature Language="C#" Value="public sealed class ContextInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContextInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ContextInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula as informações de contexto que estão associadas com um <see cref="T:System.Configuration.ConfigurationElement" /> objeto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ContextInformation> objeto fornece detalhes relacionados a um elemento da configuração do ambiente. Por exemplo, você pode usar o <xref:System.Configuration.ContextInformation.IsMachineLevel%2A> propriedade para determinar se um <xref:System.Configuration.ConfigurationElement> foi definida em Machine. config, ou você pode determinar qual hierarquia um <xref:System.Configuration.ConfigurationElement> pertence a usando o <xref:System.Configuration.ContextInformation.HostingContext%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ContextInformation> tipo.  
+  
+ [!code-csharp[System.Configuration.ContextInformation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ContextInformation/CS/ContextInformation.cs#1)]
+ [!code-vb[System.Configuration.ContextInformation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ContextInformation/VB/ContextInformation.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSection">
+      <MemberSignature Language="C#" Value="public object GetSection (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetSection(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ContextInformation.GetSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O nome da seção de configuração.</param>
+        <summary>Fornece um objeto que contém informações de seção de configuração com base no nome da seção especificada.</summary>
+        <returns>Um objeto que contém a seção especificada na configuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao especificar uma seção dentro da configuração, observe que o nome da seção de configuração diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingContext">
+      <MemberSignature Language="C#" Value="public object HostingContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object HostingContext" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ContextInformation.HostingContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto do ambiente onde a propriedade de configuração está sendo avaliada.</summary>
+        <value>Um objeto que especifica o ambiente em que a propriedade de configuração está sendo avaliada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis <xref:System.Configuration.ContextInformation.HostingContext%2A> valor é <xref:System.Web.Configuration.WebContext>, <xref:System.Configuration.ExeContext>, ou `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ContextInformation.HostingContext%2A> propriedade.  
+  
+ [!code-csharp[System.Configuration.ContextInformation#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ContextInformation/CS/ContextInformation.cs#3)]
+ [!code-vb[System.Configuration.ContextInformation#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ContextInformation/VB/ContextInformation.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMachineLevel">
+      <MemberSignature Language="C#" Value="public bool IsMachineLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMachineLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ContextInformation.IsMachineLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a propriedade de configuração está sendo avaliada no nível de configuração do computador.</summary>
+        <value>
+          <see langword="true" />Se a propriedade de configuração está sendo avaliada no nível de configuração do computador; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o valor retornado de <xref:System.Configuration.ContextInformation.IsMachineLevel%2A> é `false`, use o <xref:System.Configuration.ContextInformation.HostingContext%2A> propriedade para determinar o nível dentro da hierarquia de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ContextInformation.HostingContext%2A> propriedade.  
+  
+ [!code-csharp[System.Configuration.ContextInformation#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ContextInformation/CS/ContextInformation.cs#2)]
+ [!code-vb[System.Configuration.ContextInformation#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ContextInformation/VB/ContextInformation.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,217 @@
+<Type Name="PluralizationService" FullName="System.Data.Entity.Design.PluralizationServices.PluralizationService">
+  <TypeSignature Language="C#" Value="public abstract class PluralizationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PluralizationService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.PluralizationServices.PluralizationService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para construir as formas singular e plural de palavras.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PluralizationService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.PluralizationServices.PluralizationService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Entity.Design.PluralizationServices.PluralizationService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateService">
+      <MemberSignature Language="C#" Value="public static System.Data.Entity.Design.PluralizationServices.PluralizationService CreateService (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Entity.Design.PluralizationServices.PluralizationService CreateService(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.PluralizationServices.PluralizationService.CreateService(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Entity.Design.PluralizationServices.PluralizationService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">O <see cref="T:System.Globalization.CultureInfo" /> que corresponde às regras de idioma aplicadas às formas singular e plural das palavras.</param>
+        <summary>Cria um <see cref="T:System.Data.Entity.Design.PluralizationServices.PluralizationService" /> que aplica regras de idioma que correspondem ao <see cref="T:System.Globalization.CultureInfo" /> especificado.</summary>
+        <returns>O objeto <see cref="T:System.Data.Entity.Design.PluralizationServices.PluralizationService" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.PluralizationServices.PluralizationService.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.Entity.Design.PluralizationServices.PluralizationService" /> cultura.</summary>
+        <value>Um objeto que especifica qual idioma regras se aplicam a singulars e plurais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPlural">
+      <MemberSignature Language="C#" Value="public abstract bool IsPlural (string word);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPlural(string word) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.PluralizationServices.PluralizationService.IsPlural(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="word" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="word">O valor a ser analisado.</param>
+        <summary>Determina se a palavra especificada é plural.</summary>
+        <returns>
+          <see langword="true" />Se a palavra for plural; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ Tanto o <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService.IsPlural%2A> e <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService.IsSingular%2A> métodos podem retornar `true` para a mesma palavra. Por exemplo, os dois métodos retornará `true` para a palavra "fish".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingular">
+      <MemberSignature Language="C#" Value="public abstract bool IsSingular (string word);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSingular(string word) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.PluralizationServices.PluralizationService.IsSingular(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="word" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="word">O valor a ser analisado.</param>
+        <summary>Determina se a palavra especificada for singular.</summary>
+        <returns>
+          <see langword="true" />Se a palavra for singular; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ Tanto o <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService.IsSingular%2A> e <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService.IsPlural%2A> métodos podem retornar `true` para a mesma palavra. Por exemplo, os dois métodos retornará `true` para a palavra "fish".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pluralize">
+      <MemberSignature Language="C#" Value="public abstract string Pluralize (string word);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Pluralize(string word) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.PluralizationServices.PluralizationService.Pluralize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="word" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="word">A palavra a ser convertida no plural.</param>
+        <summary>Retorna a forma plural da palavra especificada</summary>
+        <returns>A forma plural do parâmetro de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Singularize">
+      <MemberSignature Language="C#" Value="public abstract string Singularize (string word);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Singularize(string word) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.PluralizationServices.PluralizationService.Singularize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="word" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="word">A palavra a ser colocada no singular.</param>
+        <summary>Retorna a forma singular da palavra especificada.</summary>
+        <returns>A forma singular do parâmetro de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Entity.Design.PluralizationServices.PluralizationService> classe se aplica as regras para construir as formas singulares e plural das palavras em inglês. Para estender o serviço para outros idiomas, use o <xref:System.Data.Entity.Design.EntityModelSchemaGenerator.PluralizationService> no <xref:System.Data.Entity.Design.EntityModelSchemaGenerator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

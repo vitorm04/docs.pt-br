@@ -1,0 +1,220 @@
+<Type Name="PageRouteHandler" FullName="System.Web.Routing.PageRouteHandler">
+  <TypeSignature Language="C#" Value="public class PageRouteHandler : System.Web.Routing.IRouteHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageRouteHandler extends System.Object implements class System.Web.Routing.IRouteHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.PageRouteHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Routing.IRouteHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece propriedades e métodos para definir como uma URL é mapeada para um arquivo físico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você passar uma instância de <xref:System.Web.Routing.PageRouteHandler> para o <xref:System.Web.Routing.Route> construtor para mapear a URL de um arquivo físico. O <xref:System.Web.Routing.PageRouteHandler> objeto Especifica o caminho virtual do arquivo físico e determina se as regras de autorização para a URL física é verificada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageRouteHandler (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.PageRouteHandler.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual do arquivo físico para este <see cref="P:System.Web.Routing.RouteData.Route" /> objeto. O arquivo deve estar localizado no aplicativo atual. Portanto, o caminho deve começar com um til (~).</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Routing.PageRouteHandler" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa este construtor o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> está definida como `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="virtualPath" /> parâmetro é <see langword="null" /> ou é uma cadeia de caracteres vazia ou não começa com "~ /".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageRouteHandler (string virtualPath, bool checkPhysicalUrlAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string virtualPath, bool checkPhysicalUrlAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.PageRouteHandler.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="checkPhysicalUrlAccess" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual do arquivo físico deste <see cref="P:System.Web.Routing.RouteData.Route" /> objeto. O arquivo deve estar localizado no aplicativo atual. Portanto, o caminho deve começar com um til (~).</param>
+        <param name="checkPhysicalUrlAccess">Se essa propriedade é definida como <see langword="false" />, serão aplicadas regras de autorização para a URL de solicitação e não a URL da página física. Se essa propriedade é definida como <see langword="true" />, serão aplicadas regras de autorização de URL da solicitação e a URL da página física.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Routing.PageRouteHandler" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> é de propriedade `true`. Portanto, se você quiser que as regras de autorização a ser aplicado para a URL da página física e a URL da rota, você pode usar o <xref:System.Web.Routing.PageRouteHandler.%23ctor%28System.String%29> construtor em vez deste construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="virtualPath" /> parâmetro é <see langword="null" /> ou é uma cadeia de caracteres vazia ou não começa com "~ /".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckPhysicalUrlAccess">
+      <MemberSignature Language="C#" Value="public bool CheckPhysicalUrlAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckPhysicalUrlAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se as regras de autorização são aplicadas à URL do arquivo físico.</summary>
+        <value>
+          <see langword="true" /> se a autorização for verificada para a URL do arquivo físico que está associado à rota; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> propriedade quando você usa o <xref:System.Web.Routing.PageRouteHandler.%23ctor%28System.String%2CSystem.Boolean%29> construtor.  
+  
+ O valor de <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> propriedade determina se o <xref:System.Web.Routing.PageRouteHandler> objeto verificará as permissões de segurança somente para a URL da rota ou para a página física e a URL da rota.  
+  
+ Quando o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> está definida como `true` (que é o valor padrão), um usuário deve ter permissão para acessar a URL da rota e a URL física. Quando o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> está definida como `false`, um usuário precisa apenas a permissão para acessar a URL da rota e permissões para a URL física não são verificadas.  
+  
+ As permissões são definidas no arquivo Web. config, conforme mostrado no exemplo a seguir:  
+  
+```  
+<configuration>  
+  <location path="categoriespage.aspx">  
+    <system.web>  
+      <authorization>  
+        <allow roles="admin"/>  
+        <deny users="*"/>  
+      </authorization>  
+    </system.web>  
+  </location>  
+  <location path="category">  
+    <system.web>  
+      <authorization>  
+        <allow users="*"/>  
+      </authorization>  
+    </system.web>  
+  </location>  
+</configuration>  
+```  
+  
+ Para uma URL de solicitação que contém `Category/food/show` depois do nome de domínio, se o padrão de URL da rota for `Category/{action}/{categoryName}` e a página física é Categoriespage.aspx, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplica-se as permissões definidas no exemplo anterior de uma das seguintes maneiras:  
+  
+-   Se o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> é de propriedade `false`, todos os usuários têm acesso, porque todos os usuários são concedeu acesso para o padrão de URL que começa com `category`.  
+  
+-   Se o <xref:System.Web.Routing.PageRouteHandler.CheckPhysicalUrlAccess%2A> é de propriedade `true`, apenas `admin` usuários tenham acesso. Todos os usuários têm acesso para o padrão de URL que começa com `category`, mas apenas `admin` os usuários têm acesso para a página física Categoriespage.aspx.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpHandler">
+      <MemberSignature Language="C#" Value="public virtual System.Web.IHttpHandler GetHttpHandler (System.Web.Routing.RequestContext requestContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.IHttpHandler GetHttpHandler(class System.Web.Routing.RequestContext requestContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.PageRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestContext" Type="System.Web.Routing.RequestContext" />
+      </Parameters>
+      <Docs>
+        <param name="requestContext">Um objeto que encapsula informações sobre a solicitação.</param>
+        <summary>Retorna o objeto que processa a solicitação.</summary>
+        <returns>O objeto que processa a solicitação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="requestContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSubstitutedVirtualPath">
+      <MemberSignature Language="C#" Value="public string GetSubstitutedVirtualPath (System.Web.Routing.RequestContext requestContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetSubstitutedVirtualPath(class System.Web.Routing.RequestContext requestContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.PageRouteHandler.GetSubstitutedVirtualPath(System.Web.Routing.RequestContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestContext" Type="System.Web.Routing.RequestContext" />
+      </Parameters>
+      <Docs>
+        <param name="requestContext">Um objeto que encapsula informações sobre a solicitação.</param>
+        <summary>Retorna o caminho virtual do arquivo físico para a rota após a aplicação de substituições para os parâmetros de substituição.</summary>
+        <returns>A URL do arquivo físico que foi gerado de uma rota.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Routing.PageRouteHandler.VirtualPath%2A> valor não contém os parâmetros de substituição, o <xref:System.Web.Routing.PageRouteHandler.GetSubstitutedVirtualPath%2A> método retorna o mesmo valor que o <xref:System.Web.Routing.PageRouteHandler.VirtualPath%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="requestContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.PageRouteHandler.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da página da Web que está associado essa rota.</summary>
+        <value>A URL da página da Web, antes que sejam aplicadas as substituições para os parâmetros de substituição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.Routing.PageRouteHandler.VirtualPath%2A> propriedade no <xref:System.Web.Routing.PageRouteHandler.%23ctor%2A?displayProperty=nameWithType> construtor ou o <xref:System.Web.Routing.PageRouteHandler.%23ctor%2A?displayProperty=nameWithType> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

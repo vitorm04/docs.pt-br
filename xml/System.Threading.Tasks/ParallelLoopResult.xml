@@ -1,0 +1,100 @@
+<Type Name="ParallelLoopResult" FullName="System.Threading.Tasks.ParallelLoopResult">
+  <TypeSignature Language="C#" Value="public struct ParallelLoopResult" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ParallelLoopResult extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.ParallelLoopResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece o status de conclusão da execução de um loop <see cref="T:System.Threading.Tasks.Parallel" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Threading.Tasks.ParallelLoopResult.IsCompleted%2A> retornar true, em seguida, o loop é executado até a conclusão, que foram executadas todas as iterações do loop. Se <xref:System.Threading.Tasks.ParallelLoopResult.IsCompleted%2A> retorna false e <xref:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration%2A> retornará um valor nulo, uma chamada para <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> foi usada para encerrar o loop prematuramente. Se <xref:System.Threading.Tasks.ParallelLoopResult.IsCompleted%2A> retorna false e <xref:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration%2A> retorna um valor inteiro não nulo, <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> foi usada para encerrar o loop prematuramente.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros públicos de <see cref="T:System.Threading.Tasks.ParallelLoopResult" /> são thread-safe e pode ser chamado de vários threads simultaneamente.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopResult.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se o loop foi executado até a conclusão, por exemplo, todas as iterações do loop foram executadas e o loop não recebeu uma solicitação para ser encerrado prematuramente.</summary>
+        <value>true se o loop foi executado até a conclusão; caso contrário, false;</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowestBreakIteration">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; LowestBreakIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; LowestBreakIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de iteração menor do que <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> foi chamado.</summary>
+        <value>Retorna um inteiro que representa a iteração menor do que a instrução Break foi chamada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> não foi utilizados, esta propriedade retornará nulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

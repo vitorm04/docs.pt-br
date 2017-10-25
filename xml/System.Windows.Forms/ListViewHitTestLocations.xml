@@ -1,0 +1,166 @@
+<Type Name="ListViewHitTestLocations" FullName="System.Windows.Forms.ListViewHitTestLocations">
+  <TypeSignature Language="C#" Value="public enum ListViewHitTestLocations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListViewHitTestLocations extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewHitTestLocations" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define constantes que representam áreas em uma <see cref="T:System.Windows.Forms.ListView" /> ou <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A enumeração <xref:System.Windows.Forms.ListViewHitTestLocations> é usada pela classe <xref:System.Windows.Forms.ListViewHitTestInfo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ListView.HitTest%2A> método para determinar o local de um <xref:System.Windows.Forms.Control.MouseDown> evento em um <xref:System.Windows.Forms.ListView>. Para executar esse código, cole-o em um Windows Form que contém um <xref:System.Windows.Forms.ListView> chamado `listView1` que é preenchida com itens. Associar o <xref:System.Windows.Forms.Control.MouseDown> evento `listview1` e o formulário com o `HandleMouseDown` método neste exemplo.  
+  
+ [!code-csharp[System.Windows.Forms.ListViewWhidbeyProperties#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewWhidbeyProperties/CS/form1.cs#7)]
+ [!code-vb[System.Windows.Forms.ListViewWhidbeyProperties#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewWhidbeyProperties/VB/form1.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveClientArea">
+      <MemberSignature Language="C#" Value="AboveClientArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations AboveClientArea = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.AboveClientArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição acima a parte cliente de um <see cref="T:System.Windows.Forms.ListView" /> controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowClientArea">
+      <MemberSignature Language="C#" Value="BelowClientArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations BelowClientArea = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.BelowClientArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição abaixo a parte cliente de um <see cref="T:System.Windows.Forms.ListView" /> controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="Image" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations Image = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição dentro dos limites de uma imagem em um <see cref="T:System.Windows.Forms.ListView" /> ou <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="Label" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations Label = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.Label" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição dentro dos limites da área de texto contida em uma <see cref="T:System.Windows.Forms.ListView" /> ou <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftOfClientArea">
+      <MemberSignature Language="C#" Value="LeftOfClientArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations LeftOfClientArea = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.LeftOfClientArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição à esquerda da parte cliente de um <see cref="T:System.Windows.Forms.ListView" /> controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição fora dos limites de um<see cref="T:System.Windows.Forms.ListViewItem" /></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightOfClientArea">
+      <MemberSignature Language="C#" Value="RightOfClientArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations RightOfClientArea = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.RightOfClientArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição à direita da parte cliente de um <see cref="T:System.Windows.Forms.ListView" /> controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StateImage">
+      <MemberSignature Language="C#" Value="StateImage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewHitTestLocations StateImage = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewHitTestLocations.StateImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição dentro dos limites de uma imagem associada a um <see cref="T:System.Windows.Forms.ListViewItem" /> que indica o estado do item.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,266 @@
+<Type Name="FeatureSupport" FullName="System.Windows.Forms.FeatureSupport">
+  <TypeSignature Language="C#" Value="public abstract class FeatureSupport : System.Windows.Forms.IFeatureSupport" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FeatureSupport extends System.Object implements class System.Windows.Forms.IFeatureSupport" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FeatureSupport" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IFeatureSupport</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece <see langword="static" /> métodos para recuperar informações de recurso do sistema atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `static` implementam métodos dessa classe quando as classes de consulta para obter informações de recursos de <xref:System.Windows.Forms.IFeatureSupport> interface. Caso contrário, herde <xref:System.Windows.Forms.FeatureSupport> e fornecer sua própria implementação. Para uma implementação dessa classe, consulte <xref:System.Windows.Forms.OSFeature>.  
+  
+ Para obter o número de versão de um recurso, chame <xref:System.Windows.Forms.FeatureSupport.GetVersionPresent%2A>. Chamar <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> para determinar se um determinado recurso ou a versão de um recurso é instalado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.FeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Windows.Forms.FeatureSupport" />, você deve substituir o <see cref="M:System.Windows.Forms.FeatureSupport.GetVersionPresent(System.String,System.String)" /> método. Quando você substituir esse método, verifique se a classe que você usa para o <paramref name="feature" /> parâmetro é o mesmo que a classe usada para esse parâmetro no <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" /> método. Se os dois <paramref name="feature" /> parâmetros forem diferentes, você também deve substituir <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FeatureSupport ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.FeatureSupport" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersionPresent">
+      <MemberSignature Language="C#" Value="public abstract Version GetVersionPresent (object feature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Version GetVersionPresent(object feature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.GetVersionPresent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso cuja versão é solicitado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém a versão do recurso especificado que está disponível no sistema.</summary>
+        <returns>Um <see cref="T:System.Version" /> que representa o número de versão do recurso especificado disponível no sistema; ou <see langword="null" /> se o recurso não está instalado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versão números consistem em três partes: major, minor e criar. Normalmente, um número de versão é exibido como "número de number.build number.minor principal".  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.FeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código requer que `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar de <see cref="T:System.Windows.Forms.FeatureSupport" />, você deve substituir esse método. Quando você substituir esse método, verifique se a classe que você usa para o <paramref name="feature" /> parâmetro é o mesmo que a classe usada para esse parâmetro no <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" /> método. Se os dois <paramref name="feature" /> parâmetros forem diferentes, você também deve substituir <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" />.  
+  
+ Consulte <see cref="M:System.Windows.Forms.OSFeature.GetVersionPresent(System.Object)" /> para uma implementação deste método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersionPresent">
+      <MemberSignature Language="C#" Value="public static Version GetVersionPresent (string featureClassName, string featureConstName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Version GetVersionPresent(string featureClassName, string featureConstName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.GetVersionPresent(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="featureClassName" Type="System.String" />
+        <Parameter Name="featureConstName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="featureClassName">O nome totalmente qualificado da classe para a consulta para obter informações sobre o recurso especificado. Essa classe deve implementar o <see cref="T:System.Windows.Forms.IFeatureSupport" /> interface ou herdar de uma classe que implementa essa interface.</param>
+        <param name="featureConstName">O nome totalmente qualificado do recurso a ser pesquisada.</param>
+        <summary>Obtém a versão do recurso especificado que está disponível no sistema.</summary>
+        <returns>Um <see cref="T:System.Version" /> com o número de versão do recurso especificado disponível no sistema; ou <see langword="null" /> se o recurso não está instalado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versão números consistem em três partes: major, minor e criar. Normalmente, um número de versão é exibido como "número de number.build number.minor principal".  
+  
+ Consulte a documentação do produto que contém o recurso para determinar os nomes a serem passados para o `featureClassName` e `featureConstName` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public virtual bool IsPresent (object feature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPresent(object feature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.IsPresent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso a ser pesquisada.</param>
+        <summary>Determina se qualquer versão do recurso especificado está instalado no sistema.</summary>
+        <returns>
+          <see langword="true" />Se o recurso está presente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.FeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código requer que `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar de <see cref="T:System.Windows.Forms.FeatureSupport" />, você deve substituir o <see cref="M:System.Windows.Forms.FeatureSupport.GetVersionPresent(System.String,System.String)" /> método. Quando você substituir esse método, verifique se a classe que você usa para o <paramref name="feature" /> parâmetro é o mesmo que a classe usada para esse parâmetro no <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" /> método. Se os dois <paramref name="feature" /> parâmetros forem diferentes, você também deve substituir <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public virtual bool IsPresent (object feature, Version minimumVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPresent(object feature, class System.Version minimumVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.IsPresent(System.Object,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+        <Parameter Name="minimumVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso a ser pesquisada.</param>
+        <param name="minimumVersion">Um <see cref="T:System.Version" /> que representa o número de versão mínima do recurso a ser pesquisada.</param>
+        <summary>Determina se a versão especificada ou mais recente do recurso especificado está instalada no sistema.</summary>
+        <returns>
+          <see langword="true" />Se o recurso está presente e seu número de versão é maior que ou igual ao número de versão mínima especificada; <see langword="false" /> se o recurso não está instalado ou seu número de versão está abaixo do número mínimo especificado.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar de <see cref="T:System.Windows.Forms.FeatureSupport" />, você deve substituir o <see cref="M:System.Windows.Forms.FeatureSupport.GetVersionPresent(System.String,System.String)" /> método. Quando você substituir esse método, verifique se a classe que você usa para o <paramref name="feature" /> parâmetro é o mesmo que a classe usada para esse parâmetro no <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" /> método. Se os dois <paramref name="feature" /> parâmetros forem diferentes, você também deve substituir <see cref="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public static bool IsPresent (string featureClassName, string featureConstName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPresent(string featureClassName, string featureConstName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="featureClassName" Type="System.String" />
+        <Parameter Name="featureConstName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="featureClassName">O nome totalmente qualificado da classe para a consulta para obter informações sobre o recurso especificado. Essa classe deve implementar o <see cref="T:System.Windows.Forms.IFeatureSupport" /> interface ou herdar de uma classe que implementa essa interface.</param>
+        <param name="featureConstName">O nome totalmente qualificado do recurso a ser pesquisada.</param>
+        <summary>Determina se qualquer versão do recurso especificado está instalado no sistema. Esse método é <see langword="static" />.</summary>
+        <returns>
+          <see langword="true" />Se o recurso especificado estiver presente; <see langword="false" /> se o recurso especificado não está presente ou se o produto que contém o recurso não está instalado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte a documentação do produto que contém o recurso para determinar os nomes a serem passados para o `featureClassName` e `featureConstName` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public static bool IsPresent (string featureClassName, string featureConstName, Version minimumVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPresent(string featureClassName, string featureConstName, class System.Version minimumVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FeatureSupport.IsPresent(System.String,System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="featureClassName" Type="System.String" />
+        <Parameter Name="featureConstName" Type="System.String" />
+        <Parameter Name="minimumVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="featureClassName">O nome totalmente qualificado da classe para a consulta para obter informações sobre o recurso especificado. Essa classe deve implementar o <see cref="T:System.Windows.Forms.IFeatureSupport" /> interface ou herdar de uma classe que implementa essa interface.</param>
+        <param name="featureConstName">O nome totalmente qualificado do recurso a ser pesquisada.</param>
+        <param name="minimumVersion">Um <see cref="T:System.Version" /> que representa o número de versão mínima do recurso.</param>
+        <summary>Determina se a versão especificada ou mais recente do recurso especificado está instalada no sistema. Esse método é <see langword="static" />.</summary>
+        <returns>
+          <see langword="true" />Se o recurso está presente e seu número de versão é maior que ou igual ao número de versão mínima especificada; <see langword="false" /> se o recurso não está instalado ou seu número de versão está abaixo do número mínimo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte a documentação do produto que contém o recurso para determinar os nomes a serem passados para o `featureClassName` e `featureConstName` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

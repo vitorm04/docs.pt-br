@@ -1,0 +1,605 @@
+<Type Name="NetCodeGroup" FullName="System.Security.Policy.NetCodeGroup">
+  <TypeSignature Language="C#" Value="public sealed class NetCodeGroup : System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit NetCodeGroup extends System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.NetCodeGroup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.CodeGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Concede permissão da Web para o site do qual o assembly foi baixado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grupos de código são blocos de construção de política de segurança de acesso do código. Cada nível de política consiste em um grupo de códigos de raiz que pode ter um ou mais grupos de códigos filho. Cada grupo de códigos filho pode ter seus próprios grupos de códigos filho; Esse comportamento se estende para qualquer número de níveis, formando uma árvore. Cada grupo de código tem uma condição de associação que determina se um determinado assembly pertence ao grupo, com base na evidência de assembly. Somente os grupos de códigos cujas condições de associação correspondem a um determinado assembly, junto com seus grupos de códigos filho, aplicam a política de segurança de acesso do código.  
+  
+ <xref:System.Security.Policy.NetCodeGroup>tem a mesma semântica de mesclagem do <xref:System.Security.Policy.UnionCodeGroup>; constitui a união do <xref:System.Security.Policy.PolicyStatement> objetos filho correspondente todos os grupos de códigos e o <xref:System.Security.Policy.PolicyStatement> gera da entrada <xref:System.Security.Policy.Url> evidência. No entanto, <xref:System.Security.Policy.NetCodeGroup> retorna uma permissão que contém um dinamicamente calculada <xref:System.Net.WebPermission> que concede acesso de conexão para o site do qual o código é executado; <xref:System.Security.Policy.UnionCodeGroup> simplesmente retorna um conjunto de permissões estático.  
+  
+ Quando um <xref:System.Security.Policy.NetCodeGroup> é criado, ele contém as regras de acesso de conexão padrão mostradas na tabela a seguir.  
+  
+|Esquema de URI|Regra|  
+|----------------|----------|  
+|Arquivo |Nenhum acesso de conexão com o servidor de origem é permitido.|  
+|HTTP|Acesso HTTP e HTTPS é permitido usando a porta de origem.|  
+|HTTPS|Acesso HTTPS é permitido usando a porta de origem.|  
+  
+ Você pode controlar o esquema e a porta que o código tem permissão para usar ao se conectar novamente ao site de origem, passando um <xref:System.Security.Policy.CodeConnectAccess> objeto com apropriada <xref:System.Security.Policy.CodeConnectAccess.Scheme%2A> e <xref:System.Security.Policy.CodeConnectAccess.Port%2A> valores de propriedade para o <xref:System.Security.Policy.NetCodeGroup.AddConnectAccess%2A> método. Você pode criar uma regra de acesso de conexão que se aplica quando o esquema de origem não está presente na evidência ou não é reconhecido pela especificação <xref:System.Security.Policy.NetCodeGroup.AbsentOriginScheme> ("") como o esquema. Você também pode criar uma regra de acesso de conexão que se aplica quando não houver nenhuma regra de acesso de conexão com um esquema correspondente especificando <xref:System.Security.Policy.NetCodeGroup.AnyOtherOriginScheme> ("*") como o esquema.  
+  
+> [!NOTE]
+>  Se o código não enviar o esquema de URI como evidência, o acesso é permitido usar qualquer esquema de volta para o site de origem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Security.Policy.NetCodeGroup> e adicionando <xref:System.Security.Policy.CodeConnectAccess> objetos para código baixados usando o esquema HTTP.  
+  
+ [!code-cpp[NclCodeGroup#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NclCodeGroup/cpp/sample.cpp#3)]
+ [!code-csharp[NclCodeGroup#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NclCodeGroup/CS/sample.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetCodeGroup (System.Security.Policy.IMembershipCondition membershipCondition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Policy.IMembershipCondition membershipCondition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.#ctor(System.Security.Policy.IMembershipCondition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="membershipCondition" Type="System.Security.Policy.IMembershipCondition" />
+      </Parameters>
+      <Docs>
+        <param name="membershipCondition">Uma condição de associação que testa a evidência para determinar se este grupo de códigos se aplica a política de segurança de acesso do código.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.NetCodeGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Security.Policy.NetCodeGroup> é criado, ele contém as regras de acesso de conexão padrão mostradas na tabela a seguir.  
+  
+|Esquema|Regra|  
+|------------|----------|  
+|Arquivo |Nenhum acesso de conexão com o servidor de origem é permitido.|  
+|HTTP|Acesso HTTP e HTTPS é permitido usando a porta de origem.|  
+|HTTPS|Acesso HTTPS é permitido usando a porta de origem.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Security.Policy.NetCodeGroup> e adicionando <xref:System.Security.Policy.CodeConnectAccess> objetos para código baixados usando o esquema HTTP.  
+  
+ [!code-cpp[NclCodeGroup#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NclCodeGroup/cpp/sample.cpp#3)]
+ [!code-csharp[NclCodeGroup#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NclCodeGroup/CS/sample.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="membershipCondition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo do <paramref name="membershipCondition" /> parâmetro não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsentOriginScheme">
+      <MemberSignature Language="C#" Value="public static readonly string AbsentOriginScheme;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AbsentOriginScheme" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.NetCodeGroup.AbsentOriginScheme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém um valor usado para especificar o acesso de conexão para o código com um esquema de origem desconhecida ou não reconhecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar o <xref:System.Security.Policy.NetCodeGroup.AddConnectAccess%2A> método, você especificar um esquema e um tipo de objeto <xref:System.Security.Policy.CodeConnectAccess> objeto. Qualquer <xref:System.Security.Policy.CodeConnectAccess> objetos que você adicionar à <xref:System.Security.Policy.NetCodeGroup> usando <xref:System.Security.Policy.NetCodeGroup.AbsentOriginScheme> como a origem do esquema são aplicadas ao esquema de origem do código não está presente no seu evidência ou não é um esquema que é reconhecido pelo <xref:System.Security.Policy.NetCodeGroup> objeto.  
+  
+ Para especificar o <xref:System.Security.Policy.CodeConnectAccess> objetos a ser usado ao esquema de origem do código não corresponde a nenhum dos esquemas contidos no conjunto de esquemas de origem adicionado ao atual <xref:System.Security.Policy.NetCodeGroup> de objeto, use o <xref:System.Security.Policy.NetCodeGroup.AnyOtherOriginScheme> valor.  
+  
+ O valor de <xref:System.Security.Policy.NetCodeGroup.AbsentOriginScheme> campo é uma cadeia de caracteres vazia ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddConnectAccess">
+      <MemberSignature Language="C#" Value="public void AddConnectAccess (string originScheme, System.Security.Policy.CodeConnectAccess connectAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddConnectAccess(string originScheme, class System.Security.Policy.CodeConnectAccess connectAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.AddConnectAccess(System.String,System.Security.Policy.CodeConnectAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="originScheme" Type="System.String" />
+        <Parameter Name="connectAccess" Type="System.Security.Policy.CodeConnectAccess" />
+      </Parameters>
+      <Docs>
+        <param name="originScheme">Um <see cref="T:System.String" /> que contém o esquema para a comparação com o esquema do código.</param>
+        <param name="connectAccess">Um <see cref="T:System.Security.Policy.CodeConnectAccess" /> que especifica o código de esquema e a porta pode usar para se conectar novamente ao seu servidor de origem.</param>
+        <summary>Adiciona o acesso de conexão especificado para o grupo de código atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar várias <xref:System.Security.Policy.CodeConnectAccess> objetos para o mesmo `origin scheme`. Se um `origin scheme` já tem um ou mais associados <xref:System.Security.Policy.CodeConnectAccess> objetos, especificando `null` para `connectAccess` não tem nenhum efeito. Se o esquema de origem não associou <xref:System.Security.Policy.CodeConnectAccess> objetos, especificando `null` para `connectAccess` impede que o código com um esquema de origem corresponde `originScheme` acessem seu servidor de origem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação e adição de <xref:System.Security.Policy.CodeConnectAccess> objetos para um <xref:System.Security.Policy.NetCodeGroup>.  
+  
+ [!code-cpp[NclCodeGroup#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NclCodeGroup/cpp/sample.cpp#3)]
+ [!code-csharp[NclCodeGroup#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NclCodeGroup/CS/sample.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="originScheme" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="originScheme" />contém caracteres que não são permitidos em esquemas.  
+  
+ -ou-  
+  
+ <paramref name="originScheme" /> = <see cref="F:System.Security.Policy.NetCodeGroup.AbsentOriginScheme" />e <paramref name="connectAccess" /> especifica <see cref="F:System.Security.Policy.CodeConnectAccess.OriginScheme" /> como seu esquema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AnyOtherOriginScheme">
+      <MemberSignature Language="C#" Value="public static readonly string AnyOtherOriginScheme;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AnyOtherOriginScheme" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.NetCodeGroup.AnyOtherOriginScheme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém um valor usado para especificar qualquer outro esquema de origem não especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar o <xref:System.Security.Policy.NetCodeGroup.AddConnectAccess%2A> método, você especificar um esquema e um tipo de objeto <xref:System.Security.Policy.CodeConnectAccess> objeto. Você pode usar o valor da <xref:System.Security.Policy.NetCodeGroup.AnyOtherOriginScheme> campo para especificar o <xref:System.Security.Policy.CodeConnectAccess> objetos que devem ser usados para qualquer esquema que não está contida no conjunto de esquemas de origem adicionado ao atual explicitamente <xref:System.Security.Policy.NetCodeGroup> objeto.  
+  
+ O <xref:System.Security.Policy.CodeConnectAccess> objetos especificados com o <xref:System.Security.Policy.NetCodeGroup.AnyOtherOriginScheme> campo são usados somente se o esquema de origem do código não corresponde a nenhum dos esquemas contidos no conjunto de esquemas de origem adicionado ao atual <xref:System.Security.Policy.NetCodeGroup> objeto.  
+  
+ Para especificar o <xref:System.Security.Policy.CodeConnectAccess> objetos a ser aplicada ao esquema de origem do código não está disponível no seu evidência ou não foi reconhecida, use o <xref:System.Security.Policy.NetCodeGroup.AbsentOriginScheme> valor.  
+  
+ O valor de <xref:System.Security.Policy.NetCodeGroup.AnyOtherOriginScheme> campo é "*".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeString">
+      <MemberSignature Language="C#" Value="public override string AttributeString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeString" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.NetCodeGroup.AttributeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres dos atributos da declaração de política para o grupo de códigos.</summary>
+        <value>Sempre <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz uma cópia em profundidade do grupo de código atual.</summary>
+        <returns>Uma cópia equivalente do grupo de código atual, incluindo suas condições de associação e os grupos de códigos filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz uma cópia em profundidade do grupo de código, que significa que também são feitas cópias de todos os objetos que contém o grupo de códigos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXml">
+      <MemberSignature Language="C#" Value="protected override void CreateXml (System.Security.SecurityElement element, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateXml(class System.Security.SecurityElement element, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <param name="level">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Security.Policy.NetCodeGroup" /> objeto a ser comparado com o grupo de código atual.</param>
+        <summary>Determina se o grupo de código especificado é equivalente ao grupo de código atual.</summary>
+        <returns>
+          <see langword="true" />Se o grupo de código especificada for equivalente ao grupo de código atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados a seguir são usados para determinar igualdade de dois <xref:System.Security.Policy.NetCodeGroup> objetos:  
+  
+-   O <xref:System.Security.Policy.CodeGroup.Name%2A> e <xref:System.Security.Policy.CodeGroup.Description%2A> propriedades.  
+  
+-   A propriedade de <xref:System.Security.Policy.CodeGroup.MembershipCondition%2A> .  
+  
+-   O conjunto de esquemas de origem e os respectivos <xref:System.Security.Policy.CodeConnectAccess> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectAccessRules">
+      <MemberSignature Language="C#" Value="public System.Collections.DictionaryEntry[] GetConnectAccessRules ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.DictionaryEntry[] GetConnectAccessRules() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.GetConnectAccessRules" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.DictionaryEntry[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as informações de acesso de conexão para o grupo de código atual.</summary>
+        <returns>A <see cref="T:System.Collections.DictionaryEntry" /> matriz que contém informações de conexão de acesso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cada entrada de dicionário, o <xref:System.Collections.DictionaryEntry.Key%2A> o valor da propriedade é o esquema de origem e o <xref:System.Collections.DictionaryEntry.Value%2A> o valor da propriedade é a matriz de associado <xref:System.Security.Policy.CodeConnectAccess> objetos. Se não houver associado não <xref:System.Security.Policy.CodeConnectAccess> objetos, <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> retorna uma matriz vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir as regras de acesso de conexão para um <xref:System.Security.Policy.NetCodeGroup> objeto.  
+  
+ [!code-cpp[NclCodeGroup#8](~/samples/snippets/cpp/VS_Snippets_Remoting/NclCodeGroup/cpp/sample.cpp#8)]
+ [!code-csharp[NclCodeGroup#8](~/samples/snippets/csharp/VS_Snippets_Remoting/NclCodeGroup/CS/sample.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash do grupo de código atual.</summary>
+        <returns>O código hash do grupo de código atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeLogic">
+      <MemberSignature Language="C#" Value="public override string MergeLogic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MergeLogic" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.NetCodeGroup.MergeLogic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lógica para usar grupos de mesclagem.</summary>
+        <value>A cadeia de caracteres "Union".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseXml">
+      <MemberSignature Language="C#" Value="protected override void ParseXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ParseXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <param name="level">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSetName">
+      <MemberSignature Language="C#" Value="public override string PermissionSetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PermissionSetName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.NetCodeGroup.PermissionSetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Security.NamedPermissionSet" /> para o grupo de códigos.</summary>
+        <value>Sempre é a cadeia de caracteres "Mesmo site da Web".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetConnectAccess">
+      <MemberSignature Language="C#" Value="public void ResetConnectAccess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetConnectAccess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.ResetConnectAccess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as informações de acesso de conexão para o grupo de código atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover as regras de acesso de conexão padrão fornecido pelo sistema.  
+  
+ As regras padrão são mostradas na tabela a seguir.  
+  
+|Esquema|Regra|  
+|------------|----------|  
+|Arquivo |Nenhum acesso de conexão com o servidor de origem é permitido.|  
+|HTTP|Acesso HTTP e HTTPS é permitido usando a porta de origem.|  
+|HTTPS|Acesso HTTPS é permitido usando a porta de origem.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método para remover as regras de conexão de acesso de código padrão.  
+  
+ [!code-cpp[NclCodeGroup#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NclCodeGroup/cpp/sample.cpp#3)]
+ [!code-csharp[NclCodeGroup#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NclCodeGroup/CS/sample.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.PolicyStatement Resolve (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.PolicyStatement Resolve(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.Resolve(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">O <see cref="T:System.Security.Policy.Evidence" /> para o assembly.</param>
+        <summary>Resolve a política para o grupo de códigos e seus descendentes de um conjunto de evidência.</summary>
+        <returns>Um <see cref="T:System.Security.Policy.PolicyStatement" /> as permissões concedidas pelo grupo de código com atributos opcionais, que consiste em ou <see langword="null" /> se o grupo de códigos não se aplica (a condição de associação não corresponde a evidência especificada).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna uma instrução de política para o grupo de código, incluindo avaliação do filho de grupos de código.  
+  
+ A operação desse método é como segue:  
+  
+ Se a condição de associação não coincide com a evidência especificada, retornar `null`; caso contrário, defina o conjunto de permissões a ser retornado (P) igual a declaração da política do grupo de códigos e continuar. Para cada grupo de códigos filho, resolver o grupo de códigos com a mesma evidência; Se o resultado não é `null`, essa política instrução return. Se nenhum grupo de códigos filho correspondentes, retorne P (declaração de política do pai).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="evidence" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Policy.PolicyException">Mais de um grupo de código (incluindo o grupo de códigos pai e os grupos de código filhos) está marcado como <see cref="F:System.Security.Policy.PolicyStatementAttribute.Exclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMatchingCodeGroups">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.NetCodeGroup.ResolveMatchingCodeGroups(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Resolve os grupos de códigos de correspondência.</summary>
+        <returns>O conjunto completo de grupos de códigos que corresponderam a evidência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna um código de grupo raiz. O grupo de código que é retornado pode conter grupos de códigos filho, que, por sua vez, também podem ter grupos de códigos filho, para que o valor de retorno reflete o conjunto completo de grupos de códigos que corresponderam a evidência fornecida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="evidence" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

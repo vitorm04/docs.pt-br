@@ -1,0 +1,588 @@
+<Type Name="ColorMatrix" FullName="System.Drawing.Imaging.ColorMatrix">
+  <TypeSignature Language="C#" Value="public sealed class ColorMatrix" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ColorMatrix extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ColorMatrix" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma matriz 5x5 que contém as coordenadas para o espaço RGBAW. Vários métodos da classe <see cref="T:System.Drawing.Imaging.ImageAttributes" /> ajustam as cores da imagem usando uma matriz de cores. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os coeficientes de matriz constituem uma transformação linear 5x5 que é usada para transformar os valores homogêneos ARGB. Por exemplo, um vetor ARGB é representado como vermelho, verde, azul, alpha e w, onde c é sempre 1.  
+  
+ Por exemplo, suponha que você queira começar com a cor (0,2, 0,0, 0,4, 1,0) e aplicar as seguintes transformações:  
+  
+1.  Duplicar o componente vermelho  
+  
+2.  Adicionar 0,2 aos componentes vermelhos, verdes e azuis  
+  
+ A multiplicação de matriz a seguir executará o par de transformações na ordem listada.  
+  
+ ![Recolorindo](~/add/media/recoloring01.gif "recolorindo")  
+  
+ Os elementos de uma matriz de cores são indexados (baseados em zero) por linha e coluna. Por exemplo, a entrada na quinta linha e na terceira coluna da matriz M é indicada por M[4][2].  
+  
+ A matriz de identidade 5 × 5 (mostrada na ilustração a seguir) tem 1s na diagonal e 0s em todos os outros lugares. Se você multiplicar um vetor de cor pela matriz de identidade, o vetor de cor não mudará. Uma maneira conveniente de formar a matriz de uma transformação de cor é começar com a matriz de identidade e fazer uma pequena alteração que produza a transformação desejada.  
+  
+ ![Recolorindo](~/add/media/recoloring02.gif "recolorindo")  
+  
+ Para obter uma discussão mais detalhada de matrizes e transformações, consulte.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma imagem toda de uma cor (0,2, 0,0, 0,4, 1,0) e aplica a transformação descrita nos parágrafos anteriores.  
+  
+ A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita.  
+  
+ ![Cores](~/add/media/colortrans1.png "cores")  
+  
+ O código no exemplo a seguir usa as seguintes etapas para recolorir:  
+  
+1.  Inicializar um <xref:System.Drawing.Imaging.ColorMatrix> objeto.  
+  
+2.  Criar um <xref:System.Drawing.Imaging.ImageAttributes> do objeto e passar o <xref:System.Drawing.Imaging.ColorMatrix> do objeto para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+3.  Passar o <xref:System.Drawing.Imaging.ImageAttributes> o objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método de um <xref:System.Drawing.Graphics> objeto.  
+  
+ O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos  
+  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorMatrix ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ColorMatrix.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorMatrix (float[][] newColorMatrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32[][] newColorMatrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ColorMatrix.#ctor(System.Single[][])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Single[][]" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Os valores dos elementos para o novo <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.ColorMatrix" /> usando os elementos na matriz <paramref name="newColorMatrix" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar e usar um <xref:System.Drawing.Imaging.ColorMatrix>. Para executar este exemplo, cole o código em um formulário do Windows e a chamada `RotateColors` do formulário de <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public float this[int row, int column] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Item(int32, int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Item(System.Int32,System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="row">A linha do elemento.</param>
+        <param name="column">A coluna do elemento.</param>
+        <summary>Obtém ou define o elemento na linha e coluna especificadas no <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na linha e coluna especificadas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix00">
+      <MemberSignature Language="C#" Value="public float Matrix00 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix00" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix00" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de 0 (zero) linha e coluna 0 isso <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento no 0 linha e coluna 0 isso <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix01">
+      <MemberSignature Language="C#" Value="public float Matrix01 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix01" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix01" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de 0 (zero) linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento no 0 linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" /> .</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix02">
+      <MemberSignature Language="C#" Value="public float Matrix02 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix02" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix02" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de 0 (zero) linha e segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na linha 0 e a segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix03">
+      <MemberSignature Language="C#" Value="public float Matrix03 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix03" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix03" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de 0 (zero) linha e terceira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />. Representa o componente alfa.</summary>
+        <value>O elemento na linha 0 e a terceira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix04">
+      <MemberSignature Language="C#" Value="public float Matrix04 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix04" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix04" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de 0 (zero) linha e quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na linha 0 e quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix10">
+      <MemberSignature Language="C#" Value="public float Matrix10 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix10" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na primeira linha e 0 (zero) coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na primeira linha e coluna 0 isso <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix11">
+      <MemberSignature Language="C#" Value="public float Matrix11 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix11" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na primeira linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na primeira linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix12">
+      <MemberSignature Language="C#" Value="public float Matrix12 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix12" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na primeira linha e a segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na primeira linha e a segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix13">
+      <MemberSignature Language="C#" Value="public float Matrix13 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix13" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix13" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na primeira linha e o terceiro coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />. Representa o componente alfa.</summary>
+        <value>O elemento na primeira linha e o terceiro coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix14">
+      <MemberSignature Language="C#" Value="public float Matrix14 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix14" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix14" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na primeira linha e a quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na primeira linha e a quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix20">
+      <MemberSignature Language="C#" Value="public float Matrix20 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix20" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix20" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na segunda linha e 0 (zero) coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na segunda linha e coluna 0 isso <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix21">
+      <MemberSignature Language="C#" Value="public float Matrix21 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix21" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix21" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na segunda linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na segunda linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix22">
+      <MemberSignature Language="C#" Value="public float Matrix22 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix22" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix22" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na segunda linha e segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na segunda linha e segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix23">
+      <MemberSignature Language="C#" Value="public float Matrix23 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix23" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix23" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na segunda coluna de linhas e de terceiros deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na segunda coluna de linhas e de terceiros deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix24">
+      <MemberSignature Language="C#" Value="public float Matrix24 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix24" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix24" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na segunda linha e a quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na segunda linha e a quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix30">
+      <MemberSignature Language="C#" Value="public float Matrix30 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix30" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix30" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na terceira linha e 0 (zero) coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na terceira linha e coluna 0 isso <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix31">
+      <MemberSignature Language="C#" Value="public float Matrix31 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix31" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix31" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na terceira linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na terceira linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix32">
+      <MemberSignature Language="C#" Value="public float Matrix32 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix32" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix32" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na terceira linha e a segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na terceira linha e a segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix33">
+      <MemberSignature Language="C#" Value="public float Matrix33 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix33" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix33" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na terceira linha e na terceira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />. Representa o componente alfa.</summary>
+        <value>O elemento na terceira linha e na terceira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix34">
+      <MemberSignature Language="C#" Value="public float Matrix34 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix34" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix34" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na terceira linha e a quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na terceira linha e a quarta coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix40">
+      <MemberSignature Language="C#" Value="public float Matrix40 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix40" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix40" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na quarta linha e 0 (zero) coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na quarta linha e coluna 0 isso <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix41">
+      <MemberSignature Language="C#" Value="public float Matrix41 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix41" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix41" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na quarta linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na quarta linha e primeira coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix42">
+      <MemberSignature Language="C#" Value="public float Matrix42 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix42" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix42" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na quarta linha e segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na quarta linha e segunda coluna deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix43">
+      <MemberSignature Language="C#" Value="public float Matrix43 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix43" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix43" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na quarta coluna de linhas e de terceiros deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />. Representa o componente alfa.</summary>
+        <value>O elemento na quarta coluna de linhas e de terceiros deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix44">
+      <MemberSignature Language="C#" Value="public float Matrix44 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Matrix44" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ColorMatrix.Matrix44" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento na quarta coluna de linha e o quarto deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</summary>
+        <value>O elemento na quarta coluna de linha e o quarto deste <see cref="T:System.Drawing.Imaging.ColorMatrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

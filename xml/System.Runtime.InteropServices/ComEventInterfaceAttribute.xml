@@ -1,0 +1,168 @@
+<Type Name="ComEventInterfaceAttribute" FullName="System.Runtime.InteropServices.ComEventInterfaceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComEventInterfaceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComEventInterfaceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComEventInterfaceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica a interface de origem e a classe que implementa os métodos da interface do evento é gerado quando uma coclass é importada de uma biblioteca de tipos COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para interfaces, embora o [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) normalmente aplica para você quando ele importa uma biblioteca de tipos.  
+  
+ Quando uma interface de origem é importada de uma biblioteca de tipos, métodos implementa são adicionados como eventos a uma interface de eventos gerados. Aplica-se Tlbimp.exe <xref:System.Runtime.InteropServices.ComEventInterfaceAttribute> para a interface de evento para identificar a classe gerenciada que implementa os métodos da interface de eventos e implementa a interface de origem original. O common language runtime usa esse atributo em tempo de execução para executar as seguintes tarefas:  
+  
+-   Associados eventos expostos pela interface para sua implementação no evento classe do provedor.  
+  
+-   Vincule os eventos para a interface de origem COM original.  
+  
+ Esse atributo é aplicado raramente. No entanto, se você planeja escrever o código-fonte que gera metadados que simula estreitamente metadados produzido por Tlbimp.exe, você deve criar uma interface de eventos para cada interface de origem original. Para obter uma descrição detalhada sobre como Tlbimp.exe importa eventos, consulte [conversão de membro importado](http://msdn.microsoft.com/en-us/7a272adf-41d7-4409-b0e2-5c0c5ef5266d). Para obter instruções sobre como expor um evento COM para um cliente .NET, consulte [como: manipular eventos gerados por uma fonte COM](http://msdn.microsoft.com/en-us/12bb67bd-91a2-4554-82fb-bdba3d2c8b04).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComEventInterfaceAttribute (Type SourceInterface, Type EventProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type SourceInterface, class System.Type EventProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComEventInterfaceAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="SourceInterface" Type="System.Type" />
+        <Parameter Name="EventProvider" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="SourceInterface">Um <see cref="T:System.Type" /> que contém a interface de origem original na biblioteca de tipos. COM usa essa interface para retorno de chamada para a classe gerenciada.</param>
+        <param name="EventProvider">Um <see cref="T:System.Type" /> que contém a classe que implementa os métodos da interface do evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComEventInterfaceAttribute" /> classe com a classe de provedor de interface e eventos da origem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventProvider">
+      <MemberSignature Language="C#" Value="public Type EventProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EventProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComEventInterfaceAttribute.EventProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a classe que implementa os métodos da interface do evento.</summary>
+        <value>Um <see cref="T:System.Type" /> que contém a classe que implementa os métodos da interface do evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é definido como o tipo da classe do provedor de eventos gerado pelo [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe anexa o nome da interface de origem com EventProvider. Por exemplo, IMyInterface torna-se IMyInterfaceEventProvider.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceInterface">
+      <MemberSignature Language="C#" Value="public Type SourceInterface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SourceInterface" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComEventInterfaceAttribute.SourceInterface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a interface de origem original na biblioteca de tipos.</summary>
+        <value>Um <see cref="T:System.Type" /> que contém a interface de origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma interface de origem tem pelo menos um membro de evento e normalmente uma para cada método de interface de origem. COM usa essa interface para retorno de chamada para a classe gerenciada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

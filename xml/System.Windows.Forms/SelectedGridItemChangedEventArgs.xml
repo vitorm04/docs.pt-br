@@ -1,0 +1,116 @@
+<Type Name="SelectedGridItemChangedEventArgs" FullName="System.Windows.Forms.SelectedGridItemChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SelectedGridItemChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SelectedGridItemChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SelectedGridItemChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged" /> do controle <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged> evento ocorre quando o usuário altera a <xref:System.Windows.Forms.GridItem> que está selecionado em um <xref:System.Windows.Forms.PropertyGrid>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PropertyGrid> chamado `PropertyGrid1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#533](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#533)]
+ [!code-vb[System.Windows.Forms.EventExamples#533](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#533)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectedGridItemChangedEventArgs (System.Windows.Forms.GridItem oldSel, System.Windows.Forms.GridItem newSel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.GridItem oldSel, class System.Windows.Forms.GridItem newSel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SelectedGridItemChangedEventArgs.#ctor(System.Windows.Forms.GridItem,System.Windows.Forms.GridItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldSel" Type="System.Windows.Forms.GridItem" />
+        <Parameter Name="newSel" Type="System.Windows.Forms.GridItem" />
+      </Parameters>
+      <Docs>
+        <param name="oldSel">O item de grade selecionado anteriormente.</param>
+        <param name="newSel">O item de grade selecionado recentemente.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.SelectedGridItemChangedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.GridItem NewSelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItem NewSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SelectedGridItemChangedEventArgs.NewSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o recém-selecionada <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>O novo <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PropertyGrid> chamado `PropertyGrid1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#533](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#533)]
+ [!code-vb[System.Windows.Forms.EventExamples#533](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#533)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.GridItem OldSelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItem OldSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SelectedGridItemChangedEventArgs.OldSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o selecionado anteriormente <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>O antigo <see cref="T:System.Windows.Forms.GridItem" />. Ele pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PropertyGrid> chamado `PropertyGrid1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PropertyGrid.SelectedGridItemChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#533](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#533)]
+ [!code-vb[System.Windows.Forms.EventExamples#533](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#533)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

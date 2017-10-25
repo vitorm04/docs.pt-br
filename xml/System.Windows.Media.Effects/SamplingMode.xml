@@ -1,0 +1,75 @@
+<Type Name="SamplingMode" FullName="System.Windows.Media.Effects.SamplingMode">
+  <TypeSignature Language="C#" Value="public enum SamplingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SamplingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.SamplingMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a maneira como <see cref="T:System.Windows.Media.Brush" />-propriedades de dependência importantes são amostrados em um efeito de sombreador personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Media.Effects.SamplingMode> quando você define uma propriedade de dependência para um <xref:System.Windows.Media.Effects.ShaderEffect>.  
+  
+ O sistema de processamento seleciona automaticamente o modo de amostragem apropriado, dependendo se a renderização de hardware ou software está habilitada, se a textura de destino é girada e outros fatores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.SamplingMode Auto = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.SamplingMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.SamplingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema selecionará o modo de amostragem mais apropriado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bilinear">
+      <MemberSignature Language="C#" Value="Bilinear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.SamplingMode Bilinear = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.SamplingMode.Bilinear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.SamplingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use amostragem bilinear.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NearestNeighbor">
+      <MemberSignature Language="C#" Value="NearestNeighbor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.SamplingMode NearestNeighbor = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.SamplingMode.NearestNeighbor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.SamplingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use mais próximo de vizinho de amostragem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

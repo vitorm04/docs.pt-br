@@ -1,0 +1,145 @@
+<Type Name="TableLayoutPanelCellBorderStyle" FullName="System.Windows.Forms.TableLayoutPanelCellBorderStyle">
+  <TypeSignature Language="C#" Value="public enum TableLayoutPanelCellBorderStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TableLayoutPanelCellBorderStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutPanelCellBorderStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estilo de borda de uma célula em um controle de layout de tabela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutPanelCellBorderStyle> enumeração representa as opções de estilo de borda diferente para uma célula em uma <xref:System.Windows.Forms.TableLayoutPanel>. A largura da borda da célula para cada estilo é determinada pelo <xref:System.Windows.Forms.TableLayoutPanel> classe. O espaço para a borda é obtido a <xref:System.Windows.Forms.TableLayoutPanel> do controle <xref:System.Windows.Forms.Control.DisplayRectangle%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Forms.TableLayoutPanelCellBorderStyle> enumeração para definir o <xref:System.Windows.Forms.TableLayoutPanel.CellBorderStyle%2A> para um <xref:System.Windows.Forms.TableLayoutPanel> controle. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.TableLayoutPanel> controle.  
+  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/CS/form1.cs#6)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/VB/form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Inset">
+      <MemberSignature Language="C#" Value="Inset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle Inset = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda de linha única em baixo relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InsetDouble">
+      <MemberSignature Language="C#" Value="InsetDouble" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle InsetDouble = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda de linha dupla em baixo relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem bordas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Outset">
+      <MemberSignature Language="C#" Value="Outset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle Outset = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda de linha única em alto relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutsetDouble">
+      <MemberSignature Language="C#" Value="OutsetDouble" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle OutsetDouble = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda de linha dupla em alto relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutsetPartial">
+      <MemberSignature Language="C#" Value="OutsetPartial" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle OutsetPartial = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda de linha única que contém uma parte em alto relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TableLayoutPanelCellBorderStyle Single = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda de linha única.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

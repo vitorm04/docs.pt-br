@@ -1,0 +1,1606 @@
+<Type Name="Font" FullName="System.Drawing.Font">
+  <TypeSignature Language="C#" Value="public sealed class Font : MarshalByRefObject, ICloneable, IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Font extends System.MarshalByRefObject implements class System.ICloneable, class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Font" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.FontEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.FontConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um formato específico para texto, incluindo os atributos de estilo, tamanho e face da fonte. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como construir fontes, consulte [como: construir fontes e famílias de fontes](~/docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md). Aplicativos de formulários do Windows oferecem suporte a fontes TrueType e tem suporte limitado para as fontes OpenType. Se você tentar usar uma fonte que não é suportada ou a fonte não está instalada no computador que está executando o aplicativo, a fonte Microsoft Sans Serif será substituída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Size%2A>, <xref:System.Drawing.Font.SizeInPoints%2A>, e <xref:System.Drawing.Font.Unit%2A> propriedades. Este exemplo é projetado para ser usado com um Windows Form que contém um <xref:System.Windows.Forms.ComboBox> chamado `ComboBox1` que é preenchida com as cadeias de caracteres "Maior" e "Menores" e um <xref:System.Windows.Forms.Label> chamado `Label1`. Cole o seguinte código para o formulário e associar o `ComboBox1_SelectedIndexChanged` método com o <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged> evento o <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ [!code-cpp[System.Drawing.FontsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.FontsExample/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.FontsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.FontsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.Font prototype, System.Drawing.FontStyle newStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Font prototype, valuetype System.Drawing.FontStyle newStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.Font,System.Drawing.FontStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prototype" Type="System.Drawing.Font" />
+        <Parameter Name="newStyle" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="prototype">O <see cref="T:System.Drawing.Font" /> existente por meio do qual o novo <see cref="T:System.Drawing.Font" /> será criado.</param>
+        <param name="newStyle">O <see cref="T:System.Drawing.FontStyle" /> ao qual o novo <see cref="T:System.Drawing.Font" /> será aplicado. Vários valores da enumeração <see cref="T:System.Drawing.FontStyle" /> podem ser combinados com o operador <see langword="OR" />.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> que usa a enumeração <see cref="T:System.Drawing.Font" /> e <see cref="T:System.Drawing.FontStyle" /> existente especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para aplicativos localizados baseados no [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] e versões anteriores, especificando uma fonte para `prototype` quando essa fonte não foi instalada no computador que é usado para criar seu aplicativo fará com que a Microsoft Sans Serif fonte a ser usado em vez disso. Se seu aplicativo depende esse comportamento e você deve recompilar o aplicativo para o .NET Framework 3.0, você deve especificar a fonte do Microsoft Sans Serif `prototype`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Drawing.Color.op_Inequality%2A> operador, o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Bold%2A> propriedade. Este exemplo é projetado para ser usado com um Windows Form que contém um botão chamado `Button2`. Cole o seguinte código no formulário e associar o `Button2_Click` método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.CharacterRangeExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.CharacterRangeExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.CharacterRangeExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.FontFamily family, float emSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.FontFamily family, float32 emSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.FontFamily,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Drawing.FontFamily" />
+        <Parameter Name="emSize" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="family">O <see cref="T:System.Drawing.FontFamily" /> do novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em, em pontos, da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando um tamanho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte resultante tem seu <xref:System.Drawing.Font.Style%2A> propriedade definida como <xref:System.Drawing.FontStyle.Regular> e sua <xref:System.Drawing.Font.Unit%2A> propriedade definida como <xref:System.Drawing.GraphicsUnit.Point>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (string familyName, float emSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName, float32 emSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.String,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+        <Parameter Name="emSize" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Uma representação de cadeia de caracteres do <see cref="T:System.Drawing.FontFamily" /> para o novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em, em pontos, da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando um tamanho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte resultante tem seu <xref:System.Drawing.Font.Style%2A> propriedade definida como <xref:System.Drawing.FontStyle?displayProperty=nameWithType> e sua <xref:System.Drawing.Font.Unit%2A> propriedade definida como <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType>. Aplicativos de formulários do Windows oferecem suporte a fontes TrueType e tem suporte limitado para as fontes OpenType. Se o `familyName` parâmetro especifica uma fonte que não está instalada no computador que executa o aplicativo ou não é suportada, Microsoft Sans Serif será substituída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor. Este exemplo é projetado para ser usado com um formulário do Windows e requer um <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> evento.  
+  
+ [!code-csharp[System.Drawing.Misc3#ConstructFontWithString](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#constructfontwithstring)]
+ [!code-vb[System.Drawing.Misc3#ConstructFontWithString](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#constructfontwithstring)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.FontFamily family, float emSize, System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.FontFamily family, float32 emSize, valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.FontFamily,System.Single,System.Drawing.FontStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Drawing.FontFamily" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="family">O <see cref="T:System.Drawing.FontFamily" /> do novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em, em pontos, da nova fonte.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando um tamanho e estilo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte resultante tem seu <xref:System.Drawing.Font.Unit%2A> propriedade definida como <xref:System.Drawing.GraphicsUnit.Point>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Drawing.Font> propriedade de um botão para um novo, negrito estilo <xref:System.Drawing.Font>. Este exemplo é projetado para ser usado com um Windows Form que contém um botão chamado `Button1`. Cole o seguinte código no formulário e associar o `Button1_Click` método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#11)]
+ [!code-csharp[System.Drawing.MiscExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#11)]
+ [!code-vb[System.Drawing.MiscExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="family" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.FontFamily family, float emSize, System.Drawing.GraphicsUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.FontFamily family, float32 emSize, valuetype System.Drawing.GraphicsUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.FontFamily,System.Single,System.Drawing.GraphicsUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Drawing.FontFamily" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+      </Parameters>
+      <Docs>
+        <param name="family">O <see cref="T:System.Drawing.FontFamily" /> do novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando um tamanho e uma unidade especificados. Define o estilo como <see cref="F:System.Drawing.FontStyle.Regular" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte resultante tem seu <xref:System.Drawing.Font.Style%2A> propriedade definida como <xref:System.Drawing.FontStyle?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="family" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (string familyName, float emSize, System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName, float32 emSize, valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.String,System.Single,System.Drawing.FontStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Uma representação de cadeia de caracteres do <see cref="T:System.Drawing.FontFamily" /> para o novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em, em pontos, da nova fonte.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando um tamanho e estilo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte resultante tem seu <xref:System.Drawing.Font.Unit%2A> propriedade definida como <xref:System.Drawing.GraphicsUnit.Point>. Aplicativos de formulários do Windows oferecem suporte a fontes TrueType e tem suporte limitado para as fontes OpenType. Se o `familyName` parâmetro especifica uma fonte que não está instalada no computador que executa o aplicativo ou não é suportada, Microsoft Sans Serif será substituída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (string familyName, float emSize, System.Drawing.GraphicsUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName, float32 emSize, valuetype System.Drawing.GraphicsUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.String,System.Single,System.Drawing.GraphicsUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Uma representação de cadeia de caracteres do <see cref="T:System.Drawing.FontFamily" /> para o novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando um tamanho e uma unidade especificados. O estilo está definido como <see cref="F:System.Drawing.FontStyle.Regular" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte resultante tem seu <xref:System.Drawing.Font.Style%2A> propriedade definida como <xref:System.Drawing.FontStyle?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.FontFamily family, float emSize, System.Drawing.FontStyle style, System.Drawing.GraphicsUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.FontFamily family, float32 emSize, valuetype System.Drawing.FontStyle style, valuetype System.Drawing.GraphicsUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.FontFamily,System.Single,System.Drawing.FontStyle,System.Drawing.GraphicsUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Drawing.FontFamily" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+      </Parameters>
+      <Docs>
+        <param name="family">O <see cref="T:System.Drawing.FontFamily" /> do novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando tamanho, estilo e unidade especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="family" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (string familyName, float emSize, System.Drawing.FontStyle style, System.Drawing.GraphicsUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName, float32 emSize, valuetype System.Drawing.FontStyle style, valuetype System.Drawing.GraphicsUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.String,System.Single,System.Drawing.FontStyle,System.Drawing.GraphicsUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Uma representação de cadeia de caracteres do <see cref="T:System.Drawing.FontFamily" /> para o novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Font" /> usando tamanho, estilo e unidade especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos de formulários do Windows oferecem suporte a fontes TrueType e tem suporte limitado para as fontes OpenType. Se o `familyName` parâmetro especifica uma fonte que não está instalada no computador que executa o aplicativo ou não é suportada, Microsoft Sans Serif será substituída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor. Este exemplo é projetado para ser usado com o Windows Forms. Para executar este exemplo, cole este código em um formulário que contém um botão chamado `Button2`e associe o `Button2_Click` método com o <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[System.Drawing.FontsExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.FontsExample/cpp/form1.cpp#3)]
+ [!code-csharp[System.Drawing.FontsExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsExample/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.FontsExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.FontFamily family, float emSize, System.Drawing.FontStyle style, System.Drawing.GraphicsUnit unit, byte gdiCharSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.FontFamily family, float32 emSize, valuetype System.Drawing.FontStyle style, valuetype System.Drawing.GraphicsUnit unit, unsigned int8 gdiCharSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.FontFamily,System.Single,System.Drawing.FontStyle,System.Drawing.GraphicsUnit,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Drawing.FontFamily" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+        <Parameter Name="gdiCharSet" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="family">O <see cref="T:System.Drawing.FontFamily" /> do novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <param name="gdiCharSet">Um <see cref="T:System.Byte" /> que especifica um  
+  
+ conjunto de caracteres [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] a ser usado para a nova fonte.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Drawing.Font" /> usando um tamanho, um estilo, uma unidade e um conjunto de caracteres especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `gdiCharSet` parâmetro usa um valor na lista definida no arquivo de cabeçalho do SDK do Windows wingdi.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="family" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (string familyName, float emSize, System.Drawing.FontStyle style, System.Drawing.GraphicsUnit unit, byte gdiCharSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName, float32 emSize, valuetype System.Drawing.FontStyle style, valuetype System.Drawing.GraphicsUnit unit, unsigned int8 gdiCharSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.String,System.Single,System.Drawing.FontStyle,System.Drawing.GraphicsUnit,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+        <Parameter Name="gdiCharSet" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Uma representação de cadeia de caracteres do <see cref="T:System.Drawing.FontFamily" /> para o novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <param name="gdiCharSet">Um <see cref="T:System.Byte" /> que especifica um conjunto de caracteres de [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] a ser usado para esta fonte.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Drawing.Font" /> usando um tamanho, um estilo, uma unidade e um conjunto de caracteres especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `gdiCharSet` parâmetro usa um valor na lista definida no arquivo de cabeçalho do SDK do Windows wingdi. Aplicativos de formulários do Windows oferecem suporte a fontes TrueType e tem suporte limitado para as fontes OpenType. Se o `familyName` parâmetro especifica uma fonte que não está instalada no computador que executa o aplicativo ou não é suportada, Microsoft Sans Serif será substituída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (System.Drawing.FontFamily family, float emSize, System.Drawing.FontStyle style, System.Drawing.GraphicsUnit unit, byte gdiCharSet, bool gdiVerticalFont);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.FontFamily family, float32 emSize, valuetype System.Drawing.FontStyle style, valuetype System.Drawing.GraphicsUnit unit, unsigned int8 gdiCharSet, bool gdiVerticalFont) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.Drawing.FontFamily,System.Single,System.Drawing.FontStyle,System.Drawing.GraphicsUnit,System.Byte,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Drawing.FontFamily" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+        <Parameter Name="gdiCharSet" Type="System.Byte" />
+        <Parameter Name="gdiVerticalFont" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="family">O <see cref="T:System.Drawing.FontFamily" /> do novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <param name="gdiCharSet">Um <see cref="T:System.Byte" /> que especifica um  
+  
+ conjunto de caracteres [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] a ser usado para esta fonte.</param>
+        <param name="gdiVerticalFont">Um valor booliano que indica se a nova fonte é derivada de uma fonte vertical [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)].</param>
+        <summary>Inicializa uma nova <see cref="T:System.Drawing.Font" /> usando um tamanho, um estilo, uma unidade e um conjunto de caracteres especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `gdiCharSet` parâmetro usa um valor na lista definida no arquivo de cabeçalho do SDK do Windows wingdi.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="family" /> é <see langword="null" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Font (string familyName, float emSize, System.Drawing.FontStyle style, System.Drawing.GraphicsUnit unit, byte gdiCharSet, bool gdiVerticalFont);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName, float32 emSize, valuetype System.Drawing.FontStyle style, valuetype System.Drawing.GraphicsUnit unit, unsigned int8 gdiCharSet, bool gdiVerticalFont) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.#ctor(System.String,System.Single,System.Drawing.FontStyle,System.Drawing.GraphicsUnit,System.Byte,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+        <Parameter Name="emSize" Type="System.Single" />
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+        <Parameter Name="unit" Type="System.Drawing.GraphicsUnit" />
+        <Parameter Name="gdiCharSet" Type="System.Byte" />
+        <Parameter Name="gdiVerticalFont" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Uma representação de cadeia de caracteres do <see cref="T:System.Drawing.FontFamily" /> para o novo <see cref="T:System.Drawing.Font" />.</param>
+        <param name="emSize">O tamanho em da fonte em unidades especificadas pelo novo a <c>unidade</c> parâmetro.</param>
+        <param name="style">O <see cref="T:System.Drawing.FontStyle" /> da nova fonte.</param>
+        <param name="unit">O <see cref="T:System.Drawing.GraphicsUnit" /> da nova fonte.</param>
+        <param name="gdiCharSet">Um <see cref="T:System.Byte" /> que especifica um conjunto de caracteres de [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] a ser usado para esta fonte.</param>
+        <param name="gdiVerticalFont">Um valor booliano que indica se a nova <see cref="T:System.Drawing.Font" /> é derivada de uma fonte vertical [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)].</param>
+        <summary>Inicializa uma nova <see cref="T:System.Drawing.Font" /> usando o tamanho, o estilo, a unidade e o conjunto de caracteres especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `gdiCharSet` parâmetro usa um valor na lista definida no arquivo de cabeçalho do SDK do Windows wingdi. Se o `familyName` parâmetro especifica uma fonte que não está instalada no computador que executa o aplicativo ou não é suportada, Microsoft Sans Serif será substituída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="emSize" /> é menor ou igual a 0, é avaliado como infinito ou não é um número válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bold">
+      <MemberSignature Language="C#" Value="public bool Bold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Bold" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Bold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Drawing.Font" /> está em negrito.</summary>
+        <value>
+          <see langword="true" /> se este <see cref="T:System.Drawing.Font" /> estiver em negrito; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Drawing.Color.op_Inequality%2A> operador, o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Bold%2A> propriedade. Este exemplo é projetado para ser usado com um Windows Form que contém um botão chamado `Button2`. Cole o seguinte código no formulário e associar o `Button2_Click` método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.CharacterRangeExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.CharacterRangeExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.CharacterRangeExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CharacterRangeExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Drawing.Font" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Font" /> que esse método cria, convertido como um <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código clona um <xref:System.Drawing.Font> e desenha texto com essa fonte.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este <see cref="T:System.Drawing.Font" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Drawing.Font.Dispose%2A> permite que os recursos usados por este <xref:System.Drawing.Font> sejam realocadas para outras finalidades.  
+  
+ Chamar <xref:System.Drawing.Font.Dispose%2A> quando tiver terminado de usar o <xref:System.Drawing.Font>. O <xref:System.Drawing.Font.Dispose%2A> método deixa o <xref:System.Drawing.Font> em um estado inutilizável. Depois de chamar <xref:System.Drawing.Font.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Drawing.Font> para o coletor de lixo possa recuperar a memória que o <xref:System.Drawing.Font> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Drawing.Font.Dispose%2A> antes de liberar sua última referência para o <xref:System.Drawing.Font>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Drawing.Font> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser testado.</param>
+        <summary>Indica se o objeto especificado é um <see cref="T:System.Drawing.Font" /> e tem os mesmos valores de propriedade <see cref="P:System.Drawing.Font.FontFamily" />, <see cref="P:System.Drawing.Font.GdiVerticalFont" />, <see cref="P:System.Drawing.Font.GdiCharSet" />, <see cref="P:System.Drawing.Font.Style" />, <see cref="P:System.Drawing.Font.Size" /> e <see cref="P:System.Drawing.Font.Unit" /> que esse <see cref="T:System.Drawing.Font" />.</summary>
+        <returns>
+          <see langword="true" /> se o parâmetro <paramref name="obj" /> for um <see cref="T:System.Drawing.Font" /> e tiver os mesmos valores de propriedade <see cref="P:System.Drawing.Font.FontFamily" />, <see cref="P:System.Drawing.Font.GdiVerticalFont" />, <see cref="P:System.Drawing.Font.GdiCharSet" />, <see cref="P:System.Drawing.Font.Style" />, <see cref="P:System.Drawing.Font.Size" /> e <see cref="P:System.Drawing.Font.Unit" /> que esse <see cref="T:System.Drawing.Font" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código cria dois <xref:System.Drawing.Font> objetos e, em seguida, testa se eles são equivalentes.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Font ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public System.Drawing.FontFamily FontFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.FontFamily" /> associado a este <see cref="T:System.Drawing.Font" />.</summary>
+        <value>O <see cref="T:System.Drawing.FontFamily" /> associado a este <see cref="T:System.Drawing.Font" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.FontFamily> representa um grupo de fontes que têm um tipo de fonte semelhante, mas podem ter tamanhos diferentes e estilos (por exemplo, Arial, Times New Roman e Verdana).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHdc">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FromHdc (IntPtr hdc);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Font FromHdc(native int hdc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.FromHdc(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hdc" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hdc">Um identificador para um contexto de dispositivo.</param>
+        <summary>Cria um <see cref="T:System.Drawing.Font" /> do identificador especificado do Windows em um contexto de dispositivo.</summary>
+        <returns>O <see cref="T:System.Drawing.Font" /> criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para que esse método funcione, o `hdc` parâmetro deve conter um identificador para um contexto de dispositivo no qual uma fonte é selecionada. Este método não funcionará com um `hdc` adquirir um identificador de um [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> porque o `hdc` identificador não tem uma fonte selecionada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A fonte para o contexto de dispositivo especificado não é uma fonte TrueType.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHfont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FromHfont (IntPtr hfont);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Font FromHfont(native int hfont) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.FromHfont(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hfont" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hfont">Um identificador do Windows para uma fonte [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)].</param>
+        <summary>Cria um <see cref="T:System.Drawing.Font" /> com base no identificador especificado do Windows.</summary>
+        <returns>O <see cref="T:System.Drawing.Font" /> criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Obtém um identificador para um [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] fonte.  
+  
+-   Cria um <xref:System.Drawing.Font> desse identificador.  
+  
+-   Desenha texto na tela, usando o novo <xref:System.Drawing.Font>.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hfont" /> aponta para um objeto que não é uma fonte TrueType.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromLogFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FromLogFont (object lf);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Font FromLogFont(object lf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.FromLogFont(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lf" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lf">Um <see cref="T:System.Object" /> que representa o [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] <see langword="LOGFONT" /> estrutura do qual criar o <see cref="T:System.Drawing.Font" />.</param>
+        <summary>Cria um <see cref="T:System.Drawing.Font" /> da fonte lógico GDI especificado (<c>LOGFONT</c>) estrutura.</summary>
+        <returns>O <see cref="T:System.Drawing.Font" /> criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `LOGFONT`, ou a fonte lógico, é uma estrutura que contém 14 propriedades que descrevem uma determinada fonte. Para obter mais informações, consulte "A fonte lógico" na documentação do desenvolvimento do Windows em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromLogFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FromLogFont (object lf, IntPtr hdc);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Font FromLogFont(object lf, native int hdc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.FromLogFont(System.Object,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lf" Type="System.Object" />
+        <Parameter Name="hdc" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="lf">Um <see cref="T:System.Object" /> que representa o [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] <see langword="LOGFONT" /> estrutura do qual criar o <see cref="T:System.Drawing.Font" />.</param>
+        <param name="hdc">Um identificador para um contexto de dispositivo que contém informações adicionais sobre o <c>lf</c> estrutura.</param>
+        <summary>Cria um <see cref="T:System.Drawing.Font" /> da fonte lógico GDI especificado (<c>LOGFONT</c>) estrutura.</summary>
+        <returns>O <see cref="T:System.Drawing.Font" /> criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `LOGFONT`, ou a fonte lógico, é uma estrutura que contém 14 propriedades que descrevem uma determinada fonte. Para obter mais informações, consulte "A fonte lógico" na documentação do desenvolvimento do Windows em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A fonte não é uma fonte TrueType.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GdiCharSet">
+      <MemberSignature Language="C#" Value="public byte GdiCharSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 GdiCharSet" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.GdiCharSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de byte que especifica o conjunto de caracteres GDI usado por esse <see cref="T:System.Drawing.Font" />.</summary>
+        <value>Um valor de byte que especifica o conjunto de caracteres [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] usado por esse <see cref="T:System.Drawing.Font" />. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna 1, a menos que outro conjunto de caracteres é especificado no <xref:System.Drawing.Font.%23ctor%28System.String%2CSystem.Single%2CSystem.Drawing.FontStyle%2CSystem.Drawing.GraphicsUnit%2CSystem.Byte%29> construtor. Essa propriedade tem um valor na lista definida no arquivo de cabeçalho do SDK do Windows wingdi. Os conjuntos de caracteres e valores de byte são listados na tabela a seguir.  
+  
+|Conjunto de caracteres|Valor|  
+|-------------------|-----------|  
+|ANSI|0|  
+|PADRÃO|1|  
+|SÍMBOLO|2|  
+|SHIFTJIS|128|  
+|HANGEUL|129|  
+|HANGUL|129|  
+|GB2312|134|  
+|CHINESEBIG5|136|  
+|OEM|255|  
+|JOHAB|130|  
+|HEBRAICO|177|  
+|ÁRABE|178|  
+|GREGO|161|  
+|TURCO|162|  
+|VIETNAMITA|163|  
+|TAILANDÊS|222|  
+|EASTEUROPE|238|  
+|RUSSO|204|  
+|MAC|77|  
+|BÁLTICO|186|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GdiVerticalFont">
+      <MemberSignature Language="C#" Value="public bool GdiVerticalFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GdiVerticalFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.GdiVerticalFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se esta <see cref="T:System.Drawing.Font" /> é derivada de uma fonte vertical GDI.</summary>
+        <value>
+          <see langword="true" /> se esta <see cref="T:System.Drawing.Font" /> é derivada de uma fonte vertical [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para determinar se uma fonte é compatível com controles nativos do Win32 em plataformas não-Unicode.  
+  
+ <xref:System.Drawing.Font.GdiVerticalFont%2A>Retorna apenas `true` se essa fonte foi criada de um GDI clássico  
+  
+ definição de fonte, como um LOGFONT ou HFONT.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para este <see cref="T:System.Drawing.Font" />.</summary>
+        <returns>O código hash para este <see cref="T:System.Drawing.Font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Font>.  
+  
+-   Obtém o código hash para essa fonte.  
+  
+-   Exibe uma caixa de mensagem com o valor do código de hash.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeight">
+      <MemberSignature Language="C#" Value="public float GetHeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetHeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.GetHeight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o espaçamento entre linhas, em pixels, dessa fonte.</summary>
+        <returns>O espaçamento entre linhas, em pixels, dessa fonte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O espaçamento entre linhas de um <xref:System.Drawing.Font> é a distância vertical entre as linhas de base de duas linhas consecutivas de texto. Portanto, o espaçamento inclui o espaço em branco entre linhas junto com a altura do caractere em si.  
+  
+ Se o <xref:System.Drawing.Font.Unit%2A> propriedade da fonte é definida como algo diferente de <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType>, a altura (em pixels) é calculada usando a resolução vertical da exibição da tela. Por exemplo, suponha que a unidade de fonte é polegadas e o tamanho da fonte é 0,3. Além disso, suponha que para a família de fonte correspondente, a altura em é 2048 e o espaçamento é 2355. Para uma exibição de tela com uma resolução vertical de 96 pontos por polegada, você pode calcular a altura da seguinte maneira:  
+  
+ 2355*(0.3/2048)\*96 = 33.11719  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeight">
+      <MemberSignature Language="C#" Value="public float GetHeight (System.Drawing.Graphics graphics);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetHeight(class System.Drawing.Graphics graphics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.GetHeight(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Um <see cref="T:System.Drawing.Graphics" /> que contém a resolução vertical, em pontos por polegada, do dispositivo de vídeo, bem como as configurações de unidade de página e a escala de página.</param>
+        <summary>Retorna o espaçamento entre linhas, na unidade atual de um <see cref="T:System.Drawing.Graphics" /> especificado, dessa fonte.</summary>
+        <returns>O espaçamento entre linhas, em pixels, dessa fonte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O espaçamento entre linhas de um <xref:System.Drawing.Font> é a distância vertical entre as linhas de base de duas linhas consecutivas de texto. Portanto, o espaçamento inclui o espaço em branco entre linhas junto com a altura do caractere em si.  
+  
+ Se o <xref:System.Drawing.Font.Unit%2A> propriedade da fonte é definida como algo diferente de <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType>, a altura, em pixels, é calculada usando a resolução vertical especificada <xref:System.Drawing.Graphics> objeto. Por exemplo, suponha que a unidade de fonte é polegadas e o tamanho da fonte é 0,3. Além disso, suponha que para a família de fonte correspondente, a altura em é 2048 e o espaçamento é 2355. Se o <xref:System.Drawing.Graphics> objeto tem um <xref:System.Drawing.Font.Unit%2A> valor da propriedade <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType> e um <xref:System.Drawing.Graphics.DpiY%2A> valor da propriedade de 96 pontos por polegada, a altura é calculada da seguinte maneira:  
+  
+ 2355*(0.3/2048)\*96 = 33.1171875  
+  
+ Continuando com o mesmo exemplo, suponha que o <xref:System.Drawing.Font.Unit%2A> propriedade o <xref:System.Drawing.Graphics> objeto é definido como <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType> em vez de <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType>. Em seguida, (usando 1 polegada = 25.4 milímetros) a altura, em milímetros, é calculada da seguinte maneira:  
+  
+ 2355*(0.3/2048)25.4 = 8.762256  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Font>.  
+  
+-   Desenha uma linha de texto na tela, usando o novo <xref:System.Drawing.Font>.  
+  
+-   Obtém a altura da fonte.  
+  
+-   Desenha uma segunda linha de texto diretamente abaixo da primeira linha.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="graphics" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeight">
+      <MemberSignature Language="C#" Value="public float GetHeight (float dpi);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetHeight(float32 dpi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.GetHeight(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dpi" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dpi">A resolução vertical, em pontos por polegada, usada para calcular a altura da fonte.</param>
+        <summary>Retorna a altura, em pixels, isso <see cref="T:System.Drawing.Font" /> quando desenhado em um dispositivo com a resolução vertical especificada.</summary>
+        <returns>A altura, em pixels, deste <see cref="T:System.Drawing.Font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Drawing.Font.Unit%2A> propriedade da fonte é definida como algo diferente de <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType>, a altura (em pixels) é calculada usando a resolução vertical da exibição da tela. Por exemplo, suponha que a unidade de fonte é polegadas e o tamanho da fonte é 0,3. Além disso, suponha que para a família de fonte correspondente, a altura em é 2048 e o espaçamento é 2355. Se a resolução vertical especificada é 96 pontos por polegada, a altura é calculada da seguinte maneira:  
+  
+ 2355*(0.3/2048)\*96 = 33.1171875  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O espaçamento entre linhas dessa fonte.</summary>
+        <value>O espaçamento entre linhas, em pixels, dessa fonte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O espaçamento entre linhas é a distância vertical entre as linhas base de duas linhas consecutivas de texto. Portanto, o espaçamento inclui o espaço em branco entre linhas junto com a altura do caractere em si.  
+  
+ Se o <xref:System.Drawing.Font.Unit%2A> propriedade da fonte é definida como algo diferente de <xref:System.Drawing.GraphicsUnit?displayProperty=nameWithType>, a altura (em pixels) é calculada usando a resolução vertical da exibição da tela. Por exemplo, suponha que a unidade de fonte é polegadas e o tamanho da fonte é 0,3. Além disso, suponha que para a família de fonte correspondente, a altura em é 2048 e o espaçamento é 2355. Para uma exibição de tela com uma resolução vertical de 96 pontos por polegada, você pode calcular a altura da seguinte maneira:  
+  
+ 2355*(0.3/2048)\*96 = 33.11719  
+  
+ O valor retornado pelo <xref:System.Drawing.Font.GetHeight%2A> método seria 33.11719, e o valor retornado pelo <xref:System.Drawing.Font.Height%2A> propriedade seria 34. O <xref:System.Drawing.Font.Height%2A> propriedade é o valor retornado por <xref:System.Drawing.Font.GetHeight%2A>, arredondado para cima até o inteiro mais próximo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSystemFont">
+      <MemberSignature Language="C#" Value="public bool IsSystemFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSystemFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.IsSystemFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fonte é um membro de <see cref="T:System.Drawing.SystemFonts" />.</summary>
+        <value>
+          <see langword="true" />Se a fonte for um membro de <see cref="T:System.Drawing.SystemFonts" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário altera a fonte do sistema, o <xref:System.Drawing.Font.IsSystemFont%2A> propriedade poderia retornar `true`, mesmo se a fonte não é realmente uma fonte de sistema. Para evitar essa situação, se você estiver usando fontes de sistema em seu aplicativo, você deve controlar as alterações de preferência do usuário manipulando o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> ou <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Italic">
+      <MemberSignature Language="C#" Value="public bool Italic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Italic" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Italic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta fonte tem o estilo itálico aplicado.</summary>
+        <value>
+          <see langword="true" /> para indicar que essa fonte tem o estilo itálico aplicado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.FontNameEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.FontConverter/FontNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de face desse <see cref="T:System.Drawing.Font" />.</summary>
+        <value>Uma representação de cadeia de caracteres do nome de face desse <see cref="T:System.Drawing.Font" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Size%2A>, <xref:System.Drawing.Font.SizeInPoints%2A>, <xref:System.Drawing.Font.Name%2A>, <xref:System.Drawing.Font.Style%2A>, e <xref:System.Drawing.Font.Unit%2A> propriedades. Este exemplo é projetado para ser usado com um Windows Form que contém um <xref:System.Windows.Forms.ComboBox> chamado `ComboBox1` que é preenchida com as cadeias de caracteres "Maior" e "Menores". Cole o seguinte código para o formulário e associar o `ComboBox1_SelectedIndexChanged` método com o <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged> evento o <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ [!code-cpp[System.Drawing.FontsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.FontsExample/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.FontsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.FontsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalFontName">
+      <MemberSignature Language="C#" Value="public string OriginalFontName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginalFontName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.OriginalFontName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da fonte especificado originalmente.</summary>
+        <value>A cadeia de caracteres que representa o nome da fonte especificado originalmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome real e o nome da fonte original podem ser diferentes. Requisitos de sistema podem causar o uso de uma fonte que não seja a fonte especificada originalmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public float Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho EM deste <see cref="T:System.Drawing.Font" /> medido nas unidades especificadas pela propriedade <see cref="P:System.Drawing.Font.Unit" />.</summary>
+        <value>O tamanho EM deste <see cref="T:System.Drawing.Font" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Size%2A>, <xref:System.Drawing.Font.SizeInPoints%2A>, e <xref:System.Drawing.Font.Unit%2A> propriedades. Este exemplo é projetado para ser usado com um Windows Form que contém um <xref:System.Windows.Forms.ComboBox> chamado `ComboBox1` que é preenchida com as cadeias de caracteres "Maior" e "Menores". Cole o seguinte código para o formulário e associar o `ComboBox1_SelectedIndexChanged` método com o <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged> evento o <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ [!code-cpp[System.Drawing.FontsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.FontsExample/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.FontsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.FontsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeInPoints">
+      <MemberSignature Language="C#" Value="public float SizeInPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 SizeInPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.SizeInPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho EM, em pontos, desse <see cref="T:System.Drawing.Font" />.</summary>
+        <value>O tamanho EM, em pontos, desse <see cref="T:System.Drawing.Font" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Size%2A>, <xref:System.Drawing.Font.SizeInPoints%2A>, e <xref:System.Drawing.Font.Unit%2A> propriedades. Este exemplo é projetado para ser usado com um Windows Form que contém um <xref:System.Windows.Forms.ComboBox> chamado `ComboBox1` que é preenchida com as cadeias de caracteres "Maior" e "Menores". Cole o seguinte código para o formulário e associar o `ComboBox1_SelectedIndexChanged` método com o <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged> evento o <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ [!code-cpp[System.Drawing.FontsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.FontsExample/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.FontsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.FontsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strikeout">
+      <MemberSignature Language="C#" Value="public bool Strikeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Strikeout" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Strikeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Drawing.Font" /> especifica uma linha horizontal através da fonte.</summary>
+        <value>
+          <see langword="true" /> se este <see cref="T:System.Drawing.Font" /> tiver uma linha horizontal através dele; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Drawing.FontStyle Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.FontStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de estilo para este <see cref="T:System.Drawing.Font" />.</summary>
+        <value>Uma <see cref="T:System.Drawing.FontStyle" /> enumeração que contém informações de estilo para esse <see cref="T:System.Drawing.Font" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Drawing.Font> propriedade de um botão para uma nova fonte em negrito usando o <xref:System.Drawing.FontStyle> enumeração. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário que contém um botão chamado `Button1` e cole o seguinte código para ele. Associar o `Button1_Click` método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#11)]
+ [!code-csharp[System.Drawing.MiscExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#11)]
+ [!code-vb[System.Drawing.MiscExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Popula um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemFontName">
+      <MemberSignature Language="C#" Value="public string SystemFontName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SystemFontName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.SystemFontName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da fonte do sistema se a propriedade <see cref="P:System.Drawing.Font.IsSystemFont" /> retorna <see langword="true" />.</summary>
+        <value>O nome da fonte do sistema, se <see cref="P:System.Drawing.Font.IsSystemFont" /> retorna <see langword="true" />, caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome retornado pelo <xref:System.Drawing.Font.SystemFontName%2A> propriedade deve ser um dos membros a <xref:System.Drawing.SystemFonts>, convertido em uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToHfont">
+      <MemberSignature Language="C#" Value="public IntPtr ToHfont ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int ToHfont() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.ToHfont" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um identificador para esta <see cref="T:System.Drawing.Font" />.</summary>
+        <returns>Um identificador do Windows para esta <see cref="T:System.Drawing.Font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar esse método, você deve descartar resultante `Hfont` usando o [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `DeleteObject` método para garantir que os recursos são liberados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Drawing.Font> e, em seguida, obtém um identificador para que <xref:System.Drawing.Font>. O exemplo é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">A operação foi malsucedida.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToLogFont">
+      <MemberSignature Language="C#" Value="public void ToLogFont (object logFont);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ToLogFont(object logFont) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.ToLogFont(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logFont" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="logFont">Um <see cref="T:System.Object" /> representar o <see langword="LOGFONT" /> estrutura que esse método cria.</param>
+        <summary>Cria uma fonte de lógica de GDI (<c>LOGFONT</c>) estrutura neste <see cref="T:System.Drawing.Font" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define o `logFont` parâmetro para os resultados da conversão de fonte. Para obter mais informações sobre fontes lógicas, consulte [estrutura LOGFONT](http://msdn.microsoft.com/library/dd145037.aspx).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToLogFont">
+      <MemberSignature Language="C#" Value="public void ToLogFont (object logFont, System.Drawing.Graphics graphics);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ToLogFont(object logFont, class System.Drawing.Graphics graphics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.ToLogFont(System.Object,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logFont" Type="System.Object" />
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="logFont">Um <see cref="T:System.Object" /> representar o <see langword="LOGFONT" /> estrutura que esse método cria.</param>
+        <param name="graphics">Um <see cref="T:System.Drawing.Graphics" /> que fornece informações adicionais para o <see langword="LOGFONT" /> estrutura.</param>
+        <summary>Cria uma fonte de lógica de GDI (<c>LOGFONT</c>) estrutura neste <see cref="T:System.Drawing.Font" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define o `logFont` parâmetro para os resultados da conversão de fonte. Para obter mais informações sobre fontes lógicas, consulte [estrutura LOGFONT](http://msdn.microsoft.com/library/dd145037.aspx).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="graphics" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Font.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres legível por humanos deste <see cref="T:System.Drawing.Font" />.</summary>
+        <returns>Uma cadeia de caracteres que representa este <see cref="T:System.Drawing.Font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada tem o seguinte formato:  
+  
+ [Fonte: nome =*fontName*, tamanho =*tamanho*, unidades =*unidades*, GDiCharSet =*gdiCharSet*, GdiVerticalFont =*booliano*]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Font>.  
+  
+-   Obtém uma cadeia de caracteres que representa a fonte.  
+  
+-   Exibe a cadeia de caracteres em uma caixa de mensagem.  
+  
+ [!code-cpp[System.Drawing.ClassicFontsExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicFontsExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicFontsExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontsExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Underline">
+      <MemberSignature Language="C#" Value="public bool Underline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Underline" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Underline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Drawing.Font" /> está sublinhado.</summary>
+        <value>
+          <see langword="true" /> se este <see cref="T:System.Drawing.Font" /> está sublinhado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unit">
+      <MemberSignature Language="C#" Value="public System.Drawing.GraphicsUnit Unit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.GraphicsUnit Unit" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Font.Unit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.FontConverter/FontUnitConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a unidade de medida deste <see cref="T:System.Drawing.Font" />.</summary>
+        <value>Um <see cref="T:System.Drawing.GraphicsUnit" /> que representa a unidade de medida deste <see cref="T:System.Drawing.Font" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Font.%23ctor%2A> construtor e o <xref:System.Drawing.Font.Size%2A>, <xref:System.Drawing.Font.SizeInPoints%2A>, e <xref:System.Drawing.Font.Unit%2A> propriedades. Este exemplo é projetado para ser usado com um Windows Form que contém um <xref:System.Windows.Forms.ComboBox> chamado `ComboBox1` que é preenchida com as cadeias de caracteres "Maior" e "Menores". Cole o seguinte código para o formulário e associar o `ComboBox1_SelectedIndexChanged` método com o <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged> evento o <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ [!code-cpp[System.Drawing.FontsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.FontsExample/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.FontsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.FontsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

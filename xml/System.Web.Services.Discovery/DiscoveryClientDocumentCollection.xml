@@ -1,0 +1,258 @@
+<Type Name="DiscoveryClientDocumentCollection" FullName="System.Web.Services.Discovery.DiscoveryClientDocumentCollection">
+  <TypeSignature Language="C#" Value="public sealed class DiscoveryClientDocumentCollection : System.Collections.DictionaryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DiscoveryClientDocumentCollection extends System.Collections.DictionaryBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.DictionaryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de documentos descobertos durante a descoberta de serviços da Web em XML que foram baixados para o cliente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade <xref:System.Web.Services.Discovery.DiscoveryClientProtocol> é do tipo <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir aplica a descoberta de serviço da Web em XML e baixa os documentos de descoberta para o cliente. Os nomes dos documentos de descoberta dentro de <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection> são enviadas ao console.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection2/CPP/discoveryclientdocumentcollection.cpp#1)]
+ [!code-csharp[DiscoveryClientDocumentCollection2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection2/CS/discoveryclientdocumentcollection.cs#1)]
+ [!code-vb[DiscoveryClientDocumentCollection2#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection2/VB/discoveryclientdocumentcollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryClientDocumentCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string url, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string url, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL do documento para adicionar ao <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</param>
+        <param name="value">Um documento de descoberta para adicionar ao <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</param>
+        <summary>Adiciona um objeto com a URL especificada para o <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir adiciona dois documentos de descoberta para um <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection>.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection_ctor#2](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/CPP/discoveryclientdocumentcollection_ctor.cpp#2)]
+ [!code-csharp[DiscoveryClientDocumentCollection_ctor#2](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/CS/discoveryclientdocumentcollection_ctor.cs#2)]
+ [!code-vb[DiscoveryClientDocumentCollection_ctor#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/VB/discoveryclientdocumentcollection_ctor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Uma entrada com uma chave de <paramref name="url" /> já existe o <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL para o documento a ser localizado dentro de <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> contém um objeto com a URL especificada.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> contém um objeto com a URL especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Contains%2A> método para determinar se o documento de descoberta contém um membro com a URL armazenada no `StringUrl` variável.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection_Keys#3](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/CPP/discoveryclientdocumentcollection_keys.cpp#3)]
+ [!code-csharp[DiscoveryClientDocumentCollection_Keys#3](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/CS/discoveryclientdocumentcollection_keys.cs#3)]
+ [!code-vb[DiscoveryClientDocumentCollection_Keys#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/VB/discoveryclientdocumentcollection_keys.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string url] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL do documento de descoberta para obter ou definir a partir de <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</param>
+        <summary>Obtém ou define um objeto de documento de descoberta de um cliente de <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> com a URL especificada.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o documento de descoberta e baixado no cliente. O tipo subjacente do objeto pode ser um <see cref="T:System.Web.Services.Description.ServiceDescription" />, <see cref="T:System.Xml.Schema.XmlSchema" />, ou <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir gera para o console do tipo do documento de descoberta no <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection> que tem uma URL de correspondência do valor da `myStringUrl` variável.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection_ctor#4](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/CPP/discoveryclientdocumentcollection_ctor.cpp#4)]
+ [!code-csharp[DiscoveryClientDocumentCollection_ctor#4](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/CS/discoveryclientdocumentcollection_ctor.cs#4)]
+ [!code-vb[DiscoveryClientDocumentCollection_ctor#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/VB/discoveryclientdocumentcollection_ctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> objeto com todas as chaves de <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém as chaves do <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir gera chaves dentro de <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection> para o console.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection_Keys#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/CPP/discoveryclientdocumentcollection_keys.cpp#1)]
+ [!code-csharp[DiscoveryClientDocumentCollection_Keys#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/CS/discoveryclientdocumentcollection_keys.cs#1)]
+ [!code-vb[DiscoveryClientDocumentCollection_Keys#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/VB/discoveryclientdocumentcollection_keys.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL para o documento de descoberta para remova o <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</param>
+        <summary>Remove um objeto com a URL especificada do <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir remove o documento de descoberta com a URL `http://www.contoso.com/service1.disco` do <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection>.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection_ctor#3](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/CPP/discoveryclientdocumentcollection_ctor.cpp#3)]
+ [!code-csharp[DiscoveryClientDocumentCollection_ctor#3](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/CS/discoveryclientdocumentcollection_ctor.cs#3)]
+ [!code-vb[DiscoveryClientDocumentCollection_ctor#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_ctor/VB/discoveryclientdocumentcollection_ctor.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> objeto com todos os valores de <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir gera os valores dentro de <xref:System.Web.Services.Discovery.DiscoveryClientDocumentCollection> para o console.  
+  
+ [!code-cpp[DiscoveryClientDocumentCollection_Keys#2](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/CPP/discoveryclientdocumentcollection_keys.cpp#2)]
+ [!code-csharp[DiscoveryClientDocumentCollection_Keys#2](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/CS/discoveryclientdocumentcollection_keys.cs#2)]
+ [!code-vb[DiscoveryClientDocumentCollection_Keys#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientDocumentCollection_Keys/VB/discoveryclientdocumentcollection_keys.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

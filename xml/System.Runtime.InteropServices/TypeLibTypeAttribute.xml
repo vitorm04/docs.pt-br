@@ -1,0 +1,119 @@
+<Type Name="TypeLibTypeAttribute" FullName="System.Runtime.InteropServices.TypeLibTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeLibTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeLibTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém o <see cref="T:System.Runtime.InteropServices.TYPEFLAGS" /> que foram originalmente importados para esse tipo na biblioteca de tipos COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) aplica esse atributo para classes ou interfaces.  
+  
+ Esse atributo é aplicado quando uma biblioteca de tipos é importada e nunca deve ser alterada. Ele só será aplicado quando o método <xref:System.Runtime.InteropServices.TYPEFLAGS> são avaliadas como diferente de zero. O atributo foi projetado para ser usada por ferramentas que precisa saber como original <xref:System.Runtime.InteropServices.TYPEFLAGS> foram definidas. O common language runtime não usa esse atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como obter o <xref:System.Runtime.InteropServices.TypeLibTypeAttribute> valor de uma classe ou interface.  
+  
+ [!code-cpp[ImprovedInteropSnippets#4](~/samples/snippets/cpp/VS_Snippets_CLR/ImprovedInteropSnippets/CPP/codefile4.cpp#4)]
+ [!code-csharp[ImprovedInteropSnippets#4](~/samples/snippets/csharp/VS_Snippets_CLR/ImprovedInteropSnippets/CS/codefile4.cs#4)]
+ [!code-vb[ImprovedInteropSnippets#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ImprovedInteropSnippets/VB/codefile4.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibTypeAttribute (short flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibTypeAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="flags">O <see cref="T:System.Runtime.InteropServices.TypeLibTypeFlags" /> valor para o tipo de atributo como encontrado na biblioteca de tipos do qual foi importado.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="TypeLibTypeAttribute" /> com o valor <see cref="T:System.Runtime.InteropServices.TypeLibTypeFlags" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibTypeAttribute (System.Runtime.InteropServices.TypeLibTypeFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.TypeLibTypeFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibTypeAttribute.#ctor(System.Runtime.InteropServices.TypeLibTypeFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Runtime.InteropServices.TypeLibTypeFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">O <see cref="T:System.Runtime.InteropServices.TypeLibTypeFlags" /> valor para o tipo de atributo como encontrado na biblioteca de tipos do qual foi importado.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="TypeLibTypeAttribute" /> com o valor <see cref="T:System.Runtime.InteropServices.TypeLibTypeFlags" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.TypeLibTypeFlags Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.TypeLibTypeFlags Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.TypeLibTypeAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibTypeFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Runtime.InteropServices.TypeLibTypeFlags" /> valor para este tipo.</summary>
+        <value>O <see cref="T:System.Runtime.InteropServices.TypeLibTypeFlags" /> valor para este tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

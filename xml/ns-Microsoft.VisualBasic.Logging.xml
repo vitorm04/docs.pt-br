@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.Logging">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.VisualBasic.Logging" /> namespace contém tipos que oferecem suporte a <see langword="My" /> log de objetos no Visual Basic e fornece um ouvinte de log simples que direciona a saída de log para o arquivo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `My` objetos de log, consulte <xref:Microsoft.VisualBasic.Logging.Log>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

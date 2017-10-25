@@ -1,0 +1,110 @@
+<Type Name="RequestBringIntoViewEventArgs" FullName="System.Windows.RequestBringIntoViewEventArgs">
+  <TypeSignature Language="C#" Value="public class RequestBringIntoViewEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestBringIntoViewEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RequestBringIntoViewEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Windows.FrameworkElement.RequestBringIntoView" /> eventos roteados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=nameWithType> é gerado por elementos ao chamar <xref:System.Windows.FrameworkElement.BringIntoView%2A> desse elemento. Geralmente, esse evento roteado não é tratado pela origem. Classes intermediárias que não implementam roláveis regiões ou conceitos semelhantes que corta o conteúdo não devem manipular o evento.  O evento deve ter permissão para bolhas para elementos pai que implementam uma região de rolagem ou especifiquem <xref:System.Windows.UIElement.ClipToBounds%2A> `false`. Esses elementos pai normalmente fornecem manipulação de classe para o <xref:System.Windows.FrameworkElement.RequestBringIntoView> evento, que é onde a lógica de processamento necessário ocorre sempre que um determinado elemento solicita que ele se tornar visíveis dentro da região de recorte.  
+  
+ Elementos de conteúdo podem fazer com que o evento a ser gerado por seus hosts de conteúdo (chamando <xref:System.Windows.FrameworkContentElement.BringIntoView%2A> e gerando <xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=nameWithType> do host de conteúdo). Da mesma forma, você pode solicitar os elementos de árvore lógica para ser colocado em modo de exibição com o método auxiliar <xref:System.Windows.LogicalTreeHelper.BringIntoView%2A?displayProperty=nameWithType>.  
+  
+ Um <xref:System.Windows.Controls.ListBox> implementa um método relacionado, mas diferente <xref:System.Windows.Controls.ListBox.ScrollIntoView%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RequestBringIntoViewEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador genérico para chamar em uma forma de um tipo específico.</param>
+        <param name="genericTarget">O destino para chamar o manipulador no.</param>
+        <summary>Invoca manipuladores de eventos de uma maneira de um tipo específico, que pode aumentar a eficiência do sistema de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação converte o manipulador genérico como um <xref:System.Windows.RequestBringIntoViewEventHandler> e, em seguida, invoca. Para obter detalhes sobre esse padrão de implementação e os motivos para ele, consulte <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> e [visão geral sobre eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject TargetObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RequestBringIntoViewEventArgs.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que deve ficar visível em resposta ao evento.</summary>
+        <value>O objeto que chamou <see cref="M:System.Windows.FrameworkElement.BringIntoView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse objeto normalmente é o mesmo objeto, como retornado por <xref:System.Windows.RoutedEventArgs.Source%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetRect">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect TargetRect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect TargetRect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RequestBringIntoViewEventArgs.TargetRect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a região retangular no espaço de coordenadas do objeto que deve ficar visível.</summary>
+        <value>O espaço retangular solicitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a assinatura de <xref:System.Windows.FrameworkElement.BringIntoView%2A> que foi chamado gerar o evento não especificou um retângulo de destino, essa propriedade pode ser o <xref:System.Windows.Rect.Empty%2A> valor o <xref:System.Windows.Rect> estrutura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,539 @@
+<Type Name="ToggleButton" FullName="System.Windows.Controls.Primitives.ToggleButton">
+  <TypeSignature Language="C#" Value="public class ToggleButton : System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ToggleButton extends System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ToggleButton" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Checked")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A classe base para controles que podem mudar estados, como <see cref="T:System.Windows.Controls.CheckBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.ToggleButton> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>.  
+  
+ O <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade especifica o estado de <xref:System.Windows.Controls.Primitives.ToggleButton>. O <xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> propriedade especifica se o <xref:System.Windows.Controls.Primitives.ToggleButton> tem dois ou três estados.  
+  
+## <a name="customizing-the-togglebutton-control"></a>Personalizando o controle ToggleButton  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.Primitives.ToggleButton> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.Primitives.ToggleButton>, consulte [modelos e ToggleButton Syles](~/docs/framework/wpf/controls/togglebutton-syles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade é presente no modelo padrão do controle de botão e é definida usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToggleButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.ToggleButton" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Checked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Checked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.ToggleButton.Checked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> é marcado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Checked"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ToggleButton.CheckedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Assina a exemplo a seguir altera o <xref:System.Windows.Controls.Primitives.ToggleButton.Checked> e <xref:System.Windows.Controls.Primitives.ToggleButton.UncheckedEvent> eventos para alterar o <xref:System.Windows.Controls.TextBlock.FontStyle%2A> do <xref:System.Windows.Controls.TextBlock>, `textBlock1`.  
+  
+ [!code-xaml[CheckBox_Snippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml#2)]  
+  
+ [!code-csharp[CheckBox_Snippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[CheckBox_Snippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CheckBox_Snippets/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CheckedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CheckedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ToggleButton.CheckedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Checked" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Indeterminate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Indeterminate" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.ToggleButton.Indeterminate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o estado de um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> não é ativado nem desativado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Indeterminate"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ToggleButton.IndeterminateEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndeterminateEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent IndeterminateEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent IndeterminateEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ToggleButton.IndeterminateEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Indeterminate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsChecked">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsChecked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsChecked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ToggleButton.IsChecked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.NullableBoolConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> está marcado.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> estiver marcado, falso se o <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> estiver desmarcado; caso contrário, <see langword="null" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle que herda de <xref:System.Windows.Controls.Primitives.ToggleButton> determina o comportamento quando esta propriedade é `null`.  
+  
+## <a name="checkbox"></a>CheckBox  
+ Quando o <xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> está definida como true, um usuário pode clicar em um <xref:System.Windows.Controls.CheckBox> para selecionar três estados possíveis. A tabela a seguir descreve os três estados de um <xref:System.Windows.Controls.CheckBox>.  
+  
+|Estado das<xref:System.Windows.Controls.CheckBox>|Valor de <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>|  
+|------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Selecionado|`true`|  
+|Não Selecionado|`false`|  
+|Indeterminado|`null`|  
+  
+ Se <xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> é false, ainda programaticamente você pode definir essa propriedade `null` para colocar o <xref:System.Windows.Controls.CheckBox> em um estado indeterminado, mas o usuário não é possível definir o <xref:System.Windows.Controls.CheckBox> para o estado indeterminado por meio do [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].  
+  
+## <a name="radiobutton"></a>RadioButton  
+ Se você definir essa propriedade como `null` em uma <xref:System.Windows.Controls.RadioButton>, o <xref:System.Windows.Controls.RadioButton> está desmarcada.  
+  
+<a name="xamlAttributeUsage_IsChecked"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* `IsChecked`="<xref:System.Boolean>"/>  
+  
+ \- ou -  
+  
+ <*objeto* `IsChecked`= "{[extensão de marcação X:Null](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="dependencyPropertyInfo_IsChecked"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ToggleButton.IsCheckedProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.CheckBox> definido como um estado indeterminado.  
+  
+ [!code-xaml[CheckBox_Snippets#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCheckedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCheckedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCheckedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ToggleButton.IsCheckedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ToggleButton.IsChecked" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThreeState">
+      <MemberSignature Language="C#" Value="public bool IsThreeState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsThreeState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ToggleButton.IsThreeState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se o controle oferece suporte a dois ou três estados.</summary>
+        <value>
+          <see langword="true" /> se o controle der suporte a três estados; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade pode ser definida como `null` como um terceiro estado quando <xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> é `true`.  
+  
+<a name="dependencyPropertyInfo_IsThreeState"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeStateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThreeStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsThreeStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsThreeStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ToggleButton.IsThreeStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ToggleButton.IsThreeState" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChecked">
+      <MemberSignature Language="C#" Value="protected virtual void OnChecked (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChecked(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.OnChecked(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Checked" />.</param>
+        <summary>Chamado quando um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> gera um <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Checked" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando um controle é clicado, o mouse ou o teclado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um apropriado <see cref="T:System.Windows.Automation.Peers.ToggleButtonAutomationPeer" /> implementação para este controle, como parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infraestrutura.</summary>
+        <returns>A implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> específica ao tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIndeterminate">
+      <MemberSignature Language="C#" Value="protected virtual void OnIndeterminate (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIndeterminate(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.OnIndeterminate(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Indeterminate" />.</param>
+        <summary>Chamado quando um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> gera um <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Indeterminate" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnToggle">
+      <MemberSignature Language="C#" Value="protected virtual void OnToggle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnToggle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.OnToggle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pelo <see cref="M:System.Windows.Controls.Primitives.ToggleButton.OnClick" /> método para implementar o comportamento de alternância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método alterna o <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnchecked">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnchecked (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnchecked(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.OnUnchecked(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Unchecked" />.</param>
+        <summary>Chamado quando um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> gera um <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Unchecked" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToggleButton.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres de um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> objeto.</summary>
+        <returns>Representação de cadeia de caracteres um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.ToggleButton.ToString%2A> método retorna uma cadeia de caracteres que contém o <xref:System.Windows.Controls.ContentControl.Content%2A> e o valor da <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unchecked">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unchecked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unchecked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.ToggleButton.Unchecked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.Primitives.ToggleButton" /> está desmarcado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Unchecked"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ToggleButton.UncheckedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Assina a exemplo a seguir altera o <xref:System.Windows.Controls.Primitives.ToggleButton.Checked> e <xref:System.Windows.Controls.Primitives.ToggleButton.UncheckedEvent> eventos para alterar o <xref:System.Windows.Controls.TextBlock.FontStyle%2A> do <xref:System.Windows.Controls.TextBlock>, `textBlock1`.  
+  
+ [!code-xaml[CheckBox_Snippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml#2)]  
+  
+ [!code-csharp[CheckBox_Snippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[CheckBox_Snippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CheckBox_Snippets/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UncheckedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UncheckedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UncheckedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ToggleButton.UncheckedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Unchecked" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

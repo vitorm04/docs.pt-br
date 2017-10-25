@@ -1,0 +1,73 @@
+<Type Name="ProxyElement+UseSystemDefaultValues" FullName="System.Net.Configuration.ProxyElement+UseSystemDefaultValues">
+  <TypeSignature Language="C#" Value="public enum ProxyElement.UseSystemDefaultValues" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ProxyElement/UseSystemDefaultValues extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.ProxyElement.UseSystemDefaultValues" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se deve usar as configurações de proxy do sistema local para determinar se o proxy é ignorado para recursos locais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recursos locais incluem o servidor local (http://localhost, http://loopback ou http://127.0.0.1) e um URI sem um período (http://webserver).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="False" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.ProxyElement/UseSystemDefaultValues False = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.ProxyElement.UseSystemDefaultValues.False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.ProxyElement+UseSystemDefaultValues</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não use valores de configuração de proxy do sistema padrão</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="True" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.ProxyElement/UseSystemDefaultValues True = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.ProxyElement.UseSystemDefaultValues.True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.ProxyElement+UseSystemDefaultValues</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use valores de configuração de proxy do sistema padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.ProxyElement/UseSystemDefaultValues Unspecified = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.ProxyElement.UseSystemDefaultValues.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.ProxyElement+UseSystemDefaultValues</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A configuração de proxy do sistema padrão não está especificado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

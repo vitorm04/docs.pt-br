@@ -1,0 +1,485 @@
+<Type Name="ChtmlTextWriter" FullName="System.Web.UI.ChtmlTextWriter">
+  <TypeSignature Language="C#" Value="public class ChtmlTextWriter : System.Web.UI.Html32TextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChtmlTextWriter extends System.Web.UI.Html32TextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ChtmlTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Html32TextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Grava uma série de caracteres cHTML específicos e texto para o fluxo de saída de um controle de servidor ASP.NET. O <see cref="T:System.Web.UI.ChtmlTextWriter" /> classe fornece recursos de formatação para controles de servidor ASP.NET usam na renderização cHTML conteúdo aos clientes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compact HTML ou cHTML, é um subconjunto de HTML 2.0, HTML 3.2 e HTML 4.0 e foi projetado para processar em dispositivos com limitada de memória e potência de CPU, junto com pequenas telas, limitado a recursos de formatação e um número limitado de opções de entrada (como um telefone celular teclado sensível ao toque). Portanto, cHTML não suporta o seguinte:  
+  
+-   Imagens JPEG.  
+  
+-   Tabelas.  
+  
+-   Mapas de imagem.  
+  
+-   Várias fontes de caractere e estilos.  
+  
+-   Cores de plano de fundo e imagens.  
+  
+-   Quadros.  
+  
+-   Folhas de estilo.  
+  
+ O <xref:System.Web.UI.ChtmlTextWriter> classe deriva o <xref:System.Web.UI.Html32TextWriter> classe e grande parte da sua funcionalidade é fornecida pelo <xref:System.Web.UI.Html32TextWriter> e a classe base para todos os gravadores de texto de marcação, que é o <xref:System.Web.UI.HtmlTextWriter> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe denominada `CustomChtmlTextWriter` que deriva de <xref:System.Web.UI.ChtmlTextWriter> classe. Ele cria dois construtores e substitui o <xref:System.Web.UI.ChtmlTextWriter.OnAttributeRender%2A> método para impedir que o `bgcolor` atributo de estilo sejam gravadas para o fluxo de saída do <xref:System.Web.UI.ChtmlTextWriter> objeto. Ele também cria uma classe denominada `ChtmlCustomPageAdapter` que define um método, `CreateCustomChtmlTextWriter`, que cria e retorna uma instância do `CustomChtmlTextWriter` classe. O `CustomChtmlTextWriter` renderiza conteúdo cHTML para uma página em dispositivos com navegadores que usam cHTML marcação.  
+  
+ [!code-csharp[System.Web.UI.ChtmlTextWriter_Sample4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/cs/chtmltextwriter.cs#1)]
+ [!code-vb[System.Web.UI.ChtmlTextWriter_Sample4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/vb/chtmltextwriter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChtmlTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> que renderiza o conteúdo de marcação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.ChtmlTextWriter" /> classe que usa o <see cref="F:System.Web.UI.HtmlTextWriter.DefaultTabString" /> constante para recuar as linhas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ChtmlTextWriter> classe tem dois construtores, que é o padrão para todas as classes que derivam direta ou indiretamente a <xref:System.Web.UI.HtmlTextWriter> classe.  
+  
+ O <xref:System.Web.UI.ChtmlTextWriter.%23ctor%2A> construtor, que leva a uma instância do <xref:System.IO.TextWriter> classe como um parâmetro, chama o construtor de segundo e passa dois valores de parâmetro:  
+  
+-   O <xref:System.IO.TextWriter>.  
+  
+-   O valor de cadeia de caracteres especificada no <xref:System.Web.UI.HtmlTextWriter.DefaultTabString> campo, que define o espaçamento de guia é usado pelo gravador de texto de XHTML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe denominada `ChtmlCustomPageAdapter` e define um método, `CreateCustomChtmlTextWriter`, que cria e retorna uma instância do `CustomChtmlTextWriter` classe. O `CustomChtmlTextWriter` renderiza conteúdo cHTML de páginas para dispositivos com navegadores que usam cHTML marcação.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.ChtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.ChtmlTextWriter_Sample4#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/cs/chtmltextwriter.cs#3)]
+ [!code-vb[System.Web.UI.ChtmlTextWriter_Sample4#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/vb/chtmltextwriter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChtmlTextWriter (System.IO.TextWriter writer, string tabString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string tabString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.#ctor(System.IO.TextWriter,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="tabString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> que renderiza o conteúdo de marcação.</param>
+        <param name="tabString">O número de espaços definida no <see cref="P:System.Web.UI.HtmlTextWriter.Indent" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.ChtmlTextWriter" /> classe com o recuo de linha especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ChtmlTextWriter.%23ctor%2A> construtor, que usa os dois uma instância do <xref:System.IO.TextWriter> classe e uma cadeia de caracteres como parâmetros, chamadas de <xref:System.Web.UI.Html32TextWriter> construtor que usa os mesmos parâmetros quando ele cria uma instância do <xref:System.Web.UI.ChtmlTextWriter> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe personalizada chamada `CustomChtmlTextWriter` que deriva de <xref:System.Web.UI.ChtmlTextWriter> classe. Ele cria dois construtores que você pode usar para criar uma instância da classe personalizada com o mesmo padrão, como todas as classes que derivam, diretamente ou indiretamente, a partir de <xref:System.Web.UI.HtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.ChtmlTextWriter_Sample4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/cs/chtmltextwriter.cs#1)]
+ [!code-vb[System.Web.UI.ChtmlTextWriter_Sample4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/vb/chtmltextwriter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRecognizedAttribute">
+      <MemberSignature Language="C#" Value="public virtual void AddRecognizedAttribute (string elementName, string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRecognizedAttribute(string elementName, string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.AddRecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento cHTML para adicionar o atributo.</param>
+        <param name="attributeName">O atributo a ser adicionado ao <c>elementName</c>.</param>
+        <summary>Adiciona um atributo a um elemento cHTML o <see cref="T:System.Web.UI.ChtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ChtmlTextWriter.AddRecognizedAttribute%2A> método adiciona um atributo a um elemento cHTML. O atributo reconhecido é armazenado em um dos atributos reconhecidos <xref:System.Collections.Hashtable> coleção do <xref:System.Web.UI.ChtmlTextWriter> objeto referenciado pelo <xref:System.Web.UI.ChtmlTextWriter.RecognizedAttributes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalSuppressedAttributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable GlobalSuppressedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable GlobalSuppressedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ChtmlTextWriter.GlobalSuppressedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Hashtable" /> objeto suprimido globalmente atributos que não pode ser renderizado em cHTML elementos.</summary>
+        <value>Um <see cref="T:System.Collections.Hashtable" /> de atributos cHTML suprimido globalmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista a seguir mostra os atributos suprimidos globalmente que são definidos quando uma nova instância do <xref:System.Web.UI.ChtmlTextWriter> classe é criada.  
+  
+|||  
+|-|-|  
+|`onclick`|`onmousemove`|  
+|`ondblclick`|`onmouseout`|  
+|`onmousedown`|`onkeypress`|  
+|`onmouseup`|`onkeydown`|  
+|`onmouseover`|`onkeyup`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAttributeRender">
+      <MemberSignature Language="C#" Value="protected override bool OnAttributeRender (string name, string value, System.Web.UI.HtmlTextWriterAttribute key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnAttributeRender(string name, string value, valuetype System.Web.UI.HtmlTextWriterAttribute key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.OnAttributeRender(System.String,System.String,System.Web.UI.HtmlTextWriterAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="name">O atributo cHTML para processar.</param>
+        <param name="value">O valor atribuído a <c>nome</c>.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterAttribute" /> associado <c>nome</c>.</param>
+        <summary>Determina se o atributo cHTML especificado e seu valor são processadas na página solicitante. Você pode substituir o <see cref="M:System.Web.UI.ChtmlTextWriter.OnAttributeRender(System.String,System.String,System.Web.UI.HtmlTextWriterAttribute)" /> método nas classes que derivam de <see cref="T:System.Web.UI.ChtmlTextWriter" /> classe para filtrar os atributos que você não deseja renderizar em dispositivos que cHTML de suporte.</summary>
+        <returns>
+          <see langword="true" />para gravar o atributo e seu valor para o <see cref="T:System.Web.UI.ChtmlTextWriter" /> fluxo de saída; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.UI.ChtmlTextWriter.OnAttributeRender%2A> método impede suprimidos globalmente atributos que são listados no <xref:System.Web.UI.ChtmlTextWriter.GlobalSuppressedAttributes%2A> propriedade e atributos de elemento específico, suprimidos são listados no <xref:System.Web.UI.ChtmlTextWriter.SuppressedAttributes%2A> propriedade sejam gravadas para o fluxo de saída. Você pode substituir o comportamento do <xref:System.Web.UI.ChtmlTextWriter.OnAttributeRender%2A> método nas classes que derivam de <xref:System.Web.UI.ChtmlTextWriter> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar uma classe personalizada que substitui o <xref:System.Web.UI.ChtmlTextWriter.OnAttributeRender%2A> método para impedir que o `bgcolor` atributo sejam gravadas para o fluxo de saída cHTML. Depois, ele chama a funcionalidade que é fornecida com a base <xref:System.Web.UI.ChtmlTextWriter.OnAttributeRender%2A> método a partir de <xref:System.Web.UI.ChtmlTextWriter> classe para garantir que seu comportamento padrão é usado, muito.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.ChtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.ChtmlTextWriter_Sample4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/cs/chtmltextwriter.cs#2)]
+ [!code-vb[System.Web.UI.ChtmlTextWriter_Sample4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample4/vb/chtmltextwriter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStyleAttributeRender">
+      <MemberSignature Language="C#" Value="protected override bool OnStyleAttributeRender (string name, string value, System.Web.UI.HtmlTextWriterStyle key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnStyleAttributeRender(string name, string value, valuetype System.Web.UI.HtmlTextWriterStyle key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.OnStyleAttributeRender(System.String,System.String,System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém o nome do atributo de estilo para processar.</param>
+        <param name="value">Uma cadeia de caracteres que contém o valor atribuído a <c>nome</c>.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> associado <c>nome</c>.</param>
+        <summary>Determina se o atributo de estilo de marcação cHTML especificado e seu valor podem ser renderizados para o elemento atual da marcação.</summary>
+        <returns>
+          <see langword="true" />Se o estilo pode ser renderizado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ChtmlTextWriter.OnStyleAttributeRender%2A> método retorna `false` quando `key` é igual de <xref:System.Web.UI.HtmlTextWriterStyle.TextDecoration> campo e o valor é `"line-through"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTagRender">
+      <MemberSignature Language="C#" Value="protected override bool OnTagRender (string name, System.Web.UI.HtmlTextWriterTag key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnTagRender(string name, valuetype System.Web.UI.HtmlTextWriterTag key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.OnTagRender(System.String,System.Web.UI.HtmlTextWriterTag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterTag" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém o nome do elemento cHTML para processar.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterTag" /> associado <c>nome</c>.</param>
+        <summary>Determina se o elemento de marcação cHTML especificado é renderizado para a página de solicita.</summary>
+        <returns>
+          <see langword="true" />Se o elemento de marcação cHTML especificado pode ser processado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o elemento cHTML é um `span` elemento, o <xref:System.Web.UI.ChtmlTextWriter.OnTagRender%2A> método retornará `false`. Para todas as outras marcas, ele retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecognizedAttributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable RecognizedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable RecognizedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ChtmlTextWriter.RecognizedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Hashtable" /> objeto de atributos reconhecidos que pode ser renderizado em cHTML elementos.</summary>
+        <value>Um <see cref="T:System.Collections.Hashtable" /> de atributos cHTML reconhecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.ChtmlTextWriter.AddRecognizedAttribute%2A> atributos de método para adicionar reconhecido para a coleção de atributos reconhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRecognizedAttribute">
+      <MemberSignature Language="C#" Value="public virtual void RemoveRecognizedAttribute (string elementName, string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveRecognizedAttribute(string elementName, string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.RemoveRecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento cHTML para remover um atributo de.</param>
+        <param name="attributeName">O atributo para remover do <c>elementName</c>.</param>
+        <summary>Remove um atributo de um elemento cHTML o <see cref="T:System.Web.UI.ChtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ChtmlTextWriter.RemoveRecognizedAttribute%2A> método Remove um atributo de um elemento de cHTML. O atributo reconhecido é removido dos atributos reconhecidos <xref:System.Collections.Hashtable> coleção do <xref:System.Web.UI.ChtmlTextWriter> objeto referenciado pelo <xref:System.Web.UI.ChtmlTextWriter.RecognizedAttributes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressedAttributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable SuppressedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable SuppressedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ChtmlTextWriter.SuppressedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Hashtable" /> objeto do usuário especificado suprimidos atributos que não são renderizados em elementos de cHTML.</summary>
+        <value>Um <see cref="T:System.Collections.Hashtable" /> de atributos cHTML suprimido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.ChtmlTextWriter.RemoveRecognizedAttribute%2A> para adicionar atributos à coleção de atributos suprimido.  
+  
+ A lista a seguir mostra os atributos padrão suprimido que são definidos para um `div` elemento quando uma nova instância do <xref:System.Web.UI.ChtmlTextWriter> classe é criada.  
+  
+|||  
+|-|-|  
+|`accesskey`|`gridlines`|  
+|`cellspacing`|`rules`|  
+|`cellpadding`||  
+  
+ A lista a seguir mostra os atributos padrão suprimido que são definidos para um `span` elemento quando uma nova instância do <xref:System.Web.UI.ChtmlTextWriter> classe é criada.  
+  
+|||  
+|-|-|  
+|`cellspacing`|`gridlines`|  
+|`cellpadding`|`rules`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBreak">
+      <MemberSignature Language="C#" Value="public override void WriteBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.WriteBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava um <see langword="br" /> elemento para o cHTML fluxo de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.ChtmlTextWriter.WriteBreak%2A> quebrar de método para inserir uma linha em um fluxo de cHMTL.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como criar uma classe cHTML e propriedades personalizadas. O segundo exemplo de código demonstra como usar uma classe personalizada em uma página da Web.  
+  
+ Para usar personalizado `ChtmlSimplelabelAdapter` adaptador, adicione o código a seguir como o arquivo apropriado de máquina no subdiretório do navegador do diretório de configuração do .NET Framework ou em um arquivo de navegador personalizado no diretório App_Browsers na Web raiz do aplicativo.  
+  
+```  
+<controlAdapters>  
+   <adapter controlType="AspNet.Samples.SimpleLabel"  
+   adapterType="AspNet.Samples.ChtmlSimpleLabelAdapter" />  
+</controlAdapters>  
+```  
+  
+ O exemplo de código a seguir demonstra como criar uma classe de adaptador cHTML denominada `ChtmlSimpleLabelAdapter` de uma classe denominada `SimpleLabel`. Ele cria um personalizado `Control` propriedade que permite que o `ChtmlSimpleLabelAdapter` classe para acessar os membros do `SimpleLabel` classe e, em seguida, substituições de <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> método. Em uma substituição, ocorrerá o seguinte:  
+  
+-   Ele cria uma referência a um <xref:System.Web.UI.ChtmlTextWriter> objeto, chamado `w`, que é derivada do <xref:System.Web.UI.HtmlTextWriter> objeto que é passado como o `writer` parâmetro para o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> método.  
+  
+-   Ele cria uma cadeia de caracteres e define-igual de `SimpleLabel.Text` valor.  
+  
+-   Ele chama o <xref:System.Web.UI.HtmlTextWriter.EnterStyle%2A> método para aplicar os estilos que são definidos pelo <xref:System.Web.UI.WebControls.WebControl.ControlStyle%2A> propriedade do rótulo para o cHTML fluxo de saída.  
+  
+-   Grava o `Text` valor da propriedade para o fluxo e fecha o bloco de estilo chamando o <xref:System.Web.UI.HtmlTextWriter.ExitStyle%2A> método.  
+  
+-   Ele chama o <xref:System.Web.UI.ChtmlTextWriter.WriteBreak%2A> método para renderizar um `br` elemento para o fluxo de saída depois da renderização de texto e estilos.  
+  
+ [!code-csharp[System.Web.UI.ChtmlTextWriter_Sample1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample1/cs/chtmltestlabel.cs#2)]
+ [!code-vb[System.Web.UI.ChtmlTextWriter_Sample1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample1/VB/chtmltestlabel.vb#2)]  
+  
+ O exemplo a seguir demonstra como usar o `SimpleLabel` classe em uma página da Web.  
+  
+ [!code-aspx-csharp[System.Web.UI.ChtmlTextWriter_Sample1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample1/cs/chtmltestlabel.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.ChtmlTextWriter_Sample1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ChtmlTextWriter_Sample1/VB/chtmltestlabel.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncodedText">
+      <MemberSignature Language="C#" Value="public override void WriteEncodedText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEncodedText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ChtmlTextWriter.WriteEncodedText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">A cadeia de caracteres de texto a ser codificada e gravada no fluxo de saída.</param>
+        <summary>Codifica o texto especificado para o dispositivo solicitante e, em seguida, grava-o no fluxo de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o texto de parâmetro passado para o <xref:System.Web.UI.ChtmlTextWriter.WriteEncodedText%2A> método é `null` ou tem um comprimento de zero, e nada é gravado.  
+  
+ Use o <xref:System.Web.UI.ChtmlTextWriter.WriteEncodedText%2A> método quando uma cadeia de caracteres contiver colchetes angulares (\< ou >) ou um e comercial (&) e você deseja garantir que eles sejam renderizados corretamente no dispositivo solicitante.  
+  
+ O <xref:System.Web.UI.ChtmlTextWriter.WriteEncodedText%2A> método usa a classe base <xref:System.Web.UI.HtmlTextWriter.WriteEncodedText%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

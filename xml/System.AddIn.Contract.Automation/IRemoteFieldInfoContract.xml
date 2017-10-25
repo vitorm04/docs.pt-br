@@ -1,0 +1,102 @@
+<Type Name="IRemoteFieldInfoContract" FullName="System.AddIn.Contract.Automation.IRemoteFieldInfoContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteFieldInfoContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteFieldInfoContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.IRemoteFieldInfoContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define um contrato que componentes podem usar para acessar informações sobre um campo nos limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.AddIn.Contract.Automation.IRemoteFieldInfoContract> representa um campo de um objeto remoto que implementa o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface.  
+  
+ Para acessar um ou mais campos de um objeto remoto, use o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> método para obter um <xref:System.AddIn.Contract.Automation.IRemoteTypeContract> que representa o tipo do objeto remoto. Em seguida, chame o <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetField%2A> ou <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetFields%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetFieldData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteFieldData GetFieldData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.Automation.RemoteFieldData GetFieldData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteFieldInfoContract.GetFieldData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteFieldData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações sobre o campo que este <see cref="T:System.AddIn.Contract.Automation.IRemoteFieldInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.RemoteFieldData" /> que fornece informações sobre o campo que este <see cref="T:System.AddIn.Contract.Automation.IRemoteFieldInfoContract" /> identifica.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações fornecidas pelo <xref:System.AddIn.Contract.Automation.RemoteFieldData> estrutura inclui um <xref:System.AddIn.Contract.Automation.IRemoteTypeContract> que especifica o tipo do campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument GetValue (System.AddIn.Contract.Automation.IRemoteObjectContract obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument GetValue(class System.AddIn.Contract.Automation.IRemoteObjectContract obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteFieldInfoContract.GetValue(System.AddIn.Contract.Automation.IRemoteObjectContract)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.AddIn.Contract.Automation.IRemoteObjectContract" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" /> que identifica o objeto que contém o campo.</param>
+        <summary>Retorna o valor do campo que este <see cref="T:System.AddIn.Contract.Automation.IRemoteFieldInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que especifica o valor do campo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.AddIn.Contract.Automation.IRemoteObjectContract obj, System.AddIn.Contract.RemoteArgument value, int localeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(class System.AddIn.Contract.Automation.IRemoteObjectContract obj, valuetype System.AddIn.Contract.RemoteArgument value, int32 localeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteFieldInfoContract.SetValue(System.AddIn.Contract.Automation.IRemoteObjectContract,System.AddIn.Contract.RemoteArgument,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.AddIn.Contract.Automation.IRemoteObjectContract" />
+        <Parameter Name="value" Type="System.AddIn.Contract.RemoteArgument" />
+        <Parameter Name="localeId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" /> que identifica o objeto que contém o campo.</param>
+        <param name="value">Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que especifica o valor do campo.</param>
+        <param name="localeId">A ID de localidade que o campo será usado para qualquer conversões de tipo específico de localidade.</param>
+        <summary>Define o valor do campo que isso <see cref="T:System.AddIn.Contract.Automation.IRemoteFieldInfoContract" /> representa.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

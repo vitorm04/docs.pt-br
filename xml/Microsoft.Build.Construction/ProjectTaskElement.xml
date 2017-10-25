@@ -1,0 +1,453 @@
+<Type Name="ProjectTaskElement" FullName="Microsoft.Build.Construction.ProjectTaskElement">
+  <TypeSignature Language="C#" Value="public class ProjectTaskElement : Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectTaskElement extends Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectTaskElement" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElementContainer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Name} Condition={Condition} ContinueOnError={ContinueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Outputs={Count}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um [elemento Task (MSBuild)](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) em um projeto do MSBuild.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddOutputItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement AddOutputItem(string taskParameter, string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.AddOutputItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOutputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">O nome da tarefa que gera para o item.</param>
+        <param name="itemType">O tipo de item do novo item cujo valor é definido para a saída da tarefa.</param>
+        <summary>Adiciona um item de saída após o último filho.</summary>
+        <returns>Retorna o item de saída adicionado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOutputItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement AddOutputItem(string taskParameter, string itemType, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.AddOutputItem(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOutputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">O nome do parâmetro.</param>
+        <param name="itemType">O tipo de item.</param>
+        <param name="condition">A condição do parâmetro.</param>
+        <summary>Adiciona um item de saída condicionado para esta tarefa após o último filho.</summary>
+        <returns>Retorna o adicionado condicionado item de saída.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOutputProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty(string taskParameter, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.AddOutputProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOutputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">O nome do parâmetro.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Adiciona uma propriedade de saída para esta tarefa após o último filho.</summary>
+        <returns>Retorna a propriedade de saída adicionada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOutputProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty(string taskParameter, string propertyName, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.AddOutputProperty(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOutputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">O nome do parâmetro.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <param name="condition">A condição da propriedade.</param>
+        <summary>Adiciona uma propriedade de saída condicionada para esta tarefa após o último filho.</summary>
+        <returns>Retorna o adicionado condicionado propriedade de saída.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnError">
+      <MemberSignature Language="C#" Value="public string ContinueOnError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContinueOnError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.ContinueOnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <c>ContinueOnError</c> valor do atributo.</summary>
+        <value>Retorna o <c>ContinueOnError</c> valor do atributo. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remove o `ContinueOnError` atributo se o valor a ser definido é definido como nulo ou uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnErrorLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ContinueOnErrorLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ContinueOnErrorLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.ContinueOnErrorLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo "ContinueOnError" neste elemento, se houver.  
+  
+ Caso não haja esse atributo, retorna nulo;</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="public string GetParameter (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetParameter(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.GetParameter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <summary>Obtém o valor do parâmetro com o nome especificado.</summary>
+        <returns>Retorna o valor do parâmetro com o nome especificado. Se nenhum parâmetro com esse nome existe na tarefa, retorna uma cadeia de caracteres vazia.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildArchitecture">
+      <MemberSignature Language="C#" Value="public string MSBuildArchitecture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.MSBuildArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de arquitetura para a tarefa.  
+  
+ Retorna cadeia de caracteres vazia caso não esteja presente.  
+  
+ Remove o atributo caso o valor a ser definido esteja vazio.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildArchitectureLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation MSBuildArchitectureLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation MSBuildArchitectureLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.MSBuildArchitectureLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo "MSBuildArchitecture" neste elemento, se houver.  
+  
+ Caso não haja esse atributo, retorna nulo;</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildRuntime">
+      <MemberSignature Language="C#" Value="public string MSBuildRuntime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildRuntime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.MSBuildRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de tempo de execução da tarefa.  
+  
+ Retorna cadeia de caracteres vazia caso não esteja presente.  
+  
+ Remove o atributo caso o valor a ser definido esteja vazio.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildRuntimeLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation MSBuildRuntimeLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation MSBuildRuntimeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.MSBuildRuntimeLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo "MSBuildRuntime" neste elemento, se houver.  
+  
+ Caso não haja esse atributo, retorna nulo;</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome dessa tarefa.</summary>
+        <value>Retorna o nome da tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectOutputElement&gt; Outputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectOutputElement&gt; Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectOutputElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os [elemento Output (MSBuild)](http://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9) filhos.</summary>
+        <value>Retorna todos os filhos do elemento de saída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterLocations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,Microsoft.Build.Construction.ElementLocation&gt;&gt; ParameterLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class Microsoft.Build.Construction.ElementLocation&gt;&gt; ParameterLocations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.ParameterLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,Microsoft.Build.Construction.ElementLocation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enumerável sobre os locais dos parâmetros na tarefa.  
+  
+ Condição e ContinueOnError, que têm suas próprias propriedades, não são incluídos na coleção.  
+  
+ Se os parâmetros diferenciam somente maiusculas e minúsculas somente o último deles será retornado.  
+  
+ Hosts ainda podem remover os outros parâmetros usando RemoveAllParameters().</summary>
+        <value>Retorna <see cref="T:System.Collections.Generic.IEnumerable`1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectTaskElement.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os parâmetros não avaliados dessa tarefa.</summary>
+        <value>Retorna todos os parâmetros não avaliados dessa tarefa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Condition`e `ContinueOnError` atributos não são incluídos na coleção. Se os parâmetros diferenciam somente maiusculas e minúsculas será retornado somente o último deles. Consulte também RemoveAllParameters().  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllParameters">
+      <MemberSignature Language="C#" Value="public void RemoveAllParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.RemoveAllParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os parâmetros da tarefa. Não remova qualquer <c>ContinueOnError</c> e/ou <c>condição</c> atributos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveParameter">
+      <MemberSignature Language="C#" Value="public void RemoveParameter (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveParameter(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.RemoveParameter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro a ser removido.</param>
+        <summary>Remove qualquer parâmetro na tarefa com o nome especificado. Se nenhum parâmetro com esse nome existe na tarefa, não fará nada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="public void SetParameter (string name, string unevaluatedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameter(string name, string unevaluatedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectTaskElement.SetParameter(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="unevaluatedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro para atualizar ou adicionar.</param>
+        <param name="unevaluatedValue">O valor do parâmetro.</param>
+        <summary>Atualiza ou adiciona um parâmetro da tarefa</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualiza o parâmetro para o valor especificado se um parâmetro com esse nome existe na tarefa. Caso contrário, cria um parâmetro com o nome especificado e o valor e o adiciona à tarefa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

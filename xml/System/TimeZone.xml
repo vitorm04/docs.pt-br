@@ -1,0 +1,504 @@
+<Type Name="TimeZone" FullName="System.TimeZone">
+  <TypeSignature Language="C#" Value="public abstract class TimeZone" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit TimeZone extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.TimeZone" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um fuso horário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um fuso horário é uma região geográfica em que a mesma hora padrão é usada.  
+  
+> [!IMPORTANT]
+>  Sempre que possível, use o <xref:System.TimeZoneInfo> classe o <xref:System.TimeZone> classe.  
+  
+ Você pode usar o <xref:System.TimeZone> classe para recuperar informações sobre o fuso horário atual e converter horas da hora local para o tempo Universal Coordenado (UTC) ou vice-versa. No entanto, você não pode usar o <xref:System.TimeZone> classe para representar o fuso horário que não seja a zona local ou para lidar com conversões de data e hora de um fuso horário para outro. Para essa finalidade, use o <xref:System.TimeZoneInfo> classe. Você pode usar essa classe para recuperar informações sobre qualquer fuso horário definido no sistema local, para criar fusos horários personalizados e converter horas de um fuso horário para outro.  
+  
+ O <xref:System.TimeZone> classe oferece suporte a apenas uma regra de ajuste do horário de verão único para o fuso horário local. Como resultado, o <xref:System.TimeZone> classe com precisão pode relatar informações de horário de verão ou converter entre o UTC e a hora local somente para o período no qual a regra de ajuste mais recente está em vigor. Por outro lado, a <xref:System.TimeZoneInfo> classe oferece suporte a várias regras de ajuste, que torna possível trabalhar com dados de fuso horário históricos.  
+  
+   
+  
+## Examples  
+ As seguintes referências de exemplo e exibe selecionado `TimeZone` elementos de classe.  
+  
+ [!code-cpp[System.TimeZone.Class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.TimeZone.Class/CPP/tzclass.cpp#1)]
+ [!code-csharp[System.TimeZone.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone.Class/CS/tzclass.cs#1)]
+ [!code-vb[System.TimeZone.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone.Class/VB/tzclass.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Além de fornecer implementações de seu <see langword="abstract" /> membros (as marcadas <see langword="MustOverride" /> no Visual Basic), é importante que as classes derivadas de <see cref="T:System.TimeZone" /> substituir o comportamento padrão da <see cref="M:System.TimeZone.ToLocalTime(System.DateTime)" /> método. Isso ocorre porque o comportamento padrão de <see cref="M:System.TimeZone.ToLocalTime(System.DateTime)" /> no .NET Framework versão 2.0 não é dependente de uma chamada para <see cref="M:System.TimeZone.GetUtcOffset(System.DateTime)" />, como nas versões do .NET Framework 1.0 e 1.1.  Para obter detalhes, consulte o <see cref="M:System.TimeZone.ToLocalTime(System.DateTime)" /> método.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimeZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.TimeZone" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTimeZone">
+      <MemberSignature Language="C#" Value="public static TimeZone CurrentTimeZone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.TimeZone CurrentTimeZone" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZone.CurrentTimeZone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZone</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o fuso horário do computador atual.</summary>
+        <value>Um objeto <see cref="T:System.TimeZone" /> que representa o fuso horário local atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.TimeZone.CurrentTimeZone%2A> propriedade corresponde do <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> propriedade. Sempre que possível, use o <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ As seguintes referências de exemplo do `CurrentTimeZone` propriedade e exibe os nomes para a hora padrão e o horário de verão para o fuso horário local.  
+  
+ [!code-cpp[System.TimeZone.Class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.TimeZone.Class/CPP/tzclass.cpp#1)]
+ [!code-csharp[System.TimeZone.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone.Class/CS/tzclass.cs#1)]
+ [!code-vb[System.TimeZone.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone.Class/VB/tzclass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Dados de fuso horário local é armazenado em cache após <see cref="P:System.TimeZone.CurrentTimeZone" /> primeiro é usado para recuperar informações de fuso horário. Se o sistema local do fuso horário for alterado posteriormente, o <see cref="P:System.TimeZone.CurrentTimeZone" /> propriedade não reflete essa alteração. Se você precisar controlar as alterações de fuso horário ao seu aplicativo estiver em execução, use o <see cref="T:System.TimeZoneInfo" /> classe e chame seu <see cref="M:System.TimeZoneInfo.ClearCachedData" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DaylightName">
+      <MemberSignature Language="C#" Value="public abstract string DaylightName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DaylightName" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZone.DaylightName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do fuso horário do horário de verão.</summary>
+        <value>O nome do fuso horário do horário de verão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não for usado o horário de verão no fuso horário, uma cadeia de caracteres vazia ("") será retornado.  
+  
+ O <xref:System.TimeZone.DaylightName%2A> propriedade corresponde do <xref:System.TimeZoneInfo.DaylightName%2A?displayProperty=nameWithType> propriedade. Sempre que possível, use o <xref:System.TimeZoneInfo.DaylightName%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ As seguintes referências de exemplo e exibe o `DaylightName` propriedade do fuso horário atual.  
+  
+ [!code-cpp[System.TimeZone.Class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.TimeZone.Class/CPP/tzclass.cpp#1)]
+ [!code-csharp[System.TimeZone.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone.Class/CS/tzclass.cs#1)]
+ [!code-vb[System.TimeZone.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone.Class/VB/tzclass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaylightChanges">
+      <MemberSignature Language="C#" Value="public abstract System.Globalization.DaylightTime GetDaylightChanges (int year);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Globalization.DaylightTime GetDaylightChanges(int32 year) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.GetDaylightChanges(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DaylightTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">O ano ao qual o período de horário de verão se aplica.</param>
+        <summary>Retorna o período de horário de verão para determinado ano.</summary>
+        <returns>Um objeto <see cref="T:System.Globalization.DaylightTime" /> que contém a data de início e término do horário de verão no <paramref name="year" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há suporte para apenas um período de horário de verão por ano.  
+  
+ Se o horário de verão não é usado no fuso horário atual, o valor de retorno é um <xref:System.Globalization.DaylightTime> objeto, onde o valor de <xref:System.Globalization.DaylightTime.Start%2A> e <xref:System.Globalization.DaylightTime.End%2A> é <xref:System.DateTime.MinValue?displayProperty=nameWithType>e o valor de <xref:System.Globalization.DaylightTime.Delta%2A?displayProperty=nameWithType> é um <xref:System.TimeSpan> inicializada com 0 tiques.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> é menor que 1 ou maior que 9999.</exception>
+        <block subset="none" type="usage">
+          <para>Porque o <see cref="T:System.TimeZone" /> classe oferece suporte a apenas uma regra de ajuste de horário de verão, o <see cref="M:System.TimeZone.GetDaylightChanges(System.Int32)" /> método aplica-se a regra de ajuste atual para qualquer ano, independentemente se a regra de ajuste, na verdade, se aplica a esse ano. Supondo que o próprio sistema operacional tem dados precisos de um ano específico, um resultado mais preciso está disponível ao trabalhar com a matriz de <see cref="T:System.TimeZoneInfo.AdjustmentRule" /> objetos retornados pelo <see cref="M:System.TimeZoneInfo.GetAdjustmentRules" /> método. O <see cref="P:System.Globalization.DaylightTime.Start" />, <see cref="P:System.Globalization.DaylightTime.End" />, e <see cref="P:System.Globalization.DaylightTime.Delta" /> propriedades correspondem do <see cref="P:System.TimeZoneInfo.AdjustmentRule.DateStart" />, <see cref="P:System.TimeZoneInfo.AdjustmentRule.DateEnd" />, e <see cref="P:System.TimeZoneInfo.AdjustmentRule.DaylightDelta" /> propriedades.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUtcOffset">
+      <MemberSignature Language="C#" Value="public abstract TimeSpan GetUtcOffset (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan GetUtcOffset(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.GetUtcOffset(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Um valor de data e hora.</param>
+        <summary>Retorna a diferença UTC (Tempo Universal Coordenado) para a hora local especificada.</summary>
+        <returns>A diferença UTC (Tempo Universal Coordenado) de <paramref name="time" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o deslocamento ou diferença entre o `time` parâmetro e o tempo Universal Coordenado (UTC). Ou seja:  
+  
+ `time`= UTC + offset  
+  
+ O método interpreta o fuso horário do `time` com base em seu <xref:System.DateTime.Kind%2A> propriedade. Se o valor de <xref:System.DateTime.Kind%2A> é de propriedade <xref:System.DateTimeKind?displayProperty=nameWithType> ou <xref:System.DateTimeKind?displayProperty=nameWithType>, o método retorna o deslocamento de fuso horário local. Se o valor de <xref:System.DateTime.Kind%2A> é de propriedade <xref:System.DateTimeKind?displayProperty=nameWithType>, o método retorna um deslocamento igual a <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.  
+  
+ Se o fuso horário local tiver o horário de verão, <xref:System.TimeZone.GetUtcOffset%2A> aplica-se a regra de ajuste atual para `time` ao determinar o deslocamento de fuso horário local. Isto é, o deslocamento retornado por <xref:System.TimeZone.GetUtcOffset%2A> reflete se `time` cairá em vez do padrão do fuso horário ou seu horário de verão.  
+  
+> [!NOTE]
+>  O <xref:System.TimeZone.GetUtcOffset%2A> método reconhece somente a horário de verão ajuste regra atual para o fuso horário local. Como resultado, é garantido que ele retornar com precisão o deslocamento UTC de uma hora local somente durante o período em que a regra de ajuste mais recente está em vigor. Pode retornar resultados imprecisos se `time` é um histórica valor de data e hora que foi sujeito a uma regra de ajuste anterior.  
+  
+ O <xref:System.TimeZone.GetUtcOffset%2A> método corresponde ao <xref:System.TimeZoneInfo.GetUtcOffset%2A?displayProperty=nameWithType> método. Sempre que possível, use o <xref:System.TimeZoneInfo.GetUtcOffset%2A?displayProperty=nameWithType> método.  
+  
+ Porque o valor de data e hora representado pelo `time` e deslocamento deste valor de UTC não estejam firmemente acoplados, uma data local ou não especificada e o valor de tempo pode retornar um valor de deslocamento diferente quando executado em computadores diferentes, ou quando executado no mesmo computador em fusos horários diferentes. Se esse comportamento é desejável, use um <xref:System.DateTimeOffset> valor em vez disso. O <xref:System.DateTimeOffset> tipo de dados totalmente associa um valor de data e hora com seu deslocamento do UTC.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDaylightSavingTime">
+      <MemberSignature Language="C#" Value="public virtual bool IsDaylightSavingTime (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDaylightSavingTime(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.IsDaylightSavingTime(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Uma data e hora.</param>
+        <summary>Retorna um valor que indica se a data e hora especificadas estão dentro de um período de horário de verão.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="time" /> está em um período de horário de verão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ano para o qual se aplica o período de horário de verão é derivado de `time` parâmetro.  
+  
+ Porque o <xref:System.TimeZone> classe oferece suporte a uma regra de ajuste de horário de verão único, o <xref:System.TimeZone.IsDaylightSavingTime%28System.DateTime%29> método aplica-se a regra de ajuste atual para qualquer data, independentemente se a regra de ajuste estava em vigor em data. Supondo que o próprio sistema operacional tem dados precisos históricos do horário de verão, um resultado mais preciso está disponível por meio de <xref:System.TimeZoneInfo.IsDaylightSavingTime%2A?displayProperty=nameWithType> método. Sempre que possível, use o <xref:System.TimeZoneInfo.IsDaylightSavingTime%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDaylightSavingTime">
+      <MemberSignature Language="C#" Value="public static bool IsDaylightSavingTime (DateTime time, System.Globalization.DaylightTime daylightTimes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDaylightSavingTime(valuetype System.DateTime time, class System.Globalization.DaylightTime daylightTimes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.IsDaylightSavingTime(System.DateTime,System.Globalization.DaylightTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="daylightTimes" Type="System.Globalization.DaylightTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Uma data e hora.</param>
+        <param name="daylightTimes">To be added.</param>
+        <summary>Retorna um valor que indica se a data e hora especificadas está dentro do período especificado horário de verão.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="time" /> está em <paramref name="daylightTimes" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.TimeZoneInfo.IsDaylightSavingTime%2A?displayProperty=nameWithType> método fornece a mesma funcionalidade que essa sobrecarga do <xref:System.TimeZone.IsDaylightSavingTime%2A> método. Sempre que possível, use o <xref:System.TimeZoneInfo.IsDaylightSavingTime%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="daylightTimes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardName">
+      <MemberSignature Language="C#" Value="public abstract string StandardName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StandardName" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZone.StandardName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do fuso horário padrão.</summary>
+        <value>O nome do fuso horário padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.TimeZone.StandardName%2A> propriedade corresponde do <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> propriedade. Sempre que possível, use o <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ As seguintes referências de exemplo e exibe o `StandardName` propriedade do fuso horário atual.  
+  
+ [!code-cpp[System.TimeZone.Class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.TimeZone.Class/CPP/tzclass.cpp#1)]
+ [!code-csharp[System.TimeZone.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone.Class/CS/tzclass.cs#1)]
+ [!code-vb[System.TimeZone.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone.Class/VB/tzclass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Foi feita uma tentativa de definir esta propriedade como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToLocalTime">
+      <MemberSignature Language="C#" Value="public virtual DateTime ToLocalTime (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTime ToLocalTime(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.ToLocalTime(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Um horário UTC (Tempo Universal Coordenado).</param>
+        <summary>Retorna a hora local que corresponde a um valor de data e hora especificado.</summary>
+        <returns>Um objeto <see cref="T:System.DateTime" /> cujo valor é a hora local que corresponde a <paramref name="time" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra a relação entre o `time` parâmetro e o <xref:System.DateTime> valor retornado por este método.  
+  
+|Parâmetro `time`|Comportamento|Valor retornado|  
+|----------------------|--------------|------------------|  
+|Uma hora de tempo Universal Coordenado (UTC) (<xref:System.DateTimeKind?displayProperty=nameWithType>).|Converte a hora de UTC para o horário local.|Um objeto <xref:System.DateTime> cujo valor é a hora local que corresponde a `time`.|  
+|A hora local (<xref:System.DateTimeKind?displayProperty=nameWithType>).|Nenhuma conversão é necessária.|O mesmo <xref:System.DateTime> valor representado pelo `time` parâmetro.|  
+|Um tempo não especificado (<xref:System.DateTimeKind?displayProperty=nameWithType>).|Assume que o tempo é UTC e converte-o do UTC para o horário local.|Um objeto <xref:System.DateTime> cujo valor é a hora local que corresponde a `time`.|  
+  
+ Se o fuso horário local tiver o horário de verão, <xref:System.TimeZone.ToLocalTime%2A> aplica-se a regra de ajuste atual para `time` ao executar a conversão.  
+  
+> [!NOTE]
+>  O <xref:System.TimeZone.ToLocalTime%2A> método reconhece somente a horário de verão ajuste regra atual para o fuso horário local. Como resultado, é garantido que ele retornar com precisão a hora local correspondente a uma determinada hora de UTC somente durante o período em que a regra de ajuste mais recente está em vigor. Pode retornar resultados imprecisos se `time` é um histórica valor de data e hora que foi sujeito a uma regra de ajuste anterior.  
+  
+ O <xref:System.TimeZone.ToLocalTime%2A> método corresponde do <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A?displayProperty=nameWithType> método com seu `destinationTimeZone` parâmetro definido como <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>. Sempre que possível, use o <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Embora não seja necessário, na maioria dos casos em execução no .NET Framework versão 2.0 de classes derivadas devem substituir a implementação padrão desse método. Nas versões do .NET Framework 1.0 e 1.1, o <see langword="ToLocalTime" /> método chamado o <see cref="M:System.TimeZone.GetUtcOffset(System.DateTime)" /> método e ajustado para horário de verão quando retorna a hora local. No entanto, começando com o .NET Framework 2.0, o comportamento da implementação do padrão depende do <see cref="P:System.DateTime.Kind" /> propriedade o <paramref name="time" /> parâmetro. Se o valor for <see cref="F:System.DateTimeKind.Local" />, esse método retorna <paramref name="time" /> inalterado. Se seu valor seja <see cref="F:System.DateTimeKind.Utc" /> ou <see cref="F:System.DateTimeKind.Unspecified" />, este método assume <paramref name="time" /> é UTC e converte-o para a hora do sistema local sem chamar o <see cref="M:System.TimeZone.GetUtcOffset(System.DateTime)" /> método.  
+  
+ O código a seguir fornece uma substituição simple da implementação do padrão de <see langword="ToLocalTime" /> método. Nesse código, o <see langword="internalTimeZone" /> variável representa uma instância particular do <see langword="TimeZone" /> classe:  
+  
+ [!code-csharp[System.TimeZone.ToLocalTime#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone.ToLocalTime/CS/TimeZone_ToLocalTime.cs#1)]
+ [!code-vb[System.TimeZone.ToLocalTime#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone.ToLocalTime/VB/TimeZone_ToLocalTime.vb#1)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUniversalTime">
+      <MemberSignature Language="C#" Value="public virtual DateTime ToUniversalTime (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTime ToUniversalTime(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZone.ToUniversalTime(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Uma data e hora.</param>
+        <summary>Retorna o UTC (Tempo Universal Coordenado) que corresponde ao tempo especificado.</summary>
+        <returns>Um objeto <see cref="T:System.DateTime" /> cujo valor é o UTC (Tempo Universal Coordenado) que corresponde ao <paramref name="time" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o fuso horário local tiver o horário de verão, <xref:System.TimeZone.ToUniversalTime%2A> aplica-se a regra de ajuste atual para o `time` parâmetro ao executar a conversão.  
+  
+> [!NOTE]
+>  O <xref:System.TimeZone.ToUniversalTime%2A> método reconhece somente a horário de verão ajuste regra atual para o fuso horário local. Como resultado, é garantido que ele retornar com precisão o tempo Universal Coordenado (UTC) correspondente a um determinado momento local somente durante o período em que a regra de ajuste mais recente está em vigor. Pode retornar resultados imprecisos se `time` é um histórica valor de data e hora que foi sujeito a uma regra de ajuste anterior.  
+  
+ Se o `time` parâmetro é um horário ambíguo, o método pressupõe que se trata de um tempo padrão. (Um horário ambíguo é um que podem ser mapeados para um horário padrão ou um horário de verão no fuso horário local). Se `time` é uma hora inválida, o método simplesmente subtrai a hora local do UTC do fuso horário local de deslocamento para retornar o UTC. (Um horário inválido é aquele que não existe devido a aplicação de regras de ajuste de horário de verão).  
+  
+ Porque `time` é interpretado em relação ao fuso horário atual no sistema atual, a data e hora retornada por este método podem ser diferente se um aplicativo é executado em computadores diferentes ou no mesmo computador com fusos horários diferentes. Para casos em que um valor de data e hora deve representar um ponto único, não ambíguo no tempo, use um <xref:System.DateTimeOffset> valor para representar a hora local.  
+  
+ O <xref:System.TimeZone.ToUniversalTime%2A> método corresponde do <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> sobrecarga de método com um <xref:System.DateTime> parâmetro cujo <xref:System.DateTime.Kind%2A> não é igual a propriedade <xref:System.DateTimeKind?displayProperty=nameWithType>. Sempre que possível, use o <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

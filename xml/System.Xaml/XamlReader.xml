@@ -1,0 +1,409 @@
+<Type Name="XamlReader" FullName="System.Xaml.XamlReader">
+  <TypeSignature Language="C#" Value="public abstract class XamlReader : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XamlReader extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece definições de base para classes que consomem entradas XAML e produzem fluxos de nós XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlReader>é uma classe abstrata e não fornece implementações ou definições que tem um resultado do trabalho para todos os membros. Membros que possuem uma implementação <xref:System.Xaml.XamlReader> são indicados na seção comentários para esse membro. Especificamente, <xref:System.Xaml.XamlReader> tem vários membros abstratos que devem ser implementados e vários membros virtuais.  
+  
+ Os membros virtuais, <xref:System.Xaml.XamlReader.ReadSubtree%2A> e <xref:System.Xaml.XamlReader.Skip%2A> cada fornecem uma implementação padrão que é apropriada para a maioria dos casos. No entanto, o <xref:System.Xaml.XamlReader.ReadSubtree%2A> e <xref:System.Xaml.XamlReader.Skip%2A> implementações padrão dependem de outro comportamento esperado do leitor XAML implementando; em particular, eles dependem de <xref:System.Xaml.XamlReader.Read%2A> substituir. <xref:System.Xaml.XamlReader.Dispose%2A>também é um membro virtual que tem uma implementação padrão de trabalho.  
+  
+ As seguintes classes são as classes derivadas mais relevantes e práticas em serviços XAML do .NET Framework e o assembly System. XAML:  
+  
+-   <xref:System.Xaml.XamlObjectReader>, que lê um gráfico de objeto, como o gráfico de objeto ativo de um aplicativo em tempo de execução.  
+  
+-   <xref:System.Xaml.XamlXmlReader>, que lê o XAML no formato de um arquivo de texto XML usando geral <xref:System.Xml.XmlReader> que carrega o arquivo como uma classe auxiliar intermediário.  
+  
+ Incluem outros leitores XAML das outras estruturas <xref:System.Windows.Baml2006.Baml2006Reader> e <xref:System.Activities.Debugger.XamlDebuggerXmlReader>.  
+  
+ <xref:System.Xaml.XamlReader>difere [!INCLUDE[TLA#tla_xmldom](~/includes/tlasharptla-xmldom-md.md)] e <xref:System.Xml.XmlReader> princípios de design porque <xref:System.Xaml.XamlReader> não tem um `Create` método para retornar padrão subjacente implementações do leitor XAML. Em vez disso, você deve instanciar específicas classes derivadas de leitor XAML chamando seus construtores ou outros APIs do auxiliar de classe específica.  
+  
+## <a name="subtree-readers"></a>Leitores de subárvore  
+ A maior parte do tempo, você chama <xref:System.Xaml.XamlReader> API no contexto de classes específicas de leitor XAML que derivam de <xref:System.Xaml.XamlReader>. No entanto, em um caso específico, acessar <xref:System.Xaml.XamlReader> API em uma instância do leitor XAML prática que não é público e não derivada de <xref:System.Xaml.XamlObjectReader> ou <xref:System.Xaml.XamlXmlReader>. Nesse caso é quando você chama <xref:System.Xaml.XamlReader.ReadSubtree%2A>, que retorna um <xref:System.Xaml.XamlReader> instância. Na implementação do padrão, o <xref:System.Xaml.XamlReader> que é retornado por essa API é uma classe interna.  
+  
+ O <xref:System.Xaml.XamlReader> obtido para leitura de subárvore tem ações válidas para APIs, como <xref:System.Xaml.XamlReader.Read%2A> e <xref:System.Xaml.XamlReader.NodeType%2A>, e essas ações são baseadas na classe pai leitor. Esse design permite que a classe interna controlar o nível de quadro onde a subárvore foi inserida. A subárvore atuar <xref:System.Xaml.XamlReader> certifica-se de que, se a posição do nó atual for movida além dos limites da subárvore, o leitor de subárvore específico relatórios final do arquivo ou `null` no nó atual.  
+  
+ Observações sobre o uso de leitor de subárvore são incluídas em determinados <xref:System.Xaml.XamlReader> APIs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o <see cref="T:System.Xaml.XamlReader" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o fluxo do nó XAML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de base, chamada <xref:System.Xaml.XamlReader.Close%2A> chamadas <xref:System.Xaml.XamlReader.Dispose%2A> com o `isDisposing` parâmetro como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar os recursos gerenciados; Caso contrário, <see langword="false" />.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Xaml.XamlReader" />e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar a classe base para obter <xref:System.Xaml.XamlReader.IsDisposed%2A>  =  `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se <see cref="M:System.Xaml.XamlReader.Dispose(System.Boolean)" /> foi chamado.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.Xaml.XamlReader.Dispose(System.Boolean)" /> foi chamado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEof">
+      <MemberSignature Language="C#" Value="public abstract bool IsEof { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEof" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.IsEof" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém um valor que informa se a posição do leitor está no final do arquivo.</summary>
+        <value>
+          <see langword="true" />Se a posição está no conceitual final do arquivo de fluxo do nó XAML; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitores de subárvore podem chamar <xref:System.Xaml.XamlReader.IsEof%2A>, com o comportamento que reflete corretamente os limites da subárvore inserido. Para obter mais informações, consulte a seção "Subárvore leitores" <xref:System.Xaml.XamlReader>, ou consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlMember Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlMember Member" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém o membro atual na posição de leitor, se a posição do leitor estiver em um <see cref="F:System.Xaml.XamlNodeType.StartMember" />.</summary>
+        <value>O membro atual; ou <see langword="null" />, se a posição do leitor não está em um membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitores de subárvore podem chamar <xref:System.Xaml.XamlReader.Member%2A>, com restrições de comportamento. Para obter mais informações, consulte a seção "Subárvore leitores" <xref:System.Xaml.XamlReader>, ou consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.NamespaceDeclaration Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.NamespaceDeclaration Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.NamespaceDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém as informações do namespace XAML do nó atual.</summary>
+        <value>As informações de namespace XAML, se ele está disponível. Caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O design desejado desta API é retornar somente-se um resultado não nulo a <xref:System.Xaml.XamlReader.NodeType%2A> do nó atual é <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>. A propriedade não relata o namespace XAML que se aplica a objetos ou membros de forma geral escopo, como em um contexto de esquema XAML. Seu aplicativo deve fornecer um meio para armazenar em cache as informações para a ação do namespace XAML que atravessa nós XAML, se você precisar que informações de maneira diferente como o contexto do esquema XAML reporta a um gravador. Consulte <xref:System.Xaml.XamlXmlReader.Namespace%2A> para observações sobre a implementação da referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xaml.XamlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém o tipo do nó atual.</summary>
+        <value>Um valor de <see cref="T:System.Xaml.XamlNodeType" /> enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitores de subárvore podem chamar <xref:System.Xaml.XamlReader.NodeType%2A>, com restrições de comportamento. Para obter mais informações, consulte a seção "Subárvore leitores" <xref:System.Xaml.XamlReader>, ou consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, fornece o próximo nó XAML de origem, se um nó estiver disponível.</summary>
+        <returns>
+          <see langword="true" />Se um nó está disponível. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitores de subárvore podem chamar <xref:System.Xaml.XamlReader.Read%2A>, com restrições de comportamento. Para obter mais informações, consulte a seção "Subárvore leitores" <xref:System.Xaml.XamlReader>, ou consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSubtree">
+      <MemberSignature Language="C#" Value="public virtual System.Xaml.XamlReader ReadSubtree ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xaml.XamlReader ReadSubtree() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.ReadSubtree" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Xaml.XamlReader" /> que se baseia no atual <see cref="T:System.Xaml.XamlReader" />, onde retornado <see cref="T:System.Xaml.XamlReader" /> é usado para iterar por meio de uma subárvore da estrutura de nó XAML.</summary>
+        <returns>Uma nova instância de leitor XAML da subárvore.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método tem uma implementação padrão e retorna um válido <xref:System.Xaml.XamlReader>. Retornado <xref:System.Xaml.XamlReader> é uma classe interna que restringe certos <xref:System.Xaml.XamlReader> ações. As restrições são consistentes com o objetivo de ler apenas uma subárvore dimensionada de uma fonte maior para um conjunto de nós XAML e retornando a fim de arquivo ou `null` no nó atual quando a subárvore for fechada.  
+  
+ Em geral, você deve verificar o nó atual do inicial <xref:System.Xaml.XamlReader.Read%2A> para determinar se é necessário um leitor de subárvore. Como você marcar essa opção pode ser específico da implementação; No entanto, evite criar vários leitores de subárvore para cada subárvore. Além disso, evite chamar um leitor de subárvore em certos casos de nó (por exemplo, para <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>) que não pode conter uma subárvore de nós.  
+  
+ Depois de obter um leitor de subárvore, você deve chamar <xref:System.Xaml.XamlReader.Read%2A> nele para obter um nó atual (ou chamar <xref:System.Xaml.XamlReader.Skip%2A> para obter um próximo nó). Você não automaticamente obter uma posição inicial do nó do leitor de subárvore ao criá-lo.  
+  
+ O leitor obter chamando <xref:System.Xaml.XamlReader.ReadSubtree%2A> deste padrão implementação é uma classe interna. A classe interna baseia seu comportamento no <xref:System.Xaml.XamlReader> implementação que está sendo usado quando <xref:System.Xaml.XamlReader.ReadSubtree%2A> é chamado. A finalidade da classe interna é usada incluir o <xref:System.Xaml.XamlReader.Read%2A> e o comportamento geral de passagem. Passagem permanece dentro da subárvore pretendida, controlando de <xref:System.Xaml.XamlNodeType.StartMember> / <xref:System.Xaml.XamlNodeType.EndMember> pares ou <xref:System.Xaml.XamlNodeType.StartObject> / <xref:System.Xaml.XamlNodeType.EndObject> pares. Ele também corretamente retorna `false` para <xref:System.Xaml.XamlReader.Read%2A> e `true` para <xref:System.Xaml.XamlReader.IsEof%2A> quando o leitor estiver no final da subárvore, conforme definido pelo seu ponto de entrada. Em geral, você assume que qualquer <xref:System.Xaml.XamlReader> API chamada de um leitor de subárvore tem a mesma implementação como geral <xref:System.Xaml.XamlReader> , exceto o percurso delimitadora comportamento.  
+  
+ No entanto, <xref:System.Xaml.XamlReader.ReadSubtree%2A> é virtual. Portanto, um determinado <xref:System.Xaml.XamlReader> implementação pode fornecer um comportamento que difere o <xref:System.Xaml.XamlReader> comportamento de wrapper interna e um <xref:System.Xaml.XamlReader> implementação ainda pode desabilitar a funcionalidade de leitor de subárvore retornando <xref:System.NotImplementedException> ou outras exceções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém um objeto que fornece informações de contexto de esquema XAML para o conjunto de informações.</summary>
+        <value>Um objeto que fornece informações de contexto de esquema XAML para as informações de conjunto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public virtual void Skip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Skip() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Skip" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ignora o nó atual e avança a posição do leitor para o próximo nó.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma vez ignorada, <xref:System.Xaml.XamlReader.Read%2A> é chamado pelo padrão <xref:System.Xaml.XamlReader.Skip%2A> implementação. Você normalmente não chama <xref:System.Xaml.XamlReader.Skip%2A> e <xref:System.Xaml.XamlReader.Read%2A> em sequência.  
+  
+ No padrão <xref:System.Xaml.XamlReader.Skip%2A> implementação, diferentes ações são tomadas dependendo de quais <xref:System.Xaml.XamlReader.NodeType%2A> a posição do leitor é na momento. Se a posição do leitor está atualmente em um <xref:System.Xaml.XamlNodeType.StartMember> ou <xref:System.Xaml.XamlNodeType.StartObject>, que o membro ou objeto é ignorado. Para outros <xref:System.Xaml.XamlReader.NodeType%2A> valores, nenhuma ação será tomada diferente chamada <xref:System.Xaml.XamlReader.Read%2A> da posição atual.  
+  
+ Leitores de subárvore podem chamar <xref:System.Xaml.XamlReader.Skip%2A>, com restrições de comportamento. Para obter mais informações, consulte a seção "Subárvore leitores" <xref:System.Xaml.XamlReader>, ou consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ O comportamento de árvore do nó de <xref:System.Xaml.XamlReader.Skip%2A?displayProperty=nameWithType> se baseia o equivalente XML <xref:System.Xml.XmlReader.Skip%2A?displayProperty=nameWithType>. Com base no <xref:System.Xml.XmlReader.Skip%2A?displayProperty=nameWithType> equivalência de comportamento <xref:System.Xaml.XamlReader.Skip%2A?displayProperty=nameWithType> ignora o nó e sua subárvore, não apenas o nó de entrada único.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Xaml.XamlReader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, obtém o <see cref="T:System.Xaml.XamlType" /> do nó atual.</summary>
+        <value>O <see cref="T:System.Xaml.XamlType" /> do nó atual; ou <see langword="null" />, se a posição atual do leitor não está em um objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitores de subárvore podem chamar <xref:System.Xaml.XamlReader.Type%2A>, com restrições de comportamento. Para obter mais informações, consulte a seção "Subárvore leitores" <xref:System.Xaml.XamlReader>, ou consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém o valor do nó atual.</summary>
+        <value>O valor do nó atual; ou <see langword="null" />, se a posição atual do leitor não está em um <see cref="F:System.Xaml.XamlNodeType.Value" /> tipo de nó.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

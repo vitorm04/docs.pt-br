@@ -1,0 +1,519 @@
+<Type Name="Choices" FullName="System.Speech.Recognition.Choices">
+  <TypeSignature Language="C#" Value="public class Choices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Choices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.Choices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{_oneOf.DebugSummary}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um conjunto de alternativas dentro das restrições de uma gramática de reconhecimento de fala.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Speech.Recognition.Choices> objeto representa um componente de uma frase que pode ter um dos vários valores. Use essa classe ao criar uma gramática de reconhecimento de fala de um <xref:System.Speech.Recognition.GrammarBuilder> objeto.  
+  
+ Por exemplo, um <xref:System.Speech.Recognition.Choices> objeto pode representar o componente *colorChoice* da frase "alterar a cor a ser *colorChoice*", onde os valores aceitáveis para *colorChoice* "vermelho" ou "green" ou "blue".  
+  
+> [!NOTE]
+>  Para usar um <xref:System.Speech.Recognition.Choices> de objeto como um componente opcional em uma frase, crie o <xref:System.Speech.Recognition.Choices> de objeto e adicioná-lo para um <xref:System.Speech.Recognition.GrammarBuilder.%23ctor%28System.Speech.Recognition.GrammarBuilder%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> do objeto com `minRepeat` e `maxRepeat` definido como 0 e 1, respectivamente. Frases que contém os componentes opcionais podem ser reconhecidas ou não o componente opcional é falado.  
+  
+ O <xref:System.Speech.Recognition.Choices> classe serve a mesma função que o `one-of` elemento XML definido pelo [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://www.w3.org/TR/speech-grammar/) e é semelhante de <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> classe no <xref:System.Speech.Recognition.SrgsGrammar> namespace.  
+  
+ Para obter mais informações sobre como definir uma gramática de reconhecimento de fala, consulte [o reconhecimento de fala](http://msdn.microsoft.com/en-us/6a7dc524-07fc-4862-8d48-8c10dc64b919) e [criando GrammarBuilder gramáticas](http://msdn.microsoft.com/en-us/7e2cc577-cb05-4318-9da3-7c8675d3d9ae).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala da frase "definir o plano de fundo *colorChoice*", onde *colorChoice* pode ser uma das cores definidas. O <xref:System.Speech.Recognition.GrammarBuilder> é usado para definir as restrições da gramática.  
+  
+```csharp  
+  
+private Grammar CreateColorGrammar()  
+{  
+  
+  // Create a Choices object that contains a set of alternative colors.  
+  Choices colorChoice = new Choices(new string[] {"red", "green", "blue"});  
+  colorChoice.Add(new string[] {"cyan", "yellow", "magenta"});  
+  
+  // Construct the phrase.  
+  GrammarBuilder builder = new GrammarBuilder("Set background to");  
+  builder.Append(colorChoice);  
+  
+  // Create a grammar for the phrase.  
+  Grammar colorGrammar = new Grammar(builder);  
+  colorGrammar.Name = "SetBackground";  
+  
+  return colorGrammar;  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.Choices" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode construir um <xref:System.Speech.Recognition.Choices> objeto usando um construtor padrão (que retorna um objeto vazio), de um grupo de <xref:System.String> objetos, ou um conjunto de <xref:System.Speech.Recognition.GrammarBuilder> objetos.  
+  
+ Porque o <xref:System.Speech.Recognition.GrammarBuilder> objeto oferece suporte à conversão implícita de <xref:System.Speech.Recognition.SemanticResultValue> e <xref:System.Speech.Recognition.SemanticResultKey>, um <xref:System.Speech.Recognition.Choices> podem ser construídos a partir de uma matriz desses objetos usando uma conversão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Speech.Recognition.Choices> objetos para criar duas listas de alternativas.  
+  
+ A primeira <xref:System.Speech.Recognition.Choices> objeto é construído a partir de uma matriz de <xref:System.String> objetos. O outro <xref:System.Speech.Recognition.Choices> objeto é construído a partir de uma matriz de <xref:System.Speech.Recognition.GrammarBuilder> objetos que foram convertidos implicitamente por uma conversão.  
+  
+ O exemplo usa um <xref:System.Speech.Recognition.GrammarBuilder> objeto para montar uma frase, usando o <xref:System.Speech.Recognition.Choices> objetos e duas cadeias de caracteres adicionais, que podem ser usadas para reconhecer a fala de entrada na forma de "Chamada [contactlList] em [phoneType] telefone", por exemplo "Jane chamada no telefone celular".  
+  
+```  
+public GrammarBuilder ChoicesContructor2 ()  
+{  
+    GrammarBuilder gb = new GrammarBuilder ();  
+    Choices phoneType = new Choices (new string[] {"cell", "home", "work"});  
+    Choices contactList = new Choices (new GrammarBuilder[] {(GrammarBuilder) "Mark", (GrammarBuilder) "Jane", (GrammarBuilder) "Frank"});  
+    gb.Append ("Call");  
+    gb.Append (contactList);  
+    gb.Append ("on");  
+    gb.Append (phoneType);  
+    gb.Append ("phone");  
+    return gb;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Choices ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Choices.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Choices" /> classe que contém um conjunto vazio de alternativas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor retorna um conjunto vazio válido, de alternativas. Você pode adicionar alternativas usando qualquer um do <xref:System.Speech.Recognition.Choices.Add%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Speech.Recognition.Choices> e <xref:System.Speech.Recognition.GrammarBuilder> objetos para criar uma expressão que pode ser usada para reconhecer a entrada de fala, como "Chamada Anne em sua célula" e "Chamada James em seu telefone comercial". O exemplo usa conversões implícitas de <xref:System.Speech.Recognition.Choices> e <xref:System.String> para <xref:System.Speech.Recognition.GrammarBuilder>.  
+  
+```csharp  
+public Grammar CreatePhonePhrase()  
+{  
+  
+  // Create alternatives for female names and add a phrase.  
+  GrammarBuilder females = new Choices(new string[] { "Anne", "Mary" });  
+  females.Append("on her");  
+  
+  // Create alternatives for male names and add a phrase.  
+  GrammarBuilder males = new Choices(new string[] { "James", "Sam" });  
+  males.Append("on his");  
+  
+  // Create a Choices object that contains an array of alternative  
+  // GrammarBuilder objects.  
+  Choices people = new Choices();  
+  people.Add(new Choices(new GrammarBuilder[] {females, males}));  
+  
+  // Create a Choices object that contains a set of alternative phone types.  
+  Choices phoneType = new Choices();  
+  phoneType.Add(new string[] { "cell", "home", "work" });  
+  
+  // Construct the phrase.  
+  GrammarBuilder gb = new GrammarBuilder();  
+  gb.Append("call");  
+  gb.Append(people);  
+  gb.Append(phoneType);  
+  gb.Append(new GrammarBuilder("phone"), 0, 1);  
+  
+  return new Grammar(gb);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Choices (params System.Speech.Recognition.GrammarBuilder[] alternateChoices);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.GrammarBuilder[] alternateChoices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Choices.#ctor(System.Speech.Recognition.GrammarBuilder[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="alternateChoices" Type="System.Speech.Recognition.GrammarBuilder[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="alternateChoices">Uma matriz que contém o conjunto de alternativas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Choices" /> classe a partir de uma matriz que contém um ou mais <see cref="T:System.Speech.Recognition.GrammarBuilder" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Speech.Recognition.GrammarBuilder> na `alternateChoices` define uma alternativa. Se `alternateChoices` é uma matriz vazia, o construtor retorna um conjunto vazio de alternativas. Você pode adicionar alternativas usando qualquer um do <xref:System.Speech.Recognition.Choices.Add%2A> métodos.  
+  
+ O construtor lançará um <xref:System.ArgumentNullException> quando `alternateChoices` é `null` ou quando qualquer um dos elementos da matriz são `null`.  
+  
+ Porque o <xref:System.Speech.Recognition.GrammarBuilder> classe oferece suporte para a conversão implícita do <xref:System.Speech.Recognition.Choices>, <xref:System.Speech.Recognition.SemanticResultValue>, e <xref:System.Speech.Recognition.SemanticResultKey> objetos <xref:System.Speech.Recognition.GrammarBuilder> instâncias, usando corretamente conversões, este construtor pode ser usado para criar um <xref:System.Speech.Recognition.Choices> objeto em uma lista de qualquer combinação desses objetos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa `Choices` e <xref:System.Speech.Recognition.GrammarBuilder> objetos para criar um <xref:System.Speech.Recognition.Grammar> frases como "Chamada Anne em sua célula" e "Chamada James em seu telefone comercial". O exemplo usa conversões implícitas de `Choices` e <xref:System.String> para <xref:System.Speech.Recognition.GrammarBuilder>.  
+  
+```csharp  
+public Grammar CreatePhonePhrase()  
+{  
+  
+  // Create alternatives for female names and add a phrase.  
+  GrammarBuilder females = new Choices(new string[] { "Anne", "Mary" });  
+  females.Append("on her");  
+  
+  // Create alternatives for male names and add a phrase.  
+  GrammarBuilder males = new Choices(new string[] { "James", "Sam" });  
+  males.Append("on his");  
+  
+  // Create a Choices object that contains an array of alternative  
+  // GrammarBuilder objects.  
+  Choices people = new Choices();  
+  people.Add(new Choices(new GrammarBuilder[] {females, males}));  
+  
+  // Create a Choices object that contains a set of alternative phone types.  
+  Choices phoneType = new Choices();  
+  phoneType.Add(new string[] { "cell", "home", "work" });  
+  
+  // Construct the phrase.  
+  GrammarBuilder gb = new GrammarBuilder();  
+  gb.Append("call");  
+  gb.Append(people);  
+  gb.Append(phoneType);  
+  gb.Append(new GrammarBuilder("phone"), 0, 1);  
+  
+  return new Grammar(gb);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Choices (params string[] phrases);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] phrases) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Choices.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="phrases" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="phrases">Uma matriz que contém o conjunto de alternativas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Choices" /> classe a partir de uma matriz que contém um ou mais <see cref="T:System.String" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.String> na `phrases` define uma alternativa. O mecanismo de reconhecimento de fala pode usar qualquer um dos itens na matriz de cadeia de caracteres para corresponder à entrada de fala. Se `phrases` é uma matriz vazia, o construtor retorna um conjunto vazio de alternativas. Você pode adicionar alternativas usando qualquer um do <xref:System.Speech.Recognition.Choices.Add%2A> métodos.  
+  
+ O construtor lançará um <xref:System.ArgumentNullException> quando `phrases` é `null` ou qualquer um dos elementos da matriz são `null`. O construtor lança um <xref:System.ArgumentException> se qualquer elemento da matriz será uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Speech.Recognition.Choices> e <xref:System.Speech.Recognition.GrammarBuilder> objetos para criar um <xref:System.Speech.Recognition.Grammar> frases como "Chamada Anne em sua célula" e "Chamada James em seu telefone comercial". O exemplo usa conversões implícitas de `Choices` e <xref:System.String> para <xref:System.Speech.Recognition.GrammarBuilder>.  
+  
+```csharp  
+public Grammar CreatePhonePhrase()  
+{  
+  
+  // Create alternatives for female names and add a phrase.  
+  GrammarBuilder females = new Choices(new string[] { "Anne", "Mary" });  
+  females.Append("on her");  
+  
+  // Create alternatives for male names and add a phrase.  
+  GrammarBuilder males = new Choices(new string[] { "James", "Sam" });  
+  males.Append("on his");  
+  
+  // Create a Choices object that contains an array of alternative  
+  // GrammarBuilder objects.  
+  Choices people = new Choices();  
+  people.Add(new Choices(new GrammarBuilder[] {females, males}));  
+  
+  // Create a Choices object that contains a set of alternative phone types.  
+  Choices phoneType = new Choices();  
+  phoneType.Add(new string[] { "cell", "home", "work" });  
+  
+  // Construct the phrase.  
+  GrammarBuilder gb = new GrammarBuilder();  
+  gb.Append("call");  
+  gb.Append(people);  
+  gb.Append(phoneType);  
+  gb.Append(new GrammarBuilder("phone"), 0, 1);  
+  
+  return new Grammar(gb);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (params System.Speech.Recognition.GrammarBuilder[] alternateChoices);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Speech.Recognition.GrammarBuilder[] alternateChoices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Choices.Add(System.Speech.Recognition.GrammarBuilder[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="alternateChoices" Type="System.Speech.Recognition.GrammarBuilder[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="alternateChoices">Os objetos <see cref="T:System.Speech.Recognition.GrammarBuilder" /> a serem adicionados a este objeto <see cref="T:System.Speech.Recognition.Choices" />.</param>
+        <summary>Adiciona uma matriz que contém um ou mais objetos <see cref="T:System.Speech.Recognition.GrammarBuilder" /> ao conjunto de alternativas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por causa do suporte para conversão implícita de <xref:System.Speech.Recognition.Choices>, <xref:System.Speech.Recognition.SemanticResultKey>, e <xref:System.Speech.Recognition.SemanticResultValue> objetos <xref:System.Speech.Recognition.GrammarBuilder>, esses três classes podem ser adicionadas a um <xref:System.Speech.Recognition.Choices> instância também.  
+  
+ Se `alternateChoices` é uma matriz vazia, esse método não atualizar o conjunto de alternativas.  
+  
+ Os aplicativos podem usar ambos <xref:System.Speech.Recognition.Choices.Add%28System.String%5B%5D%29> e <xref:System.Speech.Recognition.Choices.Add%28System.Speech.Recognition.GrammarBuilder%5B%5D%29> adicionar alternativas para um <xref:System.Speech.Recognition.Choices> objeto.  
+  
+ Este método lança um <xref:System.ArgumentNullException> quando `alternateChoices` é `null` ou qualquer um dos elementos da matriz são `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala frases como "Chamada Anne em sua célula" e "Chamada James em seu telefone comercial". O exemplo usa as duas sobrecargas do <xref:System.Speech.Recognition.Choices.Add%2A> método para construir a gramática.  
+  
+```csharp  
+public Grammar CreatePhonePhrase()  
+{  
+  
+  // Create alternatives for female names and add a phrase.  
+  GrammarBuilder females = new Choices(new string[] { "Anne", "Mary" });  
+  females.Append("on her");  
+  
+  // Create alternatives for male names and add a phrase.  
+  GrammarBuilder males = new Choices(new string[] { "James", "Sam" });  
+  males.Append("on his");  
+  
+  // Create a Choices object that contains an array of alternative  
+  // GrammarBuilder objects.  
+  Choices people = new Choices();  
+  people.Add(new Choices(new GrammarBuilder[] {females, males}));  
+  
+  // Create a Choices object that contains a set of alternative phone types.  
+  Choices phoneType = new Choices();  
+  phoneType.Add(new string[] { "cell", "home", "work" });  
+  
+  // Construct the phrase.  
+  GrammarBuilder gb = new GrammarBuilder();  
+  gb.Append("call");  
+  gb.Append(people);  
+  gb.Append(phoneType);  
+  gb.Append(new GrammarBuilder("phone"), 0, 1);  
+  
+  return new Grammar(gb);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (params string[] phrases);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string[] phrases) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Choices.Add(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="phrases" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="phrases">As cadeias de caracteres para adicionar a esta <see cref="T:System.Speech.Recognition.Choices" /> objeto.</param>
+        <summary>Adiciona uma matriz que contém um ou mais objetos <see cref="T:System.String" /> ao conjunto de alternativas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os aplicativos podem usar ambos <xref:System.Speech.Recognition.Choices.Add%28System.String%5B%5D%29> e <xref:System.Speech.Recognition.Choices.Add%28System.Speech.Recognition.GrammarBuilder%5B%5D%29> adicionar alternativas para um <xref:System.Speech.Recognition.Choices> objeto.  
+  
+ Se `phrases` é uma matriz vazia, esse método não atualizar o conjunto de alternativas.  
+  
+ Este método lança um <xref:System.ArgumentNullException> quando `phrases` é `null` ou qualquer um dos elementos da matriz são `null`. Este método lança um <xref:System.ArgumentException> se qualquer elemento na matriz é a cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala frases semelhantes a "Chamada Anne em sua célula" e "Chamada James em seu telefone comercial". O exemplo usa as duas sobrecargas do <xref:System.Speech.Recognition.Choices.Add%2A> método para construir a gramática.  
+  
+```csharp  
+public Grammar CreatePhonePhrase()  
+{  
+  
+  // Create alternatives for female names and add a phrase.  
+  GrammarBuilder females = new Choices(new string[] { "Anne", "Mary" });  
+  females.Append("on her");  
+  
+  // Create alternatives for male names and add a phrase.  
+  GrammarBuilder males = new Choices(new string[] { "James", "Sam" });  
+  males.Append("on his");  
+  
+  // Create a Choices object that contains an array of alternative  
+  // GrammarBuilder objects.  
+  Choices people = new Choices();  
+  people.Add(new Choices(new GrammarBuilder[] {females, males}));  
+  
+  // Create a Choices object that contains a set of alternative phone types.  
+  Choices phoneType = new Choices();  
+  phoneType.Add(new string[] { "cell", "home", "work" });  
+  
+  // Construct the phrase.  
+  GrammarBuilder gb = new GrammarBuilder();  
+  gb.Append("call");  
+  gb.Append(people);  
+  gb.Append(phoneType);  
+  gb.Append(new GrammarBuilder("phone"), 0, 1);  
+  
+  return new Grammar(gb);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToGrammarBuilder">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.GrammarBuilder ToGrammarBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Speech.Recognition.GrammarBuilder ToGrammarBuilder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Choices.ToGrammarBuilder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.GrammarBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Speech.Recognition.GrammarBuilder" /> objeto neste <see cref="T:System.Speech.Recognition.Choices" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Speech.Recognition.GrammarBuilder" /> que corresponde a este <see cref="T:System.Speech.Recognition.Choices" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Recognition.GrammarBuilder> retornado por esse método é equivalente a uma retornado por um dos seguintes.  
+  
+-   Chamando o <xref:System.Speech.Recognition.GrammarBuilder.%23ctor%2A> construtor com este objeto como o parâmetro.  
+  
+-   Usar implícita ou explícita conversão do objeto para um <xref:System.Speech.Recognition.GrammarBuilder>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala para alterar a cor do plano de fundo.  
+  
+```csharp  
+  
+private Grammar CreateColorChoice()  
+{  
+  
+  // Create a Choices object that contains a set of alternative colors.  
+  Choices colorChoice = new Choices(new string[] {"red", "green", "blue"});  
+  
+  // Construct the phrase.  
+  GrammarBuilder gb = new GrammarBuilder();  
+  gb.Append(new Choices(new string[] {"Set", "Change"}));  
+  gb.Append("background to");  
+  gb.Append(colorChoice.ToGrammarBuilder());  
+  
+  Grammar grammar = new Grammar(gb);  
+  grammar.Name = "modify background color";  
+  
+  return grammar;  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

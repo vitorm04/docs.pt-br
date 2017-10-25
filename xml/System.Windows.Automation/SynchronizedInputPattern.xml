@@ -1,0 +1,172 @@
+<Type Name="SynchronizedInputPattern" FullName="System.Windows.Automation.SynchronizedInputPattern">
+  <TypeSignature Language="C#" Value="public class SynchronizedInputPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SynchronizedInputPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.SynchronizedInputPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa objetos que dão suporte a eventos de entrada sincronizados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.SynchronizedInputPattern.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe a escuta de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o provedor está escutando no momento para a entrada, ele reverterá para a operação normal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputDiscardedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent InputDiscardedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent InputDiscardedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SynchronizedInputPattern.InputDiscardedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento gerado quando o WPF descarta a entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Um provedor de automação de interface do usuário deve usar o campo equivalente em <xref:System.Windows.Automation.SynchronizedInputPatternIdentifiers>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputReachedOtherElementEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent InputReachedOtherElementEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent InputReachedOtherElementEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SynchronizedInputPattern.InputReachedOtherElementEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento gerado quando a entrada é recebida por um elemento diferente daquele que está escutando no momento para a entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Um provedor de automação de interface do usuário deve usar o campo equivalente em <xref:System.Windows.Automation.SynchronizedInputPatternIdentifiers>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputReachedTargetEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent InputReachedTargetEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent InputReachedTargetEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SynchronizedInputPattern.InputReachedTargetEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento gerado quando a entrada foi recebida pelo elemento escutando no momento para a entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Um provedor de automação de interface do usuário deve usar o campo equivalente em <xref:System.Windows.Automation.SynchronizedInputPatternIdentifiers>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SynchronizedInputPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.SynchronizedInputPattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.SynchronizedInputPatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos, como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListening">
+      <MemberSignature Language="C#" Value="public void StartListening (System.Windows.Automation.SynchronizedInputType inputType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartListening(valuetype System.Windows.Automation.SynchronizedInputType inputType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.SynchronizedInputPattern.StartListening(System.Windows.Automation.SynchronizedInputType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputType" Type="System.Windows.Automation.SynchronizedInputType" />
+      </Parameters>
+      <Docs>
+        <param name="inputType">O tipo de entrada para ouvir.</param>
+        <summary>Designa que o início do provedor aguardando a entrada do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o WPF encontra correspondência de entrada, ele verifica a rota do evento de entrada. Se o elemento de automação que está aguardando a entrada não está na rota, a entrada será descartada e o <xref:System.Windows.Automation.SynchronizedInputPattern.InputDiscardedEvent> é gerado. Se a entrada é recebida, o elemento de automação de escuta para o tipo, o <xref:System.Windows.Automation.SynchronizedInputPattern.InputReachedTargetEvent> evento é gerado; caso contrário, o <xref:System.Windows.Automation.SynchronizedInputPattern.InputReachedOtherElementEvent> é gerado.  
+  
+ Depois de receber a entrada, o provedor para de escutar e continuará normalmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

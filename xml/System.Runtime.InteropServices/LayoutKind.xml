@@ -1,0 +1,142 @@
+<Type Name="LayoutKind" FullName="System.Runtime.InteropServices.LayoutKind">
+  <TypeSignature Language="C#" Value="public enum LayoutKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed LayoutKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.LayoutKind" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla o layout de um objeto quando exportado para o código não gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada com <xref:System.Runtime.InteropServices.StructLayoutAttribute>. O common language runtime usa o `Auto` valor layout por padrão. Para reduzir problemas relacionados a layout associados a `Auto` valor, especifique os compiladores c#, Visual Basic e C++ `Sequential` layout para tipos de valor.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack?displayProperty=nameWithType> campo controla o alinhamento de campos de dados e, portanto, afeta o layout independentemente do <xref:System.Runtime.InteropServices.LayoutKind> valor que você especificar. Por padrão, o valor de <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> é 0, que indica o padrão de remessa de tamanho para a plataforma atual. Por exemplo, quando você usa o `Explicit` layout e especifique alinhamentos de campo em limites de byte, você deve definir <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> como 1 para obter o resultado desejado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a declaração gerenciada a `PtInRect` função, que verifica se um ponto está dentro de um retângulo e define uma `Point` estrutura com layout sequencial e um `Rect` estrutura com layout explícito.  
+  
+ [!code-cpp[LayoutKind#1](~/samples/snippets/cpp/VS_Snippets_CLR/LayoutKind/CPP/layoutkind.cpp#1)]
+ [!code-csharp[LayoutKind#1](~/samples/snippets/csharp/VS_Snippets_CLR/LayoutKind/CS/layoutkind.cs#1)]
+ [!code-vb[LayoutKind#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/LayoutKind/VB/layoutkind.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.LayoutKind Auto = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.LayoutKind.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.LayoutKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tempo de execução escolhe automaticamente um layout adequado para os membros de um objeto na memória não gerenciada. Objetos definidos com este membro de enumeração não podem ser expostos fora do código gerenciado. Tentar fazer isso gera uma exceção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Explicit">
+      <MemberSignature Language="C#" Value="Explicit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.LayoutKind Explicit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.LayoutKind.Explicit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.LayoutKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição exata de cada membro de um objeto na memória não gerenciada é explicitamente controlada, sujeito à configuração do campo <see cref="F:System.Runtime.InteropServices.StructLayoutAttribute.Pack" />. Cada membro deve usar o <see cref="T:System.Runtime.InteropServices.FieldOffsetAttribute" /> para indicar a posição do campo dentro do tipo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sequential">
+      <MemberSignature Language="C#" Value="Sequential" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.LayoutKind Sequential = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.LayoutKind.Sequential" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.LayoutKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os membros do objeto são dispostos sequencialmente, na ordem em que aparecem quando exportados para memória não gerenciada. Os membros são dispostos de acordo com a remessa especificada em <see cref="F:System.Runtime.InteropServices.StructLayoutAttribute.Pack" /> e podem ser não contíguos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

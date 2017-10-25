@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.Services.Design">
+  <Docs>
+    <summary>Usado pela ferramentas de linha de comando de geração de código e ferramentas no Visual Studio para gerar objetos do lado cliente fortemente tipado para se comunicar com os serviços de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não se destina para uso público.  
+  
+ © 2009 Microsoft Corporation. Todos os direitos reservados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

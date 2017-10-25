@@ -1,0 +1,49 @@
+<Type Name="BinaryDelegate&lt;TArg1,TArg2,TResult&gt;" FullName="Microsoft.VisualC.StlClr.BinaryDelegate&lt;TArg1,TArg2,TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult BinaryDelegate&lt;TArg1,TArg2,TResult&gt;(TArg1 A_0, TArg2 A_1);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BinaryDelegate`3&lt;TArg1, TArg2, TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.BinaryDelegate`3" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TArg1" />
+    <TypeParameter Name="TArg2" />
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1708")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="A_0" Type="TArg1" />
+    <Parameter Name="A_1" Type="TArg2" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TArg1">O primeiro argumento de delegate.</typeparam>
+    <typeparam name="TArg2">O segundo argumento de delegate.</typeparam>
+    <typeparam name="TResult">O tipo de retorno do delegado.</typeparam>
+    <param name="A_0">O primeiro argumento.</param>
+    <param name="A_1">O segundo argumento.</param>
+    <summary>Descreve um delegado de dois argumentos. Você pode usá-lo para especificar os argumentos e retornar o tipo do delegado.</summary>
+    <returns>O tipo de retorno do delegado.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse delegado é o equivalente genérico STL/CLR `binary_delegate` classe. Para obter mais informações, consulte [binary_delegate (STL/CLR)](http://msdn.microsoft.com/library/52a9291a-e354-4b9e-a035-78dac1179ec5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

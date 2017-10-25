@@ -1,0 +1,657 @@
+<Type Name="SiteMapDataSource" FullName="System.Web.UI.WebControls.SiteMapDataSource">
+  <TypeSignature Language="C#" Value="public class SiteMapDataSource : System.Web.UI.HierarchicalDataSourceControl, System.ComponentModel.IListSource, System.Web.UI.IDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapDataSource extends System.Web.UI.HierarchicalDataSourceControl implements class System.ComponentModel.IListSource, class System.Web.UI.IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SiteMapDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HierarchicalDataSourceControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IListSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.SiteMapDataSource))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um controle de fonte de dados que os controles de servidor Web e outros controles podem usar para serem associados aos dados do mapa do site hierárquico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Especifica o nó inicial](#specifying_the_starting_node)  
+  
+-   [Recuperando dados de mapa de Site](#retrieving_site_map_data)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> controle é uma fonte de dados para os dados de mapa do site são armazenados pelos provedores de mapa de site que são configuradas para seu site. O <xref:System.Web.UI.WebControls.SiteMapDataSource> permite que os controles de servidor Web que não sejam especificamente controles de navegação do site, como o <xref:System.Web.UI.WebControls.TreeView>, <xref:System.Web.UI.WebControls.Menu>, e <xref:System.Web.UI.WebControls.DropDownList> controles para associar aos dados de mapa de site hierárquica. Você pode usar esses controles de servidor Web para exibir um mapa de site como um sumário ou para navegar ativamente em um site.  Como alternativa, você pode usar o <xref:System.Web.UI.WebControls.SiteMapPath> controle, que é projetado especificamente como um controle de navegação do site e, portanto, não precisa de uma instância do <xref:System.Web.UI.WebControls.SiteMapDataSource> controle.  
+  
+<a name="specifying_the_starting_node"></a>   
+## <a name="specifying-the-starting-node"></a>Especifica o nó inicial  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> associa dados de mapa de site e apresenta seu modo de exibição com base em um nó inicial especificado na hierarquia de mapa do site. Por padrão, é o nó raiz da hierarquia, mas ele também pode ser qualquer nó dentro da hierarquia. O nó inicial é identificado pelos valores de várias <xref:System.Web.UI.WebControls.SiteMapDataSource> propriedades da seguinte maneira:  
+  
+|Nó inicial|Valores de propriedade|  
+|-------------------|---------------------|  
+|O nó raiz da hierarquia (a configuração padrão).|O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> é `false`.<br /><br /> O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> não foi definido.|  
+|O nó que representa a página exibida atualmente.|O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> é `true`.<br /><br /> O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> não foi definido.|  
+|Um nó específico da hierarquia.|O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> é `false`.<br /><br /> O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> está definido.|  
+  
+ Se o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é definida como um valor diferente de 0, afeta o nó inicial e com ele, o site mapear hierarquia de dados que é exposta pelo <xref:System.Web.UI.WebControls.SiteMapDataSource> controle. O valor inteiro positivo ou negativo a <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> identifica o número de níveis para cima ou para baixo a hierarquia de mapa de site a partir do nó inicial que é identificada pelo <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> e <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedades para deslocar o nó inicial da subárvore que é exposto por dados de controle de origem.  
+  
+ Se o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é definida como um número negativo * -n *, o nó inicial da subárvore que é exposto pelo controle de fonte de dados é o nó ancestral * n * níveis hierárquicos acima identificado nó inicial. Se o valor * n * for maior do que o número de níveis de ancestral na árvore hierárquica, o nó inicial da subárvore é o nó raiz da hierarquia de mapa do site.  
+  
+ Se o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é definida como um número positivo +*n*, o nó inicial da subárvore que é exposto é um nó filho * n * níveis abaixo do nó inicial identificado. Porque talvez haja mais de uma ramificação de nós filho na hierarquia, o <xref:System.Web.UI.WebControls.SiteMapDataSource> tenta resolver um nó filho diretamente no caminho entre o nó inicial identificado e o nó que representa a página solicitada no momento, se possível. Se o nó que representa a página solicitada no momento não é na subárvore do nó inicial identificado, o valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade será ignorada. Se o nó que representa a página solicitada no momento é menor que * n * níveis abaixo do nó inicial identificado, o nó da página solicitada no momento é usado como o nó inicial.  
+  
+<a name="retrieving_site_map_data"></a>   
+## <a name="retrieving-site-map-data"></a>Recuperando dados de mapa de Site  
+ Dados de mapa de site são recuperados de um <xref:System.Web.SiteMapProvider> objeto, como <xref:System.Web.XmlSiteMapProvider>, que é o provedor de mapa de site padrão do ASP.NET. Você pode especificar qualquer provedor que está configurado para o seu site fornecer os dados de mapa de site para o <xref:System.Web.UI.WebControls.SiteMapDataSource> e pode obter a lista de provedores disponíveis, acessando o <xref:System.Web.SiteMap.Providers%2A?displayProperty=nameWithType> coleção.  
+  
+ Como todos os controles de fonte de dados, cada instância de um <xref:System.Web.UI.WebControls.SiteMapDataSource> está associado um objeto auxiliar único, conhecido como uma exibição da fonte de dados. O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> é um modo de exibição nos dados de mapa do site, de acordo com as propriedades da fonte de dados e é recuperada por uma chamada a <xref:System.Web.UI.WebControls.SiteMapDataSource.GetHierarchicalView%2A> método. O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> mantém o <xref:System.Web.SiteMapNodeCollection> objeto associar os controles.  
+  
+ Por padrão, o nó inicial é o nó raiz da hierarquia, mas você pode definir o nó inicial para qualquer nó. O ponto de partida pode ser um nó em relação à posição atual no mapa do site ou para uma posição absoluta. Você pode especificar o nó inicial, definindo o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> é especializada para dados de navegação e não oferece suporte a operações de fonte de dados comuns, como classificação, filtragem, paginação, cache ou operações de registro de dados, como atualizações, inserções ou exclusões.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:SiteMapDataSource  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    ShowStartingNode="True|False"  
+    SiteMapProvider="string"  
+    SkinID="string"  
+    StartFromCurrentNode="True|False"  
+    StartingNodeOffset="integer"  
+    StartingNodeUrl="uri"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como associar declarativamente uma <xref:System.Web.UI.WebControls.TreeView> controle a um mapa de site usando um <xref:System.Web.UI.WebControls.SiteMapDataSource> controle. Os dados de mapa do site são recuperados começando no nível de nó raiz.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SiteMapDataSource_decl_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_decl_1/CS/webform1smdscs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SiteMapDataSource_decl_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_decl_1/VB/webform1smdsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsListCollection">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsListCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContainsListCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.ContainsListCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de fonte de dados contém uma coleção de objetos de exibição de fonte de dados.</summary>
+        <value>
+          <see langword="true" />Se o controle de fonte de dados contém uma coleção de objetos de exibição da fonte de dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource.ContainsListCollection%2A> propriedade chama estático <xref:System.Web.UI.ListSourceHelper.ContainsListCollection%2A> método o <xref:System.Web.UI.ListSourceHelper> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHierarchicalView">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HierarchicalDataSourceView GetHierarchicalView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.HierarchicalDataSourceView GetHierarchicalView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.GetHierarchicalView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">A URL do nó inicial, especificado pelo <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" />.</param>
+        <summary>Recupera uma única exibição nos dados de mapa do site para o <see cref="T:System.Web.SiteMapProvider" /> objeto de acordo com o nó inicial e outras propriedades da fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> objeto auxiliar nos dados de mapa do site, começando com o nó que é identificado pelo <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> ou seu filho, se o <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.ShowStartingNode" /> é <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Não <see cref="T:System.Web.SiteMapProvider" /> está configurado ou disponível para o site.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode" /> é <see langword="true" /> , mas o <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> está definido.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> é definido, mas o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> não é possível resolver um nó para a URL especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetList">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IList GetList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IList GetList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.GetList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma lista de controles de fonte de dados que podem ser usados como fontes de listas de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.IList" /> dos controles de fonte de dados que podem ser usados como fontes de listas de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SiteMapDataSource.GetList%2A> método para recuperar um conjunto de objetos que podem ser usados como fontes para a <xref:System.Web.UI.WebControls.SiteMapDataSource> controle. Controles de fonte de dados de mapa de site encapsulam suas listas de dados como <xref:System.Web.UI.WebControls.SiteMapDataSourceView> objetos. Portanto, quando associada a um ou mais <xref:System.Web.UI.WebControls.SiteMapDataSourceView> objetos, uma <xref:System.Web.UI.WebControls.SiteMapDataSource> controle representa um objeto da lista de origem e o <xref:System.Web.UI.WebControls.SiteMapDataSource.GetList%2A> método retorna uma lista que contém um elemento — próprio controle da fonte de dados.  
+  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource.GetList%2A> chamadas de método estático <xref:System.Web.UI.ListSourceHelper.GetList%2A?displayProperty=nameWithType> método para recuperar uma lista de objetos que podem ser usados como fontes de dados. O <xref:System.Web.UI.ListSourceHelper> verifica se o <xref:System.Web.UI.WebControls.SiteMapDataSource.GetViewNames%2A> método retorna um conjunto válido de nomes de exibição. Se isso acontecer, o <xref:System.Web.UI.ListSourceHelper> retorna uma lista que contém um elemento — o <xref:System.Web.UI.WebControls.SiteMapDataSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">O nome dos dados de exibição para recuperar da fonte.</param>
+        <summary>Recupera uma exibição nomeada em outras propriedades da fonte de dados e os dados de mapa do site do provedor de mapa do site de acordo com o nó inicial.</summary>
+        <returns>Um <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> objeto auxiliar nos dados de mapa do site, de acordo com o nó inicial que é identificado pelo <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> propriedade ou seu filho, se o <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.ShowStartingNode" /> é <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `viewName` parâmetro é a URL para o nó raiz da exibição, não o nome da exibição da fonte de dados que com outros dados aos controles de origem que dão suporte a exibições nomeadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.Provider" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode" /> é <see langword="true" /> , mas o <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> está definido.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> é definido, mas o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> não é possível resolver um nó para a URL especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de exibições nomeadas para o controle de fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> de nomeada <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> objetos associados a <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" />. Porque o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> oferece suporte a apenas uma exibição nomeada, o <see cref="M:System.Web.UI.WebControls.SiteMapDataSource.GetViewNames" /> método retorna um <see cref="T:System.Collections.ICollection" /> com um <see cref="F:System.String.Empty" /> elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource.GetViewNames%2A> método retorna uma coleção com um elemento (o nome padrão), em vez de `null` para que o <xref:System.Web.UI.WebControls.SiteMapDataSource.ContainsListCollection%2A> método retornará `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.SiteMapProvider Provider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Web.SiteMapProvider" /> objeto que está associado com o controle de fonte de dados.</summary>
+        <value>Um <see cref="T:System.Web.SiteMapProvider" /> que está associado com o controle de fonte de dados; caso contrário, se o provedor não é definido explicitamente, o site padrão mapear provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SiteMapDataSource.Provider%2A> propriedade para especificar a instância de provedor de mapa de site para usar com o controle de fonte de dados. A instância pode ser diferente do provedor que é identificado pelo <xref:System.Web.UI.WebControls.SiteMapDataSource.SiteMapProvider%2A> propriedade, se definido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O provedor chamado pelo <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.SiteMapProvider" /> não está disponível.  
+  
+ \- ou -  
+  
+ Nenhum provedor padrão está configurado para o site.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowStartingNode">
+      <MemberSignature Language="C#" Value="public virtual bool ShowStartingNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowStartingNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.ShowStartingNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o nó inicial é recuperado e exibido.</summary>
+        <value>
+          <see langword="true" /> se o nó inicial for exibido; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource.ShowStartingNode%2A> propriedade é avaliada durante as chamadas a <xref:System.Web.UI.WebControls.SiteMapDataSource.GetView%2A> e <xref:System.Web.UI.WebControls.SiteMapDataSource.GetHierarchicalView%2A> métodos, quando a árvore de nós que é retornado por esses métodos é preenchida.  
+  
+ O valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.ShowStartingNode%2A> propriedade é armazenada em um estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteMapProvider">
+      <MemberSignature Language="C#" Value="public virtual string SiteMapProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SiteMapProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.SiteMapProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do provedor de mapa do site ao qual a fonte de dados se associa.</summary>
+        <value>O nome do provedor de mapa do site ao qual o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> se associa. Por padrão, o valor é <see cref="F:System.String.Empty" /> e o provedor de mapa de site padrão para o site é usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.SiteMapProvider%2A> propriedade é armazenada em um estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como associar declarativamente uma <xref:System.Web.UI.WebControls.TreeView> controle aos dados de mapa do site que são fornecidos por um <xref:System.Web.SiteMapProvider> objeto que não seja o provedor padrão. O arquivo Web. config faz um personalizado <xref:System.Web.SiteMapProvider> objeto disponível para o `SiteMapDataSource` controle:  
+  
+```  
+<system.web>      
+  <siteMap>  
+    <providers>  
+      <add name="AsciiTextProvider"  
+        description="SiteMap provider which reads in .sitemap text files."  
+        type="Samples.AspNet.CS.SimpleTextSiteMapProvider"  
+      siteMapFile="test.txt"/>  
+    </providers>  
+  </siteMap>  
+</system.web>  
+```  
+  
+ O código para o `SimpleTextSiteMapProvider` classe que faz referência a este exemplo de arquivo Web. config pode ser encontrado no <xref:System.Web.SiteMapProvider> visão geral da classe. Se você usar o exemplo do Visual Basic, o espaço para nome termina em "VB" em vez de "CS". Você também pode encontrar conteúdo de exemplo para o arquivo "Test.txt" site no <xref:System.Web.SiteMapProvider> visão geral da classe.  
+  
+> [!NOTE]
+>  O `AsciiTextProvider` não é o provedor padrão para o site, que permanece (neste caso) o <xref:System.Web.XmlSiteMapProvider> objeto. O <xref:System.Web.UI.WebControls.SiteMapDataSource.SiteMapProvider%2A> propriedade do <xref:System.Web.UI.WebControls.SiteMapDataSource> controle é definido como o nome de um provedor de mapa de site personalizado e o <xref:System.Web.UI.WebControls.TreeView> dados do mapa de ligações para o site correspondente.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SiteMapDataSource_decl_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_decl_3/CS/webform3smdscs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SiteMapDataSource_decl_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_decl_3/VB/webform3smdsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartFromCurrentNode">
+      <MemberSignature Language="C#" Value="public virtual bool StartFromCurrentNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StartFromCurrentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a árvore de nós de mapa de site é recuperado usando o nó que representa a página atual.</summary>
+        <value>
+          <see langword="true" />Se a árvore de nós é recuperado relativa à página atual; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> propriedade é avaliada durante as chamadas a <xref:System.Web.UI.WebControls.SiteMapDataSource.GetView%2A> e <xref:System.Web.UI.WebControls.SiteMapDataSource.GetHierarchicalView%2A> do ponto de métodos para ajudar a determinar qual nó de mapa de site a ser usado como um valor inicial para criar a árvore de nós. O <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> e <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedades são mutuamente excludentes — se você definir o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedade, certifique-se de que o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> é de propriedade `false`.  
+  
+ O valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> propriedade é armazenada em um estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartingNodeOffset">
+      <MemberSignature Language="C#" Value="public virtual int StartingNodeOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartingNodeOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento de um inteiro positivo ou negativo no nó inicial que determina a hierarquia raiz exposta pelo controle de fonte de dados.</summary>
+        <value>O padrão é 0, que indica que a hierarquia raiz exposta pelo <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> é o mesmo que o nó inicial.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é definida como um valor diferente de 0, afeta o nó inicial e com ele, o site mapear hierarquia de dados que é exposta pelo <xref:System.Web.UI.WebControls.SiteMapDataSource> controle. O valor inteiro positivo ou negativo a <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> identifica o número de níveis para cima ou para baixo a hierarquia de mapa de site a partir do nó inicial que é identificada pelo <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> e <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedades para deslocar o nó inicial da subárvore que é exposto por dados de controle de origem.  
+  
+ Se o nó inicial identificado é o nó que representa a página solicitada no momento, o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> será ignorado.  
+  
+ Se o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é definida como um número negativo -*n*, o nó inicial da subárvore que é exposto pelo controle de fonte de dados é o nó ancestral * n * níveis hierárquicos acima identificado nó inicial. Se o valor * n * for maior do que o número de níveis de ancestral na árvore hierárquica, o nó inicial da subárvore é o nó raiz da hierarquia de mapa do site.  
+  
+ Se o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é definida como um número positivo +*n*, o nó inicial da subárvore que é exposto é um nó filho * n * níveis abaixo do nó inicial identificado. Porque talvez haja mais de uma ramificação de nós filho na hierarquia, o <xref:System.Web.UI.WebControls.SiteMapDataSource> tenta resolver um nó filho diretamente no caminho entre o nó inicial identificado e o nó que representa a página solicitada no momento, se possível. Se o nó que representa a página solicitada no momento não é na subárvore do nó inicial identificado, o valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade será ignorada. Se o nó que representa a página solicitada no momento é menor que * n * níveis abaixo do nó inicial identificado, o nó da página solicitada no momento é usado como o nó inicial.  
+  
+ O valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedade é armazenada em um estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o efeito de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> e <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> propriedades. O exemplo consiste em várias páginas ASP.NET, uma página mestra, seção da página mestra e um arquivo de sitemap. O arquivo de sitemap define a estrutura hierárquica do site. Para este exemplo de código, ela define um número de páginas identificado por URLs exclusivas, como 1.aspx, 2.aspx, A.aspx e B.aspx, da seguinte maneira:  
+  
+ <!-- TODO: review snippet reference [!code[System.Web.UI.WebControls.SiteMapDataSource_2#1](~/samples/snippets/common/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_2/Common/Web.sitemap#1)]  -->  
+  
+ A página Site.master contém o <xref:System.Web.UI.WebControls.SiteMapDataSource> e um <xref:System.Web.UI.WebControls.TreeView> controla dentro de um <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle. Ele identifica o nó inicial da hierarquia exposto como Default. aspx, usando o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedade. O arquivo Site.master é usado pela página Default.aspx somente.  
+  
+ <!-- TODO: review snippet reference [!code[System.Web.UI.WebControls.SiteMapDataSource_2#2](~/samples/snippets/common/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_2/Common/Site.master#2)]  -->  
+  
+ Todas as outras páginas, como 1.aspx, 2.aspx, A.aspx e assim por diante, usem a página mestra Section.master. Essa página mestra é muito semelhante ao Site.master, no entanto, ele contém vários <xref:System.Web.UI.WebControls.SiteMapDataSource> controles que você pode experimentar. O <xref:System.Web.UI.WebControls.TreeView> controle que exibe dados de mapa de site está inicialmente vinculado `SiteMapDataSource1`, que especifica um <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> de 1. Isso indica que o nó pai da página solicitada no momento é exibido. Se você exibir a página 1.aspx, a hierarquia é exibida o <xref:System.Web.UI.WebControls.TreeView> é A, 1, 2. No entanto, se você exibir a página 4.aspx, a hierarquia é B, 3, 4.  
+  
+ Se você alterar o <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> para o <xref:System.Web.UI.WebControls.TreeView> para `SiteMapDataSource2`, o <xref:System.Web.UI.WebControls.TreeView> controle exibe dados de mapa de site diferente. Quando você usa `SiteMapDataSource2`, o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> está definida como `true`, que significa que os dados de mapa do site são exibidos em relação a página solicitada no momento e o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeOffset%2A> estiver definida como -1, indicando que um nível de nós filho exibido quando possível.  Quando você exibir a página de A.aspx, a hierarquia é exibida é a hierarquia do nível atual, incluindo todos os irmãos, como B e C. Quando você exibir 1.aspx, os nós pai não são mais exibidos.  
+  
+ <!-- TODO: review snippet reference [!code[System.Web.UI.WebControls.SiteMapDataSource_2#3](~/samples/snippets/common/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_2/Common/Section.master#3)]  -->  
+  
+ O exemplo de código a seguir demonstra uma das páginas ASP.NET, que você pode usar com os outros componentes deste exemplo de código.  
+  
+```  
+<%@ Page MasterPageFile="~/Section.master" Title="Untitled Page" %>  
+  
+<asp:Content ID="Content1" ContentPlaceHolderID=MainBody Runat=Server>  
+  <h2>1.aspx</h2>  
+</asp:Content>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartingNodeUrl">
+      <MemberSignature Language="C#" Value="public virtual string StartingNodeUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StartingNodeUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um nó no mapa do site que a fonte de dados usa como um ponto de referência para recuperar os nós de um mapa do site hierárquico.</summary>
+        <value>A URL de um nó no mapa do site. O <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> recupera identificados <see cref="T:System.Web.SiteMapNode" /> e todos os nós filho do mapa do site. O padrão é um <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> propriedade associa dados de mapa de site e apresenta seu modo de exibição com base em um nó inicial especificado na hierarquia de mapa do site. Por padrão, o nó inicial é o nó raiz da hierarquia, mas você pode definir o nó inicial para qualquer nó com o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedade ou um conjunto de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartFromCurrentNode%2A> propriedade `true`.  
+  
+ O valor de <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedade é armazenada em um estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir declarativamente o <xref:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl%2A> propriedade e vincular um <xref:System.Web.UI.WebControls.TreeView> o controle para um <xref:System.Web.UI.WebControls.SiteMapDataSource> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SiteMapDataSource_decl_6#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_decl_6/CS/webform2smdsnocustomcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SiteMapDataSource_decl_6#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SiteMapDataSource_decl_6/VB/webform2smdsnocustomvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.ContainsListCollection">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IListSource.ContainsListCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IListSource.ContainsListCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapDataSource.System#ComponentModel#IListSource#ContainsListCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é uma coleção de <see cref="T:System.Collections.IList" /> objetos.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> está associado um ou mais <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> objetos; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.SiteMapDataSource> é convertida em uma interface de <xref:System.ComponentModel.IListSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.GetList">
+      <MemberSignature Language="C#" Value="System.Collections.IList IListSource.GetList ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IList System.ComponentModel.IListSource.GetList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.System#ComponentModel#IListSource#GetList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.IListSource.GetList" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IList" /> dos controles de fonte de dados que podem ser usados como fontes de listas de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.SiteMapDataSource> é convertida em uma interface de <xref:System.ComponentModel.IListSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSource.GetView">
+      <MemberSignature Language="C#" Value="System.Web.UI.DataSourceView IDataSource.GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.DataSourceView System.Web.UI.IDataSource.GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.System#Web#UI#IDataSource#GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">A URL do nó raiz da exibição.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IDataSource.GetView(System.String)" />.</summary>
+        <returns>Um <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> objeto auxiliar nos dados de mapa do site, de acordo com o nó inicial identificado pelo <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.StartingNodeUrl" /> propriedade ou seu filho, se o <see cref="P:System.Web.UI.WebControls.SiteMapDataSource.ShowStartingNode" /> é <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.SiteMapDataSource> é convertida em uma interface de <xref:System.Web.UI.IDataSource>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não <see cref="T:System.Web.SiteMapProvider" /> está configurado ou disponível para o site.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSource.GetViewNames">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection IDataSource.GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.ICollection System.Web.UI.IDataSource.GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSource.System#Web#UI#IDataSource#GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IDataSource.GetViewNames" />.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> de nomeada <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> objetos associados a <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" />. Porque o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> oferece suporte a apenas uma exibição nomeada, o <see cref="M:System.Web.UI.WebControls.SiteMapDataSource.GetViewNames" /> retorna uma coleção que contém um elemento definido como <see cref="F:System.String.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.SiteMapDataSource> é convertida em uma interface de <xref:System.Web.UI.IDataSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

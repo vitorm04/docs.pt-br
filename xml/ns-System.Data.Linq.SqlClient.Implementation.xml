@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Linq.SqlClient.Implementation">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Linq.SqlClient.Implementation" /> namespace contém tipos que são usados para obter os detalhes de implementação interna de um provedor do SQL Server.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

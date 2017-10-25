@@ -1,0 +1,70 @@
+<Type Name="IInternalConfigWebHost" FullName="System.Web.Configuration.Internal.IInternalConfigWebHost">
+  <TypeSignature Language="C#" Value="public interface IInternalConfigWebHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInternalConfigWebHost" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.Internal.IInternalConfigWebHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as interfaces usadas pela infraestrutura interna do .NET Framework para acessar e manipular arquivos de configuração do Host.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetConfigPathFromSiteIDAndVPath">
+      <MemberSignature Language="C#" Value="public string GetConfigPathFromSiteIDAndVPath (string siteID, string vpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetConfigPathFromSiteIDAndVPath(string siteID, string vpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.Internal.IInternalConfigWebHost.GetConfigPathFromSiteIDAndVPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="vpath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Identificador de site do aplicativo. Para obter mais informações, consulte Visão geral sobre a configuração do ASP.NET.</param>
+        <param name="vpath">O caminho do aplicativo virtual como uma cadeia de caracteres. Para obter mais informações, consulte caminhos de Site da Web do ASP.NET.</param>
+        <summary>Retorna um valor que representa o caminho para um arquivo de configuração associado com o identificador de site fornecido e o caminho virtual do aplicativo.</summary>
+        <returns>Uma cadeia de caracteres que representa o caminho para um arquivo de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSiteIDAndVPathFromConfigPath">
+      <MemberSignature Language="C#" Value="public void GetSiteIDAndVPathFromConfigPath (string configPath, out string siteID, out string vpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSiteIDAndVPathFromConfigPath(string configPath, [out] string&amp; siteID, [out] string&amp; vpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.Internal.IInternalConfigWebHost.GetSiteIDAndVPathFromConfigPath(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="siteID" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="vpath" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho para o arquivo de configuração do aplicativo.</param>
+        <param name="siteID">Identificador de site do aplicativo. Para obter mais informações, consulte Visão geral sobre a configuração do ASP.NET.</param>
+        <param name="vpath">O caminho do aplicativo virtual como uma cadeia de caracteres. Para obter mais informações, consulte caminhos de Site da Web do ASP.NET.</param>
+        <summary>Define o identificador de site atual de um objeto de configuração com base no caminho virtual do aplicativo e o caminho de configuração do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

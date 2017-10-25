@@ -1,0 +1,20 @@
+<Namespace Name="System.Diagnostics">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics" /> namespace fornece classes que permitem interagir com processos do sistema, logs de eventos e contadores de desempenho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   O <xref:System.Diagnostics.EventLog> componente fornece funcionalidade para gravar logs de eventos, ler entradas de log de eventos, criar e excluir logs de eventos e fontes de evento na rede. O <xref:System.Diagnostics.EntryWrittenEventHandler> fornece uma maneira de interagir com logs de eventos de forma assíncrona. Classes de suporte fornecem acesso a controle mais detalhado, incluindo: restrições de permissão, a capacidade de especificar os tipos de log de eventos (que controla o tipo de dados padrão que são gravados com uma entrada de log de eventos) e iterar por meio de coleções de entradas de log de eventos. Para obter mais informações sobre essas tarefas, consulte o <xref:System.Diagnostics.EventLogPermission>, <xref:System.Diagnostics.EventLogEntryType>, e <xref:System.Diagnostics.EventLogEntryCollection> classes.  
+  
+-   O <xref:System.Diagnostics.Process> classe fornece funcionalidade para monitorar os processos do sistema na rede e para iniciar e parar os processos de sistema local. Além de recuperar listas de processos em execução (especificando o computador, o nome do processo e a id do processo) ou exibir informações sobre o processo que atualmente tem acesso para o processador, você pode obter um conhecimento detalhado de threads de processo e módulos por meio de <xref:System.Diagnostics.Process> classe em si e por interagir com o <xref:System.Diagnostics.ProcessThread> e <xref:System.Diagnostics.ProcessModule> classes. O <xref:System.Diagnostics.ProcessStartInfo> classe permite que você especifique uma variedade de elementos com a qual iniciar um novo processo, como fluxos de entrada, saída e de erro, diretórios de trabalho e verbos de linha de comando e argumentos. Eles oferecem controle refinado sobre o comportamento de seus processos. Outras classes relacionadas permitem que você especifique estilos da janela, processo e as prioridades do thread e interagir com coleções de threads e módulos.  
+  
+-   O <xref:System.Diagnostics.PerformanceCounter> classe permite que você monitore o desempenho do sistema, enquanto o <xref:System.Diagnostics.PerformanceCounterCategory> classe fornece uma maneira de criar novos contadores personalizados e categorias. Você pode gravar contadores personalizados locais e ler contadores locais e remotos (sistema, bem como personalizada). Exemplo de contadores usando o <xref:System.Diagnostics.PerformanceCounter> classe e calcular os resultados de amostras de contador de desempenho sucessivos usando o <xref:System.Diagnostics.CounterSample> classe. O <xref:System.Diagnostics.CounterCreationData> classe permite que você crie vários contadores em uma categoria e especifique os tipos. Outras classes associados ao componente de contador de desempenho que fornecem acesso a conjuntos de contadores, permissão de contador e tipos de contador.  
+  
+ O <xref:System.Diagnostics> namespace também fornece classes que permitem a você para depurar seu aplicativo e rastrear a execução do seu código. Para obter mais informações, consulte as classes <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

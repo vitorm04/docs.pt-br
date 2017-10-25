@@ -1,0 +1,134 @@
+<Type Name="IMessageSink" FullName="System.Runtime.Remoting.Messaging.IMessageSink">
+  <TypeSignature Language="C#" Value="public interface IMessageSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMessageSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.IMessageSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a interface para o coletor de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando é feita uma chamada de método no proxy, a infraestrutura de comunicação remota fornece o suporte necessário para passar os argumentos para o objeto real entre os limites de comunicação remota, chamando o método do objeto real com os argumentos e retornar os resultados de volta para o cliente do objeto de proxy.  
+  
+ Uma chamada de método remoto é uma mensagem que vai do lado do cliente para o final do servidor e possivelmente novamente. Como cruzar os limites de comunicação remota no caminho, a chamada de método remoto passa por uma cadeia de `IMessageSink` objetos. Cada coletor na cadeia recebe o objeto de mensagem, executa uma operação específica e delega para o coletor Avançar na cadeia. O objeto proxy contém uma referência ao primeiro `IMessageSink` precisa usar para começar a cadeia.  
+  
+ Chamadas assíncronas, no momento da delegação, cada coletor fornece um coletor de resposta (outro `IMessageSink`) que será chamado pelo coletor próxima quando a resposta foi enviado novamente.  
+  
+ Diferentes tipos de Coletores de executam operações diferentes, dependendo do tipo de objeto de mensagem recebido. Por exemplo, um coletor pode causar um bloqueio a ser executada, outro pode impor a segurança de chamada, outra pode executar serviços de controle e confiabilidade de chamada de fluxo e ainda outro pode transportar a chamada para outra <xref:System.AppDomain>, processo ou computador. Dois ou mais Coletores de mensagem da cadeia podem interagem entre si em termos de cada ação específica.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação do <xref:System.Runtime.Remoting.Messaging.IMessageSink> interface. Observe que o exemplo supõe definições de tipo e referências de assembly que devem ser fornecidas para compilar o exemplo.  
+  
+ [!code-cpp[IMessageSink_Client#3](~/samples/snippets/cpp/VS_Snippets_Remoting/IMessageSink_Client/CPP/imessagesink_client.cpp#3)]
+ [!code-csharp[IMessageSink_Client#3](~/samples/snippets/csharp/VS_Snippets_Remoting/IMessageSink_Client/CS/imessagesink_client.cs#3)]
+ [!code-vb[IMessageSink_Client#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMessageSink_Client/VB/imessagesink_client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>É importante observar que o código que implementa a interface atual deve fornecer implementações para ambos <see cref="M:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)" /> e <see cref="M:System.Runtime.Remoting.Messaging.IMessageSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)" />, uma vez que as chamadas síncronas podem ser convertidas em chamadas assíncronas e vice-versa. Ambos os métodos devem ser implementados, mesmo se o coletor não oferece suporte para processamento assíncrono.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageCtrl AsyncProcessMessage (System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Messaging.IMessageSink replySink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageCtrl AsyncProcessMessage(class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Messaging.IMessageSink replySink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMessageSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageCtrl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="replySink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem a ser processada.</param>
+        <param name="replySink">O coletor de resposta para a mensagem de resposta.</param>
+        <summary>Processa a mensagem determinada de maneira assíncrona.</summary>
+        <returns>Retorna um <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" /> interface que fornece uma maneira de controlar mensagens assíncronas depois que eles foram despachados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado no coletor de mensagem pela infraestrutura de comunicação remota ou por um coletor anterior para mensagens assíncronas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink NextSink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.IMessageSink NextSink" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMessageSink.NextSink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o próximo coletor de mensagem da cadeia de coletor.</summary>
+        <value>A próxima mensagem coletor na cadeia de coletor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessage SyncProcessMessage (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessage SyncProcessMessage(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem a ser processada.</param>
+        <summary>Processa de forma síncrona a mensagem especificada.</summary>
+        <returns>Uma mensagem de resposta em resposta à solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage%2A> método é invocado no coletor de mensagem pela infraestrutura de comunicação remota ou por um coletor anterior para mensagens síncronas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

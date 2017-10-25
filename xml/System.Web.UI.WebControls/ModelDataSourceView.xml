@@ -1,0 +1,1097 @@
+<Type Name="ModelDataSourceView" FullName="System.Web.UI.WebControls.ModelDataSourceView">
+  <TypeSignature Language="C#" Value="public class ModelDataSourceView : System.Web.UI.DataSourceView, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModelDataSourceView extends System.Web.UI.DataSourceView implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ModelDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma única exibição de um <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModelDataSourceView (System.Web.UI.WebControls.ModelDataSource owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.ModelDataSource owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.#ctor(System.Web.UI.WebControls.ModelDataSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.ModelDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="owner">A fonte de dados de modelo que possui este modo de exibição.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingDataMethods">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CallingDataMethodsEventHandler CallingDataMethods;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CallingDataMethodsEventHandler CallingDataMethods" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.ModelDataSourceView.CallingDataMethods" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CallingDataMethodsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os métodos de dados estão sendo chamados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public override bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto associado atual <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle oferece suporte para a operação de exclusão.</summary>
+        <value>
+          <see langword="true" />Se a operação tem suporte; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna `true` se o <xref:System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod%2A> propriedade tem um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public override bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto associado atual <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle oferece suporte para a operação de inserção.</summary>
+        <value>
+          <see langword="true" />Se a operação tem suporte; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna `true` se o <xref:System.Web.UI.WebControls.ModelDataSourceView.InsertMethod%2A> propriedade tem um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public override bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto associado atual <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle oferece suporte à paginação por meio dos dados recuperados.</summary>
+        <value>
+          <see langword="true" />Se a operação tem suporte; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public override bool CanRetrieveTotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.CanRetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto associado atual <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle oferece suporte para recuperar o número total de linhas de dados, além do conjunto de dados.</summary>
+        <value>
+          <see langword="true" />Se a operação tem suporte; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto associado atual <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle oferece suporte a uma exibição classificada na fonte de dados subjacente.</summary>
+        <value>
+          <see langword="true" />Se a operação tem suporte; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public override bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto associado atual <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> controle oferece suporte para a operação de atualização.</summary>
+        <value>
+          <see langword="true" />Se a operação tem suporte; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna `true` se o <xref:System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod%2A> propriedade tem um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSelectResult">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IEnumerable CreateSelectResult (object result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IEnumerable CreateSelectResult(object result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.CreateSelectResult(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="result">O resultado de uma operação de seleção.</param>
+        <summary>Retorna o resultado de uma operação de seleção após convertê-la para um <see cref="T:System.Collections.IEnumerable" /> coleção se ele não ainda estiver um.</summary>
+        <returns>O resultado de uma operação de seleção, convertido em um <see cref="T:System.Collections.IEnumerable" /> coleção caso não tenha sido originalmente um.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O valor de retorno não é do tipo correto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataKeyName">
+      <MemberSignature Language="C#" Value="public string DataKeyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataKeyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.DataKeyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro item no <see cref="P:System.Web.UI.WebControls.FormView.DataKeyNames" /> matriz do controle associado a dados se o controle de associação de dados é um <see cref="T:System.Web.UI.WebControls.FormView" />, <see cref="T:System.Web.UI.WebControls.ListView" />, <see cref="T:System.Web.UI.WebControls.GridView" />, ou <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle.</summary>
+        <value>O primeiro item a <see cref="P:System.Web.UI.WebControls.FormView.DataKeyNames" /> matriz de um <see cref="T:System.Web.UI.WebControls.FormView" />, <see cref="T:System.Web.UI.WebControls.ListView" />, <see cref="T:System.Web.UI.WebControls.GridView" />, ou <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle ou uma cadeia de caracteres vazia para outros controles de associação de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public override void Delete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Delete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.Delete(System.Collections.IDictionary,System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="keys">As chaves.</param>
+        <param name="oldValues">Os valores antigos.</param>
+        <param name="callback">O retorno de chamada.</param>
+        <summary>Exclui um método e obtém o resultado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMethod">
+      <MemberSignature Language="C#" Value="public string DeleteMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto invoca para excluir dados.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do método ou que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> usa para excluir dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateDeleteMethodParameters">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ModelDataSourceMethod EvaluateDeleteMethodParameters (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ModelDataSourceMethod EvaluateDeleteMethodParameters(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateDeleteMethodParameters(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelDataSourceMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">As chaves.</param>
+        <param name="oldValues">Os valores antigos.</param>
+        <summary>Invoca o método Delete e obtém o resultado.</summary>
+        <returns>O resultado do método de exclusão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateInsertMethodParameters">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ModelDataSourceMethod EvaluateInsertMethodParameters (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ModelDataSourceMethod EvaluateInsertMethodParameters(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateInsertMethodParameters(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelDataSourceMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores.</param>
+        <summary>Invoca o método de inserção.</summary>
+        <returns>O resultado do método de inserção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateMethodParameters">
+      <MemberSignature Language="C#" Value="protected virtual void EvaluateMethodParameters (System.Web.UI.DataSourceOperation dataSourceOperation, System.Web.UI.WebControls.ModelDataSourceMethod modelDataSourceMethod, System.Collections.IDictionary controlValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EvaluateMethodParameters(valuetype System.Web.UI.DataSourceOperation dataSourceOperation, class System.Web.UI.WebControls.ModelDataSourceMethod modelDataSourceMethod, class System.Collections.IDictionary controlValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateMethodParameters(System.Web.UI.DataSourceOperation,System.Web.UI.WebControls.ModelDataSourceMethod,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSourceOperation" Type="System.Web.UI.DataSourceOperation" />
+        <Parameter Name="modelDataSourceMethod" Type="System.Web.UI.WebControls.ModelDataSourceMethod" />
+        <Parameter Name="controlValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dataSourceOperation">A operação de fonte de dados para o qual os parâmetros estão sendo avaliados.</param>
+        <param name="modelDataSourceMethod">O objeto do método para o qual os parâmetros estão sendo avaliados.</param>
+        <param name="controlValues">Os valores do controle associado a dados.</param>
+        <summary>Avalia os parâmetros do método de associação de modelo, usando a operação de fonte de dados, o objeto de método de fonte de dados e os valores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Web.UI.WebControls.ModelDataSourceView.EvaluateMethodParameters%28System.Web.UI.DataSourceOperation%2CSystem.Web.UI.WebControls.ModelDataSourceMethod%2CSystem.Collections.IDictionary%2CSystem.Boolean%29?displayProperty=nameWithType> sobrecarga com a `isPageLoadComplete` parâmetro definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateMethodParameters">
+      <MemberSignature Language="C#" Value="protected virtual void EvaluateMethodParameters (System.Web.UI.DataSourceOperation dataSourceOperation, System.Web.UI.WebControls.ModelDataSourceMethod modelDataSourceMethod, System.Collections.IDictionary controlValues, bool isPageLoadComplete);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EvaluateMethodParameters(valuetype System.Web.UI.DataSourceOperation dataSourceOperation, class System.Web.UI.WebControls.ModelDataSourceMethod modelDataSourceMethod, class System.Collections.IDictionary controlValues, bool isPageLoadComplete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateMethodParameters(System.Web.UI.DataSourceOperation,System.Web.UI.WebControls.ModelDataSourceMethod,System.Collections.IDictionary,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSourceOperation" Type="System.Web.UI.DataSourceOperation" />
+        <Parameter Name="modelDataSourceMethod" Type="System.Web.UI.WebControls.ModelDataSourceMethod" />
+        <Parameter Name="controlValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="isPageLoadComplete" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataSourceOperation">A operação de fonte de dados para o qual os parâmetros estão sendo avaliados.</param>
+        <param name="modelDataSourceMethod">O objeto do método para o qual os parâmetros estão sendo avaliados.</param>
+        <param name="controlValues">Os valores do controle associado a dados.</param>
+        <param name="isPageLoadComplete">Definido como <see langword="true" /> se esse método é chamado na página de <see cref="E:System.Web.UI.Page.LoadComplete" /> manipulador de eventos e se ele é chamado para avaliar os parâmetros do método select, e se estão sendo usados provedores de valor personalizado. Isso torna possível identificar alterações nos provedores de valor personalizado para marcar o controle associado a dados para associação de dados, se necessário.</param>
+        <summary>Avalia os parâmetros do método de associação de modelo, usando a operação de fonte de dados, o objeto de método de fonte de dados, os valores de controle e um valor que indica se esse método é chamado na página de <see cref="E:System.Web.UI.Page.LoadComplete" /> manipulador de eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateSelectMethodParameters">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ModelDataSourceMethod EvaluateSelectMethodParameters (System.Web.UI.DataSourceSelectArguments arguments, out System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions selectResultProcessingOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ModelDataSourceMethod EvaluateSelectMethodParameters(class System.Web.UI.DataSourceSelectArguments arguments, [out] class System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions&amp; selectResultProcessingOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateSelectMethodParameters(System.Web.UI.DataSourceSelectArguments,System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelDataSourceMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+        <Parameter Name="selectResultProcessingOptions" Type="System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">O <see cref="T:System.Web.UI.DataSourceSelectArguments" /> para a operação select.</param>
+        <param name="selectResultProcessingOptions">O <see cref="T:System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions" /> para usar para processar o resultados de select, uma vez concluída a operação select. Essas opções são determinadas nesse método e usadas posteriormente pelo <see cref="M:System.Web.UI.WebControls.ModelDataSourceView.ProcessSelectMethodResult(System.Web.UI.DataSourceSelectArguments,System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions,System.Web.UI.WebControls.ModelDataMethodResult)" /> método.</param>
+        <summary>Avalia os parâmetros de método de seleção e também determina as opções para processar os resultados de select, como paginação automática e o comportamento de classificação.</summary>
+        <returns>As informações necessárias para invocar o método select.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateUpdateMethodParameters">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ModelDataSourceMethod EvaluateUpdateMethodParameters (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ModelDataSourceMethod EvaluateUpdateMethodParameters(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateUpdateMethodParameters(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelDataSourceMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">As chaves.</param>
+        <param name="values">Os valores.</param>
+        <param name="oldValues">Os valores antigos.</param>
+        <summary>Invoca o método de atualização e obtém o resultado.</summary>
+        <returns>O resultado do método update.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDelete">
+      <MemberSignature Language="C#" Value="protected override int ExecuteDelete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteDelete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Os parâmetros a serem usados com o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod" /> método. Se não houver nenhum parâmetro associado ao método, passar <see langword="null" />.</param>
+        <param name="oldValues">Os valores da linha a ser excluído.</param>
+        <summary>Executa uma operação de exclusão usando o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod" /> método.</summary>
+        <returns>O número de linhas excluídas; Caso contrário, -1, se o número não for conhecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInsert">
+      <MemberSignature Language="C#" Value="protected override int ExecuteInsert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteInsert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.ExecuteInsert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores a serem inseridos.</param>
+        <summary>Executa uma operação de inserção usando o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.InsertMethod" /> método.</summary>
+        <returns>O número de linhas inseridas; Caso contrário, -1, se o número não for conhecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Os argumentos da operação select.</param>
+        <summary>Executa uma operação de seleção usando o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.SelectMethod" /> método.</summary>
+        <returns>O resultado da operação de seleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUpdate">
+      <MemberSignature Language="C#" Value="protected override int ExecuteUpdate (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteUpdate(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Os parâmetros a serem usados com o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod" /> método. Se não houver nenhum parâmetro associado ao método, passar <see langword="null" />.</param>
+        <param name="values">Os novos valores da linha a ser atualizada.</param>
+        <param name="oldValues">Os valores antigos da linha a ser atualizada.</param>
+        <summary>Executa uma operação de atualização usando o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod" /> método.</summary>
+        <returns>O número de linhas inseridas; Caso contrário, -1, se o número não for conhecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMethod">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ModelDataSourceMethod FindMethod (string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ModelDataSourceMethod FindMethod(string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.FindMethod(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelDataSourceMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método a ser executado.</param>
+        <summary>Localiza o método a ser executado.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.ModelDataSourceMethod" /> do objeto com o <see cref="P:System.Web.UI.WebControls.ModelDataSourceMethod.Instance" /> e <see cref="P:System.Web.UI.WebControls.ModelDataSourceMethod.MethodInfo" /> conjunto de propriedades. O <see cref="P:System.Web.UI.WebControls.ModelDataSourceMethod.Parameters" /> coleção do <see cref="T:System.Web.UI.WebControls.ModelDataSourceMethod" /> objeto está ainda vazio quando este método retorna.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.WebControls.CallingDataMethodsEventArgs.DataMethodsObject" /> propriedade e o <see cref="P:System.Web.UI.WebControls.CallingDataMethodsEventArgs.DataMethodsType" /> ambas as propriedades têm valores ou o método especificado não foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeleteMethodResult">
+      <MemberSignature Language="C#" Value="protected virtual object GetDeleteMethodResult (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetDeleteMethodResult(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.GetDeleteMethodResult(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Os parâmetros a serem usados com o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod" /> método. Se não houver nenhum parâmetro associado ao método, passar <see langword="null" />.</param>
+        <param name="oldValues">Os valores da linha a ser excluído.</param>
+        <summary>Invoca o método delete e obtém o resultado.</summary>
+        <returns>O resultado do método de exclusão.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">A propriedade <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.CanDelete" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInsertMethodResult">
+      <MemberSignature Language="C#" Value="protected virtual object GetInsertMethodResult (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetInsertMethodResult(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.GetInsertMethodResult(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores a serem inseridos.</param>
+        <summary>Invoca o método de inserção e obtém o resultado.</summary>
+        <returns>O resultado do método de inserção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">A propriedade <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.CanInsert" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectMethodResult">
+      <MemberSignature Language="C#" Value="protected virtual object GetSelectMethodResult (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetSelectMethodResult(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.GetSelectMethodResult(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Os argumentos de método de seleção.</param>
+        <summary>Invoca o método select e obtém o resultado.</summary>
+        <returns>O resultado do método select.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.SelectMethod" /> propriedade é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUpdateMethodResult">
+      <MemberSignature Language="C#" Value="protected virtual object GetUpdateMethodResult (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetUpdateMethodResult(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.GetUpdateMethodResult(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Os parâmetros a serem usados com o <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod" /> método. Se não houver nenhum parâmetro associado ao método, passar <see langword="null" />.</param>
+        <param name="values">Os novos valores da linha a ser atualizada.</param>
+        <param name="oldValues">Os valores antigos da linha a ser atualizada.</param>
+        <summary>Invoca o método de atualização e obtém o resultado.</summary>
+        <returns>O resultado do método update.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">A propriedade <see cref="P:System.Web.UI.WebControls.ModelDataSourceView.CanUpdate" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public override void Insert (System.Collections.IDictionary values, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Insert(class System.Collections.IDictionary values, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.Insert(System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores a serem inseridos.</param>
+        <param name="callback">O retorno de chamada.</param>
+        <summary>Insere um método e obtém o resultado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertMethod">
+      <MemberSignature Language="C#" Value="public string InsertMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.InsertMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto invoca para inserir dados.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> usa para inserir dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMethod">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ModelDataMethodResult InvokeMethod (System.Web.UI.WebControls.ModelDataSourceMethod method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ModelDataMethodResult InvokeMethod(class System.Web.UI.WebControls.ModelDataSourceMethod method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.InvokeMethod(System.Web.UI.WebControls.ModelDataSourceMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ModelDataMethodResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Web.UI.WebControls.ModelDataSourceMethod" />
+      </Parameters>
+      <Docs>
+        <param name="method">Um objeto que fornece informações sobre o método a ser invocado.</param>
+        <summary>Invoca um método de dados.</summary>
+        <returns>O resultado do método de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected virtual bool IsTrackingViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsTrackingViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.IsTrackingViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o controle armazena em estado de exibição de estado.</summary>
+        <returns>
+          <see langword="true" />Se o controle armazena o estado em estado de exibição; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">O estado de exibição salvo.</param>
+        <summary>Restaurações de estado de exibição para a exibição de fonte de dados salvo anteriormente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelTypeName">
+      <MemberSignature Language="C#" Value="public string ModelTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModelTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.ModelTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tipo de dados para controle de associação de dados.</summary>
+        <value>O nome do tipo de dados para os dados de controle de associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCallingDataMethods">
+      <MemberSignature Language="C#" Value="protected virtual void OnCallingDataMethods (System.Web.UI.WebControls.CallingDataMethodsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCallingDataMethods(class System.Web.UI.WebControls.CallingDataMethodsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.OnCallingDataMethods(System.Web.UI.WebControls.CallingDataMethodsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CallingDataMethodsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados para o <see cref="E:System.Web.UI.WebControls.ModelDataSourceView.CallingDataMethods" /> evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.ModelDataSourceView.CallingDataMethods" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessSelectMethodResult">
+      <MemberSignature Language="C#" Value="protected virtual object ProcessSelectMethodResult (System.Web.UI.DataSourceSelectArguments arguments, System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions selectResultProcessingOptions, System.Web.UI.WebControls.ModelDataMethodResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object ProcessSelectMethodResult(class System.Web.UI.DataSourceSelectArguments arguments, class System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions selectResultProcessingOptions, class System.Web.UI.WebControls.ModelDataMethodResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.ProcessSelectMethodResult(System.Web.UI.DataSourceSelectArguments,System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions,System.Web.UI.WebControls.ModelDataMethodResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+        <Parameter Name="selectResultProcessingOptions" Type="System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions" />
+        <Parameter Name="result" Type="System.Web.UI.WebControls.ModelDataMethodResult" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">O <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto para a operação select.</param>
+        <param name="selectResultProcessingOptions">O <see cref="T:System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions" /> objeto a ser usado para processar o resultados de select. Essas opções são determinadas em uma chamada anterior para <see cref="M:System.Web.UI.WebControls.ModelDataSourceView.EvaluateSelectMethodParameters(System.Web.UI.DataSourceSelectArguments,System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions@)" />.</param>
+        <param name="result">O resultado após operações como paginação/classificação automática terminar.</param>
+        <summary>Executa operações em que o resultado do método select que automaticamente a paginação e classificação, se aplicável.</summary>
+        <returns>O resultado do método select.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações para o estado de exibição para o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto desde a hora em que a página foi lançada para o servidor.</summary>
+        <returns>O objeto que contém as alterações para o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> exibir estado; caso contrário <see langword="null" /> se não houver nenhum estado de exibição associado ao objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public override void Select (System.Web.UI.DataSourceSelectArguments arguments, System.Web.UI.DataSourceViewSelectCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Select(class System.Web.UI.DataSourceSelectArguments arguments, class System.Web.UI.DataSourceViewSelectCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewSelectCallback" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Os argumentos de método de seleção.</param>
+        <param name="callback">O retorno de chamada selecionado.</param>
+        <summary>Seleciona o método e obtém o resultado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMethod">
+      <MemberSignature Language="C#" Value="public string SelectMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.SelectMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> controle invoca para recuperar dados.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> usa para recuperar dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um controle de servidor para acompanhar suas alterações de estado de exibição.</summary>
+        <value>
+          <see langword="true" />, se a exibição da fonte de dados é marcado como salva seu estado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.ModelDataSourceView> instância é convertida para o <xref:System.Web.UI.IStateManager> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">O estado salvo para restaurar.</param>
+        <summary>Carrega o controle de servidor salvo anteriormente o estado de exibição para o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ModelDataSourceView> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações para o estado de exibição de um controle de servidor a um objeto.</summary>
+        <returns>O objeto que contém as alterações para o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> exibir estado; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ModelDataSourceView> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o controle de servidor para controlar alterações em seu estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ModelDataSourceView> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto para controlar alterações em seu estado de exibição para que as alterações podem ser armazenadas no <see cref="P:System.Web.UI.Control.ViewState" /> objeto para o controle e persistente entre solicitações para a mesma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ModelDataSourceView.TrackViewState%2A> método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public override void Update (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Update(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.Update(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="keys">As chaves especificadas.</param>
+        <param name="values">Os valores a serem atualizados.</param>
+        <param name="oldValues">Os valores antigos a ser atualizado.</param>
+        <param name="callback">O retorno de chamada.</param>
+        <summary>Atualiza os métodos especificados usando os valores fornecidos nos parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMethod">
+      <MemberSignature Language="C#" Value="public string UpdateMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> objeto invoca para atualizar dados.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do método que o <see cref="T:System.Web.UI.WebControls.ModelDataSourceView" /> usa para atualizar dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateProperties">
+      <MemberSignature Language="C#" Value="public void UpdateProperties (string modelTypeName, string selectMethod, string updateMethod, string insertMethod, string deleteMethod, string dataKeyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateProperties(string modelTypeName, string selectMethod, string updateMethod, string insertMethod, string deleteMethod, string dataKeyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ModelDataSourceView.UpdateProperties(System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelTypeName" Type="System.String" />
+        <Parameter Name="selectMethod" Type="System.String" />
+        <Parameter Name="updateMethod" Type="System.String" />
+        <Parameter Name="insertMethod" Type="System.String" />
+        <Parameter Name="deleteMethod" Type="System.String" />
+        <Parameter Name="dataKeyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="modelTypeName">O nome do tipo de modelo.</param>
+        <param name="selectMethod">O nome do método select.</param>
+        <param name="updateMethod">O nome do método update.</param>
+        <param name="insertMethod">O nome do método update.</param>
+        <param name="deleteMethod">O nome do método de exclusão.</param>
+        <param name="dataKeyName">O nome da chave de dados.</param>
+        <summary>Atualiza as propriedades especificadas usando os valores fornecidos nos parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

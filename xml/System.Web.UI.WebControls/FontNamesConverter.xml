@@ -1,0 +1,202 @@
+<Type Name="FontNamesConverter" FullName="System.Web.UI.WebControls.FontNamesConverter">
+  <TypeSignature Language="C#" Value="public class FontNamesConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontNamesConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FontNamesConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte entre uma cadeia de caracteres que contém uma lista de nomes de fonte e uma matriz de cadeias de caracteres que representa os nomes individuais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertFrom%2A> método dessa classe para converter uma cadeia de caracteres que contém uma lista de nomes de fontes em uma matriz de cadeias de caracteres que contém os nomes individuais. Cada nome de fonte na cadeia de caracteres deve ser separado por uma vírgula. Por exemplo, a cadeia de caracteres "arial, vezes verdana roman, novo", converte uma matriz que contém as cadeias de caracteres "arial", "times new roman" e "verdana". Observe que as vírgulas são removidas com espaços em branco no início ou no final do nome da fonte. Espaço em branco no meio de um nome de fonte não é removido.  
+  
+ O <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertTo%2A> método executa a operação inversa. Converte uma matriz de cadeias de caracteres que contém os nomes de fonte individuais para uma única cadeia de caracteres que contém uma lista de nomes. Por exemplo, uma matriz que contém as cadeias de caracteres "arial", "times new roman" e "verdana" converte a cadeia de caracteres "arial, novo verdana roman, o tempo". Observe que as vírgulas serão inseridas automaticamente entre os nomes de fonte sem qualquer espaço em branco.  
+  
+ Chamar o <xref:System.Web.UI.WebControls.FontNamesConverter.CanConvertFrom%2A> método para verificar se a conversão pode ser feita antes de chamar o <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertFrom%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FontNamesConverter> classe para converter uma cadeia de caracteres com uma lista de nomes de fontes em uma matriz de cadeias de caracteres que contém os nomes individuais. A matriz de cadeias de caracteres é convertida novamente em uma única cadeia de caracteres e exibida.  
+  
+ [!code-aspx-csharp[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontNamesConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontNamesConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FontNamesConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando um <xref:System.ComponentModel.TypeDescriptor> objeto. Para obter mais informações, consulte os exemplos em <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontNamesConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> objeto que fornece informações sobre o contexto de um conversor de tipo. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="sourceType">Um <see cref="T:System.Type" /> que representa o tipo de dados para converter.</param>
+        <summary>Determina se esse conversor pode converter um objeto do tipo de dados especificado em uma matriz de cadeias de caracteres que contém os nomes de fontes individuais.</summary>
+        <returns>
+          <see langword="true" />Se o tipo pode ser convertido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontNamesConverter.CanConvertFrom%2A> método para determinar se o tipo de dados especificado pode ser convertido em uma matriz de cadeias de caracteres que contém os nomes de fontes individuais.  
+  
+> [!NOTE]
+>  Este conversor pode converter apenas de um `string` tipo de dados. O `sourceType` parâmetro deve ser do tipo <xref:System.String>. Caso contrário, esse método retornará `false` para indicar que o tipo de dados especificado não pode ser convertido.  
+  
+ Você poderá opcionalmente passar `null` para o `context` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FontNamesConverter.CanConvertFrom%2A> método. O exemplo determina se o tipo de dados especificado pode ser convertido em uma matriz de cadeias de caracteres que contém os nomes de fonte individuais antes de executar a conversão.  
+  
+ [!code-aspx-csharp[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontNamesConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> objeto que fornece informações sobre o contexto de um conversor de tipo. Esse parâmetro não é usado neste método. Isso está reservado para versões futuras deste método. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que representa informações sobre uma cultura, como o idioma, o sistema de calendário e assim por diante. Esse parâmetro não é usado neste método. Isso está reservado para versões futuras deste método. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="value">Um <see cref="T:System.Object" /> instância que representa a cadeia de caracteres para converter de origem.</param>
+        <summary>Converte uma cadeia de caracteres que representa uma lista de nomes de fontes em uma matriz de cadeias de caracteres que contém os nomes de fontes individuais.</summary>
+        <returns>Um <see cref="T:System.Object" /> instância que representa a matriz de cadeias de caracteres que contém os nomes de fonte individuais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertFrom%2A> método para converter uma cadeia de caracteres que contém uma lista de nomes de fontes em uma matriz de cadeias de caracteres que contém os nomes individuais. Cada nome de fonte na cadeia de caracteres deve ser separado por uma vírgula. Por exemplo, a cadeia de caracteres "arial, vezes verdana roman, novo", converte uma matriz que contém as cadeias de caracteres "arial", "times new roman" e "verdana". Observe que as vírgulas são removidas com espaços em branco no início ou no final do nome da fonte. Espaço em branco no meio de um nome de fonte não é removido.  
+  
+> [!NOTE]
+>  O `context` e `culture` parâmetros não são usados nesta versão do método; elas estão reservadas para futuras versões do método. Você poderá opcionalmente passar `null` para esses parâmetros.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertFrom%2A> método para converter uma cadeia de caracteres com uma lista de nomes de fontes para uma matriz de cadeias de caracteres que contém os nomes individuais.  
+  
+ [!code-aspx-csharp[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+          <paramref name="value" /> não é do tipo <see cref="T:System.String" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontNamesConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> objeto que fornece informações sobre o contexto de um conversor de tipo. Esse parâmetro não é usado neste método. Isso está reservado para versões futuras deste método. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que representa informações sobre uma cultura, como o idioma, o sistema de calendário e assim por diante. Esse parâmetro não é usado neste método. Isso está reservado para versões futuras deste método. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="value">Um objeto que representa a matriz de cadeias de caracteres para converter de origem.</param>
+        <param name="destinationType">Um <see cref="T:System.Object" /> objeto de instância que representa o tipo de dados para converter. Esse parâmetro deve ser do tipo <see cref="T:System.String" />.</param>
+        <summary>Cria uma cadeia de caracteres que representa uma lista de nomes de fontes de uma matriz de cadeias de caracteres que contém os nomes de fontes individuais.</summary>
+        <returns>Um <see cref="T:System.Object" /> instância que representa uma cadeia de caracteres que contém uma lista de nomes de fontes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertTo%2A> método para converter uma matriz de cadeias de caracteres que contém os nomes de fonte individuais para uma única cadeia de caracteres que contém uma lista de nomes. Por exemplo, uma matriz que contém as cadeias de caracteres "arial", "times new roman" e "verdana" converte a cadeia de caracteres "arial, novo verdana roman, o tempo". Observe que as vírgulas serão inseridas automaticamente entre os nomes de fonte sem qualquer espaço em branco.  
+  
+> [!NOTE]
+>  Este conversor pode converter apenas a um `string` tipo de dados. O `destinationType` parâmetro deve ser do tipo <xref:System.String>.  
+  
+> [!NOTE]
+>  O `context` e `culture` parâmetros não são usados nesta versão do método; elas estão reservadas para futuras versões do método. Você poderá opcionalmente passar `null` para esses parâmetros.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FontNamesConverter.ConvertTo%2A> método para converter uma matriz de cadeias de caracteres que contém os nomes individuais de uma única cadeia de caracteres que contém uma lista de nomes de fontes.  
+  
+ [!code-aspx-csharp[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic FontNamesConverter.CanConvertFrom Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic FontNamesConverter.CanConvertFrom Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+          <paramref name="destinationType" /> não é do tipo <see cref="T:System.String" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

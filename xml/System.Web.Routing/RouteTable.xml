@@ -1,0 +1,91 @@
+<Type Name="RouteTable" FullName="System.Web.Routing.RouteTable">
+  <TypeSignature Language="C#" Value="public class RouteTable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RouteTable extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.RouteTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Routing, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Armazena as rotas de URL para um aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As rotas são padrões de URL que são usados para processar solicitações e que pode ser usado para construir URLs dinamicamente. O <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade é um `static` propriedade (`Shared` no Visual Basic) que contém todas as rotas em um aplicativo que são usadas para especificar como uma solicitação de URL corresponde a uma classe que manipula a solicitação. Para especificar uma rota, você adiciona a definição de rota para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade. Normalmente, você pode adicionar rotas para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade de um manipulador de eventos para o `Application_Start` eventos no arquivo global. asax.  
+  
+ Quando um aplicativo ASP.NET manipula uma solicitação, o aplicativo itera através da coleção de rotas a <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade para encontrar a rota que corresponde ao formato da solicitação de URL. A ordem das rotas que você adicionar à <xref:System.Web.Routing.RouteTable.Routes%2A> é significativa, porque o aplicativo usa a primeira rota encontrados na coleção que corresponde à URL.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um <xref:System.Web.Routing.Route> o objeto para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/vb/Global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteTable.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Routing.RouteTable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Routes">
+      <MemberSignature Language="C#" Value="public static System.Web.Routing.RouteCollection Routes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Routing.RouteCollection Routes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.RouteTable.Routes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos que derivam da classe <see cref="T:System.Web.Routing.RouteBase" />.</summary>
+        <value>Um objeto que contém todas as rotas da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As rotas são padrões de URL que são usados para processar solicitações e que pode ser usado para construir URLs dinamicamente. O <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade é um `static` propriedade (`Shared` no Visual Basic) que representa todos os objetos que são usados para especificar como uma solicitação de URL corresponde a uma classe que manipula a solicitação. Para especificar uma rota, você adiciona a definição de rota para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade. Normalmente, você pode adicionar rotas para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade de um manipulador de eventos para o `Application_Start` eventos no arquivo global. asax.  
+  
+ Quando um aplicativo ASP.NET manipula uma solicitação, o aplicativo itera através da coleção de rotas a <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade para encontrar a rota que corresponde ao formato da solicitação de URL. A ordem das rotas que você adicionar à <xref:System.Web.Routing.RouteTable.Routes%2A> é significativa, porque o aplicativo usa a primeira rota na coleção que corresponde à URL.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um <xref:System.Web.Routing.Route> o objeto para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.RouteTable.Routes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.RouteTable.Routes/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

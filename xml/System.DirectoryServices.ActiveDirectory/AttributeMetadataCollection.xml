@@ -1,0 +1,124 @@
+<Type Name="AttributeMetadataCollection" FullName="System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection">
+  <TypeSignature Language="C#" Value="public class AttributeMetadataCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AttributeMetadataCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma coleção somente leitura que contém <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.ActiveDirectory.AttributeMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.ActiveDirectory.AttributeMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection.Contains(System.DirectoryServices.ActiveDirectory.AttributeMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.DirectoryServices.ActiveDirectory.AttributeMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">O <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se o especificado <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto está nesta coleção.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> está nesta coleção, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="metadata" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.AttributeMetadata[] metadata, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.AttributeMetadata[] metadata, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection.CopyTo(System.DirectoryServices.ActiveDirectory.AttributeMetadata[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.DirectoryServices.ActiveDirectory.AttributeMetadata[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">A matriz de <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>metadados</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objetos na coleção para a matriz especificada, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de destino não é grande o suficiente, com base no tamanho da coleção de origem e o <paramref name="index" /> especificado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="metadata" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.ActiveDirectory.AttributeMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.ActiveDirectory.AttributeMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection.IndexOf(System.DirectoryServices.ActiveDirectory.AttributeMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.DirectoryServices.ActiveDirectory.AttributeMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">O <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna a primeira ocorrência de especificado <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto na coleção.</summary>
+        <returns>O índice de base zero do primeiro item correspondente. -1 se nenhum membro dessa coleção é idêntico ao <paramref name="metadata" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="metadata" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AttributeMetadata this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AttributeMetadata Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AttributeMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto a ser obtido.</param>
+        <summary>Obtém um <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto na coleção.</summary>
+        <value>O <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto que existe no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Buffers">
+  <Docs>
+    <summary>O <see cref="N:System.Buffers" /> namespace contém o <see cref="ArrayPool{T}"/> classe que representa um pool de recursos compartilhado de resusable instâncias do tipo <see cref="T:T[]"/>.</summary>
+    <remarks>
+       <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+O <see cref="ArrayPool{T}"/> classe ao alocar um buffer compartilhado para valores de matriz, pode oferecer melhorias significativas no desempenho para aplicativos que fazem uso extensos usar de matrizes.
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace> 

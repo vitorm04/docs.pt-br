@@ -1,0 +1,238 @@
+<Type Name="ActivatedClientTypeEntry" FullName="System.Runtime.Remoting.ActivatedClientTypeEntry">
+  <TypeSignature Language="C#" Value="public class ActivatedClientTypeEntry : System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivatedClientTypeEntry extends System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.ActivatedClientTypeEntry" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.TypeEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém valores para um tipo de objeto registrado no lado do cliente como um tipo que pode ser ativado no servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um objeto cliente ativado no cliente, você deve saber o <xref:System.Type> e ele deve ser registrado no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método. Para obter um proxy para uma nova instância do objeto cliente ativado, o cliente deve primeiro registrar um canal com <xref:System.Runtime.Remoting.Channels.ChannelServices> e, em seguida, ativar o objeto chamando `new`.  
+  
+ Para ativar um tipo de objeto ativado pelo cliente com o `new` palavra-chave, você deve primeiro registrar o tipo de objeto no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método. Chamando <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> você permitirá que a infra-estrutura de comunicação remota do local do aplicativo remoto onde `new` tentará criá-la. Se, por outro lado, você usa o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método para criar uma nova instância do objeto cliente ativado, você deve fornecer a URL do aplicativo remoto como um parâmetro, portanto, nenhum registro anterior no lado do cliente é necessário. Para fornecer o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método com a URL do servidor no qual você deseja criar o objeto, você deve encapsular a URL em uma instância do <xref:System.Runtime.Remoting.Activation.UrlAttribute> classe.  
+  
+ Para obter uma descrição detalhada de objetos de cliente ativado e ativação de objeto remoto consulte [&#91;\< Topic://cpconActivation > &#93; ](http://msdn.microsoft.com/en-us/e90d0c64-00da-4080-ae78-a6c558825c25).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar um <xref:System.Runtime.Remoting.ActivatedClientTypeEntry> registrar um cliente ativado objeto remoto. O exemplo contém três partes, um cliente, um servidor e um objeto remoto usado pelo cliente e servidor.  
+  
+ O exemplo de código a seguir mostra um cliente:  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_client.cpp#1)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_client.cs#1)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_client.vb#1)]  
+  
+ O exemplo de código a seguir mostra um servidor para este cliente:  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_server.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_server.cs#10)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#10](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_server.vb#10)]  
+  
+ O exemplo de código a seguir fornece o objeto remoto usado pelo cliente e o servidor:  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#20](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_share.cpp#20)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#20](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_share.cs#20)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#20](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_share.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivatedClientTypeEntry (Type type, string appUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string appUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ActivatedClientTypeEntry.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="appUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do cliente ativado tipo.</param>
+        <param name="appUrl">A URL do aplicativo para ativar o tipo no.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.ActivatedClientTypeEntry" /> classe com o determinado <see cref="T:System.Type" /> e a URL do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do assembly do tipo é derivado de `type` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como construir um <xref:System.Runtime.Remoting.ActivatedClientTypeEntry>.  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_client.cpp#2)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_client.cs#2)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivatedClientTypeEntry (string typeName, string assemblyName, string appUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string assemblyName, string appUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ActivatedClientTypeEntry.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="appUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo do tipo cliente ativado.</param>
+        <param name="assemblyName">O nome do assembly do tipo cliente ativado.</param>
+        <param name="appUrl">A URL do aplicativo para ativar o tipo no.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.ActivatedClientTypeEntry" /> classe com o nome do tipo especificado, o nome do assembly e a URL do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUrl">
+      <MemberSignature Language="C#" Value="public string ApplicationUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.ActivatedClientTypeEntry.ApplicationUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL do aplicativo para ativar o tipo no.</summary>
+        <value>A URL do aplicativo para ativar o tipo no.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.ActivatedClientTypeEntry.ApplicationUrl%2A> propriedade.  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#4](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_client.cpp#4)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_client.cs#4)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_client.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextAttributes">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Contexts.IContextAttribute[] ContextAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Contexts.IContextAttribute[] ContextAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.ActivatedClientTypeEntry.ContextAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Contexts.IContextAttribute[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos de contexto para o tipo de cliente ativado.</summary>
+        <value>Os atributos de contexto para o tipo de cliente ativado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No momento, este indexador não foi implementado e operações em que ele não produzirá resultados.  
+  
+ <xref:System.Runtime.Remoting.Contexts.Context>atributos fornecem propriedades de contexto que, quando adicionada a um <xref:System.Runtime.Remoting.Contexts.Context>, pode impor políticas como transações ou sincronização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.ActivatedClientTypeEntry.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do tipo cliente ativado.</summary>
+        <value>Obtém o <see cref="T:System.Type" /> do tipo cliente ativado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.ActivatedClientTypeEntry.ObjectType%2A> propriedade.  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_client.cpp#3)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_client.cs#3)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ActivatedClientTypeEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome do tipo, o nome do assembly e a URL do aplicativo do tipo cliente ativado como um <see cref="T:System.String" />.</summary>
+        <returns>O nome do tipo, o nome do assembly e a URL do aplicativo do tipo cliente ativado como um <see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra um uso de <xref:System.Runtime.Remoting.ActivatedClientTypeEntry.ToString%2A> método.  
+  
+ [!code-cpp[System.Runtime.Remoting.ActivatedClientTypeEntry#5](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CPP/activatedclienttypeentry_client.cpp#5)]
+ [!code-csharp[System.Runtime.Remoting.ActivatedClientTypeEntry#5](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/CS/activatedclienttypeentry_client.cs#5)]
+ [!code-vb[System.Runtime.Remoting.ActivatedClientTypeEntry#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.ActivatedClientTypeEntry/VB/activatedclienttypeentry_client.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

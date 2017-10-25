@@ -1,0 +1,155 @@
+<Type Name="ProcessModelComImpersonationLevel" FullName="System.Web.Configuration.ProcessModelComImpersonationLevel">
+  <TypeSignature Language="C#" Value="public enum ProcessModelComImpersonationLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessModelComImpersonationLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProcessModelComImpersonationLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de segurança COM autenticação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ProcessModelComImpersonationLevel> classe enumera os valores a serem usados quando você define o <xref:System.Web.Configuration.ProcessModelSection.ComImpersonationLevel%2A> propriedade.  
+  
+ O valor padrão é Impersonate.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.ProcessModelSection.ComImpersonationLevel%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#22)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#22)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComImpersonationLevel Anonymous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComImpersonationLevel.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o cliente é anônimo para o servidor. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O servidor pode representar o cliente, mas o token de representação não conterá nenhuma informação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComImpersonationLevel Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComImpersonationLevel.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o DCOM determina o nível de representação. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DCOM determina o nível de representação usando seu algoritmo normal de negociação de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delegate">
+      <MemberSignature Language="C#" Value="Delegate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComImpersonationLevel Delegate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComImpersonationLevel.Delegate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o processo do servidor pode representar o contexto de segurança do cliente ao atuar em nome do cliente. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo do servidor pode fazer chamadas de saída para outros servidores ao atuar em nome do cliente, usando o encobrimento. O servidor pode usar o contexto de segurança do cliente em outros computadores para acessar recursos locais e remotos como o cliente. Quando o processo está representando o cliente nesse nível, o token de representação pode ser transmitido por qualquer número de limites do computador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identify">
+      <MemberSignature Language="C#" Value="Identify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComImpersonationLevel Identify = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComImpersonationLevel.Identify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o servidor pode obter a identidade do cliente. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O servidor pode representar o cliente para verificação de ACL (lista) de controle de acesso, mas ele não pode acessar objetos de sistema como cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonate">
+      <MemberSignature Language="C#" Value="Impersonate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComImpersonationLevel Impersonate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComImpersonationLevel.Impersonate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o processo do servidor pode representar o contexto de segurança do cliente ao atuar em nome do cliente. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse nível de representação pode ser usado para acessar recursos locais, como arquivos. Quando o processo está representando o cliente nesse nível, o token de representação pode ser transmitido pelo limite de um único computador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

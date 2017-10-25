@@ -1,0 +1,23 @@
+<Namespace Name="System.Device.Location">
+  <Docs>
+    <summary>O <see cref="N:System.Device.Location" /> namespace permite que os desenvolvedores de aplicativos acessar facilmente o local do computador usando uma única API.  Informações de local vêm de vários provedores, como GPS, triangulação de Wi-Fi e triangulação de torre de telefone da célula. O <see cref="N:System.Device.Location" /> classes fornecem uma única API para encapsular os vários provedores de local em um computador e dar suporte a priorização contínua e transição entre eles. Como resultado, os desenvolvedores de aplicativos que usam essa API não precisa personalizar aplicativos para configurações específicas de hardware.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Device.Location.GeoCoordinateWatcher> coordenadas de dados de localização de fontes de classe que se baseia a latitude e longitude. O <xref:System.Device.Location.CivicAddressResolver> e <xref:System.Device.Location.ICivicAddressResolver> tipos fornecem a capacidade de resolver uma coordenada local para um endereço civil. Além disso, o <xref:System.Device.Location.IGeoPositionWatcher%601> interface pode ser implementada para estender os tipos de dados local que são fornecidos.  
+  
+ No Windows 7, todos os <xref:System.Device.Location> classes são totalmente funcionais, se um provedor de local está instalado e pode determinar o local do computador. No Windows 7 Starter Edition, o provedor local padrão que podem ser definidas no painel de controle é o provedor de único local com suporte.  
+  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

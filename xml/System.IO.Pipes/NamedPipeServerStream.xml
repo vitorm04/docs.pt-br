@@ -1,0 +1,1210 @@
+<Type Name="NamedPipeServerStream" FullName="System.IO.Pipes.NamedPipeServerStream">
+  <TypeSignature Language="C#" Value="public sealed class NamedPipeServerStream : System.IO.Pipes.PipeStream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NamedPipeServerStream extends System.IO.Pipes.PipeStream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.NamedPipeServerStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Pipes.PipeStream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe um <see cref="T:System.IO.Stream" /> em torno de um pipe nomeado, dando suporte a operações de leitura e gravação síncronas e assíncronas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pipes nomeados fornecem pipes unidirecionais ou bidirecionais para comunicação entre um servidor de pipe e um ou mais clientes pipe. Pipes nomeados podem ser usados para comunicação entre processos localmente ou em uma rede. Um nome de pipe simples pode ser compartilhado por vários <xref:System.IO.Pipes.NamedPipeClientStream> objetos.  
+  
+ Qualquer processo pode agir como um servidor de pipe nomeado ou cliente ou ambos.  
+  
+> [!NOTE]
+>  Para [!INCLUDE[winxppro](~/includes/winxppro-md.md)] e [!INCLUDE[win2kserver](~/includes/win2kserver-md.md)], um máximo de 10 pipes pode se conectar simultaneamente pela rede.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma maneira de enviar uma cadeia de caracteres de um processo pai para um processo filho no mesmo computador usando pipes nomeados. Este exemplo cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto em um processo pai com um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>. O servidor, em seguida, aguarda um <xref:System.IO.Pipes.NamedPipeClientStream> objeto em um processo filho para se conectar a ele. Neste exemplo, os dois processos estão no mesmo computador e o <xref:System.IO.Pipes.NamedPipeClientStream> objeto tem um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.In>. O processo pai, em seguida, envia uma cadeia de caracteres fornecida pelo usuário para o processo filho. A cadeia de caracteres é exibida no console.  
+  
+ Este exemplo é para o processo de servidor, que usa o <xref:System.IO.Pipes.NamedPipeServerStream> classe. Para o exemplo de código inteiro, incluindo o código para o cliente de pipe e o servidor, consulte [como: uso de Pipes nomeados para comunicação em rede Interprocess](~/docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+  
+ [!code-csharp[System.IO.Pipes.NamedPipeServerStream_Sample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_Sample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.NamedPipeServerStream_Sample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_Sample1/vb/program.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Uma direção de pipe padrão de <xref:System.IO.Pipes.PipeDirection.InOut>.  
+  
+-   O número máximo de instâncias de servidor que compartilham o mesmo nome definido como 1.  
+  
+-   Um <xref:System.IO.Pipes.PipeTransmissionMode> valor <xref:System.IO.Pipes.PipeTransmissionMode.Byte>.  
+  
+-   Um <xref:System.IO.Pipes.PipeOptions> valor <xref:System.IO.Pipes.PipeOptions.None>.  
+  
+-   Tamanho de buffer de entrada e saída padrão.  
+  
+-   Nenhuma segurança de pipe.  
+  
+-   Um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe e a direção do pipe especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Um <xref:System.IO.Pipes.PipeTransmissionMode> valor <xref:System.IO.Pipes.PipeTransmissionMode.Byte>.  
+  
+-   Um <xref:System.IO.Pipes.PipeOptions> valor <xref:System.IO.Pipes.PipeOptions.None>.  
+  
+-   Tamanho de buffer de entrada e saída padrão.  
+  
+-   Nenhuma segurança de pipe.  
+  
+-   Um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um método para enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes nomeados. Este exemplo cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto em um processo pai. O <xref:System.IO.Pipes.NamedPipeServerStream> objeto tem um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>, que bloqueia até um <xref:System.IO.Pipes.NamedPipeClientStream> objeto estabelece uma conexão ao atual <xref:System.IO.Pipes.NamedPipeServerStream> objeto.  
+  
+ [!code-csharp[System.IO.Pipes.NamedPipeServerStream_Sample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_Sample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.NamedPipeServerStream_Sample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_Sample1/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome de pipe, direção do pipe e o número máximo de instâncias do servidor especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Um valor padrão de 1 para o número máximo de instâncias de servidor que compartilham o mesmo nome.  
+  
+-   Um padrão <xref:System.IO.Pipes.PipeTransmissionMode> valor <xref:System.IO.Pipes.PipeTransmissionMode.Byte>.  
+  
+-   Um <xref:System.IO.Pipes.PipeOptions> valor <xref:System.IO.Pipes.PipeOptions.None>.  
+  
+-   Tamanho de buffer de entrada e saída padrão.  
+  
+-   Nenhuma segurança de pipe.  
+  
+-   Um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ -ou-  
+  
+ Um número não negativo é necessário.  
+  
+ -ou-  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)  
+  
+ - ou -  
+  
+ <see cref="F:System.IO.HandleInheritability.None" /> ou <see cref="F:System.IO.HandleInheritability.Inheritable" /> é necessário.  
+  
+ -ou-  
+  
+ Direitos de acesso são limitados para os sinalizadores <see cref="F:System.IO.Pipes.PipeAccessRights.ChangePermissions" />, <see cref="F:System.IO.Pipes.PipeAccessRights.TakeOwnership" /> e <see cref="F:System.IO.Pipes.PipeAccessRights.AccessSystemSecurity" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (System.IO.Pipes.PipeDirection direction, bool isAsync, bool isConnected, Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, bool isAsync, bool isConnected, class Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.IO.Pipes.PipeDirection,System.Boolean,System.Boolean,Microsoft.Win32.SafeHandles.SafePipeHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="isAsync" Type="System.Boolean" />
+        <Parameter Name="isConnected" Type="System.Boolean" />
+        <Parameter Name="safePipeHandle" Type="Microsoft.Win32.SafeHandles.SafePipeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.</param>
+        <param name="isAsync">
+          <see langword="true" /> para indicar que o identificador foi aberto assincronamente, caso contrário, <see langword="false" />.</param>
+        <param name="isConnected">
+          <see langword="true" /> para indicar que o pipe está conectado, caso contrário, <see langword="false" />.</param>
+        <param name="safePipeHandle">Um identificador seguro para o arquivo que este objeto <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> encapsulará.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> do identificador de pipe especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="safePipeHandle" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="safePipeHandle" /> é um identificador inválido.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="safePipeHandle" /> não é um identificador de pipe válido.  
+  
+ -ou-  
+  
+ O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances, System.IO.Pipes.PipeTransmissionMode transmissionMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <param name="transmissionMode">Um dos valores de enumeração que determina o modo de transmissão do pipe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe, a direção do pipe, o número máximo de instâncias do servidor e o modo de transmissão especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Um padrão <xref:System.IO.Pipes.PipeOptions> valor <xref:System.IO.Pipes.PipeOptions.None>.  
+  
+-   Tamanho de buffer de entrada e saída padrão.  
+  
+-   Nenhuma segurança de pipe.  
+  
+-   Um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances, System.IO.Pipes.PipeTransmissionMode transmissionMode, System.IO.Pipes.PipeOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode, valuetype System.IO.Pipes.PipeOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+        <Parameter Name="options" Type="System.IO.Pipes.PipeOptions" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <param name="transmissionMode">Um dos valores de enumeração que determina o modo de transmissão do pipe.</param>
+        <param name="options">Um dos valores de enumeração que determina como abrir ou criar o pipe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe, direção do pipe, número máximo de instâncias do servidor, modo de transmissão e opções de pipe especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Tamanho de buffer de entrada e saída padrão.  
+  
+-   Nenhuma segurança de pipe.  
+  
+-   Um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)  
+  
+ -ou-  
+  
+ <paramref name="options" /> não é um valor <see cref="T:System.IO.Pipes.PipeOptions" /> válido.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances, System.IO.Pipes.PipeTransmissionMode transmissionMode, System.IO.Pipes.PipeOptions options, int inBufferSize, int outBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode, valuetype System.IO.Pipes.PipeOptions options, int32 inBufferSize, int32 outBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+        <Parameter Name="options" Type="System.IO.Pipes.PipeOptions" />
+        <Parameter Name="inBufferSize" Type="System.Int32" />
+        <Parameter Name="outBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <param name="transmissionMode">Um dos valores de enumeração que determina o modo de transmissão do pipe.</param>
+        <param name="options">Um dos valores de enumeração que determina como abrir ou criar o pipe.</param>
+        <param name="inBufferSize">Um valor positivo maior que 0 que indica o tamanho do buffer de entrada.</param>
+        <param name="outBufferSize">Um valor positivo maior que 0 que indica o tamanho do buffer de saída.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe, direção do pipe, número máximo de instâncias do servidor, modo de transmissão, opções de pipe e os tamanhos do buffer de entrada e saída recomendados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Nenhuma segurança de conexão adicionais.  
+  
+-   Um padrão <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)  
+  
+ -ou-  
+  
+ <paramref name="options" /> não é um valor <see cref="T:System.IO.Pipes.PipeOptions" /> válido.  
+  
+ -ou-  
+  
+ <paramref name="inBufferSize" /> é negativo.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances, System.IO.Pipes.PipeTransmissionMode transmissionMode, System.IO.Pipes.PipeOptions options, int inBufferSize, int outBufferSize, System.IO.Pipes.PipeSecurity pipeSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode, valuetype System.IO.Pipes.PipeOptions options, int32 inBufferSize, int32 outBufferSize, class System.IO.Pipes.PipeSecurity pipeSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32,System.IO.Pipes.PipeSecurity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+        <Parameter Name="options" Type="System.IO.Pipes.PipeOptions" />
+        <Parameter Name="inBufferSize" Type="System.Int32" />
+        <Parameter Name="outBufferSize" Type="System.Int32" />
+        <Parameter Name="pipeSecurity" Type="System.IO.Pipes.PipeSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <param name="transmissionMode">Um dos valores de enumeração que determina o modo de transmissão do pipe.</param>
+        <param name="options">Um dos valores de enumeração que determina como abrir ou criar o pipe.</param>
+        <param name="inBufferSize">Um valor positivo maior que 0 que indica o tamanho do buffer de entrada.</param>
+        <param name="outBufferSize">Um valor positivo maior que 0 que indica o tamanho do buffer de saída.</param>
+        <param name="pipeSecurity">Um objeto que determina o controle de acesso e a segurança de auditoria para o pipe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe, direção do pipe, número máximo de instâncias do servidor, modo de transmissão, opções de pipe, tamanhos do buffer de entrada e saída recomendados e segurança do pipe especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que tem as seguintes características:  
+  
+-   Um padrão <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+-   Nenhum especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)  
+  
+ -ou-  
+  
+ <paramref name="options" /> não é um valor <see cref="T:System.IO.Pipes.PipeOptions" /> válido.  
+  
+ -ou-  
+  
+ <paramref name="inBufferSize" /> é negativo.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances, System.IO.Pipes.PipeTransmissionMode transmissionMode, System.IO.Pipes.PipeOptions options, int inBufferSize, int outBufferSize, System.IO.Pipes.PipeSecurity pipeSecurity, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode, valuetype System.IO.Pipes.PipeOptions options, int32 inBufferSize, int32 outBufferSize, class System.IO.Pipes.PipeSecurity pipeSecurity, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32,System.IO.Pipes.PipeSecurity,System.IO.HandleInheritability)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+        <Parameter Name="options" Type="System.IO.Pipes.PipeOptions" />
+        <Parameter Name="inBufferSize" Type="System.Int32" />
+        <Parameter Name="outBufferSize" Type="System.Int32" />
+        <Parameter Name="pipeSecurity" Type="System.IO.Pipes.PipeSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <param name="transmissionMode">Um dos valores de enumeração que determina o modo de transmissão do pipe.</param>
+        <param name="options">Um dos valores de enumeração que determina como abrir ou criar o pipe.</param>
+        <param name="inBufferSize">Um valor positivo maior que 0 que indica o tamanho do buffer de entrada.</param>
+        <param name="outBufferSize">Um valor positivo maior que 0 que indica o tamanho do buffer de saída.</param>
+        <param name="pipeSecurity">Um objeto que determina o controle de acesso e a segurança de auditoria para o pipe.</param>
+        <param name="inheritability">Um dos valores de enumeração que determina se o identificador subjacente pode ser herdado por processos filhos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> classe com o nome de pipe especificado, a direção do pipe, o número máximo de instâncias de servidor, o modo de transmissão, opções de pipe, recomendadas e tamanhos de buffer, a segurança de pipe e modo inheritability.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto que não tenha especificado adicionais <xref:System.IO.Pipes.PipeAccessRights>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)  
+  
+ -ou-  
+  
+ <paramref name="options" /> não é um valor <see cref="T:System.IO.Pipes.PipeOptions" /> válido.  
+  
+ -ou-  
+  
+ <paramref name="inBufferSize" /> é negativo.  
+  
+ -ou-  
+  
+ <paramref name="inheritability" /> não é um valor <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeServerStream (string pipeName, System.IO.Pipes.PipeDirection direction, int maxNumberOfServerInstances, System.IO.Pipes.PipeTransmissionMode transmissionMode, System.IO.Pipes.PipeOptions options, int inBufferSize, int outBufferSize, System.IO.Pipes.PipeSecurity pipeSecurity, System.IO.HandleInheritability inheritability, System.IO.Pipes.PipeAccessRights additionalAccessRights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeName, valuetype System.IO.Pipes.PipeDirection direction, int32 maxNumberOfServerInstances, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode, valuetype System.IO.Pipes.PipeOptions options, int32 inBufferSize, int32 outBufferSize, class System.IO.Pipes.PipeSecurity pipeSecurity, valuetype System.IO.HandleInheritability inheritability, valuetype System.IO.Pipes.PipeAccessRights additionalAccessRights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.#ctor(System.String,System.IO.Pipes.PipeDirection,System.Int32,System.IO.Pipes.PipeTransmissionMode,System.IO.Pipes.PipeOptions,System.Int32,System.Int32,System.IO.Pipes.PipeSecurity,System.IO.HandleInheritability,System.IO.Pipes.PipeAccessRights)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeName" Type="System.String" />
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="maxNumberOfServerInstances" Type="System.Int32" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+        <Parameter Name="options" Type="System.IO.Pipes.PipeOptions" />
+        <Parameter Name="inBufferSize" Type="System.Int32" />
+        <Parameter Name="outBufferSize" Type="System.Int32" />
+        <Parameter Name="pipeSecurity" Type="System.IO.Pipes.PipeSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="additionalAccessRights" Type="System.IO.Pipes.PipeAccessRights" />
+      </Parameters>
+      <Docs>
+        <param name="pipeName">O nome do pipe.</param>
+        <param name="direction">Um dos valores de enumeração que determina a direção do pipe.</param>
+        <param name="maxNumberOfServerInstances">O número máximo de instâncias de servidor que compartilham o mesmo nome. Você pode passar <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" /> para esse valor.</param>
+        <param name="transmissionMode">Um dos valores de enumeração que determina o modo de transmissão do pipe.</param>
+        <param name="options">Um dos valores de enumeração que determina como abrir ou criar o pipe.</param>
+        <param name="inBufferSize">O tamanho do buffer de entrada.</param>
+        <param name="outBufferSize">O tamanho do buffer de saída.</param>
+        <param name="pipeSecurity">Um objeto que determina o controle de acesso e a segurança de auditoria para o pipe.</param>
+        <param name="inheritability">Um dos valores de enumeração que determina se o identificador subjacente pode ser herdado por processos filhos.</param>
+        <param name="additionalAccessRights">Um dos valores de enumeração que especifica os direitos de acesso do pipe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> com o nome do pipe, direção do pipe, número máximo de instâncias do servidor, modo de transmissão, opções de pipe, tamanhos do buffer de entrada e saída recomendados, segurança do pipe, modo de herdabilidade e direitos de acesso do pipe especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeName" /> é uma cadeia de comprimento zero.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pipeName" /> é definido como "anonymous".  
+  
+ -ou-  
+  
+ <paramref name="direction" /> não é um valor <see cref="T:System.IO.Pipes.PipeDirection" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="maxNumberofServerInstances" /> é menor que -1 ou maior que 254 (-1 indica <see cref="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />)  
+  
+ -ou-  
+  
+ <paramref name="options" /> não é um valor <see cref="T:System.IO.Pipes.PipeOptions" /> válido.  
+  
+ -ou-  
+  
+ <paramref name="inBufferSize" /> é negativo.  
+  
+ -ou-  
+  
+ <paramref name="inheritability" /> não é um valor <see cref="T:System.IO.HandleInheritability" /> válido.  
+  
+ -ou-  
+  
+ <paramref name="additionalAccessRights" /> não é um valor <see cref="T:System.IO.Pipes.PipeAccessRights" /> válido.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="pipeName" /> contém dois-pontos (“:”).</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional é o Windows Millennium Edition, Windows 98 ou Windows 95, para os quais não há suporte.</exception>
+        <exception cref="T:System.IO.IOException">O número máximo de instâncias do servidor foi excedido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">Para confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWaitForConnection">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWaitForConnection (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginWaitForConnection(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.BeginWaitForConnection(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método a ser chamado quando um cliente se conecta ao objeto <see cref="T:System.IO.Pipes.NamedPipeServerStream" />.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esta solicitação assíncrona específica de outras solicitações.</param>
+        <summary>Inicia uma operação assíncrona para esperar que um cliente se conecte.</summary>
+        <returns>Um objeto que faz referência à solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o equivalente assíncrono <xref:System.IO.Pipes.NamedPipeServerStream.WaitForConnection%2A>.  
+  
+ <xref:System.IO.Pipes.NamedPipeServerStream.EndWaitForConnection%2A>deve ser chamado apenas uma vez para cada chamada a <xref:System.IO.Pipes.NamedPipeServerStream.BeginWaitForConnection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O pipe não foi aberto assincronamente.  
+  
+ -ou-  
+  
+ Já foi estabelecida uma conexão de pipe.  
+  
+ -ou-  
+  
+ O identificador de pipe não foi definido.</exception>
+        <exception cref="T:System.IO.IOException">A conexão de pipe foi interrompida.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public void Disconnect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Disconnect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.Disconnect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desconecta a conexão atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.IO.Pipes.NamedPipeServerStream.Disconnect%2A> método será bloqueado até que todos os caracteres enviados tenham sido lidos, a menos que o modo de transmissão do pipe é definido como <xref:System.IO.Pipes.PipeTransmissionMode.Message> e o tamanho do buffer é definido no construtor que criou o <xref:System.IO.Pipes.NamedPipeServerStream> objeto. Nesse caso, não todas as mensagens serão recebidas. Chamando <xref:System.IO.Pipes.PipeStream.WaitForPipeDrain%2A> faz com que o servidor bloquear até que todos os dados tenham sido lidos de pipe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma conexão de pipe foi criada ainda.  
+  
+ -ou-  
+  
+ O pipe conectado já foi desconectado.  
+  
+ -ou-  
+  
+ O identificador de pipe não foi definido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWaitForConnection">
+      <MemberSignature Language="C#" Value="public void EndWaitForConnection (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndWaitForConnection(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.EndWaitForConnection(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">A solicitação assíncrona pendente.</param>
+        <summary>Termina uma operação assíncrona para esperar um cliente se conectar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Pipes.NamedPipeServerStream.EndWaitForConnection%2A>deve ser chamado apenas uma vez para cada chamada a <xref:System.IO.Pipes.NamedPipeServerStream.BeginWaitForConnection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O pipe não foi aberto assincronamente.  
+  
+ -ou-  
+  
+ O identificador de pipe não foi definido.</exception>
+        <exception cref="T:System.IO.IOException">A conexão de pipe foi interrompida.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~NamedPipeServerStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos não gerenciados e executa outras operações de limpeza antes do <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> instância é recuperada pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImpersonationUserName">
+      <MemberSignature Language="C#" Value="public string GetImpersonationUserName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetImpersonationUserName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o nome de usuário do cliente na outra extremidade do pipe.</summary>
+        <returns>O nome de usuário do cliente na outra extremidade do pipe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A> método `null` se o cliente ainda não tem gravados para o pipe ou se o cliente conectado não se conectou com uma <xref:System.Security.Principal.TokenImpersonationLevel> de <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um método para criar um servidor de pipe pode responder a várias solicitações simultâneas de cliente e um método de representação do cliente. Este exemplo cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto em um processo pai, que cria vários threads que aguardam <xref:System.IO.Pipes.NamedPipeClientStream> objetos para se conectar. Depois que um cliente estiver conectado, ele fornece um nome de arquivo para o servidor e o conteúdo do arquivo é lidas e enviado de volta para o cliente. Porque o <xref:System.IO.Pipes.NamedPipeServerStream> representa o cliente ao abrir o arquivo, o cliente pode solicitar apenas arquivos que ele tem permissões suficientes para abrir.  
+  
+ [!code-cpp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma conexão de pipe foi criada ainda.  
+  
+ -ou-  
+  
+ O pipe conectado já foi desconectado.  
+  
+ -ou-  
+  
+ O identificador de pipe não foi definido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+        <exception cref="T:System.IO.IOException">A conexão de pipe foi interrompida.  
+  
+ -ou-  
+  
+ O nome de usuário do cliente tem mais de 19 caracteres.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermissionFlag">a capacidade de manipular o objeto principal. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAllowedServerInstances">
+      <MemberSignature Language="C#" Value="public const int MaxAllowedServerInstances = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxAllowedServerInstances = (-1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Representa o número máximo de instâncias do servidor que os recursos do sistema permitem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IO.Pipes.NamedPipeServerStream.MaxAllowedServerInstances> durante a criação de um <xref:System.IO.Pipes.NamedPipeServerStream> objeto para definir o número máximo de instâncias de servidor que permitem que os recursos do sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsClient">
+      <MemberSignature Language="C#" Value="public void RunAsClient (System.IO.Pipes.PipeStreamImpersonationWorker impersonationWorker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RunAsClient(class System.IO.Pipes.PipeStreamImpersonationWorker impersonationWorker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.RunAsClient(System.IO.Pipes.PipeStreamImpersonationWorker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="impersonationWorker" Type="System.IO.Pipes.PipeStreamImpersonationWorker" />
+      </Parameters>
+      <Docs>
+        <param name="impersonationWorker">O delegado que especifica um método a ser chamado.</param>
+        <summary>Chama um delegado ao representar o cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permissões de conexão do cliente são aplicadas ao servidor remoto. Por exemplo, se a conexão cliente tenta solicitar o conteúdo de um arquivo no servidor, o cliente pode solicitar apenas os arquivos que ela tenha permissões suficientes para abrir.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um método para criar um servidor de pipe pode responder a várias solicitações simultâneas de cliente e um método de representação do cliente. Este exemplo cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto em um processo pai, que cria vários threads que aguardam <xref:System.IO.Pipes.NamedPipeClientStream> objetos para se conectar. Depois que um cliente estiver conectado, ele fornece um nome de arquivo para o servidor e o conteúdo do arquivo é lidas e enviado de volta para o cliente. Porque o <xref:System.IO.Pipes.NamedPipeServerStream> representa o cliente ao abrir o arquivo, o cliente pode solicitar apenas arquivos que ele tem permissões suficientes para abrir.  
+  
+ [!code-cpp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma conexão de pipe foi criada ainda.  
+  
+ -ou-  
+  
+ O pipe conectado já foi desconectado.  
+  
+ -ou-  
+  
+ O identificador de pipe não foi definido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+        <exception cref="T:System.IO.IOException">A conexão de pipe foi interrompida.  
+  
+ - ou -  
+  
+ Ocorreu um erro de E/S.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermissionFlag">a capacidade de manipular o objeto principal. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForConnection">
+      <MemberSignature Language="C#" Value="public void WaitForConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WaitForConnection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.WaitForConnection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Espera até que um cliente se conecte a este objeto <see cref="T:System.IO.Pipes.NamedPipeServerStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar este método faz com que o <xref:System.IO.Pipes.NamedPipeServerStream> objeto para bloquear até que um cliente se conecta.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um método para enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes nomeados. Este exemplo cria um <xref:System.IO.Pipes.NamedPipeServerStream> objeto em um processo pai. Esse objeto tem uma <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>, que bloqueia até um <xref:System.IO.Pipes.NamedPipeClientStream> objeto estabelece uma conexão para o <xref:System.IO.Pipes.NamedPipeServerStream> objeto. Este exemplo é parte de um exemplo maior fornecido para o <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream> classes.  
+  
+ [!code-csharp[System.IO.Pipes.NamedPipeServerStream_Sample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_Sample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.NamedPipeServerStream_Sample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_Sample1/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Já foi estabelecida uma conexão de pipe.  
+  
+ -ou-  
+  
+ O identificador de pipe não foi definido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+        <exception cref="T:System.IO.IOException">A conexão de pipe foi interrompida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForConnectionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitForConnectionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitForConnectionAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.WaitForConnectionAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aguarda de forma assíncrona até que um cliente se conecte a este objeto <see cref="T:System.IO.Pipes.NamedPipeServerStream" />.</summary>
+        <returns>Uma tarefa que representa a operação de espera assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque é assíncrona, esse método retorna imediatamente, mas o processo de conexão é concluído quando o cliente chama <xref:System.IO.Pipes.NamedPipeClientStream.Connect%2A> ou <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForConnectionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitForConnectionAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitForConnectionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.NamedPipeServerStream.WaitForConnectionAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento.</param>
+        <summary>Espera de maneira assíncrona que um cliente conecte-se a este objeto <see cref="T:System.IO.Pipes.NamedPipeServerStream" /> e monitora solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de espera assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque é assíncrona, esse método retorna imediatamente, mas o processo de conexão é concluído quando o cliente chama <xref:System.IO.Pipes.NamedPipeClientStream.Connect%2A> ou <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>.  
+  
+ Solicitações de cancelamento usar o token de cancelamento só funcionará se o <xref:System.IO.Pipes.NamedPipeServerStream> objeto foi criado com um valor de opção de pipe de <xref:System.IO.Pipes.PipeOptions?displayProperty=nameWithType> ou se o cancelamento ocorre antes do <xref:System.IO.Pipes.NamedPipeServerStream.WaitForConnectionAsync%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

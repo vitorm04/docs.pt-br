@@ -1,0 +1,279 @@
+<Type Name="TrustManagerContext" FullName="System.Security.Policy.TrustManagerContext">
+  <TypeSignature Language="C#" Value="public class TrustManagerContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrustManagerContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.TrustManagerContext" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o contexto para o Gerenciador de confiança a considerar ao tomar a decisão de executar um aplicativo e ao configurar a segurança em um novo <see cref="T:System.AppDomain" /> no qual executar um aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Security.Policy.TrustManagerContext> de classe, consulte o <xref:System.Security.Policy.TrustManagerContext.%23ctor> construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustManagerContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.TrustManagerContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.TrustManagerContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma nova instância do <xref:System.Security.Policy.TrustManagerContext> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Security.Policy.TrustManagerContext.IgnorePersistedDecision%2A>|`false`|  
+|<xref:System.Security.Policy.TrustManagerContext.KeepAlive%2A>|`false`|  
+|<xref:System.Security.Policy.TrustManagerContext.NoPrompt%2A>|`false`|  
+|<xref:System.Security.Policy.TrustManagerContext.Persist%2A>|`true`|  
+|<xref:System.Security.Policy.TrustManagerContext.PreviousApplicationIdentity%2A>|`null`|  
+|<xref:System.Security.Policy.TrustManagerContext.UIContext%2A>|<xref:System.Security.Policy.TrustManagerUIContext.Run>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustManagerContext (System.Security.Policy.TrustManagerUIContext uiContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Policy.TrustManagerUIContext uiContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.TrustManagerContext.#ctor(System.Security.Policy.TrustManagerUIContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uiContext" Type="System.Security.Policy.TrustManagerUIContext" />
+      </Parameters>
+      <Docs>
+        <param name="uiContext">Uma da <see cref="T:System.Security.Policy.TrustManagerUIContext" /> valores que especifica o tipo de interface de usuário de Gerenciador de confiança para usar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.TrustManagerContext" /> usando o objeto <see cref="T:System.Security.Policy.TrustManagerUIContext" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa as propriedades com as mesmas configurações que o construtor padrão, com exceção do <xref:System.Security.Policy.TrustManagerContext.UIContext%2A> propriedade, que é definida como o valor que é transmitido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnorePersistedDecision">
+      <MemberSignature Language="C#" Value="public virtual bool IgnorePersistedDecision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnorePersistedDecision" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.TrustManagerContext.IgnorePersistedDecision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o Gerenciador de segurança do aplicativo deve ignorar qualquer decisões persistentes e chamar a relação de confiança manager.</summary>
+        <value>
+          <see langword="true" />para chamar a relação de confiança Gerenciador. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `true`, o <xref:System.Security.Policy.ApplicationSecurityManager> ignora decisões persistentes para o aplicativo e chama o Gerenciador de relação de confiança. Se `false`, o <xref:System.Security.Policy.ApplicationSecurityManager> usa o cache de decisões, se disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAlive">
+      <MemberSignature Language="C#" Value="public virtual bool KeepAlive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepAlive" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.TrustManagerContext.KeepAlive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o Gerenciador de confiança deve armazenar em cache de estado para esse aplicativo, para facilitar as solicitações futuras para determinar a confiança do aplicativo.</summary>
+        <value>
+          <see langword="true" />para dados de estado do cache; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este sinalizador é definido como `true` se o host pode chamar a relação de confiança manager diversas vezes para decisões de confiança para este aplicativo. Se `true`, o Gerenciador de confiança deve armazenar em cache qualquer estado que pode melhorar a velocidade de chamadas futuras para o <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A> método. Essa propriedade é definida como `false` se o host não espera chamar a relação de confiança manager novamente atual <xref:System.AppDomain>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoPrompt">
+      <MemberSignature Language="C#" Value="public virtual bool NoPrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoPrompt" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.TrustManagerContext.NoPrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o Gerenciador de confiança deve solicitar ao usuário para decisões de confiança.</summary>
+        <value>
+          <see langword="true" />Não solicitar ao usuário; <see langword="false" /> para solicitar ao usuário. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `false`, o Gerenciador de confiança determina a caixa de diálogo de usuário apropriado para obter uma decisão de confiança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="public virtual bool Persist { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Persist" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.TrustManagerContext.Persist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a resposta do usuário para a caixa de diálogo de consentimento deve ser persistente.</summary>
+        <value>
+          <see langword="true" />para dados de estado do cache; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é `true` se a resposta do usuário para a caixa de diálogo de consentimento deve ser persistida para evitar mais avisar o usuário com cada nova solicitação de ativação. Esta propriedade é `false` se a resposta do usuário não deve ser persistente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousApplicationIdentity">
+      <MemberSignature Language="C#" Value="public virtual ApplicationIdentity PreviousApplicationIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ApplicationIdentity PreviousApplicationIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.TrustManagerContext.PreviousApplicationIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade da identidade do aplicativo anterior.</summary>
+        <value>Um <see cref="T:System.ApplicationIdentity" /> objeto que representa o anterior <see cref="T:System.ApplicationIdentity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UIContext">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Policy.TrustManagerUIContext UIContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Policy.TrustManagerUIContext UIContext" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.TrustManagerContext.UIContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.TrustManagerUIContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de interface do usuário que deve exibir o Gerenciador de confiança.</summary>
+        <value>Um dos valores de <see cref="T:System.Security.Policy.TrustManagerUIContext" />. O padrão é <see cref="F:System.Security.Policy.TrustManagerUIContext.Run" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.TrustManagerContext.UIContext%2A> propriedade destina-se para recomendar a interface do usuário deve fornecer o Gerenciador de confiança para a decisão de confiança. Um Gerenciador de confiança pode optar por usar uma interface diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

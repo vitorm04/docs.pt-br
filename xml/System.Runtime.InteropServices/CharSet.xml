@@ -1,0 +1,160 @@
+<Type Name="CharSet" FullName="System.Runtime.InteropServices.CharSet">
+  <TypeSignature Language="C#" Value="public enum CharSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CharSet extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.CharSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Impõe qual conjunto de caracteres as cadeias de caracteres com marshaling devem usar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque há vários tipos de cadeia de caracteres não gerenciado e somente um gerenciado tipo cadeia de caracteres, você deve usar um conjunto para especificar como gerenciadas cadeias de caracteres devem passar por marshaling para código não gerenciado. Esta enumeração, que fornece opções de conjunto de caracteres, é usada por <xref:System.Runtime.InteropServices.DllImportAttribute> e <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Para obter uma descrição detalhada do comportamento associado a esta enumeração de correspondência de nomes e empacotamento de cadeia de caracteres, consulte [especificando um conjunto de caracteres](~/docs/framework/interop/specifying-a-character-set.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como especificar um <xref:System.Runtime.InteropServices.CharSet> valor de enumeração ao aplicar o <xref:System.Runtime.InteropServices.StructLayoutAttribute> para a definição gerenciada.  
+  
+ [!code-cpp[System.Runtime.InteropServices.CharSet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.charset/cpp/source.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.CharSet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.charset/cs/source.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.CharSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.charset/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ansi">
+      <MemberSignature Language="C#" Value="Ansi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CharSet Ansi = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CharSet.Ansi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Realizar marshaling de cadeias de caracteres como cadeias de caracteres de vários bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CharSet Auto = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CharSet.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Realizar marshaling automático de cadeias de caracteres apropriado para o sistema operacional de destino. O padrão é <see cref="F:System.Runtime.InteropServices.CharSet.Unicode" /> no Windows NT, Windows 2000, Windows XP e a família Windows Server 2003; o padrão é <see cref="F:System.Runtime.InteropServices.CharSet.Ansi" /> no Windows 98 e Windows Me. Embora o padrão de tempo de execução de linguagem comum é <see cref="F:System.Runtime.InteropServices.CharSet.Auto" />, linguagens podem substituir esse padrão. Por exemplo, por padrão C# marca todos os métodos e tipos como <see cref="F:System.Runtime.InteropServices.CharSet.Ansi" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CharSet None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CharSet.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor é obsoleto e tem o mesmo comportamento que <see cref="F:System.Runtime.InteropServices.CharSet.Ansi" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unicode">
+      <MemberSignature Language="C#" Value="Unicode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CharSet Unicode = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CharSet.Unicode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Realizar marshaling de cadeias de caracteres como cadeias de caracteres Unicode de 2 bytes.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

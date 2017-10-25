@@ -1,0 +1,321 @@
+<Type Name="KeyedHashAlgorithm" FullName="System.Security.Cryptography.KeyedHashAlgorithm">
+  <TypeSignature Language="C#" Value="public abstract class KeyedHashAlgorithm : System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit KeyedHashAlgorithm extends System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.KeyedHashAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata da qual todas as implementações de algoritmo de hash inseridas devem derivar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hash funções mapa binárias cadeias de caracteres de um comprimento arbitrário que cadeias pequenas de binários de comprimento fixo. Uma função de hash criptográfico tem a propriedade que é impraticável para encontrar duas entradas distintas que usam o hash para o mesmo valor. Pequenas alterações aos dados resultar em grandes, imprevisíveis alterações no hash.  
+  
+ Um algoritmo de hash com chave é uma função de hash unidirecional dependente de chave usada como um código de autenticação de mensagem. Somente alguém que conheça a chave pode verificar o hash. Algoritmos de hash com chave fornecem autenticidade sem confidencialidade.  
+  
+ Funções de hash são usadas com assinaturas digitais e integridade dos dados. O <xref:System.Security.Cryptography.HMACSHA1> classe é um exemplo de um algoritmo de hash com chave.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar o <xref:System.Security.Cryptography.KeyedHashAlgorithm> classe.  
+  
+ [!code-csharp[KeyedHashAlgorithm#1](~/samples/snippets/csharp/VS_Snippets_CLR/keyedhashalgorithm/cs/program.cs#1)]
+ [!code-vb[KeyedHashAlgorithm#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/keyedhashalgorithm/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected KeyedHashAlgorithm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.KeyedHashAlgorithm.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo cria uma nova instância de uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.KeyedHashAlgorithm Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.KeyedHashAlgorithm Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.KeyedHashAlgorithm.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeyedHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância da implementação do padrão de um algoritmo de hash com chave.</summary>
+        <returns>Um novo <see cref="T:System.Security.Cryptography.HMACSHA1" /> instância, a menos que as configurações padrão foram alteradas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, essa sobrecarga usa o <xref:System.Security.Cryptography.HMACSHA1> implementação de um algoritmo de hash com chave. Se você deseja especificar uma implementação diferente, use o <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create%28System.String%29> sobrecarga, que permite que você especifique um nome de algoritmo, em vez disso. O sistema de configuração de criptografia define a implementação padrão da <xref:System.Security.Cryptography.KeyedHashAlgorithm> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.KeyedHashAlgorithm Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.KeyedHashAlgorithm Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.KeyedHashAlgorithm.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeyedHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">A implementação do algoritmo de hash com chave para usar. A tabela a seguir mostra os valores válidos para o <c>algName</c> parâmetro e os algoritmos que são mapeados para.  
+  
+ <list type="table"><listheader><term>Valor do parâmetro  
+  
+ </term><description>Implementa  
+  
+ </description></listheader><item><term>System.Security.Cryptography.HMAC  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.KeyedHashAlgorithm  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACMD5  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>System.Security.Cryptography.HMACMD5  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>HMACRIPEMD160  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>System.Security.Cryptography.HMACRIPEMD160  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>HMACSHA1  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.HMACSHA1  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACSHA256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>System.Security.Cryptography.HMACSHA256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>HMACSHA384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>System.Security.Cryptography.HMACSHA384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>HMACSHA512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>System.Security.Cryptography.HMACSHA512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>MACTripleDES  
+  
+ </term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item><item><term>System.Security.Cryptography.MACTripleDES  
+  
+ </term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item></list></param>
+        <summary>Cria uma instância da implementação de um algoritmo de hash com chave especificada.</summary>
+        <returns>Uma nova instância do algoritmo de hash com chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte a vários algoritmos, incluindo MD5, SHA-1, SHA-256 e RIPEMD160. Para obter uma lista completa, consulte os valores com suporte para o `algName` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.KeyedHashAlgorithm.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método `Finalize`. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. `Finalize` invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Security.Cryptography.KeyedHashAlgorithm> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não para referenciar objetos que foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public virtual byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.KeyedHashAlgorithm.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a chave a ser usada no algoritmo de hash.</summary>
+        <value>A chave a ser usada no algoritmo de hash.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é o acessador público para o <xref:System.Security.Cryptography.KeyedHashAlgorithm.KeyValue> campo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Security.Cryptography.KeyedHashAlgorithm.Key%2A> propriedade para recuperar a chave usada no atual <xref:System.Security.Cryptography.KeyedHashAlgorithm> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.KeyedHashAlgorithm> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.KeyedHashAlgorithm#22](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.KeyedHashAlgorithm/CPP/contosokeyedhash.cpp#22)]
+ [!code-csharp[System.Security.Cryptography.KeyedHashAlgorithm#22](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.KeyedHashAlgorithm/CS/contosokeyedhash.cs#22)]
+ [!code-vb[System.Security.Cryptography.KeyedHashAlgorithm#22](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.KeyedHashAlgorithm/VB/contosokeyedhash.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Foi feita uma tentativa para alterar o <see cref="P:System.Security.Cryptography.KeyedHashAlgorithm.Key" /> propriedade depois de hash foi iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyValue">
+      <MemberSignature Language="C#" Value="protected byte[] KeyValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8[] KeyValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.KeyedHashAlgorithm.KeyValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A chave a ser usada no algoritmo de hash.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.KeyedHashAlgorithm.Key%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

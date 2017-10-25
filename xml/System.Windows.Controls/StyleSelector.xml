@@ -1,0 +1,108 @@
+<Type Name="StyleSelector" FullName="System.Windows.Controls.StyleSelector">
+  <TypeSignature Language="C#" Value="public class StyleSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StyleSelector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.StyleSelector" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de aplicar estilos baseados em lógica personalizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um <xref:System.Windows.Controls.StyleSelector> que aplica um estilo com base em lógica personalizada, crie uma subclasse do <xref:System.Windows.Controls.StyleSelector> classe e implementar o <xref:System.Windows.Controls.StyleSelector.SelectStyle%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.StyleSelector> que define um <xref:System.Windows.Style> para uma linha. Este exemplo define o <xref:System.Windows.Controls.Control.Background%2A> cor de acordo com o índice de linha.  
+  
+ [!code-csharp[ListViewSnips#ItemStyleSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewSnips/CSharp/Window1.xaml.cs#itemstyleselector)]
+ [!code-vb[ListViewSnips#ItemStyleSelector](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewSnips/visualbasic/window1.xaml.vb#itemstyleselector)]  
+  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.ResourceKey> para o <xref:System.Windows.Controls.StyleSelector>. O `namespc` prefixo é mapeado para um [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] namespace e o assembly correspondente onde o <xref:System.Windows.Controls.StyleSelector> está definido. Para obter mais informações, consulte [Namespaces XAML e o mapeamento de Namespace para WPF XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+ [!code-xaml[ListViewSnips#myStyleSelectorKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewSnips/CSharp/Window1.xaml#mystyleselectorkey)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> propriedade de um <xref:System.Windows.Controls.ListView> a este <xref:System.Windows.Controls.StyleSelector> recursos.  
+  
+ [!code-xaml[ListViewSnips#StyleSelectorXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewSnips/CSharp/Window1.xaml#styleselectorxaml)]  
+  
+ Para obter um exemplo de como criar um seletor para escolher um recurso de estilo definido, consulte a implementação de <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A?displayProperty=nameWithType>, que permite que você use a lógica personalizada para selecionar um <xref:System.Windows.DataTemplate>, com base em um conceito semelhante.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StyleSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.StyleSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Windows.Controls.StyleSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Style SelectStyle (object item, System.Windows.DependencyObject container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Style SelectStyle(object item, class System.Windows.DependencyObject container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.StyleSelector.SelectStyle(System.Object,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">O conteúdo.</param>
+        <param name="container">O elemento ao qual o estilo será aplicado.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um <see cref="T:System.Windows.Style" /> com base em lógica personalizada.</summary>
+        <returns>Retorna um estilo específico do aplicativo a ser aplicado; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um <xref:System.Windows.Controls.StyleSelector> que aplica um estilo com base em lógica personalizada, crie uma subclasse do <xref:System.Windows.Controls.StyleSelector> classe e implementar o <xref:System.Windows.Controls.StyleSelector.SelectStyle%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.StyleSelector> que define um <xref:System.Windows.Style> para uma linha. Este exemplo define o <xref:System.Windows.Controls.Control.Background%2A> cor de acordo com o índice de linha.  
+  
+ [!code-csharp[ListViewSnips#ItemStyleSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewSnips/CSharp/Window1.xaml.cs#itemstyleselector)]
+ [!code-vb[ListViewSnips#ItemStyleSelector](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewSnips/visualbasic/window1.xaml.vb#itemstyleselector)]  
+  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.ResourceKey> para o <xref:System.Windows.Controls.StyleSelector>. O `namespc` prefixo é mapeado para um [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] namespace e o assembly correspondente onde o <xref:System.Windows.Controls.StyleSelector> está definido. Para obter mais informações, consulte [Namespaces XAML e o mapeamento de Namespace para WPF XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+ [!code-xaml[ListViewSnips#myStyleSelectorKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewSnips/CSharp/Window1.xaml#mystyleselectorkey)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> propriedade de um <xref:System.Windows.Controls.ListView> a este <xref:System.Windows.Controls.StyleSelector> recursos.  
+  
+ [!code-xaml[ListViewSnips#StyleSelectorXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewSnips/CSharp/Window1.xaml#styleselectorxaml)]  
+  
+ Para obter um exemplo de como criar um seletor para escolher um recurso de estilo definido, consulte a implementação de <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A?displayProperty=nameWithType>, que permite que você use a lógica personalizada para selecionar um <xref:System.Windows.DataTemplate>, com base em um conceito semelhante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

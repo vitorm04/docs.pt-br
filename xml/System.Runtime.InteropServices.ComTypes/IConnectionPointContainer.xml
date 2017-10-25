@@ -1,0 +1,133 @@
+<Type Name="IConnectionPointContainer" FullName="System.Runtime.InteropServices.ComTypes.IConnectionPointContainer">
+  <TypeSignature Language="C#" Value="public interface IConnectionPointContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConnectionPointContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("B196B284-BAB4-101A-B69C-00AA00341D07")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a definição gerenciada da interface <see langword="IConnectionPointContainer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IConnectionPointContainer` na biblioteca MSDN.  
+  
+ O common language runtime lança uma exceção quando um método COM em código nativo retorna um HRESULT. Para obter mais informações, consulte [como: mapear HRESULTs e exceções](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnumConnectionPoints">
+      <MemberSignature Language="C#" Value="public void EnumConnectionPoints (out System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints ppEnum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnumConnectionPoints([out] class System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints&amp; ppEnum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints(System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppEnum" Type="System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppEnum">Quando este método retorna, contém o ponteiro de interface do enumerador. Este parâmetro é passado não inicializado.</param>
+        <summary>Cria um enumerador de todos os pontos de conexão com suporte no objeto conectável, ponto de uma conexão por IID.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IConnectionPointContainer::EnumConnectionPoints` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindConnectionPoint">
+      <MemberSignature Language="C#" Value="public void FindConnectionPoint (ref Guid riid, out System.Runtime.InteropServices.ComTypes.IConnectionPoint ppCP);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FindConnectionPoint([in]valuetype System.Guid&amp; riid, [out] class System.Runtime.InteropServices.ComTypes.IConnectionPoint&amp; ppCP) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.FindConnectionPoint(System.Guid@,System.Runtime.InteropServices.ComTypes.IConnectionPoint@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppCP" Type="System.Runtime.InteropServices.ComTypes.IConnectionPoint&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Uma referência para a interface de saída IID cujo ponto de conexão está sendo solicitado.</param>
+        <param name="ppCP">Quando este método retorna, contém o ponto de conexão que gerencia a interface de saída <c>riid</c>. Este parâmetro é passado não inicializado.</param>
+        <summary>Solicita que o objeto conectável se ele tiver um ponto de conexão para um IID específico e, nesse caso, retorna o <see langword="IConnectionPoint" /> ponteiro de interface para esse ponto de conexão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IConnectionPointContainer::FindConnectionPoint` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

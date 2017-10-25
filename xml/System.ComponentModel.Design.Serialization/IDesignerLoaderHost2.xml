@@ -1,0 +1,109 @@
+<Type Name="IDesignerLoaderHost2" FullName="System.ComponentModel.Design.Serialization.IDesignerLoaderHost2">
+  <TypeSignature Language="C#" Value="public interface IDesignerLoaderHost2 : IServiceProvider, System.ComponentModel.Design.Serialization.IDesignerLoaderHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerLoaderHost2 implements class System.ComponentModel.Design.IDesignerHost, class System.ComponentModel.Design.IServiceContainer, class System.ComponentModel.Design.Serialization.IDesignerLoaderHost, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.Serialization.IDesignerLoaderHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma interface que estenda <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> para especificar se tolerado erros ao carregar um documento de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2> interface para especificar se o carregador de designer pode continuar a carregar quando ocorrerem erros durante a desserialização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanReloadWithErrors">
+      <MemberSignature Language="C#" Value="public bool CanReloadWithErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReloadWithErrors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.CanReloadWithErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é possível recarregar com erros.</summary>
+        <value>
+          <see langword="true" />Se o carregador de designer pode recarregar o documento de design quando forem detectados erros; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em alguns cenários, erros de carregamento não podem ser ignorado. A implementação do carregador de designer deve retornar `false` quando esse for o caso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreErrorsDuringReload">
+      <MemberSignature Language="C#" Value="public bool IgnoreErrorsDuringReload { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreErrorsDuringReload" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.IgnoreErrorsDuringReload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os erros devem ser ignorados quando <see cref="M:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.Reload" /> é chamado.</summary>
+        <value>
+          <see langword="true" />Se o carregador de designer irá ignorar erros quando ele é recarregado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.IgnoreErrorsDuringReload%2A> propriedade só pode ser definida como `true` se <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.CanReloadWithErrors%2A> é `true`. Se <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.CanReloadWithErrors%2A> é `false`, o valor de <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.IgnoreErrorsDuringReload%2A> será ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

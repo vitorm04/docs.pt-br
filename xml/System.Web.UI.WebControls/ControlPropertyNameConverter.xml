@@ -1,0 +1,152 @@
+<Type Name="ControlPropertyNameConverter" FullName="System.Web.UI.WebControls.ControlPropertyNameConverter">
+  <TypeSignature Language="C#" Value="public class ControlPropertyNameConverter : System.ComponentModel.StringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlPropertyNameConverter extends System.ComponentModel.StringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ControlPropertyNameConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.StringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo que recupera uma lista de nomes de propriedade para o controle atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlPropertyNameConverter> classe deriva de <xref:System.ComponentModel.StringConverter> classe e fornece uma lista de nomes de propriedade para exibição em um controle de grade de propriedade em ambientes de tempo de design.  
+  
+> [!CAUTION]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando a <xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType> classe. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlPropertyNameConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlPropertyNameConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ControlPropertyNameConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser chamado diretamente. Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando a <xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType> classe. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato que pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de nomes de propriedade para o controle em um designer que implementa <see cref="T:System.ComponentModel.Design.IDesignerHost" /> quando fornecido com um contexto de formato.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto de cadeias de caracteres que representa os nomes de propriedade para o controle atual. Se o controle atual for <see langword="null" />, uma coleção vazia será retornada. Se o <paramref name="context" /> parâmetro é <see langword="null" />, <see langword="null" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValues%2A> método retorna um <xref:System.ComponentModel.TypeConverter.StandardValuesCollection> coleção que contém um conjunto de cadeias de caracteres que representa os nomes das propriedades do controle atual.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente de tempo de design do qual este conversor é invocado. Esse parâmetro pode ser `null`, e podem retornar propriedades no objeto de contexto `null`. Se o `context` parâmetro é `null`, esse método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato que pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se a coleção de valores padrão retornada pelo <see cref="Overload:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValues" /> método é uma lista exclusiva de valores possíveis, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="false" />em todos os casos, que indica que a lista não é exclusiva.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValuesExclusive%2A> método sempre retorna `false` para indicar que a lista de valores de propriedade retornados pelo <xref:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValues%2A> método não é uma lista exclusiva de valores possíveis.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, e podem retornar propriedades no objeto de contexto `null`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato que pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se esse objeto oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="context" /> parâmetro não é <see langword="null" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlPropertyNameConverter.GetStandardValuesSupported%2A> método retorna um valor que indica se esse objeto oferece suporte a um conjunto de valores padrão.  
+  
+ O `context` parâmetro extrai informações adicionais sobre o ambiente de tempo de design do qual este conversor é invocado. Esse parâmetro pode ser `null`, e podem retornar propriedades no objeto de contexto `null`. Se o `context` parâmetro é `null`, esse método retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

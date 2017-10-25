@@ -1,0 +1,117 @@
+<Type Name="SwitchLevelAttribute" FullName="System.Diagnostics.SwitchLevelAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SwitchLevelAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SwitchLevelAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SwitchLevelAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o tipo de nível para um comutador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo destina-se a ser aplicado a todas as classes que herdam o <xref:System.Diagnostics.Switch> classe. A finalidade do atributo é identificar o tipo que especifica os critérios de comutador do comutador. Cada comutador determina se um rastreamento deve ser gravado, com base em se um tipo de evento corresponde ou excede o valor da <xref:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType%2A> propriedade para o comutador. O tipo usado para o <xref:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType%2A> propriedade varia para diferentes comutadores. Por exemplo, o tipo nível do comutador para o <xref:System.Diagnostics.BooleanSwitch> classe é <xref:System.Boolean>e o tipo de nível de comutador para o <xref:System.Diagnostics.TraceSwitch> classe é <xref:System.Diagnostics.TraceLevel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SwitchLevelAttribute (Type switchLevelType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type switchLevelType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SwitchLevelAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="switchLevelType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="switchLevelType">O <see cref="T:System.Type" /> que determina se um rastreamento deve ser gravado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.SwitchLevelAttribute" /> classe, especificando o tipo que determina se um rastreamento deve ser gravado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `switchLevelType` parâmetro identifica o tipo que é usado pelo switch para determinar se um rastreamento deve ser gravado; por exemplo, o tipo do <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade o <xref:System.Diagnostics.TraceSwitch> classe é <xref:System.Diagnostics.TraceLevel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchLevelType">
+      <MemberSignature Language="C#" Value="public Type SwitchLevelType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SwitchLevelType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo que determina se um rastreamento deve ser gravado.</summary>
+        <value>O <see cref="T:System.Type" /> que determina se um rastreamento deve ser gravado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade de nível de um switch não é necessariamente chamada `Level`; por exemplo, a propriedade de nível do <xref:System.Diagnostics.BooleanSwitch> classe é <xref:System.Diagnostics.BooleanSwitch.Enabled%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor da <xref:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType%2A> propriedade para o <xref:System.Diagnostics.BooleanSwitch>.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#13)]
+ [!code-vb[System.Diagnostics.TraceSource#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Operação falhou porque o valor é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

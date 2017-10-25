@@ -1,0 +1,189 @@
+<Type Name="SourceChangedEventArgs" FullName="System.Windows.SourceChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class SourceChangedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SourceChangedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.SourceChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento SourceChanged, usado para a interoperação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento SourceChanged é um evento roteado em que o identificador de evento não é publicamente exposto. Isso ocorre porque esse evento desempenha um papel potencialmente crítico no interoperação e não deve ter permissão para ser gerado arbitrariamente por qualquer outra fonte que a implementação interna de um conhecido <xref:System.Windows.PresentationSource> subclasse (atualmente, somente essa classe é <xref:System.Windows.Interop.HwndSource>). Ao implementar uma solução de interoperabilidade, você pode anexar ou remover os manipuladores de evento (chamando <xref:System.Windows.PresentationSource.AddSourceChangedHandler%2A> e <xref:System.Windows.PresentationSource.RemoveSourceChangedHandler%2A>, respectivamente), mas não é possível executar outras operações normalmente disponíveis para eventos roteados como classe tratamento, adicionando proprietários ou gera o evento de uma fonte do elemento arbitrário.  
+  
+ Esta classe substitui o <xref:System.Windows.RoutedEventArgs> método virtual <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A?displayProperty=nameWithType>, para retornar um manipulador de tipo específico quando solicitado pelo sistema de eventos. Isso <xref:System.Windows.SourceChangedEventArgs> substituição não aparecem na tabela de membros de classe neste [!INCLUDE[TLA2#tla_sdk](~/includes/tla2sharptla-sdk-md.md)] documentação porque ele é um membro protegido implementado por uma classe sealed.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SourceChangedEventArgs (System.Windows.PresentationSource oldSource, System.Windows.PresentationSource newSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.PresentationSource oldSource, class System.Windows.PresentationSource newSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SourceChangedEventArgs.#ctor(System.Windows.PresentationSource,System.Windows.PresentationSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="oldSource" Type="System.Windows.PresentationSource" />
+        <Parameter Name="newSource" Type="System.Windows.PresentationSource" />
+      </Parameters>
+      <Docs>
+        <param name="oldSource">O antigo <see cref="T:System.Windows.PresentationSource" /> que este manipulador está sendo notificado sobre.</param>
+        <param name="newSource">O novo <see cref="T:System.Windows.PresentationSource" /> que este manipulador está sendo notificado sobre.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.SourceChangedEventArgs" /> de classe, usando as informações fornecidas para as fontes de novas e antigas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SourceChangedEventArgs (System.Windows.PresentationSource oldSource, System.Windows.PresentationSource newSource, System.Windows.IInputElement element, System.Windows.IInputElement oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.PresentationSource oldSource, class System.Windows.PresentationSource newSource, class System.Windows.IInputElement element, class System.Windows.IInputElement oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SourceChangedEventArgs.#ctor(System.Windows.PresentationSource,System.Windows.PresentationSource,System.Windows.IInputElement,System.Windows.IInputElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="oldSource" Type="System.Windows.PresentationSource" />
+        <Parameter Name="newSource" Type="System.Windows.PresentationSource" />
+        <Parameter Name="element" Type="System.Windows.IInputElement" />
+        <Parameter Name="oldParent" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="oldSource">O antigo <see cref="T:System.Windows.PresentationSource" /> que este manipulador está sendo notificado sobre.</param>
+        <param name="newSource">O novo <see cref="T:System.Windows.PresentationSource" /> que este manipulador está sendo notificado sobre.</param>
+        <param name="element">O elemento cujo pai alterada, fazendo com que a fonte alterar.</param>
+        <param name="oldParent">O antigo pai do elemento cujo pai alterada, fazendo com que a fonte alterar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.SourceChangedEventArgs" /> de classe, usando as informações fornecidas para as fontes de novas e antigas, o elemento que esta alteração efeitos e anterior relatado pai do elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement Element { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement Element" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SourceChangedEventArgs.Element" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento cuja alteração pai fazendo com que as informações de fonte de apresentação alterar.</summary>
+        <value>O elemento que está relatando a alteração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SourceChangedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSource">
+      <MemberSignature Language="C#" Value="public System.Windows.PresentationSource NewSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PresentationSource NewSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SourceChangedEventArgs.NewSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a nova fonte envolvidos nessa alteração de origem.</summary>
+        <value>O novo <see cref="T:System.Windows.PresentationSource" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para obter esse valor. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OldParent">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement OldParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement OldParent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SourceChangedEventArgs.OldParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai anterior do elemento cuja alteração pai fazendo com que as informações de fonte de apresentação alterar.</summary>
+        <value>A origem do elemento pai anterior.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldSource">
+      <MemberSignature Language="C#" Value="public System.Windows.PresentationSource OldSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PresentationSource OldSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SourceChangedEventArgs.OldSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fonte antiga envolvidos nessa alteração de origem.</summary>
+        <value>O antigo <see cref="T:System.Windows.PresentationSource" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para obter esse valor. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

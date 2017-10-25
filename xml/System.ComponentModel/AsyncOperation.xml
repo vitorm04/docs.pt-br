@@ -1,0 +1,325 @@
+<Type Name="AsyncOperation" FullName="System.ComponentModel.AsyncOperation">
+  <TypeSignature Language="C#" Value="public sealed class AsyncOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsyncOperation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AsyncOperation" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Controla o tempo de vida de uma operação assíncrona.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você implementa uma classe de acordo com o [baseado em evento visão geral do padrão assíncrono](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md), talvez seja necessário controlar o tempo de vida de cada operação assíncrona invocado em uma instância de sua classe. O <xref:System.ComponentModel.AsyncOperation> classe fornece maneiras de rastrear e reportar o progresso de uma tarefa assíncrona.  
+  
+ A lista a seguir identifica maneiras de usar um <xref:System.ComponentModel.AsyncOperation> objeto:  
+  
+-   Para relatar o andamento e os resultados intermediários para o cliente, chame <xref:System.ComponentModel.AsyncOperation.Post%2A> do seu código de trabalho assíncrono.  
+  
+-   Para indicar que uma tarefa assíncrona foi concluída, ou cancelar uma tarefa assíncrona pendente, chame <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>.  
+  
+ A classe deve obter um <xref:System.ComponentModel.AsyncOperation> objeto para cada tarefa assíncrona chamando <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A?displayProperty=nameWithType> quando cada tarefa é iniciada. Para permitir que o cliente distinguir tarefas assíncronas separadas, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A?displayProperty=nameWithType> usa um parâmetro para um único token fornecidas pelo cliente, que se torna o <xref:System.ComponentModel.AsyncOperation.UserSuppliedState%2A> propriedade. Ele, em seguida, pode ser usado pelo código do cliente para identificar a tarefa assíncrona específica que está gerando eventos de progresso ou a conclusão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.ComponentModel.AsyncOperation> objeto para controlar o tempo de vida de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+ Para obter uma listagem de código completo, consulte [como: implementar um componente compatível com o padrão assíncrono baseado em evento](http://msdn.microsoft.com/library/3c1aa4d4-da87-4a03-b812-3d167b8c57cf). Para uma listagem de código completo de um formulário de cliente, consulte [como: implementar um cliente do padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Os implementadores devem garantir o <see cref="M:System.ComponentModel.AsyncOperation.PostOperationCompleted(System.Threading.SendOrPostCallback,System.Object)" /> e <see cref="M:System.ComponentModel.AsyncOperation.Post(System.Threading.SendOrPostCallback,System.Object)" /> invocações são assíncronas, para que os provedores de biblioteca de classe não precisam referem-se com pilha potencial estoura se ele assume o comportamento assíncrono em um aplicativo específico modelo que é síncrona.  
+  
+ Para obter mais informações sobre como implementar classes assíncronas, consulte [Implementando o padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~AsyncOperation ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncOperation.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Finaliza a operação assíncrona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationCompleted">
+      <MemberSignature Language="C#" Value="public void OperationCompleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OperationCompleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncOperation.OperationCompleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Encerra o tempo de vida de uma operação assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> método para encerrar o tempo de vida de uma operação assíncrona. Depois que este método é chamado para uma tarefa específica, chamadas para correspondente <xref:System.ComponentModel.AsyncOperation> gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.ComponentModel.AsyncOperation.OperationCompleted" /> foi chamado anteriormente para essa tarefa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Post">
+      <MemberSignature Language="C#" Value="public void Post (System.Threading.SendOrPostCallback d, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Post(class System.Threading.SendOrPostCallback d, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncOperation.Post(System.Threading.SendOrPostCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Threading.SendOrPostCallback" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="d">Um objeto <see cref="T:System.Threading.SendOrPostCallback" /> que encapsula o delegado a ser chamado quando a operação é encerrada.</param>
+        <param name="arg">Um argumento para o representante contido a <c>d</c> parâmetro.</param>
+        <summary>Invoca um delegado no thread ou contexto apropriado para o modelo de aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.AsyncOperation.Post%2A> método invoca o delegado especificado pelo `arg` parâmetro sem encerrar o tempo de vida da operação assíncrona.  
+  
+ Você pode chamar o <xref:System.ComponentModel.AsyncOperation.Post%2A> com a frequência desejada durante o tempo de vida da operação assíncrona não foi finalizado por uma chamada ao método <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. Você pode usar o método para relatar os resultados intermediários ou andamento para os clientes.  
+  
+ O `d` parâmetro encapsula o representante que você deseja chamado quando você desejar lançar uma atualização sobre o status da tarefa assíncrona. O <xref:System.ComponentModel.AsyncOperation> objeto garantirá que o delegado é invocado no thread ou contexto apropriado para o modelo de aplicativo. O método opcionalmente pode gerar um evento que notifica os clientes de uma alteração de status, a atualização em andamento ou resultados incrementais recentemente disponíveis.  
+  
+ O `arg` parâmetro deve ser usado para passar o estado para o representante encapsulado pelo `d` parâmetro. Ele pode ser uma referência a um <xref:System.ComponentModel.AsyncOperation>, ou pode ser um <xref:System.ComponentModel.ProgressChangedEventArgs?displayProperty=nameWithType> objeto. Pode ser desejável para derivar sua própria classe de <xref:System.ComponentModel.ProgressChangedEventArgs?displayProperty=nameWithType> para fornecer armazenamento de estado adicionais.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.AsyncOperation.Post%2A> método para relatar o progresso e os resultados incrementais de uma operação assíncrona. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="M:System.ComponentModel.AsyncOperation.PostOperationCompleted(System.Threading.SendOrPostCallback,System.Object)" /> foi chamado anteriormente para essa tarefa.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Herdeiros devem fazer o <see cref="M:System.ComponentModel.AsyncOperation.Post(System.Threading.SendOrPostCallback,System.Object)" /> chamada assíncrona, para que os provedores de biblioteca de classe não precisam se preocupar com pilha potencial estoura se assumem assincronia, mas um modelo de aplicativo específico a ser síncronas.  
+  
+ <block subset="none" type="note"><para>  
+ Os aplicativos de console não sincronizam a execução das chamadas de <see cref="M:System.ComponentModel.AsyncOperation.Post(System.Threading.SendOrPostCallback,System.Object)" />. Isso pode fazer com que os eventos <see langword="ProgressChanged" /> sejam gerados fora de ordem. Se quiser que as chamadas <see cref="M:System.ComponentModel.AsyncOperation.Post(System.Threading.SendOrPostCallback,System.Object)" /> sejam executadas em série, implemente e instale uma classe <see cref="T:System.Threading.SynchronizationContext" />.  
+  
+</para></block>  
+  
+ Para obter mais informações sobre como implementar classes assíncronas, consulte [Implementando o padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PostOperationCompleted">
+      <MemberSignature Language="C#" Value="public void PostOperationCompleted (System.Threading.SendOrPostCallback d, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PostOperationCompleted(class System.Threading.SendOrPostCallback d, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncOperation.PostOperationCompleted(System.Threading.SendOrPostCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Threading.SendOrPostCallback" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="d">Um objeto <see cref="T:System.Threading.SendOrPostCallback" /> que encapsula o delegado a ser chamado quando a operação é encerrada.</param>
+        <param name="arg">Um argumento para o representante contido a <c>d</c> parâmetro.</param>
+        <summary>Encerra o tempo de vida de uma operação assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> método para encerrar o tempo de vida de uma operação assíncrona. Depois que este método é chamado para uma tarefa específica, chamadas para correspondente <xref:System.ComponentModel.AsyncOperation> objeto gerará uma exceção.  
+  
+ O `d` parâmetro encapsula o representante que você deseja que a classe para chamar quando o tempo de vida da tarefa termina devido a conclusão, o cancelamento ou a falha da tarefa. O <xref:System.ComponentModel.AsyncOperation> objeto garantirá que o delegado é invocado no thread ou contexto apropriado para o modelo de aplicativo. O delegado opcionalmente pode disparar um evento que notifica os clientes que terminou o tempo de vida da tarefa assíncrona.  
+  
+ O `arg` parâmetro é usado para transmitir informações de estado para o delegado de conclusão `d`. Você pode usar um <xref:System.ComponentModel.AsyncOperation> objeto, ou uma <xref:System.ComponentModel.AsyncCompletedEventArgs?displayProperty=nameWithType> objeto como o valor do parâmetro. Como alternativa, se você quiser fornecer armazenamento de estado adicionais, você pode usar uma instância de uma classe que deriva de <xref:System.ComponentModel.AsyncCompletedEventArgs?displayProperty=nameWithType> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> método para encerrar o tempo de vida de uma operação assíncrona. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.ComponentModel.AsyncOperation.OperationCompleted" /> foi chamado anteriormente para essa tarefa.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Herdeiros devem fazer o <see cref="M:System.ComponentModel.AsyncOperation.PostOperationCompleted(System.Threading.SendOrPostCallback,System.Object)" /> chamada assíncrona, para que os provedores de biblioteca de classe não precisam se preocupar com pilha potencial estoura se assumem assincronia, mas um modelo de aplicativo específico a ser síncronas. O método deve ser interpretado como uma chamada de "terminando o tempo de vida", que significa que a implementação precisa fazer o que for apropriado para o modelo de aplicativo. Por exemplo, ASP.NET será decrementar a contagem de operações assíncronas pendentes. Isso também deve colocar a operação em um estado, de modo que todas as chamadas subsequentes para ela falhará, pois ele agora está concluída.  
+  
+ Para obter mais informações sobre como implementar classes assíncronas, consulte [Implementando o padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizationContext">
+      <MemberSignature Language="C#" Value="public System.Threading.SynchronizationContext SynchronizationContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.SynchronizationContext SynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncOperation.SynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Threading.SynchronizationContext" /> objeto que foi transmitido ao construtor.</summary>
+        <value>O <see cref="T:System.Threading.SynchronizationContext" /> objeto que foi transmitido ao construtor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserSuppliedState">
+      <MemberSignature Language="C#" Value="public object UserSuppliedState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UserSuppliedState" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncOperation.UserSuppliedState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto usado para identificar exclusivamente uma operação assíncrona.</summary>
+        <value>O objeto de estado passado para a invocação de método assíncrono.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se sua classe oferece suporte a vários métodos assíncronos ou várias invocações de um único método assíncrono, os clientes precisarão de uma maneira de determinar qual tarefa assíncrona está gerando eventos. O `MethodNameAsync` método deve receber um parâmetro do tipo <xref:System.Object> que atuará como uma ID da tarefa. Você usará essa ID da tarefa quando você chama o <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A?displayProperty=nameWithType>, método e isso associará ID da tarefa do cliente com uma invocação específica de sua operação assíncrona. Essa tarefa ID ficam disponível para sua implementação por meio de <xref:System.ComponentModel.AsyncOperation.UserSuppliedState%2A> propriedade.  
+  
+> [!CAUTION]
+>  Código do cliente deve ter cuidado para fornecer um valor exclusivo para o <xref:System.ComponentModel.AsyncOperation.UserSuppliedState%2A> propriedade. IDs de tarefa não exclusivos pode causar sua implementação relatar o andamento e outros eventos incorretamente. Seu código deve verificar se há uma ID de tarefa não exclusivos e gerar um <xref:System.ArgumentException> se um for detectado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.ComponentModel.AsyncOperation.UserSuppliedState%2A> para rastrear o tempo de vida de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

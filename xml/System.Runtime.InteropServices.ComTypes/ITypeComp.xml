@@ -1,0 +1,147 @@
+<Type Name="ITypeComp" FullName="System.Runtime.InteropServices.ComTypes.ITypeComp">
+  <TypeSignature Language="C#" Value="public interface ITypeComp" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeComp" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.ITypeComp" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00020403-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a definição gerenciada da interface <see langword="ITypeComp" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `ITypeComp` interface, consulte a biblioteca MSDN.  
+  
+ O common language runtime lança uma exceção quando um método COM em código nativo retorna um HRESULT. Para obter mais informações, consulte [como: mapear HRESULTs e exceções](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public void Bind (string szName, int lHashVal, short wFlags, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo, out System.Runtime.InteropServices.ComTypes.DESCKIND pDescKind, out System.Runtime.InteropServices.ComTypes.BINDPTR pBindPtr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Bind(string szName, int32 lHashVal, int16 wFlags, [out] class System.Runtime.InteropServices.ComTypes.ITypeInfo&amp; ppTInfo, [out] valuetype System.Runtime.InteropServices.ComTypes.DESCKIND&amp; pDescKind, [out] valuetype System.Runtime.InteropServices.ComTypes.BINDPTR&amp; pBindPtr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeComp.Bind(System.String,System.Int32,System.Int16,System.Runtime.InteropServices.ComTypes.ITypeInfo@,System.Runtime.InteropServices.ComTypes.DESCKIND@,System.Runtime.InteropServices.ComTypes.BINDPTR@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="szName" Type="System.String" />
+        <Parameter Name="lHashVal" Type="System.Int32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="ppTInfo" Type="System.Runtime.InteropServices.ComTypes.ITypeInfo&amp;" RefType="out" />
+        <Parameter Name="pDescKind" Type="System.Runtime.InteropServices.ComTypes.DESCKIND&amp;" RefType="out" />
+        <Parameter Name="pBindPtr" Type="System.Runtime.InteropServices.ComTypes.BINDPTR&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="szName">O nome para associar.</param>
+        <param name="lHashVal">Um valor de hash <c>szName</c> computado pelo <see langword="LHashValOfNameSys" />.</param>
+        <param name="wFlags">Uma palavra de sinalizadores que contém um ou mais dos sinalizadores invoke definidos no <see langword="INVOKEKIND" /> enumeração.</param>
+        <param name="ppTInfo">Quando este método retorna, contém uma referência para a descrição do tipo que contém o item ao qual ele está associado, se um <see langword="FUNCDESC" /> ou <see langword="VARDESC" /> foi retornado. Este parâmetro é passado não inicializado.</param>
+        <param name="pDescKind">Quando este método retorna, contém uma referência a um <see langword="DESCKIND" /> enumerador que indica se o limite para nome é uma <see langword="VARDESC" />, <see langword="FUNCDESC" />, ou <see langword="TYPECOMP" />. Este parâmetro é passado não inicializado.</param>
+        <param name="pBindPtr">Quando este método retorna, contém uma referência para o limite para <see langword="VARDESC" />, <see langword="FUNCDESC" />, ou <see langword="ITypeComp" /> interface. Este parâmetro é passado não inicializado.</param>
+        <summary>Mapeia um nome de um membro de um tipo ou associa contidas em uma biblioteca de tipos de funções e variáveis globais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `ITypeComp::Bind` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindType">
+      <MemberSignature Language="C#" Value="public void BindType (string szName, int lHashVal, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo, out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BindType(string szName, int32 lHashVal, [out] class System.Runtime.InteropServices.ComTypes.ITypeInfo&amp; ppTInfo, [out] class System.Runtime.InteropServices.ComTypes.ITypeComp&amp; ppTComp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeComp.BindType(System.String,System.Int32,System.Runtime.InteropServices.ComTypes.ITypeInfo@,System.Runtime.InteropServices.ComTypes.ITypeComp@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="szName" Type="System.String" />
+        <Parameter Name="lHashVal" Type="System.Int32" />
+        <Parameter Name="ppTInfo" Type="System.Runtime.InteropServices.ComTypes.ITypeInfo&amp;" RefType="out" />
+        <Parameter Name="ppTComp" Type="System.Runtime.InteropServices.ComTypes.ITypeComp&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="szName">O nome para associar.</param>
+        <param name="lHashVal">Um valor de hash <c>szName</c> determinado pelo <see langword="LHashValOfNameSys" />.</param>
+        <param name="ppTInfo">Quando este método retorna, contém uma referência a um <see langword="ITypeInfo" /> de tipo para o qual <c>szName</c> foi vinculado. Este parâmetro é passado não inicializado.</param>
+        <param name="ppTComp">Quando este método retorna, contém uma referência a um <see langword="ITypeComp" /> variável. Este parâmetro é passado não inicializado.</param>
+        <summary>Associa as descrições do tipo contido em uma biblioteca de tipos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `ITypeComp::BindType` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,119 @@
+<Type Name="PlaceHolder" FullName="System.Web.UI.WebControls.PlaceHolder">
+  <TypeSignature Language="C#" Value="public class PlaceHolder : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PlaceHolder extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PlaceHolder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.PlaceHolderControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Armazena controles de servidor adicionados dinamicamente na página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Use o <xref:System.Web.UI.WebControls.PlaceHolder> controle como um contêiner para armazenar os controles de servidor que são adicionados dinamicamente à página da Web. O <xref:System.Web.UI.WebControls.PlaceHolder> controle não produz nenhuma saída visível e é usado apenas como um contêiner para outros controles na página da Web. Você pode usar o <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> coleção para adicionar, inserir ou remover um controle no <xref:System.Web.UI.WebControls.PlaceHolder> controle.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:PlaceHolder  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar dinamicamente controles para o <xref:System.Web.UI.WebControls.PlaceHolder> controle.  
+  
+ [!code-aspx-csharp[PlaceHolder#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PlaceHolder/CS/placeholdercs.aspx#1)]
+ [!code-aspx-vb[PlaceHolder#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PlaceHolder/VB/placeholdervb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PlaceHolder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PlaceHolder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.PlaceHolder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PlaceHolder.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os temas se aplicam a esse controle.</summary>
+        <value>
+          <see langword="true" /> para usar temas; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PlaceHolder.EnableTheming%2A> propriedade indica se os temas estão habilitados para o <xref:System.Web.UI.WebControls.PlaceHolder> controle. O <xref:System.Web.UI.WebControls.PlaceHolder.EnableTheming%2A> propriedade também afeta a capacidade de temas são habilitados para os controles contidos no seu <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> coleção. Quando o <xref:System.Web.UI.WebControls.PlaceHolder.EnableTheming%2A> é de propriedade `true`, diretório de tema do aplicativo é pesquisado capas de controle aplicar. Se nenhuma capa de controle específico existe no diretório do tema, não é aplicada uma capa.  
+  
+ Quando o <xref:System.Web.UI.WebControls.PlaceHolder.EnableTheming%2A> é de propriedade `false`, o diretório de tema não é pesquisado e o conteúdo do <xref:System.Web.UI.Control.SkinID%2A> propriedade não são usados.  
+  
+ Temas podem ser habilitados na página, o contêiner ou o nível de controle. Quando temas estão desabilitados no nível de página ou contêiner, eles são desabilitados para todos os controles contidos por página ou contêiner.  
+  
+ É possível que o <xref:System.Web.UI.WebControls.PlaceHolder.EnableTheming%2A> propriedade e o <xref:System.Web.UI.Control.EnableTheming%2A> propriedade seja diferente. Por exemplo, se o <xref:System.Web.UI.Page> que contém o controle foi desativados, os temas de <xref:System.Web.UI.WebControls.PlaceHolder.EnableTheming%2A> propriedade para o controle pode ser `true` enquanto o <xref:System.Web.UI.Control.EnableTheming%2A> é de propriedade `false`. Porque temas estão desabilitados no nível da página, não há temas deve ser aplicados ao <xref:System.Web.UI.WebControls.PlaceHolder> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

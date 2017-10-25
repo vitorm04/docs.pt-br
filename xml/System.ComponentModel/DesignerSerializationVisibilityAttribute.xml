@@ -1,0 +1,367 @@
+<Type Name="DesignerSerializationVisibilityAttribute" FullName="System.ComponentModel.DesignerSerializationVisibilityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignerSerializationVisibilityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerSerializationVisibilityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DesignerSerializationVisibilityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Event)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de persistência a ser usada ao serializar uma propriedade em um componente no momento do design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um serializador persiste o estado persistente de um documento do modo de design, ele geralmente adiciona código para o método de inicialização de componentes para manter os valores das propriedades que foram definidas em tempo de design. Isso acontece por padrão para tipos mais básicos, se nenhum atributo tiver sido definido para direcionar o outro comportamento.  
+  
+ Com o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>, você pode indicar se o valor de uma propriedade é <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visible>e deve ser mantido no código de inicialização, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Hidden>e não deve ser mantido no código de inicialização ou consiste em <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>, que deve ter o código de inicialização gerado para cada propriedade pública, não oculta do objeto atribuído à propriedade.  
+  
+ Membros que não têm um <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> serão tratados como se eles têm um <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> com um valor de <xref:System.ComponentModel.DesignerSerializationVisibility.Visible>. Os valores de uma propriedade é marcada como <xref:System.ComponentModel.DesignerSerializationVisibility.Visible> será serializado, se possível, por um serializador para o tipo. Para especificar a serialização personalizada para um tipo específico ou a propriedade, use o <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute>.  
+  
+ Para obter mais informações, consulte [Atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> definido como <xref:System.ComponentModel.DesignerSerializationVisibility.Content>. Persistir os valores de uma propriedade pública de um controle de usuário, que pode ser configurada em tempo de design. Para usar o exemplo, compile o código a seguir em uma biblioteca de controle de usuário. Em seguida, adicione uma referência para o arquivo. dll compilado em um novo projeto de aplicativo do Windows. Se você estiver usando [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], o `ContentSerializationExampleControl` é adicionado automaticamente para o **caixa de ferramentas**.  
+  
+ Arraste o controle do **caixa de ferramentas** a um formulário e defina as propriedades do `DimensionData` objeto listado na janela Propriedades. Quando você exibir o código para o formulário, código terão sido adicionado para o `InitializeComponent` método do formulário pai. Esse código define os valores das propriedades do controle para aqueles que você definiu no modo de design.  
+  
+ [!code-cpp[Classic DesignerSerializationVisibilityAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DesignerSerializationVisibilityAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic DesignerSerializationVisibilityAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializationVisibilityAttribute (System.ComponentModel.DesignerSerializationVisibility visibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.DesignerSerializationVisibility visibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerSerializationVisibilityAttribute.#ctor(System.ComponentModel.DesignerSerializationVisibility)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visibility" Type="System.ComponentModel.DesignerSerializationVisibility" />
+      </Parameters>
+      <Docs>
+        <param name="visibility">Um dos valores de <see cref="T:System.ComponentModel.DesignerSerializationVisibility" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DesignerSerializationVisibilityAttribute" />, usando o valor <see cref="T:System.ComponentModel.DesignerSerializationVisibility" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir especifica como uma propriedade em um componente é salvo por um designer. Esse código cria um novo <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> e define seu valor como <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic DesignerSerializationVisibilityAttribute.DesignerSerializationVisibilityAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute.DesignerSerializationVisibilityAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DesignerSerializationVisibilityAttribute.DesignerSerializationVisibilityAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute.DesignerSerializationVisibilityAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic DesignerSerializationVisibilityAttribute.DesignerSerializationVisibilityAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute.DesignerSerializationVisibilityAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Content;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerSerializationVisibilityAttribute Content" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibilityAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um serializador deve serializar o conteúdo da propriedade, em vez da própria propriedade. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com `DesignerSerializationVisibilityAttribute.Content`, o valor de seu <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visibility%2A> está definida como <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerSerializationVisibilityAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibilityAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibilityAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor padrão, que é <see cref="F:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visible" />, ou seja, um designer visual usa as regras padrão para gerar o valor de uma propriedade. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com esse valor, esse atributo é definido como o membro constante <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visible>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerSerializationVisibilityAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Outro objeto a ser comparado.</param>
+        <summary>Indica se essa instância e um objeto especificado são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual a essa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerSerializationVisibilityAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este objeto.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Hidden;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerSerializationVisibilityAttribute Hidden" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibilityAttribute.Hidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibilityAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um serializador não deve serializar o valor da propriedade. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com `DesignerSerializationVisibilityAttribute.Hidden`, o valor de seu <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visibility%2A> está definida como o membro constante <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Hidden>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerSerializationVisibilityAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o valor atual do atributo é o valor padrão para o atributo.</summary>
+        <returns>
+          <see langword="true" />Se o atributo é definido como o valor padrão. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visibility">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DesignerSerializationVisibility Visibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.DesignerSerializationVisibility Visibility" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o modo de serialização básica um serializador deve ser usado ao determinar se e como manter o valor de uma propriedade.</summary>
+        <value>Um dos valores de <see cref="T:System.ComponentModel.DesignerSerializationVisibility" />. O padrão é <see cref="F:System.ComponentModel.DesignerSerializationVisibility.Visible" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como verificar o valor de <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> para `MyProperty`. Primeiro o código obtém um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto. Em seguida, o código de índices para o <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`. Em seguida, o código retorna os atributos para essa propriedade e os salva na variável de atributos.  
+  
+ Este exemplo apresenta duas maneiras diferentes para verificar o valor da <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>. No segundo fragmento de código, o exemplo chama o <xref:System.Object.Equals%2A> método com um `static` valor. No último fragmento de código, o exemplo usa o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visibility%2A> propriedade para verificar o valor.  
+  
+ [!code-cpp[Classic DesignerSerializationVisibilityAttribute.Visibility Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute.Visibility Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DesignerSerializationVisibilityAttribute.Visibility Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute.Visibility Example/CS/source.cs#1)]
+ [!code-vb[Classic DesignerSerializationVisibilityAttribute.Visibility Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerSerializationVisibilityAttribute.Visibility Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Visible;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerSerializationVisibilityAttribute Visible" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibilityAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um serializador deve ser permitido para serializar o valor da propriedade. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é a configuração padrão para esse atributo.  
+  
+ Quando você marca uma propriedade com `DesignerSerializationVisibilityAttribute.Visible`, o valor de seu `Visibility` está definida como o membro constante <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Visible>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

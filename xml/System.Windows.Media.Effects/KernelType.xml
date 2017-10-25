@@ -1,0 +1,59 @@
+<Type Name="KernelType" FullName="System.Windows.Media.Effects.KernelType">
+  <TypeSignature Language="C#" Value="public enum KernelType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KernelType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.KernelType" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o kernel usado para criar o efeito.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração Especifica a curva que é usada para calcular o desfoque.  
+  
+ **Observação de desempenho:** um kernel Gaussiano cria um desfoque de alta qualidade com maior, mas se o desempenho for uma preocupação, use o kernel caixa porque ela usa menos cálculos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Box">
+      <MemberSignature Language="C#" Value="Box" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.KernelType Box = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.KernelType.Box" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.KernelType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um desfoque simple criado com uma curva de distribuição quadrado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gaussian">
+      <MemberSignature Language="C#" Value="Gaussian" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.KernelType Gaussian = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.KernelType.Gaussian" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.KernelType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma curva distribuída que cria uma distribuição suave para um desfoque.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

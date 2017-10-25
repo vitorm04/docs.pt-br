@@ -1,0 +1,82 @@
+<Type Name="HyperLinkDataBindingHandler" FullName="System.Web.UI.Design.HyperLinkDataBindingHandler">
+  <TypeSignature Language="C#" Value="public class HyperLinkDataBindingHandler : System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HyperLinkDataBindingHandler extends System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.HyperLinkDataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataBindingHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um manipulador de associação de dados para uma propriedade de hiperlink.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma classe denominada `CustomHyperLinkDataBindingHandler`, que deriva de `HyperLinkDataBindingHandler` classe. Resolver a associação de dados de tempo de design para o `CustomHyperLink` classe usando o <xref:System.Web.UI.Design.HyperLinkDataBindingHandler.DataBindControl%2A> método.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLinkDesigner.cs#2)]
+ [!code-vb[HyperLinkDesigner_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlinkdesigner.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HyperLinkDataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HyperLinkDataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Web.UI.Design.HyperLinkDataBindingHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public override void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HyperLinkDataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para o documento que contém o controle.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para vincular dados.</param>
+        <summary>Elimina o tempo de design de associação de dados para o controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina se o <xref:System.Web.UI.WebControls.HyperLink.Text%2A> e <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A> propriedades do <xref:System.Web.UI.WebControls.HyperLink> controle associados a dados. Se o <xref:System.Web.UI.WebControls.HyperLink.Text%2A> é associado a dados, esse método define o valor da propriedade a "Vinculação de dados". Se o <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A> é associado a dados, esse método define o valor da propriedade como uma cadeia de caracteres de texto para o controle terá a aparência de um hiperlink de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma classe denominada `CustomHyperLinkDataBindingHandler`, que deriva de `HyperLinkDataBindingHandler` classe. Resolver a associação de dados de tempo de design para o <xref:System.Web.UI.WebControls.HyperLink.ImageUrl%2A> propriedade o `CustomHyperLink` para que o texto do espaço reservado é exibido para a propriedade quando ele é associado a dados em tempo de design de classe.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLinkDesigner.cs#2)]
+ [!code-vb[HyperLinkDesigner_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlinkdesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

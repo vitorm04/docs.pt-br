@@ -1,0 +1,243 @@
+<Type Name="RSAOAEPKeyExchangeDeformatter" FullName="System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter">
+  <TypeSignature Language="C#" Value="public class RSAOAEPKeyExchangeDeformatter : System.Security.Cryptography.AsymmetricKeyExchangeDeformatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RSAOAEPKeyExchangeDeformatter extends System.Security.Cryptography.AsymmetricKeyExchangeDeformatter" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricKeyExchangeDeformatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descriptografa dados de troca de chaves OAEP (Preenchimento de Criptografia Assimétrica Ideal).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Troca de chaves permite que um remetente para criar informações secretas, por exemplo, dados aleatórios que podem ser usados como uma chave em um algoritmo de criptografia simétrica e usam a criptografia para enviar ao destinatário pretendido.  
+  
+ Use <xref:System.Security.Cryptography.RSAOAEPKeyExchangeFormatter> para criar a mensagem de troca de chave com o <xref:System.Security.Cryptography.RSA> algoritmo.  
+  
+> [!CAUTION]
+>  É altamente recomendável que você não tentar criar seu próprio método de troca de chaves de funcionalidade básica fornecida, porque muitos detalhes da operação devem ser realizados com cuidado para a troca de chave seja bem-sucedida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter> classe para recriar uma chave de troca para ser usada para descriptografar uma mensagem.  
+  
+ [!code-csharp[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.rsaoaepkeyexchangedeformatter2/cs/program.cs#1)]
+ [!code-vb[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.rsaoaepkeyexchangedeformatter2/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAOAEPKeyExchangeDeformatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.SetKey%2A> para estabelecer a chave antes de chamar <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.DecryptKeyExchange%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAOAEPKeyExchangeDeformatter (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.#ctor(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância do <see cref="T:System.Security.Cryptography.RSA" /> algoritmo que contém a chave privada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter" /> com a chave especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptKeyExchange">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptKeyExchange (byte[] rgbData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptKeyExchange(unsigned int8[] rgbData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.DecryptKeyExchange(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbData">Os dados de troca de chave dentro do qual as informações secretas está oculto.</param>
+        <summary>Extrai informações secretas dos dados de troca de chave criptografada.</summary>
+        <returns>As informações secretas derivado dos dados de troca de chaves.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve especificar uma chave antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.DecryptKeyExchange%2A> método para recriar uma chave de troca de um remetente da mensagem. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.rsaoaepkeyexchangedeformatter2/cs/program.cs#3)]
+ [!code-vb[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.rsaoaepkeyexchangedeformatter2/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Falha na verificação de dados a troca de chaves.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">A chave está ausente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public override string Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros para a troca de chaves de preenchimento criptografia assimétrica ideal (OAEP).</summary>
+        <value>Uma cadeia de caracteres XML que contém os parâmetros da operação de troca de chaves OAEP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.Parameters%2A> propriedade para recuperar uma representação XML dos parâmetros. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.RSAOAEPKeyExchangeDeformatter/CPP/rsaencoder.cpp#12)]
+ [!code-csharp[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.RSAOAEPKeyExchangeDeformatter/CS/rsaencoder.cs#12)]
+ [!code-vb[System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.RSAOAEPKeyExchangeDeformatter/VB/rsaencoder.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public override void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância do <see cref="T:System.Security.Cryptography.RSA" /> algoritmo que contém a chave privada.</param>
+        <summary>Define a chave privada a ser usado para descriptografar as informações secretas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir uma chave antes de chamar <xref:System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter.DecryptKeyExchange%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

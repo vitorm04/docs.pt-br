@@ -1,0 +1,1027 @@
+<Type Name="EventLogInstaller" FullName="System.Diagnostics.EventLogInstaller">
+  <TypeSignature Language="C#" Value="public class EventLogInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite instalar e configurar um log de eventos que o aplicativo lê ou no qual faz gravações quando está em execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.EventLogInstaller> é usado pelo [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) durante a instalação de um log de eventos. O <xref:System.Diagnostics.EventLogInstaller> classe pode instalar os logs de eventos somente no computador local.  
+  
+ Use o <xref:System.Diagnostics.EventLogInstaller> classe quando seu aplicativo grava um log de eventos; não é necessário usar um instalador de log de eventos para o seu aplicativo para ler de um log de eventos. Aplicativos e serviços devem gravar no log de aplicativo ou um log personalizado. Drivers de dispositivo devem gravar no log do sistema.  
+  
+> [!NOTE]
+>  O log de segurança é somente leitura.  
+  
+ O instalador cria a fonte de evento que você especificar o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade e registra-o para o log de eventos especificado em <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade. Esse comportamento é semelhante a chamar <xref:System.Diagnostics.EventLog.CreateEventSource%2A> no <xref:System.Diagnostics.EventLog> componente.  
+  
+ Use o <xref:System.Diagnostics.EventLog.WriteEvent%2A> e <xref:System.Diagnostics.EventLog.WriteEntry%2A> métodos para gravar eventos de um log de eventos. Você deve especificar uma fonte de evento para gravar eventos; Você deve criar e configurar a origem do evento antes de gravar a primeira entrada com a origem.  
+  
+ Crie a nova fonte de evento durante a instalação do seu aplicativo. Isso permite que o tempo para o sistema operacional atualizar sua lista de fontes de eventos registrados e suas configurações. Se o sistema operacional não foi atualizado para a sua lista de fontes de eventos, e você tentar gravar um evento com a nova fonte, que haverá falha na operação de gravação. Você pode configurar uma nova fonte usando um <xref:System.Diagnostics.EventLogInstaller>, ou usando o <xref:System.Diagnostics.EventLog.CreateEventSource%2A> método. Você deve ter direitos administrativos no computador para criar uma nova fonte de evento.  
+  
+ Você pode criar uma fonte de evento para um log de eventos existente ou um novo log de eventos. Quando você cria uma nova origem para um novo log de eventos, o sistema registra a fonte para que o log, mas o log não é criado até que a primeira entrada é gravada nele.  
+  
+ Para instalar um log de eventos, crie uma classe de instalador de projeto que herda de <xref:System.Configuration.Install.Installer>e defina o <xref:System.ComponentModel.RunInstallerAttribute> a classe `true`. Dentro de seu projeto, criar um <xref:System.Diagnostics.EventLogInstaller> para cada log de eventos que seu aplicativo irá gravar e adicionar a instância à sua classe de instalador do projeto.  
+  
+ Quando o [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) é chamado, ele analisa o <xref:System.ComponentModel.RunInstallerAttribute>. Se for `true`, a ferramenta instala todos os itens a <xref:System.Configuration.Install.Installer.Installers%2A> coleção que estão associados com o instalador de seu projeto. Se <xref:System.ComponentModel.RunInstallerAttribute> é `false`, a ferramenta ignora o instalador do projeto.  
+  
+ Modifique outras propriedades de um <xref:System.Diagnostics.EventLogInstaller> antes ou depois de adicionar a instância para o <xref:System.Configuration.Install.Installer.Installers%2A> coleção de instalador de seu projeto, mas antes de executa a ferramenta de instalação. Você deve definir o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade se seu aplicativo será gravado no log de eventos.  
+  
+ Use <xref:System.Diagnostics.EventLogInstaller> para registrar uma nova origem para um log de eventos de novo ou existente; não use <xref:System.Diagnostics.EventLogInstaller> para alterar uma fonte existente. O <xref:System.Diagnostics.EventLogInstaller> classe não modifica as propriedades de configuração de uma fonte existente para corresponder as propriedades de instalação especificado. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método lançará uma exceção se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que está registrado para outro log de eventos no computador. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método não registrar a fonte se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que já está registrado para o mesmo log de eventos especificado no <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade.  
+  
+ Você pode registrar a origem do evento com arquivos de recurso localizado para suas cadeias de caracteres de categoria e a mensagem de evento. Seu aplicativo pode gravar entradas de log de eventos usando identificadores de recursos, em vez de especificar a cadeia de caracteres real. O Visualizador de eventos usa o identificador do recurso para localizar e exibir a cadeia de caracteres correspondente do arquivo de recurso localizada com base nas configurações de idioma atual. Você pode registrar um arquivo separado para categorias de evento, mensagens e cadeias de caracteres de inserção de parâmetro, ou você pode registrar o mesmo arquivo de recurso para todos os três tipos de cadeias de caracteres. Use o <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A>, <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A>, <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A>, e <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> propriedades para configurar a origem para gravar entradas localizadas para o log de eventos. Se seu aplicativo grava os valores de cadeias de caracteres diretamente para o log de eventos, você não precisa definir essas propriedades.  
+  
+ A origem deve ser configurada para gravar entradas localizadas ou para a gravação de cadeias de caracteres diretas. Se seu aplicativo grava entradas usando identificadores de recursos e os valores de cadeia de caracteres, você deve registrar duas fontes separadas. Por exemplo, configure uma fonte com arquivos de recurso e, em seguida, usar essa fonte no <xref:System.Diagnostics.EventLog.WriteEvent%2A> método para gravar entradas usando identificadores de recursos para o log de eventos. Criar uma fonte diferente sem arquivos de recurso e, em seguida, usar essa fonte no <xref:System.Diagnostics.EventLog.WriteEntry%2A> método grave cadeias de caracteres diretamente para o log de eventos usando essa fonte.  
+  
+ Normalmente, você não chama os métodos do <xref:System.Diagnostics.EventLogInstaller> classe dentro do seu código; eles geralmente são chamados somente por Installutil.exe. A ferramenta chama automaticamente o <xref:System.Diagnostics.EventLogInstaller.Install%2A> método durante o processo de instalação. Ele desfaz falhas, se necessário, ao chamar o <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> método para o objeto que gerou a exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as propriedades de instalação para uma nova fonte de evento. O exemplo de código define o nome de origem e o nome do log de eventos e adiciona o <xref:System.Diagnostics.EventLogInstaller> para o <xref:System.Configuration.Install.Installer.Installers%2A> coleção.  
+  
+ [!code-cpp[EventLogInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogInstaller/CPP/eventloginstaller.cpp#1)]
+ [!code-csharp[EventLogInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogInstaller/CS/eventloginstaller.cs#1)]
+ [!code-vb[EventLogInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogInstaller/VB/eventloginstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.EventLogInstaller" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryCount">
+      <MemberSignature Language="C#" Value="public int CategoryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CategoryCount" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.CategoryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de categorias no arquivo de recurso de categoria.</summary>
+        <value>O número de categorias no arquivo de recurso de categoria. O valor padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> e <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> propriedades para gravar eventos com localizadas cadeias de caracteres da categoria. O Visualizador de eventos exibe a categoria de uma entrada de evento, se você fornecer uma categoria ao gravar o evento. Categorias de log de eventos são cadeias de caracteres definida pelo aplicativo que ajuda a filtrar eventos, ou fornecem informações sobre um evento. Por exemplo, seu aplicativo pode definir categorias separadas para diferentes componentes ou operações diferentes.  
+  
+ Categorias de evento são opcionais. Se seu aplicativo não usar categorias, não defina o <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> e <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> propriedades.  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criando arquivos de recursos de evento, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as propriedades de instalação para uma nova fonte de evento. O exemplo de código define o nome da fonte de evento, o nome de log de eventos e o texto de evento localizada no arquivo de recurso.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryResourceFile">
+      <MemberSignature Language="C#" Value="public string CategoryResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.CategoryResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo de recurso que contém cadeias de caracteres da categoria para a origem.</summary>
+        <value>O caminho do arquivo de recurso da categoria. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> e <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> propriedades para gravar eventos com localizadas cadeias de caracteres da categoria. O Visualizador de eventos exibe a categoria de uma entrada de evento, se você fornecer uma categoria ao gravar o evento. Categorias de log de eventos são cadeias de caracteres definida pelo aplicativo que ajuda a filtrar eventos, ou fornecem informações sobre um evento. Por exemplo, seu aplicativo pode ter categorias separadas para diferentes componentes ou operações diferentes.  
+  
+ Categorias de evento são opcionais. Se seu aplicativo não usar categorias, não defina o <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> e <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> propriedades.  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criando arquivos de recursos de evento, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as propriedades de instalação para uma nova fonte de evento. O exemplo de código define o nome da fonte de evento, o nome de log de eventos e o texto de evento localizada no arquivo de recurso.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um <see cref="T:System.ComponentModel.IComponent" /> para usar como um modelo para o <see cref="T:System.Diagnostics.EventLogInstaller" />.</param>
+        <summary>Copia os valores de propriedade de um <see cref="T:System.Diagnostics.EventLog" /> componente que são necessárias no momento da instalação para um log de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O componente especificado o `component` parâmetro deve ser um <xref:System.Diagnostics.EventLog>; caso contrário, uma exceção será lançada.  
+  
+ Normalmente, você não chama os métodos do <xref:System.Diagnostics.EventLogInstaller> de dentro de seu código; eles são geralmente chamados somente pelo [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). <xref:System.Diagnostics.EventLogInstaller.CopyFromComponent%2A>usado por Installutil.exe para definir os valores de propriedade para o <xref:System.Diagnostics.EventLogInstaller> para os valores de um objeto existente <xref:System.Diagnostics.EventLog>.  
+  
+ Se o <xref:System.Diagnostics.EventLog.Log%2A> do <xref:System.Diagnostics.EventLog> que é transmitido é uma cadeia de caracteres vazia (""), você deve definir o <xref:System.Diagnostics.EventLog.Log%2A> propriedade para um valor válido antes de executa o instalador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O componente especificado não é um <see cref="T:System.Diagnostics.EventLog" />.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Diagnostics.EventLog.Log" /> ou <see cref="P:System.Diagnostics.EventLog.Source" /> propriedade do componente especificado está <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Um <see cref="T:System.Collections.IDictionary" /> usado para salvar as informações necessárias para executar uma reversão ou uma operação de desinstalação.</param>
+        <summary>Executa a instalação e grava informações de log de eventos no registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método grava informações de log de eventos para o registro e associa o log de eventos de um log que é especificado pelo <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade. Se o log não existir (e uma fonte for especificada), <xref:System.Diagnostics.EventLogInstaller.Install%2A> cria um arquivo de log e associa a nova fonte ela.  
+  
+ Normalmente, você não chama os métodos do <xref:System.Diagnostics.EventLogInstaller> de dentro de seu código; eles são geralmente chamados somente pelo [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). A ferramenta chama automaticamente o <xref:System.Diagnostics.EventLogInstaller.Install%2A> método durante o processo de instalação para gravar informações de registro que está associadas com o log de eventos que está sendo instalado. Instalação é transacional, portanto, se houver uma falha de qualquer componente de projeto de instalação durante a instalação, todos os componentes instalados anteriormente são convertidos para seus estados de pré-instalação. Isso é feito chamando cada componente <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> método.  
+  
+ Use <xref:System.Diagnostics.EventLogInstaller> para registrar uma nova origem para um log de eventos de novo ou existente; não use <xref:System.Diagnostics.EventLogInstaller> para alterar uma fonte existente. O <xref:System.Diagnostics.EventLogInstaller> classe não modifica as propriedades de configuração de uma fonte existente para corresponder as propriedades de instalação especificado. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método lançará uma exceção se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que está registrado para outro log de eventos no computador. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método ignora registrar a fonte se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que já está registrado para o mesmo log de eventos especificado no <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade.  
+  
+ Rotina de instalação de um aplicativo usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> propriedade para manter automaticamente informações sobre os componentes que já foram instalados. Essas informações de estado, que são passadas para <xref:System.Diagnostics.EventLogInstaller.Install%2A> como o `stateSaver` parâmetro, é atualizado continuamente como a ferramenta instala cada <xref:System.Diagnostics.EventLogInstaller>. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma que o instalador está tentando usar não é do Windows NT 4.0 ou posterior.</exception>
+        <exception cref="T:System.ArgumentException">O nome especificado no <see cref="P:System.Diagnostics.EventLogInstaller.Source" /> propriedade já está registrada para um outro log de eventos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentInstaller">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentInstaller (System.Configuration.Install.ComponentInstaller otherInstaller);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentInstaller(class System.Configuration.Install.ComponentInstaller otherInstaller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherInstaller" Type="System.Configuration.Install.ComponentInstaller" />
+      </Parameters>
+      <Docs>
+        <param name="otherInstaller">O instalador para comparar.</param>
+        <summary>Determina se um instalador e outro instalador especificado se referem à mesma fonte.</summary>
+        <returns>
+          <see langword="true" />Se esse instalador e o instalador especificado pelo <paramref name="otherInstaller" /> parâmetro seria instalar ou desinstalar a mesma fonte; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não chama os métodos de <xref:System.Diagnostics.EventLogInstaller> de dentro de seu código; eles são geralmente chamados somente pela ferramenta do instalador (Installutil.exe).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public string Log { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Log" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do log para definir a fonte.</summary>
+        <value>O nome do log. Isso pode ser Aplicativo, Sistema ou um nome de log personalizado. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade para associar a fonte que você especificar o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade com um log existente ou um novo log no computador local. O [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) usa essas informações para mapear a fonte para o log no registro do computador. Aplicativos e serviços devem gravar no log de aplicativo ou um log personalizado. Drivers de dispositivo devem gravar no log do sistema.  
+  
+ Para gravar entradas em um log de eventos, você deve criar uma fonte e registrá-lo com um log de eventos. Uma fonte de evento somente pode gravar em um log de cada vez. O instalador usa o valor de <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade para registrar seu aplicativo com o log de eventos como uma fonte válida de entradas. Se você não especificar um nome de log antes da execução do instalador, o instalador registra a fonte para o log do aplicativo. Se você especificar uma nova origem e um log existente, o instalador cria uma nova fonte de evento e o associa com o log que você especificar. Se você especificar uma nova origem e um novo log, o instalador associa a nova fonte com o novo log no registro, mas o log não é criado até que a primeira entrada é gravada nele.  
+  
+ O sistema operacional armazena os logs de eventos como arquivos. Quando você usa <xref:System.Diagnostics.EventLogInstaller> ou <xref:System.Diagnostics.EventLog.CreateEventSource%2A> método para criar um novo log de eventos, o arquivo associado é armazenado no diretório %SystemRoot%\System32\Config do computador especificado. O nome do arquivo é definido por acrescentar os 8 primeiros caracteres do <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade com a extensão de nome de arquivo ". evt".  
+  
+ Use <xref:System.Diagnostics.EventLogInstaller> para registrar uma nova origem para um log de eventos de novo ou existente; não use <xref:System.Diagnostics.EventLogInstaller> para alterar uma fonte existente. O <xref:System.Diagnostics.EventLogInstaller> classe não modifica as propriedades de configuração de uma fonte existente para corresponder as propriedades de instalação especificado. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método lançará uma exceção se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que está registrado para outro log de eventos no computador. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método não registrar a fonte se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que já está registrado para o mesmo log de eventos especificado no <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade.  
+  
+ Para obter mais informações sobre os comportamentos de fontes e logs de eventos, consulte o <xref:System.Diagnostics.EventLog> classe documentação para o <xref:System.Diagnostics.EventLog.Log%2A> e <xref:System.Diagnostics.EventLog.Source%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageResourceFile">
+      <MemberSignature Language="C#" Value="public string MessageResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.MessageResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo de recurso que contém a formatação de mensagem para a origem.</summary>
+        <value>O caminho do arquivo de recurso da mensagem. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> propriedade para configurar uma origem de log de eventos para gravar mensagens de evento localizada. Mensagens de evento são cadeias de caracteres definida pelo aplicativo que descrevem o evento para o usuário.  
+  
+ Seu aplicativo pode gravar entradas de log de eventos usando identificadores de recursos. Uma mensagem localizada em um identificador de recurso dos índices de <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A>. O Visualizador de eventos usa o identificador do recurso para localizar e exibir a cadeia de caracteres correspondente do arquivo de recurso localizada com base nas configurações de idioma atual.  
+  
+ A origem do evento deve ser configurada para gravar entradas localizadas ou para a gravação de cadeias de caracteres diretas. Use o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método para gravar entradas localizadas para uma fonte configurado com um arquivo de recurso de mensagem.  
+  
+ Se seu aplicativo grava cadeias de caracteres de mensagem de evento diretamente, em vez de usar um identificador de recurso em um arquivo de recurso localizado, não defina o <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> propriedade.  
+  
+ Se o <xref:System.Diagnostics.EventLog.MachineName%2A> propriedade não é o identificador do computador local ("."), o .NET Framework pressupõe que o arquivo de recurso está em um computador remoto. Se o <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> valor da propriedade contiver uma letra de unidade, o arquivo de recurso é considerado no \\ \\< machinename\>\\< unidade\>compartilhamento $ (por exemplo, \\\server\c$). Se o valor contiver a cadeia de caracteres % systemroot %, o arquivo de recurso é considerado no \\ \\< machinename\>\admin$ compartilhamento (por exemplo, \\\server\admin$).  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criando arquivos de recursos de evento, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as propriedades de instalação para uma nova fonte de evento. O exemplo de código define o nome da fonte de evento, o nome de log de eventos e o texto de evento localizada no arquivo de recurso.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterResourceFile">
+      <MemberSignature Language="C#" Value="public string ParameterResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.ParameterResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo de recurso que contém cadeias de caracteres de parâmetro de mensagem para a fonte.</summary>
+        <value>O caminho do arquivo de recurso de parâmetro de mensagem. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> inseridos de propriedade para configurar uma origem de log de eventos para gravar mensagens de evento localizada com cadeias de caracteres do parâmetro. Cada mensagem de evento localizada especificada no <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> propriedade pode conter espaços reservados para cadeias de caracteres de inserção. Esses espaços reservados são usados para especificar a posição e o identificador de recurso para uma cadeia de caracteres dentro da mensagem de evento independente de linguagem. O Visualizador de eventos substitui os espaços reservados com as cadeias de caracteres correspondentes do <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> e formata a mensagem de log de eventos para a entrada de evento localizada.  
+  
+ Por exemplo, a seção de um arquivo de texto de mensagem a seguir define uma cadeia de caracteres com um espaço reservado de parâmetro:  
+  
+```  
+  
+MessageId = 1501  
+Severity = Success  
+Facility = Application  
+SymbolicName = COMPONENT_STARTING  
+Language=English  
+Component %%6050 is starting.  
+.  
+```  
+  
+ Dentro do arquivo de recurso do parâmetro, a cadeia de caracteres de inserção deve ser definida com o identificador de recurso correspondente para o espaço reservado, conforme mostrado abaixo:  
+  
+```  
+MessageId = 6050  
+Severity = Success  
+Facility = Application  
+SymbolicName = COMPONENT_NAME_MSGID  
+Language=English  
+TRIGGER.EXE  
+.  
+```  
+  
+ A origem do evento deve ser configurada para gravar entradas localizadas ou para a gravação de cadeias de caracteres diretas. Use o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método para gravar entradas localizadas para uma fonte configurado com um arquivo de recurso de mensagem.  
+  
+ Se seu aplicativo grava cadeias de caracteres de mensagem de evento diretamente para o log de eventos, ou se seu <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> não contém mensagens com espaços reservados de inserção de parâmetro, não defina o <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> propriedade.  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criando arquivos de recursos de evento, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define as propriedades de instalação para uma nova fonte de evento. O exemplo de código define o nome da fonte de evento, o nome de log de eventos e o texto de evento localizada no arquivo de recurso.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro. Especificamente, a mensagem definida para o identificador de recurso 1004 usa um espaço reservado para uma cadeia de caracteres do parâmetro definida para o identificador de recurso 5002.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado de pré-instalação do computador.</param>
+        <summary>Restaura o computador para o estado em que estava antes da instalação revertendo as informações de log de eventos que gravou o procedimento de instalação no registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> método desfazer os efeitos do <xref:System.Diagnostics.EventLogInstaller.Install%2A> método. <xref:System.Diagnostics.EventLogInstaller.Rollback%2A>é chamada se a instalação de qualquer componente no projeto de instalação falhará. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método cria ou define as propriedades de um log de eventos e a origem do evento. <xref:System.Diagnostics.EventLogInstaller.Rollback%2A>Exclui o log de eventos e a fonte ou redefine as propriedades de uma fonte já existente para seus valores de pré-instalação.  
+  
+ Normalmente, você não chama os métodos do <xref:System.Diagnostics.EventLogInstaller> de dentro de seu código; eles são geralmente chamados somente pelo [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). As chamadas de ferramenta a <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> método, quando este ou outro componente falhou ao instalar, desfazer as alterações já feitas pelo processo de instalação.  
+  
+ Rotina de instalação de um aplicativo usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> propriedade para manter automaticamente informações sobre os componentes que já foram instalados. Essas informações de estado, que são passadas para <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> como o `savedState` parâmetro, é atualizado continuamente como a ferramenta faz fazer cada <xref:System.Diagnostics.EventLogInstaller>. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da fonte para registrar com o log.</summary>
+        <value>O nome para registrar com o log de eventos como uma fonte de entradas. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A origem do evento indica que registra o evento. Geralmente é o nome do aplicativo ou o nome do componente de um aplicativo grande.  
+  
+ O instalador usa o valor de <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade para registrar seu aplicativo com o log de eventos como uma fonte válida de entradas. Um novo nome de origem não pode coincidir com o nome de uma fonte existente ou um nome de log de eventos existente. Cada fonte pode gravar apenas em um log de eventos ao mesmo tempo; No entanto, seu aplicativo pode usar várias fontes para gravar em vários logs de eventos. Por exemplo, o aplicativo pode exigir várias fontes configuradas para logs de eventos diferentes ou arquivos de recurso diferente.  
+  
+ Aplicativos e serviços devem gravar no log de aplicativo ou um log personalizado. Drivers de dispositivo devem gravar no log do sistema. Se você não especificar um nome de log antes da execução do instalador, o instalador registra a fonte para o log do aplicativo. Se você especificar o nome de um log que não existe, o sistema registra a <xref:System.Diagnostics.EventLogInstaller.Source%2A> para esse log, mas o log não é criado até que a primeira entrada é gravada nele.  
+  
+ Use <xref:System.Diagnostics.EventLogInstaller> para registrar uma nova origem para um log de eventos de novo ou existente; não use <xref:System.Diagnostics.EventLogInstaller> para alterar uma fonte existente. O <xref:System.Diagnostics.EventLogInstaller> classe não modifica as propriedades de configuração de uma fonte existente para corresponder as propriedades de instalação especificado. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método lançará uma exceção se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que está registrado para outro log de eventos no computador. O <xref:System.Diagnostics.EventLogInstaller.Install%2A> método não registrar a fonte se o <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedade corresponde a um nome de origem que já está registrado para o mesmo log de eventos especificado no <xref:System.Diagnostics.EventLogInstaller.Log%2A> propriedade.  
+  
+ Para obter mais informações sobre os comportamentos de fontes e logs de eventos, consulte o <xref:System.Diagnostics.EventLog> classe documentação para o <xref:System.Diagnostics.EventLog.Log%2A> e <xref:System.Diagnostics.EventLog.Source%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado de pré-instalação do computador.</param>
+        <summary>Remove uma instalação removendo as informações de log de eventos do registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Diagnostics.EventLogInstaller.UninstallAction%2A> é o valor da propriedade `Remove`, o <xref:System.Diagnostics.EventLogInstaller.Uninstall%2A> método exclui a fonte e o log associado que o instalador criado se o <xref:System.Diagnostics.EventLogInstaller.Log%2A> e <xref:System.Diagnostics.EventLogInstaller.Source%2A> propriedades especificadas a criação de um novo log de eventos e uma origem.  
+  
+ Normalmente, você não chama os métodos do <xref:System.Diagnostics.EventLogInstaller> de dentro de seu código; eles são geralmente chamados somente pelo [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) no modo de desinstalação. A ferramenta chama automaticamente o <xref:System.Diagnostics.EventLogInstaller.Uninstall%2A> método para restaurar as partes do sistema que foram afetadas pela instalação do respectivos estados de pré-instalação. Isso inclui excluir informações de registro que está associadas com o log de eventos que estão sendo desinstalado.  
+  
+ Um aplicativo desinstalar rotina usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> propriedade para manter automaticamente informações sobre os componentes que já tenha sido desinstalado. Essas informações de estado, que são passadas para <xref:System.Diagnostics.EventLogInstaller.Uninstall%2A> como o `savedState` parâmetro, é atualizado continuamente como a ferramenta desinstala cada <xref:System.Diagnostics.EventLogInstaller>. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAction">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.UninstallAction UninstallAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Install.UninstallAction UninstallAction" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.UninstallAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.UninstallAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) deve remover o log de eventos ou deixe-lo em seu estado instalado no momento da desinstalação.</summary>
+        <value>Uma da <see cref="T:System.Configuration.Install.UninstallAction" /> valores que indicam o estado para deixar o log de eventos quando o <see cref="T:System.Diagnostics.EventLog" /> é desinstalado. O padrão é <see langword="Remove" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você instala um log de eventos, opcionalmente você pode conectá-lo em um log existente. Se você fizer isso, você deve decidir se o log deve retornar ao estado de pré-instalação ou permanecem em seu estado atual, após a instalação. Se você optar por retornar o log de eventos para o estado de pré-instalação, as alterações para as entradas de log de eventos durante a instalação não são restauradas. Você pode redefinir somente as propriedades de log de eventos que estão associadas a <xref:System.Diagnostics.EventLogInstaller> para seus valores de pré-instalação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <see cref="P:System.Diagnostics.EventLogInstaller.UninstallAction" /> contém um valor inválido. Os únicos valores válidos para essa propriedade são <see langword="Remove" /> e <see langword="NoAction" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

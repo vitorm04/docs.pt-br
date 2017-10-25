@@ -1,0 +1,164 @@
+<Type Name="AceEnumerator" FullName="System.Security.AccessControl.AceEnumerator">
+  <TypeSignature Language="C#" Value="public sealed class AceEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AceEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.AceEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a capacidade para iterar por meio de entradas de controle de acesso (ACEs) em uma lista de controle de acesso (ACL).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.GenericAce Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.AccessControl.GenericAce Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AceEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.GenericAce</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento atual o <see cref="T:System.Security.AccessControl.GenericAce" /> coleção. Essa propriedade obtém a versão amigável para o tipo do objeto.</summary>
+        <value>O elemento atual o <see cref="T:System.Security.AccessControl.GenericAce" /> coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.AceEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o enumerador para o próximo elemento do <see cref="T:System.Security.AccessControl.GenericAce" /> coleção.</summary>
+        <returns>
+          <see langword="true" /> se o enumerador foi avançado com êxito para o próximo elemento; <see langword="false" /> se o enumerador passou o final da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após a criação de um enumerador ou depois de uma chamada para o <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> método, um enumerador está posicionado antes do primeiro elemento da coleção e a primeira chamada para o <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> método Move o enumerador sobre o primeiro elemento da coleção.  
+  
+ Depois que o final da coleção for passadas, chamadas subsequentes para <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> retornar `false` até <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> é chamado.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se, como adicionar, modificar ou excluir elementos, forem feitas alterações à coleção, o enumerador será invalidado irrecuperavelmente e a próxima chamada para <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> ou <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.AceEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o enumerador como sua posição inicial, ou seja, antes do primeiro elemento no <see cref="T:System.Security.AccessControl.GenericAce" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se, como adicionar, modificar ou excluir elementos, é feita na coleção, o enumerador será invalidado irrecuperavelmente e a próxima chamada para o <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> método ou o <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> método lança um<xref:System.InvalidOperationException>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+        <block subset="none" type="overrides">
+          <para>Todas as chamadas para <see cref="M:System.Security.AccessControl.AceEnumerator.Reset" /> deve resultar no mesmo estado do enumerador. A implementação preferida é mover o enumerador para o início da coleção, antes do primeiro elemento. Isso invalida o enumerador se a coleção foi modificada desde que o enumerador foi criado, o que é consistente com <see cref="M:System.Security.AccessControl.AceEnumerator.MoveNext" /> e <see cref="P:System.Security.AccessControl.AceEnumerator.Current" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AceEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento atual na coleção.</summary>
+        <value>Retorna o elemento atual na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após a criação de um enumerador ou depois de uma chamada para o <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> método, você deve chamar o <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> método para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor de <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A>; caso contrário, <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A> é indefinido.  
+  
+ <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A>também gera uma exceção se a última chamada <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> retornou `false`, que indica o final da coleção.  
+  
+ <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A>não move a posição do enumerador e chamadas consecutivas para <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A> retornar o mesmo objeto até que o <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> ou <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> é chamado.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se, como adicionar, modificar ou excluir elementos, forem feitas alterações à coleção, o enumerador será invalidado irrecuperavelmente e a próxima chamada para <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> ou <xref:System.Security.AccessControl.AceEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>. Se a coleção é modificada entre <xref:System.Security.AccessControl.AceEnumerator.MoveNext%2A> e <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A>, <xref:System.Security.AccessControl.AceEnumerator.System%23Collections%23IEnumerator%23Current%2A> retorna o elemento que está definido como, mesmo se o enumerador já é invalidado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="RuntimeCompatibilityAttribute" FullName="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RuntimeCompatibilityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RuntimeCompatibilityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se deve encapsular as exceções que não derivam da classe <see cref="T:System.Exception" /> com um objeto <see cref="T:System.Runtime.CompilerServices.RuntimeWrappedException" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas linguagens, como C++, permitem que você gerar exceções de qualquer tipo.  Outras linguagens, como Microsoft c# e Visual Basic, requerem que cada exceção lançada ser derivado de <xref:System.Exception> classe.  Para manter a compatibilidade entre as linguagens, o common language runtime (CLR) encapsula objetos que não derivam <xref:System.Exception> em uma <xref:System.Runtime.CompilerServices.RuntimeWrappedException> objeto.  
+  
+ Você pode usar o <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> classe para especificar se as exceções devem aparecer encapsuladas dentro de blocos catch e filtros de exceção para um assembly.  Muitos compiladores de linguagem, incluindo os compiladores do Microsoft c# e Visual Basic, aplicam esse atributo por padrão para especificar o comportamento de quebra automática.  
+  
+ Observe que o tempo de execução ainda ajusta exceções mesmo se você usar o <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> classe para especificar que você não deseja encapsulado.  Nesse caso, as exceções são desencapsulamento somente dentro de blocos catch ou filtros de exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> classe a um assembly que lança um <xref:System.String> objeto como uma exceção em C++ e captura-o usando um <xref:System.Runtime.CompilerServices.RuntimeWrappedException> objeto.  
+  
+ [!code-cpp[System.Runtime.CompilerServices.RuntimeWrappedException#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Runtime.CompilerServices.RuntimeWrappedException/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeCompatibilityAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir se aplica a <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> de atributo a um assembly para desabilitar a quebra de exceção.  
+  
+ [!code-cpp[System.Runtime.CompilerServices.RuntimeCompatibilityAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Runtime.CompilerServices.RuntimeCompatibilityAttribute/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapNonExceptionThrows">
+      <MemberSignature Language="C#" Value="public bool WrapNonExceptionThrows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrapNonExceptionThrows" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute.WrapNonExceptionThrows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é incluir exceções que não derivam de <see cref="T:System.Exception" /> classe com um <see cref="T:System.Runtime.CompilerServices.RuntimeWrappedException" /> objeto.</summary>
+        <value>
+          <see langword="true" />Se exceções que não derivam de <see cref="T:System.Exception" /> classe deve aparecer encapsulada com uma <see cref="T:System.Runtime.CompilerServices.RuntimeWrappedException" /> objeto; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir se aplica a <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> de atributo a um assembly para desabilitar a quebra de exceção.  
+  
+ [!code-cpp[System.Runtime.CompilerServices.RuntimeCompatibilityAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Runtime.CompilerServices.RuntimeCompatibilityAttribute/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

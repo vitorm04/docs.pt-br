@@ -1,0 +1,501 @@
+<Type Name="XhtmlTextWriter" FullName="System.Web.UI.XhtmlTextWriter">
+  <TypeSignature Language="C#" Value="public class XhtmlTextWriter : System.Web.UI.HtmlTextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XhtmlTextWriter extends System.Web.UI.HtmlTextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.XhtmlTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlTextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Grava a linguagem de marcação de hipertexto extensível (XHTML)-caracteres específicos, incluindo todas as variações dos módulos XHTML que derivam de XTHML, o fluxo de saída para um controle de servidor ASP.NET para dispositivos móveis. Substitua a classe <see cref="T:System.Web.UI.XhtmlTextWriter" /> para fornecer renderização de XHTML personalizada para controles de servidor e páginas ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XHTML é uma linguagem de marcação XML compatíveis, com base em HTML 4.1, que permite que você crie sites da Web que são adequadas para vários tipos de dispositivos. Ele mescla a facilidade de uso fornecida pelo HTML com as diretrizes de elemento estrito fornecidas pelo XML para produzir uma linguagem de marcação com uma ampla gama de opções de formato e de estilo e ambiguidade da marca de marcação reduzida. O <xref:System.Web.UI.XhtmlTextWriter> classe fornece recursos de formatação que controles de servidor ASP.NET usam ao processar XHTML conteúdo aos clientes. Você pode usar o <xref:System.Web.UI.XhtmlTextWriter.SetDocType%2A> método para especificar que tipo de XHTML o gravador de texto é renderizado. Tipos de documento com suporte são definidos no <xref:System.Web.UI.XhtmlMobileDocType> enumeração.  
+  
+ O <xref:System.Web.UI.XhtmlTextWriter> classe renderiza dois conjuntos de atributos de elementos. Um conjunto é uma coleção de atributos comuns, conforme mencionado no <xref:System.Web.UI.XhtmlTextWriter.CommonAttributes%2A> propriedade. O segundo conjunto é uma coleção de atributos específicos do elemento, conforme mencionado no <xref:System.Web.UI.XhtmlTextWriter.ElementSpecificAttributes%2A> propriedade. Para obter mais informações sobre os elementos e estilos que são processados, consulte a especificação de modularização XHTML no [World Wide Web Consortium (W3C) Web site](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+ Você pode usar os membros de <xref:System.Web.UI.XhtmlTextWriter> classe e todas as classes derivadas para criar gravadores de texto personalizado a ser usado em XHTML personalizado página adaptadores ou classe. Você também pode criar classes derivadas que substituem o comportamento padrão da <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ Por padrão, quando você estiver trabalhando com navegadores que oferecem suporte a HTML 4.0, páginas e controles ASP.NET processam marcação que é compatível com o padrão XHTML 1.1. Para obter mais informações, consulte [padrões XHTML no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+  
+ O <xref:System.Web.UI.HtmlTextWriter> gera XHTML, a menos que você configurar o ASP.NET especificamente para não processar marcação XHTML. Para obter mais informações, consulte [NIB: como: configurar o processamento de XHTML nos Sites da Web do ASP.NET](http://msdn.microsoft.com/en-us/42483a54-f1ae-44e1-88e6-4370f8690149).  
+  
+   
+  
+## Examples  
+ O exemplo de código nesta seção contém quatro partes. O primeiro exemplo demonstra como criar uma classe derivada. O segundo exemplo de código demonstra como criar um controle personalizado. O terceiro exemplo de código demonstra como usar o controle personalizado. O exemplo de código quarto fornece o código que é necessário para executar o controle personalizado.  
+  
+ O exemplo de código a seguir demonstra como criar uma classe personalizada que é derivada de <xref:System.Web.UI.XhtmlTextWriter> classe. Ele tem dois construtores, que é o padrão para todas as classes que herdam direta ou indiretamente a <xref:System.Web.UI.HtmlTextWriter> classe. O primeiro construtor usa uma <xref:System.IO.TextWriter> objeto como um parâmetro e chama o construtor de segundo, passando os dois valores de parâmetro a seguir:  
+  
+-   A instância <xref:System.IO.TextWriter>.  
+  
+-   O valor de <xref:System.Web.UI.HtmlTextWriter.DefaultTabString?displayProperty=nameWithType> propriedade, que define o recuo de linha padrão que é usado pelo gravador de texto de XHTML.  
+  
+ Este exemplo de código também mostra como substituir o <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> e <xref:System.Web.UI.XhtmlTextWriter.OnStyleAttributeRender%2A> métodos para filtrar por texto de tamanho e cor de estilo, respectivamente. Além disso, ela substitui o <xref:System.Web.UI.HtmlTextWriter.BeginRender%2A> e <xref:System.Web.UI.HtmlTextWriter.EndRender%2A> métodos para escrever um texto de cadeia de caracteres antes e depois de um controle foi processado.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/CS/customxhtmltextwriter.cs#1)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/VB/customxhtmltextwriter.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como criar um personalizado <xref:System.Web.UI.WebControls.Label> controle chamado `TestLabel` e um adaptador personalizado chamado `XhtmlTestLabelAdapter` que renderiza o conteúdo do controle como XHTML.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.XhtmlTextWriter_Sample1/cs/xhtmltextlabel.cs#1)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.XhtmlTextWriter_Sample1/VB/xhtmltestlabel.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o controle personalizado `TestLabel` em uma página da Web do ASP.NET.  
+  
+ [!code-aspx-csharp[System.Web.UI.XhtmlTextWriter_Sample1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.XhtmlTextWriter_Sample1/cs/xhtmltextlabel.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.XhtmlTextWriter_Sample1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.XhtmlTextWriter_Sample1/VB/xhtmltestlabel.aspx#4)]  
+  
+ Para usar o controle personalizado no exemplo de código anterior, adicione o seguinte `<controlAdapters>` elemento para um dos dois arquivos. Você pode adicioná-lo para o arquivo de máquina apropriado no subdiretório de um navegador específico, como uma subpasta da pasta de configuração do .NET Framework. Como alternativa, você pode adicioná-lo para um arquivo de navegador personalizado na pasta App_Browsers na raiz do aplicativo Web.  
+  
+```  
+<controlAdapters>  
+   <adapter controlType="AspNet.Samples.TestLabel"  
+   adapterType="AspNet.Samples.XhtmlTestLabelAdapter" />  
+</controlAdapters>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.IO.TextWriter" /> instância que renderiza o XHTML conteúdo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.XhtmlTextWriter" /> classe que usa o recuo de linha especificado no <see cref="F:System.Web.UI.HtmlTextWriter.DefaultTabString" /> campo. Use o <see cref="M:System.Web.UI.XhtmlTextWriter.#ctor(System.IO.TextWriter)" /> construtor se você não deseja alterar o recuo de linha padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.XhtmlTextWriter.%23ctor%2A> construtor que usa um <xref:System.IO.TextWriter> como o segundo construtor, passando os dois valores de parâmetro de chamada de um parâmetro de objeto:  
+  
+-   A instância <xref:System.IO.TextWriter>.  
+  
+-   O valor de cadeia de caracteres especificada no <xref:System.Web.UI.HtmlTextWriter.DefaultTabString> campo, que define o espaçamento de guia é usado pelo gravador de texto de XHTML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar dois construtores, que é o padrão para todas as classes que derivam direta ou indiretamente a <xref:System.Web.UI.HtmlTextWriter> para uma classe personalizada que é derivada da classe de <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample2#5](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/CS/customxhtmltextwriter.cs#5)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample2#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/VB/customxhtmltextwriter.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlTextWriter (System.IO.TextWriter writer, string tabString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string tabString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.#ctor(System.IO.TextWriter,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="tabString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.IO.TextWriter" /> instância que renderiza o XHTML conteúdo.</param>
+        <param name="tabString">A cadeia de caracteres usada para renderizar um recuo de linha.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.XhtmlTextWriter" /> classe com o recuo de linha especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar dois construtores, que é o padrão para todas as classes que derivam direta ou indiretamente a <xref:System.Web.UI.HtmlTextWriter> para uma classe personalizada que é derivada da classe de <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample2#5](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/CS/customxhtmltextwriter.cs#5)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample2#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/VB/customxhtmltextwriter.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRecognizedAttribute">
+      <MemberSignature Language="C#" Value="public virtual void AddRecognizedAttribute (string elementName, string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRecognizedAttribute(string elementName, string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.AddRecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XHTML para adicionar o atributo.</param>
+        <param name="attributeName">O atributo a ser adicionado.</param>
+        <summary>Adiciona um atributo a um elemento XHTML. A coleção de atributos específicos do elemento para o <see cref="T:System.Web.UI.XhtmlTextWriter" /> o objeto é referenciado pelo <see cref="P:System.Web.UI.XhtmlTextWriter.ElementSpecificAttributes" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.XhtmlTextWriter.AddRecognizedAttribute%2A> método para adicionar um atributo a um elemento XHTML. O atributo adicional pode ser reconhecido e processado pelo <xref:System.Web.UI.XhtmlTextWriter> objeto. Para impedir que o gravador de um atributo comum de um elemento XHTML, use o <xref:System.Web.UI.XhtmlTextWriter.RemoveRecognizedAttribute%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonAttributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable CommonAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable CommonAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.XhtmlTextWriter.CommonAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Hashtable" /> objeto que contém atributos comuns das marcas de marcação para o <see cref="T:System.Web.UI.XhtmlTextWriter" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Hashtable" /> objeto que contém atributos comuns.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.XhtmlTextWriter.CommonAttributes%2A> coleção contém atributos que são permitidos em elementos XHTML e que não são suprimidos no <xref:System.Web.UI.XhtmlTextWriter.SuppressCommonAttributes%2A> propriedade. Para obter mais informações sobre atributos comuns, consulte o [World Wide Web Consortium (W3C) Web site](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+ Quando uma nova instância do <xref:System.Web.UI.XhtmlTextWriter> classe é criada, os atributos comuns que são inicializados são:  
+  
+-   `class`  
+  
+-   `id`  
+  
+-   `title`  
+  
+-   `xml:lang`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementSpecificAttributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable ElementSpecificAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable ElementSpecificAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.XhtmlTextWriter.ElementSpecificAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Hashtable" /> objeto que contém atributos específicos do elemento.</summary>
+        <value>Um <see cref="T:System.Collections.Hashtable" /> objeto que contém atributos específicos do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.XhtmlTextWriter.AddRecognizedAttribute%2A> método para adicionar reconhecido atributos para um elemento XHTML. Para remover atributos comuns em um elemento XHTML, use o <xref:System.Web.UI.XhtmlTextWriter.RemoveRecognizedAttribute%2A> método.  
+  
+ Quando uma nova instância do <xref:System.Web.UI.XhtmlTextWriter> classe é criada, o <xref:System.Collections.Hashtable> objeto de atributos específicos do elemento é preenchido com os atributos mostrados na tabela a seguir.  
+  
+|Elemento|Atributos|  
+|-------------|----------------|  
+|`<a>`|`accesskey`, `href`, `charset`, `hreflang`, `rel`, `type`, `rev`, `title`, `tabindex`|  
+|`<base>`|`href`|  
+|`<blockquote>`|`cite`|  
+|`<br>`|`id`, `class`, `title`|  
+|`<form>`|`action`, `method`, `enctype`|  
+|`<head>`|`xml:lang`|  
+|`<html>`|`version`, `xml:lang`, `xmlns`|  
+|`<img>`|`src`, `alt`, `width`, `longdesc`, `height`|  
+|`<input>`|`size`, `accesskey`, `title`, `name`, `type`, `disabled`, `value`, `src`, `checked`, `maxlength`, `tabindex`|  
+|`<label>`|`accesskey`, `for`|  
+|`<li>`|`value`|  
+|`<link>`|`hreflang`, `rev`, `type`, `charset`, `rel`, `href`, `media`|  
+|`<meta>`|`content`, `name`, `xml:lang`, `http-equiv`, `scheme`|  
+|`<object>`|`codebase`, `classid`, `data`, `standby`, `name`, `type`, `height`, `archive`, `declare`, `width`, `tabindex`, `codetype`|  
+|`<ol>`|`start`|  
+|`<optgroup>`|`label`, `disabled`|  
+|`<option>`|`selected`, `value`|  
+|`<param>`|`id`, `name`, `valuetype`, `value`, `type`|  
+|`<pre>`|`xml:space`|  
+|`<q>`|`cite`|  
+|`<select>`|`name`, `tabindex`, `disabled`, `multiple`, `size`|  
+|`<style>`|`xml:lang`, `xml:space`, `type`, `title`, `media`|  
+|`<table>`|`width`, `summary`|  
+|`<textarea>`|`name`, `cols`, `accesskey`, `tabindex`, `rows`|  
+|`<td>`|`headers`, `align`, `rowspan`, `colspan`, `axis`, `scope`, `abbr`, `valign`|  
+|`<th>`|`headers`, `align`, `rowspan`, `colspan`, `axis`, `scope`, `abbr`, `valign`|  
+|`<title>`|`xml:lang`|  
+|`<tr>`|`align`, `valign`|  
+  
+ Para obter mais informações sobre os elementos e estilos que são processados, consulte a especificação de modularização XHTML no [World Wide Web Consortium (W3C) Web site](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidFormAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsValidFormAttribute (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValidFormAttribute(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.IsValidFormAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O nome de atributo para verificação.</param>
+        <summary>Verifica se um atributo XHTML para garantir que ele pode ser renderizado na marca de abertura de um <see langword="&lt;form&gt;" /> elemento.</summary>
+        <returns>
+          <see langword="true" />Se o atributo pode ser aplicado a um <see langword="&lt;form&gt;" /> elemento; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil para renderizar condicionalmente um atributo dependendo se é suportado pelo tipo de documento XHTML do dispositivo solicitante.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir faz parte de um exemplo maior que cria um personalizado <xref:System.Web.UI.WebControls.Label> controle e um adaptador que renderiza o conteúdo do controle como XHTML.  
+  
+ Este exemplo de código demonstra como criar uma variável booliana nomeada `attTest` e defina-o como o valor de retorno que é o resultado de chamar o <xref:System.Web.UI.XhtmlTextWriter.IsValidFormAttribute%2A> método com o valor do parâmetro "estilo". Se o <xref:System.Web.UI.XhtmlTextWriter.IsValidFormAttribute%2A> método `true`, os estilos que estão associados com o controle renderizados usando a <xref:System.Web.UI.HtmlTextWriter.EnterStyle%2A?displayProperty=nameWithType> e <xref:System.Web.UI.HtmlTextWriter.ExitStyle%2A?displayProperty=nameWithType> métodos. Se o `attTest` valor é `false`, os estilos não são renderizados. Em vez disso, a página exibe o texto do controle, uma `<br/>` elemento que é processado pelo <xref:System.Web.UI.XhtmlTextWriter.WriteBreak%2A> método e uma cadeia de caracteres de texto que informando ao usuário que o conteúdo XHTML do controle foi renderizado condicionalmente.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.XhtmlTextWriter_Sample1/cs/xhtmltextlabel.cs#3)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.XhtmlTextWriter_Sample1/VB/xhtmltestlabel.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAttributeRender">
+      <MemberSignature Language="C#" Value="protected override bool OnAttributeRender (string name, string value, System.Web.UI.HtmlTextWriterAttribute key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnAttributeRender(string name, string value, valuetype System.Web.UI.HtmlTextWriterAttribute key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.OnAttributeRender(System.String,System.String,System.Web.UI.HtmlTextWriterAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="name">O atributo XHTML para processar.</param>
+        <param name="value">O valor atribuído ao atributo XHTML.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterAttribute" /> associado ao atributo XHTML do valor de enumeração.</param>
+        <summary>Determina se o atributo XHTML especificado e seu valor podem ser renderizados para o elemento atual da marcação.</summary>
+        <returns>
+          <see langword="true" />Se o atributo é processado para a página. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> método para verificar se um `size` atributo é renderizado para qualquer um dos elementos que são processados por este gravador de texto. Se um `size` atributo é processado, o código verifica se o seu valor é 8 pontos. Nesse caso, o <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> método retorna `true`, permitindo que o atributo e seu valor para processar. Se o valor for diferente de 8 pontos, o <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> método retorna `false`, e o atributo e seu valor não são renderizados. Se o parâmetro de chave do <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> método não corresponde a <xref:System.Web.UI.HtmlTextWriterAttribute.Size> de atributo, a funcionalidade básica do <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> método é chamado, conforme definido no <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/CS/customxhtmltextwriter.cs#2)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/VB/customxhtmltextwriter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStyleAttributeRender">
+      <MemberSignature Language="C#" Value="protected override bool OnStyleAttributeRender (string name, string value, System.Web.UI.HtmlTextWriterStyle key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnStyleAttributeRender(string name, string value, valuetype System.Web.UI.HtmlTextWriterStyle key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.OnStyleAttributeRender(System.String,System.String,System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="name">O atributo de estilo XHTML para processar.</param>
+        <param name="value">O valor atribuído ao atributo de estilo XHTML.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> associado ao atributo de estilo XHTML do valor de enumeração.</param>
+        <summary>Determina se o atributo de estilo XHTML especificado e seu valor podem ser renderizados para o elemento atual da marcação.</summary>
+        <returns>
+          <see langword="true" />Se o atributo de estilo é processado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.XhtmlTextWriter.OnStyleAttributeRender%2A> método para verificar se um <xref:System.Web.UI.HtmlTextWriterStyle.Color> atributo está sendo processado por qualquer um dos elementos que são processados por este gravador de texto. Se um <xref:System.Web.UI.HtmlTextWriterStyle.Color> atributo é processado, o código verifica se o seu valor é roxo. Se o valor for roxo, o <xref:System.Web.UI.XhtmlTextWriter.OnStyleAttributeRender%2A> método `false` e o atributo e seu valor não são renderizados. Se o <xref:System.Web.UI.HtmlTextWriterStyle.Color> atributo é definido como qualquer outro valor, o <xref:System.Web.UI.XhtmlTextWriter.OnStyleAttributeRender%2A> método `true` e o atributo e seu valor são renderizados. Se o parâmetro de chave do <xref:System.Web.UI.XhtmlTextWriter.OnAttributeRender%2A> método não corresponde a <xref:System.Web.UI.HtmlTextWriterStyle.Color> de atributo, a funcionalidade básica do <xref:System.Web.UI.XhtmlTextWriter.OnStyleAttributeRender%2A> método é chamado, conforme definido no <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.XhtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.XhtmlTextWriter_Sample2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/CS/customxhtmltextwriter.cs#3)]
+ [!code-vb[System.Web.UI.XhtmlTextWriter_Sample2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/VB/customxhtmltextwriter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRecognizedAttribute">
+      <MemberSignature Language="C#" Value="public virtual void RemoveRecognizedAttribute (string elementName, string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveRecognizedAttribute(string elementName, string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.RemoveRecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XHTML para remover um atributo de.</param>
+        <param name="attributeName">O atributo para remover o elemento XHTML especificado.</param>
+        <summary>Remove um atributo do <see cref="P:System.Web.UI.XhtmlTextWriter.ElementSpecificAttributes" /> coleção de um elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDocType">
+      <MemberSignature Language="C#" Value="public virtual void SetDocType (System.Web.UI.XhtmlMobileDocType docType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDocType(valuetype System.Web.UI.XhtmlMobileDocType docType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.SetDocType(System.Web.UI.XhtmlMobileDocType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="docType" Type="System.Web.UI.XhtmlMobileDocType" />
+      </Parameters>
+      <Docs>
+        <param name="docType">Um dos valores de enumeração <see cref="T:System.Web.UI.XhtmlMobileDocType" />.</param>
+        <summary>Especifica o tipo de documento XHTML para o gravador de texto renderizar a página ou controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.XhtmlTextWriter.SetDocType%2A> método em um adaptador de página personalizado para definir o tipo de XHTML que você deseja processar a solicitação do dispositivo. Tipos de documento com suporte são definidos no <xref:System.Web.UI.XhtmlMobileDocType> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressCommonAttributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable SuppressCommonAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable SuppressCommonAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.XhtmlTextWriter.SuppressCommonAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Hashtable" /> o objeto de elementos para os quais <see cref="P:System.Web.UI.XhtmlTextWriter.CommonAttributes" /> atributos são suprimidos.</summary>
+        <value>Um <see cref="T:System.Collections.Hashtable" /> de elementos que contém uma coleção de <see cref="P:System.Web.UI.XhtmlTextWriter.CommonAttributes" /> que não são renderizados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção de atributos suprimido inclui uma lista de elementos XHTML para o qual <xref:System.Web.UI.XhtmlTextWriter.CommonAttributes%2A> atributos não são renderizados.  
+  
+ Quando uma nova instância do <xref:System.Web.UI.XhtmlTextWriter> classe é criada, o <xref:System.Collections.Hashtable> o objeto de elementos para os quais <xref:System.Web.UI.XhtmlTextWriter.CommonAttributes%2A> atributos são suprimidos inclui:  
+  
+-   `base`  
+  
+-   `meta`  
+  
+-   `br`  
+  
+-   `head`  
+  
+-   `title`  
+  
+-   `html`  
+  
+-   `style`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBreak">
+      <MemberSignature Language="C#" Value="public override void WriteBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XhtmlTextWriter.WriteBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava um <see langword="&lt;br/&gt;" /> fluxo de saída do elemento para XHTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o herdadas <xref:System.Web.UI.HtmlTextWriter.BeginRender%2A?displayProperty=nameWithType> método para gravar uma cadeia de caracteres de texto com o <xref:System.Web.UI.HtmlTextWriter.Write%2A?displayProperty=nameWithType> método e uma `<br/>` elemento com o <xref:System.Web.UI.XhtmlTextWriter.WriteBreak%2A> método.  
+  
+ [!code-csharp[system.web.ui.xhtmltextwriter_sample2#4](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/CS/customxhtmltextwriter.cs#4)]
+ [!code-vb[system.web.ui.xhtmltextwriter_sample2#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.xhtmltextwriter_Sample2/VB/customxhtmltextwriter.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

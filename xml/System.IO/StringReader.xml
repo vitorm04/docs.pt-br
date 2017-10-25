@@ -1,0 +1,788 @@
+<Type Name="StringReader" FullName="System.IO.StringReader">
+  <TypeSignature Language="C#" Value="public class StringReader : System.IO.TextReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StringReader extends System.IO.TextReader" />
+  <TypeSignature Language="DocId" Value="T:System.IO.StringReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.TextReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um <see cref="T:System.IO.TextReader" /> lido de uma cadeia de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.StringReader>permite que você leia uma cadeia de caracteres de forma síncrona ou assíncrona. Você pode ler um caractere por vez com o <xref:System.IO.StringReader.Read%2A> ou <xref:System.IO.StringReader.ReadAsync%2A> método, uma linha em uma hora usando o <xref:System.IO.StringReader.ReadLine%2A> ou o <xref:System.IO.StringReader.ReadLineAsync%2A> método e uma cadeia de caracteres inteira usando o <xref:System.IO.StringReader.ReadToEnd%2A> ou o <xref:System.IO.StringReader.ReadToEndAsync%2A> método.  
+  
+[!INCLUDE[note_unnecessary_dispose](~/includes/note-unnecessary-dispose.md)]
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anexar texto em um arquivo.|[Como abrir e acrescentar a um arquivo de log](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obter os atributos de um arquivo.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Defina os atributos de um arquivo.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Determine se existe um arquivo.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Leitura de um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Grave em um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ler uma cadeia de caracteres inteira de forma assíncrona.  
+  
+ [!code-csharp[System.IO.StringReader#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.stringreader/cs/example2.cs#2)]
+ [!code-vb[System.IO.StringReader#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.stringreader/vb/example2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringReader (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres para a qual o <see cref="T:System.IO.StringReader" /> deve ser inicializado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StringReader" /> que lê da cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anexar texto em um arquivo.|[Como abrir e acrescentar a um arquivo de log](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obter os atributos de um arquivo.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Defina os atributos de um arquivo.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Determine se existe um arquivo.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Leitura de um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Grave em um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.StringReader> classe.  
+  
+ [!code-cpp[System.IO.StringReaderWriter#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StringReaderWriter/CPP/stringrw.cpp#2)]
+ [!code-csharp[System.IO.StringReaderWriter#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StringReaderWriter/CS/stringrw.cs#2)]
+ [!code-vb[System.IO.StringReaderWriter#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StringReaderWriter/VB/stringrw.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="s" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o <see cref="T:System.IO.StringReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter um exemplo de criação de um arquivo e gravar texto em um arquivo, consulte [como: gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md). Para obter um exemplo de texto de leitura de um arquivo, consulte [como: ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md). Para obter um exemplo de leitura e gravação em um arquivo binário, consulte [como: ler e gravar um recentemente criado arquivo de dados](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md).  
+  
+ Esse método substitui o <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> método.  
+  
+ Essa implementação de `Close` chama o <xref:System.IO.StringReader.Dispose%2A> método passando um `true` valor.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente `Close`. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+ Após uma chamada para `Close`, outros métodos podem lançar uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.IO.StringReader" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.StringReader> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.StringReader.Dispose(System.Boolean)" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see cref="M:System.IO.StringReader.Dispose(System.Boolean)" />, tenha cuidado em não para referenciar objetos que foi descartados anteriormente em uma chamada anterior para <see cref="M:System.IO.StringReader.Dispose(System.Boolean)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="public override int Peek ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Peek() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.Peek" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o próximo caractere disponível, mas não o consome.</summary>
+        <returns>Um inteiro que representa o próximo caractere a ser lido, ou -1 se não houver mais caracteres disponíveis ou o fluxo não oferece suporte a busca.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.StringReader.Peek%2A> método retorna um valor inteiro para determinar se o final do arquivo ou outro erro ocorreu. Isso permite que um usuário pela primeira vez, verifique se o valor retornado será -1 antes de convertê-la para um <xref:System.Char> tipo.  
+  
+ Esse método substitui o <xref:System.IO.TextReader.Peek%2A?displayProperty=nameWithType> método.  
+  
+ A posição atual do `StringReader` não é alterado por essa operação.  
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O leitor atual está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o próximo caractere da cadeia de caracteres de entrada e avança a posição do caractere em um caractere.</summary>
+        <returns>O próximo caractere da cadeia de caracteres subjacente ou -1 se nenhum outro caractere estiver disponível.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.IO.TextReader.Read%2A?displayProperty=nameWithType> método.  
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anexar texto em um arquivo.|[Como abrir e acrescentar a um arquivo de log](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obter os atributos de um arquivo.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Defina os atributos de um arquivo.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Determine se existe um arquivo.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Leitura de um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Grave em um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.StringReader> classe.  
+  
+ [!code-cpp[System.IO.StringReaderWriter#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StringReaderWriter/CPP/stringrw.cpp#3)]
+ [!code-csharp[System.IO.StringReaderWriter#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StringReaderWriter/CS/stringrw.cs#3)]
+ [!code-vb[System.IO.StringReaderWriter#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StringReaderWriter/VB/stringrw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O leitor atual está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.Read(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Quando este método retorna, contém a matriz de caractere especificado com os valores entre <c>índice</c> e (<c>índice</c> + <c>contagem</c> - 1) substituídos pelos caracteres ler da origem atual.</param>
+        <param name="index">O índice inicial no buffer.</param>
+        <param name="count">O número de caracteres a serem lidos.</param>
+        <summary>Lê um bloco de caracteres da cadeia de caracteres da entrada e avança a posição do caractere em <paramref name="count" />.</summary>
+        <returns>O número total de caracteres lidos no buffer. Ele poderá ser menor que o número de caracteres solicitado se esse número de caracteres não estiver disponível no momento, ou zero se a cadeia de caracteres subjacente for atingida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.TextReader.Read%2A?displayProperty=nameWithType>.  
+  
+ O método lerá até `count` caracteres da <xref:System.IO.StringReader> para o `buffer` matriz de caracteres começando na posição `index`. Retorna o número real de caracteres de leitura, ou zero se foi atingido o fim da cadeia de caracteres e caracteres não são de leitura.  
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anexar texto em um arquivo.|[Como abrir e acrescentar a um arquivo de log](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obter os atributos de um arquivo.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Defina os atributos de um arquivo.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Determine se existe um arquivo.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Leitura de um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Grave em um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O leitor atual está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.ReadAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Quando este método retorna, contém a matriz de caractere especificado com os valores entre <c>índice</c> e (<c>índice</c> + <c>contagem</c> - 1) substituídos pelos caracteres ler da origem atual.</param>
+        <param name="index">A posição na <c>buffer</c> no qual começar a escrever.</param>
+        <param name="count">O número máximo de caracteres a serem lidos. Se o fim da cadeia de caracteres for atingido antes que o número especificado de caracteres é gravado no buffer, o método retorna.</param>
+        <summary>Lê um número máximo de caracteres da atual cadeia de forma assíncrona e grava os dados em um buffer, iniciando no índice especificado.</summary>
+        <returns>Uma tarefa que representa a operação de leitura assíncrona. O valor do parâmetro <paramref name="TResult" /> contém o número total de bytes lidos no buffer. O valor do resultado pode ser menor que o número de bytes solicitado se o número de bytes disponíveis atualmente é menor que o número solicitado, ou pode ser 0 (zero) se o fim da cadeia de caracteres foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tarefa é concluída após um número de caracteres especificado pelo `count` parâmetro são lidas ou o final da cadeia de caracteres é atingido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ler os primeiro 23 caracteres de uma cadeia de forma assíncrona.  
+  
+ [!code-csharp[System.IO.StringReader#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.stringreader/cs/example1.cs#1)]
+ [!code-vb[System.IO.StringReader#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.stringreader/vb/example1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="index" /> e <paramref name="count" /> é maior que o tamanho do buffer.</exception>
+        <exception cref="T:System.ObjectDisposedException">O leitor de cadeia de caracteres foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O leitor está sendo usado no momento por uma operação de leitura anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBlockAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadBlockAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadBlockAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.ReadBlockAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Quando este método retorna, contém a matriz de caractere especificado com os valores entre <c>índice</c> e (<c>índice</c> + <c>contagem</c> - 1) substituídos pelos caracteres ler da origem atual.</param>
+        <param name="index">A posição na <c>buffer</c> no qual começar a escrever.</param>
+        <param name="count">O número máximo de caracteres a serem lidos. Se o fim da cadeia de caracteres for atingido antes que o número especificado de caracteres é gravado no buffer, o método retorna.</param>
+        <summary>Lê um número máximo de caracteres da atual cadeia de forma assíncrona e grava os dados em um buffer, iniciando no índice especificado.</summary>
+        <returns>Uma tarefa que representa a operação de leitura assíncrona. O valor do parâmetro <paramref name="TResult" /> contém o número total de bytes lidos no buffer. O valor do resultado pode ser menor que o número de bytes solicitado se o número de bytes disponíveis atualmente é menor que o número solicitado, ou pode ser 0 (zero) se o fim da cadeia de caracteres foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tarefa não for concluída até que o número de caracteres especificado pelo `count` parâmetro são lidas ou foi atingido o fim da cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="index" /> e <paramref name="count" /> é maior que o tamanho do buffer.</exception>
+        <exception cref="T:System.ObjectDisposedException">O leitor de cadeia de caracteres foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O leitor está sendo usado no momento por uma operação de leitura anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLine">
+      <MemberSignature Language="C#" Value="public override string ReadLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ReadLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.ReadLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê uma linha de caracteres da cadeia de caracteres atual e retorna os dados como uma cadeia de caracteres.</summary>
+        <returns>A próxima linha da cadeia de caracteres atual, ou <see langword="null" />, se o final da cadeia de caracteres for atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.IO.TextReader.ReadLine%2A?displayProperty=nameWithType> método.  
+  
+ Uma linha é definida como uma cadeia de caracteres, seguido por uma linha de feed ("\n"), um retorno ("\r") ou um retorno de carro imediatamente seguido por uma linha de alimentação ("\r\n"). A cadeia de caracteres que é retornada não contém o retorno de carro de terminação ou uma alimentação de linha. O valor retornado é `null` se tiver sido alcançado o final da cadeia de caracteres.  
+  
+ Se o método atual gera um <xref:System.OutOfMemoryException>, a posição do leitor na cadeia de caracteres subjacente é adiantada pelo número de caracteres que o método foi capaz de ler, mas os caracteres já lidos no interno <xref:System.IO.StringReader.ReadLine%2A> buffer são descartadas. Como a posição do leitor na cadeia de caracteres não pode ser alterada, os caracteres leitura já estão irrecuperáveis e pode ser acessados somente por reinicializar a <xref:System.IO.StringReader>. Para evitar essa situação, use o <xref:System.IO.StringReader.Read%2A> método e o repositório de leitura caracteres em um buffer pré-alocados.  
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anexar texto em um arquivo.|[Como abrir e acrescentar a um arquivo de log](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obter os atributos de um arquivo.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Defina os atributos de um arquivo.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Determine se existe um arquivo.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Leitura de um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Grave em um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.StringReader> classe.  
+  
+ [!code-cpp[System.IO.StringReaderWriter#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StringReaderWriter/CPP/stringrw.cpp#2)]
+ [!code-csharp[System.IO.StringReaderWriter#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StringReaderWriter/CS/stringrw.cs#2)]
+ [!code-vb[System.IO.StringReaderWriter#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StringReaderWriter/VB/stringrw.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O leitor atual está fechado.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para alocar um buffer à cadeia de caracteres retornada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;string&gt; ReadLineAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; ReadLineAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.ReadLineAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê uma linha de caracteres assincronamente da cadeia de caracteres atual e retorna os dados como uma cadeia de caracteres.</summary>
+        <returns>Uma tarefa que representa a operação de leitura assíncrona. O valor do parâmetro <paramref name="TResult" /> contém a próxima linha do leitor de cadeia de caracteres ou <see langword="null" /> se todos os caracteres tiverem sido lidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como ler uma linha em vez de uma cadeia de forma assíncrona.  
+  
+ [!code-csharp[System.IO.StringReader#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.stringreader/cs/example3.cs#3)]
+ [!code-vb[System.IO.StringReader#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.stringreader/vb/example3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O número de caracteres na próxima linha é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O leitor de cadeia de caracteres foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O leitor está sendo usado no momento por uma operação de leitura anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToEnd">
+      <MemberSignature Language="C#" Value="public override string ReadToEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ReadToEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.ReadToEnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê todos os caracteres da posição atual até o final da cadeia de caracteres e os retorna como uma única cadeia de caracteres.</summary>
+        <returns>O conteúdo da posição atual até o final da cadeia de caracteres subjacente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.IO.TextReader.ReadToEnd%2A?displayProperty=nameWithType> método.  
+  
+ Se o método atual gera um <xref:System.OutOfMemoryException>, a posição do leitor na cadeia de caracteres subjacente é adiantada pelo número de caracteres que o método foi capaz de ler, mas os caracteres já lidos no interno <xref:System.IO.StringReader.ReadToEnd%2A> buffer são descartadas. Como a posição do leitor na cadeia de caracteres não pode ser alterada, os caracteres leitura já estão irrecuperáveis e pode ser acessados somente por reinicializar a <xref:System.IO.StringReader>. Para evitar essa situação, use o <xref:System.IO.StringReader.Read%2A> método e o repositório de leitura caracteres em um buffer pré-alocados.  
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anexar texto em um arquivo.|[Como abrir e acrescentar a um arquivo de log](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Obter o tamanho de um arquivo.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obter os atributos de um arquivo.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Defina os atributos de um arquivo.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Determine se existe um arquivo.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Leitura de um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Grave em um arquivo binário.|[Como ler e gravar em um arquivo de dados recém-criado](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.TextReader> classe.  
+  
+ [!code-cpp[System.IO.TextReaderWriter#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.TextReaderWriter/CPP/textrw.cpp#5)]
+ [!code-csharp[System.IO.TextReaderWriter#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.TextReaderWriter/CS/textrw.cs#5)]
+ [!code-vb[System.IO.TextReaderWriter#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.TextReaderWriter/VB/textrw.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para alocar um buffer à cadeia de caracteres retornada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O leitor atual está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToEndAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;string&gt; ReadToEndAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; ReadToEndAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StringReader.ReadToEndAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê todos os caracteres da posição atual até o final da cadeia de caracteres de forma assíncrona e os retorna como uma única cadeia de caracteres.</summary>
+        <returns>Uma tarefa que representa a operação de leitura assíncrona. O valor do parâmetro <paramref name="TResult" /> contém uma cadeia de caracteres com os caracteres da posição atual até o final da cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como ler uma cadeia de caracteres inteira de forma assíncrona.  
+  
+ [!code-csharp[System.IO.StringReader#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.stringreader/cs/example2.cs#2)]
+ [!code-vb[System.IO.StringReader#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.stringreader/vb/example2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O número de caracteres é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O leitor de cadeia de caracteres foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O leitor está sendo usado no momento por uma operação de leitura anterior.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

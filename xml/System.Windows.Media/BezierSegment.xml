@@ -1,0 +1,316 @@
+<Type Name="BezierSegment" FullName="System.Windows.Media.BezierSegment">
+  <TypeSignature Language="C#" Value="public sealed class BezierSegment : System.Windows.Media.PathSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BezierSegment extends System.Windows.Media.PathSegment" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.BezierSegment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.PathSegment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma curva de Bézier cúbica desenhada entre dois pontos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.Windows.Media.PathFigure> objeto para armazenar <xref:System.Windows.Media.BezierSegment> objetos e outros segmentos.  
+  
+ Uma curva cúbica de Bezier é definida por quatro pontos: um ponto inicial, um ponto final (<xref:System.Windows.Media.BezierSegment.Point3%2A>), e dois pontos de controle (<xref:System.Windows.Media.BezierSegment.Point1%2A> e <xref:System.Windows.Media.BezierSegment.Point2%2A>). O <xref:System.Windows.Media.BezierSegment> classe não contém uma propriedade para o ponto de partida da curva; ela somente define o ponto de extremidade. O ponto de início da curva é o ponto atual do <xref:System.Windows.Media.PathFigure> para que o <xref:System.Windows.Media.BezierSegment> é adicionado.  
+  
+ Os dois pontos de controle de uma curva cúbica de Bezier se comportam como atração nossa atrair partes do que seria uma linha reta em direção a mesmos e produzindo uma curva. O primeiro ponto de controle, <xref:System.Windows.Media.BezierSegment.Point1%2A>, afeta o início parte da curva; o segundo ponto de controle, <xref:System.Windows.Media.BezierSegment.Point2%2A>, afeta a parte final da curva. Observe que a curva necessariamente não passa por qualquer um dos pontos de controle; cada ponto de controle move sua parte da linha de para si mesmo, mas não por meio de si mesmo.  
+  
+## <a name="freezable-features"></a>Recursos congeláveis  
+ Um <xref:System.Windows.Media.BezierSegment> é um tipo de <xref:System.Windows.Freezable> objeto. Para obter informações sobre <xref:System.Windows.Freezable> recursos, como congelamento e clonagem, consulte o [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BezierSegment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.BezierSegment" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma curva cúbica de Bezier é definida por quatro pontos: um ponto inicial, um ponto final (`point3`), e dois pontos de controle (`point1` e `point2`). Esse método permite que você especifique o ponto inicial da curva; a curva começa no ponto atual do <xref:System.Windows.Media.PathFigure> objeto ao qual o <xref:System.Windows.Media.BezierSegment> é adicionado.  
+  
+ Os dois pontos de controle de uma curva cúbica de Bezier se comportam como atração nossa atrair partes do que seria uma linha reta em direção a mesmos e produzindo uma curva. O primeiro ponto de controle, `point1`, afeta o início parte da curva; o segundo ponto de controle, `point2`, afeta a parte final da curva. Observe que a curva necessariamente não passa por qualquer um dos pontos de controle; cada ponto de controle move sua parte da linha de para si mesmo, mas não por meio de si mesmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BezierSegment (System.Windows.Point point1, System.Windows.Point point2, System.Windows.Point point3, bool isStroked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2, valuetype System.Windows.Point point3, bool isStroked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.#ctor(System.Windows.Point,System.Windows.Point,System.Windows.Point,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+        <Parameter Name="point3" Type="System.Windows.Point" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point1">O primeiro ponto de controle, que determina a parte inicial da curva.</param>
+        <param name="point2">O segundo ponto de controle, que determina a parte final da curva.</param>
+        <param name="point3">O ponto em que a curva é desenhada.</param>
+        <param name="isStroked">
+          <see langword="true" />para traçar a curva quando um <see cref="T:System.Windows.Media.Pen" /> é usado para renderizar o segmento; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.BezierSegment" /> classe com os pontos de controle especificado, o ponto de extremidade e a opção de traço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma curva cúbica de Bezier é definida por quatro pontos: um ponto inicial, um ponto final (`point3`), e dois pontos de controle (`point1` e `point2`). Esse método permite que você especifique o ponto inicial da curva; a curva começa no ponto atual do <xref:System.Windows.Media.PathFigure> objeto ao qual o <xref:System.Windows.Media.BezierSegment> é adicionado.  
+  
+ Os dois pontos de controle de uma curva cúbica de Bezier se comportam como atração nossa atrair partes do que seria uma linha reta em direção a mesmos e produzindo uma curva. O primeiro ponto de controle, `point1`, afeta o início parte da curva; o segundo ponto de controle, `point2`, afeta a parte final da curva. Observe que a curva necessariamente não passa por qualquer um dos pontos de controle; cada ponto de controle move sua parte da linha de para si mesmo, mas não por meio de si mesmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BezierSegment Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.BezierSegment Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.BezierSegment" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BezierSegment CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.BezierSegment CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.BezierSegment" />, fazendo cópias em profundidade dos valores do objeto atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point1">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point1 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.BezierSegment.Point1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o primeiro ponto de controle da curva.</summary>
+        <value>O primeiro ponto de controle da curva.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dois pontos de controle de uma curva cúbica de Bezier se comportam como atração nossa atrair partes do que seria uma linha reta em direção a mesmos e produzindo uma curva. O primeiro ponto de controle, <xref:System.Windows.Media.BezierSegment.Point1%2A>, afeta o início parte da curva; o segundo ponto de controle, <xref:System.Windows.Media.BezierSegment.Point2%2A>, afeta a parte final da curva. Observe que a curva necessariamente não passa por qualquer um dos pontos de controle; cada ponto de controle move sua parte da linha de para si mesmo, mas não por meio de si mesmo.  
+  
+<a name="dependencyPropertyInfo_Point1"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.BezierSegment.Point1Property>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point1Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point1Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point1Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BezierSegment.Point1Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.BezierSegment.Point1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point2">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.BezierSegment.Point2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o segundo ponto de controle da curva.</summary>
+        <value>O segundo ponto de controle da curva.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dois pontos de controle de uma curva cúbica de Bezier se comportam como atração nossa atrair partes do que seria uma linha reta em direção a mesmos e produzindo uma curva. O primeiro ponto de controle, <xref:System.Windows.Media.BezierSegment.Point1%2A>, afeta o início parte da curva; o segundo ponto de controle, <xref:System.Windows.Media.BezierSegment.Point2%2A>, afeta a parte final da curva. Observe que a curva necessariamente não passa por qualquer um dos pontos de controle; cada ponto de controle move sua parte da linha de para si mesmo, mas não por meio de si mesmo.  
+  
+<a name="dependencyPropertyInfo_Point2"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.BezierSegment.Point2Property>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point2Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point2Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point2Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BezierSegment.Point2Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.BezierSegment.Point2" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point3">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point3 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point3" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.BezierSegment.Point3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto de extremidade da curva.</summary>
+        <value>O ponto de extremidade da curva.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.BezierSegment> classe não contém uma propriedade para o ponto de partida da curva; ela somente define o ponto de extremidade. O ponto de início da curva é o ponto atual do <xref:System.Windows.Media.PathFigure> para que o <xref:System.Windows.Media.BezierSegment> é adicionado.  
+  
+<a name="dependencyPropertyInfo_Point3"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.BezierSegment.Point3Property>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point3Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point3Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point3Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BezierSegment.Point3Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.BezierSegment.Point3" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

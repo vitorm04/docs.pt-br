@@ -1,0 +1,90 @@
+<Type Name="CreateUserErrorEventArgs" FullName="System.Web.UI.WebControls.CreateUserErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class CreateUserErrorEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CreateUserErrorEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CreateUserErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.CreateUserWizard.CreateUserError" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.CreateUserWizard.CreateUserError> evento é gerado quando uma tentativa de criar um novo usuário com o <xref:System.Web.UI.WebControls.CreateUserWizard> controlar falhar. O <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs> classe fornece a <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError%2A> propriedade para indicar o <xref:System.Web.Security.MembershipCreateStatus> valor de enumeração que corresponde ao erro que ocorreu.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, quando o <xref:System.Web.UI.WebControls.CreateUserWizard.CreateUserError> é gerado, o <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError%2A> propriedade o <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs> objeto é exibido em um <xref:System.Web.UI.WebControls.Label> controle, `Label1`, para fornecer informações sobre por que o <xref:System.Web.UI.WebControls.CreateUserWizard.CreateUserError> evento ocorreu.  
+  
+ [!code-csharp[System.Web.UI.WebControls.CreateUserErrorEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CreateUserErrorEventArgs/CS/createuserwizarderror.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.CreateUserErrorEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CreateUserErrorEventArgs/VB/createuserwizarderror.vb#2)]  
+  
+ Este é o arquivo. aspx que pode ser usado para executar o exemplo anterior.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.CreateUserErrorEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CreateUserErrorEventArgs/CS/createuserwizarderrorcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.CreateUserErrorEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CreateUserErrorEventArgs/VB/createuserwizarderrorvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateUserErrorEventArgs (System.Web.Security.MembershipCreateStatus s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Security.MembershipCreateStatus s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserErrorEventArgs.#ctor(System.Web.Security.MembershipCreateStatus)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.Security.MembershipCreateStatus" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.Security.MembershipCreateStatus" /> objeto que descreve o resultado de uma <see cref="Overload:System.Web.Security.Membership.CreateUser" /> tentativa.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CreateUserErrorEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserError">
+      <MemberSignature Language="C#" Value="public System.Web.Security.MembershipCreateStatus CreateUserError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Security.MembershipCreateStatus CreateUserError" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipCreateStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o resultado de uma <see cref="E:System.Web.UI.WebControls.CreateUserWizard.CreatingUser" /> eventos.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.Security.MembershipCreateStatus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError%2A> propriedade indica a <xref:System.Web.Security.MembershipCreateStatus> valor de enumeração que corresponde ao erro que ocorreu durante o <xref:System.Web.UI.WebControls.CreateUserWizard.CreatingUser> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.UI.WebControls.CreateUserWizard.CreateUserError> evento para exibir o <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError%2A> valor de propriedade em uma <xref:System.Web.UI.WebControls.Label> controle, `Label1`. Para um arquivo. aspx que pode ser usado para executar o exemplo, consulte o <xref:System.Web.UI.WebControls.CreateUserErrorEventArgs> tópico.  
+  
+ [!code-csharp[System.Web.UI.WebControls.CreateUserErrorEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.CreateUserErrorEventArgs/CS/createuserwizarderror.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.CreateUserErrorEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.CreateUserErrorEventArgs/VB/createuserwizarderror.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

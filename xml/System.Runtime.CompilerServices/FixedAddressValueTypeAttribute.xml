@@ -1,0 +1,84 @@
+<Type Name="FixedAddressValueTypeAttribute" FullName="System.Runtime.CompilerServices.FixedAddressValueTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FixedAddressValueTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FixedAddressValueTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Corrige o endereço de um campo de tipo de valor estático durante seu tempo de vida. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> como fixado no momento da criação de tipos de atributo para marcar o valor estático.  
+  
+ Este atributo é usado pelo compilador do Microsoft Visual C++.  
+  
+ Campos de tipo de valor estático são criados como objetos box. Isso significa que seu endereço pode alterar como a coleta de lixo é executada. Quando você aplica esse atributo para um tipo de valor estático, seu endereço permanece constante durante sua vida útil.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> atributo para fixar um campo estático na memória. Define uma `Age` estrutura e inicializa duas classes que têm campos estáticos de tipo `Age`. Aplica-se a segunda classe <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> para fixar o endereço do campo. Um número de alocações de memória é feito antes e depois que esses dois objetos são instanciados e o coletor de lixo é invocado. A saída do exemplo mostra que, embora o endereço do primeiro `Age` campo foi alterado após a coleta de lixo, o endereço do campo para o qual <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> é aplicado não.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.FixedAddressValueTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.fixedaddressvaluetypeattribute/cs/example1.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FixedAddressValueTypeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> atributo para fixar um campo estático na memória. Define uma `Age` estrutura e inicializa duas classes que têm campos estáticos de tipo `Age`. Aplica-se a segunda classe <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> para fixar o endereço do campo. Um número de alocações de memória é feito antes e depois que esses dois objetos são instanciados e o coletor de lixo é invocado. A saída do exemplo mostra que, embora o endereço do primeiro `Age` campo foi alterado após a coleta de lixo, o endereço do campo para o qual <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> é aplicado não.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.FixedAddressValueTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.fixedaddressvaluetypeattribute/cs/example1.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

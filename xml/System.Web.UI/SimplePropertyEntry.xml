@@ -1,0 +1,85 @@
+<Type Name="SimplePropertyEntry" FullName="System.Web.UI.SimplePropertyEntry">
+  <TypeSignature Language="C#" Value="public class SimplePropertyEntry : System.Web.UI.PropertyEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SimplePropertyEntry extends System.Web.UI.PropertyEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.SimplePropertyEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.PropertyEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a definição da propriedade de controle e seu valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.SimplePropertyEntry> classe representa propriedades simples ou as propriedades que não são coleções. O <xref:System.Web.UI.ComplexPropertyEntry> classe representa tipos complexos, como coleções.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="PersistedValue">
+      <MemberSignature Language="C#" Value="public string PersistedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PersistedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.SimplePropertyEntry.PersistedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a representação de cadeia de caracteres formatada da entrada de propriedade.</summary>
+        <value>Um <see cref="T:System.String" /> pertencentes à entrada de propriedade.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseSetAttribute">
+      <MemberSignature Language="C#" Value="public bool UseSetAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSetAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.SimplePropertyEntry.UseSetAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="M:System.Web.UI.IAttributeAccessor.SetAttribute(System.String,System.String)" /> método deve ser chamado para a propriedade durante a criação de código.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.Web.UI.IAttributeAccessor.SetAttribute(System.String,System.String)" /> deve ser chamado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.SimplePropertyEntry.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da entrada de propriedade.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém o valor da entrada de propriedade.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

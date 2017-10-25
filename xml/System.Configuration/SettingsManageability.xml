@@ -1,0 +1,49 @@
+<Type Name="SettingsManageability" FullName="System.Configuration.SettingsManageability">
+  <TypeSignature Language="C#" Value="public enum SettingsManageability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SettingsManageability extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsManageability" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Fornece valores para indicar quais serviços devem ser disponibilizados para configurações de aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ttribute é usado para aplicar as propriedades de configurações de aplicativos individuais e grupos de propriedades para indicar que serviços predefinidos especiais devem ser fornecidas para eles. O <xref:System.Configuration.SettingsManageabilityAttribute> enumeração lista os serviços que estão disponíveis. A maioria desses serviços será fornecida pelo sistema operacional Windows.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Roaming">
+      <MemberSignature Language="C#" Value="Roaming" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.SettingsManageability Roaming = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.SettingsManageability.Roaming" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsManageability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite que as configurações de aplicativo a ser armazenado em perfis de usuário móvel. Para obter mais informações sobre perfis de usuário móvel, consulte [armazenamento isolado e Roaming](http://msdn.microsoft.com/en-us/d3cca593-4521-408d-b323-ea398d226de3).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

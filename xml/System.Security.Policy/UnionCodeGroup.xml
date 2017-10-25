@@ -1,0 +1,208 @@
+<Type Name="UnionCodeGroup" FullName="System.Security.Policy.UnionCodeGroup">
+  <TypeSignature Language="C#" Value="public sealed class UnionCodeGroup : System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit UnionCodeGroup extends System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.UnionCodeGroup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.CodeGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um grupo de código instrução cuja política é a união de política do grupo de códigos atual e a declaração de política de todos os seus filhos código grupos correspondentes. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grupos de código são blocos de construção de política de segurança de acesso do código. Cada nível de política consiste em um grupo de códigos de raiz que pode ter grupos de códigos filho (e assim por diante), formando uma árvore. Cada grupo de código tem uma condição de associação que determina se um determinado assembly pertence a ele ou não, com base na evidência de assembly. Somente os grupos de códigos cujas condições de associação correspondem a um determinado assembly e seus grupos de códigos filho aplicam a política.  
+  
+ <xref:System.Security.Policy.UnionCodeGroup>é o tipo mais comum de grupo de código; a declaração de política de todos os grupos de códigos filho correspondentes (e, por extensão seus grupos de códigos filho) são combinados com o conjunto de permissões do grupo de código pai correspondente. Portanto, se corresponder a sua condição de associação, este grupo de códigos forma a união de sua declaração de política e de todos os seus grupos de código filho que também correspondem a evidência.  
+  
+ <xref:System.Security.Policy.UnionCodeGroup>grupos de código são os grupos de código criados pelo utilitário CASPOL (consulte [Caspol.exe (ferramenta de política de segurança de acesso do código)](~/docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnionCodeGroup (System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Policy.IMembershipCondition membershipCondition, class System.Security.Policy.PolicyStatement policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.UnionCodeGroup.#ctor(System.Security.Policy.IMembershipCondition,System.Security.Policy.PolicyStatement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="membershipCondition" Type="System.Security.Policy.IMembershipCondition" />
+        <Parameter Name="policy" Type="System.Security.Policy.PolicyStatement" />
+      </Parameters>
+      <Docs>
+        <param name="membershipCondition">Uma condição de associação que testa a evidência para determinar se este grupo de códigos se aplica a política.</param>
+        <param name="policy">A declaração de política para o grupo de códigos na forma de um conjunto de permissões e os atributos conceder ao código que corresponde à condição de associação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.UnionCodeGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um grupo de código básico e deve ser chamado a partir de construtores de grupos de código personalizado. Você pode adicionar grupos de códigos filho usando o <xref:System.Security.Policy.CodeGroup.AddChild%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo do <paramref name="membershipCondition" /> parâmetro não é válido.  
+  
+ -ou-  
+  
+ O tipo do <paramref name="policy" /> parâmetro não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.UnionCodeGroup.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz uma cópia em profundidade do grupo de código atual.</summary>
+        <returns>Uma cópia equivalente do grupo de código atual, incluindo suas condições de associação e os grupos de códigos filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz uma cópia em profundidade do grupo de código, para que também são feitas cópias de todos os objetos que contém o grupo de códigos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeLogic">
+      <MemberSignature Language="C#" Value="public override string MergeLogic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MergeLogic" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.UnionCodeGroup.MergeLogic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lógica de mesclagem.</summary>
+        <value>Sempre a cadeia de caracteres "Union".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.PolicyStatement Resolve (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.PolicyStatement Resolve(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.UnionCodeGroup.Resolve(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Resolve a política para o grupo de códigos e seus descendentes de um conjunto de evidência.</summary>
+        <returns>Uma instrução de política consiste as permissões concedidas pelo grupo de código com atributos opcionais, ou <see langword="null" /> se o grupo de códigos não se aplica (a condição de associação não corresponde a evidência especificada).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna uma instrução de política para o grupo de código, incluindo avaliação do filho de grupos de código.  
+  
+ Para grupos de códigos de união, todos os grupos de códigos filho cuja condição corresponde a evidência também são resolvidos e todas as instruções de políticas resultante formam uma união com a declaração de política de grupo de códigos de união pai. Cada tipo de grupo de códigos filho determina como os seus grupos filhos são aplicados, dependendo de como suas respectivas <xref:System.Security.Policy.UnionCodeGroup.Resolve%2A> métodos funcionam.  
+  
+ O sistema de segurança do .NET Framework usa <xref:System.Security.Policy.UnionCodeGroup.Resolve%2A> nos níveis de política para determinar quais permissões conceder ao código carregado das instruções de políticas resultante e o código de solicitação no assembly.  
+  
+ Se a condição de associação não coincide com a evidência especificada, este método retorna `null`; caso contrário, ele define o conjunto de permissões a ser retornado (P) igual a declaração da política do grupo de códigos e, em seguida, continua. Para cada grupo de códigos filho, o método resolve o grupo de códigos com a mesma evidência; Se o resultado não é `null`, ele define P igual a união de P e a declaração da política do grupo de códigos filho. Ele então retorna P, que agora é a união de declaração da política do grupo de códigos atual e todas as declarações de política de grupo filho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="evidence" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Policy.PolicyException">Mais de um grupo de código (incluindo o grupo de códigos pai e os grupos de código filhos) está marcado como <see cref="F:System.Security.Policy.PolicyStatementAttribute.Exclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMatchingCodeGroups">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.UnionCodeGroup.ResolveMatchingCodeGroups(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Resolve os grupos de códigos de correspondência.</summary>
+        <returns>O conjunto completo de grupos de códigos que corresponderam a evidência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna um código de grupo raiz. O grupo de código que é retornado pode conter grupos de códigos filho, que, por sua vez, também podem conter grupos de códigos filho, para que o valor de retorno reflete o conjunto completo de grupos de códigos que corresponderam a evidência fornecida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="evidence" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

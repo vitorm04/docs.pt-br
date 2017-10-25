@@ -1,0 +1,86 @@
+<Type Name="DetailsViewMode" FullName="System.Web.UI.WebControls.DetailsViewMode">
+  <TypeSignature Language="C#" Value="public enum DetailsViewMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DetailsViewMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa os modos diferentes de entrada de dados de um <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DetailsViewMode> enumeração é usada para representar os modos de entrada de dados de um <xref:System.Web.UI.WebControls.DetailsView> controle. Para determinar o modo atual do controle, use o <xref:System.Web.UI.WebControls.DetailsView.CurrentMode%2A> propriedade. Depois de uma operação de inserção ou atualização, o <xref:System.Web.UI.WebControls.DetailsView> o controle retorna ao modo especificado pelo <xref:System.Web.UI.WebControls.DetailsView.DefaultMode%2A> propriedade. Por padrão, o controle retorna para o modo somente leitura. Você pode especificar um modo alternativo para retornar ao definindo o <xref:System.Web.UI.WebControls.DetailsView.DefaultMode%2A> propriedade. Para alterar os modos programaticamente, use o <xref:System.Web.UI.WebControls.DetailsView.ChangeMode%2A> método. Quando o <xref:System.Web.UI.WebControls.DetailsView> controle altera os modos, os eventos na tabela a seguir são gerados.  
+  
+|Evento|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.DetailsView.ModeChanging>|Ocorre quando um <xref:System.Web.UI.WebControls.DetailsView> controle tenta alterar entre o modo somente leitura, inserir e editar, mas antes que o modo for alterado. Esse evento geralmente é usado para cancelar uma alteração de modo.|  
+|<xref:System.Web.UI.WebControls.DetailsView.ModeChanged>|Ocorre após um <xref:System.Web.UI.WebControls.DetailsView> controle mudou de edição, inserção ou modo somente leitura em um outro modo. Esse evento geralmente é usado para executar uma tarefa quando o <xref:System.Web.UI.WebControls.DetailsView> modos de alterações do controle.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como manter o <xref:System.Web.UI.WebControls.DetailsView> controle no modo de edição depois de uma operação de atualização definindo o <xref:System.Web.UI.WebControls.DetailsView.DefaultMode%2A> propriedade `DetailsViewMode.Edit`.  
+  
+ [!code-aspx-csharp[DetailsViewDefaultMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDefaultMode/CS/detailsviewdefaultmodecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDefaultMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDefaultMode/VB/detailsviewdefaultmodevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="Edit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DetailsViewMode Edit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DetailsViewMode.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DetailsViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo de edição que permite ao usuário atualizar os valores de um registro existente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DetailsViewMode Insert = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DetailsViewMode.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DetailsViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo de inserção que permite que o usuário insira os valores para um novo registro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DetailsViewMode ReadOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DetailsViewMode.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DetailsViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo de exibição que impede que o usuário modifique os valores de um registro.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

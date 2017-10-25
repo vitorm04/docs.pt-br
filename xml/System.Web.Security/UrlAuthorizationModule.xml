@@ -1,0 +1,185 @@
+<Type Name="UrlAuthorizationModule" FullName="System.Web.Security.UrlAuthorizationModule">
+  <TypeSignature Language="C#" Value="public sealed class UrlAuthorizationModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UrlAuthorizationModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.UrlAuthorizationModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verifica se o usuário tem permissão para acessar a URL solicitada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.UrlAuthorizationModule> determina se o usuário atual tem permissão acesso para a URL solicitada, com base no usuário <xref:System.Security.Principal.IIdentity.Name%2A> ou a lista de funções que um usuário é membro. Para obter informações sobre como o nome de usuário é determinado, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Para obter informações sobre como gerenciar funções de usuário, consulte [Gerenciando autorização usando funções](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195).  
+  
+ A autorização para um usuário ou uma função é gerenciada usando o elemento de configuração. Você pode permitir ou negar a um usuário ou uma função usando o `allow` ou `deny` subelementos, respectivamente. O `allow` e `deny` subelementos são interpretados na ordem em que aparecem na configuração. Depois que um elemento Especifica que o acesso é permitido ou negado, o <xref:System.Web.Security.UrlAuthorizationModule> concluir sua verificação de autorização. Por exemplo, a seção a seguir de um arquivo Web. config requer que os usuários façam logon (negando a usuários anônimos) e, em seguida, permite que somente usuários na função de administradores tenham acesso. Os usuários não da função de administradores são negados.  
+  
+```  
+<authorization>  
+  <deny users="?" />  
+  <allow roles="Administrators" />  
+  <deny users="*" />  
+</authorization>  
+```  
+  
+ Um usuário ou função deve ser negada especificamente para recusar o usuário ou a permissão de função para uma URL. Ou seja, se o exemplo anterior não especificou o `<deny users="*" />` elemento e, em seguida, todos os usuários autenticados seriam ter tido acesso à URL solicitada, independentemente de qual função fossem um membro de.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir concede acesso a Kim e membros da função de administradores, negando-o a John e a todos os usuários anônimos.  
+  
+```  
+<authorization>  
+  <allow users="Kim"/>  
+  <allow roles="Admins"/>  
+  <deny users="John"/>  
+  <deny users="?"/>  
+</authorization>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlAuthorizationModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.UrlAuthorizationModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.Security.UrlAuthorizationModule" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser chamado no código do aplicativo.  
+  
+ ASP.NET chama este construtor para criar uma instância do <xref:System.Web.Security.UrlAuthorizationModule> classe. Depois de chamar o construtor, ele chama o <xref:System.Web.Security.UrlAuthorizationModule.Init%2A> método para inicializar o novo <xref:System.Web.Security.UrlAuthorizationModule> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckUrlAccessForPrincipal">
+      <MemberSignature Language="C#" Value="public static bool CheckUrlAccessForPrincipal (string virtualPath, System.Security.Principal.IPrincipal user, string verb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CheckUrlAccessForPrincipal(string virtualPath, class System.Security.Principal.IPrincipal user, string verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.UrlAuthorizationModule.CheckUrlAccessForPrincipal(System.String,System.Security.Principal.IPrincipal,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="user" Type="System.Security.Principal.IPrincipal" />
+        <Parameter Name="verb" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para o arquivo.</param>
+        <param name="user">Um <see cref="T:System.Security.Principal.IPrincipal" /> objeto representando o usuário atual.</param>
+        <param name="verb">O verbo HTTP usado para fazer a solicitação.</param>
+        <summary>Determina se o usuário tem acesso ao arquivo solicitado.</summary>
+        <returns>
+          <see langword="true" />Se o usuário atual pode acessar o arquivo. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.UrlAuthorizationModule.CheckUrlAccessForPrincipal%2A> método verifica se o usuário atual será concedido acesso ao arquivo solicitado no arquivo Web. config para o aplicativo.  
+  
+ Se o verbo HTTP usado para fazer a solicitação é `GET`, `POST`, ou `HEAD`, o <xref:System.Web.Security.UrlAuthorizationModule.CheckUrlAccessForPrincipal%2A> método verifica para acesso de leitura para o arquivo. Se qualquer outro verbo for usado, o <xref:System.Web.Security.UrlAuthorizationModule.CheckUrlAccessForPrincipal%2A> verifica o acesso de leitura/gravação para o arquivo.  
+  
+ Para obter mais informações e um exemplo de arquivo Web. config, consulte o <xref:System.Web.Security.UrlAuthorizationModule> documentação de classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="virtualPath" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="user" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="verb" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" /> está fora do caminho raiz do aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.UrlAuthorizationModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos, que não seja a memória usada pelo <see cref="T:System.Web.Security.UrlAuthorizationModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.UrlAuthorizationModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">A instância <see cref="T:System.Web.HttpApplication" /> atual.</param>
+        <summary>Inicializa o objeto <see cref="T:System.Web.Security.UrlAuthorizationModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.Security.UrlAuthorizationModule.Init%2A> método garante que o <xref:System.Web.Security.UrlAuthorizationModule> está incluído no processamento das <xref:System.Web.HttpApplication.AuthorizeRequest> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

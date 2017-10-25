@@ -1,0 +1,848 @@
+<Type Name="ExportProvider" FullName="System.ComponentModel.Composition.Hosting.ExportProvider">
+  <TypeSignature Language="C#" Value="public abstract class ExportProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExportProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.ExportProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Recupera as exportações que correspondem a um objeto <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> especificado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExportProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs&gt; ExportsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs&gt; ExportsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Composition.Hosting.ExportProvider.ExportsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando as exportações no <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> alterar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportsChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs&gt; ExportsChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs&gt; ExportsChanging" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Composition.Hosting.ExportProvider.ExportsChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando as exportações fornecidas estão alterando.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExport&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public Lazy&lt;T&gt; GetExport&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Lazy`1&lt;!!T&gt; GetExport&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExport``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Lazy&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo de <see cref="T:System.Lazy`1" /> objeto a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <summary>Retorna a exportação com o nome do contrato derivado do parâmetro de tipo especificado. Caso não haja exatamente uma exportação correspondente, uma exceção é lançada.</summary>
+        <returns>A exportação com o nome do contrato deriva o parâmetro de tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há zero <see cref="T:System.Lazy`1" /> objetos com o nome do contrato derivam de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.  
+  
+ -ou-  
+  
+ Há mais de um <see cref="T:System.Lazy`1" /> derivado do objeto com o nome do contrato <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExport&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public Lazy&lt;T&gt; GetExport&lt;T&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Lazy`1&lt;!!T&gt; GetExport&lt;T&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExport``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Lazy&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo de <see cref="T:System.Lazy`1" /> objeto a ser retornado.</typeparam>
+        <param name="contractName">O nome do contrato do <see cref="T:System.Lazy`1" /> objeto a ser retornado, ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Retorna a exportação com o nome do contrato especificado. Caso não haja exatamente uma exportação correspondente, uma exceção é lançada.</summary>
+        <returns>A exportação com o nome do contrato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há zero <see cref="T:System.Lazy`1" /> objetos com o nome do contrato derivam de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.  
+  
+ -ou-  
+  
+ Há mais de um <see cref="T:System.Lazy`1" /> derivado do objeto com o nome do contrato <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExport&lt;T,TMetadataView&gt;">
+      <MemberSignature Language="C#" Value="public Lazy&lt;T,TMetadataView&gt; GetExport&lt;T,TMetadataView&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Lazy`2&lt;!!T, !!TMetadataView&gt; GetExport&lt;T, TMetadataView&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExport``2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Lazy&lt;T,TMetadataView&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+        <TypeParameter Name="TMetadataView" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo de <see cref="T:System.Lazy`2" /> objeto a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <typeparam name="TMetadataView">O tipo de exibição de metadados do <see cref="T:System.Lazy`2" /> objeto a ser retornado.</typeparam>
+        <summary>Retorna a exportação com o nome do contrato derivado do parâmetro de tipo especificado. Caso não haja exatamente uma exportação correspondente, uma exceção é lançada.</summary>
+        <returns>System.Lazy'2</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há zero <see cref="T:System.Lazy`2" /> objetos com o nome do contrato derivam de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.  
+  
+ -ou-  
+  
+ Há mais de um <see cref="T:System.Lazy`2" /> derivado do objeto com o nome do contrato <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="TMetadataView" /> não é um tipo de exibição de metadados válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExport&lt;T,TMetadataView&gt;">
+      <MemberSignature Language="C#" Value="public Lazy&lt;T,TMetadataView&gt; GetExport&lt;T,TMetadataView&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Lazy`2&lt;!!T, !!TMetadataView&gt; GetExport&lt;T, TMetadataView&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExport``2(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Lazy&lt;T,TMetadataView&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+        <TypeParameter Name="TMetadataView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo de <see cref="T:System.Lazy`2" /> objeto a ser retornado.</typeparam>
+        <typeparam name="TMetadataView">O tipo de exibição de metadados do <see cref="T:System.Lazy`2" /> objeto a ser retornado.</typeparam>
+        <param name="contractName">O nome do contrato do <see cref="T:System.Lazy`2" /> objeto a ser retornado, ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Retorna a exportação com o nome do contrato especificado. Caso não haja exatamente uma exportação correspondente, uma exceção é lançada.</summary>
+        <returns>A exportação com o nome do contrato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há zero <see cref="T:System.Lazy`2" /> objetos com o nome do contrato derivam de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.  
+  
+ -ou-  
+  
+ Há mais de um <see cref="T:System.Lazy`2" /> derivado do objeto com o nome do contrato <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> objeto.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="TMetadataView" /> não é um tipo de exibição de metadados válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetExportedValue&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetExportedValue&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValue``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo do objeto exportado a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <summary>Retorna o objeto exportado com o nome do contrato derivado do parâmetro de tipo especificado. Se não houver exatamente um objeto exportado correspondente, uma exceção será gerada.</summary>
+        <returns>O objeto exportado com o nome do contrato derivado do parâmetro de tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há zero objetos exportados com o nome do contrato derivado de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.  
+  
+ -ou-  
+  
+ Há mais de um objeto exportado com o nome do contrato derivado de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">O objeto exportado subjacente não pode ser convertido em <paramref name="T" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção de erros ocorridos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetExportedValue&lt;T&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetExportedValue&lt;T&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValue``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo do objeto exportado a ser retornado.</typeparam>
+        <param name="contractName">O nome do contrato do objeto exportado a ser retornado, <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Retorna o objeto exportado com o nome do contrato especificado. Se não houver exatamente um objeto exportado correspondente, uma exceção será gerada.</summary>
+        <returns>O objeto exportado com o nome do contrato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há zero objetos exportados com o nome do contrato derivado de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.  
+  
+ -ou-  
+  
+ Há mais de um objeto exportado com o nome do contrato derivado de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">O objeto exportado subjacente não pode ser convertido em <paramref name="T" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção de erros ocorridos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValueOrDefault&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetExportedValueOrDefault&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetExportedValueOrDefault&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValueOrDefault``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo do objeto exportado a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <summary>Obtém o objeto exportado com o nome do contrato derivado do parâmetro de tipo especificado ou o valor padrão para o tipo especificado ou gera uma exceção se houver mais de um objeto exportado correspondente.</summary>
+        <returns>O objeto exportado com o nome do contrato derivado de <paramref name="T" />, se encontrado; caso contrário, o valor padrão para <paramref name="T" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto exportado não for encontrado, esse método retorna o valor padrão apropriado para `T`; por exemplo, zero para tipos de inteiros, `false` para tipos boolianos, e `null` para tipos de referência.  
+  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há mais de um objeto exportado com o nome do contrato derivado de <paramref name="T" /> no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">O objeto exportado subjacente não pode ser convertido em <paramref name="T" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção de erros ocorridos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValueOrDefault&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetExportedValueOrDefault&lt;T&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetExportedValueOrDefault&lt;T&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValueOrDefault``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo do objeto exportado a ser retornado.</typeparam>
+        <param name="contractName">O nome do contrato do objeto exportado a ser retornado, <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Obtém o objeto exportado com o nome do contrato especificado ou o valor padrão para o tipo especificado ou gera uma exceção se houver mais de um objeto exportado correspondente.</summary>
+        <returns>Nome do objeto exportado com o contrato especificado, se encontrado; Caso contrário, o valor padrão para <paramref name="T" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto exportado não for encontrado, esse método retorna o valor padrão apropriado para `T`; por exemplo, zero para tipos de inteiros, `false` para tipos boolianos, e `null` para tipos de referência.  
+  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">Há mais de um objeto exportado com o nome de contrato especificado no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">O objeto exportado subjacente não pode ser convertido em <paramref name="T" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção de erros ocorridos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValues&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; GetExportedValues&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; GetExportedValues&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValues``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo do objeto exportado a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <summary>Obtém os objetos exportados com o nome do contrato derivado do parâmetro de tipo especificado.</summary>
+        <returns>Os objetos exportados com o nome do contrato derivado do parâmetro de tipo especificado, se encontrado; Caso contrário, vazio <see cref="T:System.Collections.ObjectModel.Collection`1" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">Um ou mais dos objetos subjacentes exportados não podem ser convertido em <paramref name="T" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção de erros ocorridos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValues&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; GetExportedValues&lt;T&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; GetExportedValues&lt;T&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValues``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo do objeto exportado a ser retornado.</typeparam>
+        <param name="contractName">O nome do contrato dos objetos exportados para retornar; ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Obtém todos os objetos exportados com o nome do contrato especificado.</summary>
+        <returns>Nome, os objetos exportados com o contrato especificado, se for encontrado; Caso contrário, vazio <see cref="T:System.Collections.ObjectModel.Collection`1" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">Um ou mais dos valores exportados subjacentes não podem ser convertido em <paramref name="T" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção de erros ocorridos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; GetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; GetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">O objeto que define as condições dos objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> a serem obtidas.</param>
+        <summary>Obtém todas as exportações que correspondem às condições da definição de importação especificada.</summary>
+        <returns>Uma coleção de todos os objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que correspondem à condição especificada por <paramref name="definition" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">
+          <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" /> e não há nenhum objeto <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que corresponde às condições do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> especificado.  
+  
+ -ou-  
+  
+ <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne" /> ou <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" /> e há mais de um objeto <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que corresponde às condições do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> especificado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; GetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; GetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition,System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">O objeto que define as condições dos objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> a serem obtidas.</param>
+        <param name="atomicComposition">O contêiner transacional para a composição.</param>
+        <summary>Obtém todas as exportações que correspondem às condições da definição de importação especificado e composição.</summary>
+        <returns>Uma coleção de todos os <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos que correspondem à condição especificada <paramref name="definition" /> e <paramref name="atomicComposition" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.Composition.ImportCardinalityMismatchException">
+          <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" /> e não há nenhum objeto <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que corresponde às condições do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> especificado.  
+  
+ -ou-  
+  
+ <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne" /> ou <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" /> e há mais de um objeto <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que corresponde às condições do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> especificado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="atomicComposition" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Lazy&lt;object,object&gt;&gt; GetExports (Type type, Type metadataViewType, string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`2&lt;object, object&gt;&gt; GetExports(class System.Type type, class System.Type metadataViewType, string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports(System.Type,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;System.Object,System.Object&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="metadataViewType" Type="System.Type" />
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O parâmetro de tipo dos objetos <see cref="T:System.Lazy`2" /> a ser retornado.</param>
+        <param name="metadataViewType">O tipo de exibição de metadados do <see cref="T:System.Lazy`2" /> objetos a serem retornadas.</param>
+        <param name="contractName">O nome do contrato do <see cref="T:System.Lazy`2" /> objeto a ser retornado, ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Obtém todas as exportações com o nome de contrato especificado.</summary>
+        <returns>Uma coleção de todos os <see cref="T:System.Lazy`2" /> objetos para o contrato correspondente <paramref name="contractName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `type`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="metadataViewType" /> não é um tipo de exibição de metadados válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Lazy&lt;T&gt;&gt; GetExports&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`1&lt;!!T&gt;&gt; GetExports&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo dos objetos <see cref="T:System.Lazy`1" /> a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <summary>Obtém todas as exportações com o nome do contrato derivado do parâmetro de tipo especificado.</summary>
+        <returns>Os objetos <see cref="T:System.Lazy`1" /> com o nome do contrato derivado de <paramref name="T" />, se encontrado, caso contrário, um objeto <see cref="T:System.Collections.Generic.IEnumerable`1" /> vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Lazy&lt;T&gt;&gt; GetExports&lt;T&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`1&lt;!!T&gt;&gt; GetExports&lt;T&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo dos objetos <see cref="T:System.Lazy`1" /> a ser retornado.</typeparam>
+        <param name="contractName">O nome do contrato do <see cref="T:System.Lazy`1" /> objetos a serem retornadas, ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Obtém todas as exportações com o nome de contrato especificado.</summary>
+        <returns>O <see cref="T:System.Lazy`1" /> nomes de objetos com o contrato especificado, se encontrado; caso contrário, vazio <see cref="T:System.Collections.Generic.IEnumerable`1" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports&lt;T,TMetadataView&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Lazy&lt;T,TMetadataView&gt;&gt; GetExports&lt;T,TMetadataView&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`2&lt;!!T, !!TMetadataView&gt;&gt; GetExports&lt;T, TMetadataView&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;T,TMetadataView&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+        <TypeParameter Name="TMetadataView" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo dos objetos <see cref="T:System.Lazy`2" /> a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <typeparam name="TMetadataView">O tipo de exibição de metadados do <see cref="T:System.Lazy`2" /> objetos a serem retornadas.</typeparam>
+        <summary>Obtém todas as exportações com o nome do contrato derivado do parâmetro de tipo especificado.</summary>
+        <returns>Os objetos <see cref="T:System.Lazy`2" /> com o nome do contrato derivado de <paramref name="T" />, se encontrado, caso contrário, um objeto <see cref="T:System.Collections.Generic.IEnumerable`1" /> vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="TMetadataView" /> não é um tipo de exibição de metadados válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports&lt;T,TMetadataView&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Lazy&lt;T,TMetadataView&gt;&gt; GetExports&lt;T,TMetadataView&gt; (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`2&lt;!!T, !!TMetadataView&gt;&gt; GetExports&lt;T, TMetadataView&gt;(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``2(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;T,TMetadataView&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+        <TypeParameter Name="TMetadataView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O parâmetro de tipo dos objetos <see cref="T:System.Lazy`2" /> a ser retornado. O nome do contrato também deriva desse parâmetro de tipo.</typeparam>
+        <typeparam name="TMetadataView">O tipo de exibição de metadados do <see cref="T:System.Lazy`2" /> objetos a serem retornadas.</typeparam>
+        <param name="contractName">O nome do contrato do <see cref="T:System.Lazy`2" /> objetos a serem retornadas, ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Obtém todas as exportações com o nome de contrato especificado.</summary>
+        <returns>O <see cref="T:System.Lazy`2" /> objetos com o nome de contrato especificado se for localizado; caso contrário, vazio <see cref="T:System.Collections.Generic.IEnumerable`1" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `T`.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="TMetadataView" /> não é um tipo de exibição de metadados válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportsCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExportsCore(System.ComponentModel.Composition.Primitives.ImportDefinition,System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">O objeto que define as condições do <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos a serem retornadas.</param>
+        <param name="atomicComposition">O contêiner transacional para a composição.</param>
+        <summary>Obtém todas as exportações que correspondem à restrição especificada pela definição de especificado.</summary>
+        <returns>Uma coleção que contém todas as exportações que correspondem à condição especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições desse método não devem tratar incompatibilidades de cardinalidade como erros e não deverão gerar exceções nesses casos. Por exemplo, se <xref:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality%2A> é <xref:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne> e há zero <xref:System.ComponentModel.Composition.Primitives.Export> objetos que correspondem às condições do <xref:System.ComponentModel.Composition.Primitives.ImportDefinition>, vazio <xref:System.Collections.Generic.IEnumerable%601> coleção deve ser retornada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnExportsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnExportsChanged (System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnExportsChanged(class System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.OnExportsChanged(System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Composition.Hosting.ExportProvider.ExportsChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnExportsChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnExportsChanging (System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnExportsChanging(class System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.OnExportsChanging(System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Composition.Hosting.ExportProvider.ExportsChanging" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetExports">
+      <MemberSignature Language="C#" Value="public bool TryGetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition, out System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; exports);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition, [out] class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt;&amp; exports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportProvider.TryGetExports(System.ComponentModel.Composition.Primitives.ImportDefinition,System.ComponentModel.Composition.Hosting.AtomicComposition,System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.Export}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+        <Parameter Name="exports" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="definition">O objeto que define as condições dos objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> a serem obtidas.</param>
+        <param name="atomicComposition">O contêiner transacional para a composição.</param>
+        <param name="exports">Quando este método retorna, contém uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos que correspondem às condições definidas pelo <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />, se encontrado; caso contrário, vazio <see cref="T:System.Collections.Generic.IEnumerable`1" /> objeto. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém todas as exportações que correspondem às condições da importação especificada.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne" /> ou <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrMore" /> e há zero <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos que correspondem às condições do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />; <see langword="true" /> se <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne" /> ou <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" /> e há exatamente um <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que corresponde às condições de especificado <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

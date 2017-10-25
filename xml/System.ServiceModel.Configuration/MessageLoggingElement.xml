@@ -1,0 +1,277 @@
+<Type Name="MessageLoggingElement" FullName="System.ServiceModel.Configuration.MessageLoggingElement">
+  <TypeSignature Language="C#" Value="public sealed class MessageLoggingElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageLoggingElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.MessageLoggingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento XML que define as configurações para os recursos de log de mensagens do Windows Communication Foundation (WCF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageLoggingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MessageLoggingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.MessageLoggingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XPathMessageFilterElementCollection Filters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XPathMessageFilterElementCollection Filters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.Filters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("filters", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XPathMessageFilterElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os objetos de XPathFilter que são usados para o log de mensagem.</summary>
+        <value>Uma coleção de objetos XPathFilter que são usados para o log de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Filtros de mensagem são aplicados no nível de serviço e transporte. Quando um ou mais filtros são definidos, apenas as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passam.  
+  
+ Os filtros oferece suporte a sintaxe completa do XPath e são aplicados na ordem em que aparecem no arquivo de configuração. Um filtro sintaticamente incorreto resulta em uma exceção de configuração.  
+  
+   
+  
+## Examples  
+ Este é um exemplo de configuração de um filtro que registra apenas as mensagens que têm uma seção de cabeçalho SOAP.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogEntireMessage">
+      <MemberSignature Language="C#" Value="public bool LogEntireMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogEntireMessage" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.LogEntireMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("logEntireMessage", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se a mensagem inteira (cabeçalho e corpo) é registrada.</summary>
+        <value>
+          <see langword="true" />Se a mensagem inteira (cabeçalho e corpo) é registrada em log. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />, que significa que somente o cabeçalho da mensagem é registrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa configuração afeta todos os níveis de log de mensagem (serviço, transporte e malformado).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogKnownPii">
+      <MemberSignature Language="C#" Value="public bool LogKnownPii { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogKnownPii" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.LogKnownPii" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("logKnownPii", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o identificador de Pii conhecido está conectado.</summary>
+        <value>
+          <see langword="true" />Se o Pii conhecido é registrada em log. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMalformedMessages">
+      <MemberSignature Language="C#" Value="public bool LogMalformedMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogMalformedMessages" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.LogMalformedMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("logMalformedMessages", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se as mensagens malformadas são registradas.</summary>
+        <value>
+          <see langword="true" />Se as mensagens malformadas são registradas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessagesAtServiceLevel">
+      <MemberSignature Language="C#" Value="public bool LogMessagesAtServiceLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogMessagesAtServiceLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.LogMessagesAtServiceLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("logMessagesAtServiceLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se as mensagens são rastreadas no nível de serviço (antes da criptografia e transformações relacionadas de transporte).</summary>
+        <value>
+          <see langword="true" />Se as mensagens são rastreadas no nível de serviço (antes da criptografia e transformações relacionadas de transporte); Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessagesAtTransportLevel">
+      <MemberSignature Language="C#" Value="public bool LogMessagesAtTransportLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogMessagesAtTransportLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.LogMessagesAtTransportLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("logMessagesAtTransportLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se as mensagens são rastreadas no nível do transporte.</summary>
+        <value>
+          <see langword="true" />Se as mensagens são rastreadas no nível do transporte; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os filtros especificados no arquivo de configuração são aplicados e somente as mensagens que correspondem aos filtros são rastreadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMessagesToLog">
+      <MemberSignature Language="C#" Value="public int MaxMessagesToLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMessagesToLog" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.MaxMessagesToLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxMessagesToLog", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o número máximo de mensagens a serem registradas.</summary>
+        <value>O número máximo de mensagens a serem registradas. O padrão é 1000.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSizeOfMessageToLog">
+      <MemberSignature Language="C#" Value="public int MaxSizeOfMessageToLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSizeOfMessageToLog" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.MaxSizeOfMessageToLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxSizeOfMessageToLog", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o tamanho máximo, em bytes, de uma mensagem a gravar em log.</summary>
+        <value>O tamanho máximo, em bytes, de uma mensagem para registrar. Mensagens maiores do que o limite não são registradas em log. Essa configuração afeta todos os níveis de rastreamento. O padrão é Int32.MaxValue.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageLoggingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

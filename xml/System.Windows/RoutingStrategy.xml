@@ -1,0 +1,73 @@
+<Type Name="RoutingStrategy" FullName="System.Windows.RoutingStrategy">
+  <TypeSignature Language="C#" Value="public enum RoutingStrategy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RoutingStrategy extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RoutingStrategy" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a estratégia de roteamento de um evento roteado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estratégia de roteamento para cada evento roteado deve ser apenas um destes valores. No entanto, eventos de entrada, geralmente, existem em pares de classes base, em que um evento é a versão de bolha e um evento é a versão de túnel. Para eventos de entrada com exclusividade, as versões de túnel e bolha compartilharam argumentos e são geradas em sucessão em resposta à condição de dispositivo de entrada que gera os eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bubble">
+      <MemberSignature Language="C#" Value="Bubble" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.RoutingStrategy Bubble = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.RoutingStrategy.Bubble" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O evento roteado usa uma estratégia de propagação, em que a instância do evento roteia para baixo por meio da árvore, do elemento de origem até a raiz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Direct">
+      <MemberSignature Language="C#" Value="Direct" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.RoutingStrategy Direct = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.RoutingStrategy.Direct" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O evento roteado não roteia por meio de uma árvore de elementos, mas dá suporte a outros recursos de evento roteado como a manipulação de classe, <see cref="T:System.Windows.EventTrigger" /> ou <see cref="T:System.Windows.EventSetter" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tunnel">
+      <MemberSignature Language="C#" Value="Tunnel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.RoutingStrategy Tunnel = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.RoutingStrategy.Tunnel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O evento roteado usa uma estratégia de túnel, em que a instância do evento roteia para baixo por meio da árvore, da raiz até o elemento de origem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

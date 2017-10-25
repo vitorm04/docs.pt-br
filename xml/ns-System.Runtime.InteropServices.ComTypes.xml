@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.InteropServices.ComTypes">
+  <Docs>
+    <summary>O namespace comtypes contém tipos gerenciados que correspondem aos tipos usados pelo COM interop.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

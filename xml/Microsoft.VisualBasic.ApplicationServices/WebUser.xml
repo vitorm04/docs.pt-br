@@ -1,0 +1,92 @@
+<Type Name="WebUser" FullName="Microsoft.VisualBasic.ApplicationServices.WebUser">
+  <TypeSignature Language="C#" Value="public class WebUser : Microsoft.VisualBasic.ApplicationServices.User" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebUser extends Microsoft.VisualBasic.ApplicationServices.User" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.WebUser" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.ApplicationServices.User</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso às informações sobre o usuário atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades e métodos expostos pelo `My.User` objeto fornece acesso às informações sobre o usuário atual. O significado de "usuário atual" difere ligeiramente entre aplicativos Windows e Web. Em um aplicativo do Windows, o usuário atual é o usuário que executa o aplicativo. Em um aplicativo Web, o usuário atual é o usuário que acessa o aplicativo.  
+  
+ O `My.User` propriedade também fornece acesso a <xref:System.Security.Principal.IPrincipal> para o usuário atual. Um objeto principal representa o contexto de segurança do usuário, incluindo a identidade do usuário e quaisquer funções aos quais o usuário pertence.  
+  
+ Para aplicativos do Windows, esta propriedade fornece a mesma funcionalidade que o <xref:System.Threading.Thread.CurrentPrincipal%2A> propriedade. Para aplicativos Web, esta propriedade fornece a mesma funcionalidade que o <xref:System.Web.HttpContext.User%2A> propriedade do objeto retornado pelo <xref:System.Web.HttpContext.Current%2A> propriedade.  
+  
+> [!NOTE]
+>  Para aplicativos do Windows, somente os projetos criados **aplicativo do Windows** modelo inicializar o `My.User` objeto por padrão. Em todos os outros tipos de projeto do Windows, você deverá inicializar o `My.User` objeto chamando o <xref:Microsoft.VisualBasic.ApplicationServices.User.InitializeWithWindowsUser%2A> método explicitamente ou atribuindo um valor para <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
+  
+> [!NOTE]
+>  O `My.User` objeto não pode relatar informações sobre o usuário atual do Windows, quando executado no Windows 95 e Windows 98, pois esses sistemas operacionais não suportam o conceito de um usuário conectado. Você deve implementar a autenticação personalizada para usar o `My.User` objeto nesses sistemas operacionais.  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o aplicativo está usando o Windows ou a autenticação personalizada e usa essas informações para analisar o `My.User.Name` propriedade.  
+  
+ [!code-vb[VbVbalrMyUser#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.WebUser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.ApplicationServices.WebUser" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades e métodos expostos pelo `My.User` objeto fornece acesso às informações sobre o usuário atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalPrincipal">
+      <MemberSignature Language="C#" Value="protected override System.Security.Principal.IPrincipal InternalPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal InternalPrincipal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.WebUser.InternalPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto principal que representa o usuário atual.</summary>
+        <value>Um <see cref="T:System.Security.Principal.IPrincipal" /> objeto representando o usuário atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No <xref:Microsoft.VisualBasic.ApplicationServices.WebUser> de objeto, essa propriedade é quebrada a <xref:System.Web.HttpContext.User%2A> propriedade o <xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType> propriedade.  
+  
+ Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

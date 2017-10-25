@@ -1,0 +1,297 @@
+<Type Name="SoapHeaderCollection" FullName="System.Web.Services.Protocols.SoapHeaderCollection">
+  <TypeSignature Language="C#" Value="public class SoapHeaderCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapHeaderCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeaderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de instâncias de <see cref="T:System.Web.Services.Protocols.SoapHeader" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection/CPP/SoapHeaderCollection.cpp#1)]
+ [!code-csharp[SoapHeaderCollection#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection/CS/soapheadercollection.cs#1)]
+ [!code-vb[SoapHeaderCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection/VB/soapheadercollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Protocols.SoapHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Protocols.SoapHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.Add(System.Web.Services.Protocols.SoapHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Web.Services.Protocols.SoapHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">O <see cref="T:System.Web.Services.Protocols.SoapHeader" /> para adicionar ao <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</param>
+        <summary>Adiciona um <see cref="T:System.Web.Services.Protocols.SoapHeader" /> para o <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</summary>
+        <returns>A posição na qual a <see cref="T:System.Web.Services.Protocols.SoapHeader" /> foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection#3](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection/CPP/SoapHeaderCollection.cpp#3)]
+ [!code-csharp[SoapHeaderCollection#3](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection/CS/soapheadercollection.cs#3)]
+ [!code-vb[SoapHeaderCollection#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection/VB/soapheadercollection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Protocols.SoapHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Protocols.SoapHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.Contains(System.Web.Services.Protocols.SoapHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Web.Services.Protocols.SoapHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">O <see cref="T:System.Web.Services.Protocols.SoapHeader" /> a ser localizado no <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" /> contém um determinado <see cref="T:System.Web.Services.Protocols.SoapHeader" />.</summary>
+        <returns>
+          <see langword="true" />Se o valor da <paramref name="header" /> parâmetro é encontrado na <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection_Contains#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CPP/SoapHeaderCollection_Contains.cpp#1)]
+ [!code-csharp[SoapHeaderCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CS/soapheadercollection_contains.cs#1)]
+ [!code-vb[SoapHeaderCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection_Contains/VB/soapheadercollection_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Protocols.SoapHeader[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Protocols.SoapHeader[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.CopyTo(System.Web.Services.Protocols.SoapHeader[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Protocols.SoapHeader[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero no <c>matriz</c> parâmetro no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" /> para um <see cref="T:System.Array" />, a partir de um determinado índice da <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection#5](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection/CPP/SoapHeaderCollection.cpp#5)]
+ [!code-csharp[SoapHeaderCollection#5](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection/CS/soapheadercollection.cs#5)]
+ [!code-vb[SoapHeaderCollection#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection/VB/soapheadercollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="array" /> parâmetro é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos na origem SoapHeaderCollection é maior que o espaço disponível do <paramref name="index" /> parâmetro até o final da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Protocols.SoapHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Protocols.SoapHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.IndexOf(System.Web.Services.Protocols.SoapHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Web.Services.Protocols.SoapHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">O <see cref="T:System.Web.Services.Protocols.SoapHeader" /> a ser localizado no <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</param>
+        <summary>Determina o índice da <see cref="T:System.Web.Services.Protocols.SoapHeader" /> no <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</summary>
+        <returns>O índice do <paramref name="header" /> parâmetro, se encontrado no <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection_Contains#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CPP/SoapHeaderCollection_Contains.cpp#1)]
+ [!code-csharp[SoapHeaderCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CS/soapheadercollection_contains.cs#1)]
+ [!code-vb[SoapHeaderCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection_Contains/VB/soapheadercollection_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Services.Protocols.SoapHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Services.Protocols.SoapHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.Insert(System.Int32,System.Web.Services.Protocols.SoapHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="header" Type="System.Web.Services.Protocols.SoapHeader" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o <see cref="T:System.Web.Services.Protocols.SoapHeader" /> para o <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</param>
+        <param name="header">O <see cref="T:System.Web.Services.Protocols.SoapHeader" /> para inserir o <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</param>
+        <summary>Insere um <see cref="T:System.Web.Services.Protocols.SoapHeader" /> para o <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `index` parâmetro for igual ao número de itens na coleção, o <xref:System.Web.Services.Protocols.SoapHeader> é acrescentado ao final da coleção.  
+  
+ O <xref:System.Web.Services.Protocols.SoapHeader> elementos após o ponto de inserção mover para baixo para acomodar o novo elemento.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection#4](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection/CPP/SoapHeaderCollection.cpp#4)]
+ [!code-csharp[SoapHeaderCollection#4](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection/CS/soapheadercollection.cs#4)]
+ [!code-vb[SoapHeaderCollection#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection/VB/soapheadercollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parameteris não é um índice válido no <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeader this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapHeader Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Web.Services.Protocols.SoapHeader" /> para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Services.Protocols.SoapHeader" /> no índice especificado do <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Protocols.SoapHeader" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[index]`.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection_Contains#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CPP/SoapHeaderCollection_Contains.cpp#1)]
+ [!code-csharp[SoapHeaderCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CS/soapheadercollection_contains.cs#1)]
+ [!code-vb[SoapHeaderCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection_Contains/VB/soapheadercollection_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parameteris não é um índice válido no <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Protocols.SoapHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Protocols.SoapHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderCollection.Remove(System.Web.Services.Protocols.SoapHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Web.Services.Protocols.SoapHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">O <see cref="T:System.Web.Services.Protocols.SoapHeader" /> a ser removido de <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</param>
+        <summary>Remove a primeira ocorrência de um determinado <see cref="T:System.Web.Services.Protocols.SoapHeader" /> do <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapHeader> elementos que seguem o removido <xref:System.Web.Services.Protocols.SoapHeader> mover para cima para ocupar o ponto vagas.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapHeaderCollection_Contains#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CPP/SoapHeaderCollection_Contains.cpp#1)]
+ [!code-csharp[SoapHeaderCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeaderCollection_Contains/CS/soapheadercollection_contains.cs#1)]
+ [!code-vb[SoapHeaderCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeaderCollection_Contains/VB/soapheadercollection_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

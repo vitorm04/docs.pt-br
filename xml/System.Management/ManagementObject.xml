@@ -1,0 +1,1790 @@
+<Type Name="ManagementObject" FullName="System.Management.ManagementObject">
+  <TypeSignature Language="C#" Value="public class ManagementObject : System.Management.ManagementBaseObject, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ManagementObject extends System.Management.ManagementBaseObject implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementBaseObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma instância do WMI.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObject" />. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe com o construtor padrão.  
+  
+ [!code-csharp[wminet_ManagementObject#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject/cs/ManagementObject.cs#1)]
+ [!code-vb[wminet_ManagementObject#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject/vb/ManagementObject.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject (System.Management.ManagementPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.Management.ManagementPath)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um <see cref="T:System.Management.ManagementPath" /> que contém um caminho para um objeto WMI.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObject" /> para o caminho do objeto WMI especificado. O caminho é fornecido como um <see cref="T:System.Management.ManagementPath" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe com um caminho especificado do objeto WMI.  
+  
+ [!code-csharp[wminet_ManagementObject-M#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject-M/cs/ManagementObject-M.cs#1)]
+ [!code-vb[wminet_ManagementObject-M#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject-M/vb/ManagementObject-M.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho WMI.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObject" /> para o caminho do objeto WMI especificado. O caminho é fornecido como uma cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o caminho especificado é somente um caminho relativo (um servidor ou um namespace não for especificado), o caminho padrão é o computador local e o namespace padrão é o <xref:System.Management.ManagementPath.DefaultPath%2A> caminho (por padrão, root\cimv2). Se o usuário Especifica um caminho completo, as configurações padrão serão substituídas.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe.  
+  
+ [!code-csharp[wminet_ManagementObject-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject-S/cs/ManagementObject-S.cs#1)]
+ [!code-vb[wminet_ManagementObject-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject-S/vb/ManagementObject-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject (System.Management.ManagementPath path, System.Management.ObjectGetOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementPath path, class System.Management.ObjectGetOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.Management.ManagementPath,System.Management.ObjectGetOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+        <Parameter Name="options" Type="System.Management.ObjectGetOptions" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um <see cref="T:System.Management.ManagementPath" /> que contém o caminho do WMI.</param>
+        <param name="options">Um <see cref="T:System.Management.ObjectGetOptions" /> que contém opções adicionais para vincular o objeto WMI. Esse parâmetro pode ser nulo se as opções padrão serão usados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.ManagementObject" /> classe associado para o caminho especificado do WMI, incluindo as opções adicionais especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe que está associado a um caminho específico do WMI.  
+  
+ [!code-csharp[wminet_ManagementObject-M_O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject-M_O/cs/ManagementObject-M_O.cs#1)]
+ [!code-vb[wminet_ManagementObject-M_O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject-M_O/vb/ManagementObject-M_O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ManagementObject (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.ManagementObject" /> classe que pode ser serializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject (string path, System.Management.ObjectGetOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class System.Management.ObjectGetOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.String,System.Management.ObjectGetOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.ObjectGetOptions" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho do WMI para o objeto.</param>
+        <param name="options">Um <see cref="T:System.Management.ObjectGetOptions" /> que representa opções para obter o objeto WMI especificado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.ManagementObject" /> classe associado para o caminho especificado do WMI, incluindo as opções adicionais especificadas. Nesta variante, o caminho pode ser especificado como uma cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe.  
+  
+ [!code-csharp[wminet_ManagementObject-S_O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject-S_O/cs/ManagementObject-S_O.cs#1)]
+ [!code-vb[wminet_ManagementObject-S_O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject-S_O/vb/ManagementObject-S_O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject (System.Management.ManagementScope scope, System.Management.ManagementPath path, System.Management.ObjectGetOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementScope scope, class System.Management.ManagementPath path, class System.Management.ObjectGetOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.Management.ManagementScope,System.Management.ManagementPath,System.Management.ObjectGetOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Management.ManagementScope" />
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+        <Parameter Name="options" Type="System.Management.ObjectGetOptions" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Um <see cref="T:System.Management.ManagementScope" /> que representa o escopo no qual o objeto WMI reside. Nesta versão, os escopos podem ser somente namespaces de WMI.</param>
+        <param name="path">Um <see cref="T:System.Management.ManagementPath" /> que representa o caminho WMI para o objeto gerenciável.</param>
+        <param name="options">Um <see cref="T:System.Management.ObjectGetOptions" /> que especifica opções adicionais para obter o objeto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObject" /> associada ao caminho WMI especificado, que inclui as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como os caminhos WMI podem ser relativa ou absoluta, pode surgir um conflito entre o escopo e o caminho especificado. No entanto, se um escopo for especificado e um caminho relativo do WMI é especificado, em seguida, há nenhum conflito. A seguir estão alguns possíveis conflitos:  
+  
+ Se um escopo não for especificado e um caminho relativo do WMI é especificado, em seguida, o escopo padrão será no computador local <xref:System.Management.ManagementPath.DefaultPath%2A>.  
+  
+ Se um escopo não for especificado e um caminho completo do WMI é especificado, o escopo será inferido da parte do escopo do caminho completo. Por exemplo, o caminho completo do WMI: `\\MyMachine\root\MyNamespace:MyClass.Name='abc'` representa o objeto WMI 'MyClass.Name='abc' "no escopo '\\\MyMachine\root\MyNamespace'.  
+  
+ Se um escopo for especificado e um caminho completo do WMI é especificado, o escopo substituirá a parte do escopo do caminho completo. Por exemplo, se o escopo a seguir foi especificado: \\\MyMachine\root\MyScope e o caminho completo a seguir foi especificado: \\\MyMachine\root\MyNamespace:MyClass.Name='abc', em seguida, procure o seguinte `object: \\MyMachine\root\MyScope:MyClass.Name= 'abc'` (a parte do escopo do caminho completo é ignorada).  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe que está associado a um caminho específico do WMI.  
+  
+ [!code-csharp[wminet_ManagementObject-M_M_O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject-M_M_O/cs/ManagementObject-M_M_O.cs#1)]
+ [!code-vb[wminet_ManagementObject-M_M_O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject-M_M_O/vb/ManagementObject-M_M_O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObject (string scopeString, string pathString, System.Management.ObjectGetOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scopeString, string pathString, class System.Management.ObjectGetOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.#ctor(System.String,System.String,System.Management.ObjectGetOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopeString" Type="System.String" />
+        <Parameter Name="pathString" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.ObjectGetOptions" />
+      </Parameters>
+      <Docs>
+        <param name="scopeString">O escopo para o objeto WMI.</param>
+        <param name="pathString">O caminho do objeto WMI.</param>
+        <param name="options">Um <see cref="T:System.Management.ObjectGetOptions" /> que representa as opções adicionais para obter o objeto WMI.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.ManagementObject" /> classe associada ao caminho especificado do WMI e inclui as opções especificadas. O escopo e o caminho são especificados como cadeias de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte a sobrecarga equivalente para obter detalhes.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe com um caminho específico do WMI e opções.  
+  
+ [!code-csharp[wminet_ManagementObject-S_S_O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject-S_S_O/cs/ManagementObject-S_S_O.cs#1)]
+ [!code-vb[wminet_ManagementObject-S_S_O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject-S_S_O/vb/ManagementObject-S_S_O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassPath">
+      <MemberSignature Language="C#" Value="public override System.Management.ManagementPath ClassPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementPath ClassPath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObject.ClassPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para a classe do objeto.</summary>
+        <value>Um <see cref="T:System.Management.ManagementPath" /> que representa o caminho para a classe do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é somente para leitura.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe e, em seguida, recupera o caminho de classe para o <xref:System.Management.ManagementObject>.  
+  
+ [!code-csharp[wminet_ManagementObject_Path#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_Path/cs/ManagementObject_Path.cs#1)]
+ [!code-vb[wminet_ManagementObject_Path#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_Path/vb/ManagementObject_Path.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do objeto.</summary>
+        <returns>O objeto copiado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath CopyTo (System.Management.ManagementPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath CopyTo(class System.Management.ManagementPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.Management.ManagementPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Management.ManagementPath" /> ao qual o objeto deve ser copiado.</param>
+        <summary>Copia o objeto para um local diferente.</summary>
+        <returns>O novo caminho do objeto copiado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath CopyTo (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath CopyTo(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o qual o objeto deve ser copiado.</param>
+        <summary>Copia o objeto para um local diferente.</summary>
+        <returns>O novo caminho do objeto copiado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Management.ManagementOperationObserver watcher, System.Management.ManagementPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Management.ManagementOperationObserver watcher, class System.Management.ManagementPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.Management.ManagementOperationObserver,System.Management.ManagementPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto que recebe os resultados da operação.</param>
+        <param name="path">Um <see cref="T:System.Management.ManagementPath" /> especificando o caminho para o qual o objeto deve ser copiado.</param>
+        <summary>Copia o objeto para um local diferente, de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Management.ManagementOperationObserver watcher, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Management.ManagementOperationObserver watcher, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.Management.ManagementOperationObserver,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto que recebe os resultados da operação.</param>
+        <param name="path">O caminho para o qual o objeto deve ser copiado.</param>
+        <summary>Copia o objeto para um local diferente, de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath CopyTo (System.Management.ManagementPath path, System.Management.PutOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath CopyTo(class System.Management.ManagementPath path, class System.Management.PutOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.Management.ManagementPath,System.Management.PutOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+        <Parameter Name="options" Type="System.Management.PutOptions" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Management.ManagementPath" /> ao qual o objeto deve ser copiado.</param>
+        <param name="options">As opções de como o objeto deve ser colocado.</param>
+        <summary>Copia o objeto para um local diferente.</summary>
+        <returns>O novo caminho do objeto copiado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath CopyTo (string path, System.Management.PutOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath CopyTo(string path, class System.Management.PutOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.String,System.Management.PutOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.PutOptions" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o qual o objeto deve ser copiado.</param>
+        <param name="options">As opções de como o objeto deve ser colocado.</param>
+        <summary>Copia o objeto para um local diferente.</summary>
+        <returns>O novo caminho do objeto copiado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Management.ManagementOperationObserver watcher, System.Management.ManagementPath path, System.Management.PutOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Management.ManagementOperationObserver watcher, class System.Management.ManagementPath path, class System.Management.PutOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.Management.ManagementOperationObserver,System.Management.ManagementPath,System.Management.PutOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="path" Type="System.Management.ManagementPath" />
+        <Parameter Name="options" Type="System.Management.PutOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto que recebe os resultados da operação.</param>
+        <param name="path">O caminho para o qual o objeto deve ser copiado.</param>
+        <param name="options">As opções de como o objeto deve ser colocado.</param>
+        <summary>Copia o objeto para um local diferente, de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Management.ManagementOperationObserver watcher, string path, System.Management.PutOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Management.ManagementOperationObserver watcher, string path, class System.Management.PutOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.CopyTo(System.Management.ManagementOperationObserver,System.String,System.Management.PutOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.PutOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto que recebe os resultados da operação.</param>
+        <param name="path">O caminho para o qual o objeto deve ser copiado.</param>
+        <param name="options">As opções de como o objeto deve ser colocado.</param>
+        <summary>Copia o objeto para um local diferente, de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (System.Management.DeleteOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(class System.Management.DeleteOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Delete(System.Management.DeleteOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Management.DeleteOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">As opções excluir o objeto.</param>
+        <summary>Exclui o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (System.Management.ManagementOperationObserver watcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(class System.Management.ManagementOperationObserver watcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Delete(System.Management.ManagementOperationObserver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto que recebe os resultados da operação.</param>
+        <summary>Exclui o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (System.Management.ManagementOperationObserver watcher, System.Management.DeleteOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(class System.Management.ManagementOperationObserver watcher, class System.Management.DeleteOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Delete(System.Management.ManagementOperationObserver,System.Management.DeleteOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="options" Type="System.Management.DeleteOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto que recebe os resultados da operação.</param>
+        <param name="options">As opções excluir o objeto.</param>
+        <summary>Exclui o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo componente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Get">
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Associa o objeto de gerenciamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public void Get ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Get() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Get" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa as informações de classe WMI ao objeto de gerenciamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método é chamado implicitamente na primeira tentativa de obter ou definir informações para o objeto WMI. Ele também pode ser explicitamente chamado no critério do usuário, para controlar melhor o tempo e o modo de recuperação.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Management.ManagementObject.Get%2A> método para obter uma instância do <xref:System.Management.ManagementObject> classe.  
+  
+ [!code-csharp[wminet_ManagementObject_GetMethod#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_GetMethod/cs/ManagementObject_GetMethod.cs#1)]
+ [!code-vb[wminet_ManagementObject_GetMethod#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_GetMethod/vb/ManagementObject_GetMethod.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public void Get (System.Management.ManagementOperationObserver watcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Get(class System.Management.ManagementOperationObserver watcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Get(System.Management.ManagementOperationObserver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto para receber os resultados da operação de eventos.</param>
+        <summary>Associa o objeto de gerenciamento assincronamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método emite a solicitação para obter o objeto e, em seguida, retornará imediatamente. Os resultados da operação, em seguida, serão fornecidos por meio de eventos que está sendo acionados no objeto do Inspetor fornecido.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Management.ManagementObject.Get%2A> método assincronamente obter uma instância do <xref:System.Management.ManagementObject> classe.  
+  
+ [!code-csharp[wminet_ManagementObject_GetMethod-M#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_GetMethod-M/cs/ManagementObject_GetMethod-M.cs#1)]
+ [!code-vb[wminet_ManagementObject_GetMethod-M#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_GetMethod-M/vb/ManagementObject_GetMethod-M.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodParameters">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject GetMethodParameters (string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementBaseObject GetMethodParameters(string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetMethodParameters(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método.</param>
+        <summary>Retorna um <see cref="T:System.Management.ManagementBaseObject" /> que representa a lista de parâmetros de entrada para um método.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementBaseObject" /> que contém os parâmetros de entrada para o método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém o objeto que contém os parâmetros de entrada para um método e, em seguida, preencha os valores e passa o objeto para o <xref:System.Management.ManagementObject.InvokeMethod%2A> chamar.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto a ser populado com informações de serialização.</param>
+        <param name="context">O local onde os dados serializados serão armazenados e recuperados.</param>
+        <summary>Preenche um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para desserializar o campo representado por esta instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelated">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection GetRelated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection GetRelated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de objetos relacionados ao objeto (associadores).</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos relacionados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação é equivalente a uma *ASSOCIADORES de* consulta onde ResultClass = relatedClass.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Management.ManagementObject.GetRelated%2A> método para obter uma coleção de objetos relacionados a uma instância do <xref:System.Management.ManagementObject> classe.  
+  
+ [!code-csharp[wminet_ManagementObject_GetRelated#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_GetRelated/cs/ManagementObject_GetRelated.cs#1)]
+ [!code-vb[wminet_ManagementObject_GetRelated#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_GetRelated/vb/ManagementObject_GetRelated.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelated">
+      <MemberSignature Language="C#" Value="public void GetRelated (System.Management.ManagementOperationObserver watcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRelated(class System.Management.ManagementOperationObserver watcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelated(System.Management.ManagementOperationObserver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto a ser usado para retornar resultados.</param>
+        <summary>Obtém uma coleção de objetos relacionados ao objeto (associadores) de forma assíncrona. Essa chamada retorna imediatamente, e um delegado é chamado quando os resultados estão disponíveis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelated">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection GetRelated (string relatedClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection GetRelated(string relatedClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelated(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relatedClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relatedClass">Uma classe de objetos relacionados.</param>
+        <summary>Obtém uma coleção de objetos relacionados ao objeto (associadores).</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos relacionados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Management.ManagementObject.GetRelated%2A> método para obter uma coleção de objetos relacionados a uma instância do <xref:System.Management.ManagementObject> classe.  
+  
+ [!code-csharp[wminet_ManagementObject_GetRelated-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_GetRelated-S/cs/ManagementObject_GetRelated-S.cs#1)]
+ [!code-vb[wminet_ManagementObject_GetRelated-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_GetRelated-S/vb/ManagementObject_GetRelated-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelated">
+      <MemberSignature Language="C#" Value="public void GetRelated (System.Management.ManagementOperationObserver watcher, string relatedClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRelated(class System.Management.ManagementOperationObserver watcher, string relatedClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelated(System.Management.ManagementOperationObserver,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="relatedClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto a ser usado para retornar resultados.</param>
+        <param name="relatedClass">A classe de objetos relacionados.</param>
+        <summary>Obtém uma coleção de objetos relacionados ao objeto (associadores).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *ASSOCIADORES de* consulta onde ResultClass = relatedClass.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelated">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection GetRelated (string relatedClass, string relationshipClass, string relationshipQualifier, string relatedQualifier, string relatedRole, string thisRole, bool classDefinitionsOnly, System.Management.EnumerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection GetRelated(string relatedClass, string relationshipClass, string relationshipQualifier, string relatedQualifier, string relatedRole, string thisRole, bool classDefinitionsOnly, class System.Management.EnumerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelated(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Management.EnumerationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relatedClass" Type="System.String" />
+        <Parameter Name="relationshipClass" Type="System.String" />
+        <Parameter Name="relationshipQualifier" Type="System.String" />
+        <Parameter Name="relatedQualifier" Type="System.String" />
+        <Parameter Name="relatedRole" Type="System.String" />
+        <Parameter Name="thisRole" Type="System.String" />
+        <Parameter Name="classDefinitionsOnly" Type="System.Boolean" />
+        <Parameter Name="options" Type="System.Management.EnumerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="relatedClass">A classe dos objetos relacionados.</param>
+        <param name="relationshipClass">A classe de relação de interesse.</param>
+        <param name="relationshipQualifier">O qualificador deve estar presente na classe de relação.</param>
+        <param name="relatedQualifier">O qualificador deve estar presente na classe relacionada.</param>
+        <param name="relatedRole">A função que a classe relacionada é reproduzido na relação.</param>
+        <param name="thisRole">A função que essa classe é reproduzido na relação.</param>
+        <param name="classDefinitionsOnly">Quando este método retorna, ele contém apenas as definições de classe para as instâncias que correspondem à consulta.</param>
+        <param name="options">Estendido opções executar a consulta.</param>
+        <summary>Obtém uma coleção de objetos relacionados ao objeto (associadores).</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos relacionados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *ASSOCIADORES de* consulta onde ResultClass = relatedClass.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelated">
+      <MemberSignature Language="C#" Value="public void GetRelated (System.Management.ManagementOperationObserver watcher, string relatedClass, string relationshipClass, string relationshipQualifier, string relatedQualifier, string relatedRole, string thisRole, bool classDefinitionsOnly, System.Management.EnumerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRelated(class System.Management.ManagementOperationObserver watcher, string relatedClass, string relationshipClass, string relationshipQualifier, string relatedQualifier, string relatedRole, string thisRole, bool classDefinitionsOnly, class System.Management.EnumerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelated(System.Management.ManagementOperationObserver,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Management.EnumerationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="relatedClass" Type="System.String" />
+        <Parameter Name="relationshipClass" Type="System.String" />
+        <Parameter Name="relationshipQualifier" Type="System.String" />
+        <Parameter Name="relatedQualifier" Type="System.String" />
+        <Parameter Name="relatedRole" Type="System.String" />
+        <Parameter Name="thisRole" Type="System.String" />
+        <Parameter Name="classDefinitionsOnly" Type="System.Boolean" />
+        <Parameter Name="options" Type="System.Management.EnumerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto a ser usado para retornar resultados.</param>
+        <param name="relatedClass">A classe dos objetos relacionados.</param>
+        <param name="relationshipClass">A classe de relação de interesse.</param>
+        <param name="relationshipQualifier">O qualificador deve estar presente na classe de relação.</param>
+        <param name="relatedQualifier">O qualificador deve estar presente na classe relacionada.</param>
+        <param name="relatedRole">A função que a classe relacionada é reproduzido na relação.</param>
+        <param name="thisRole">A função que essa classe é reproduzido na relação.</param>
+        <param name="classDefinitionsOnly">Retorne apenas as definições de classe para as instâncias que correspondem à consulta.</param>
+        <param name="options">Estendido opções executar a consulta.</param>
+        <summary>Obtém uma coleção de objetos relacionados ao objeto (associadores).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *ASSOCIADORES de* consulta onde ResultClass = relatedClass.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection GetRelationships ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection GetRelationships() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelationships" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de associações para o objeto.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação é equivalente a uma *referências de* consulta.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public void GetRelationships (System.Management.ManagementOperationObserver watcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRelationships(class System.Management.ManagementOperationObserver watcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelationships(System.Management.ManagementOperationObserver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto a ser usado para retornar resultados.</param>
+        <summary>Obtém uma coleção de associações para o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *referências de* consulta.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection GetRelationships (string relationshipClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection GetRelationships(string relationshipClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelationships(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationshipClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipClass">As associações para incluir.</param>
+        <summary>Obtém uma coleção de associações para o objeto.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *referências de* consultar onde o AssocClass = relationshipClass.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public void GetRelationships (System.Management.ManagementOperationObserver watcher, string relationshipClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRelationships(class System.Management.ManagementOperationObserver watcher, string relationshipClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelationships(System.Management.ManagementOperationObserver,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="relationshipClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto a ser usado para retornar resultados.</param>
+        <param name="relationshipClass">As associações para incluir.</param>
+        <summary>Obtém uma coleção de associações para o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *referências de* consultar onde o AssocClass = relationshipClass.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection GetRelationships (string relationshipClass, string relationshipQualifier, string thisRole, bool classDefinitionsOnly, System.Management.EnumerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection GetRelationships(string relationshipClass, string relationshipQualifier, string thisRole, bool classDefinitionsOnly, class System.Management.EnumerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelationships(System.String,System.String,System.String,System.Boolean,System.Management.EnumerationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationshipClass" Type="System.String" />
+        <Parameter Name="relationshipQualifier" Type="System.String" />
+        <Parameter Name="thisRole" Type="System.String" />
+        <Parameter Name="classDefinitionsOnly" Type="System.Boolean" />
+        <Parameter Name="options" Type="System.Management.EnumerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipClass">O tipo de relação de interesse.</param>
+        <param name="relationshipQualifier">O qualificador deve existir na relação.</param>
+        <param name="thisRole">A função do objeto da relação.</param>
+        <param name="classDefinitionsOnly">Quando este método retorna, ele contém apenas as definições de classe para o conjunto de resultados.</param>
+        <param name="options">As opções estendidas para a execução da consulta.</param>
+        <summary>Obtém uma coleção de associações para o objeto.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *referências de* consulta com possivelmente todas as extensões.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public void GetRelationships (System.Management.ManagementOperationObserver watcher, string relationshipClass, string relationshipQualifier, string thisRole, bool classDefinitionsOnly, System.Management.EnumerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRelationships(class System.Management.ManagementOperationObserver watcher, string relationshipClass, string relationshipQualifier, string thisRole, bool classDefinitionsOnly, class System.Management.EnumerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.GetRelationships(System.Management.ManagementOperationObserver,System.String,System.String,System.String,System.Boolean,System.Management.EnumerationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="relationshipClass" Type="System.String" />
+        <Parameter Name="relationshipQualifier" Type="System.String" />
+        <Parameter Name="thisRole" Type="System.String" />
+        <Parameter Name="classDefinitionsOnly" Type="System.Boolean" />
+        <Parameter Name="options" Type="System.Management.EnumerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto a ser usado para retornar resultados.</param>
+        <param name="relationshipClass">O tipo de relação de interesse.</param>
+        <param name="relationshipQualifier">O qualificador deve existir na relação.</param>
+        <param name="thisRole">A função do objeto da relação.</param>
+        <param name="classDefinitionsOnly">Quando este método retorna, ele contém apenas as definições de classe para o conjunto de resultados.</param>
+        <param name="options">As opções estendidas para a execução da consulta.</param>
+        <summary>Obtém uma coleção de associações para o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente a uma *referências de* consulta com possivelmente todas as extensões.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMethod">
+      <MemberSignature Language="C#" Value="public object InvokeMethod (string methodName, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object InvokeMethod(string methodName, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.InvokeMethod(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método a ser executado.</param>
+        <param name="args">Uma matriz que contém os valores de parâmetro.</param>
+        <summary>Invoca um método no objeto.</summary>
+        <returns>O valor de objeto retornado pelo método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o método é estático, a execução ainda deve ser bem-sucedidos.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama o **Win32_Process::Create** método para iniciar um novo processo de Notepad.exe.  
+  
+ [!code-csharp[wminet_ManagementObject_InvokeMethod-S_O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_InvokeMethod-S_O/cs/ManagementObject_InvokeMethod-S_O.cs#1)]
+ [!code-vb[wminet_ManagementObject_InvokeMethod-S_O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_InvokeMethod-S_O/vb/ManagementObject_InvokeMethod-S_O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMethod">
+      <MemberSignature Language="C#" Value="public void InvokeMethod (System.Management.ManagementOperationObserver watcher, string methodName, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeMethod(class System.Management.ManagementOperationObserver watcher, string methodName, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.InvokeMethod(System.Management.ManagementOperationObserver,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O objeto para receber os resultados da operação.</param>
+        <param name="methodName">O nome do método a ser executado.</param>
+        <param name="args">Uma matriz que contém os valores de parâmetro.</param>
+        <summary>Invoca um método no objeto de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o método é estático, a execução ainda deve ser bem-sucedidos.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMethod">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject InvokeMethod (string methodName, System.Management.ManagementBaseObject inParameters, System.Management.InvokeMethodOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementBaseObject InvokeMethod(string methodName, class System.Management.ManagementBaseObject inParameters, class System.Management.InvokeMethodOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.InvokeMethod(System.String,System.Management.ManagementBaseObject,System.Management.InvokeMethodOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="inParameters" Type="System.Management.ManagementBaseObject" />
+        <Parameter Name="options" Type="System.Management.InvokeMethodOptions" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método a ser executado.</param>
+        <param name="inParameters">Um <see cref="T:System.Management.ManagementBaseObject" /> que contém os parâmetros de entrada para o método.</param>
+        <param name="options">Um <see cref="T:System.Management.InvokeMethodOptions" /> que contém opções adicionais para a execução do método.</param>
+        <summary>Invoca um método no objeto WMI. Os parâmetros de entrada e saída são representados como objetos <see cref="T:System.Management.ManagementBaseObject" />.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementBaseObject" /> que contém os parâmetros de saída e o valor retornado do método executado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama o **Win32_Process::Create** método para iniciar um novo processo de Calc.exe.  
+  
+ [!code-csharp[wminet_ManagementObject_InvokeMethod-S_M_I#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_InvokeMethod-S_M_I/cs/ManagementObject_InvokeMethod-S_M_I.cs#1)]
+ [!code-vb[wminet_ManagementObject_InvokeMethod-S_M_I#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_InvokeMethod-S_M_I/vb/ManagementObject_InvokeMethod-S_M_I.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMethod">
+      <MemberSignature Language="C#" Value="public void InvokeMethod (System.Management.ManagementOperationObserver watcher, string methodName, System.Management.ManagementBaseObject inParameters, System.Management.InvokeMethodOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeMethod(class System.Management.ManagementOperationObserver watcher, string methodName, class System.Management.ManagementBaseObject inParameters, class System.Management.InvokeMethodOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.InvokeMethod(System.Management.ManagementOperationObserver,System.String,System.Management.ManagementBaseObject,System.Management.InvokeMethodOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="inParameters" Type="System.Management.ManagementBaseObject" />
+        <Parameter Name="options" Type="System.Management.InvokeMethodOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">Um <see cref="T:System.Management.ManagementOperationObserver" /> usado para controlar o progresso e os resultados da execução assíncrona.</param>
+        <param name="methodName">O nome do método a ser executado.</param>
+        <param name="inParameters">Um <see cref="T:System.Management.ManagementBaseObject" /> que contém os parâmetros de entrada para o método.</param>
+        <param name="options">Um <see cref="T:System.Management.InvokeMethodOptions" /> que contém opções adicionais usadas para a execução do método.</param>
+        <summary>Invoca um método no objeto de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método invoca a execução do método especificado e, em seguida, retorna. Progresso e os resultados são relatados por meio de eventos no <xref:System.Management.ManagementOperationObserver>.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Management.ObjectGetOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ObjectGetOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObject.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ObjectGetOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais a serem usadas ao recuperar o objeto.</summary>
+        <value>Um <see cref="T:System.Management.ObjectGetOptions" /> a ser usado ao recuperar o objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a propriedade for alterada após o objeto de gerenciamento foi associado a um objeto WMI, o objeto de gerenciamento foi desconectado do objeto WMI original e posteriormente religação usando as novas opções.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe e, em seguida, altere as opções padrão para o <xref:System.Management.ManagementObject>.  
+  
+ [!code-csharp[wminet_ManagementObject_Options#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_Options/cs/ManagementObject_Options.cs#1)]
+ [!code-vb[wminet_ManagementObject_Options#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_Options/vb/ManagementObject_Options.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public virtual System.Management.ManagementPath Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementPath Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObject.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho WMI do objeto.</summary>
+        <value>Um <see cref="T:System.Management.ManagementPath" /> que representa o caminho do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alteração da propriedade após o objeto de gerenciamento foi associado a um objeto WMI nos resultados de um namespace específico ao liberar o objeto WMI original. Isso faz com que o objeto de gerenciamento sejam associadas novamente para o novo objeto especificado pelo novas propriedades de caminho e valores de escopo.  
+  
+ A reassociação é executada de maneira "lenta", ou seja, apenas quando um valor solicitado requer que o objeto de gerenciamento a ser associado ao objeto WMI. Pode ser alterado mais do que apenas a propriedade antes de tentar associar novamente (por exemplo, modificando as propriedades de escopo e o caminho simultaneamente).  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe com o namespace padrão e, em seguida, altera o caminho do WMI a <xref:System.Management.ManagementObject>.  
+  
+ [!code-csharp[wminet_ManagementObject_Path#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_Path/cs/ManagementObject_Path.cs#1)]
+ [!code-vb[wminet_ManagementObject_Path#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_Path/vb/ManagementObject_Path.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Put">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath Put ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath Put() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Put" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma as alterações feitas no objeto.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementPath" /> que contém o caminho para o objeto confirmado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Put">
+      <MemberSignature Language="C#" Value="public void Put (System.Management.ManagementOperationObserver watcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Put(class System.Management.ManagementOperationObserver watcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Put(System.Management.ManagementOperationObserver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">Um <see cref="T:System.Management.ManagementOperationObserver" /> usado para controlar o progresso e os resultados da operação assíncrona.</param>
+        <summary>Confirma as alterações para o objeto de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Put">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath Put (System.Management.PutOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath Put(class System.Management.PutOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Put(System.Management.PutOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Management.PutOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">As opções para como confirmar as alterações.</param>
+        <summary>Confirma as alterações feitas no objeto.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementPath" /> que contém o caminho para o objeto confirmado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Put">
+      <MemberSignature Language="C#" Value="public void Put (System.Management.ManagementOperationObserver watcher, System.Management.PutOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Put(class System.Management.ManagementOperationObserver watcher, class System.Management.PutOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.Put(System.Management.ManagementOperationObserver,System.Management.PutOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+        <Parameter Name="options" Type="System.Management.PutOptions" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">Um <see cref="T:System.Management.ManagementOperationObserver" /> usado para controlar o progresso e os resultados da operação assíncrona.</param>
+        <param name="options">Um <see cref="T:System.Management.PutOptions" /> usado para especificar opções adicionais para a operação de confirmação.</param>
+        <summary>Confirma as alterações para o objeto de forma assíncrona e usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObject.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o escopo no qual esse objeto reside.</summary>
+        <value>O escopo no qual esse objeto reside.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A alteração dessa propriedade após o objeto de gerenciamento foi associado a um objeto WMI nos resultados de um namespace específico ao liberar o objeto WMI original. Isso faz com que o objeto de gerenciamento sejam associadas novamente para o novo objeto especificado pelo novas propriedades de caminho e valores de escopo.  
+  
+ A reassociação é executada de maneira "lenta", ou seja, apenas quando um valor solicitado requer que o objeto de gerenciamento a ser associado ao objeto WMI. Pode ser alterado mais do que apenas essa propriedade antes de tentar associar novamente (por exemplo, modificando as propriedades de escopo e o caminho simultaneamente).  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObject> classe com o namespace padrão e, em seguida, altera o escopo de <xref:System.Management.ManagementObject>.  
+  
+ [!code-csharp[wminet_ManagementObject_Scope#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObject_Scope/cs/ManagementObject_Scope.cs#1)]
+ [!code-vb[wminet_ManagementObject_Scope#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObject_Scope/vb/ManagementObject_Scope.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObject.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho completo do objeto. Essa é uma substituição da implementação do objeto padrão.</summary>
+        <returns>O caminho completo do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

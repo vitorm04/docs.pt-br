@@ -1,0 +1,130 @@
+<Type Name="CodeSnippetExpression" FullName="System.CodeDom.CodeSnippetExpression">
+  <TypeSignature Language="C#" Value="public class CodeSnippetExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeSnippetExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeSnippetExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma expressão literal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma expressão literal armazena o código de uma expressão como um fragmento de código literal. O CodeDOM não converte fragmentos de código literal. Fragmentos de código literal são armazenados e como elas são de saída. Objetos de codeDOM que contêm código literal são fornecidos para que os desenvolvedores podem encapsular o código que já está no idioma de destino.  
+  
+ O <xref:System.CodeDom.CodeSnippetExpression.Value%2A> propriedade contém o código literal para esta expressão de trecho de código.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma instância do <xref:System.CodeDom.CodeSnippetExpression> classe usando um fragmento de código literal.  
+  
+ [!code-cpp[CodeDomSampleBatch#9](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomSampleBatch/CPP/class1.cpp#9)]
+ [!code-csharp[CodeDomSampleBatch#9](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomSampleBatch/CS/class1.cs#9)]
+ [!code-vb[CodeDomSampleBatch#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomSampleBatch/VB/class1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeSnippetExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetExpression (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetExpression.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A expressão literal para representar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeSnippetExpression" /> classe usando a expressão literal especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.CodeDom.CodeSnippetExpression.%23ctor%2A> construtor para criar uma instância do <xref:System.CodeDom.CodeSnippetExpression> classe.  
+  
+ [!code-cpp[CodeDomSampleBatch#9](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomSampleBatch/CPP/class1.cpp#9)]
+ [!code-csharp[CodeDomSampleBatch#9](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomSampleBatch/CS/class1.cs#9)]
+ [!code-vb[CodeDomSampleBatch#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomSampleBatch/VB/class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeSnippetExpression.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres literal de código.</summary>
+        <value>A cadeia de caracteres literal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso pode conter código ou comentários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1292 @@
+<Type Name="DataAdapter" FullName="System.Data.Common.DataAdapter">
+  <TypeSignature Language="C#" Value="public class DataAdapter : System.ComponentModel.Component, System.Data.IDataAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataAdapter extends System.ComponentModel.Component implements class System.Data.IDataAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DataAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IDataAdapter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um conjunto de comandos SQL e uma conexão de banco de dados que são usados para preencher o <see cref="T:System.Data.DataSet" /> e atualizar a fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DataAdapter> atua como uma ponte entre uma <xref:System.Data.DataSet> e uma fonte de dados para recuperar e salvar dados. O <xref:System.Data.Common.DataAdapter> fornece essa ponte mapeando <xref:System.Data.Common.DataAdapter.Fill%2A>, que altera os dados a <xref:System.Data.DataSet> para corresponder aos dados na fonte de dados, e <xref:System.Data.IDataAdapter.Update%2A>, que altera os dados na fonte de dados para corresponder aos dados no <xref:System.Data.DataSet>.  
+  
+ Se você estiver se conectando a um banco de dados do SQL Server, você pode aumentar o desempenho geral usando o <xref:System.Data.SqlClient.SqlDataAdapter> junto com seus associados <xref:System.Data.SqlClient.SqlCommand> e <xref:System.Data.SqlClient.SqlConnection> objetos. Para fontes de dados compatíveis com OLE DB, use o <xref:System.Data.Common.DataAdapter> com seus associados <xref:System.Data.OleDb.OleDbCommand> e <xref:System.Data.OleDb.OleDbConnection> objetos. Para fontes de dados com suporte ODBC, use o <xref:System.Data.Common.DataAdapter> com seus associados <xref:System.Data.Odbc.OdbcCommand> e <xref:System.Data.Odbc.OdbcConnection> objetos. Para bancos de dados Oracle, use o <xref:System.Data.Common.DataAdapter> com seus associados <xref:System.Data.OracleClient.OracleCommand> e <xref:System.Data.OracleClient.OracleConnection> objetos.  
+  
+ Quando uma instância de <xref:System.Data.Common.DataAdapter> é criado, a leitura/gravação propriedades são definidas como valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Data.Common.DataAdapter> construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de uma classe <see cref="T:System.Data.Common.DataAdapter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma instância de <xref:System.Data.Common.DataAdapter> é criado, os seguintes propriedades são definidas para os seguintes valores iniciais de leitura/gravação.  
+  
+|Propriedades|Valor inicial|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+|<xref:System.Data.Common.DataAdapter.TableMappings%2A>|Uma matriz de objetos de <xref:System.Data.Common.DataAdapter.TableMappings%2A>.|  
+  
+ Você pode alterar o valor de qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataAdapter (System.Data.Common.DataAdapter from);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DataAdapter from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.#ctor(System.Data.Common.DataAdapter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="System.Data.Common.DataAdapter" />
+      </Parameters>
+      <Docs>
+        <param name="from">Um <see cref="T:System.Data.Common.DataAdapter" /> objeto usado para criar o novo <see cref="T:System.Data.Common.DataAdapter" />.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Data.Common.DataAdapter" /> classe a partir de um objeto existente do mesmo tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Data.Common.DataAdapter> construtor é projetado para uso por um provedor de dados .NET Framework ao implementar um construtor semelhante para uso em uma implementação de clone.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptChangesDuringFill">
+      <MemberSignature Language="C#" Value="public bool AcceptChangesDuringFill { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptChangesDuringFill" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.AcceptChangesDuringFill" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se <see cref="M:System.Data.DataRow.AcceptChanges" /> é chamado em um <see cref="T:System.Data.DataRow" /> após ter sido adicionado ao <see cref="T:System.Data.DataTable" /> durante alguma das operações de **Preenchimento**.</summary>
+        <value>
+          <see langword="true" /> se <see cref="M:System.Data.DataRow.AcceptChanges" /> for chamado no <see cref="T:System.Data.DataRow" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `false`, <xref:System.Data.DataRow.AcceptChanges%2A> não for chamado, e as linhas recém-adicionadas são tratadas como linhas inseridas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptChangesDuringUpdate">
+      <MemberSignature Language="C#" Value="public bool AcceptChangesDuringUpdate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptChangesDuringUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se <see cref="M:System.Data.DataRow.AcceptChanges" /> é chamado durante um <see cref="M:System.Data.Common.DataAdapter.Update(System.Data.DataSet)" />.</summary>
+        <value>
+          <see langword="true" /> se <see cref="M:System.Data.DataRow.AcceptChanges" /> é chamado durante um <see cref="M:System.Data.Common.DataAdapter.Update(System.Data.DataSet)" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante uma chamada para o `Update` método de um `DataAdapter`, o banco de dados pode enviar dados ao seu aplicativo ADO.NET, como parâmetros de saída ou como o primeiro registro retornado de um conjunto de resultados. O ADO.NET pode recuperar esses valores e atualizar as colunas correspondentes no <xref:System.Data.DataRow> que está sendo atualizado. Por padrão, o ADO.NET chama o `AcceptChanges` método o `DataRow` após a atualização. No entanto, se você deseja mesclar a linha atualizada volta para o outro <xref:System.Data.DataTable>, talvez você queira preservar o valor original de uma coluna de chave primária. Por exemplo, uma coluna de chave primária correspondente a uma coluna incrementada automaticamente no banco de dados, como uma coluna de identidade, pode conter os novos valores que são atribuídos pelo banco de dados que não coincidem com os valores originais atribuídos a `DataRow`. Por padrão, `AcceptChanges` é chamado implicitamente após uma atualização e os valores originais na linha, que pode ter sido <xref:System.Data.DataColumn.AutoIncrement%2A> valores atribuídos por ADO.NET, serão perdidas. Você pode preservar os valores originais no `DataRow` , impedindo que `ADO.NET` chamar `AcceptChanges` depois que ele executa uma atualização em uma linha, definindo o <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A> propriedade `false`, que preserva os valores originais.  
+  
+> [!NOTE]
+>  Definindo o `AcceptChangesDuringUpdate` propriedade `false` se aplica a todas as modificações de dados, não só insere. Se você deseja editar ou excluir linhas em que a mesma atualização, e se você desejar suprimir a chamada para `AcceptChanges` apenas para inserções, em seguida, em vez de configuração `AccceptChangesDuringUpdate` para `false`, use um manipulador de eventos para o `RowUpdated` eventos do `DataAdapter`. No evento manipulador você pode verificar o <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> para determinar se a modificação de dados for uma inserção e se `true`, defina o <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> propriedade o <xref:System.Data.Common.RowUpdatedEventArgs> para <xref:System.Data.UpdateStatus.SkipCurrentRow>. Para obter mais informações e um exemplo, consulte [recuperando identidade ou valores de Autonumber](~/docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como extrair linhas alteradas de um `DataTable` e como usar um <xref:System.Data.SqlClient.SqlDataAdapter> para atualizar a fonte de dados e recuperar um novo valor de coluna de identidade. Definindo o `AcceptChangesDuringUpdate` propriedade o <xref:System.Data.SqlClient.SqlDataAdapter> para `false` para preservar o valor de incremento automático original, os novos dados, em seguida, podem ser mesclados em original <xref:System.Data.DataTable>, mesmo que o novo valor de identidade não coincide com o incremento automático original valor de `DataTable`.  
+  
+ [!code-csharp[DataWorks SqlClient.AcceptChangesDuringUpdate#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.AcceptChangesDuringUpdate/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlClient.AcceptChangesDuringUpdate#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.AcceptChangesDuringUpdate/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneInternals">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.Common.DataAdapter CloneInternals ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DataAdapter CloneInternals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.CloneInternals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("CloneInternals() has been deprecated.  Use the DataAdapter(DataAdapter from) constructor.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DataAdapter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia desta instância do <see cref="T:System.Data.Common.DataAdapter" />.</summary>
+        <returns>A instância clonada de <see cref="T:System.Data.Common.DataAdapter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é preterido. O <xref:System.Data.Common.DataAdapter.%23ctor%2A> construtor deve ser usado em vez desse método.  
+  
+ Todos os comandos, o <xref:System.Data.Common.DataAdapter.TableMappings%2A>, o <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>e o <xref:System.Data.Common.DataAdapter.MissingMappingAction%2A> são clonados. No entanto, as conexões para os comandos não são copiadas, mas compartilhadas. Portanto, o clonado <xref:System.Data.Common.DataAdapter> pode ser usado com a mesma conexão que o original.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Data.Common.DataAdapter.CloneInternals" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Data.Common.DataAdapter.CloneInternals" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueUpdateOnError">
+      <MemberSignature Language="C#" Value="public bool ContinueUpdateOnError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContinueUpdateOnError" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.ContinueUpdateOnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se uma exceção deve ser gerada quando for encontrado um erro durante uma atualização de linha.</summary>
+        <value>
+          <see langword="true" /> para continuar a atualização sem gerar uma exceção; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `ContinueUpdateOnError` é definido como `true`, nenhuma exceção é lançada quando ocorre um erro durante a atualização de uma linha. A atualização da linha é ignorada e as informações de erro são colocadas no <xref:System.Data.DataRow.RowError%2A> propriedade da linha em erro. O <xref:System.Data.Common.DataAdapter> continua a atualizar linhas subsequentes.  
+  
+ Se `ContinueUpdateOnError` é definido como `false`, uma exceção é lançada quando ocorre um erro durante a atualização de uma linha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTableMappings">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.Common.DataTableMappingCollection CreateTableMappings ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DataTableMappingCollection CreateTableMappings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.CreateTableMappings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DataTableMappingCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Data.Common.DataTableMappingCollection" />.</summary>
+        <returns>Um novo conjunto de mapeamentos de tabela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Data.Common.DataAdapter" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.IDisposable.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Data.Common.DataAdapter> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não para referenciar objetos que tenham eliminados em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public virtual int Fill (System.Data.DataSet dataSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Fill(class System.Data.DataSet dataSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.Fill(System.Data.DataSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">Um <see cref="T:System.Data.DataSet" /> a ser preenchido com registros e, se necessário, esquema.</param>
+        <summary>Adiciona ou atualiza linhas no <see cref="T:System.Data.DataSet" /> para correspondência na fonte de dados.</summary>
+        <returns>O número de linhas adicionadas com êxito a ou atualizadas no <see cref="T:System.Data.DataSet" />. Isso não inclui linhas afetadas por instruções que não retornam linhas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DataAdapter.Fill%2A> método recupera as linhas da fonte de dados usando a instrução SELECT especificada por um associado <xref:System.Data.IDbDataAdapter.SelectCommand%2A> propriedade. O objeto de conexão associado à instrução SELECT deve ser válido, mas não precisa estar aberto. Se a conexão for fechada antes <xref:System.Data.Common.DataAdapter.Fill%2A> é chamado, ele é aberto para recuperar dados e fechado. Se a conexão está aberta antes de <xref:System.Data.Common.DataAdapter.Fill%2A> é chamado, ele permanecerá aberto.  
+  
+ O <xref:System.Data.Common.DataAdapter.Fill%2A> operação, em seguida, adiciona as linhas ao destino <xref:System.Data.DataTable> objetos no <xref:System.Data.DataSet>, criando o <xref:System.Data.DataTable> objetos se eles ainda não existir. Ao criar <xref:System.Data.DataTable> objetos, o <xref:System.Data.Common.DataAdapter.Fill%2A> operação normalmente cria apenas os metadados de nome de coluna. No entanto, caso a propriedade <xref:System.Data.IDataAdapter.MissingSchemaAction%2A> seja definida como `AddWithKey`, as chaves primárias apropriadas e as restrições também são criadas.  
+  
+ Se o `SelectCommand` retornar os resultados de um OUTER JOIN, o `DataAdapter` não definirá um valor de <xref:System.Data.DataTable.PrimaryKey%2A> para o<xref:System.Data.DataTable> resultante. Você deve definir explicitamente a chave primária para garantir que as linhas duplicadas sejam resolvidas corretamente. Para obter mais informações, consulte [definindo chaves primárias](~/docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+  
+ Se o adaptador de dados encontrar colunas duplicadas ao preencher um <xref:System.Data.DataTable>, ele gera nomes para as colunas subsequentes, usando o padrão "nome_da_coluna1", "columnname2", "columnname3" e assim por diante. Se os dados de entrada contém colunas sem nome, eles são colocados no <xref:System.Data.DataSet> acordo com o padrão "Coluna1", "Coluna2" e assim por diante. Quando vários conjuntos de resultados são adicionados para o <xref:System.Data.DataSet> cada conjunto de resultados é colocado em uma tabela separada. Os conjuntos de resultados adicionais são nomeados adicionando-se valores integrais ao nome da tabela especificado (por exemplo, "Tabela", "Tabela1", "Tabela2" e assim por diante). Aplicativos que usam nomes de coluna e tabela devem garantir que está em conflito com esses padrões de nomenclatura não ocorra.  
+  
+ Quando a instrução SELECT é usada para popular o <xref:System.Data.DataSet> retornar vários resultados, como um lote SQL, se um dos resultados contiver um erro, todos os resultados subsequentes são ignorados e não adicionados ao <xref:System.Data.DataSet>.  
+  
+ Você pode usar o <xref:System.Data.Common.DataAdapter.Fill%2A> método várias vezes no mesmo <xref:System.Data.DataTable>. Caso haja uma chave primária, as linhas de entrada são mescladas com linhas correspondentes já existentes. Caso não haja nenhuma chave primária, as linhas de entrada são acrescentadas ao <xref:System.Data.DataTable>.  
+  
+> [!NOTE]
+>  Ao lidar com instruções SQL em lotes que retornem vários resultados, a implementação de <xref:System.Data.Common.DbDataAdapter.FillSchema%2A> para o provedor de dados .NET Framework para OLE DB recupera informações de esquema para apenas o primeiro resultado. Para recuperar informações de esquema para vários resultados, use <xref:System.Data.Common.DbDataAdapter.Fill%2A> com o <xref:System.Data.MissingSchemaAction> definido como `AddWithKey`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="protected virtual int Fill (System.Data.DataTable dataTable, System.Data.IDataReader dataReader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 Fill(class System.Data.DataTable dataTable, class System.Data.IDataReader dataReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.Fill(System.Data.DataTable,System.Data.IDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+        <Parameter Name="dataReader" Type="System.Data.IDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">Um <see cref="T:System.Data.DataTable" /> para preencher com registros.</param>
+        <param name="dataReader">Uma instância de <see cref="T:System.Data.IDataReader" />.</param>
+        <summary>Adiciona ou atualiza linhas no <see cref="T:System.Data.DataTable" /> para corresponder àquelas na fonte de dados usando o nome <see cref="T:System.Data.DataTable" /> e o <see cref="T:System.Data.IDataReader" /> especificado.</summary>
+        <returns>O número de linhas adicionadas com êxito a ou atualizadas no <see cref="T:System.Data.DataTable" />. Isso não inclui linhas afetadas por instruções que não retornam linhas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte os comentários para `System.Data.Common.DataAdapter.Fill(System.Data.DataSet)` para obter informações adicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="protected virtual int Fill (System.Data.DataTable[] dataTables, System.Data.IDataReader dataReader, int startRecord, int maxRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 Fill(class System.Data.DataTable[] dataTables, class System.Data.IDataReader dataReader, int32 startRecord, int32 maxRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.Fill(System.Data.DataTable[],System.Data.IDataReader,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTables" Type="System.Data.DataTable[]" />
+        <Parameter Name="dataReader" Type="System.Data.IDataReader" />
+        <Parameter Name="startRecord" Type="System.Int32" />
+        <Parameter Name="maxRecords" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataTables">Uma coleção de objetos <see cref="T:System.Data.DataTable" /> a serem preenchidos com registros.</param>
+        <param name="dataReader">Uma instância de <see cref="T:System.Data.IDataReader" />.</param>
+        <param name="startRecord">O índice baseado em zero do registro inicial.</param>
+        <param name="maxRecords">Um inteiro que indica o número máximo de registros.</param>
+        <summary>Adiciona ou atualiza as linhas em um intervalo especificado na coleção de objetos <see cref="T:System.Data.DataTable" /> para corresponder àquelas na fonte de dados.</summary>
+        <returns>O número de linhas adicionadas com êxito a ou atualizadas no <see cref="T:System.Data.DataTable" />. Isso não inclui linhas afetadas por instruções que não retornam linhas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte os comentários para `System.Data.Common.DataAdapter.Fill(System.Data.DataSet)` para obter informações adicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="protected virtual int Fill (System.Data.DataSet dataSet, string srcTable, System.Data.IDataReader dataReader, int startRecord, int maxRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 Fill(class System.Data.DataSet dataSet, string srcTable, class System.Data.IDataReader dataReader, int32 startRecord, int32 maxRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.Fill(System.Data.DataSet,System.String,System.Data.IDataReader,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="srcTable" Type="System.String" />
+        <Parameter Name="dataReader" Type="System.Data.IDataReader" />
+        <Parameter Name="startRecord" Type="System.Int32" />
+        <Parameter Name="maxRecords" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">Um <see cref="T:System.Data.DataSet" /> para preencher com registros.</param>
+        <param name="srcTable">Uma cadeia de caracteres que indica o nome da tabela de origem.</param>
+        <param name="dataReader">Uma instância de <see cref="T:System.Data.IDataReader" />.</param>
+        <param name="startRecord">O índice baseado em zero do registro inicial.</param>
+        <param name="maxRecords">Um inteiro que indica o número máximo de registros.</param>
+        <summary>Adiciona ou atualiza linhas em um intervalo especificado no <see cref="T:System.Data.DataSet" /> para corresponder àquelas na fonte de dados usando os nomes <see cref="T:System.Data.DataSet" /> e <see cref="T:System.Data.DataTable" />.</summary>
+        <returns>O número de linhas adicionadas com êxito a ou atualizadas no <see cref="T:System.Data.DataSet" />. Isso não inclui linhas afetadas por instruções que não retornam linhas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte os comentários para `System.Data.Common.DataAdapter.Fill(System.Data.DataSet)` para obter informações adicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillError">
+      <MemberSignature Language="C#" Value="public event System.Data.FillErrorEventHandler FillError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.FillErrorEventHandler FillError" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Common.DataAdapter.FillError" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.FillErrorEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É retornado quando ocorre um erro durante uma operação de preenchimento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O **FillError** evento permite que um usuário determinar se a operação de preenchimento deve continuar depois do erro. Exemplos de quando o **FillError** evento pode ocorrer são:  
+  
+-   Os dados que está sendo adicionados a um `DataSet` não pode ser convertido em um tipo common language runtime sem perda de precisão.  
+  
+-   A linha que está sendo adicionada contém dados que violam uma restrição que deve ser aplicada em uma `DataColumn` no `DataSet`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillLoadOption">
+      <MemberSignature Language="C#" Value="public System.Data.LoadOption FillLoadOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.LoadOption FillLoadOption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.FillLoadOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.LoadOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.LoadOption" /> que determina como o adaptador preenche o <see cref="T:System.Data.DataTable" /> do <see cref="T:System.Data.Common.DbDataReader" />.</summary>
+        <value>Um valor <see cref="T:System.Data.LoadOption" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillSchema">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataTable[] FillSchema (System.Data.DataSet dataSet, System.Data.SchemaType schemaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable[] FillSchema(class System.Data.DataSet dataSet, valuetype System.Data.SchemaType schemaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.FillSchema(System.Data.DataSet,System.Data.SchemaType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="schemaType" Type="System.Data.SchemaType" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">O <see cref="T:System.Data.DataSet" /> a ser preenchido com o esquema da fonte de dados.</param>
+        <param name="schemaType">Um dos valores de <see cref="T:System.Data.SchemaType" />.</param>
+        <summary>Adiciona um <see cref="T:System.Data.DataTable" /> ao <see cref="T:System.Data.DataSet" /> especificado e configura o esquema para corresponder à fonte de dados com base no <see cref="T:System.Data.SchemaType" /> especificado.</summary>
+        <returns>Um objeto <see cref="T:System.Data.DataTable" /> que contém informações de esquema retornadas da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DataAdapter.FillSchema%2A> método recupera o esquema de fonte de dados usando o <xref:System.Data.IDbDataAdapter.SelectCommand%2A>. O objeto de conexão associado ao <xref:System.Data.IDbDataAdapter.SelectCommand%2A> deve ser válido, mas não precisa estar aberto. Se a conexão for fechada antes <xref:System.Data.Common.DataAdapter.FillSchema%2A> é chamado, ele é aberto para recuperar dados e, em seguida, fechado. Se a conexão está aberta antes de <xref:System.Data.Common.DataAdapter.FillSchema%2A> é chamado, ele permanecerá aberto.  
+  
+ Um <xref:System.Data.Common.DataAdapter.FillSchema%2A> operação adiciona um <xref:System.Data.DataTable> para o destino <xref:System.Data.DataSet>. Em seguida, adiciona colunas para o <xref:System.Data.DataColumnCollection> do <xref:System.Data.DataTable>e configura o seguinte <xref:System.Data.DataColumn> propriedades se eles existirem na fonte de dados:  
+  
+-   <xref:System.Data.DataColumn.AllowDBNull%2A>  
+  
+-   <xref:System.Data.DataColumn.AutoIncrement%2A>. Você deve definir <xref:System.Data.DataColumn.AutoIncrementStep%2A> e <xref:System.Data.DataColumn.AutoIncrementSeed%2A> separadamente.  
+  
+-   <xref:System.Data.DataColumn.MaxLength%2A>  
+  
+-   <xref:System.Data.DataColumn.ReadOnly%2A>  
+  
+-   <xref:System.Data.DataColumn.Unique%2A>  
+  
+ <xref:System.Data.Common.DataAdapter.FillSchema%2A>também configura o <xref:System.Data.DataTable.PrimaryKey%2A> e <xref:System.Data.DataTable.Constraints%2A> propriedades de acordo com as regras a seguir:  
+  
+-   Caso uma ou mais colunas de chave primária sejam retornadas pelo <xref:System.Data.IDbDataAdapter.SelectCommand%2A>, elas são usadas como colunas de chave primária para o <xref:System.Data.DataTable>.  
+  
+-   Se não há colunas de chave primária são retornadas, mas são colunas exclusivas, as colunas exclusivas são usadas como chave primária se e somente se, todas as colunas exclusivas são não nulas. Caso qualquer uma das colunas seja anulável, um <xref:System.Data.UniqueConstraint> é adicionado ao <xref:System.Data.ConstraintCollection>, mas a propriedade <xref:System.Data.DataTable.PrimaryKey%2A> não é definida.  
+  
+-   Caso as colunas de chave primária e as colunas exclusivas sejam retornadas, as colunas de chave primária são usadas como as colunas de chave primária para o <xref:System.Data.DataTable>.  
+  
+> [!NOTE]
+>  O repositório de dados subjacentes pode permitir que os atributos de coluna que não têm suporte em um <xref:System.Data.DataColumn>, que faz com que alguns atributos de coluna não traduzam corretamente. Por exemplo, [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] permite que uma coluna de identidade com um tipo de dados tinyint enquanto um <xref:System.Data.DataColumn> permite apenas Int16, Int32 e Int64 tenha o <xref:System.Data.DataColumn.AutoIncrement%2A> conjunto de propriedades. `FillSchema`ignora silenciosamente casos onde o <xref:System.Data.DataColumn> com precisão não é possível espelhar a fonte de dados e não gera nenhuma exceção.  
+  
+ Observe que as chaves primárias e restrições exclusivas serão adicionadas para o <xref:System.Data.ConstraintCollection> acordo com as regras precedentes, mas outra restrição de tipos não são adicionados.  
+  
+ Se um índice agrupado exclusivo estiver definido em colunas em uma tabela do SQL Server e a restrição de chave primária estiver definida em um conjunto de colunas separado, os nomes das colunas no índice agrupado serão retornados. Para retornar o nome ou os nomes das colunas de chave primária, use uma dica de consulta com a instrução SELECT que especifica o nome do índice de chave primária. Para obter mais informações sobre como especificar dicas de consulta, consulte [a dica de consulta (Transact-SQL)](http://msdn.microsoft.com/library/ms181714.aspx).  
+  
+ Se o <xref:System.Data.Common.DataAdapter> encontra colunas duplicadas ao preencher um <xref:System.Data.DataTable>, ele gera nomes para as colunas subsequentes, usando o padrão "*columnname*1", "*columnname*2","*columnname*3", e assim por diante. Se os dados de entrada contém colunas sem nome, eles são colocados no <xref:System.Data.DataSet> acordo com o padrão "Coluna1", "Coluna2" e assim por diante. Quando vários conjuntos de resultados são adicionados para o <xref:System.Data.DataSet> cada conjunto de resultados é colocado em uma tabela separada. Os conjuntos de resultados adicionais são nomeados adicionando-se valores integrais ao nome da tabela especificado (por exemplo, "Tabela", "Tabela1", "Tabela2" e assim por diante). Aplicativos que usam nomes de coluna e tabela devem garantir que está em conflito com esses padrões de nomenclatura não ocorra.  
+  
+ <xref:System.Data.Common.DataAdapter.FillSchema%2A>não retorna nenhuma linha. Use o <xref:System.Data.Common.DataAdapter.Fill%2A> método para adicionar linhas a um <xref:System.Data.DataTable>.  
+  
+> [!NOTE]
+>  Ao lidar com instruções SQL em lotes que retornem vários resultados, a implementação de <xref:System.Data.Common.DbDataAdapter.FillSchema%2A> para o provedor de dados .NET Framework para OLE DB recupera informações de esquema para apenas o primeiro resultado. Para recuperar informações de esquema para vários resultados, use <xref:System.Data.Common.DbDataAdapter.Fill%2A> com o <xref:System.Data.MissingSchemaAction> definido como `AddWithKey`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillSchema">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.DataTable FillSchema (System.Data.DataTable dataTable, System.Data.SchemaType schemaType, System.Data.IDataReader dataReader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.DataTable FillSchema(class System.Data.DataTable dataTable, valuetype System.Data.SchemaType schemaType, class System.Data.IDataReader dataReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.FillSchema(System.Data.DataTable,System.Data.SchemaType,System.Data.IDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+        <Parameter Name="schemaType" Type="System.Data.SchemaType" />
+        <Parameter Name="dataReader" Type="System.Data.IDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">O <see cref="T:System.Data.DataTable" /> ser preenchidas do <see cref="T:System.Data.IDataReader" />.</param>
+        <param name="schemaType">Um dos valores de <see cref="T:System.Data.SchemaType" />.</param>
+        <param name="dataReader">O <see cref="T:System.Data.IDataReader" /> a ser usado como a fonte de dados durante o preenchimento de <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Adiciona um <see cref="T:System.Data.DataTable" /> especificado <see cref="T:System.Data.DataSet" />.</summary>
+        <returns>Um objeto <see cref="T:System.Data.DataTable" /> que contém informações de esquema retornadas da fonte de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillSchema">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.DataTable[] FillSchema (System.Data.DataSet dataSet, System.Data.SchemaType schemaType, string srcTable, System.Data.IDataReader dataReader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.DataTable[] FillSchema(class System.Data.DataSet dataSet, valuetype System.Data.SchemaType schemaType, string srcTable, class System.Data.IDataReader dataReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.FillSchema(System.Data.DataSet,System.Data.SchemaType,System.String,System.Data.IDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="schemaType" Type="System.Data.SchemaType" />
+        <Parameter Name="srcTable" Type="System.String" />
+        <Parameter Name="dataReader" Type="System.Data.IDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">O <see cref="T:System.Data.DataTable" /> ser preenchidas do <see cref="T:System.Data.IDataReader" />.</param>
+        <param name="schemaType">Um dos valores de <see cref="T:System.Data.SchemaType" />.</param>
+        <param name="srcTable">O nome da tabela de origem a ser usado para mapeamento de tabela.</param>
+        <param name="dataReader">O <see cref="T:System.Data.IDataReader" /> a ser usado como a fonte de dados durante o preenchimento de <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Adiciona um <see cref="T:System.Data.DataTable" /> especificado <see cref="T:System.Data.DataSet" />.</summary>
+        <returns>Uma referência a uma coleção de objetos <see cref="T:System.Data.DataTable" /> que foram adicionados ao <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFillParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Data.IDataParameter[] GetFillParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDataParameter[] GetFillParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.GetFillParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataParameter[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os parâmetros definidos pelo usuário ao executar uma instrução SQL SELECT.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Data.IDataParameter" /> que contém os parâmetros definidos pelo usuário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTableMappings">
+      <MemberSignature Language="C#" Value="protected bool HasTableMappings ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool HasTableMappings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.HasTableMappings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se um <see cref="T:System.Data.Common.DataTableMappingCollection" /> foi criado.</summary>
+        <returns>
+          <see langword="true" />Se um <see cref="T:System.Data.Common.DataTableMappingCollection" /> foi criado; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingMappingAction">
+      <MemberSignature Language="C#" Value="public System.Data.MissingMappingAction MissingMappingAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.MissingMappingAction MissingMappingAction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.MissingMappingAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingMappingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina a ação a ser tomada quando os dados de entrada não têm uma tabela ou coluna correspondente.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.MissingMappingAction" />. O padrão é <see langword="Passthrough" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DataAdapter.TableMappings%2A> propriedade fornece o mapeamento entre os registros retornados de mestre e o <xref:System.Data.DataSet>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma classe derivada, <xref:System.Data.OleDb.OleDbDataAdapter> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData DataAdapter.MissingMappingAction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataAdapter.MissingMappingAction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataAdapter.MissingMappingAction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataAdapter.MissingMappingAction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor definido não é um dos valores <see cref="T:System.Data.MissingMappingAction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingSchemaAction">
+      <MemberSignature Language="C#" Value="public System.Data.MissingSchemaAction MissingSchemaAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.MissingSchemaAction MissingSchemaAction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.MissingSchemaAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingSchemaAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina a ação a ser tomada quando o esquema <see cref="T:System.Data.DataSet" /> existente não coincide com os dados de entrada.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.MissingSchemaAction" />. O padrão é <see langword="Add" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma classe derivada, <xref:System.Data.OleDb.OleDbDataAdapter> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData DataAdapter.MissingMappingAction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataAdapter.MissingMappingAction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataAdapter.MissingMappingAction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataAdapter.MissingMappingAction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor definido não é um dos valores <see cref="T:System.Data.MissingSchemaAction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFillError">
+      <MemberSignature Language="C#" Value="protected virtual void OnFillError (System.Data.FillErrorEventArgs value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFillError(class System.Data.FillErrorEventArgs value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.OnFillError(System.Data.FillErrorEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.FillErrorEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto <see cref="T:System.Data.FillErrorEventArgs" />.</param>
+        <summary>Chamado quando ocorre um erro durante uma <see langword="Fill" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetFillLoadOption">
+      <MemberSignature Language="C#" Value="public void ResetFillLoadOption ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetFillLoadOption() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.ResetFillLoadOption" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine <see cref="P:System.Data.Common.DataAdapter.FillLoadOption" /> para seu estado padrão e causas <see cref="M:System.Data.Common.DataAdapter.Fill(System.Data.DataSet)" /> cumprir <see cref="P:System.Data.Common.DataAdapter.AcceptChangesDuringFill" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnProviderSpecificTypes">
+      <MemberSignature Language="C#" Value="public virtual bool ReturnProviderSpecificTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReturnProviderSpecificTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.ReturnProviderSpecificTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o método <see langword="Fill" /> deve retornar valores específicos ao provedor ou valores comuns em conformidade com CLS.</summary>
+        <value>
+          <see langword="true" /> se o método <see langword="Fill" /> precisar retornar valores específicos ao provedor; caso contrário, <see langword="false" /> para retornar valores comuns em conformidade com CLS.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAcceptChangesDuringFill">
+      <MemberSignature Language="C#" Value="public virtual bool ShouldSerializeAcceptChangesDuringFill ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldSerializeAcceptChangesDuringFill() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.ShouldSerializeAcceptChangesDuringFill" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o <see cref="P:System.Data.Common.DataAdapter.AcceptChangesDuringFill" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Data.Common.DataAdapter.AcceptChangesDuringFill" /> propriedade for persistente; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeFillLoadOption">
+      <MemberSignature Language="C#" Value="public virtual bool ShouldSerializeFillLoadOption ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldSerializeFillLoadOption() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.ShouldSerializeFillLoadOption" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o <see cref="P:System.Data.Common.DataAdapter.FillLoadOption" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Data.Common.DataAdapter.FillLoadOption" /> propriedade for persistente; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTableMappings">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeTableMappings ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeTableMappings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.ShouldSerializeTableMappings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se um ou mais <see cref="T:System.Data.Common.DataTableMapping" /> objetos existem e eles devem ser persistentes.</summary>
+        <returns>
+          <see langword="true" />Se um ou mais <see cref="T:System.Data.Common.DataTableMapping" /> objetos existirem; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDataAdapter.TableMappings">
+      <MemberSignature Language="C#" Value="System.Data.ITableMappingCollection System.Data.IDataAdapter.TableMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.ITableMappingCollection System.Data.IDataAdapter.TableMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.System#Data#IDataAdapter#TableMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ITableMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica como uma tabela de origem é mapeada para uma tabela de conjunto de dados.</summary>
+        <value>Uma coleção que fornece o mapeamento mestre entre os registros retornados e o <see cref="T:System.Data.DataSet" />. O valor padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Common.DataAdapter> é convertida em uma interface de <xref:System.Data.IDataAdapter>.  
+  
+ Para obter mais informações, consulte <xref:System.Data.IDataAdapter.TableMappings%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableMappings">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DataTableMappingCollection TableMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DataTableMappingCollection TableMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataAdapter.TableMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DataTableMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que fornece o mapeamento mestre entre uma tabela de origem e um <see cref="T:System.Data.DataTable" />.</summary>
+        <value>Uma coleção que fornece o mapeamento mestre entre os registros retornados e o <see cref="T:System.Data.DataSet" />. O valor padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando reconciliar as alterações, o <xref:System.Data.Common.DataAdapter> usa o <xref:System.Data.Common.DataTableMappingCollection> coleção para associar os nomes de coluna usados pela fonte de dados com os nomes de coluna usados pelo <xref:System.Data.DataSet>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma classe derivada, <xref:System.Data.OleDb.OleDbDataAdapter>, para adicionar <xref:System.Data.Common.DataTableMapping> objetos em seu <xref:System.Data.Common.DataAdapter.TableMappings%2A> tabelas de origem de coleção e exibir uma lista dessas mapeado. Este exemplo supõe que um <xref:System.Data.OleDb.OleDbDataAdapter> já foi criado.  
+  
+ [!code-csharp[Classic WebData DataAdapter.TableMappings Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataAdapter.TableMappings Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataAdapter.TableMappings Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataAdapter.TableMappings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public virtual int Update (System.Data.DataSet dataSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Update(class System.Data.DataSet dataSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataAdapter.Update(System.Data.DataSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">O <see cref="T:System.Data.DataSet" /> usado para atualizar a fonte de dados.</param>
+        <summary>Chama as respectivas instruções INSERT, UPDATE ou DELETE para cada linha inserida, atualizada ou excluída no <see cref="T:System.Data.DataSet" /> especificado em um <see cref="T:System.Data.DataTable" /> denominado “Tabela.”</summary>
+        <returns>O número de linhas atualizadas com êxito a partir do <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A atualização é executada em uma base por linha. Para cada linha inserida, excluída e modificada, o <xref:System.Data.Common.DataAdapter.Update%2A> método determina o tipo de alteração que foi executada nele (Inserir, atualizar ou excluir). Dependendo do tipo de alteração, o `Insert`, `Update,` ou `Delete` modelo de comando executa para propagar a linha modificada para a fonte de dados. Quando um aplicativo chama o <xref:System.Data.Common.DataAdapter.Update%2A> método, o <xref:System.Data.Common.DataAdapter> examina o <xref:System.Data.DataRow.RowState%2A> propriedade e executa as instruções INSERT, UPDATE ou DELETE necessárias iterativamente para cada linha, com base na ordem de índices configurados no <xref:System.Data.DataSet>. Por exemplo, <xref:System.Data.Common.DataAdapter.Update%2A> pode executar uma instrução DELETE, seguida por uma instrução INSERT e, em seguida, outra instrução de exclusão, devido à ordem das linhas de <xref:System.Data.DataTable>.  
+  
+ Observe que essas instruções não são executadas como um processo em lote; cada linha é atualizada individualmente. Um aplicativo pode chamar o <xref:System.Data.DataSet.GetChanges%2A> método em situações em que você deve controlar a sequência de tipos de instrução (por exemplo, inserir antes da atualização). Para obter mais informações, consulte [Atualizar fontes de dados com DataAdapters](~/docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+  
+ Se as instruções INSERT, UPDATE ou DELETE não forem especificadas, o <xref:System.Data.Common.DataAdapter.Update%2A> método gera uma exceção. No entanto, é possível criar um objeto <xref:System.Data.SqlClient.SqlCommandBuilder> ou <xref:System.Data.OleDb.OleDbCommandBuilder> para gerar automaticamente instruções SQL para atualizações de tabela única caso você defina a propriedade `SelectCommand` de um provedor de dados do .NET Framework. Em seguida, qualquer instrução SQL adicional que você não defina é geradas pelo **CommandBuilder**. Esta lógica de geração requer que as informações da coluna principal estejam presente no <xref:System.Data.DataSet>. Para obter mais informações, consulte [gerar comandos com CommandBuilders](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+ O <xref:System.Data.Common.DataAdapter.Update%2A> método recupera linhas da tabela listada no mapeamento primeiro antes de executar uma atualização. O <xref:System.Data.Common.DataAdapter.Update%2A> , em seguida, atualiza a linha usando o valor de <xref:System.Data.IDbCommand.UpdatedRowSource%2A> propriedade. Todas as linhas adicionais retornadas são ignoradas.  
+  
+ Depois que todos os dados são recarregados no <xref:System.Data.DataSet>, o evento <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A> é acionado, permitindo que o usuário inspecione a linha <xref:System.Data.DataSet> reconciliada e todos os parâmetros de saída retornados pelo comando. Depois que uma linha é atualizada com êxito, as alterações feitas nessa linha são aceitas.  
+  
+ Ao usar <xref:System.Data.Common.DataAdapter.Update%2A>, a ordem de execução é o seguinte:  
+  
+1.  Os valores no <xref:System.Data.DataRow> são movidos para os valores de parâmetro.  
+  
+2.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A> é gerado.  
+  
+3.  O comando é executado.  
+  
+4.  Se o comando é definido como `FirstReturnedRecord`, a primeira retornado o resultado é colocado no <xref:System.Data.DataRow>.  
+  
+5.  Se não houver parâmetros de saída, eles são colocados no <xref:System.Data.DataRow>.  
+  
+6.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A> é gerado.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=nameWithType> é chamado. Isso gerará ambos o <xref:System.Data.DataTable.RowChanging?displayProperty=nameWithType> e <xref:System.Data.DataTable.RowChanged?displayProperty=nameWithType> eventos para a atualização <xref:System.Data.DataRow>.  
+  
+ Cada comando associado a <xref:System.Data.Common.DataAdapter> normalmente tem uma coleção de parâmetros associada a ele. Parâmetros são mapeados para a linha atual por meio de `SourceColumn` e `SourceVersion` propriedades de um provedor de dados .NET `Parameter` classe. `SourceColumn`refere-se a uma <xref:System.Data.DataTable> coluna que o <xref:System.Data.Common.DataAdapter> referências para obter valores de parâmetro para a linha atual.  
+  
+ `SourceColumn` refere-se ao nome da coluna não mapeado antes da aplicação de qualquer mapeamento de tabela. Caso `SourceColumn` refira-se a uma coluna inexistente, a ação tomada depende de um dos valores <xref:System.Data.MissingMappingAction> a seguir.  
+  
+|Valor de enumeração|Ação realizada|  
+|-----------------------|------------------|  
+|`MissingMappingAction.Passthrough`|Use os nomes de coluna de fonte e os nomes de tabela no <xref:System.Data.DataSet> caso nenhum mapeamento esteja presente.|  
+|`MissingMappingAction.Ignore`|Um <xref:System.SystemException> é gerado. Quando os mapeamentos são definidos explicitamente, um mapeamento ausente para um parâmetro de entrada é normalmente o resultado de um erro.|  
+|`MissingMappingAction.Error`|Um <xref:System.SystemException> é gerado.|  
+  
+ A propriedade `SourceColumn` também é usada para remapear o valor para parâmetros de saída ou de entrada/saída para o `DataSet`. Uma exceção será gerada se fizer referência a uma coluna inexistente.  
+  
+ O `SourceVersion` propriedade de um provedor de dados .NET `Parameter` classe determina se deve usar a versão Original, atual ou proposta do valor da coluna. Geralmente, esse recurso é usado para incluir valores originais na cláusula WHERE de uma instrução UPDATE para verificar se há violações de simultaneidade otimista.  
+  
+ Chamando o <xref:System.Data.DataSet.AcceptChanges%2A> método ou <xref:System.Data.DataTable.AcceptChanges%2A> método confirmará todas as alterações no <xref:System.Data.DataSet> ou <xref:System.Data.DataTable>. Se qualquer um desses métodos forem chamado antes do <xref:System.Data.Common.DbDataAdapter.Update%2A> método é chamado, nenhuma alteração será confirmada quando a <xref:System.Data.Common.DbDataAdapter.Update%2A> método é chamado, a menos que outras alterações foram feitas desde <xref:System.Data.DataSet.AcceptChanges%2A> ou <xref:System.Data.DataTable.AcceptChanges%2A> foi chamado.  
+  
+> [!NOTE]
+>  Caso ocorra um erro durante a atualização de uma linha, uma exceção é lançada e a execução da atualização é descontinuada. Para continuar a operação de atualização sem gerar exceções quando um erro é encontrado, defina a propriedade <xref:System.Data.Common.DataAdapter.ContinueUpdateOnError%2A> como `true` antes de chamar <xref:System.Data.Common.DbDataAdapter.Update%2A>. Você também pode responder a erros linha por linha dentro do evento `RowUpdated` de um DataAdapter. Para continuar a operação de atualização sem gerar uma exceção dentro evento `RowUpdated`, defina a propriedade <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.Common.RowUpdatedEventArgs> como <xref:System.Data.UpdateStatus.Continue>.  
+>   
+>  Para cada coluna que propagam à fonte de dados em <xref:System.Data.Common.DataAdapter.Update%2A>, deve ser adicionado a um parâmetro para o `InsertCommand`, `UpdateCommand`, ou `DeleteCommand`. O `SourceColumn` propriedade do parâmetro deve ser definida como o nome da coluna. Essa configuração indica que o valor do parâmetro não for definido manualmente, mas é obtido da coluna particular na linha processada no momento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a classe derivada, <xref:System.Data.OleDb.OleDbDataAdapter>, <xref:System.Data.Common.DataAdapter.Update%2A> a fonte de dados.  
+  
+ [!code-csharp[Classic WebData DataAdapter.IDataAdapter.Update Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataAdapter.IDataAdapter.Update Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataAdapter.IDataAdapter.Update Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataAdapter.IDataAdapter.Update Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A tabela de origem é inválida.</exception>
+        <exception cref="T:System.Data.DBConcurrencyException">Uma tentativa de executar uma instrução INSERT, UPDATE ou DELETE resultou em zero registro afetado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

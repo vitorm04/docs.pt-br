@@ -1,0 +1,101 @@
+<Type Name="ICommandSource" FullName="System.Windows.Input.ICommandSource">
+  <TypeSignature Language="C#" Value="public interface ICommandSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommandSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ICommandSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um objeto que sabe como invocar um comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte de comando define como um comando é invocado por esse objeto em particular.  Por exemplo, se um <xref:System.Windows.Controls.Button> está associado um comando, o comando é invocado quando o <xref:System.Windows.Controls.Button> é clicado.  
+  
+ Uma fonte de comando normalmente será desabilitado se o comando que é associado não é possível executar o destino de comando atual.  Por exemplo, um <xref:System.Windows.Controls.MenuItem> associados a <xref:System.Windows.Input.ApplicationCommands.Paste%2A> comando cinza em si-out quando o <xref:System.Windows.Input.ApplicationCommands.Paste%2A> não é possível executar comando de destino do comando atual.  
+  
+ Normalmente, uma fonte de comando escutará o <xref:System.Windows.Input.ICommand.CanExecuteChanged> evento no comando.  Isso informa a fonte de comando quando alterar condições no destino de comando, como perda de foco do teclado.  A fonte de comando, em seguida, pode consultar o comando usando o <xref:System.Windows.Input.ICommand.CanExecute%2A> método.  
+  
+ Algumas das classes em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] que implementam <xref:System.Windows.Input.ICommandSource> são: <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, e <xref:System.Windows.Documents.Hyperlink>.  
+  
+ No [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] comandos de sistema, o <xref:System.Windows.Input.InputBinding.CommandTarget%2A> propriedade em uma <xref:System.Windows.Input.ICommandSource> só é aplicável quando o <xref:System.Windows.Input.ICommand> é um <xref:System.Windows.Input.RoutedCommand>.  Se o <xref:System.Windows.Input.InputBinding.CommandTarget%2A> é definido em um <xref:System.Windows.Input.ICommandSource> e o comando correspondente não é um <xref:System.Windows.Input.RoutedCommand>, o destino do comando será ignorado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ICommandSource.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comando que será executado quando a fonte do comando for invocada.</summary>
+        <value>O comando que será executado quando a fonte do comando for invocada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameter">
+      <MemberSignature Language="C#" Value="public object CommandParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ICommandSource.CommandParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um valor de dados definido pelo usuário que pode ser passado para o comando quando ele é executado.</summary>
+        <value>Os dados específicos do comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> é usado para transmitir informações específicas para o comando quando ele é executado.  O tipo de dados é definido pelo comando.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement CommandTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement CommandTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ICommandSource.CommandTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto no qual o comando está sendo executado.</summary>
+        <value>O objeto no qual o comando está sendo executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] comandos de sistema, o <xref:System.Windows.Input.InputBinding.CommandTarget%2A> propriedade em uma <xref:System.Windows.Input.ICommandSource> só é aplicável quando o <xref:System.Windows.Input.ICommand> é um <xref:System.Windows.Input.RoutedCommand>.  Se o <xref:System.Windows.Input.InputBinding.CommandTarget%2A> é definido em um <xref:System.Windows.Input.ICommandSource> e o comando correspondente não é um <xref:System.Windows.Input.RoutedCommand>, o destino do comando será ignorado.  
+  
+ Quando usado com um <xref:System.Windows.Input.RoutedCommand>, o destino do comando é o objeto no qual o <xref:System.Windows.Input.CommandManager.Executed> e <xref:System.Windows.Input.CommandManager.CanExecute> os eventos são gerados. Se o <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> propriedade não for definida, o elemento com o foco do teclado será usado como o destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

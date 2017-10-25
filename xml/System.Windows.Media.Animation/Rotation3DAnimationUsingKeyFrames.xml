@@ -1,0 +1,568 @@
+<Type Name="Rotation3DAnimationUsingKeyFrames" FullName="System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames">
+  <TypeSignature Language="C#" Value="public class Rotation3DAnimationUsingKeyFrames : System.Windows.Media.Animation.Rotation3DAnimationBase, System.Windows.Markup.IAddChild, System.Windows.Media.Animation.IKeyFrameAnimation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Rotation3DAnimationUsingKeyFrames extends System.Windows.Media.Animation.Rotation3DAnimationBase implements class System.Windows.Markup.IAddChild, class System.Windows.Media.Animation.IKeyFrameAnimation" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Rotation3DAnimationBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Media.Animation.IKeyFrameAnimation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("KeyFrames")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Anima o valor de uma propriedade <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> junto com um conjunto de <see cref="P:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.KeyFrames" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de destino de uma animação quadro-chave são definidos por seu <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.KeyFrames%2A> propriedade, que contém uma coleção de <xref:System.Windows.Media.Animation.Rotation3DKeyFrame> objetos. Cada <xref:System.Windows.Media.Animation.Rotation3DKeyFrame> define um segmento da animação com seu próprio destino <xref:System.Windows.Media.Animation.Rotation3DKeyFrame.Value%2A> e <xref:System.Windows.Media.Animation.Rotation3DKeyFrame.KeyTime%2A>. Quando a animação é executada, ela avança de um valor de chave para a próxima no local especificado da chave vezes.  
+  
+ Há três tipos de <xref:System.Windows.Media.Animation.Rotation3DKeyFrame> classes, uma para cada método de interpolação com suporte: <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame>, <xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame>, e <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame>.  
+  
+ Ao contrário de um <xref:System.Windows.Media.Animation.Rotation3DAnimation>, um <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> pode ter mais de dois valores de destino. Você também pode controlar o método de interpolação do indivíduo <xref:System.Windows.Media.Animation.Rotation3DKeyFrame> segmentos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rotation3DAnimationUsingKeyFrames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected virtual void AddChild (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddChild(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">O objeto a ser adicionado como filho deste <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</param>
+        <summary>Adiciona um filho <see cref="T:System.Windows.Media.Animation.Rotation3DKeyFrame" /> a este <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que <xref:System.Windows.Media.Animation.Rotation3DKeyFrame> objetos sejam filhos direcionam de um <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> objeto na marcação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="child" /> não é um <see cref="T:System.Windows.Media.Animation.Rotation3DKeyFrame" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="protected virtual void AddText (string childText);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddText(string childText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="childText">O texto adicionado para o <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</param>
+        <summary>Adiciona uma cadeia de caracteres de texto como um filho deste <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> não aceita texto como um filho, para que esse método gerará uma `InvalididOperationException` , a menos que uma classe derivada substituiu esse comportamento que permite que o texto a ser adicionado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> não aceita texto como um filho, para que esse método gerará esta exceção, a menos que uma classe derivada substituiu esse comportamento que permite que o texto a ser adicionado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> para clonar.</param>
+        <summary>Isso faz com que uma cópia profunda de especificado da instância <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.Clone%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.Clone%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />, fazendo cópias em profundidade dos valores do objeto atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> para clonar.</param>
+        <summary>Torna essa instância de uma cópia em profundidade modificável especificada <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> usando os valores da propriedade atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.CloneCurrentValue%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.CloneCurrentValue%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected override bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />Para verificar se esta instância pode ser congelada; <see langword="false" /> congelar esta instância.</param>
+        <summary>Faz com que esta instância do <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> do objeto não modificável ou determina se ele pode ser feito não modificável.</summary>
+        <returns>Se <paramref name="isChecking" /> for true, este método retorna <see langword="true" /> se esta instância pode se tornar somente leitura, ou <see langword="false" /> se ele não pode se tornar somente leitura. Se <paramref name="isChecking" /> for falsa, este método retorna <see langword="true" /> se esta instância agora é somente leitura, ou <see langword="false" /> se ele não pode tornar somente para leitura, com o efeito colateral de ter iniciado alterar o status de congelamento deste objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> objeto clonar.</param>
+        <summary>Isso torna a instância um clone do <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais. Observe que, se essas propriedades contêm referências de recurso ou associações de dados, <xref:System.Windows.Freezable.GetAsFrozen%2A> falhará quando tentar congelar o objeto e lançará um <xref:System.InvalidOperationException>.  
+  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> para copiar e congelar.</param>
+        <summary>Torna isso um clone congelado especificada da instância <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override sealed System.Windows.Media.Media3D.Rotation3D GetCurrentValueCore (System.Windows.Media.Media3D.Rotation3D defaultOriginValue, System.Windows.Media.Media3D.Rotation3D defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Media3D.Rotation3D GetCurrentValueCore(class System.Windows.Media.Media3D.Rotation3D defaultOriginValue, class System.Windows.Media.Media3D.Rotation3D defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.GetCurrentValueCore(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rotation3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="defaultDestinationValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">O valor de origem sugerido, usado se a animação não tiver definido sua própria explicitamente valor inicial.</param>
+        <param name="defaultDestinationValue">O valor de destino sugerido, usado se a animação não tiver definido sua própria explicitamente terminar de valor.</param>
+        <param name="animationClock">Um <see cref="T:System.Windows.Media.Animation.AnimationClock" /> que gera a <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> ou <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> usado pela animação host.</param>
+        <summary>Calcula um valor que representa o valor atual da propriedade que está sendo animada, conforme determinado por esta instância do <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />.</summary>
+        <returns>O valor calculado da propriedade, conforme determinado pela instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `defaultOriginValue` é o primeiro na cadeia de composição, esse valor será o valor de instantâneo (se estiver disponível) ou o valor da propriedade base; caso contrário, esse valor será o valor retornado pela animação anterior na cadeia com um <xref:System.Windows.Media.Animation.AnimationClock> que não é <xref:System.Windows.Media.Animation.Clock.Stopped%2A>.  
+  
+ O `defaultDestinationValue` é o valor de base se a animação for a primeira camada de composição de animações em uma propriedade; caso contrário, o valor é o valor de saída da camada de composição anterior de animações para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNaturalDurationCore">
+      <MemberSignature Language="C#" Value="protected override sealed System.Windows.Duration GetNaturalDurationCore (System.Windows.Media.Animation.Clock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Duration GetNaturalDurationCore(class System.Windows.Media.Animation.Clock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.GetNaturalDurationCore(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="clock">O <see cref="T:System.Windows.Media.Animation.Clock" /> cuja duração natural é desejada.</param>
+        <summary>Forneça uma ordenação personalizada <see cref="T:System.Windows.Duration" /> quando o <see cref="T:System.Windows.Duration" /> está definida como <see cref="P:System.Windows.Duration.Automatic" />.</summary>
+        <returns>Se for o último quadro chave dessa animação um <see cref="T:System.Windows.Media.Animation.KeyTime" />, em seguida, esse valor é usado como o <see cref="P:System.Windows.Media.Animation.Clock.NaturalDuration" />; caso contrário, será um segundo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdditive">
+      <MemberSignature Language="C#" Value="public bool IsAdditive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAdditive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.IsAdditive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o valor de saída da animação é adicionado ao valor base da propriedade que está sendo animada.</summary>
+        <value>
+          <see langword="true" />Se a animação adiciona o valor de saída para o valor base da propriedade que está sendo animada em vez de substituí-los. Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCumulative">
+      <MemberSignature Language="C#" Value="public bool IsCumulative { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCumulative" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.IsCumulative" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o valor da animação acumula quando ela se repete.</summary>
+        <value>
+          <see langword="true" />Se a animação acumula seus valores ao seu <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" /> propriedade faz com que ele Repita sua duração simples; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, a saída da animação valores acumulam somente quando a animação <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriedade faz com que ele Repita sua duração simples. Ele não se acumulam seus valores quando ele for reiniciado, pois seu pai é repetido ou porque seu relógio foi reiniciado a partir um <xref:System.Windows.Media.Animation.ClockController.Begin%2A> chamar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFrames">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Rotation3DKeyFrameCollection KeyFrames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Rotation3DKeyFrameCollection KeyFrames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.KeyFrames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Rotation3DKeyFrameCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de <see cref="T:System.Windows.Media.Animation.Rotation3DKeyFrame" /> objetos que definem a animação.</summary>
+        <value>A coleção de <see cref="T:System.Windows.Media.Animation.Rotation3DKeyFrame" /> objetos que definem a animação. O valor padrão é <see cref="P:System.Windows.Media.Animation.Rotation3DKeyFrameCollection.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected override void OnChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.OnChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o atual <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> objeto é modificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeKeyFrames">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeKeyFrames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeKeyFrames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.ShouldSerializeKeyFrames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retornará true se o valor de <see cref="P:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.KeyFrames" /> propriedade desta instância do <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" /> deve ser serializado por valor.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade deve ser serializado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">O objeto filho a ser adicionado.</param>
+        <summary>Adiciona um objeto filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string childText);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string childText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="childText">O texto a ser adicionado ao objeto.</param>
+        <summary>Adiciona o conteúdo do texto de um nó ao objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames">
+      <MemberSignature Language="C#" Value="System.Collections.IList System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames.System#Windows#Media#Animation#IKeyFrameAnimation#KeyFrames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção ordenada que p:System.Windows.Media.Animation.IKeyFrameAnimation.keyframes associado a esta sequência de animação.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> de <see cref="P:System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

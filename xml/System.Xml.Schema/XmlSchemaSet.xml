@@ -1,0 +1,1370 @@
+<Type Name="XmlSchemaSet" FullName="System.Xml.Schema.XmlSchemaSet">
+  <TypeSignature Language="C#" Value="public class XmlSchemaSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém um cache de esquemas XSD (linguagem de definição de esquema XML).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  -   Não use esquemas de fontes desconhecidas ou não confiáveis ou locais. Isso comprometerá a segurança do seu código.  
+> -   Esquemas XML (incluindo esquemas embutidos) são inerentemente vulneráveis a ataques negação de serviço; não aceitá-los em cenários não confiáveis.  
+> -   Exceções e mensagens de erro de validação de esquema podem expor informações confidenciais sobre o modelo de conteúdo ou o caminho de URI para o arquivo de esquema. Tenha cuidado para não expor essas informações para chamadores não confiáveis.  
+> -   Considerações de segurança adicionais são abordadas na seção "Considerações sobre segurança".  
+  
+ <xref:System.Xml.Schema.XmlSchemaSet>é um cache ou a biblioteca onde você pode armazenar os esquemas de linguagem XSD de definição de esquema XML. O <xref:System.Xml.Schema.XmlSchemaSet> melhora o desempenho armazenando em cache os esquemas na memória em vez de acessá-lo de um arquivo ou URL. Cada esquema é identificado pelo namespace URI e local que foi especificado quando o esquema foi adicionado ao conjunto. Você usa o <xref:System.Xml.XmlReaderSettings.Schemas%2A?displayProperty=nameWithType> propriedade para atribuir o <xref:System.Xml.Schema.XmlSchemaSet> deve usar um leitor de XML para validação de dados do objeto.  
+  
+## <a name="security-considerations"></a>Considerações sobre segurança  
+  
+-   Não use esquemas de fontes desconhecidas ou não confiáveis. Isso comprometerá a segurança do seu código. Incluem namespaces externos ou locais referenciados no, importar e elementos de redefinição de um esquema são resolvidos em relação ao URI de base do esquema que inclui ou importá-los. Por exemplo, se o URI de base do incluindo ou Importando esquema está vazio ou `null`, os locais externos são resolvidos em relação ao diretório atual. O <xref:System.Xml.XmlUrlResolver> classe é usada para resolver esquemas externos por padrão. Para desabilitar a resolução de inclusão, importar e redefinir a elementos de um esquema, defina o <xref:System.Xml.Schema.XmlSchemaSet.XmlResolver%2A?displayProperty=nameWithType> propriedade `null`.  
+  
+-   O <xref:System.Xml.Schema.XmlSchemaSet> classe usa a <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> classe para analisar e correspondem a expressões regulares em um esquema XML. Validação das facetas de padrão com expressões regulares em um esquema XML pode envolver um aumento no uso da CPU e deve ser evitada em cenários de alta disponibilidade.  
+  
+-   Exceções geradas como resultado do uso de <xref:System.Xml.Schema.XmlSchemaSet> classe, como o <xref:System.Xml.Schema.XmlSchemaException> classe pode conter informações confidenciais que não devem ser expostas em cenários não confiáveis. Por exemplo, o <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade de um <xref:System.Xml.Schema.XmlSchemaException> retorna o caminho URI para o arquivo de esquema que causou a exceção. O <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade não deve ser exposta em cenários não confiáveis. Exceções devem ser tratadas corretamente para que informações confidenciais não são expostas em cenários não confiáveis.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida um arquivo XML usando esquemas armazenados no <xref:System.Xml.Schema.XmlSchemaSet>. O namespace no arquivo XML, `urn:bookstore-schema`, identifica qual esquema no <xref:System.Xml.Schema.XmlSchemaSet> a ser usado para validação.  
+  
+ [!code-cpp[XmlReader_Validate_SchemaSet#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReader_Validate_SchemaSet/CPP/XmlReader_Validate_SchemaSet.cpp#1)]
+ [!code-csharp[XmlReader_Validate_SchemaSet#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader_Validate_SchemaSet/CS/validschemaset.cs#1)]
+ [!code-vb[XmlReader_Validate_SchemaSet#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader_Validate_SchemaSet/VB/validschemaset.vb#1)]  
+  
+## <a name="input"></a>Entrada  
+ O exemplo usa os dois arquivos de entrada a seguir.  
+  
+ **booksSchemaFail.xml:**  
+  
+ [!code-xml[XmlReader_Validate_SchemaSet#2](~/samples/snippets/xml/VS_Snippets_Data/XmlReader_Validate_SchemaSet/XML/booksschemafail.xml#2)]  
+  
+ **Books.xsd:**  
+  
+ [!code-xml[XmlReader_Validate_SchemaSet#3](~/samples/snippets/xml/VS_Snippets_Data/XmlReader_Validate_SchemaSet/XML/books.xsd#3)]  
+  
+## <a name="output"></a>Saída  
+ Erro de validação: O elemento 'book' no namespace 'urn:bookstore-schema' tem um elemento filho inválido 'author' no namespace 'urn:bookstore-schema'. Esperado 'title' no namespace 'urn:bookstore-schema'.  
+  
+ Erro de validação: O elemento 'author' no namespace 'urn:bookstore-schema' tem um elemento filho inválido 'name' no namespace 'urn:bookstore-schema'. Esperado 'first-name' no namespace 'urn:bookstore-schema'.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaSet (System.Xml.XmlNameTable nameTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlNameTable nameTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.#ctor(System.Xml.XmlNameTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nameTable" Type="System.Xml.XmlNameTable" />
+      </Parameters>
+      <Docs>
+        <param name="nameTable">O objeto <see cref="T:System.Xml.XmlNameTable" /> a ser usado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaSet" /> com o <see cref="T:System.Xml.XmlNameTable" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O objeto <see cref="T:System.Xml.XmlNameTable" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Add(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O objeto <see cref="T:System.Xml.Schema.XmlSchema" /> a ser adicionado ao <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Adiciona o <see cref="T:System.Xml.Schema.XmlSchema" /> especificado ao <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.Schema.XmlSchema" /> se o esquema for válido. Se o esquema não for válido e um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> for especificado, <see langword="null" /> será retornado e o evento de validação apropriado será acionado. Caso contrário, um <see cref="T:System.Xml.Schema.XmlSchemaException" /> será gerado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Xml.Schema.XmlSchema> já existe no objeto de <xref:System.Xml.Schema.XmlSchemaSet>, o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método não fará nada.  
+  
+ A funcionalidade desse método é idêntica do <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">O esquema não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O objeto <see cref="T:System.Xml.Schema.XmlSchema" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Xml.Schema.XmlSchemaSet schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Xml.Schema.XmlSchemaSet schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Add(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">O objeto <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Adiciona todos os esquemas XSD (linguagem de definição de esquema XML) no <see cref="T:System.Xml.Schema.XmlSchemaSet" /> determinado para o <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um esquema pode ser adicionado a um <xref:System.Xml.Schema.XmlSchemaSet>, ele deve ser processado com êxito. Pré-processamento executa as seguintes tarefas básicas.  
+  
+1.  O esquema é verificado quanto à validade estrutural acordo com as regras do esquema de XML da W3C, mas o esquema não está completamente validado.  
+  
+2.  Referências a componentes de esquema internos e externos são resolvidas. Esquemas importadas ou incluídas que são recuperadas com êxito também são adicionadas para o <xref:System.Xml.Schema.XmlSchemaSet>. Esquemas importados são adicionadas como separada <xref:System.Xml.Schema.XmlSchema> objetos e esquemas incluídos tornam-se parte do incluindo <xref:System.Xml.Schema.XmlSchema>.  
+  
+ Se o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade do <xref:System.Xml.Schema.XmlSchemaSet> adicionar é `true`, todos os esquemas a <xref:System.Xml.Schema.XmlSchemaSet> para adicionar são adicionados ao <xref:System.Xml.Schema.XmlSchemaSet>. Se o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade o <xref:System.Xml.Schema.XmlSchemaSet> adicionar é `false`, cada esquema adicionada é pré-processados antes de serem adicionados. Se qualquer um dos esquemas recém-adicionado <xref:System.Xml.Schema.XmlSchemaSet> falhar ser processado, nenhum esquemas são adicionados; em vez disso, um <xref:System.Xml.Schema.XmlSchemaException> é gerada. Como resultado, o exemplo de código de dois a seguir não são equivalentes.  
+  
+```vb  
+' First example  
+schemaSet.Add(schemaSet1)  
+  
+' Second example  
+Dim schema As XmlSchema  
+  
+For Each schema in schemaSet.Schemas()  
+  
+    schemaSet.Add(schema)  
+  
+Next  
+```  
+  
+```csharp  
+// First example  
+schemaSet.Add(schemaSet1);  
+  
+// Second example  
+foreach(XmlSchema schema in schemaSet.Schemas())  
+{  
+    schemaSet.Add(schema);  
+}  
+```  
+  
+ Os exemplos de código de dois anterior não são equivalentes. No primeiro exemplo, se existir um esquema inválido no `schemaSet1` e sua <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> está definida como `false`, não há esquemas são adicionados ao `schemaSet`. No segundo exemplo, um número de esquemas pode ser adicionado ao `schemaSet` antes de um esquema inválido é encontrado e uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra os esquemas adicionando a um <xref:System.Xml.Schema.XmlSchemaSet>, adicionando o <xref:System.Xml.Schema.XmlSchemaSet> para um novo <xref:System.Xml.Schema.XmlSchemaSet> usando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método.  
+  
+```vb  
+Dim schemaSet1 As XmlSchemaSet = New XmlSchemaSet  
+schemaSet1.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd")  
+schemaSet1.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+schemaSet1.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd")  
+  
+Dim schemaSet2 As XmlSchemaSet = New XmlSchemaSet  
+schemaSet2.Add(schemaSet1)  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet1 = new XmlSchemaSet();  
+schemaSet1.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd");  
+schemaSet1.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+schemaSet1.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd");  
+  
+XmlSchemaSet schemaSet2 = new XmlSchemaSet();  
+schemaSet2.Add(schemaSet1);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">Um esquema no <see cref="T:System.Xml.Schema.XmlSchemaSet" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O objeto <see cref="T:System.Xml.Schema.XmlSchemaSet" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (string targetNamespace, string schemaUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(string targetNamespace, string schemaUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNamespace" Type="System.String" />
+        <Parameter Name="schemaUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetNamespace">O esquema <c>targetNamespace</c> propriedade, ou <see langword="null" /> para usar o <c>targetNamespace</c> especificado no esquema.</param>
+        <param name="schemaUri">A URL que especifica o esquema a ser carregado.</param>
+        <summary>Adiciona o esquema XSD (linguagem de definição de esquema XML) à URL especificada para o <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.Schema.XmlSchema" /> se o esquema for válido. Se o esquema não for válido e um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> for especificado, <see langword="null" /> será retornado e o evento de validação apropriado será acionado. Caso contrário, um <see cref="T:System.Xml.Schema.XmlSchemaException" /> será gerado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um esquema pode ser adicionado a um <xref:System.Xml.Schema.XmlSchemaSet>, ele deve ser processado com êxito. Pré-processamento executa as seguintes tarefas básicas.  
+  
+1.  O esquema é verificado quanto à validade estrutural acordo com as regras do esquema de XML da W3C, mas o esquema não está completamente validado.  
+  
+2.  Referências a componentes de esquema internos e externos são resolvidas. Esquemas importadas ou incluídas que são recuperadas com êxito também são adicionadas para o <xref:System.Xml.Schema.XmlSchemaSet>. Esquemas importados são adicionadas como separada <xref:System.Xml.Schema.XmlSchema> objetos e esquemas incluídos tornam-se parte do incluindo <xref:System.Xml.Schema.XmlSchema>.  
+  
+ Eis as observações importantes a considerar ao usar o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método.  
+  
+-   Adicionando um esquema para o <xref:System.Xml.Schema.XmlSchemaSet> com o mesmo namespace e o esquema de URL de local de destino como um esquema já está contido dentro de <xref:System.Xml.Schema.XmlSchemaSet> retornará o objeto de esquema original.  
+  
+-   Quando um novo esquema foi adicionado com êxito para um <xref:System.Xml.Schema.XmlSchemaSet>, o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade do <xref:System.Xml.Schema.XmlSchemaSet> é definido como `false`.  
+  
+-   Qualquer elemento de inclusão ou importação em um esquema XML é resolvidas quando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método é chamado. Falha ao resolver incluir e importar resultados de elementos em um aviso de validação de esquema e se nenhum <xref:System.Xml.Schema.XmlSchemaSet.ValidationEventHandler> foi especificado para o <xref:System.Xml.Schema.XmlSchemaSet> objeto, eles aviso não será registrado.  
+  
+-   Se um esquema com o mesmo namespace de destino como um esquema que já existe no <xref:System.Xml.Schema.XmlSchemaSet> é adicionada para o <xref:System.Xml.Schema.XmlSchemaSet>, ambos os esquemas são adicionados.  
+  
+    > [!NOTE]
+    >  Esse comportamento difere do obsoleto <xref:System.Xml.Schema.XmlSchemaCollection> objeto.  
+  
+-   O <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método o <xref:System.Xml.Schema.XmlSchemaSet> tem a capacidade de usar o namespace de destino definidas em um esquema, em vez de exigir o namespace de destino ser especificado como um parâmetro quando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método é chamado. Especificando `null` no `targetNamespace` parâmetro o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> instrui o método o <xref:System.Xml.Schema.XmlSchemaSet> para usar o namespace de destino definido no esquema, conforme ilustrado no exemplo de código a seguir.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add(Nothing, "books.xsd")  
+  
+Dim schema As XmlSchema  
+For Each schema In schemaSet.Schemas("http://www.contoso.com/books")  
+    schema.Write(Console.Out)  
+Next  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add(null, "books.xsd");  
+  
+foreach(XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))  
+{  
+    schema.Write(Console.Out);  
+}  
+```  
+  
+ No exemplo de código acima, `null` é especificado como o `targetNamespace` parâmetro para o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método. Como resultado, o `targetNamespace` definido o Books arquivo é usado. Nesse caso, o resultado da chamada de <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método seria idêntico se http://www.contoso.com/books tivesse sido especificado como o `targetNamespace` parâmetro.  
+  
+-   Esquema de XML da W3C permite que esquemas sem um namespace de destino devem ser incluídos em esquemas com um namespace de destino definido. Nesse caso, o esquema sem um namespace de destino definido é forçado para o namespace de destino do esquema de inclusão. O esquema incluído é tratado como se tivesse esse namespace de destino definido. Da mesma forma, os esquemas sem um namespace de destino podem ser adicionadas para o <xref:System.Xml.Schema.XmlSchemaSet> e forçado para o namespace de destino especificado pelo <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método, conforme ilustrado no exemplo a seguir.  
+  
+```  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+    <xs:element name="A" type="xs:string" />  
+</xs:schema>  
+```  
+  
+ Se o esquema anterior é adicionado a <xref:System.Xml.Schema.XmlSchemaSet> com o namespace do destino http://www.contoso.com/new/targetnamespace (conforme mostrado no código a seguir), ele será tratado como se fosse o namespace de destino declarado no esquema `http://www.contoso.com/new/targetnamespace`.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add("http://www.contoso.com/new/targetnamespace", "http://www.contoso.com/targetnamespace.xsd")  
+  
+Dim schema As XmlSchema  
+  
+For Each schema in schemaSet.Schemas()  
+  
+    Console.WriteLine(schema.TargetNamespace)     
+  
+Next  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/new/targetnamespace", "http://www.contoso.com/targetnamespace.xsd");  
+foreach(XmlSchema schema in schemaSet.Schemas())  
+{  
+    Console.WriteLine(schema.TargetNamespace);  
+}  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona o esquema de http://www.contoso.com/books.xsd com um namespace de destino do http://www.contoso.com/books para o <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+```  
+  
+ O exemplo usa o arquivo `books.xsd` como entrada.  
+  
+ [!code-xml[XmlSchemaSetOverall Example#3](~/samples/snippets/xml/VS_Snippets_Data/XmlSchemaSetOverall Example/XML/books.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">O esquema não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">A URL passada como um parâmetro é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Add (string targetNamespace, System.Xml.XmlReader schemaDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Add(string targetNamespace, class System.Xml.XmlReader schemaDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Add(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNamespace" Type="System.String" />
+        <Parameter Name="schemaDocument" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="targetNamespace">O esquema <c>targetNamespace</c> propriedade, ou <see langword="null" /> para usar o <c>targetNamespace</c> especificado no esquema.</param>
+        <param name="schemaDocument">O objeto <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Adiciona o esquema XSD (linguagem de definição de esquema XML) contido no <see cref="T:System.Xml.XmlReader" /> ao <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.Schema.XmlSchema" /> se o esquema for válido. Se o esquema não for válido e um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> for especificado, <see langword="null" /> será retornado e o evento de validação apropriado será acionado. Caso contrário, um <see cref="T:System.Xml.Schema.XmlSchemaException" /> será gerado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um esquema pode ser adicionado a um <xref:System.Xml.Schema.XmlSchemaSet>, ele deve ser processado com êxito. Pré-processamento executa as seguintes tarefas básicas.  
+  
+1.  O esquema é verificado quanto à validade estrutural acordo com as regras do esquema de XML da W3C, mas o esquema não está completamente validado.  
+  
+2.  Referências a componentes de esquema internos e externos são resolvidas. Esquemas importadas ou incluídas que são recuperadas com êxito também são adicionadas para o <xref:System.Xml.Schema.XmlSchemaSet>. Esquemas importados são adicionadas como separada <xref:System.Xml.Schema.XmlSchema> objetos e esquemas incluídos tornam-se parte do incluindo <xref:System.Xml.Schema.XmlSchema>.  
+  
+ Eis as observações importantes a considerar ao usar o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método.  
+  
+-   Recuperou com êxito a esquemas importados ou incluídos pelos esquemas contidos no <xref:System.Xml.XmlReader> também são adicionados para o <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+-   Se o <xref:System.Xml.XmlReader> não está posicionado no elemento raiz, um <xref:System.Xml.Schema.XmlSchemaException> é gerada, a menos que o item atual é um elemento. Se o item atual for um `xs:schema` elemento, o documento de esquema é lidos a <xref:System.Xml.Schema.XmlSchemaSet>; caso contrário, um <xref:System.Xml.Schema.XmlSchemaException> foi lançado porque o esquema não é válido.  
+  
+-   Se o <xref:System.Xml.XmlReader> está posicionado em uma sequência de nós XML, apenas o primeiro nó na sequência é adicionado.  
+  
+-   Se o esquema foi criado de um <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> chamada de método, o valor da <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> propriedade será ignorada porque o processamento do esquema embutido não é aplicado a documentos de esquema de XML da W3C.  
+  
+-   O <xref:System.Xml.XmlResolver> propriedade o <xref:System.Xml.XmlReader> não é usado para resolver referências a namespaces ou esquema locais em incluem e importar elementos. Em vez disso, o <xref:System.Xml.XmlResolver> propriedade o <xref:System.Xml.Schema.XmlSchemaSet> é usado.  
+  
+-   O <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método o <xref:System.Xml.Schema.XmlSchemaSet> tem a capacidade de usar o namespace de destino definidas em um esquema, em vez de exigir o namespace de destino ser especificado como um parâmetro quando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método é chamado. Especificando `null` ou <xref:System.String.Empty?displayProperty=nameWithType> para o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método instrui o <xref:System.Xml.Schema.XmlSchemaSet> para usar o namespace de destino definido no esquema. Para obter um exemplo desse comportamento, consulte o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método.  
+  
+ A funcionalidade restante deste método é idêntica do <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona o esquema de Books contido a <xref:System.Xml.XmlTextReader> com um namespace de destino do http://www.contoso.com/books para o <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add("http://www.contoso.com/books", New XmlTextReader("books.xsd")  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/books", new XmlTextReader("books.xsd");  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">O esquema não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O objeto <see cref="T:System.Xml.XmlReader" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilationSettings">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaCompilationSettings CompilationSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaCompilationSettings CompilationSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.CompilationSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaCompilationSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.Schema.XmlSchemaCompilationSettings" /> do <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <value>O <see cref="T:System.Xml.Schema.XmlSchemaCompilationSettings" /> para o <see cref="T:System.Xml.Schema.XmlSchemaSet" />. O padrão é um <see cref="T:System.Xml.Schema.XmlSchemaCompilationSettings" /> instância com o <see cref="P:System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck" /> propriedade definida como <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaCompilationSettings> classe especifica opções de validação de atribuição de partícula exclusiva (UPA) para o <xref:System.Xml.Schema.XmlSchemaSet>. Para obter mais informações sobre como habilitar verificações de validação de UPA, consulte o <xref:System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public void Compile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Compile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Compile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Compila os esquemas de XSD (linguagem de definição de esquema XML) adicionados ao <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em um esquema lógico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado automaticamente quando a validação é necessária e o <xref:System.Xml.Schema.XmlSchemaSet> não tiver sido compilado anteriormente — por exemplo, quando um <xref:System.Xml.Schema.XmlSchemaSet> é usado como entrada para criar um <xref:System.Xml.XmlReader> objeto o <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> propriedade de um <xref:System.Xml.XmlReaderSettings> objeto. Se o <xref:System.Xml.Schema.XmlSchemaSet> é já em estado compilado, esse método não recompilará os esquemas. Se esse método é executado com êxito, o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> está definida como `true`.  
+  
+ Esquemas que tenham sido compilados anteriormente por uma <xref:System.Xml.Schema.XmlSchemaSet> não são recompilados. No entanto, os esquemas que foram compilados usando o <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> método do <xref:System.Xml.Schema.XmlSchema> serão recompilados.  
+  
+> [!NOTE]
+>  Você precisa chamar o <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> método se você tiver alterado um esquema (ou uma de suas inclui/importações) após adicioná-lo para o <xref:System.Xml.Schema.XmlSchemaSet>. O <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> método verificará o esquema para validade estrutural acordo com as regras do esquema de XML da W3C. No entanto, ele não executará uma verificação de validação completa. Ela também será resolvida referências a componentes de esquema internos e externos. Esquemas importadas ou incluídas que são recuperadas com êxito também são adicionadas para o <xref:System.Xml.Schema.XmlSchemaSet>. Esquemas importados são adicionadas como separada <xref:System.Xml.Schema.XmlSchema> objetos enquanto incluídos esquemas são fazer parte do, inclusive <xref:System.Xml.Schema.XmlSchema>. Se a chamada para reprocessar for bem-sucedida, o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> está definida como false.  
+  
+   
+  
+## Examples  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+schemaSet.Compile()  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+schemaSet.Compile();  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">Ocorreu um erro durante a validação e compilação dos esquemas no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string targetNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string targetNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetNamespace">O esquema <c>targetNamespace</c> propriedade.</param>
+        <summary>Indica se um esquema de linguagem XSD de definição de esquema XML com o URI do namespace de destino especificado é o <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>
+          <see langword="true" />Se um esquema com o URI do namespace de destino especificado está no <see cref="T:System.Xml.Schema.XmlSchemaSet" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esquemas indiretamente são adicionados para o <xref:System.Xml.Schema.XmlSchemaSet> são detectados pelo <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> método; por exemplo, esquemas importados. Como resultado, se um esquema para o namespace http://www.contoso.com/retail que importa um esquema para o namespace http://www.contoso.com/books é adicionada para o <xref:System.Xml.Schema.XmlSchemaSet>, chamar <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> com `http://www.contoso.com/books` como um parâmetro, ele retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Contains(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O objeto <see cref="T:System.Xml.Schema.XmlSchema" />.</param>
+        <summary>Indica se a linguagem de definição de esquema XML (XSD) especificada <see cref="T:System.Xml.Schema.XmlSchema" /> objeto está no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Xml.Schema.XmlSchema" /> objeto está no <see cref="T:System.Xml.Schema.XmlSchemaSet" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <see cref="T:System.Xml.Schema.XmlSchemaSet" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.Schema.XmlSchema[] schemas, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.Schema.XmlSchema[] schemas, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.CopyTo(System.Xml.Schema.XmlSchema[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchema[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">A matriz para copiar os objetos.</param>
+        <param name="index">O índice na matriz de onde a cópia será iniciada.</param>
+        <summary>Copia todos os <see cref="T:System.Xml.Schema.XmlSchema" /> objetos do <see cref="T:System.Xml.Schema.XmlSchemaSet" /> como a matriz fornecida, iniciando no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir copia todos os <xref:System.Xml.Schema.XmlSchema> objetos no <xref:System.Xml.Schema.XmlSchemaSet> para uma matriz de <xref:System.Xml.Schema.XmlSchema> objetos.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet  
+schemaSet.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd")  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+schemaSet.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd")  
+  
+Dim schemas(schemaSet.Count) As XmlSchema  
+schemaSet.CopyTo(schemas, 0)  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd");  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+schemaSet.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd");  
+  
+XmlSchema[] schemas = new XmlSchema[schemaSet.Count];  
+schemaSet.CopyTo(schemas, 0);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de definição de esquema XML lógica esquemas de linguagem XSD a <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <value>O número de esquemas lógicos a <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver dois esquemas para o namespace `http://www.contoso.com` no <xref:System.Xml.Schema.XmlSchemaSet>, o <xref:System.Xml.Schema.XmlSchemaSet.Count%2A> propriedade retornará 1 como os esquemas são tratados como um único esquema lógico para fins de validação. No entanto, se um esquema para o namespace `http://www.contoso.com/retail` importados de um esquema para o `http://www.contoso.com/books` namespace, o valor da <xref:System.Xml.Schema.XmlSchemaSet.Count%2A> propriedade seria 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalAttributes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable GlobalAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable GlobalAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.GlobalAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os atributos globais na definição de esquema XML esquemas de linguagem XSD no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <value>A coleção de atributos global.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalElements">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable GlobalElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable GlobalElements" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.GlobalElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os elementos global na definição de esquema XML esquemas de linguagem XSD no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <value>A coleção de elementos globais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalTypes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable GlobalTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable GlobalTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.GlobalTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os tipos simples e complexos global de esquemas de linguagem XSD na definição de esquema XML a <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <value>A coleção de globais tipos simples e complexas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaSet.GlobalTypes%2A> propriedade sempre retorna um tipo que representa o `xs:anyType` tipo complexo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompiled">
+      <MemberSignature Language="C#" Value="public bool IsCompiled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompiled" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.IsCompiled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os esquemas de linguagem XSD de definição de esquema XML no <see cref="T:System.Xml.Schema.XmlSchemaSet" /> foram compiladas.</summary>
+        <value>
+          <see langword="true" />Se os esquemas no <see cref="T:System.Xml.Schema.XmlSchemaSet" /> foram compilados desde a última vez em que um esquema foi adicionado ou removido o <see cref="T:System.Xml.Schema.XmlSchemaSet" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade de <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> não é afetado se os esquemas são editados quando em <xref:System.Xml.Schema.XmlSchemaSet>. As atualizações de esquemas individuais em <xref:System.Xml.Schema.XmlSchemaSet> não são controladas. Como resultado, a propriedade de <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> pode ser `true` mesmo que um dos esquemas contidos em <xref:System.Xml.Schema.XmlSchemaSet> é modificado, como nenhum esquema foi adicionado ou removido de <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade, consulte o <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNameTable NameTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão <see cref="T:System.Xml.XmlNameTable" /> usado pelo <see cref="T:System.Xml.Schema.XmlSchemaSet" /> ao carregar novos esquemas de linguagem XSD de definição de esquema XML.</summary>
+        <value>Uma tabela de objetos atomizados de cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Remove (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Remove(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Remove(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O objeto <see cref="T:System.Xml.Schema.XmlSchema" /> a ser removido do <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Remove o esquema XSD (linguagem de definição de esquema XML) especificado do <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>O objeto <see cref="T:System.Xml.Schema.XmlSchema" /> removido do <see cref="T:System.Xml.Schema.XmlSchemaSet" /> ou <see langword="null" />, se o esquema não foi encontrado no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removendo um esquema do <xref:System.Xml.Schema.XmlSchemaSet> define o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra a adição de vários esquemas para um <xref:System.Xml.Schema.XmlSchemaSet>, em seguida, removendo um dos esquemas usando o <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> método.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd")  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+schemaSet.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd")  
+  
+Dim schema As XmlSchema  
+  
+For Each schema In schemaSet.Schemas()  
+  
+    If schema.TargetNamespace = "http://www.contoso.com/music" Then  
+        schemaSet.Remove(schema)  
+    End If  
+  
+Next  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd");  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+schemaSet.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd");  
+  
+foreach (XmlSchema schema in schemaSet.Schemas())  
+{  
+    if (schema.TargetNamespace == "http://www.contoso.com/music")  
+    {  
+        schemaSet.Remove(schema);  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">O esquema não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O <see cref="T:System.Xml.Schema.XmlSchema" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRecursive">
+      <MemberSignature Language="C#" Value="public bool RemoveRecursive (System.Xml.Schema.XmlSchema schemaToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveRecursive(class System.Xml.Schema.XmlSchema schemaToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.RemoveRecursive(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaToRemove" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schemaToRemove">O objeto <see cref="T:System.Xml.Schema.XmlSchema" /> a ser removido do <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Remove o esquema de linguagem XSD de definição de esquema XML especificado e todos os esquemas que importar o <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Xml.Schema.XmlSchema" /> objeto e todos os seus importações foram removido com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> método Remove o esquema especificado e todos os esquemas que importar o <xref:System.Xml.Schema.XmlSchemaSet>, contanto que não há nenhuma dependência no esquema ou seus esquemas importados. Se houver dependências no esquema ou seus esquemas importados no <xref:System.Xml.Schema.XmlSchemaSet>, nada é removido e <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> retorna `false`. Se `false` é retornado e um <xref:System.Xml.Schema.XmlSchemaSet.ValidationEventHandler> é definido, um aviso é enviado ao manipulador de eventos que descreve as dependências.  
+  
+ Se o esquema especificado importa outros esquemas e o esquema especificado anteriormente foi removido com o <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> método, o <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> método não removerá os esquemas importados e retornará `false`. Por exemplo, se `parentSchema` importa `childSchema1` e `childSchema2` o código a seguir removerá apenas `parentSchema`, mas não importado `childSchema1` e `childSchema2` esquemas:  
+  
+```  
+XmlSchemaSet ss = new XmlSchemaSet();  
+XmlSchema xs = XmlSchema.Read(XmlReader.Create("parentSchema.xsd"), null);  
+ss.Add(xs);  
+ss.Compile();  
+ss.Remove(xs);  
+ss.Compile();  
+ss.RemoveRecursive(xs);  
+ss.Compile();  
+```  
+  
+ O código a seguir removerá o `parentSchema` e os esquemas importados:  
+  
+```  
+XmlSchemaSet ss = new XmlSchemaSet();  
+XmlSchema xs = XmlSchema.Read(XmlReader.Create("parentSchema.xsd"), null);  
+ss.Add(xs);  
+ss.Compile();  
+ss.RemoveRecursive(xs);  
+ss.Compile();  
+```  
+  
+ O <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> método não tem nenhum efeito sobre o estado do <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra a adição de vários esquemas para um <xref:System.Xml.Schema.XmlSchemaSet>, e removendo um dos esquemas e todos os esquemas importada usando o <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> método.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+schemaSet.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd")  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+schemaSet.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd")  
+  
+Dim schema As XmlSchema  
+  
+For Each schema In schemaSet.Schemas()  
+  
+    If schema.TargetNamespace = "http://www.contoso.com/music" Then  
+        schemaSet.RemoveRecursive(schema)  
+    End If  
+  
+Next  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/retail", "http://www.contoso.com/retail.xsd");  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+schemaSet.Add("http://www.contoso.com/music", "http://www.contoso.com/music.xsd");  
+  
+foreach (XmlSchema schema in schemaSet.Schemas())  
+{  
+    if (schema.TargetNamespace == "http://www.contoso.com/music")  
+    {  
+        schemaSet.RemoveRecursive(schema);  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <see cref="T:System.Xml.Schema.XmlSchema" /> passado como um parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reprocess">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema Reprocess (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchema Reprocess(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Reprocess(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O esquema para processar novamente.</param>
+        <summary>Reprocessa um esquema de linguagem XSD de definição de esquema XML que já existe no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Um <see cref="T:System.Xml.Schema.XmlSchema" /> objeto se o esquema é um esquema válido. Se o esquema não é válido e um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> for especificado, <see langword="null" /> será retornado e a validação apropriado é gerado. Caso contrário, um <see cref="T:System.Xml.Schema.XmlSchemaException" /> será gerado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Reprocessar um esquema executa todas as etapas de pré-processamento executadas em um esquema quando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método é chamado. Se a chamada para <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> for bem-sucedida, o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> está definida como `false`.  
+  
+ O método reprocessar deve ser usado depois de um esquema no <xref:System.Xml.Schema.XmlSchemaSet> tiver sido modificado, após o <xref:System.Xml.Schema.XmlSchemaSet> executou a compilação.  
+  
+> [!NOTE]
+>  Você precisa chamar o <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> método se você tiver alterado um esquema (ou uma de suas inclui/importações) após adicioná-lo para o <xref:System.Xml.Schema.XmlSchemaSet>. O <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> método verificará o esquema para validade estrutural acordo com as regras do esquema de XML da W3C. No entanto, ele não executará uma verificação de validação completa. Ela também será resolvida referências a componentes de esquema internos e externos. Esquemas importadas ou incluídas que são recuperadas com êxito também são adicionadas para o <xref:System.Xml.Schema.XmlSchemaSet>. Esquemas importados são adicionadas como separada <xref:System.Xml.Schema.XmlSchema> objetos enquanto incluídos esquemas são fazer parte do, inclusive <xref:System.Xml.Schema.XmlSchema>. Se a chamada para reprocessar for bem-sucedida, o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> está definida como false.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o reprocessamento um esquema adicionado para o <xref:System.Xml.Schema.XmlSchemaSet>. Após o <xref:System.Xml.Schema.XmlSchemaSet> é compilada usando o <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> método e o esquema adicionado ao <xref:System.Xml.Schema.XmlSchemaSet> for modificado, o <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade será definida como `true`, mesmo que um esquema no <xref:System.Xml.Schema.XmlSchemaSet> foi modificado. Chamando o <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> método executa todos os pré-processamento executadas pelo <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> método e conjuntos do <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> propriedade `false`.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
+Dim schema As XmlSchema = schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+schemaSet.Compile()  
+  
+Dim element As XmlSchemaElement = New XmlSchemaElement()  
+schema.Items.Add(element)  
+element.Name = "book"  
+element.SchemaTypeName = New XmlQualifiedName("string", "http://www.w3.org/2001/XMLSchema")  
+  
+schemaSet.Reprocess(schema)  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+XmlSchema schema = schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+schemaSet.Compile();  
+  
+XmlSchemaElement element = new XmlSchemaElement();  
+schema.Items.Add(element);  
+element.Name = "book";  
+element.SchemaTypeName = new XmlQualifiedName("string", "http://www.w3.org/2001/XMLSchema");  
+  
+schemaSet.Reprocess(schema);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">O esquema não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O objeto <see cref="T:System.Xml.Schema.XmlSchema" /> passado como um parâmetro é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Xml.Schema.XmlSchema" /> objeto passado como um parâmetro ainda não existir no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Schemas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ICollection Schemas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Schemas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de todos os esquemas XSD (linguagem de definição de esquema XML) no <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.ICollection" /> que contém todos os esquemas adicionados ao <see cref="T:System.Xml.Schema.XmlSchemaSet" />. Se nenhum esquema tiver sido adicionado ao <see cref="T:System.Xml.Schema.XmlSchemaSet" />, um objeto <see cref="T:System.Collections.ICollection" /> vazio será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna esquemas que foram adicionados ao indiretamente o <xref:System.Xml.Schema.XmlSchemaSet> porque eles foram importados.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> método é equivalente a <xref:System.Xml.Schema.XmlSchemaCollection.GetEnumerator%2A> método o obsoleto <xref:System.Xml.Schema.XmlSchemaCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como iterar em todos os esquemas no <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+  
+Dim schema As XmlSchema  
+  
+For Each schema In schemaSet.Schemas()  
+  
+    schema.Write(Console.Out)  
+  
+Next  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+  
+foreach (XmlSchema schema in schemaSet.Schemas())  
+{  
+    schema.Write(Console.Out);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Schemas (string targetNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ICollection Schemas(string targetNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSet.Schemas(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetNamespace">O esquema <c>targetNamespace</c> propriedade.</param>
+        <summary>Retorna uma coleção de definição de esquema XML esquemas XSD (linguagem) a <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que pertencem ao namespace específico.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> objeto que contém todos os esquemas que foram adicionados para o <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que pertencem ao namespace específico. Se nenhum esquema tiver sido adicionado ao <see cref="T:System.Xml.Schema.XmlSchemaSet" />, um objeto <see cref="T:System.Collections.ICollection" /> vazio será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `targetNamespace` parâmetro é `null` ou <xref:System.String.Empty>, todos os esquemas sem um namespace serão retornadas.  
+  
+ Este método retorna esquemas que foram adicionados ao indiretamente o <xref:System.Xml.Schema.XmlSchemaSet> porque eles foram importados.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> método é equivalente a <xref:System.Xml.Schema.XmlSchemaCollection.Item%2A> método o obsoleto <xref:System.Xml.Schema.XmlSchemaCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como iterar em todos os esquemas no namespace http://www.contoso.com/books no <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+```vb  
+Dim schemaSet As XmlSchemaSet = New XmlSchemaSet  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd")  
+  
+Dim schema As XmlSchema  
+  
+For Each schema In schemaSet.Schemas("http://www.contoso.com/books")  
+  
+    schema.Write(Console.Out)  
+  
+Next  
+```  
+  
+```csharp  
+XmlSchemaSet schemaSet = new XmlSchemaSet();  
+schemaSet.Add("http://www.contoso.com/books", "http://www.contoso.com/books.xsd");  
+  
+foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))  
+{  
+    schema.Write(Console.Out);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationEventHandler">
+      <MemberSignature Language="C#" Value="public event System.Xml.Schema.ValidationEventHandler ValidationEventHandler;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Schema.ValidationEventHandler ValidationEventHandler" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Schema.XmlSchemaSet.ValidationEventHandler" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.ValidationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um manipulador de eventos para receber informações sobre erros de validação de esquema XSD (linguagem de definição de esquema XML).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Define um manipulador de eventos para receber informações sobre erros de validação de esquema quando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> ou <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> métodos do <xref:System.Xml.Schema.XmlSchemaSet> são chamados.  
+  
+ Se um manipulador de eventos não está definido, um <xref:System.Xml.Schema.XmlSchemaException> é gerada em erros de validação em que o <xref:System.Xml.Schema.XmlSeverityType> é <xref:System.Xml.Schema.XmlSeverityType.Error>. Não são lançadas exceções para erros de validação com um <xref:System.Xml.Schema.XmlSeverityType> de <xref:System.Xml.Schema.XmlSeverityType.Warning>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra a adição de um <xref:System.Xml.Schema.XmlSchemaSet.ValidationEventHandler> para capturar erros e avisos ao validar um documento XML em um esquema.  
+  
+ [!code-cpp[XmlSchemaSetOverall Example#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlSchemaSetOverall Example/CPP/xmlschemasetexample.cpp#1)]
+ [!code-csharp[XmlSchemaSetOverall Example#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]
+ [!code-vb[XmlSchemaSetOverall Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaSetOverall Example/VB/xmlschemasetexample.vb#1)]  
+  
+ O exemplo usa o arquivo Books. XML como entrada.  
+  
+ [!code-xml[XmlSchemaSetOverall Example#2](~/samples/snippets/xml/VS_Snippets_Data/XmlSchemaSetOverall Example/XML/books.xml#2)]  
+  
+ O exemplo usa o arquivo Books como entrada.  
+  
+ [!code-xml[XmlSchemaSetOverall Example#3](~/samples/snippets/xml/VS_Snippets_Data/XmlSchemaSetOverall Example/XML/books.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlResolver">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlResolver XmlResolver { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlResolver XmlResolver" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSet.XmlResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o <see cref="T:System.Xml.XmlResolver" /> usado para resolver namespaces ou locais referenciados em incluem e importar elementos de um esquema.</summary>
+        <value>O <see cref="T:System.Xml.XmlResolver" /> usado para resolver namespaces ou locais referenciados em incluem e importar elementos de um esquema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlResolver> de um <xref:System.Xml.Schema.XmlSchemaSet> é usado para resolver namespaces ou locais referenciados em incluem e importar elementos de um esquema, sempre um esquema é adicionado usando o <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> ou <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> métodos.  
+  
+> [!IMPORTANT]
+>  Incluem namespaces externos ou locais referenciados no, importar e elementos de redefinição de um esquema são resolvidos em relação ao URI de base do esquema que inclui ou importá-los. Por exemplo, se o URI de base do incluindo ou Importando esquema está vazio ou `null`, os locais externos são resolvidos em relação ao diretório atual. O <xref:System.Xml.XmlUrlResolver> classe é usada para resolver esquemas externos por padrão. Para desabilitar a resolução de inclusão, importar e redefinir a elementos de um esquema, defina o <xref:System.Xml.Schema.XmlSchemaSet.XmlResolver%2A> propriedade `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

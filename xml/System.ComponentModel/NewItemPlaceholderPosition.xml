@@ -1,0 +1,66 @@
+<Type Name="NewItemPlaceholderPosition" FullName="System.ComponentModel.NewItemPlaceholderPosition">
+  <TypeSignature Language="C#" Value="public enum NewItemPlaceholderPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NewItemPlaceholderPosition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.NewItemPlaceholderPosition" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica onde o espaço reservado para um novo item aparece na coleção.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AtBeginning">
+      <MemberSignature Language="C#" Value="AtBeginning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.NewItemPlaceholderPosition AtBeginning = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.NewItemPlaceholderPosition.AtBeginning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O espaço reservado para um novo item aparece no início da coleção.  Novos itens estão no início da coleção, após o novo espaço reservado de item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AtEnd">
+      <MemberSignature Language="C#" Value="AtEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.NewItemPlaceholderPosition AtEnd = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.NewItemPlaceholderPosition.AtEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O espaço reservado para um novo item é exibido no final da coleção. Novos itens são adicionados ao final da coleção, antes do novo espaço reservado de item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.NewItemPlaceholderPosition None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.NewItemPlaceholderPosition.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A coleção não usa um novo espaço reservado de item. A posição de itens que são adicionados depende da coleção subjacente.  Geralmente, eles são adicionados ao final da coleção.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

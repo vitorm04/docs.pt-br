@@ -1,0 +1,63 @@
+<Type Name="WorkItem" FullName="System.Web.Util.WorkItem">
+  <TypeSignature Language="C#" Value="public class WorkItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Util.WorkItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a capacidade de mover os itens de trabalho para outro thread para execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe pode ser usada para fazer a execução adiada de uma tarefa em um thread solicitada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.WorkItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Util.WorkItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Post">
+      <MemberSignature Language="C#" Value="public static void Post (System.Web.Util.WorkItemCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Post(class System.Web.Util.WorkItemCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.WorkItem.Post(System.Web.Util.WorkItemCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.Util.WorkItemCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Um <see cref="T:System.Web.Util.WorkItemCallback" /> que representa o método que deve ser chamado em um thread separado.</param>
+        <summary>Move um item de trabalho para um thread separado para execução.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional não é o Windows NT ou posterior.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

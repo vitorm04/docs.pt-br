@@ -1,0 +1,305 @@
+<Type Name="XmlReflectionMember" FullName="System.Xml.Serialization.XmlReflectionMember">
+  <TypeSignature Language="C#" Value="public class XmlReflectionMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlReflectionMember extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlReflectionMember" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece os mapeamentos entre as entidades de código em métodos de serviço Web do .NET Framework e o conteúdo das mensagens de WSDL Web Services Description Language () que são definidos para serviços Web SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlReflectionMember> classe não é usada diretamente. Em vez disso, ele é usado:  
+  
+-   Para inicializar <xref:System.Xml.Serialization.XmlSerializer> objetos enquanto o .NET Framework está inicializando um cliente ou serviço Web SOAP.  
+  
+-   Pelo <xref:System.Web.Services.Description.ServiceDescriptionReflector> classe ao <xref:System.Web.Services.Description.ServiceDescriptionReflector> cria <xref:System.Web.Services.Description.ServiceDescription> objetos das classes que são identificados como serviços da Web do SOAP.  
+  
+ Durante a reflexão de uma Web SOAP do método, matrizes de serviço <xref:System.Xml.Serialization.XmlReflectionMember> produzidos objetos que representam o conteúdo das definições de mensagem WSDL. Uma matriz é produzida para cada um dos seguintes itens que pertencem a um método de serviço Web SOAP:  
+  
+-   Parâmetros de entrada.  
+  
+-   Parâmetros de saída e valores de retorno.  
+  
+-   Cabeçalhos SOAP por meio de atributos de solicitação.  
+  
+-   Cabeçalhos de SOAP de resposta por meio de atributos.  
+  
+ O <xref:System.Xml.Serialization.SoapReflectionImporter> e <xref:System.Xml.Serialization.XmlReflectionImporter> classes traduzem um <xref:System.Xml.Serialization.XmlReflectionMember> de matriz em um <xref:System.Xml.Serialization.XmlMembersMapping> que contém um <xref:System.Xml.Serialization.XmlMemberMapping> coleção para processamento adicional.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReflectionMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionMember.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlReflectionMember" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsReturnValue">
+      <MemberSignature Language="C#" Value="public bool IsReturnValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlReflectionMember.IsReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Xml.Serialization.XmlReflectionMember" /> representa um Web serviço método valor de retorno, em vez de um parâmetro de saída.</summary>
+        <value>
+          <see langword="true" />, se o membro representa um valor de retorno de serviço de Web. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não precisa usar o <xref:System.Xml.Serialization.XmlReflectionMember> classe e suas propriedades diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlReflectionMember.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do membro de método de serviço da Web para que esse mapeamento.</summary>
+        <value>O nome do método de serviço da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O membro do método de serviço Web pode ser um parâmetro de entrada, um parâmetro de saída, um tipo de retorno, um cabeçalho de entrada ou um cabeçalho de saída.  
+  
+ Você não precisa usar o <xref:System.Xml.Serialization.XmlReflectionMember> classe e suas propriedades diretamente.  
+  
+ Consulte o <xref:System.Xml.Serialization.XmlMembersMapping> classe para os casos em que um membro corresponde a um `<part>` elemento definido em um documento WSDL Web Services Description Language (). No entanto, observe que, com uma associação encapsulada entre uma operação de WSDL e um método do .NET Framework (indicado pelo <xref:System.Web.Services.Protocols.SoapParameterStyle.Wrapped> membro de enumeração), o valor de retorno e parâmetros de método não aparecem no documento WSDL.  
+  
+ Quando um método de serviço Web está sendo refletido, o tipo de retorno <xref:System.Xml.Serialization.XmlReflectionMember.MemberName%2A> propriedade torna-se o nome do método (feito exclusivo de outros nomes de membro, se necessário) com "Resultado" acrescentado.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public Type MemberType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlReflectionMember.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo da entidade de código de membro de método do serviço Web, é representado por esse mapeamento.</summary>
+        <value>O <see cref="T:System.Type" /> da entidade de código de membro de método do serviço Web, é representada por esse mapeamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entidade de código do membro do Web service método pode ser um parâmetro de entrada, um parâmetro de saída, um tipo de retorno ou um atributo de cabeçalho SOAP.  
+  
+ Você não precisa usar o <xref:System.Xml.Serialization.XmlReflectionMember> classe e suas propriedades diretamente.  
+  
+ Consulte o <xref:System.Xml.Serialization.XmlMembersMapping> classe para os casos em que um membro corresponde a um elemento de parte definido em um documento WSDL Web Services Description Language (). No entanto, observe que, com uma associação encapsulada entre uma operação de WSDL e um método do .NET Framework (indicado pelo <xref:System.Web.Services.Protocols.SoapParameterStyle.Wrapped> membro de enumeração), o valor de retorno e parâmetros de método não aparecem no documento WSDL.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideIsNullable">
+      <MemberSignature Language="C#" Value="public bool OverrideIsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverrideIsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlReflectionMember.OverrideIsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que o valor de correspondente XML de definição de elemento do <c>isNullable</c> atributo é <see langword="false" />.</summary>
+        <value>
+          <see langword="True" />para substituir o <see cref="P:System.Xml.Serialization.XmlElementAttribute.IsNullable" /> propriedade; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa configuração substitui o <xref:System.Xml.Serialization.XmlElementAttribute.IsNullable%2A> propriedade o <xref:System.Xml.Serialization.XmlElementAttribute> atributo. Ele é definido como `true` somente quando tipo de um cabeçalho SOAP não é <xref:System.Web.Services.Protocols.SoapHeader> nem <xref:System.Web.Services.Protocols.SoapUnknownHeader>.  
+  
+ Você não precisa usar o <xref:System.Xml.Serialization.XmlReflectionMember> classe e suas propriedades diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SoapAttributes">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.SoapAttributes SoapAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.SoapAttributes SoapAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlReflectionMember.SoapAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.SoapAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Xml.Serialization.SoapAttributes" /> com a coleção de atributos de SOAP que foram aplicados para a entidade de código de membro.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.SoapAttributes" /> que contém os objetos que representam atributos SOAP aplicados ao membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entidade de código do membro do Web service método pode ser um parâmetro de entrada, um parâmetro de saída, um tipo de retorno, um atributo de cabeçalho SOAP entrada ou um atributo de cabeçalho SOAP de saída.  
+  
+ Você não precisa usar o <xref:System.Xml.Serialization.XmlReflectionMember> classe e suas propriedades diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAttributes">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlAttributes XmlAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlAttributes XmlAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlReflectionMember.XmlAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Xml.Serialization.XmlAttributes" /> com a coleção de <see cref="T:System.Xml.Serialization.XmlSerializer" />-relacionados a atributos que foram aplicados para a entidade de código de membro.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlAttributes" /> que representa os atributos XML que foram aplicados ao código de membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entidade de código do membro do Web service método pode ser um parâmetro de entrada, um parâmetro de saída, um tipo de retorno, um atributo de cabeçalho SOAP entrada ou um atributo de cabeçalho SOAP de saída.  
+  
+ Você não precisa usar o <xref:System.Xml.Serialization.XmlReflectionMember> classe e suas propriedades diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,156 @@
+<Type Name="WorkflowInstanceProxy" FullName="System.Activities.Hosting.WorkflowInstanceProxy">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowInstanceProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowInstanceProxy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Hosting.WorkflowInstanceProxy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe que permite <see cref="T:System.Activities.Hosting.IWorkflowInstanceExtensions" /> acesso de extensões para o host de serviço de fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginResumeBookmark">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginResumeBookmark (System.Activities.Bookmark bookmark, object value, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginResumeBookmark(class System.Activities.Bookmark bookmark, object value, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceProxy.BeginResumeBookmark(System.Activities.Bookmark,System.Object,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador.</param>
+        <param name="value">Os dados a serem passados para a atividade que criou o indicador.</param>
+        <param name="callback">O método a ser chamado quando a operação de retomada assíncrona for concluída.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Retome um fluxo de trabalho de um indicador de forma assíncrona usando o indicador especificado, valor, o método de retorno de chamada e os dados de estado fornecido pelo usuário.</summary>
+        <returns>Uma referência para a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar se a operação de retomada foi bem-sucedida, chame <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A>. <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A>pode ser chamado de dentro ou fora do método de retorno de chamada. Se <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A> é chamado antes de concluir a operação de retomada, ele bloqueia até a conclusão da operação de retomada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResumeBookmark">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginResumeBookmark (System.Activities.Bookmark bookmark, object value, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginResumeBookmark(class System.Activities.Bookmark bookmark, object value, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceProxy.BeginResumeBookmark(System.Activities.Bookmark,System.Object,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador.</param>
+        <param name="value">Os dados a serem passados para a atividade que criou o indicador.</param>
+        <param name="timeout">O intervalo no qual a operação de retomada deve concluir antes da operação será cancelada e um <see cref="T:System.TimeoutException" /> é gerada.</param>
+        <param name="callback">O método a ser chamado quando a operação de retomada foi concluída.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Retome um fluxo de trabalho de um indicador de forma assíncrona usando o indicador especificado, o valor, o intervalo de tempo limite, o método de retorno de chamada e o estado fornecido pelo usuário.</summary>
+        <returns>Uma referência para a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar se a operação de retomada foi bem-sucedida, chame <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A>. <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A>pode ser chamado de dentro ou fora do método de retorno de chamada. Se <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A> é chamado antes de concluir a operação de retomada, ele bloqueia até a conclusão da operação de retomada. Por padrão, a operação de retomada deve concluir em 30 segundos ou uma <xref:System.TimeoutException> é gerada de <xref:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndResumeBookmark">
+      <MemberSignature Language="C#" Value="public System.Activities.BookmarkResumptionResult EndResumeBookmark (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Activities.BookmarkResumptionResult EndResumeBookmark(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceProxy.EndResumeBookmark(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkResumptionResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que faz referência a operação de retomada.</param>
+        <summary>Aguarda o pendentes assíncronas <see cref="Overload:System.Activities.Hosting.WorkflowInstanceProxy.BeginResumeBookmark" /> para concluir.</summary>
+        <returns>Retorna <see cref="T:System.Activities.BookmarkResumptionResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser chamado para determinar se um <xref:System.Activities.Hosting.WorkflowInstanceProxy.BeginResumeBookmark%2A> a operação foi bem-sucedida. Se for chamado antes de concluir a operação de retomada, ele bloqueia até que a operação de retomada seja concluída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstanceProxy.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID da instância de fluxo de trabalho.</summary>
+        <value>A ID de instância de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity WorkflowDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity WorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstanceProxy.WorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a definição de fluxo de trabalho.</summary>
+        <value>A definição de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

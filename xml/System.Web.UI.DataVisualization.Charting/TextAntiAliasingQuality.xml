@@ -1,0 +1,75 @@
+<Type Name="TextAntiAliasingQuality" FullName="System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality">
+  <TypeSignature Language="C#" Value="public enum TextAntiAliasingQuality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextAntiAliasingQuality extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a qualidade da suavização a ser usado com o <see cref="P:System.Web.UI.DataVisualization.Charting.Chart.TextAntiAliasingQuality" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality> enumeração representa os intervalos de qualidade do texto.  
+  
+ Quando você define um valor mais alto de suavização do texto, a carga de gráfico aumenta e diminui o desempenho. Se o gráfico contiver uma quantidade significativa de texto, considere a configuração de suavização do texto como um valor mais baixo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality High = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alta qualidade de suavização.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de suavização normal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDefault">
+      <MemberSignature Language="C#" Value="SystemDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality SystemDefault = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de suavização padrão do sistema. O texto será desenhado usando quaisquer configurações de suavização de fonte que o usuário selecionou para o sistema.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

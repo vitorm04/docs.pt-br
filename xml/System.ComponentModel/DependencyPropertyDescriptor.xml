@@ -1,0 +1,868 @@
+<Type Name="DependencyPropertyDescriptor" FullName="System.ComponentModel.DependencyPropertyDescriptor">
+  <TypeSignature Language="C#" Value="public sealed class DependencyPropertyDescriptor : System.ComponentModel.PropertyDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DependencyPropertyDescriptor extends System.ComponentModel.PropertyDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DependencyPropertyDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.PropertyDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma extensão do <see cref="T:System.ComponentModel.PropertyDescriptor" /> que representa as características das propriedades adicionais de uma propriedade de dependência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada principalmente por aplicativos de criação. Esses aplicativos talvez precise relatam as características de propriedade de dependência por meio do windows de propriedade ou outras ferramentas usadas para a edição de valores de propriedade.  
+  
+ Para verificar uma propriedade específica para determinar se ele possui <xref:System.ComponentModel.DependencyPropertyDescriptor> disponível para servir como um <xref:System.ComponentModel.PropertyDescriptor>, chame o <xref:System.ComponentModel.DependencyPropertyDescriptor.FromProperty%28System.ComponentModel.PropertyDescriptor%29?displayProperty=nameWithType>, ou <xref:System.ComponentModel.DependencyPropertyDescriptor.FromName%2A?displayProperty=nameWithType>. Se o método retornar `null`, em seguida, a propriedade não é uma propriedade de dependência. Se o método retornar um válido <xref:System.ComponentModel.DependencyPropertyDescriptor> , em seguida, a propriedade é uma propriedade de dependência.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddValueChanged">
+      <MemberSignature Language="C#" Value="public override void AddValueChanged (object component, EventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddValueChanged(object component, class System.EventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.AddValueChanged(System.Object,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="handler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente ao qual adicionar o manipulador.</param>
+        <param name="handler">O delegado a ser adicionado como um ouvinte.</param>
+        <summary>Permite que outros objetos sejam notificados quando essa propriedade muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de atributos para esse membro.</summary>
+        <value>O <see cref="T:System.ComponentModel.AttributeCollection" /> coleção de atributos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResetValue">
+      <MemberSignature Language="C#" Value="public override bool CanResetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanResetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.CanResetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para testar a funcionalidade de redefinição.</param>
+        <summary>Retorna se a redefinição de um objeto altera seu valor.</summary>
+        <returns>
+          <see langword="true" />Se a redefinição do componente altera seu valor; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public override string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da categoria à qual o membro pertence, conforme especificado no <see cref="T:System.ComponentModel.CategoryAttribute" />.</summary>
+        <value>O nome da categoria à qual o membro pertence. Se não houver nenhum <see cref="T:System.ComponentModel.CategoryAttribute" />, o nome da categoria é definido como a categoria padrão, <see langword="Misc" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentType">
+      <MemberSignature Language="C#" Value="public override Type ComponentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ComponentType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.ComponentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do componente que essa propriedade está vinculada.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de componente, essa propriedade está vinculada. Quando <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.GetValue(System.Object)" /> ou <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" /> são chamado, o objeto especificado pode ser uma instância desse tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter Converter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.TypeConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conversor de tipo dessa propriedade.</summary>
+        <value>Um <see cref="T:System.ComponentModel.TypeConverter" /> que é usado para converter o <see cref="T:System.Type" /> dessa propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser `null` em casos em que o atributo <xref:System.ComponentModel.TypeConverter> não é uma classe pública.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyProperty">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty DependencyProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty DependencyProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.DependencyProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o identificador de propriedade de dependência.</summary>
+        <value>O identificador de propriedade de dependência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser `null` se um <xref:System.ComponentModel.DependencyPropertyDescriptor> instância foi criada para uma propriedade que não é uma propriedade de dependência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do membro, conforme especificado no <see cref="T:System.ComponentModel.DescriptionAttribute" />.</summary>
+        <value>A descrição do membro. Se não houver nenhum <see cref="T:System.ComponentModel.DescriptionAttribute" />, o valor da propriedade é definido como o padrão, que é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerCoerceValueCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.CoerceValueCallback DesignerCoerceValueCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.CoerceValueCallback DesignerCoerceValueCallback" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.DesignerCoerceValueCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.CoerceValueCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um retorno de chamada que designers usam para modificar o valor efetivo de uma propriedade de dependência, antes do valor da propriedade de dependência é armazenado no mecanismo de propriedade de dependência.</summary>
+        <value>Um retorno de chamada que designers usam para modificar o valor efetivo de uma propriedade de dependência, antes do valor da propriedade de dependência é armazenado no mecanismo de propriedade de dependência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeOnly">
+      <MemberSignature Language="C#" Value="public override bool DesignTimeOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignTimeOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.DesignTimeOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se este membro deve ser definido apenas em tempo de design, como especificado no <see cref="T:System.ComponentModel.DesignOnlyAttribute" />.</summary>
+        <value>
+          <see langword="true" />Se esse membro deve ser definido somente em tempo de design; <see langword="false" /> se o membro pode ser definido durante o tempo de execução. Se não houver nenhum <see cref="T:System.ComponentModel.DesignOnlyAttribute" />, o valor de retorno é o padrão, que é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public override string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome que pode ser exibido em uma janela, como uma janela de propriedades.</summary>
+        <value>O nome para exibição para a propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> para comparar com a instância atual.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> quanto à igualdade.</summary>
+        <returns>
+          <see langword="true" />Se os valores forem equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromName">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.DependencyPropertyDescriptor FromName (string name, Type ownerType, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.DependencyPropertyDescriptor FromName(string name, class System.Type ownerType, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.FromName(System.String,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome registrado de uma propriedade de dependência ou uma propriedade anexada.</param>
+        <param name="ownerType">O <see cref="T:System.Type" /> do objeto que possui a definição de propriedade.</param>
+        <param name="targetType">O <see cref="T:System.Type" /> do objeto que você deseja definir a propriedade.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> para um nome de propriedade fornecido.</summary>
+        <returns>A solicitação <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `name` podem se referir a uma propriedade de dependência ou uma propriedade anexada e é o `name` parâmetro como passados para o <xref:System.Windows.DependencyProperty.Register%2A> ou <xref:System.Windows.DependencyProperty.RegisterAttached%2A> chamada que definiu a propriedade em questão. `ownerType`é o tipo de objeto que possui a propriedade novamente como passado para <xref:System.Windows.DependencyProperty.Register%2A> ou <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. `targetType`é o tipo de objeto que você deseja definir a propriedade. Para propriedades de dependência, `ownerType` e `targetType` são do mesmo tipo. Para propriedades anexadas geralmente diferem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromName">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.DependencyPropertyDescriptor FromName (string name, Type ownerType, Type targetType, bool ignorePropertyType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.DependencyPropertyDescriptor FromName(string name, class System.Type ownerType, class System.Type targetType, bool ignorePropertyType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.FromName(System.String,System.Type,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="ignorePropertyType" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome registrado de uma propriedade de dependência ou uma propriedade anexada.</param>
+        <param name="ownerType">O <see cref="T:System.Type" /> do objeto que possui a definição de propriedade.</param>
+        <param name="targetType">O <see cref="T:System.Type" /> do objeto que você deseja definir a propriedade.</param>
+        <param name="ignorePropertyType">Especifica para ignorar o tipo de propriedade.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> para um nome de propriedade fornecido.</summary>
+        <returns>A solicitação <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `name` podem se referir a uma propriedade de dependência ou uma propriedade anexada e é o `name` parâmetro como passados para o <xref:System.Windows.DependencyProperty.Register%2A> ou <xref:System.Windows.DependencyProperty.RegisterAttached%2A> chamada que definiu a propriedade em questão. `ownerType`é o tipo de objeto que possui a propriedade novamente como passado para <xref:System.Windows.DependencyProperty.Register%2A> ou <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. `targetType`é o tipo de objeto que você deseja definir a propriedade. Para propriedades de dependência, `ownerType` e `targetType` são do mesmo tipo. Para propriedades anexadas geralmente diferem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromProperty">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.DependencyPropertyDescriptor FromProperty (System.ComponentModel.PropertyDescriptor property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.DependencyPropertyDescriptor FromProperty(class System.ComponentModel.PropertyDescriptor property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.FromProperty(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="property">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> a ser verificado.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> para um fornecido <see cref="T:System.ComponentModel.PropertyDescriptor" />.</summary>
+        <returns>Se a propriedade descrita por <paramref name="property" /> é uma propriedade de dependência, retorna um válidas <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />. Caso contrário, retorna um <see langword="null" /> <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é o principal usado por aplicativos de criação para obter um <xref:System.ComponentModel.DependencyPropertyDescriptor> na Base de verificação de todas as propriedades para um <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromProperty">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.DependencyPropertyDescriptor FromProperty (System.Windows.DependencyProperty dependencyProperty, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.DependencyPropertyDescriptor FromProperty(class System.Windows.DependencyProperty dependencyProperty, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.FromProperty(System.Windows.DependencyProperty,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O identificador de uma propriedade de dependência.</param>
+        <param name="targetType">O tipo do objeto onde a propriedade é definida.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> para um tipo de propriedade e de destino de dependência fornecido.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> para a propriedade de dependência fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `dependencyProperty` podem se referir a uma propriedade de dependência ou uma propriedade anexada. `targetType`é o tipo de objeto que você deseja definir a propriedade. Para propriedades de dependência, que o tipo é equivalente a <xref:System.Windows.DependencyProperty.OwnerType%2A> para o `dependencyProperty`. Para propriedades anexadas a `targetType` é normalmente alguns outros <xref:System.Windows.DependencyObject> tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetChildProperties (object instance, Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetChildProperties(object instance, class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetChildProperties(System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="filter" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um componente cujas propriedades serão obtidas.</param>
+        <param name="filter">Uma matriz do tipo <see cref="T:System.Attribute" /> a ser usada como um filtro.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades que correspondem aos atributos especificados para o componente especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditor">
+      <MemberSignature Language="C#" Value="public override object GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">O tipo base do editor, que é usada para diferenciar entre os vários editores que oferece suporte a uma propriedade.</param>
+        <summary>Obtém um editor do tipo especificado.</summary>
+        <returns>Uma instância do tipo solicitado de editor, ou <see langword="null" /> se um editor não pode ser encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash para <xref:System.ComponentModel.DependencyPropertyDescriptor> baseia-se o identificador para uma propriedade de dependência e o tipo no qual ele está definido. Essa implementação garante que um <xref:System.ComponentModel.DependencyPropertyDescriptor> não retornar o mesmo código hash para propriedades que são herdadas por classes derivadas muitos possíveis ou propriedades novamente caso contrário, são atribuídas pelo sistema de propriedade incorretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">A instância do componente.</param>
+        <summary>Resturns o valor atual da propriedade em um componente.</summary>
+        <returns>O valor solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttached">
+      <MemberSignature Language="C#" Value="public bool IsAttached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAttached" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.IsAttached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a propriedade é registrada como uma propriedade anexada e está sendo usada por meio de um uso anexado.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é uma propriedade anexada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowsable">
+      <MemberSignature Language="C#" Value="public override bool IsBrowsable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBrowsable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.IsBrowsable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o valor de <see cref="T:System.ComponentModel.BrowsableAttribute" /> na propriedade.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.BrowsableAttribute" /> foi especificado na propriedade; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocalizable">
+      <MemberSignature Language="C#" Value="public override bool IsLocalizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocalizable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.IsLocalizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta propriedade deve ser localizada, conforme especificado no <see cref="T:System.ComponentModel.LocalizableAttribute" />.</summary>
+        <value>
+          <see langword="true" />Se o membro está marcado com o <see cref="T:System.ComponentModel.LocalizableAttribute" /> construtor do valor true; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta propriedade é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ Propriedades de dependência são registradas como somente leitura usando chamadas de método específico e por convenção o [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] wrapper de propriedades que é as propriedades exibidas por reflexão e os descritores também deve ser somente leitura. No entanto, como essa é uma convenção e não um requisito para compilar, você talvez queira Verifique o estado de somente leitura de identificador do propriedade dependência. Para fazer isso, obtenha o identificador (<xref:System.Windows.DependencyProperty>) valor <xref:System.ComponentModel.DependencyPropertyDescriptor> e, em seguida, verifique o valor de <xref:System.Windows.DependencyProperty.ReadOnly%2A>. Observe que o <xref:System.Windows.DependencyProperty.ReadOnly%2A> é o identificador em si, não os metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyMetadata Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PropertyMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados associados com a propriedade de dependência.</summary>
+        <value>Os metadados de propriedade de dependência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor pode ser `null` se não houver nenhum metadados ou se a propriedade não é uma propriedade de dependência.  
+  
+ Metadados que tenha correspondência conceitos em [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] atributos é exposto novamente como atributos de <xref:System.ComponentModel.DependencyPropertyDescriptor.Attributes%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public override Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o representado <see cref="T:System.Type" /> da propriedade de dependência.</summary>
+        <value>O <see cref="T:System.Type" /> da propriedade de dependência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o <xref:System.Type> registrado com a propriedade de dependência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveValueChanged">
+      <MemberSignature Language="C#" Value="public override void RemoveValueChanged (object component, EventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveValueChanged(object component, class System.EventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.RemoveValueChanged(System.Object,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="handler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente ao qual adicionar o manipulador.</param>
+        <param name="handler">O delegado a ser adicionado como um ouvinte.</param>
+        <summary>Permite que outros objetos sejam notificados quando essa propriedade muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetValue">
+      <MemberSignature Language="C#" Value="public override void ResetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.ResetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com o valor da propriedade que devem ser redefinidos para o valor padrão.</param>
+        <summary>Redefine o valor para essa propriedade do componente para o valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public override void SetValue (object component, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetValue(object component, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com o valor da propriedade que deve ser definida.</param>
+        <param name="value">O novo valor.</param>
+        <summary>Define o valor do componente para um valor diferente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValue">
+      <MemberSignature Language="C#" Value="public override bool ShouldSerializeValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldSerializeValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.ShouldSerializeValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com a propriedade a ser examinado para persistência.</param>
+        <summary>Indica se o valor dessa propriedade precisa ser mantido por processos de serialização.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade deve ser persistente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsChangeEvents">
+      <MemberSignature Language="C#" Value="public override bool SupportsChangeEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsChangeEvents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DependencyPropertyDescriptor.SupportsChangeEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se as notificações de alteração de valor para essa propriedade podem originam fora o descritor de propriedade, como do componente em si, ou se as notificações só serão proveniente de chamadas diretas feitas <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" />.</summary>
+        <value>
+          <see langword="true" />Se as notificações para essa propriedade podem ser obtidos fora o descritor de propriedade, como do próprio componente. <see langword="false" />Se as notificações só serão proveniente de chamadas diretas feitas <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, para o `true` caso, o componente pode implementar o <xref:System.ComponentModel.INotifyPropertyChanged> interface, ou pode ter uma explícita `propertyName.Changed` eventos para essa propriedade.  
+  
+ Esta propriedade depende subjacente <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o valor dessa instância na representação da cadeia de caracteres equivalente.</summary>
+        <returns>Retorna o <see cref="P:System.ComponentModel.MemberDescriptor.Name" /> valor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

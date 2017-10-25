@@ -1,0 +1,779 @@
+<Type Name="Encoder" FullName="System.Drawing.Imaging.Encoder">
+  <TypeSignature Language="C#" Value="public sealed class Encoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Encoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.Encoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> encapsula um GUID (identificador global exclusivo) que identifica a categoria de um parâmetro codificador de imagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Encoder (Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Encoder.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Um identificador globalmente exclusivo que identifica uma categoria de parâmetro de codificador de imagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Encoder" /> classe do especificado identificador globalmente exclusivo (GUID). O GUID Especifica uma categoria de parâmetro de codificador de imagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChrominanceTable">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder ChrominanceTable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder ChrominanceTable" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.ChrominanceTable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado pelo identificador global exclusivo da categoria de parâmetro da tabela de crominância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorDepth">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder ColorDepth;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder ColorDepth" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.ColorDepth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado com o identificador global exclusivo para a categoria de parâmetro de intensidade de cor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Drawing.Bitmap> objeto a partir de um arquivo BMP. O código salva a imagem como um arquivo TIFF com uma profundidade de cor de 24 bits por pixel.  
+  
+ [!code-cpp[System.Drawing.Imaging.ClassicEncoderExample1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Imaging.ClassicEncoderExample1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Imaging.ClassicEncoderExample1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Imaging.ClassicEncoderExample1/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Imaging.ClassicEncoderExample1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Imaging.ClassicEncoderExample1/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compression">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Compression;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Compression" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Compression" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado com o identificador global exclusivo para a categoria de parâmetro de compactação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Drawing.Bitmap> objeto a partir de um arquivo BMP. O código salva a imagem como um arquivo TIFF com compactação LZW.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEncoder2#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoder2/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicImagingEncoder2#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoder2/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicImagingEncoder2#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoder2/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Guid Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Guid" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.Encoder.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador global exclusivo (GUID) que identifica um codificador de imagem de categoria de parâmetro.</summary>
+        <value>O GUID que identifica uma categoria de parâmetro de codificador de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LuminanceTable">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder LuminanceTable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder LuminanceTable" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.LuminanceTable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado pelo identificador global exclusivo da categoria de parâmetro da tabela de luminância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Quality">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Quality;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Quality" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Quality" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado pelo identificador global exclusivo da categoria de parâmetro de qualidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Imaging.Encoder.Quality> categoria Especifica o nível de compactação de uma imagem. Quando usado para construir um <xref:System.Drawing.Imaging.EncoderParameter>, o intervalo de valores úteis para a categoria de qualidade é de 0 a 100. Quanto menor o número especificado, maior a compactação e, portanto, menor a qualidade da imagem. Zero, você obtém a imagem de qualidade inferior e 100 o mais alto.  
+  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Drawing.Bitmap> objeto a partir de um arquivo BMP. O código salva o bitmap três arquivos JPEG, cada um com um nível de qualidade diferente.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMethod">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder RenderMethod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder RenderMethod" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.RenderMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado pelo identificador global exclusivo da categoria de parâmetro do método de renderização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveFlag">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder SaveFlag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder SaveFlag" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.SaveFlag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> que é inicializado com o identificador global exclusivo para a categoria de parâmetro salvar sinalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria três <xref:System.Drawing.Bitmap> objetos: um de um arquivo BMP, uma de um arquivo JPEG e outra de um arquivo PNG. O código salva todas as três imagens em um único arquivo TIFF de quadro múltiplo.  
+  
+ [!code-cpp[System.Drawing.ClassingImagingEncoder4#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassingImagingEncoder4/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassingImagingEncoder4#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassingImagingEncoder4/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassingImagingEncoder4#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassingImagingEncoder4/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanMethod">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder ScanMethod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder ScanMethod" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.ScanMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado pelo identificador global exclusivo da categoria de parâmetro do método de verificação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformation">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Transformation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Transformation" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Transformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um objeto <see cref="T:System.Drawing.Imaging.Encoder" /> inicializado com o identificador global exclusivo da categoria de parâmetro de transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Drawing.Bitmap> objeto a partir de um arquivo JPEG. O código gira a imagem 90 graus e salva-o em um arquivo JPEG separado.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEncoderExample5#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoderExample5/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicImagingEncoderExample5#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoderExample5/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicImagingEncoderExample5#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoderExample5/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Version;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Version" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Version" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma <see cref="T:System.Drawing.Imaging.Encoder" /> objeto que é inicializado com o identificador exclusivo para a categoria de parâmetro de versão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Imaging.Encoder.Quality> categoria Especifica o nível de compactação de uma imagem. Quando usado para construir um <xref:System.Drawing.Imaging.EncoderParameter>, o intervalo de valores úteis para a categoria de qualidade é de 0 a 100. Quanto menor o número especificado, maior a compactação e, portanto, menor a qualidade da imagem. Zero, você obtém a imagem de qualidade inferior e 100 o mais alto.  
+  
+ Quando você passa um parâmetro para um codificador de imagem, o parâmetro é encapsulado em um <xref:System.Drawing.Imaging.EncoderParameter> objeto. Um dos campos do <xref:System.Drawing.Imaging.EncoderParameter> objeto é um GUID que especifica a categoria do parâmetro. Use os campos estáticos do <xref:System.Drawing.Imaging.Encoder> classe para recuperar um <xref:System.Drawing.Imaging.Encoder> que contém os parâmetros da categoria desejada.  
+  
+ Os codificadores de imagem são incorporados [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] receber parâmetros que pertencem a várias categorias. A tabela a seguir lista todas as categorias e o GUID associado a cada categoria.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-Fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-BF53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

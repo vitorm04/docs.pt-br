@@ -1,0 +1,94 @@
+<Type Name="WorkflowInstanceQueryElement" FullName="System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement">
+  <TypeSignature Language="C#" Value="public class WorkflowInstanceQueryElement : System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowInstanceQueryElement extends System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um elemento de configuração que representa um <see cref="T:System.Activities.Tracking.WorkflowInstanceQuery" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceQueryElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTrackingQuery">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Tracking.TrackingQuery NewTrackingQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Activities.Tracking.TrackingQuery NewTrackingQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement.NewTrackingQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingQuery</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância <see cref="T:System.Activities.Tracking.WorkflowInstanceQuery" />.</summary>
+        <returns>Uma nova consulta de instância de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de propriedades.</summary>
+        <value>A coleção de propriedades para o elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="States">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection States { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection States" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement.States" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("states")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estados de fluxo de trabalho que filtra a consulta.</summary>
+        <value>Os estados para filtrar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
