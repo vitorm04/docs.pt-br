@@ -83,7 +83,11 @@
       }
     }
   ],
-  "branch_target_mapping": {
+  "branch_target_mapping": {    
+    "IntSen_Test": [
+      "Publish",
+      "Intellisense"
+    ],
     "master": [
       "Publish"
     ]
