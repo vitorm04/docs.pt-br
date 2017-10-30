@@ -1,5 +1,4 @@
 {
-  "need_pr_comments": false,
   "docsets_to_publish": [
     {
       "docset_name": "core-docs",
@@ -33,19 +32,28 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "Tutorial": "Content"
       },
       "build_entry_point": "docs",
+      "template_folder": "_themes",
       "customized_template_paths": [
         "_dependentPackages/memberpage.plugins/content"
-      ]
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
+          "_dependentPackages/splitToc/tools/run.ps1"
+        ],
+        "docset_postbuild": [
+          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
+        ]
+      },
+      "pdf_build_exclude_tocs": []
     }
   ],
-  "notification_subscribers": [
-    "CnE_Content_Brno@moravia.com",
-    "CnE_UE_Bugfixing_ENG@moravia.com"
-  ],
-  "branches_to_filter": [
+  "notification_subscribers": [],
+  "branches_to_filter": ["live",
     "live-sxs"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.pt-br",
@@ -58,43 +66,53 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft.pt-br",
-      "branch": "master",
-      "branch_mapping": {}
+      "branch": "master"
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
-      "branch_mapping": {}
+      "branch": "master"
+    },
+    {
+      "path_to_root": "_csharplang",
+      "url": "https://github.com/dotnet/csharplang",
+      "branch": "master"
+    },
+    {
+      "path_to_root": "_vblang",
+      "url": "https://github.com/dotnet/vblang",
+      "branch": "master"
     },
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/dotnet/docs",
       "branch": "live",
-      "branch_mapping": {}
-    },
-    {
-      "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
-      "branch": "live",
       "branch_mapping": {
-        "master": "master",
-        "live": "live"
+        "live": "live",
+        "master": "master"
       }
     }
   ],
-  "branch_target_mapping": {    
+  "branch_target_mapping": {
     "IntSen_Test": [
       "Publish",
       "Intellisense"
+    ],
+    "live": [
+      "Publish",
+      "Pdf"
     ],
     "master": [
       "Publish"
     ]
   },
   "need_generate_pdf_url_template": false,
-  "need_generate_pdf": false,
   "need_generate_intellisense": false,
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "dependent_packages": [
     {
       "id": "memberpage.plugins",
@@ -104,9 +122,12 @@
       "version": "latest"
     }
   ],
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  }
+  "ECMA2Yaml": {
+    "SourceXmlFolder": "xml",
+    "SourceMetadataFolder": "add\\metadata",
+    "OutputYamlFolder": "api",
+    "Flatten": true
+  },
+  "toc_path_need_to_split": "api/toc.yml"
+
 }
