@@ -258,7 +258,7 @@
 ##### [Task 1: Create a New Windows Presentation Foundation Application](task-1-create-a-new-wpf-app.md) (Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation)
 ##### [Task 2: Host the Workflow Designer](task-2-host-the-workflow-designer.md) (Tarefa 2: Hospedar o Designer de Fluxo de Trabalho)
 ##### [Task 3: Create the Toolbox and PropertyGrid Panes](task-3-create-the-toolbox-and-propertygrid-panes.md) (Tarefa 3: Criar a caixa de ferramentas e os painéis de PropertyGrid)
-##### [How to: Display Validation Errors in a Rehosted Designer](how-to-display-validation-errors-in-a-rehosted-designer.md) (Como: Exibir erros de validação em um designer hospedado novamente)
+##### [How to: Display Validation Errors in a Rehosted Designer](how-to-display-validation-errors-in-a-rehosted-designer.md) (Como exibir erros de validação em um designer hospedado novamente)
 ##### [Support for New Workflow Foundation 4.5 Features in the Rehosted Workflow Designer](wf-features-in-the-rehosted-workflow-designer.md) (Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente)
 #### [Using a Custom Expression Editor](using-a-custom-expression-editor.md) (Usando um editor de expressão personalizado)
 ## [Windows Workflow Foundation Glossary](glossary.md) (Glossário do Windows Workflow Foundation)
