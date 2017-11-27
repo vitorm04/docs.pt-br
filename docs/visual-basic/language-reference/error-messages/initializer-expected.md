@@ -1,60 +1,42 @@
 ---
-title: Inicializador esperado | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Inicializador esperado
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30996
 - bc30996
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30996
+helpviewer_keywords: BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 979b3dc058465c280469bff01d6ae95c1b99fa40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 46ff91ec240212571f7ec9f26e82d9d128263545
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="initializer-expected"></a>Inicializador esperado
-Você tentou declarar uma instância de uma classe usando um inicializador de objeto no qual a lista de inicialização está vazia, conforme mostrado no exemplo a seguir.  
+# <a name="initializer-expected"></a><span data-ttu-id="f7f89-102">Inicializador esperado</span><span class="sxs-lookup"><span data-stu-id="f7f89-102">Initializer expected</span></span>
+<span data-ttu-id="f7f89-103">Você tentou declarar uma instância de uma classe usando um inicializador de objeto no qual a lista de inicialização está vazia, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="f7f89-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- Pelo menos um campo ou propriedade deve ser inicializada na lista de inicializadores, conforme mostrado no exemplo a seguir.  
+ <span data-ttu-id="f7f89-104">Pelo menos um campo ou propriedade deve ser inicializada na lista de inicializador, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="f7f89-104">At least one field or property must be initialized in the initializer list, as shown in the following example.</span></span>  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
- **ID do erro:** BC30996  
+ <span data-ttu-id="f7f89-105">**ID do erro:** BC30996</span><span class="sxs-lookup"><span data-stu-id="f7f89-105">**Error ID:** BC30996</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f7f89-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f7f89-106">To correct this error</span></span>  
   
-1.  Inicializar pelo menos um campo ou propriedade no inicializador, ou não use um inicializador de objeto.  
+1.  <span data-ttu-id="f7f89-107">Inicializar pelo menos um campo ou propriedade no inicializador, ou não use um inicializador de objeto.</span><span class="sxs-lookup"><span data-stu-id="f7f89-107">Initialize at least one field or property in the initializer, or do not use an object initializer.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Como declarar um objeto usando um inicializador de objeto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a><span data-ttu-id="f7f89-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7f89-108">See Also</span></span>  
+ [<span data-ttu-id="f7f89-109">Inicializadores de objeto: tipos nomeados e anônimos</span><span class="sxs-lookup"><span data-stu-id="f7f89-109">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="f7f89-110">Como declarar um objeto usando um inicializador de objeto</span><span class="sxs-lookup"><span data-stu-id="f7f89-110">How to: Declare an Object by Using an Object Initializer</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

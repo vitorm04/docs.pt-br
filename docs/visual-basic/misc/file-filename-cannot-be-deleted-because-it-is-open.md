@@ -1,45 +1,28 @@
 ---
-title: "Arquivo &quot;&lt;filename&gt;&quot; não pode ser excluída porque ela está aberta | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Arquivo &#39; &lt;filename&gt;&#39; não pode ser excluído porque ele está aberto"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrFileSystem_FileAlreadyOpen1
+f1_keywords: vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51629236a10c9198ee2158efbc65ec2ff5335f76
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b96c13498286c914191fc5b944f80be5b1d05db3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a>Arquivo '&lt;filename&gt;' não pode ser excluído porque ele está aberto
-Uma exclusão está sendo tentada em um arquivo aberto.  
+# <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="6d795-102">Arquivo &#39; &lt;filename&gt;&#39; não pode ser excluído porque ele está aberto</span><span class="sxs-lookup"><span data-stu-id="6d795-102">File &#39;&lt;filename&gt;&#39; cannot be deleted because it is open</span></span>
+<span data-ttu-id="6d795-103">Uma exclusão está sendo tentada em um arquivo aberto.</span><span class="sxs-lookup"><span data-stu-id="6d795-103">A deletion is being attempted on an open file.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6d795-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6d795-104">To correct this error</span></span>  
   
--   Feche o arquivo antes de excluí-lo.  
+-   <span data-ttu-id="6d795-105">Feche o arquivo antes de excluí-lo.</span><span class="sxs-lookup"><span data-stu-id="6d795-105">Close the file before deleting it.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [NÃO está em compilação: Função FileClose](http://msdn.microsoft.com/en-us/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)   
- [Método DeleteFile](http://msdn.microsoft.com/en-us/07637b38-bd99-49b1-8cc0-dc37cdb14dba)   
- [Objeto My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a><span data-ttu-id="6d795-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6d795-106">See Also</span></span>  
+ [<span data-ttu-id="6d795-107">NÃO está em compilação: Função FileClose</span><span class="sxs-lookup"><span data-stu-id="6d795-107">NOT IN BUILD: FileClose Function</span></span>](http://msdn.microsoft.com/en-us/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)  
+ [<span data-ttu-id="6d795-108">Método DeleteFile</span><span class="sxs-lookup"><span data-stu-id="6d795-108">My.Computer.FileSystem.DeleteFile Method</span></span>](http://msdn.microsoft.com/en-us/07637b38-bd99-49b1-8cc0-dc37cdb14dba)  
+ [<span data-ttu-id="6d795-109">Objeto My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="6d795-109">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)

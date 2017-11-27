@@ -1,66 +1,49 @@
 ---
-title: Executando tarefas com My. Application, My. Computer e My. User (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Executando tarefas com My.Application, My.Computer e My.User (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My.Application object, developing applications
+- My.Application object [Visual Basic], developing applications
 - rapid application development (RAD), My.Application
 - rapid application development (RAD), My.Computer
 - rapid application development (RAD), My.User
-- My.Computer object, developing applications
-- My.User object, developing applications
+- My.Computer object [Visual Basic], developing applications
+- My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2a51579ae571385ce0ccfa6b45593de818dcf1bc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d55e0b3a126f2216d005c7bddbcaefb7d8f0a580
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Executando tarefas com My.Application, My.Computer e My.User (Visual Basic)
-Os três centrais `My` são objetos que fornecem acesso às informações e comumente usado funcionalmente `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), e `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>).</xref:Microsoft.VisualBasic.ApplicationServices.User> </xref:Microsoft.VisualBasic.Devices.Computer> </xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> Você pode usar esses objetos para acessar informações relacionadas para o aplicativo atual, que o aplicativo é instalado no computador ou o usuário atual do aplicativo, respectivamente.  
+# <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a><span data-ttu-id="a72bd-102">Executando tarefas com My.Application, My.Computer e My.User (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a72bd-102">Performing Tasks with My.Application, My.Computer, and My.User (Visual Basic)</span></span>
+<span data-ttu-id="a72bd-103">Os três centrais `My` são objetos que fornecem acesso a informações e comumente usadas funcionalidade `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), e `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>).</span><span class="sxs-lookup"><span data-stu-id="a72bd-103">The three central `My` objects that provide access to information and commonly used functionality are `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), and `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>).</span></span> <span data-ttu-id="a72bd-104">Você pode usar esses objetos para acessar informações relacionadas para o aplicativo atual, o que o aplicativo é instalado no computador ou o usuário atual do aplicativo, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="a72bd-104">You can use these objects to access information that is related to the current application, the computer that the application is installed on, or the current user of the application, respectively.</span></span>  
   
-## <a name="myapplication-mycomputer-and-myuser"></a>My. Application, My. Computer e My. User  
- Os exemplos a seguir demonstram como informações podem ser recuperadas usando `My`.  
+## <a name="myapplication-mycomputer-and-myuser"></a><span data-ttu-id="a72bd-105">My. Application, My. Computer e My. User</span><span class="sxs-lookup"><span data-stu-id="a72bd-105">My.Application, My.Computer, and My.User</span></span>  
+ <span data-ttu-id="a72bd-106">Os exemplos a seguir demonstram como informações podem ser recuperadas usando `My`.</span><span class="sxs-lookup"><span data-stu-id="a72bd-106">The following examples demonstrate how information can be retrieved using `My`.</span></span>  
   
- [!code-vb[VbVbcnMy n º&1;](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
+ [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
   
- [!code-vb[VbVbcnMy n º&2;](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
+ [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
   
- Além de recuperar informações, os membros expostos através desses três objetos também permitem que sejam executados métodos relacionados a esse objeto. Por exemplo, você pode acessar uma variedade de métodos para manipular arquivos ou atualizar o registro através de `My.Computer`.  
+ <span data-ttu-id="a72bd-107">Além de recuperar informações do, os membros expostos através desses três objetos também permitem que você execute métodos relacionados a esse objeto.</span><span class="sxs-lookup"><span data-stu-id="a72bd-107">In addition to retrieving information, the members exposed through these three objects also allow you to execute methods related to that object.</span></span> <span data-ttu-id="a72bd-108">Por exemplo, você pode acessar uma variedade de métodos para manipular arquivos ou atualizar o registro por meio de `My.Computer`.</span><span class="sxs-lookup"><span data-stu-id="a72bd-108">For instance, you can access a variety of methods to manipulate files or update the registry through `My.Computer`.</span></span>  
   
- E/s de arquivos é significativamente mais fácil e rápida com `My`, que inclui uma variedade de métodos e propriedades para manipular arquivos, pastas e unidades. O <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>objeto permite que você ler grandes estruturas de arquivos que têm delimitador ou largura fixa de campos.</xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Este exemplo abre o `TextFieldParser``reader` e o usa para ler de `C:\TestFolder1\test1.txt`.  
+ <span data-ttu-id="a72bd-109">E/s de arquivos é significativamente mais fácil e rápido com `My`, que inclui uma variedade de métodos e propriedades para manipular arquivos, pastas e unidades.</span><span class="sxs-lookup"><span data-stu-id="a72bd-109">File I/O is significantly easier and faster with `My`, which includes a variety of methods and properties for manipulating files, directories, and drives.</span></span> <span data-ttu-id="a72bd-110">O <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> objeto permite que você ler grandes estruturas de arquivos que têm delimitador ou largura fixa de campos.</span><span class="sxs-lookup"><span data-stu-id="a72bd-110">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object allows you to read from large structured files that have delimited or fixed-width fields.</span></span> <span data-ttu-id="a72bd-111">Este exemplo abre o `TextFieldParser``reader` e usa para ler de `C:\TestFolder1\test1.txt`.</span><span class="sxs-lookup"><span data-stu-id="a72bd-111">This example opens the `TextFieldParser``reader` and uses it to read from `C:\TestFolder1\test1.txt`.</span></span>  
   
- [!code-vb[VbVbalrTextFieldParser&#23;](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
- `My.Application`permite alterar a cultura do seu aplicativo. O exemplo a seguir demonstra como esse método pode ser chamado.  
+ <span data-ttu-id="a72bd-112">`My.Application`permite que você alterar a cultura do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a72bd-112">`My.Application` allows you to change the culture for your application.</span></span> <span data-ttu-id="a72bd-113">O exemplo a seguir demonstra como esse método pode ser chamado.</span><span class="sxs-lookup"><span data-stu-id="a72bd-113">The following example demonstrates how this method can be called.</span></span>  
   
- [!code-vb[VbVbcnMy n º&3;](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
+ [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a><span data-ttu-id="a72bd-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a72bd-114">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [<span data-ttu-id="a72bd-115">Como My depende do tipo de projeto</span><span class="sxs-lookup"><span data-stu-id="a72bd-115">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

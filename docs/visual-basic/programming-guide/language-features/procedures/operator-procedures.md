@@ -1,119 +1,102 @@
 ---
-title: Procedimentos de operador (Visual Basic) | Documentos do Microsoft
+title: Procedimentos do operador (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, procedures
-- procedures, operator
+- procedures [Visual Basic], operator
 - Visual Basic code, operators
-- syntax, Operator procedures
+- syntax [Visual Basic], Operator procedures
 - operators [Visual Basic], overloading
-- overloaded operators
+- overloaded operators [Visual Basic]
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9e86c9c466ba236cc33153f2f341af35c622de6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-procedures-visual-basic"></a>Procedimentos do operador (Visual Basic)
-Um procedimento de operador é uma série de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] instruções que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu. Isso também é chamado *sobrecarregamento*.  
+# <a name="operator-procedures-visual-basic"></a><span data-ttu-id="fedc4-102">Procedimentos do operador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fedc4-102">Operator Procedures (Visual Basic)</span></span>
+<span data-ttu-id="fedc4-103">Um procedimento de operador é uma série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instruções que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu.</span><span class="sxs-lookup"><span data-stu-id="fedc4-103">An operator procedure is a series of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] statements that define the behavior of a standard operator (such as `*`, `<>`, or `And`) on a class or structure you have defined.</span></span> <span data-ttu-id="fedc4-104">Isso também é chamado de *sobrecarga de operador*.</span><span class="sxs-lookup"><span data-stu-id="fedc4-104">This is also called *operator overloading*.</span></span>  
   
-## <a name="when-to-define-operator-procedures"></a>Quando definir procedimentos de operador  
- Quando você tiver definido uma classe ou estrutura, você pode declarar variáveis sejam do tipo de classe ou estrutura. Às vezes, tal variável precisa participar em uma operação como parte de uma expressão. Para fazer isso, ele deve ser um operando de um operador.  
+## <a name="when-to-define-operator-procedures"></a><span data-ttu-id="fedc4-105">Quando definir procedimentos de operador</span><span class="sxs-lookup"><span data-stu-id="fedc4-105">When to Define Operator Procedures</span></span>  
+ <span data-ttu-id="fedc4-106">Quando você tiver definido uma classe ou estrutura, você pode declarar variáveis sejam do tipo de classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-106">When you have defined a class or structure, you can declare variables to be of the type of that class or structure.</span></span> <span data-ttu-id="fedc4-107">Às vezes, tal variável precisa participar de uma operação como parte de uma expressão.</span><span class="sxs-lookup"><span data-stu-id="fedc4-107">Sometimes such a variable needs to participate in an operation as part of an expression.</span></span> <span data-ttu-id="fedc4-108">Para fazer isso, ele deve ser um operando de um operador.</span><span class="sxs-lookup"><span data-stu-id="fedc4-108">To do this, it must be an operand of an operator.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]define operadores somente em seu tipo de dados básico. Você pode definir o comportamento de um operador quando um ou ambos os operandos forem do tipo de sua classe ou estrutura.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="fedc4-109">define operadores somente em seu tipo de dados básico.</span><span class="sxs-lookup"><span data-stu-id="fedc4-109"> defines operators only on its fundamental data types.</span></span> <span data-ttu-id="fedc4-110">Você pode definir o comportamento de um operador quando um ou ambos os operandos são do tipo de sua classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-110">You can define the behavior of an operator when one or both of the operands are of the type of your class or structure.</span></span>  
   
- Para obter mais informações, consulte [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ <span data-ttu-id="fedc4-111">Para obter mais informações, consulte [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).</span><span class="sxs-lookup"><span data-stu-id="fedc4-111">For more information, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
-## <a name="types-of-operator-procedure"></a>Tipos de procedimento de operador  
- Um procedimento de operador pode ser um dos seguintes tipos:  
+## <a name="types-of-operator-procedure"></a><span data-ttu-id="fedc4-112">Tipos de procedimento de operador</span><span class="sxs-lookup"><span data-stu-id="fedc4-112">Types of Operator Procedure</span></span>  
+ <span data-ttu-id="fedc4-113">Um procedimento de operador pode ser um dos seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="fedc4-113">An operator procedure can be one of the following types:</span></span>  
   
--   Uma definição de um operador unário onde o argumento é do tipo de sua classe ou estrutura.  
+-   <span data-ttu-id="fedc4-114">Uma definição de um operador unário onde o argumento é do tipo de sua classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-114">A definition of a unary operator where the argument is of the type of your class or structure.</span></span>  
   
--   Uma definição de um operador binário onde pelo menos um dos argumentos é do tipo de sua classe ou estrutura.  
+-   <span data-ttu-id="fedc4-115">Uma definição de um operador binário onde pelo menos um dos argumentos é do tipo de sua classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-115">A definition of a binary operator where at least one of the arguments is of the type of your class or structure.</span></span>  
   
--   Uma definição de um operador de conversão onde o argumento é do tipo de sua classe ou estrutura.  
+-   <span data-ttu-id="fedc4-116">Uma definição de um operador de conversão onde o argumento é do tipo de sua classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-116">A definition of a conversion operator where the argument is of the type of your class or structure.</span></span>  
   
--   Uma definição de um operador de conversão que retorna o tipo de sua classe ou estrutura.  
+-   <span data-ttu-id="fedc4-117">Uma definição de um operador de conversão que retorna o tipo de sua classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-117">A definition of a conversion operator that returns the type of your class or structure.</span></span>  
   
- Operadores de conversão são sempre unários, e você sempre usa `CType` como o operador que você está definindo.  
+ <span data-ttu-id="fedc4-118">Operadores de conversão são sempre unários, e você sempre usar `CType` como o operador que você está definindo.</span><span class="sxs-lookup"><span data-stu-id="fedc4-118">Conversion operators are always unary, and you always use `CType` as the operator you are defining.</span></span>  
   
-## <a name="declaration-syntax"></a>Sintaxe da Declaração  
- A sintaxe para declarar um procedimento de operador é da seguinte maneira:  
+## <a name="declaration-syntax"></a><span data-ttu-id="fedc4-119">Sintaxe da Declaração</span><span class="sxs-lookup"><span data-stu-id="fedc4-119">Declaration Syntax</span></span>  
+ <span data-ttu-id="fedc4-120">A sintaxe para declarar um procedimento de operador é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="fedc4-120">The syntax for declaring an operator procedure is as follows:</span></span>  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*  
+ <span data-ttu-id="fedc4-121">`Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operando1*`[,`*operand2* `]) As` *tipo de dados* </span><span class="sxs-lookup"><span data-stu-id="fedc4-121">`Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*</span></span>  
   
  `' Statements of the operator procedure.`  
   
  `End Operator`  
   
- Você usa o `Widening` ou `Narrowing` palavra-chave somente em um operador de conversão de tipo. O símbolo do operador é sempre [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para um operador de conversão de tipo.  
+ <span data-ttu-id="fedc4-122">Você usa o `Widening` ou `Narrowing` palavra-chave somente em um operador de conversão de tipo.</span><span class="sxs-lookup"><span data-stu-id="fedc4-122">You use the `Widening` or `Narrowing` keyword only on a type conversion operator.</span></span> <span data-ttu-id="fedc4-123">O símbolo do operador é sempre [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para um operador de conversão de tipo.</span><span class="sxs-lookup"><span data-stu-id="fedc4-123">The operator symbol is always [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) for a type conversion operator.</span></span>  
   
- Você declara dois operandos para definir um operador binário, e declara um operando para definir um operador unário, incluindo um operador de conversão de tipo. Todos os operandos devem ser declarados `ByVal`.  
+ <span data-ttu-id="fedc4-124">Você declara dois operandos para definir um operador binário, e declara um operando para definir um operador unário, incluindo um operador de conversão de tipo.</span><span class="sxs-lookup"><span data-stu-id="fedc4-124">You declare two operands to define a binary operator, and you declare one operand to define a unary operator, including a type conversion operator.</span></span> <span data-ttu-id="fedc4-125">Todos os operandos devem ser declarados `ByVal`.</span><span class="sxs-lookup"><span data-stu-id="fedc4-125">All operands must be declared `ByVal`.</span></span>  
   
- Você declara cada operando da mesma maneira que você declarar parâmetros para [subprocedimentos](./sub-procedures.md).  
+ <span data-ttu-id="fedc4-126">Você declara cada operando da mesma maneira que você declarar parâmetros para [subprocedimentos](./sub-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="fedc4-126">You declare each operand the same way you declare parameters for [Sub Procedures](./sub-procedures.md).</span></span>  
   
-### <a name="data-type"></a>Tipo de dados  
- Como você está definindo um operador em uma classe ou estrutura que você definiu, pelo menos um dos operandos deve ser do tipo de dados da classe ou estrutura. Para um operador de conversão de tipo, o operando ou o tipo de retorno deve ser do tipo de dados da classe ou estrutura.  
+### <a name="data-type"></a><span data-ttu-id="fedc4-127">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="fedc4-127">Data Type</span></span>  
+ <span data-ttu-id="fedc4-128">Como você está definindo um operador em uma classe ou estrutura que você definiu, pelo menos um dos operandos deve ser do tipo de dados da classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-128">Because you are defining an operator on a class or structure you have defined, at least one of the operands must be of the data type of that class or structure.</span></span> <span data-ttu-id="fedc4-129">Para um operador de conversão de tipo, o operando ou o tipo de retorno deve ser do tipo de dados da classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="fedc4-129">For a type conversion operator, either the operand or the return type must be of the data type of the class or structure.</span></span>  
   
- Para obter mais detalhes, consulte [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ <span data-ttu-id="fedc4-130">Para obter mais detalhes, consulte [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).</span><span class="sxs-lookup"><span data-stu-id="fedc4-130">For more details, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
-## <a name="calling-syntax"></a>Sintaxe de chamada  
- Você chamar um procedimento de operador implicitamente usando o símbolo do operador em uma expressão. Você fornece os operandos da mesma maneira que faria para operadores predefinidos.  
+## <a name="calling-syntax"></a><span data-ttu-id="fedc4-131">A sintaxe de chamada</span><span class="sxs-lookup"><span data-stu-id="fedc4-131">Calling Syntax</span></span>  
+ <span data-ttu-id="fedc4-132">Você chamar um procedimento de operador implicitamente, usando o símbolo do operador em uma expressão.</span><span class="sxs-lookup"><span data-stu-id="fedc4-132">You invoke an operator procedure implicitly by using the operator symbol in an expression.</span></span> <span data-ttu-id="fedc4-133">Você fornece os operandos da mesma maneira que faria para operadores predefinidos.</span><span class="sxs-lookup"><span data-stu-id="fedc4-133">You supply the operands the same way you do for predefined operators.</span></span>  
   
- A sintaxe para chamar um procedimento de operador implícito é da seguinte maneira:  
+ <span data-ttu-id="fedc4-134">A sintaxe para chamar um procedimento de operador implícito é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="fedc4-134">The syntax for an implicit call to an operator procedure is as follows:</span></span>  
   
- `Dim testStruct As`  *structurename*  
+ <span data-ttu-id="fedc4-135">`Dim testStruct As`  *structurename*</span><span class="sxs-lookup"><span data-stu-id="fedc4-135">`Dim testStruct As`  *structurename*</span></span>  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol    *  `10`  
+ <span data-ttu-id="fedc4-136">`Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`</span><span class="sxs-lookup"><span data-stu-id="fedc4-136">`Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`</span></span>  
   
-### <a name="illustration-of-declaration-and-call"></a>Ilustração da declaração e chamada  
- A seguinte estrutura armazena um valor inteiro assinado de 128 bits como as partes superiores e inferiores. Ele define o `+` para adicionar dois `veryLong` valores e gerar um resultante `veryLong` valor.  
+### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="fedc4-137">Ilustração da declaração e chamada</span><span class="sxs-lookup"><span data-stu-id="fedc4-137">Illustration of Declaration and Call</span></span>  
+ <span data-ttu-id="fedc4-138">A seguinte estrutura armazena um valor inteiro assinado de 128 bits como as partes superiores e inferiores constituintes.</span><span class="sxs-lookup"><span data-stu-id="fedc4-138">The following structure stores a signed 128-bit integer value as the constituent high-order and low-order parts.</span></span> <span data-ttu-id="fedc4-139">Define o `+` para adicionar dois `veryLong` valores e gerar um resultante `veryLong` valor.</span><span class="sxs-lookup"><span data-stu-id="fedc4-139">It defines the `+` operator to add two `veryLong` values and generate a resulting `veryLong` value.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#23;](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
- O exemplo a seguir mostra uma chamada típica para o `+` operador definido em `veryLong`.  
+ <span data-ttu-id="fedc4-140">O exemplo a seguir mostra uma chamada típica para o `+` operador definido em `veryLong`.</span><span class="sxs-lookup"><span data-stu-id="fedc4-140">The following example shows a typical call to the `+` operator defined on `veryLong`.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#24;](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Para obter mais informações e exemplos, consulte [sobrecarga de operador no Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ <span data-ttu-id="fedc4-141">Para obter mais informações e exemplos, consulte [Sobrecarga de operador no Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).</span><span class="sxs-lookup"><span data-stu-id="fedc4-141">For more information and examples, see [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos](./index.md)   
- [Procedimentos Sub](./sub-procedures.md)   
- [Procedimentos de função](./function-procedures.md)   
- [Procedimentos de propriedade](./property-procedures.md)   
- [Argumentos e parâmetros de procedimento](./procedure-parameters-and-arguments.md)   
- [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Como: definir um operador](./how-to-define-an-operator.md)   
- [Como: definir um operador de conversão](./how-to-define-a-conversion-operator.md)   
- [Como: chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)   
- [Como usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a><span data-ttu-id="fedc4-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fedc4-142">See Also</span></span>  
+ [<span data-ttu-id="fedc4-143">Procedimentos</span><span class="sxs-lookup"><span data-stu-id="fedc4-143">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="fedc4-144">Subprocedimentos</span><span class="sxs-lookup"><span data-stu-id="fedc4-144">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="fedc4-145">Procedimentos de Função</span><span class="sxs-lookup"><span data-stu-id="fedc4-145">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="fedc4-146">Procedimentos de Propriedade</span><span class="sxs-lookup"><span data-stu-id="fedc4-146">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="fedc4-147">Parâmetros e Argumentos de Procedimento</span><span class="sxs-lookup"><span data-stu-id="fedc4-147">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="fedc4-148">Instrução Operator</span><span class="sxs-lookup"><span data-stu-id="fedc4-148">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="fedc4-149">Como definir um operador</span><span class="sxs-lookup"><span data-stu-id="fedc4-149">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
+ [<span data-ttu-id="fedc4-150">Como definir um operador de conversão</span><span class="sxs-lookup"><span data-stu-id="fedc4-150">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="fedc4-151">Como chamar um procedimento de operador</span><span class="sxs-lookup"><span data-stu-id="fedc4-151">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)  
+ [<span data-ttu-id="fedc4-152">Como usar uma classe que define operadores</span><span class="sxs-lookup"><span data-stu-id="fedc4-152">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
