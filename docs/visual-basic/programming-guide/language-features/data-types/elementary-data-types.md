@@ -1,47 +1,30 @@
 ---
-title: Tipos de dados elementares (Visual Basic) | Documentos do Microsoft
+title: Tipos de dados elementares (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- elementary data types
+- elementary data types [Visual Basic]
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e99954c86345076f5702212e35a51d2c4b25deca
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 732d367a86d16897d26e0613289440084c7ac442
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="elementary-data-types-visual-basic"></a>Tipos de dados elementares (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Fornece um conjunto predefinido de tipos de dados, que pode ser usada para muitos de seus elementos de programação. Esta seção descreve esses tipos e como usá-los.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Fornece um conjunto predefinido de tipos de dados, que pode ser usada para muitos dos elementos de programação. Esta seção descreve esses tipos e como usá-los.  
   
 > [!NOTE]
->  Cada tipo de dados elementar no Visual Basic é suportado por uma estrutura ou uma classe que está na <xref:System>namespace.</xref:System> O compilador usa cada palavra-chave do tipo de dados como um alias para a estrutura subjacente ou classe. Por exemplo, declarar uma variável usando a palavra reservada `Byte` é o mesmo que declará-la usando o nome totalmente qualificado de estrutura <xref:System.Byte?displayProperty=fullName>.</xref:System.Byte?displayProperty=fullName>  
+>  Cada tipo de dados elementares no Visual Basic é suportado por uma estrutura ou uma classe que está no <xref:System> namespace. O compilador usa cada palavra-chave do tipo de dados como um alias para a classe ou estrutura subjacente. Por exemplo, declarar uma variável usando a palavra reservada `Byte` é o mesmo que declará-la usando o nome totalmente qualificado de estrutura <xref:System.Byte?displayProperty=nameWithType>.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipos de Dados Numéricos](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
@@ -55,7 +38,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Apresenta o [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipos de dados e descreve como usá-los.  
+ Apresenta o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados e descreve como usá-los.  
   
  [Tipos de Dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Fornece uma visão geral dos tipos de dados elementares fornecidos pelo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].
+ Fornece uma visão geral dos tipos de dados elementares fornecidos pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].

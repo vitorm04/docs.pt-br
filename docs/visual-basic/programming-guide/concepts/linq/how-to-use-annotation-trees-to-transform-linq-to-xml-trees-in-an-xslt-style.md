@@ -1,30 +1,22 @@
 ---
-title: "Como: Use anotações para transformar árvores LINQ to XML em um estilo XSLT (Visual Basic) | Documentos do Microsoft"
+title: "Como: Use anotações para transformar árvores LINQ to XML em um estilo XSLT (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17324fb6dca653aa3c15e3bad2fcc5ac35828bef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Como: Use anotações para transformar árvores LINQ to XML em um estilo XSLT (Visual Basic)
 As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.  
@@ -35,7 +27,7 @@ As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Para qualquer nó de texto, pode haver qualquer número de `<b>` filho e elementos de `<i>` . Essa abordagem estende a várias outras situações: por exemplo, páginas que podem conter vários elementos filho, como parágrafos normais, parágrafos com marcadores e bitmaps. As células em uma tabela podem conter texto, soltar para baixo, listas ou bitmaps. Uma das principais características de documento XML é centralizado em que você não sabe qual elemento filho qualquer elemento específico terá.  
+ Para qualquer nó de texto, pode haver qualquer número de `<b>` filho e elementos de `<i>` . Essa abordagem se estende para um número de outras situações: como páginas que podem conter uma variedade de elementos filho, como bitmaps, parágrafos com marcadores e parágrafos normais. As células em uma tabela podem conter texto, soltar para baixo, listas ou bitmaps. Uma das principais características de documento XML é centralizado em que você não sabe qual elemento filho qualquer elemento específico terá.  
   
  Se você deseja transformar elementos em uma árvore onde você não sabe necessariamente muito sobre os filhos dos elementos que você deseja transformar, então essa abordagem que usa anotações é uma abordagem eficiente.  
   
@@ -47,13 +39,13 @@ As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.
   
  Em detalhes, a abordagem consiste de:  
   
--   Execute uma ou mais consultas LINQ to XML que retornam conjunto de elementos que você deseja transformar de uma forma para outra. Para cada elemento na consulta, adicione um novo <xref:System.Xml.Linq.XElement>objeto como uma anotação ao elemento.</xref:System.Xml.Linq.XElement> Esse novo elemento substituirá o elemento anotado em novo, transformada árvore. Esse código é simples para escrever, como demonstrado por exemplo.  
+-   Execute uma ou mais consultas LINQ to XML que retornam conjunto de elementos que você deseja transformar de uma forma para outra. Para cada elemento na consulta, adicione um novo objeto de <xref:System.Xml.Linq.XElement> como uma anotação ao elemento. Esse novo elemento substituirá o elemento anotado em novo, transformada árvore. Esse código é simples para escrever, como demonstrado por exemplo.  
   
 -   O novo elemento que é adicionado como uma anotação pode conter novos nós filho; pode formar uma subárvore com qualquer forma desejada.  
   
 -   Há uma regra especial: Se um nó filho do novo elemento é em um namespace diferente, um namespace que é compensada essa finalidade (nesse exemplo, o namespace é `http://www.microsoft.com/LinqToXmlTransform/2007`), então esse elemento filho não são copiados para a nova árvore. Em vez disso, se o namespace é o namespace especial mencionado acima, e o nome local do elemento é `ApplyTransforms`, então os nós filho do elemento na árvore de origem são iterados, e copiados para a nova árvore (exceto para elementos filhos detalhados ele é transformadas de acordo com essas regras).  
   
--   Isso é um pouco análogo à especificação de transformações em XSL. A consulta selecionar um conjunto de nós é análoga a expressão XPath para um modelo. O código para criar o novo <xref:System.Xml.Linq.XElement>que é salvo como uma anotação é análoga ao construtor de sequência em XSL e o `ApplyTransforms` elemento é análogo a função para o `xsl:apply-templates` elemento XSL.</xref:System.Xml.Linq.XElement>  
+-   Isso é um pouco análogo à especificação de transformações em XSL. A consulta selecionar um conjunto de nós é análoga a expressão XPath para um modelo. O código para criar um novo <xref:System.Xml.Linq.XElement> que é salvo como uma anotação é análogo ao construtor de sequência em XSL, e o elemento de `ApplyTransforms` são análogos a função para o elemento de `xsl:apply-templates` em XSL.  
   
 -   Uma vantagem para tomar essa abordagem - porque você formula consultas, você está sempre escrevendo consultas na árvore de origem inalterados. Você não precisará se preocupar com sobre como alterações na árvore de consultas que você está escrevendo.  
   

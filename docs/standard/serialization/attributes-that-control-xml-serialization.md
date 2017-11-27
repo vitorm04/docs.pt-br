@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - classes, serializing
 - XmlSerializer class, serializing
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 8524b93bda3646170edbe1e962797e37aefc11b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b13a6f57cc0d6793e0bb5915c855a67355ed7a92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atributos que controlam a serialização XML
 Você pode aplicar os atributos na tabela a seguir para classes e membros de classe para controlar a maneira pela qual o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa uma instância da classe. Para entender como esses atributos controlam a serialização XML, consulte [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
@@ -59,10 +53,9 @@ Você pode aplicar os atributos na tabela a seguir para classes e membros de cla
  Para controlar a serialização XML de SOAP codificada, consulte [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
- [Como especificar um nome de elemento alternativo para um fluxo XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [Como especificar um nome de elemento alternativo para um fluxo XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

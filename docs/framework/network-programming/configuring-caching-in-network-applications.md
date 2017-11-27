@@ -7,24 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- cache [.NET Framework], configuring
+helpviewer_keywords: cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ea36db46b79c890b0b26cfc39e2aab5bc0e88e03
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3c06c05f2d5102d1822aa11c81f2814090e10ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="configuring-caching-in-network-applications"></a>Configurando o cache em aplicativos de rede
 Para configurar o cache, é necessário especificar uma política de cache no nível do aplicativo ou da <xref:System.Net.WebRequest>. Os tópicos a seguir fornecem exemplos de código que demonstram como configurar aplicativos e solicitações para usar o cache.  
@@ -40,8 +33,7 @@ Para configurar o cache, é necessário especificar uma política de cache no n�
  Também é possível configurar uma política de cache usando os arquivos de configuração do aplicativo ou do computador. Para obter mais informações, consulte &#124; Elemento [\<requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)   
- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Política de cache](../../../docs/framework/network-programming/cache-policy.md)  
+ [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
-

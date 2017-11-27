@@ -1,36 +1,19 @@
 ---
-title: "Sem memória (erro de tempo de execução do Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Sem memória (erro de tempo de execução do Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID7
+f1_keywords: vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 47c535d96c9adacaa9ae6380e51efd863369a56a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: c6a312f1e8761a7c8ec08546ddc06688a55e0bdb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a>Sem memória (erro de tempo de execução do Visual Basic)
 Foi necessária que a disponível mais memória.  
@@ -39,7 +22,7 @@ Foi necessária que a disponível mais memória.
   
 1.  Feche os aplicativos desnecessários, documentos ou arquivos de origem que estão abertos.  
   
-2.  Quebre módulos ou procedimentos grandes em menores.  
+2.  Quebra de módulos ou procedimentos grande em partes menores.  
   
 3.  Elimine encerrar-e-programas residentes.  
   

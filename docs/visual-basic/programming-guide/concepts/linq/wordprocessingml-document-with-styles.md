@@ -1,36 +1,32 @@
 ---
-title: Documento de WordprocessingML com Styles2 | Documentos do Microsoft
+title: Documento de WordprocessingML com Styles2
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ae85aef4ab2f5e1be5b62b038f5f09faf29480e3
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ac833daca2e4ba12d61a1ee3c9526b7368baee74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento de WordprocessingML com estilos
 Um documentos mais complicados de WordprocessingML têm os parágrafos que são formatados com estilos.  
   
  Quaisquer notas sobre a composição de documentos de WordprocessingML são úteis. Documentos de WordprocessingML são armazenados em pacotes. Pacotes têm várias partes (partes tem um significado explícito quando usadas no contexto de pacotes; essencialmente, as partes são arquivos que são fechados juntos para entender um pacote). Se um documento contém os parágrafos que são formatados com estilos, haverá uma parte do documento que contém os parágrafos que possuem os estilos aplicados a eles. Também haverá uma parte de estilo que contém os estilos que são referenciados pelo documento.  
   
- Para acessar pacotes, é importante que você faz isso com relações entre as partes, em vez de usar um caminho arbitrário. Esse problema está além do escopo de manipulação de conteúdo em um tutorial de documento de WordprocessingML, mas os programas de exemplo incluídos neste tutorial demonstram a abordagem correta.  
+ Para acessar pacotes, é importante que você faz isso com relações entre as partes, em vez de usar um caminho arbitrário. Esse problema está além do escopo do tutorial de Manipulando conteúdo em um documento WordprocessingML, mas os programas de exemplo que são incluídos neste tutorial demonstram a abordagem correta.  
   
 ## <a name="a-document-that-uses-styles"></a>Um documento que use estilos  
- O exemplo de WordML apresentado a [forma de documentos de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tópico é muito simples. O seguinte documento é mais complicado: Tem os parágrafos que são formatados com estilos. A maneira mais fácil para ver o XML que compõem um documento Office Open XML é executar o [exemplo que partes documento saídas Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ O exemplo WordML apresentados a [forma de documentos de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tópico é muito simples. O seguinte documento é mais complicado: Tem os parágrafos que são formatados com estilos. A maneira mais fácil para ver o XML que compõe um documento do Office Open XML é executar o [exemplo que partes documento saídas Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
   
  No seguinte documento, o primeiro parágrafo tem o estilo `Heading1`. Há um número de parágrafos que têm o estilo padrão. Há também um número de parágrafos que têm o estilo `Code`. Devido a essa complexidade relativa, este é um documento mais interessante para analisar com LINQ to XML.  
   
@@ -151,4 +147,4 @@ Um documentos mais complicados de WordprocessingML têm os parágrafos que são 
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhes do Office Open XML WordprocessingML documentos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ [Detalhes do Office abrir documentos de WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

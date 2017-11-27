@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, about XML serialization
 - ICollection interface, serializing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 858d973ae48ee217f73f293c1ed30c4c3f91cb29
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 13afeecc979cab9719ffa063f78ff91c866262d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introducing-xml-serialization"></a>Apresentando a serialização XML
 A serialização é o processo de conversão de um objeto em um formulário que possa ser prontamente transportado. Por exemplo, você pode serializar um objeto e transportá-lo pela Internet usando HTTP entre um cliente e um servidor. Na outra extremidade, a desserialização reconstrói o objeto a partir do fluxo.  
@@ -181,14 +178,13 @@ public string MyToken;
 -   <xref:System.Xml.Serialization.XmlRootAttribute>  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Serialization.XmlSerializer>   
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.IO.FileStream>   
- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [Serialização Binária](../../../docs/standard/serialization/binary-serialization.md)   
- [Serialização](../../../docs/standard/serialization/index.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [Exemplos de serialização XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.IO.FileStream>  
+ [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Serialização binária](../../../docs/standard/serialization/binary-serialization.md)  
+ [Serialização](../../../docs/standard/serialization/index.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [Exemplos de serialização XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativado quando um thread tenta introduzir uma anulação assíncrona em outro thread. Anulações de thread síncronas não ativam o MDA `asynchronousThreadAbort`.
@@ -43,7 +36,7 @@ O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativ
  Os sintomas podem variar muito devido à aleatoriedade inerente ao problema.
 
 ## <a name="cause"></a>Causa
- O código em um thread chamou o método <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> em um thread de destino para introduzir uma anulação de thread assíncrona. A anulação de thread é assíncrona porque o código que faz a chamada a <xref:System.Threading.Thread.Abort%2A> está em execução em um thread diferente do que o destino da operação de anulação. As anulações de thread síncronas não devem causar um problema porque o thread que executa a <xref:System.Threading.Thread.Abort%2A> deveria ter feito isso somente em um ponto de verificação seguro em que o estado do aplicativo é consistente.
+ O código em um thread chamou o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> em um thread de destino para introduzir uma anulação de thread assíncrona. A anulação de thread é assíncrona porque o código que faz a chamada a <xref:System.Threading.Thread.Abort%2A> está em execução em um thread diferente do que o destino da operação de anulação. As anulações de thread síncronas não devem causar um problema porque o thread que executa a <xref:System.Threading.Thread.Abort%2A> deveria ter feito isso somente em um ponto de verificação seguro em que o estado do aplicativo é consistente.
 
  Anulações de thread assíncrono apresentam um problema porque são processadas em pontos imprevisíveis na execução do thread de destino. Para evitar isso, o código escrito para ser executado em um thread que pode ser anulado dessa maneira precisará manipular uma <xref:System.Threading.ThreadAbortException> em quase todas as linhas de código, tomando cuidado para colocar os dados do aplicativo novamente em um estado consistente. Não é realista esperar que o código seja escrito com esse problema em mente ou escrever um código que proteja contra todas as circunstâncias possíveis.
 
@@ -87,4 +80,3 @@ void FireMda()
 
 ## <a name="see-also"></a>Consulte também
  <xref:System.Threading.Thread> [Diagnosticando erros com assistentes para depuração gerenciada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

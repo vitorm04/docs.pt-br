@@ -1,42 +1,24 @@
 ---
 title: Funcionalidades da linguagem do Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3594e6622e8bc76839a15739a31ad27d17de8455
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-features"></a>Funcionalidades da linguagem do Visual Basic
 Os tópicos a seguir apresentam e discutem os componentes essenciais do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Como acontece com qualquer linguagem de programação moderna, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dá suporte a muitos constructos de programação e elementos de linguagem comuns.  
@@ -109,4 +91,3 @@ Os tópicos a seguir apresentam e discutem os componentes essenciais do [!INCLUD
   
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
  Fornece informações de referência sobre vários aspectos da programação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
-

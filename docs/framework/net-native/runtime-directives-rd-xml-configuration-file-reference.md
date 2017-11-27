@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68f1e217cdc6433270ecb8afe4149d2e37e4b014
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de configuração XML que especifica se os elementos do programa designado estão disponíveis para reflexão. Aqui está um exemplo de um arquivo de diretivas de tempo de execução:  
@@ -53,41 +51,41 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
  [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
- . . .   
+ . . .  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1]   
+ . . .  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ . . .  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
+ . . .  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
- . . .   
+ . . .  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0:M]  
@@ -97,36 +95,36 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
  [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
- . . .   
+ . . .  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1]   
+ . . .  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ . . .  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
+ . . .  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]  
- . . .   
+ . . .  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
@@ -167,11 +165,11 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
   
 -   `Serialize`. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.  
   
--   `DataContractSerializer`. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   `DataContractSerializer`. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   `DataContractJsonSerializer`. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   `DataContractJsonSerializer`. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   `XmlSerializer`. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.  
+-   `XmlSerializer`. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.  
   
 -   `MarshalObject`. Controla a política de marshaling de tipos de referência do WinRT e COM.  
   
@@ -396,7 +394,7 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
   
 -   Se o método for genérico, os tipos pelos quais o método é instanciado são marcados com a política `Browse`.  
   
--   O método pode ser invocado por `MethodInfo.Invoke`, e a criação de delegado é possibilitada por <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=fullName>.  
+-   O método pode ser invocado por `MethodInfo.Invoke`, e a criação de delegado é possibilitada por <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.  
   
  Aplicar a política `Dynamic` a um campo envolve as seguintes alterações de política:  
   
@@ -417,7 +415,7 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
   
  Aplicar a política `Activation` a um método envolve as seguintes alterações de política:  
   
--   O construtor pode ser invocado pelos métodos <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=fullName> e <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>. Para métodos, a política `Activation` afeta apenas construtores.  
+-   O construtor pode ser invocado pelos métodos <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> e <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>. Para métodos, a política `Activation` afeta apenas construtores.  
   
  Aplicar a política `Activation` a um campo não tem efeito.  
   
@@ -470,6 +468,5 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
  Para obter mais informações, consulte a seção "Diferenças em serializadores" em [Migrar seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-

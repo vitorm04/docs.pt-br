@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - asynchronous client sockets
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1a159f2a761acd85e963f34d3d9622b43b3a3aeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="asynchronous-client-socket-example"></a>Exemplo de soquete de cliente assíncrono
 O programa de exemplo a seguir cria um cliente que se conecta a um servidor. O cliente é criado com um soquete assíncrono e, portanto, a execução do aplicativo cliente não é suspensa enquanto o servidor retorna uma resposta. O aplicativo envia uma cadeia de caracteres ao servidor e, em seguida, exibe a cadeia de caracteres retornada pelo servidor no console.  
@@ -66,12 +63,12 @@ Public Class AsynchronousClient
     Public Shared Sub Main()  
         ' Establish the remote endpoint for the socket.  
         ' For this example use local machine.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim remoteEP As New IPEndPoint(ipAddress, port)  
   
         ' Create a TCP/IP socket.  
-        Dim client As New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)  
+        Dim client As New Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp)  
   
         ' Connect to the remote endpoint.  
         client.BeginConnect(remoteEP, New AsyncCallback(AddressOf ConnectCallback), client)  
@@ -206,12 +203,12 @@ public class AsynchronousClient {
             // Establish the remote endpoint for the socket.  
             // The name of the   
             // remote device is "host.contoso.com".  
-            IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");  
+            IPHostEntry ipHostInfo = Dns.GetHostEntry("host.contoso.com");  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);  
   
             // Create a TCP/IP socket.  
-            Socket client = new Socket(AddressFamily.InterNetwork,  
+            Socket client = new Socket(ipAddress.AddressFamily,  
                 SocketType.Stream, ProtocolType.Tcp);  
   
             // Connect to the remote endpoint.  
@@ -334,7 +331,6 @@ public class AsynchronousClient {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de soquete de servidor assíncrono](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Usando um soquete de servidor síncrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
+ [Exemplo de soquete de servidor assíncrono](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [Usando um soquete de servidor síncrona](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
  [Exemplos de código de soquete](../../../docs/framework/network-programming/socket-code-examples.md)
-

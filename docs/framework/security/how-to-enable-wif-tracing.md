@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 516e065bc360538e7b62807a5492c0c6c9d16e69
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-wif-tracing"></a>Como habilitar o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -112,4 +110,3 @@ ms.lasthandoff: 08/21/2017
 2.  Feche a janela do navegador e, em seguida, navegue até a pasta **C:\logs**. Abra o arquivo **C:\logs\WIF.xml** usando um editor de texto.  
   
 3.  Inspecione o arquivo **WIF.xml** e verifique se ele contém entradas começando com **\<E2ETraceEvent>**. Esses rastreamentos conterão elementos **\<TraceRecord>** com descrições para a atividade rastreada, tais como **Validando SecurityToken**.
-

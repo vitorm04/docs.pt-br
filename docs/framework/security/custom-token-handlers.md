@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="custom-token-handlers"></a>Manipuladores de token personalizados
 Este tópico aborda os manipuladores de token no WIF e como eles são usados para processar tokens. O tópico também aborda o que é necessário para criar manipuladores de token personalizados para os tipos de token sem suporte por padrão no WIF.  
@@ -93,4 +91,3 @@ Este tópico aborda os manipuladores de token no WIF e como eles são usados par
         </identityConfiguration>  
     </system.identityModel>  
     ```
-

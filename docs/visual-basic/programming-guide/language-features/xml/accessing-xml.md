@@ -1,16 +1,13 @@
 ---
-title: Acessando XML no Visual Basic | Documentos do Microsoft
+title: Acessando XML no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
 - Visual Basic code, XML
@@ -18,33 +15,19 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 215f057f0b4d884369aad53cbbdbb98f240b56c4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 79c7b8a94731e151a803a041d91dd1e240ddeb97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Acessando XML no Visual Basic
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]fornece propriedades de eixo XML para acessar e navegar [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] estruturas. Essas propriedades usam uma sintaxe especial para que você possa acessar elementos e atributos, especificando os nomes XML.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece propriedades de eixo XML para acessar e navegar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] estruturas. Essas propriedades usam uma sintaxe especial para que você possa acessar os elementos e atributos, especificando os nomes XML.  
   
- A tabela a seguir lista os recursos de linguagem que permitem que você acesse elementos e atributos no XML [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ A tabela a seguir lista os recursos de linguagem que permitem acessar elementos e atributos no XML [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ### <a name="xml-axis-properties"></a>Propriedades do eixo XML  
   
@@ -52,8 +35,8 @@ ms.lasthandoff: 03/13/2017
 |--------------------------|-------------|-----------------|  
 |*eixo filho*|`contact.<phone>`|Obtém todos os `phone` elementos que são elementos filho do `contact` elemento.|  
 |*eixo de atributo*|`phone.@type`|Obtém todos os `type` atributos do `phone` elemento.|  
-|*eixo descendente*|`contacts...<name>`|Obtém todos os `name` elementos do `contacts` elemento, independentemente da profundidade da hierarquia que ocorrem.|  
-|*indexador de extensão*|`contacts...<name>(0)`|Obtém o primeiro `name` elemento da sequência.|  
+|*eixo descendente*|`contacts...<name>`|Obtém todos os `name` elementos do `contacts` elemento, independentemente da profundidade da hierarquia que eles ocorrem.|  
+|*indexador de extensão*|`contacts...<name>(0)`|Obtém a primeira `name` elemento da sequência.|  
 |*value*|`contacts...<name>.Value`|Obtém a representação de cadeia de caracteres do primeiro objeto na sequência, ou `Nothing` se a sequência for vazia.|  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -73,14 +56,14 @@ ms.lasthandoff: 03/13/2017
  [Propriedades do Eixo XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
  Fornece links para seções que descrevem as várias propriedades de acesso do XML.  
   
- [Visão geral de LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Fornece uma introdução ao uso [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] no Visual Basic.  
+ [Visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ Fornece uma introdução ao uso [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no Visual Basic.  
   
  [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  Fornece uma introdução ao uso de literais XML no Visual Basic.  
   
  [Manipulando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Fornece links para seções sobre como carregar e modificar XML no Visual Basic.  
+ Fornece links para seções sobre como carregar e modificar o XML no Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Fornece links para seções que descrevem como usar [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] no Visual Basic.
+ Fornece links para seções que descrevem como usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no Visual Basic.

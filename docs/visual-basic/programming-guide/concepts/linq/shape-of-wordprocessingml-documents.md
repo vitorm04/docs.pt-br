@@ -1,27 +1,22 @@
 ---
-title: Forma de documentos de WordprocessingML (Visual Basic) | Documentos do Microsoft
+title: Forma de documentos de WordprocessingML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1982110ccf01f52ace20db6985d7329407357d8
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: f29ed78062337c7036ada2405fa610ff1f883feb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma de documentos de WordprocessingML (Visual Basic)
 Este tópico apresenta a forma XML de um documento WordprocessingML.  
@@ -69,7 +64,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  A maneira mais fácil para ver o conteúdo de um documento de WordprocessingML no formato XML é criar um usando Microsoft Word, salvá-lo e executar o seguinte programa que lê XML no console.  
   
- Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -102,12 +97,11 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Introduzindo os formatos de arquivo do Office (2007) Open XML](http://go.microsoft.com/fwlink/?LinkId=98093)  
+ [Apresentando os formatos de arquivo do Office (2007) Open XML](http://go.microsoft.com/fwlink/?LinkId=98093)  
   
  [Visão geral de WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)  
   
- [Office 2003: Página de Download de esquemas de referência XML](http://go.microsoft.com/fwlink/?LinkId=98095)  
+ [Office 2003: página de download de esquemas de referência XML](http://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

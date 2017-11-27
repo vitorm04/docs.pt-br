@@ -1,6 +1,6 @@
 ---
 title: Valores (F#)
-description: Valores (F#)
+description: "Saiba como os valores em F # são quantidades que têm um tipo específico."
 keywords: "visual f#, f#, programação funcional"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 31d28a5ff1bb7d9a88949bcaee895a405a5e7014
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="values"></a>Valores
 
 Os valores em F# podem ser números inteiros ou de ponto flutuante, caracteres ou texto, listas, sequências, matrizes, tuplas, uniões discriminadas, registros, tipos de classe ou valores de função.
@@ -50,11 +49,10 @@ Você pode atribuir um valor inicial para uma variável mutável usando a palavr
 
 |Título|Descrição|
 |-----|-----------|
-|[Associações let](../functions/let-bindings.md)|Fornece informações sobre como usar a palavra-chave `let` para associar nomes a valores e funções.|
+|[Associações let](../functions/let-bindings.md)|Fornece informações sobre como usar o `let` palavra-chave para associar nomes de valores e funções.|
 |[Funções](../functions/index.md)|Fornece uma visão geral das funções em F#.|
 
 ## <a name="see-also"></a>Consulte também
 [Valores Nulos](null-Values.md)
 
 [Referência da Linguagem F#](../index.md)
-

@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d1730e5af0ee3f837f46071992c80e81b118af1e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 466e3faed9b2877671ca265afdb613607b12f0de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Passagem de NAT usando IPv6 e Teredo
 Foram feitas melhorias que dão suporte para a passagem de NAT (conversão de endereços de rede). Essas alterações são projetadas para uso com o IPv6 e Teredo, mas elas também são aplicáveis a outras tecnologias de túnel IP. Essas melhorias afetam as classes no <xref:System.Net> e nos namespaces relacionados.  
@@ -47,25 +41,24 @@ Foram feitas melhorias que dão suporte para a passagem de NAT (conversão de en
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>Melhorias para suporte a passagem NAT e Teredo  
  Descreve as melhorias adicionadas aos namespaces <xref:System.Net>, <xref:System.Net.NetworkInformation> e <xref:System.Net.Sockets> para dar suporte à passagem NAT usando o IPv6 e o Teredo.  
   
- Vários métodos foram adicionados à classe <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> para obter a lista de endereços IP unicast no host. O método <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> começa uma solicitação assíncrona para recuperar a tabela de endereços IP unicast estáveis no computador local. O método <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> envia uma solicitação assíncrona pendente para recuperar a tabela de endereços IP unicast estáveis no computador local. O método <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> é uma solicitação síncrona para recuperar a tabela de endereços IP unicast estáveis no computador local, aguardando até que a tabela de endereços se estabilize se necessário.  
+ Vários métodos foram adicionados à classe <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> para obter a lista de endereços IP unicast no host. O método <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> começa uma solicitação assíncrona para recuperar a tabela de endereços IP unicast estáveis no computador local. O método <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> envia uma solicitação assíncrona pendente para recuperar a tabela de endereços IP unicast estáveis no computador local. O método <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> é uma solicitação síncrona para recuperar a tabela de endereços IP unicast estáveis no computador local, aguardando até que a tabela de endereços se estabilize se necessário.  
   
- A propriedade <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> pode ser usada para determinar se um <xref:System.Net.IPAddress> é um endereço Teredo IPv6.  
+ A propriedade <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> pode ser usada para determinar se um <xref:System.Net.IPAddress> é um endereço Teredo IPv6.  
   
  Usar esses novos métodos de classe <xref:System.Net.NetworkInformation.IPGlobalProperties> em combinação com a propriedade <xref:System.Net.IPAddress.IsIPv6Teredo%2A> permite que um aplicativo localize facilmente o endereço Teredo. Um aplicativo normalmente só precisará saber o endereço Teredo local se ele estiver se comunicando essas informações para aplicativos remotos. Por exemplo, um aplicativo ponto a ponto pode enviar todos os seus endereços IPv6 em um servidor de emparelhamento que pode, em seguida, encaminhá-las a outros pares para permitir a comunicação direta.  
   
- Um aplicativo normalmente deve definir seu serviço de escuta para escutar em <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> em vez de no endereço Teredo local. Portanto, se um par ou cliente remoto tem uma rota IPv6 direta para o host do serviço de escuta, o cliente ou par pode se conectar diretamente usando IPv6 e não precisa usar o Teredo para fazer túnel de pacotes.  
+ Um aplicativo normalmente deve definir seu serviço de escuta para escutar em <xref:System.Net.IPAddress.IPv6Any?displayProperty=nameWithType> em vez de no endereço Teredo local. Portanto, se um par ou cliente remoto tem uma rota IPv6 direta para o host do serviço de escuta, o cliente ou par pode se conectar diretamente usando IPv6 e não precisa usar o Teredo para fazer túnel de pacotes.  
   
- Para aplicativos de TCP, a classe <xref:System.Net.Sockets.TcpListener?displayProperty=fullName> tem um método <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> para habilitar a passagem NAT. Para aplicativos de UDP, a classe <xref:System.Net.Sockets.UdpClient?displayProperty=fullName> tem um método <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> para habilitar a passagem NAT.  
+ Para aplicativos de TCP, a classe <xref:System.Net.Sockets.TcpListener?displayProperty=nameWithType> tem um método <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> para habilitar a passagem NAT. Para aplicativos de UDP, a classe <xref:System.Net.Sockets.UdpClient?displayProperty=nameWithType> tem um método <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> para habilitar a passagem NAT.  
   
- Para aplicativos que usam o <xref:System.Net.Sockets.Socket?displayProperty=fullName> e classes relacionadas, os métodos <xref:System.Net.Sockets.Socket.GetSocketOption%2A> e <xref:System.Net.Sockets.Socket.SetSocketOption%2A> podem ser usados com a opção de soquete <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=fullName> para consultar, habilitar ou desabilitar a passagem NAT.  
+ Para aplicativos que usam o <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> e classes relacionadas, os métodos <xref:System.Net.Sockets.Socket.GetSocketOption%2A> e <xref:System.Net.Sockets.Socket.SetSocketOption%2A> podem ser usados com a opção de soquete <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> para consultar, habilitar ou desabilitar a passagem NAT.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName>   
- <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=fullName>   
- <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=fullName>   
- <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A?displayProperty=fullName>   
- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>   
- <xref:System.Net.Sockets.Socket.SetIPProtectionLevel%2A?displayProperty=fullName>   
- <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A?displayProperty=fullName>   
- <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A?displayProperty=fullName>
-
+ <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>  
+ <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>  
+ <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>  
+ <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.Socket.SetIPProtectionLevel%2A?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A?displayProperty=nameWithType>

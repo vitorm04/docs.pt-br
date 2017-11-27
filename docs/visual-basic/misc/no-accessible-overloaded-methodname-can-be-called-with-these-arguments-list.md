@@ -1,45 +1,28 @@
 ---
-title: "Não acessível &quot;&lt;methodname&gt;&quot; pode ser chamado com esses argumentos: &lt;lista&gt; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não acessível sobrecarregado &#39; &lt;methodname&gt;&#39; pode ser chamado com estes argumentos: &lt;lista&gt;"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAmbiguousCall_ExactMatch2
+f1_keywords: vbrAmbiguousCall_ExactMatch2
 ms.assetid: 78d4c7ed-5e18-47d4-948d-fa8b24e47214
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 549804a802332163dc7cc2729a5d85e3a0feeb95
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 01f8cb116d301c590756e5b85f217a4c47311ac4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com esses argumentos: &lt;lista&gt;
+# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a>Não acessível sobrecarregado &#39; &lt;methodname&gt;&#39; pode ser chamado com estes argumentos: &lt;lista&gt;
 Um método sobrecarregado é chamado, mas nenhum método pode ser combinado com a lista de argumentos fornecidos.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Corresponde a lista de argumentos contra a sobrecarga que você pretende chamar.  
+-   Corresponde à lista de argumento em relação a sobrecarga que você pretende chamar.  
   
--   Ajuste a lista de argumentos para que a assinatura coincida com a sobrecarga.  
+-   Ajuste a lista de argumentos para que a assinatura corresponde a sobrecarga.  
   
 ## <a name="see-also"></a>Consulte também  
  [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
