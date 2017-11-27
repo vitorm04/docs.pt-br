@@ -1,53 +1,35 @@
 ---
-title: "Métodos de &quot;System. Nullable (Of T)&quot; não podem ser usados como operandos do operador &quot;AddressOf&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Métodos de &#39; System. Nullable (Of T) &#39; não podem ser usados como operandos da &#39; AddressOf &#39; operador"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32126
 - bc32126
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC32126
+helpviewer_keywords: BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b57f303cd4b18af87c3d82ba801af764e9628213
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ce0e9bc6abd71f22e3f6c3486ef40493e74d820f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Métodos de 'System. Nullable (Of T)' não podem ser usados como operandos do operador 'AddressOf'
-Uma instrução usa o `AddressOf` operador com um operando que representa um procedimento do <xref:System.Nullable%601>estrutura.</xref:System.Nullable%601>  
+# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Métodos de &#39; System. Nullable (Of T) &#39; não podem ser usados como operandos da &#39; AddressOf &#39; operador
+Usa uma instrução de `AddressOf` operador com um operando que representa um procedimento com o <xref:System.Nullable%601> estrutura.  
   
  **ID do erro:** BC32126  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Substitua o nome do procedimento no `AddressOf` cláusula com um operando que não seja um membro do <xref:System.Nullable%601>.</xref:System.Nullable%601>  
+-   Substitua o nome do procedimento no `AddressOf` cláusula com um operando que não é um membro de <xref:System.Nullable%601>.  
   
--   Escrever uma classe que quebra o método de <xref:System.Nullable%601>que você deseja usar.</xref:System.Nullable%601> No exemplo a seguir, o `NullableWrapper` classe define um novo método chamado `GetValueOrDefault`. Como esse novo método não é um membro do <xref:System.Nullable%601>, ele pode ser aplicado a `nullInstance`, uma instância de um tipo anulável, para formar um argumento para `AddressOf`.</xref:System.Nullable%601>  
+-   Escrever uma classe que quebra o método de <xref:System.Nullable%601> que você deseja usar. No exemplo a seguir, o `NullableWrapper` classe define um novo método chamado `GetValueOrDefault`. Como esse novo método não é um membro de <xref:System.Nullable%601>, ele pode ser aplicado a `nullInstance`, uma instância de um tipo anulável, para formar um argumento para `AddressOf`.  
   
 ```vb  
 Module Module1  
@@ -86,7 +68,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Nullable%601>   
- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Tipos de valor anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
+ <xref:System.Nullable%601>  
+ [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

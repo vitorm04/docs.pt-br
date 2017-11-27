@@ -1,46 +1,29 @@
 ---
-title: "Instrução Option Infer | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Instrução Option Infer"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
 - vb.Infer
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic], declaring
-- Option Infer statement
-- Infer keyword
-- declaring variables, inferred
+- Option Infer statement [Visual Basic]
+- Infer keyword [Visual Basic]
+- declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6074ad44b94c80f275af562edef2dcd1173c0c3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="option-infer-statement"></a>Instrução Option Infer
 Permite o uso de inferência de tipo local ao declarar variáveis.  
@@ -65,33 +48,33 @@ Option Infer { On | Off }
   
  Na ilustração a seguir, `Option Infer` está ativado. A variável na declaração `Dim someVar = 2` é declarada como um inteiro por inferência de tipo.  
   
- ![Exibição do IntelliSense da declaração.](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![Exibição do IntelliSense da declaração. ] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 IntelliSense quando o Option Infer está ligado  
   
- Na ilustração a seguir, o `Option Infer` está desativado. A variável na declaração `Dim someVar = 2` é declarada como um `Object` por inferência de tipo. Neste exemplo, o **Option Strict** configuração é definida como **Off** no [página de compilação, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+ Na ilustração a seguir, o `Option Infer` está desativado. A variável na declaração `Dim someVar = 2` é declarada como um `Object` por inferência de tipo. Neste exemplo, o **Option Strict** configuração é definida como **Off** no [página de compilação, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Exibição do IntelliSense da declaração.](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![Exibição do IntelliSense da declaração. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 IntelliSense quando o Option Infer está desligado  
   
 > [!NOTE]
->  Quando uma variável é declarada como um `Object`, o tipo de tempo de execução pode ser alterado enquanto o programa está sendo executado. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]executa operações chamadas *conversão boxing* e *unboxing* para converter entre um `Object` e um tipo de valor, o que torna a execução mais lenta. Para obter informações sobre conversões boxing e unboxing, consulte o [especificação da linguagem Visual Basic](../../../visual-basic/reference/language-specification.md).  
+>  Quando uma variável é declarada como um `Object`, o tipo de tempo de execução pode ser alterado enquanto o programa está sendo executado. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]executa operações chamadas *boxing* e *unboxing* para converter entre um `Object` e um tipo de valor, o que torna a execução mais lenta. Para obter informações sobre conversão boxing e unboxing, consulte o [especificação da linguagem Visual Basic](../../../visual-basic/reference/language-specification/index.md).
   
  A inferência de tipo aplica-se no nível do procedimento e não fora de um procedimento em uma classe, estrutura, módulo ou interface.  
   
- Para obter informações adicionais, consulte [inferência de tipo Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Para obter mais informações, consulte [inferência de tipo Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Quando uma Instrução Option Infer Não Está Presente  
- Se o código-fonte não contém um `Option Infer` instrução, o **Option Infer** definição no [página de compilação, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) é usado. Se o compilador de linha de comando é usado, o [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) opção de compilador é usada.  
+ Se o código-fonte não contém um `Option Infer` instrução, o **Option Infer** definição no [página de compilação, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) é usado. Se o compilador de linha de comando é usado, o [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) opção de compilador é usada.  
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Para definir o Option Infer no IDE  
   
-1.  Em **Solution Explorer**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [NIB: Gerenciando propriedades do projeto com o Project Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [NIB: Gerenciando propriedades de projeto com o Designer de projeto](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
 2.  Clique na guia **Compilar**.  
   
-3.  Defina o valor no **Option infer** caixa.  
+3.  Definir o valor no **Option infer** caixa.  
   
- Quando você cria um novo projeto, o **Option Infer** definição no **compilar** for definido como o **Option Infer** definindo no **padrões de VB** caixa de diálogo. Para acessar o **padrões de VB** caixa de diálogo de **ferramentas** menu, clique em **opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração inicial padrão em **padrões de VB** é `On`.  
+ Quando você cria um novo projeto, o **Option Infer** definição no **compilar** for definido como o **Option Infer** definindo no **padrões VB** caixa de diálogo. Para acessar o **padrões VB** caixa de diálogo de **ferramentas** menu, clique em **opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração inicial padrão na **padrões VB** é `On`.  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Para definir o Option Infer na linha de comando  
   
@@ -110,19 +93,19 @@ IntelliSense quando o Option Infer está desligado
 ## <a name="example"></a>Exemplo  
  Os exemplos a seguir demonstram como a instrução `Option Infer` habilita a inferência de tipo local.  
   
- [!code-vb[VbVbalrTypeInference n º&6;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o tipo de tempo de execução pode ser diferente quando uma variável é identificada como um `Object`.  
   
- [!code-vb[VbVbalrTypeInference n º&11;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Inferência de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Caixa de diálogo de opções de padrões, projetos do Visual Basic](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)   
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
+ [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
+ [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [Conversão boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

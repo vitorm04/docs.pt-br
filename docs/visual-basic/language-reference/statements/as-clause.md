@@ -1,46 +1,28 @@
 ---
-title: "Cláusula as (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Cláusula As (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.as
-dev_langs:
-- VB
+f1_keywords: vb.as
 helpviewer_keywords:
 - constraints, Visual Basic generic types
-- As keyword, statement syntax
-- As keyword
+- As keyword [Visual Basic], statement syntax
+- As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 122766c356586e90d9727b5e6978596e52bb1757
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 73f0a59dae5e95fe8e4be49afeebd2c29f8a1a7f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="as-clause-visual-basic"></a>Cláusula As (Visual Basic)
-Apresenta um `As` cláusula que identifica um tipo de dados em uma instrução de declaração ou uma lista de restrição em um parâmetro de tipo genérico.  
+Apresenta um `As` cláusula que identifica um tipo de dados em uma instrução de declaração ou uma lista de restrições em um parâmetro de tipo genérico.  
   
 ## <a name="remarks"></a>Comentários  
  O `As` palavra-chave pode ser usada nesses contextos:  
@@ -61,9 +43,9 @@ Apresenta um `As` cláusula que identifica um tipo de dados em uma instrução d
   
  [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Para... Próximas instruções](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Para... Instruções de Avançar](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [Para cada um... Próximas instruções](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Para cada um... Instruções de Avançar](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -84,9 +66,9 @@ Apresenta um `As` cláusula que identifica um tipo de dados em uma instrução d
  [Try... Catch... Instruções finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: criar uma nova variável](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)   
- [Tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Declaração de variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)   
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
+ [Como criar uma nova variável](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
+ [Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Declaração de Variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

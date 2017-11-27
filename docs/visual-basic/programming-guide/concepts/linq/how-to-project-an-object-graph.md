@@ -1,32 +1,28 @@
 ---
-title: "Como: projeto de um gráfico de objeto (Visual Basic) | Documentos do Microsoft"
+title: "Como: projeto de um gráfico de objeto (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e634d2520e5b40d6ccb8ac11ce47f726980ef8cd
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 946c09035c2856203c544c6e5378624989b0e96b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Como: projeto de um gráfico de objeto (Visual Basic)
-Este tópico ilustra como projeto, ou preencher, um objeto gráfico XML.  
+Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir preenche um objeto gráfico com o `Address`, `PurchaseOrder`, e `PurchaseOrderItem` classes do [arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) documento XML.  
+ O código a seguir preenche um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML de [Arquivo XML de exemplo: pedido de compra típico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Class Address  
@@ -307,10 +303,9 @@ Sub Main()
     }  
     Console.WriteLine(purchOrder)  
 End Sub  
-  
 ```  
   
- Neste exemplo, o resultado do [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] consulta é retornada como um <xref:System.Collections.Generic.IEnumerable%601>de `PurchaseOrderItem`.</xref:System.Collections.Generic.IEnumerable%601> Os itens do `PurchaseOrder` classe são do tipo <xref:System.Collections.Generic.IEnumerable%601>de `PurchaseOrderItem`.</xref:System.Collections.Generic.IEnumerable%601> O código usa o <xref:System.Linq.Enumerable.ToList%2A>método de extensão para criar um <xref:System.Collections.Generic.List%601>conjunto de resultados da consulta.</xref:System.Collections.Generic.List%601> </xref:System.Linq.Enumerable.ToList%2A>  
+ Nesse exemplo, o resultado da consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é retornado como um <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. Os itens na classe de `PurchaseOrder` são do tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`. O código usa o método de extensão de <xref:System.Linq.Enumerable.ToList%2A> para criar uma coleção de <xref:System.Collections.Generic.List%601> dos resultados da consulta.  
   
  O exemplo produz a seguinte saída:  
   
@@ -352,6 +347,6 @@ ShipDate: 5/21/1999
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
- <xref:System.Linq.Enumerable.ToList%2A></xref:System.Linq.Enumerable.ToList%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
+ <xref:System.Linq.Enumerable.ToList%2A>  
  [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

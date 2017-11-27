@@ -1,39 +1,20 @@
 ---
 title: Objetos (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- objects [Visual Basic]
+helpviewer_keywords: objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98503c5764690d6dea90bf46a229e9ee2fd81df7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 61c0967521acda8ac3bf8147b817afcf4ca51165
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="objects-visual-basic"></a>Objetos (Visual Basic)
 Este tópico fornece links para outros tópicos que documentam os objetos de tempo de execução do Visual Basic e que contêm tabelas dos procedimentos, das propriedades e dos eventos dos seus membros.  
@@ -70,6 +51,5 @@ Este tópico fornece links para outros tópicos que documentam os objetos de tem
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Fornece métodos e propriedades para analisar arquivos de texto estruturado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)   
+ [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../../visual-basic/index.md)
-

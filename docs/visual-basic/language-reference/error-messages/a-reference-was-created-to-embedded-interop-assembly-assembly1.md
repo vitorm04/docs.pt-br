@@ -1,10 +1,9 @@
 ---
-title: "Foi criada uma referência ao assembly de interoperabilidade inserido &quot;&lt;assembly1&gt;&quot;devido a uma referência indireta ao assembly do assembly&quot;&lt;assembly2&gt;&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Foi criada uma referência ao assembly de interoperabilidade inserido &#39; &lt;assembly1&gt;&#39; devido a uma referência indireta ao assembly do assembly &#39;&lt; assembly2&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc40059
@@ -13,45 +12,31 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6d7f7936eb09b3dcf1355125adb40141068a927c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bc2fbb044fc839aa24abf3dc1ea864457efb0653
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Foi criada uma referência ao assembly de interoperabilidade inserido '&lt;assembly1&gt;'devido a uma referência indireta ao assembly do assembly'&lt;assembly2&gt;'
-Foi criada uma referência ao assembly de interoperabilidade inserido '\<assembly1 >' devido a uma referência indireta ao assembly do assembly '\<assembly2 >'. Considere alterar a propriedade 'Inserir tipos Interop' em um assembly.  
+# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Foi criada uma referência ao assembly de interoperabilidade inserido &#39; &lt;assembly1&gt;&#39; devido a uma referência indireta ao assembly do assembly &#39;&lt; assembly2&gt;&#39;
+Foi criada uma referência para o assembly de interoperabilidade inserido '\<assembly1>' devido a uma referência indireta a esse assembly do assembly '\<assembly2>'. Considere alterar a propriedade 'Inserir Tipos de Interoperabilidade' em um dos assemblies.  
   
- Você adicionou uma referência a um assembly (assembly1) que tem o `Embed Interop Types` definida como `True`. Isso instrui o compilador a inserir informações de tipo de interoperabilidade do assembly. No entanto, o compilador não pode inserir informações de tipo de interoperabilidade do assembly porque outro assembly que você referenciou (assembly2) também faz referência a esse assembly (assembly1) e tem o `Embed Interop Types` definida como `False`.  
+ Você adicionou uma referência a um assembly (assembly1) que tem a propriedade `Embed Interop Types` definida como `True`. Isso instrui o compilador a inserir informações de tipo de interoperabilidade desse assembly. No entanto, o compilador não pode inserir informações de tipo de interoperabilidade desse assembly, porque outro assembly que você referenciou (assembly2) também faz referência a esse assembly (assembly1) e tem a propriedade `Embed Interop Types` definida como `False`.  
   
 > [!NOTE]
->  Definindo o `Embed Interop Types` propriedade em uma referência de assembly para `True` é equivalente à referência do assembly usando o `/link` opção para o compilador de linha de comando.  
+>  Configurar a propriedade `Embed Interop Types` em uma referência de assembly como `True` é equivalente à referenciar o assembly usando a opção `/link` para o compilador de linha de comando.  
   
  **ID do erro:** BC40059  
   
 ### <a name="to-address-this-warning"></a>Para resolver este aviso  
   
--   Para inserir informações de tipo de interoperabilidade para os dois assemblies, definir o `Embed Interop Types` propriedade em todas as referências a assembly1 para `True`.  
+-   Para inserir informações de tipo de interoperabilidade para os dois assemblies, defina a propriedade `Embed Interop Types` em todas as referências ao assembly1 como `True`.  
   
--   Para remover o aviso, você pode definir o `Embed Interop Types` propriedade assembly1 para `False`. Nesse caso, as informações de tipo de interoperabilidade são fornecidas por um assembly de interoperabilidade primária (PIA).  
+-   Para remover o aviso, você pode definir a propriedade `Embed Interop Types` do assembly1 como `False`. Nesse caso, as informações de tipo de interoperabilidade são fornecidas por um assembly de interoperabilidade primária (PIA).  
   
 ## <a name="see-also"></a>Consulte também  
- [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)   
- [Programação com Assemblies de interoperabilidade primários](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)
+ [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)  
+ [Programando com assemblies de interoperabilidade primários](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)

@@ -1,45 +1,27 @@
 ---
-title: "Instrução Error | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Instrução Error"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.error
-dev_langs:
-- VB
+f1_keywords: vb.error
 helpviewer_keywords:
-- Error statement, syntax
-- Error statement
-- Error keyword
-- run-time errors, codes
+- Error statement [Visual Basic], syntax
+- Error statement [Visual Basic]
+- Error keyword [Visual Basic]
+- run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96ba2a726dc315dca227b4836aa987e1283cc39b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3cd3245fd3e9e62b1b6443e9787c97808a0d179d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="error-statement"></a>Instrução Error
 Simula a ocorrência de um erro.  
@@ -62,13 +44,13 @@ Error errornumber
 |Propriedade|Valor|  
 |--------------|-----------|  
 |`Number`|Valor especificado como argumento para `Error` instrução. Pode ser qualquer número de erro válido.|  
-|`Source`|Nome do projeto atual do Visual Basic.|  
-|`Description`|Expressão correspondente para o valor de retorno de cadeia de caracteres de `Error` função especificado `Number`, se houver essa cadeia de caracteres. Se a cadeia de caracteres não existir, `Description` contém uma cadeia de caracteres de comprimento zero ("").|  
+|`Source`|Nome do projeto do Visual Basic atual.|  
+|`Description`|Expressão correspondente para o valor de retorno de cadeia de caracteres de `Error` função especificado `Number`, se existir essa cadeia de caracteres. Se a cadeia de caracteres não existir, `Description` contém uma cadeia de caracteres de comprimento zero ("").|  
 |`HelpFile`|A unidade totalmente qualificada, o caminho e o nome do arquivo de Ajuda do Visual Basic apropriado.|  
-|`HelpContext`|ID de contexto para o erro correspondente de arquivos de ajuda Visual Basic a `Number` propriedade.|  
+|`HelpContext`|ID de contexto para o erro correspondente de arquivos de ajuda Visual Basic o `Number` propriedade.|  
 |`LastDLLError`|Zero.|  
   
- Se nenhum manipulador de erro existe, ou se nenhum está ativado, uma mensagem de erro é criada e exibida a partir de `Err` propriedades do objeto.  
+ Se nenhum manipulador de erro existe, ou se nenhum estiver habilitado, uma mensagem de erro é criada e exibida a partir de `Err` propriedades do objeto.  
   
 > [!NOTE]
 >  Alguns aplicativos de host do Visual Basic não podem criar objetos. Consulte a documentação do aplicativo host para determinar se ele pode criar classes e objetos.  
@@ -84,12 +66,12 @@ Error 11   ' Simulate the "Division by zero" error.
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A></xref:Microsoft.VisualBasic.ErrObject.Clear%2A>   
- <xref:Microsoft.VisualBasic.Information.Err%2A></xref:Microsoft.VisualBasic.Information.Err%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A></xref:Microsoft.VisualBasic.ErrObject.Raise%2A>   
- [Instrução On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)   
- [Instrução Resume](../../../visual-basic/language-reference/statements/resume-statement.md)   
+ <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
+ <xref:Microsoft.VisualBasic.Information.Err%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
+ [Instrução On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [Instrução Resume](../../../visual-basic/language-reference/statements/resume-statement.md)  
  [Mensagens de Erro](../../../visual-basic/language-reference/error-messages/index.md)

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, overriding
 - serialization, overriding
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: bd06d53ff1d28b3b3ec9937b4c3efdb1d784c481
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 66bb538dcdc5ad0df200eb02ee315716e160160a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Como especificar um nome de elemento alternativo para um fluxo XML
 [Exemplo de código](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
@@ -105,12 +102,11 @@ public class SerializeOverride()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Serialization.XmlElementAttribute>   
- <xref:System.Xml.Serialization.XmlAttributes>   
- <xref:System.Xml.Serialization.XmlAttributeOverrides>   
- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)   
- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlElementAttribute>  
+ <xref:System.Xml.Serialization.XmlAttributes>  
+ <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+ [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+ [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
  [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-
