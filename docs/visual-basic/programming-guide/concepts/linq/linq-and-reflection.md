@@ -1,38 +1,30 @@
 ---
-title: "LINQ e reflexão (Visual Basic) | Documentos do Microsoft"
+title: "LINQ e reflexão (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2548a731-0cd8-48de-8d48-664d1b7d7526
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bb7c14893b429941af49c921616537cf70189c2e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3382744662703f1b250d76524e1934e8fd682d1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-and-reflection-visual-basic"></a>LINQ e reflexão (Visual Basic)
-O .NET Framework classe biblioteca APIs de reflexão pode ser usado para examinar os metadados em um assembly do .NET e criar coleções de tipos, membros de tipo, parâmetros e assim por diante que estão nesse assembly. Porque essas coleções suportam genérica `IEnumerable` interface, podem ser consultados usando LINQ.  
+# <a name="linq-and-reflection-visual-basic"></a><span data-ttu-id="bceba-102">LINQ e reflexão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bceba-102">LINQ and Reflection (Visual Basic)</span></span>
+<span data-ttu-id="bceba-103">As APIs de reflexão da biblioteca de classes .NET Framework podem ser usadas para examinar os metadados no assembly .NET e criar coleções de tipos, membros de tipo, parâmetros e assim por diante que estão nesse assembly.</span><span class="sxs-lookup"><span data-stu-id="bceba-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="bceba-104">Como essas coleções dão suporte à interface `IEnumerable` genéricas, elas podem ser consultadas usando LINQ.</span><span class="sxs-lookup"><span data-stu-id="bceba-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  
   
- Esta seção contém os tópicos a seguir:  
+ <span data-ttu-id="bceba-105">Esta seção contém os tópicos a seguir:</span><span class="sxs-lookup"><span data-stu-id="bceba-105">This section contains the following topics:</span></span>  
   
- [Como: consultar metadados de um Assembly com reflexão (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- Mostra como usar o LINQ com reflexão.  
+ [<span data-ttu-id="bceba-106">Como: consultar metadados de um Assembly com reflexão (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bceba-106">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ <span data-ttu-id="bceba-107">Mostra como usar o LINQ com reflexão.</span><span class="sxs-lookup"><span data-stu-id="bceba-107">Shows how to use LINQ with reflection.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="bceba-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bceba-108">See Also</span></span>  
+ [<span data-ttu-id="bceba-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bceba-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

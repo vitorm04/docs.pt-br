@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cd72ac27b2aaaf2afe7e2c307fcc1b40cde841da
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 656a8de6a508d6834fd1866df14ec5378d4f84af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-download-files-with-ftp"></a>Como baixar arquivos com FTP
-Este exemplo mostra como baixar um arquivo de um servidor FTP.  
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="9fbf2-102">Como baixar arquivos com FTP</span><span class="sxs-lookup"><span data-stu-id="9fbf2-102">How to: Download Files with FTP</span></span>
+<span data-ttu-id="9fbf2-103">Este exemplo mostra como baixar um arquivo de um servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="9fbf2-103">This sample shows how to download a file from an FTP server.</span></span>  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a><span data-ttu-id="9fbf2-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9fbf2-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -63,12 +57,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Este exemplo requer:  
+## <a name="compiling-the-code"></a><span data-ttu-id="9fbf2-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="9fbf2-105">Compiling the Code</span></span>  
+ <span data-ttu-id="9fbf2-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="9fbf2-106">This example requires:</span></span>  
   
--   Referências ao namespace **System.Net**.  
+-   <span data-ttu-id="9fbf2-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="9fbf2-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a><span data-ttu-id="9fbf2-108">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="9fbf2-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework
-
+## <a name="net-framework-security"></a><span data-ttu-id="9fbf2-109">Segurança do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9fbf2-109">.NET Framework Security</span></span>

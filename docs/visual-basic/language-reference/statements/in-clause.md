@@ -1,55 +1,36 @@
 ---
-title: "Na cláusula (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Cláusula In (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.In
-dev_langs:
-- VB
-helpviewer_keywords:
-- In keyword [Visual Basic]
+f1_keywords: vb.In
+helpviewer_keywords: In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5466cec5ab96ad2f043115b708e829369ffdef8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 347c1268ccb29238a0845b57d5d0f88f1ca27d59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="in-clause-visual-basic"></a>Cláusula In (Visual Basic)
-Especifica o grupo que a variável de loop deve atravessar em uma `For Each` loop, ou especifica uma coleção para consulta em uma `From`, `Join`, ou `Group Join` cláusula.  
+# <a name="in-clause-visual-basic"></a><span data-ttu-id="b1714-102">Cláusula In (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1714-102">In Clause (Visual Basic)</span></span>
+<span data-ttu-id="b1714-103">Especifica o grupo que a variável de loop deve percorrer em uma `For Each` loop ou especifica a coleção a consulta em uma `From`, `Join`, ou `Group Join` cláusula.</span><span class="sxs-lookup"><span data-stu-id="b1714-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `In` palavra-chave pode ser usada nos seguintes contextos:  
+## <a name="remarks"></a><span data-ttu-id="b1714-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="b1714-104">Remarks</span></span>  
+ <span data-ttu-id="b1714-105">O `In` palavra-chave pode ser usada nos seguintes contextos:</span><span class="sxs-lookup"><span data-stu-id="b1714-105">The `In` keyword can be used in the following contexts:</span></span>  
   
- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="b1714-106">Instrução For Each...Next</span><span class="sxs-lookup"><span data-stu-id="b1714-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="b1714-107">Cláusula From</span><span class="sxs-lookup"><span data-stu-id="b1714-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [Cláusula Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="b1714-108">Cláusula Join</span><span class="sxs-lookup"><span data-stu-id="b1714-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [Cláusula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="b1714-109">Cláusula Group Join</span><span class="sxs-lookup"><span data-stu-id="b1714-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="b1714-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b1714-110">See Also</span></span>  
+ [<span data-ttu-id="b1714-111">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="b1714-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

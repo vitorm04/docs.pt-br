@@ -1,54 +1,35 @@
 ---
-title: Classe Statement (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: "Instrução Class (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Class
-dev_langs:
-- VB
+f1_keywords: vb.Class
 helpviewer_keywords:
 - class modules
-- Class statement
+- Class statement [Visual Basic]
 - classes [Visual Basic], fields
-- fields, of classes
-- class types, class statements
+- fields [Visual Basic], of classes
+- class types [Visual Basic], class statements
 - classes [Visual Basic], creating
 - classes [Visual Basic], data members
-- data members, of classes
+- data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b922cca0438ca5b43d24ab367090b27572c2fd30
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="class-statement-visual-basic"></a>Instrução Class (Visual Basic)
-Declara o nome de uma classe e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a classe.  
+# <a name="class-statement-visual-basic"></a><span data-ttu-id="d4d65-102">Instrução Class (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4d65-102">Class Statement (Visual Basic)</span></span>
+<span data-ttu-id="d4d65-103">Declara o nome de uma classe e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-103">Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="d4d65-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d4d65-104">Syntax</span></span>  
   
 ```  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
@@ -59,86 +40,85 @@ Class name [ ( Of typelist ) ]
 End Class  
 ```  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="d4d65-105">Partes</span><span class="sxs-lookup"><span data-stu-id="d4d65-105">Parts</span></span>  
   
-|Termo|Definição|  
+|<span data-ttu-id="d4d65-106">Termo</span><span class="sxs-lookup"><span data-stu-id="d4d65-106">Term</span></span>|<span data-ttu-id="d4d65-107">Definição</span><span class="sxs-lookup"><span data-stu-id="d4d65-107">Definition</span></span>|  
 |---|---|  
-|`attributelist`|Opcional. Consulte [lista atributo](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional. Pode ser uma das seguintes opções:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Opcional. Consulte [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Opcional. Consulte [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Opcional. Indica uma definição parcial da classe. Consulte [parcial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Necessário. Nome dessa classe. Consulte [nomes de elemento declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Opcional. Especifica que esta é uma classe genérica.|  
-|`typelist`|Necessário se você usar o [de](../../../visual-basic/language-reference/statements/of-clause.md) palavra-chave. Lista de parâmetros de tipo para essa classe. Consulte [digite lista](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Opcional. Indica que essa classe herda os membros de outra classe. Consulte [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Necessário se você usar o `Inherits` instrução. O nome da classe da qual essa classe deriva.|  
-|`Implements`|Opcional. Indica que essa classe implementa os membros de uma ou mais interfaces. Consulte [implementa a instrução](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Necessário se você usar o `Implements` instrução. Os nomes das interfaces que essa classe implementa.|  
-|`statements`|Opcional. Instruções que definem os membros dessa classe.|  
-|`End Class`|Necessário. Encerra o `Class` definição.|  
+|`attributelist`|<span data-ttu-id="d4d65-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-108">Optional.</span></span> <span data-ttu-id="d4d65-109">Consulte [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="d4d65-110">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-110">Optional.</span></span> <span data-ttu-id="d4d65-111">Pode ser um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="d4d65-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="d4d65-112">-   [Público](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="d4d65-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="d4d65-113">-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="d4d65-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="d4d65-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="d4d65-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="d4d65-115">-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="d4d65-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="d4d65-116">Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="d4d65-117">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-117">Optional.</span></span> <span data-ttu-id="d4d65-118">Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`MustInherit`|<span data-ttu-id="d4d65-119">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-119">Optional.</span></span> <span data-ttu-id="d4d65-120">Consulte [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-120">See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span></span>|  
+|`NotInheritable`|<span data-ttu-id="d4d65-121">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-121">Optional.</span></span> <span data-ttu-id="d4d65-122">Consulte [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-122">See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).</span></span>|  
+|`Partial`|<span data-ttu-id="d4d65-123">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-123">Optional.</span></span> <span data-ttu-id="d4d65-124">Indica uma definição parcial da classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-124">Indicates a partial definition of the class.</span></span> <span data-ttu-id="d4d65-125">Consulte [parcial](../../../visual-basic/language-reference/modifiers/partial.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-125">See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).</span></span>|  
+|`name`|<span data-ttu-id="d4d65-126">Necessário.</span><span class="sxs-lookup"><span data-stu-id="d4d65-126">Required.</span></span> <span data-ttu-id="d4d65-127">Nome desta classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-127">Name of this class.</span></span> <span data-ttu-id="d4d65-128">Consulte [declarado nomes de elemento](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-128">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Of`|<span data-ttu-id="d4d65-129">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-129">Optional.</span></span> <span data-ttu-id="d4d65-130">Especifica que esta é uma classe genérica.</span><span class="sxs-lookup"><span data-stu-id="d4d65-130">Specifies that this is a generic class.</span></span>|  
+|`typelist`|<span data-ttu-id="d4d65-131">Necessário se você usar o [de](../../../visual-basic/language-reference/statements/of-clause.md) palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="d4d65-131">Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="d4d65-132">Lista de parâmetros de tipo para esta classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-132">List of type parameters for this class.</span></span> <span data-ttu-id="d4d65-133">Consulte [digite lista](../../../visual-basic/language-reference/statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-133">See [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>|  
+|`Inherits`|<span data-ttu-id="d4d65-134">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-134">Optional.</span></span> <span data-ttu-id="d4d65-135">Indica que esta classe herda os membros de outra classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-135">Indicates that this class inherits the members of another class.</span></span> <span data-ttu-id="d4d65-136">Consulte [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-136">See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).</span></span>|  
+|`classname`|<span data-ttu-id="d4d65-137">Necessário se você usar o `Inherits` instrução.</span><span class="sxs-lookup"><span data-stu-id="d4d65-137">Required if you use the `Inherits` statement.</span></span> <span data-ttu-id="d4d65-138">O nome da classe da qual essa classe deriva.</span><span class="sxs-lookup"><span data-stu-id="d4d65-138">The name of the class from which this class derives.</span></span>|  
+|`Implements`|<span data-ttu-id="d4d65-139">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-139">Optional.</span></span> <span data-ttu-id="d4d65-140">Indica que esta classe implementa os membros de uma ou mais interfaces.</span><span class="sxs-lookup"><span data-stu-id="d4d65-140">Indicates that this class implements the members of one or more interfaces.</span></span> <span data-ttu-id="d4d65-141">Consulte [implementa a instrução](../../../visual-basic/language-reference/statements/implements-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-141">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>|  
+|`interfacenames`|<span data-ttu-id="d4d65-142">Necessário se você usar o `Implements` instrução.</span><span class="sxs-lookup"><span data-stu-id="d4d65-142">Required if you use the `Implements` statement.</span></span> <span data-ttu-id="d4d65-143">Os nomes das interfaces que essa classe implementa.</span><span class="sxs-lookup"><span data-stu-id="d4d65-143">The names of the interfaces this class implements.</span></span>|  
+|`statements`|<span data-ttu-id="d4d65-144">Opcional.</span><span class="sxs-lookup"><span data-stu-id="d4d65-144">Optional.</span></span> <span data-ttu-id="d4d65-145">Instruções que definem os membros dessa classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-145">Statements which define the members of this class.</span></span>|  
+|`End Class`|<span data-ttu-id="d4d65-146">Necessário.</span><span class="sxs-lookup"><span data-stu-id="d4d65-146">Required.</span></span> <span data-ttu-id="d4d65-147">Encerra o `Class` definição.</span><span class="sxs-lookup"><span data-stu-id="d4d65-147">Terminates the `Class` definition.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- Um `Class` instrução define um novo tipo de dados. A *classe* é um componente fundamental da programação orientada a objeto (OOP). Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+## <a name="remarks"></a><span data-ttu-id="d4d65-148">Comentários</span><span class="sxs-lookup"><span data-stu-id="d4d65-148">Remarks</span></span>  
+ <span data-ttu-id="d4d65-149">Um `Class` instrução define um novo tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="d4d65-149">A `Class` statement defines a new data type.</span></span> <span data-ttu-id="d4d65-150">Um *classe* é um componente fundamental de programação orientada a objeto (OOP).</span><span class="sxs-lookup"><span data-stu-id="d4d65-150">A *class* is a fundamental building block of object-oriented programming (OOP).</span></span> <span data-ttu-id="d4d65-151">Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-151">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
- Você pode usar `Class` somente no nível de namespace ou módulo. Isso significa que o *contexto declaração* para uma classe deve ser um arquivo fonte, namespace, classe, estrutura, módulo ou interface e não pode ser um procedimento ou bloco. Para obter mais informações, consulte [contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="d4d65-152">Você pode usar `Class` apenas no nível de namespace ou módulo.</span><span class="sxs-lookup"><span data-stu-id="d4d65-152">You can use `Class` only at namespace or module level.</span></span> <span data-ttu-id="d4d65-153">Isso significa que o *contexto declaração* para uma classe deve ser um arquivo de origem, namespace, classe, estrutura, módulo ou interface e não pode ser um procedimento ou bloco.</span><span class="sxs-lookup"><span data-stu-id="d4d65-153">This means the *declaration context* for a class must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block.</span></span> <span data-ttu-id="d4d65-154">Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-154">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Cada instância de uma classe tem um tempo de vida independente de todas as outras instâncias. Esse tempo de vida começa quando ela é criada por um [novo operador](../../../visual-basic/language-reference/operators/new-operator.md) cláusula ou por uma função como <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.</xref:Microsoft.VisualBasic.Interaction.CreateObject%2A> Ele termina quando todas as variáveis apontam para a instância tem sido definidas a [nada](../../../visual-basic/language-reference/nothing.md) ou instâncias de outras classes.  
+ <span data-ttu-id="d4d65-155">Cada instância de uma classe tem um tempo de vida independente de todas as outras instâncias.</span><span class="sxs-lookup"><span data-stu-id="d4d65-155">Each instance of a class has a lifetime independent of all other instances.</span></span> <span data-ttu-id="d4d65-156">Esse tempo de vida começa quando ela é criada por um [novo operador](../../../visual-basic/language-reference/operators/new-operator.md) cláusula ou por uma função, como <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="d4d65-156">This lifetime begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause or by a function such as <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.</span></span> <span data-ttu-id="d4d65-157">Termina quando todas as variáveis que apontam para a instância tem sido definidas a [nada](../../../visual-basic/language-reference/nothing.md) ou instâncias de outras classes.</span><span class="sxs-lookup"><span data-stu-id="d4d65-157">It ends when all variables pointing to the instance have been set to [Nothing](../../../visual-basic/language-reference/nothing.md) or to instances of other classes.</span></span>  
   
- Classes padrão [amigo](../../../visual-basic/language-reference/modifiers/friend.md) acesso. Você pode ajustar os níveis de acesso com os modificadores de acesso. Para obter mais informações, consulte [níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ <span data-ttu-id="d4d65-158">Classes de padrão para [Friend](../../../visual-basic/language-reference/modifiers/friend.md) acesso.</span><span class="sxs-lookup"><span data-stu-id="d4d65-158">Classes default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access.</span></span> <span data-ttu-id="d4d65-159">Você pode ajustar os níveis de acesso com os modificadores de acesso.</span><span class="sxs-lookup"><span data-stu-id="d4d65-159">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="d4d65-160">Para obter mais informações, consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-160">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## <a name="rules"></a>Regras  
+## <a name="rules"></a><span data-ttu-id="d4d65-161">Regras</span><span class="sxs-lookup"><span data-stu-id="d4d65-161">Rules</span></span>  
   
--   **Aninhamento.** Você pode definir uma classe dentro de outra. A classe externa é chamada de *que contém a classe*, e a classe interna é chamada uma *classe aninhada*.  
+-   <span data-ttu-id="d4d65-162">**Aninhamento.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-162">**Nesting.**</span></span> <span data-ttu-id="d4d65-163">Você pode definir uma classe dentro de outra.</span><span class="sxs-lookup"><span data-stu-id="d4d65-163">You can define one class within another.</span></span> <span data-ttu-id="d4d65-164">A classe externa é chamada de *que contém a classe*, e a classe interna é chamada uma *as classes aninhadas*.</span><span class="sxs-lookup"><span data-stu-id="d4d65-164">The outer class is called the *containing class*, and the inner class is called a *nested class*.</span></span>  
   
--   **Herança.** Se a classe usa o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar apenas uma classe base ou interface. Uma classe não pode herdar de mais de um elemento.  
+-   <span data-ttu-id="d4d65-165">**Herança.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-165">**Inheritance.**</span></span> <span data-ttu-id="d4d65-166">Se a classe usa a [herda instrução](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar apenas uma classe base ou interface.</span><span class="sxs-lookup"><span data-stu-id="d4d65-166">If the class uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify only one base class or interface.</span></span> <span data-ttu-id="d4d65-167">Uma classe não pode herdar de mais de um elemento.</span><span class="sxs-lookup"><span data-stu-id="d4d65-167">A class cannot inherit from more than one element.</span></span>  
   
-     Uma classe não pode herdar de outra classe com um nível de acesso mais restritivo. Por exemplo, um `Public` classe não pode herdar de um `Friend` classe.  
+     <span data-ttu-id="d4d65-168">Uma classe não pode herdar de outra classe com um nível de acesso mais restritivo.</span><span class="sxs-lookup"><span data-stu-id="d4d65-168">A class cannot inherit from another class with a more restrictive access level.</span></span> <span data-ttu-id="d4d65-169">Por exemplo, um `Public` classe não pode herdar de um `Friend` classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-169">For example, a `Public` class cannot inherit from a `Friend` class.</span></span>  
   
-     Uma classe não pode herdar de uma classe aninhada nela.  
+     <span data-ttu-id="d4d65-170">Uma classe não pode herdar de uma classe aninhada dentro dele.</span><span class="sxs-lookup"><span data-stu-id="d4d65-170">A class cannot inherit from a class nested within it.</span></span>  
   
--   **Implementação.** Se a classe usa o [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar cada membro definido em cada interface que você especificar em `interfacenames`. Uma exceção a isso é Reimplementação de um membro da classe base. Para obter mais informações, consulte "Reimplementação" [implementa](../../../visual-basic/language-reference/statements/implements-clause.md).  
+-   <span data-ttu-id="d4d65-171">**Implementação.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-171">**Implementation.**</span></span> <span data-ttu-id="d4d65-172">Se a classe usa a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar cada membro definido em cada interface que você especificar na `interfacenames`.</span><span class="sxs-lookup"><span data-stu-id="d4d65-172">If the class uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.</span></span> <span data-ttu-id="d4d65-173">Uma exceção a isso é Reimplementação de um membro de classe base.</span><span class="sxs-lookup"><span data-stu-id="d4d65-173">An exception to this is reimplementation of a base class member.</span></span> <span data-ttu-id="d4d65-174">Para obter mais informações, consulte "Reimplementação" [implementa](../../../visual-basic/language-reference/statements/implements-clause.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-174">For more information, see "Reimplementation" in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
--   **Propriedade padrão.** Uma classe pode especificar no máximo uma propriedade como sua *propriedade padrão*. Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
+-   <span data-ttu-id="d4d65-175">**Propriedade padrão.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-175">**Default Property.**</span></span> <span data-ttu-id="d4d65-176">Uma classe pode especificar no máximo uma propriedade como seu *propriedade padrão*.</span><span class="sxs-lookup"><span data-stu-id="d4d65-176">A class can specify at most one property as its *default property*.</span></span> <span data-ttu-id="d4d65-177">Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-177">For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).</span></span>  
   
-## <a name="behavior"></a>Comportamento  
+## <a name="behavior"></a><span data-ttu-id="d4d65-178">Comportamento</span><span class="sxs-lookup"><span data-stu-id="d4d65-178">Behavior</span></span>  
   
--   **Nível de acesso.** Em uma classe, você pode declarar cada membro com seu próprio nível de acesso. Membros de classe padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acessar, exceto as variáveis e constantes, padrão para [particular](../../../visual-basic/language-reference/modifiers/private.md) acesso. Quando uma classe tem mais acesso restrito que um de seus membros, o nível de acesso da classe terá precedência.  
+-   <span data-ttu-id="d4d65-179">**Nível de acesso.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-179">**Access Level.**</span></span> <span data-ttu-id="d4d65-180">Dentro de uma classe, você pode declarar cada membro com seu próprio nível de acesso.</span><span class="sxs-lookup"><span data-stu-id="d4d65-180">Within a class, you can declare each member with its own access level.</span></span> <span data-ttu-id="d4d65-181">Membros de classe padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acessar, exceto as variáveis e constantes, padrão para [privada](../../../visual-basic/language-reference/modifiers/private.md) acesso.</span><span class="sxs-lookup"><span data-stu-id="d4d65-181">Class members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access.</span></span> <span data-ttu-id="d4d65-182">Quando uma classe tem mais acesso restrito que um de seus membros, o nível de acesso de classe terá precedência.</span><span class="sxs-lookup"><span data-stu-id="d4d65-182">When a class has more restricted access than one of its members, the class access level takes precedence.</span></span>  
   
--   **Escopo.** Uma classe está no escopo em todo seu namespace, classe, estrutura ou módulo que contém.  
+-   <span data-ttu-id="d4d65-183">**Escopo.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-183">**Scope.**</span></span> <span data-ttu-id="d4d65-184">Uma classe está no escopo em todo o seu namespace, classe, estrutura ou módulo que contém.</span><span class="sxs-lookup"><span data-stu-id="d4d65-184">A class is in scope throughout its containing namespace, class, structure, or module.</span></span>  
   
-     O escopo de cada membro da classe é a classe inteira.  
+     <span data-ttu-id="d4d65-185">O escopo de cada membro de classe é a classe inteira.</span><span class="sxs-lookup"><span data-stu-id="d4d65-185">The scope of every class member is the entire class.</span></span>  
   
-     **Tempo de vida.** Visual Basic não dá suporte a classes estáticas. O equivalente funcional de uma classe estática é fornecido por um módulo. Para obter mais informações, consulte [instrução Module](../../../visual-basic/language-reference/statements/module-statement.md).  
+     <span data-ttu-id="d4d65-186">**Tempo de vida.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-186">**Lifetime.**</span></span> <span data-ttu-id="d4d65-187">Visual Basic não dá suporte a classes estáticas.</span><span class="sxs-lookup"><span data-stu-id="d4d65-187">Visual Basic does not support static classes.</span></span> <span data-ttu-id="d4d65-188">O equivalente funcional de uma classe estática é fornecido por um módulo.</span><span class="sxs-lookup"><span data-stu-id="d4d65-188">The functional equivalent of a static class is provided by a module.</span></span> <span data-ttu-id="d4d65-189">Para obter mais informações, consulte [instrução Module](../../../visual-basic/language-reference/statements/module-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-189">For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-     Membros de classe têm tempos de vida dependendo de como e onde eles são declarados. Para obter mais informações, consulte [tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+     <span data-ttu-id="d4d65-190">Membros de classe tem tempos de vida dependendo de como e onde eles são declarados.</span><span class="sxs-lookup"><span data-stu-id="d4d65-190">Class members have lifetimes depending on how and where they are declared.</span></span> <span data-ttu-id="d4d65-191">Para obter mais informações, consulte [tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-191">For more information, see [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   **Qualificação.** Código fora de uma classe deve qualificar o nome do membro com o nome da classe.  
+-   <span data-ttu-id="d4d65-192">**Qualificação.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-192">**Qualification.**</span></span> <span data-ttu-id="d4d65-193">Código fora de uma classe deve qualificar o nome do membro com o nome de classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-193">Code outside a class must qualify a member's name with the name of that class.</span></span>  
   
-     Se o código dentro de uma classe aninhada faz uma referência não qualificada a um elemento de programação, Visual Basic procura o elemento primeiro na classe aninhada, em seguida, em sua classe, e assim por diante-out para o elemento mais externo que contém.  
+     <span data-ttu-id="d4d65-194">Se o código dentro de uma classe aninhada faz uma referência não qualificada para um elemento de programação, Visual Basic procura o elemento primeiro na classe aninhada, em seguida, em sua classe, e assim por diante para o elemento que contém mais externo.</span><span class="sxs-lookup"><span data-stu-id="d4d65-194">If code inside a nested class makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested class, then in its containing class, and so on out to the outermost containing element.</span></span>  
   
-## <a name="classes-and-modules"></a>Classes e módulos  
- Esses elementos têm várias semelhanças, mas há algumas diferenças importantes também.  
+## <a name="classes-and-modules"></a><span data-ttu-id="d4d65-195">Classes e módulos</span><span class="sxs-lookup"><span data-stu-id="d4d65-195">Classes and Modules</span></span>  
+ <span data-ttu-id="d4d65-196">Esses elementos têm muitas semelhanças, mas há algumas diferenças importantes também.</span><span class="sxs-lookup"><span data-stu-id="d4d65-196">These elements have many similarities, but there are some important differences as well.</span></span>  
   
--   **Terminologia.** Versões anteriores do Visual Basic reconhecem dois tipos de módulos: *módulos de classe* (CLS arquivos) e *módulos padrão* (arquivos. bas). A versão atual chama esses *classes* e *módulos*, respectivamente.  
+-   <span data-ttu-id="d4d65-197">**Terminologia.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-197">**Terminology.**</span></span> <span data-ttu-id="d4d65-198">Versões anteriores do Visual Basic reconhecem dois tipos de módulos: *módulos de classe* (arquivos CLS) e *módulos padrão* (arquivos. bas).</span><span class="sxs-lookup"><span data-stu-id="d4d65-198">Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files).</span></span> <span data-ttu-id="d4d65-199">A versão atual chama esses *classes* e *módulos*, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="d4d65-199">The current version calls these *classes* and *modules*, respectively.</span></span>  
   
--   **Membros compartilhados.** Você pode controlar se um membro de uma classe é uma chave secreta ou membro de instância.  
+-   <span data-ttu-id="d4d65-200">**Membros compartilhados.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-200">**Shared Members.**</span></span> <span data-ttu-id="d4d65-201">Você pode controlar se um membro de uma classe é compartilhado ou membro de instância.</span><span class="sxs-lookup"><span data-stu-id="d4d65-201">You can control whether a member of a class is a shared or instance member.</span></span>  
   
--   **Orientação a objeto.** Classes são orientadas a objeto, mas módulos não são. Você pode criar uma ou mais instâncias de uma classe. Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+-   <span data-ttu-id="d4d65-202">**Orientação a objeto.**</span><span class="sxs-lookup"><span data-stu-id="d4d65-202">**Object Orientation.**</span></span> <span data-ttu-id="d4d65-203">As classes são orientados a objeto, mas módulos não são.</span><span class="sxs-lookup"><span data-stu-id="d4d65-203">Classes are object-oriented, but modules are not.</span></span> <span data-ttu-id="d4d65-204">Você pode criar uma ou mais instâncias de uma classe.</span><span class="sxs-lookup"><span data-stu-id="d4d65-204">You can create one or more instances of a class.</span></span> <span data-ttu-id="d4d65-205">Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span><span class="sxs-lookup"><span data-stu-id="d4d65-205">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir usa um `Class` instrução para definir uma classe e vários membros.  
+## <a name="example"></a><span data-ttu-id="d4d65-206">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d4d65-206">Example</span></span>  
+ <span data-ttu-id="d4d65-207">O exemplo a seguir usa um `Class` instrução para definir uma classe e vários membros.</span><span class="sxs-lookup"><span data-stu-id="d4d65-207">The following example uses a `Class` statement to define a class and several members.</span></span>  
   
- [!code-vb[VbVbalrStatements&#62;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Estruturas e Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Instrução interface](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Instrução Module](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Vida útil do objeto: Como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Como usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-
+## <a name="see-also"></a><span data-ttu-id="d4d65-208">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d4d65-208">See Also</span></span>  
+ [<span data-ttu-id="d4d65-209">Objetos e Classes</span><span class="sxs-lookup"><span data-stu-id="d4d65-209">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="d4d65-210">Estruturas e Classes</span><span class="sxs-lookup"><span data-stu-id="d4d65-210">Structures and Classes</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="d4d65-211">Instrução Interface</span><span class="sxs-lookup"><span data-stu-id="d4d65-211">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="d4d65-212">Instrução Module</span><span class="sxs-lookup"><span data-stu-id="d4d65-212">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="d4d65-213">Instrução Property</span><span class="sxs-lookup"><span data-stu-id="d4d65-213">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="d4d65-214">Tempo de vida do objeto: como os objetos são criados e destruídos</span><span class="sxs-lookup"><span data-stu-id="d4d65-214">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [<span data-ttu-id="d4d65-215">Tipos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d4d65-215">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="d4d65-216">Como usar uma classe genérica</span><span class="sxs-lookup"><span data-stu-id="d4d65-216">How to: Use a Generic Class</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

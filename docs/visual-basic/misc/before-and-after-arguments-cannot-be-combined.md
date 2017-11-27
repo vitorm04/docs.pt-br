@@ -1,43 +1,26 @@
 ---
-title: "&quot;Antes&quot; e &quot;After&quot; argumentos não podem ser combinados | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "&#39; Antes de &#39; e &#39; Depois de &#39; argumentos não podem ser combinados"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrCollection_BeforeAfterExclusive
+f1_keywords: vbrCollection_BeforeAfterExclusive
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b58a40a9764d4cf09768b381a6472592c4f0230a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bd8de783b2260dcafcac530cba31cfcc759216f8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="39before39-and-39after39-arguments-cannot-be-combined"></a>'Before' e 'After' argumentos não podem ser combinados
-Uma lista de argumentos inclui tanto o `Before` e `After` argumentos que são mutuamente exclusivos.  
+# <a name="39before39-and-39after39-arguments-cannot-be-combined"></a><span data-ttu-id="c0548-102">&#39; Antes de &#39; e &#39; Depois de &#39; argumentos não podem ser combinados</span><span class="sxs-lookup"><span data-stu-id="c0548-102">&#39;Before&#39; and &#39;After&#39; arguments cannot be combined</span></span>
+<span data-ttu-id="c0548-103">Uma lista de argumentos inclui tanto o `Before` e `After` argumentos que são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="c0548-103">An argument list includes both the `Before` and `After` arguments, which are mutually exclusive.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c0548-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="c0548-104">To correct this error</span></span>  
   
-1.  Remova o `Before` ou `After` argumento.  
+1.  <span data-ttu-id="c0548-105">Remover o `Before` ou `After` argumento.</span><span class="sxs-lookup"><span data-stu-id="c0548-105">Remove either the `Before` or `After` argument.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.XmlNodeOrder></xref:System.Xml.XmlNodeOrder>
+## <a name="see-also"></a><span data-ttu-id="c0548-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c0548-106">See Also</span></span>  
+ <xref:System.Xml.XmlNodeOrder>
