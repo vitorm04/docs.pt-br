@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usando um soquete de cliente assíncrono
 Um soquete de cliente assíncrono não suspende o aplicativo enquanto aguarda a conclusão das operações de rede. Em vez disso, ele usa o modelo padrão de programação assíncrona do .NET Framework para processar a conexão de rede em um thread, enquanto o aplicativo continua em execução no thread original. Soquetes assíncronos são apropriados para aplicativos que fazem uso intenso da rede ou que não podem aguardar a conclusão das operações de rede antes de continuar.  
@@ -43,9 +40,9 @@ Um soquete de cliente assíncrono não suspende o aplicativo enquanto aguarda a 
   
  As operações assíncronas exigem um método de retorno de chamada para retornar o resultado da operação. Se o aplicativo não precisar saber o resultado, nenhum método de retorno de chamada será necessário. O código de exemplo desta seção demonstra como usar um método para iniciar a conexão com um dispositivo de rede e um método de retorno de chamada para concluir a conexão, um método para iniciar o envio de dados e um método de retorno de chamada para concluir o envio, bem como um método para iniciar o recebimento de dados e um método de retorno de chamada para encerrar o recebimento de dados.  
   
- Os soquetes assíncronos usam vários threads do pool de threads do sistema para processar conexões de rede. Um thread é responsável por iniciar o envio ou recebimento de dados; outros threads concluem a conexão com o dispositivo de rede e enviam ou recebem dados. Nos exemplos a seguir, instâncias da classe <xref:System.Threading.ManualResetEvent?displayProperty=fullName> são usadas para suspender a execução do thread principal e sinalizar quando a execução pode continuar.  
+ Os soquetes assíncronos usam vários threads do pool de threads do sistema para processar conexões de rede. Um thread é responsável por iniciar o envio ou recebimento de dados; outros threads concluem a conexão com o dispositivo de rede e enviam ou recebem dados. Nos exemplos a seguir, instâncias da classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> são usadas para suspender a execução do thread principal e sinalizar quando a execução pode continuar.  
   
- No exemplo a seguir, para conectar um soquete assíncrono com um dispositivo de rede, o método `Connect` inicializa um **Socket** e, em seguida, chama o método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>, passando um ponto de extremidade remoto que representa o dispositivo de rede, o método de retorno de chamada de conexão e um objeto de estado, (o **Socket** de cliente), que é usado para passar informações de estado entre chamadas assíncronas. O exemplo implementa o método `Connect` para conectar o **Socket** especificado ao ponto de extremidade especificado. Ele supõe que haja um **ManualResetEvent** global chamado `connectDone`.  
+ No exemplo a seguir, para conectar um soquete assíncrono com um dispositivo de rede, o método `Connect` inicializa um **Socket** e, em seguida, chama o método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>, passando um ponto de extremidade remoto que representa o dispositivo de rede, o método de retorno de chamada de conexão e um objeto de estado, (o **Socket** de cliente), que é usado para passar informações de estado entre chamadas assíncronas. O exemplo implementa o método `Connect` para conectar o **Socket** especificado ao ponto de extremidade especificado. Ele supõe que haja um **ManualResetEvent** global chamado `connectDone`.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -298,7 +295,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando um soquete de cliente síncrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [Usando um soquete do cliente síncrona](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [Exemplo de soquete de cliente assíncrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-

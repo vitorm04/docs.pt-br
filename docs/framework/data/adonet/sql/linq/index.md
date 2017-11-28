@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3c6410d06565c9dcb9696d0fcb4f3fc749a19c48
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: c68e00930b518a637a42e99c422e4acf7982f5f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é um componente do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.  
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/05/2017
   
  Os desenvolvedores que usam o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] normalmente usam o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], que fornece uma interface do usuário para implementar muitos dos recursos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- A documentação incluída nessa versão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descreve as técnicas, os processos e os blocos de construção básicos necessários para compilar aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Você também pode pesquisar assuntos específicos na Biblioteca MSDN e participar do [Fórum da LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), no qual poderá discutir tópicos mais complexos detalhadamente com especialistas. Por fim, o white paper [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) (LINQ to SQL: consulta integrada à linguagem do .NET para dados relacionais) fornece informações detalhadas sobre a tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], com exemplos de código C# e do [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+ A documentação incluída nessa versão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descreve as técnicas, os processos e os blocos de construção básicos necessários para compilar aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Você também pode pesquisar Microsoft Docs para problemas específicos, e você pode participar de [Fórum do LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), onde você pode abordar tópicos mais complexos detalhadamente com especialistas. Por fim, o white paper [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) (LINQ to SQL: consulta integrada à linguagem do .NET para dados relacionais) fornece informações detalhadas sobre a tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], com exemplos de código C# e do [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/05/2017
   
  [Visão geral da tecnologia LinqDataSource](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Descreve como o controle <xref:System.Web.UI.WebControls.LinqDataSource> expõe o [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] para desenvolvedores Web por meio da arquitetura de controle de fonte de dados [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].
-

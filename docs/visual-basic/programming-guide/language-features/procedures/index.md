@@ -1,45 +1,27 @@
 ---
 title: Procedimentos no Visual Basic
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimentos no Visual Basic
 Um *procedimento* é um bloco de demonstrativos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] incluídos por um demonstrativo de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e por uma declaração `End` de correspondência. Todos os demonstrativos executáveis em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] devem estar incluídos em algum procedimento.  
@@ -88,14 +70,13 @@ Um *procedimento* é um bloco de demonstrativos [!INCLUDE[vbprvb](~/includes/vbp
 -   Depois de desenvolver procedimentos para uso em um programa, você pode usá-los em outros programas, geralmente com pouca ou nenhuma modificação. Isso ajuda a evitar a duplicação de código.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como criar um procedimento](./how-to-create-a-procedure.md)   
- [Subprocedimentos](./sub-procedures.md)   
- [Procedimentos de Função](./function-procedures.md)   
- [Procedimentos de Propriedade](./property-procedures.md)   
- [Procedimentos de Operador](./operator-procedures.md)   
- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)   
- [Procedimentos Recursivos](./recursive-procedures.md)   
- [Sobrecarga de Procedimento](./procedure-overloading.md)   
- [Procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+ [Como criar um procedimento](./how-to-create-a-procedure.md)  
+ [Subprocedimentos](./sub-procedures.md)  
+ [Procedimentos de Função](./function-procedures.md)  
+ [Procedimentos de Propriedade](./property-procedures.md)  
+ [Procedimentos de Operador](./operator-procedures.md)  
+ [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)  
+ [Procedimentos Recursivos](./recursive-procedures.md)  
+ [Sobrecarga de Procedimento](./procedure-overloading.md)  
+ [Procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-

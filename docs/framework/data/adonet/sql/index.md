@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: effff61b424f914584ba1ffd963c100afbc3d745
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ab519f7881dd20c3fd9e2e08fef14591477d94a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server e ADO.NET
 Esta seção descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -53,9 +51,8 @@ Esta seção descreve os recursos e os comportamentos que são específicos ao P
  [SQL Server Books Online](http://msdn.microsoft.com/library/ms130214.aspx) (Guias online do SQL Server)  
   
 ## <a name="see-also"></a>Consulte também  
- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  (Protegendo aplicativos ADO.NET)  
- [Data Type Mappings in ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  (Mapeamentos de tipo de dados no ADO.NET)  
- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  (DataSets, DataTables e DataViews)  
- [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  (Recuperando e modificando dados no ADO.NET)  
+ [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
+ [Data Type Mappings in ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  
+ [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
+ [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
-

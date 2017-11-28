@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 918528e99396bd71f8c44dadcef7f6dfa6a7a47e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d29321297a880ca961805687e51c7bb63f70ffbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Noções básicas sobre problemas e exceções de WebRequest
 <xref:System.Net.WebRequest> e suas classes derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> e <xref:System.Net.FileWebRequest>) geram exceções para sinalizar uma condição anormal. Às vezes, a resolução desses problemas não é óbvia.  
@@ -32,7 +26,7 @@ ms.lasthandoff: 08/21/2017
   
 |Status|Detalhes|Solução|  
 |------------|-------------|--------------|  
-|<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> -ou-<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Há um problema com o soquete subjacente. A conexão pode ter sido redefinida.|Reconecte e envie a solicitação novamente.<br /><br /> Verifique se o último service pack está instalado.<br /><br /> Aumente o valor da propriedade <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=fullName>.<br /><br /> Defina <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=fullName> como `false`.<br /><br /> Aumente o número de conexões máximas com a propriedade <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Verifique a configuração de proxy.<br /><br /> Se estiver usando o SSL, verifique se o processo do servidor tem permissão para acessar o repositório de Certificados.<br /><br /> Se estiver enviando uma grande quantidade de dados, defina <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> como `false`.|  
+|<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> -ou-<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Há um problema com o soquete subjacente. A conexão pode ter sido redefinida.|Reconecte e envie a solicitação novamente.<br /><br /> Verifique se o último service pack está instalado.<br /><br /> Aumente o valor da propriedade <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType>.<br /><br /> Defina <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> como `false`.<br /><br /> Aumente o número de conexões máximas com a propriedade <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Verifique a configuração de proxy.<br /><br /> Se estiver usando o SSL, verifique se o processo do servidor tem permissão para acessar o repositório de Certificados.<br /><br /> Se estiver enviando uma grande quantidade de dados, defina <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> como `false`.|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|Não foi possível validar o certificado do servidor.|Tente abrir o URI usando o Internet Explorer. Resolva os Alertas de Segurança exibidos pelo IE. Se você não conseguir resolver o alerta de segurança, crie uma classe de política de certificação que implementa <xref:System.Net.ICertificatePolicy>, que retorna `true` e passe-o para <xref:System.Net.ServicePointManager.CertificatePolicy%2A>.<br /><br /> Consulte [http://support.microsoft.com/?id=823177](http://go.microsoft.com/fwlink/?LinkID=179653).<br /><br /> Verifique se o certificado da Autoridade de Certificação que assinou o certificado do servidor está adicionado à lista de Autoridades de Certificação Confiáveis no Internet Explorer.<br /><br /> Verifique se o nome do host na URL corresponde ao nome comum do certificado do servidor.|  
 |<xref:System.Net.WebExceptionStatus.SecureChannelFailure>|Ocorreu um erro na transação SSL ou há um problema de certificado.|O .NET Framework versão 1.1 apenas dá suporte ao SSL versão 3.0. Se o servidor estiver usando apenas o TLS versão 1.0 ou o SSL versão 2.0, a exceção será gerada. Faça upgrade para o .NET Framework versão 2.0 e defina <xref:System.Net.ServicePointManager.SecurityProtocol%2A> para que ele corresponda ao servidor.<br /><br /> O certificado do cliente foi assinado por uma AC (Autoridade de Certificação) na qual o servidor não confia. Instale o certificado da AC no servidor. Consulte [http://support.microsoft.com/?id=332077](http://go.microsoft.com/fwlink/?LinkID=179654).<br /><br /> Verifique se você tem o último service pack instalado.|  
 |<xref:System.Net.WebExceptionStatus.ConnectFailure>|Falha na conexão.|Um firewall ou um proxy está bloqueando a conexão. Modifique o firewall ou o proxy para permitir a conexão.<br /><br /> Designe um <xref:System.Net.WebProxy> explicitamente no aplicativo cliente chamando o construtor <xref:System.Net.WebProxy> (WebServiceProxyClass.Proxy = new WebProxy([http://server:80](http://server/), true)).<br /><br /> Execute o Filemon ou o Regmon para garantir que a identidade do processo de trabalho tenha as permissões necessárias para acessar WSPWSP.dll, HKLM\System\CurrentControlSet\Services\DnsCache ou HKLM\System\CurrentControlSet\Services\WinSock2.|  
@@ -44,7 +38,6 @@ ms.lasthandoff: 08/21/2017
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|A resposta do servidor não é uma resposta HTTP válida. Esse problema ocorre quando o .NET Framework detecta que a resposta do servidor não é compatível com o HTTP 1.1 RFC. Esse problema pode ocorrer quando a resposta contém cabeçalhos incorretos ou delimitadores de cabeçalho incorretos. O RFC 2616 define o HTTP 1.1 e o formato válido para a resposta do servidor. Para obter mais informações, consulte [http://www.ietf.org](http://go.microsoft.com/fwlink/?LinkID=147388).|Obtenha um rastreamento de rede da transação e examine os cabeçalhos na resposta.<br /><br /> Se o aplicativo exigir a resposta do servidor sem a análise (isso pode ser um problema de segurança), defina `useUnsafeHeaderParsing` como `true` no arquivo de configuração. Consulte Elemento [\<httpWebRequest> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.HttpWebResponse>   
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.HttpWebResponse>  
  <xref:System.Net.Dns>
-
