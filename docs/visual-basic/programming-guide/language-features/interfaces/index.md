@@ -1,111 +1,92 @@
 ---
 title: Interfaces (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, interfaces
-- interfaces, Visual Basic
+- interfaces [Visual Basic], Visual Basic
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 0b3f13cd69564a61da1a961e35c5319e4c2d79aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
-# <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
-As *interfaces* definem as propriedades, os métodos e os eventos que as classes podem implementar. As interfaces permitem definir as funcionalidades como pequenos grupos de propriedades, de métodos e de eventos estreitamente relacionados. Isso reduz os problemas de compatibilidade, uma vez que é possível desenvolver implementações avançadas para as interfaces sem arriscar o código existente. Você pode adicionar novas funcionalidades a qualquer momento desenvolvendo interfaces e implementações adicionais.  
+# <a name="interfaces-visual-basic"></a><span data-ttu-id="7b403-102">Interfaces (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b403-102">Interfaces (Visual Basic)</span></span>
+<span data-ttu-id="7b403-103">As *interfaces* definem as propriedades, os métodos e os eventos que as classes podem implementar.</span><span class="sxs-lookup"><span data-stu-id="7b403-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="7b403-104">As interfaces permitem definir as funcionalidades como pequenos grupos de propriedades, de métodos e de eventos estreitamente relacionados. Isso reduz os problemas de compatibilidade, uma vez que é possível desenvolver implementações avançadas para as interfaces sem arriscar o código existente.</span><span class="sxs-lookup"><span data-stu-id="7b403-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="7b403-105">Você pode adicionar novas funcionalidades a qualquer momento desenvolvendo interfaces e implementações adicionais.</span><span class="sxs-lookup"><span data-stu-id="7b403-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  
   
- Há vários outros motivos pelos quais você possa querer usar interfaces em vez da herança de classe:  
+ <span data-ttu-id="7b403-106">Há vários outros motivos pelos quais você possa querer usar interfaces em vez da herança de classe:</span><span class="sxs-lookup"><span data-stu-id="7b403-106">There are several other reasons why you might want to use interfaces instead of class inheritance:</span></span>  
   
--   As interfaces são mais adequadas para situações em que os aplicativos exigem muitos tipos de objeto possivelmente não relacionados para fornecer determinadas funcionalidades.  
+-   <span data-ttu-id="7b403-107">As interfaces são mais adequadas para situações em que os aplicativos exigem muitos tipos de objeto possivelmente não relacionados para fornecer determinadas funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="7b403-107">Interfaces are better suited to situations in which your applications require many possibly unrelated object types to provide certain functionality.</span></span>  
   
--   As interfaces são mais flexíveis que as classes base, uma vez que é possível definir uma única implementação que pode implementar várias interfaces.  
+-   <span data-ttu-id="7b403-108">As interfaces são mais flexíveis que as classes base, uma vez que é possível definir uma única implementação que pode implementar várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="7b403-108">Interfaces are more flexible than base classes because you can define a single implementation that can implement multiple interfaces.</span></span>  
   
--   As interfaces são mais adequadas em situações em que você não precisa herdar a implementação de uma classe base.  
+-   <span data-ttu-id="7b403-109">As interfaces são mais adequadas em situações em que você não precisa herdar a implementação de uma classe base.</span><span class="sxs-lookup"><span data-stu-id="7b403-109">Interfaces are better in situations in which you do not have to inherit implementation from a base class.</span></span>  
   
--   As interfaces são úteis quando você não pode usar herança de classe. Por exemplo, as estruturas não podem herdar de classes, mas podem implementar interfaces.  
+-   <span data-ttu-id="7b403-110">As interfaces são úteis quando você não pode usar herança de classe.</span><span class="sxs-lookup"><span data-stu-id="7b403-110">Interfaces are useful when you cannot use class inheritance.</span></span> <span data-ttu-id="7b403-111">Por exemplo, as estruturas não podem herdar de classes, mas podem implementar interfaces.</span><span class="sxs-lookup"><span data-stu-id="7b403-111">For example, structures cannot inherit from classes, but they can implement interfaces.</span></span>  
   
-## <a name="declaring-interfaces"></a>Declarando interfaces  
- As definições de interface são colocadas entre as instruções `Interface` e `End Interface`. Após a instrução `Interface`, você pode adicionar uma instrução `Inherits` opcional que lista uma ou mais interfaces herdadas. As instruções `Inherits` devem preceder todas as outras instruções nos comentários de exceção de declaração. As instruções restantes na definição da interface devem ser as instruções `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` e `Enum`. As interfaces não podem conter código de implementação nem instruções associadas ao código de implementação, como `End Sub` ou `End Property`.  
+## <a name="declaring-interfaces"></a><span data-ttu-id="7b403-112">Declarando interfaces</span><span class="sxs-lookup"><span data-stu-id="7b403-112">Declaring Interfaces</span></span>  
+ <span data-ttu-id="7b403-113">As definições de interface são colocadas entre as instruções `Interface` e `End Interface`.</span><span class="sxs-lookup"><span data-stu-id="7b403-113">Interface definitions are enclosed within the `Interface` and `End Interface` statements.</span></span> <span data-ttu-id="7b403-114">Após a instrução `Interface`, você pode adicionar uma instrução `Inherits` opcional que lista uma ou mais interfaces herdadas.</span><span class="sxs-lookup"><span data-stu-id="7b403-114">Following the `Interface` statement, you can add an optional `Inherits` statement that lists one or more inherited interfaces.</span></span> <span data-ttu-id="7b403-115">As instruções `Inherits` devem preceder todas as outras instruções nos comentários de exceção de declaração.</span><span class="sxs-lookup"><span data-stu-id="7b403-115">The `Inherits` statements must precede all other statements in the declaration except comments.</span></span> <span data-ttu-id="7b403-116">As instruções restantes na definição da interface devem ser as instruções `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` e `Enum`.</span><span class="sxs-lookup"><span data-stu-id="7b403-116">The remaining statements in the interface definition should be `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, and `Enum` statements.</span></span> <span data-ttu-id="7b403-117">As interfaces não podem conter código de implementação nem instruções associadas ao código de implementação, como `End Sub` ou `End Property`.</span><span class="sxs-lookup"><span data-stu-id="7b403-117">Interfaces cannot contain any implementation code or statements associated with implementation code, such as `End Sub` or `End Property`.</span></span>  
   
- Em um namespace, as instruções de interface são `Friend` por padrão, mas também podem ser declaradas explicitamente como `Public` ou `Friend`. As interfaces definidas em classes, em módulos, em interfaces e em estruturas são `Public` por padrão, mas também podem ser explicitamente declaradas como `Public`, `Friend`, `Protected` ou `Private`.  
+ <span data-ttu-id="7b403-118">Em um namespace, as instruções de interface são `Friend` por padrão, mas também podem ser declaradas explicitamente como `Public` ou `Friend`.</span><span class="sxs-lookup"><span data-stu-id="7b403-118">In a namespace, interface statements are `Friend` by default, but they can also be explicitly declared as `Public` or `Friend`.</span></span> <span data-ttu-id="7b403-119">As interfaces definidas em classes, em módulos, em interfaces e em estruturas são `Public` por padrão, mas também podem ser explicitamente declaradas como `Public`, `Friend`, `Protected` ou `Private`.</span><span class="sxs-lookup"><span data-stu-id="7b403-119">Interfaces defined within classes, modules, interfaces, and structures are `Public` by default, but they can also be explicitly declared as `Public`, `Friend`, `Protected`, or `Private`.</span></span>  
   
 > [!NOTE]
->  A palavra-chave `Shadows` pode ser aplicada a todos os membros de interface. A palavra-chave `Overloads` pode ser aplicada às instruções `Sub`, `Function` e `Property` declaradas em uma definição de interface. Além disso, as instruções `Property` podem ter os modificadores `Default`, `ReadOnly` ou `WriteOnly`. Nenhum dos outros modificadores (`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride` ou `Overridable`) são permitidos. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+>  <span data-ttu-id="7b403-120">A palavra-chave `Shadows` pode ser aplicada a todos os membros de interface.</span><span class="sxs-lookup"><span data-stu-id="7b403-120">The `Shadows` keyword can be applied to all interface members.</span></span> <span data-ttu-id="7b403-121">A palavra-chave `Overloads` pode ser aplicada às instruções `Sub`, `Function` e `Property` declaradas em uma definição de interface.</span><span class="sxs-lookup"><span data-stu-id="7b403-121">The `Overloads` keyword can be applied to `Sub`, `Function`, and `Property` statements declared in an interface definition.</span></span> <span data-ttu-id="7b403-122">Além disso, as instruções `Property` podem ter os modificadores `Default`, `ReadOnly` ou `WriteOnly`.</span><span class="sxs-lookup"><span data-stu-id="7b403-122">In addition, `Property` statements can have the `Default`, `ReadOnly`, or `WriteOnly` modifiers.</span></span> <span data-ttu-id="7b403-123">Nenhum dos outros modificadores (`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride` ou `Overridable`) são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7b403-123">None of the other modifiers—`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, or `Overridable`—are allowed.</span></span> <span data-ttu-id="7b403-124">Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="7b403-124">For more information, see [Declaration Contexts and Default Access Levels](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Por exemplo, o código a seguir define uma interface com uma função, uma propriedade e um evento.  
+ <span data-ttu-id="7b403-125">Por exemplo, o código a seguir define uma interface com uma função, uma propriedade e um evento.</span><span class="sxs-lookup"><span data-stu-id="7b403-125">For example, the following code defines an interface with one function, one property, and one event.</span></span>  
   
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
-## <a name="implementing-interfaces"></a>Implementando interfaces  
- A palavra reservada `Implements` do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é usada de duas maneiras. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
+## <a name="implementing-interfaces"></a><span data-ttu-id="7b403-126">Implementando interfaces</span><span class="sxs-lookup"><span data-stu-id="7b403-126">Implementing Interfaces</span></span>  
+ <span data-ttu-id="7b403-127">A palavra reservada `Implements` do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é usada de duas maneiras.</span><span class="sxs-lookup"><span data-stu-id="7b403-127">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reserved word `Implements` is used in two ways.</span></span> <span data-ttu-id="7b403-128">A instrução `Implements` significa que uma classe ou estrutura implementa uma interface.</span><span class="sxs-lookup"><span data-stu-id="7b403-128">The `Implements` statement signifies that a class or structure implements an interface.</span></span> <span data-ttu-id="7b403-129">A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.</span><span class="sxs-lookup"><span data-stu-id="7b403-129">The `Implements` keyword signifies that a class member or structure member implements a specific interface member.</span></span>  
   
-### <a name="implements-statement"></a>Instrução Implements  
- Se uma classe ou estrutura implementa uma ou mais interfaces, ela deve incluir a instrução `Implements` imediatamente após a instrução `Class` ou `Structure`. A instrução `Implements` exige uma lista de interfaces separadas por vírgula a serem implementadas por uma classe. A classe ou a estrutura deve implementar todos os membros da interface usando a palavra-chave `Implements`.  
+### <a name="implements-statement"></a><span data-ttu-id="7b403-130">Instrução Implements</span><span class="sxs-lookup"><span data-stu-id="7b403-130">Implements Statement</span></span>  
+ <span data-ttu-id="7b403-131">Se uma classe ou estrutura implementa uma ou mais interfaces, ela deve incluir a instrução `Implements` imediatamente após a instrução `Class` ou `Structure`.</span><span class="sxs-lookup"><span data-stu-id="7b403-131">If a class or structure implements one or more interfaces, it must include the `Implements` statement immediately after the `Class` or `Structure` statement.</span></span> <span data-ttu-id="7b403-132">A instrução `Implements` exige uma lista de interfaces separadas por vírgula a serem implementadas por uma classe.</span><span class="sxs-lookup"><span data-stu-id="7b403-132">The `Implements` statement requires a comma-separated list of interfaces to be implemented by a class.</span></span> <span data-ttu-id="7b403-133">A classe ou a estrutura deve implementar todos os membros da interface usando a palavra-chave `Implements`.</span><span class="sxs-lookup"><span data-stu-id="7b403-133">The class or structure must implement all interface members using the `Implements` keyword.</span></span>  
   
-### <a name="implements-keyword"></a>Palavra-chave Implements  
- A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados. Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros. A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado. O nome de um membro que implementa um membro de interface pode usar qualquer identificador válido e não está limitado à convenção `InterfaceName_MethodName` usada em versões anteriores do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+### <a name="implements-keyword"></a><span data-ttu-id="7b403-134">Palavra-chave Implements</span><span class="sxs-lookup"><span data-stu-id="7b403-134">Implements Keyword</span></span>  
+ <span data-ttu-id="7b403-135">A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados.</span><span class="sxs-lookup"><span data-stu-id="7b403-135">The `Implements` keyword requires a comma-separated list of interface members to be implemented.</span></span> <span data-ttu-id="7b403-136">Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros.</span><span class="sxs-lookup"><span data-stu-id="7b403-136">Generally, only a single interface member is specified, but you can specify multiple members.</span></span> <span data-ttu-id="7b403-137">A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado.</span><span class="sxs-lookup"><span data-stu-id="7b403-137">The specification of an interface member consists of the interface name, which must be specified in an implements statement within the class; a period; and the name of the member function, property, or event to be implemented.</span></span> <span data-ttu-id="7b403-138">O nome de um membro que implementa um membro de interface pode usar qualquer identificador válido e não está limitado à convenção `InterfaceName_MethodName` usada em versões anteriores do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b403-138">The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- Por exemplo, o código a seguir mostra como declarar uma sub-rotina chamada `Sub1` que implementa um método de uma interface:  
+ <span data-ttu-id="7b403-139">Por exemplo, o código a seguir mostra como declarar uma sub-rotina chamada `Sub1` que implementa um método de uma interface:</span><span class="sxs-lookup"><span data-stu-id="7b403-139">For example, the following code shows how to declare a subroutine named `Sub1` that implements a method of an interface:</span></span>  
   
  [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
   
- Os tipos de parâmetro e de retorno do membro implementado devem corresponder à propriedade da interface ou à declaração do membro na interface. A maneira mais comum de implementar um elemento de uma interface é com um membro que tem o mesmo nome que a interface, conforme mostrado no exemplo anterior.  
+ <span data-ttu-id="7b403-140">Os tipos de parâmetro e de retorno do membro implementado devem corresponder à propriedade da interface ou à declaração do membro na interface.</span><span class="sxs-lookup"><span data-stu-id="7b403-140">The parameter types and return types of the implementing member must match the interface property or member declaration in the interface.</span></span> <span data-ttu-id="7b403-141">A maneira mais comum de implementar um elemento de uma interface é com um membro que tem o mesmo nome que a interface, conforme mostrado no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="7b403-141">The most common way to implement an element of an interface is with a member that has the same name as the interface, as shown in the previous example.</span></span>  
   
- Para declarar a implementação de um método de interface, você pode usar os atributos válidos em declarações de método de instância, incluindo `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default` e `Static`. O atributo `Shared` não é válido, uma vez que define uma classe em vez de um método de instância.  
+ <span data-ttu-id="7b403-142">Para declarar a implementação de um método de interface, você pode usar os atributos válidos em declarações de método de instância, incluindo `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default` e `Static`.</span><span class="sxs-lookup"><span data-stu-id="7b403-142">To declare the implementation of an interface method, you can use any attributes that are legal on instance method declarations, including `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default`, and `Static`.</span></span> <span data-ttu-id="7b403-143">O atributo `Shared` não é válido, uma vez que define uma classe em vez de um método de instância.</span><span class="sxs-lookup"><span data-stu-id="7b403-143">The `Shared` attribute is not legal since it defines a class rather than an instance method.</span></span>  
   
- Ao usar `Implements`, você também pode escrever um único método que implementa vários métodos definidos em uma interface, como no exemplo a seguir:  
+ <span data-ttu-id="7b403-144">Ao usar `Implements`, você também pode escrever um único método que implementa vários métodos definidos em uma interface, como no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="7b403-144">Using `Implements`, you can also write a single method that implements multiple methods defined in an interface, as in the following example:</span></span>  
   
  [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
   
- Você pode usar um membro particular para implementar um membro de interface. Quando um membro particular implementa um membro de uma interface, esse membro fica disponível por meio da interface, embora não esteja disponível diretamente em variáveis de objeto para a classe.  
+ <span data-ttu-id="7b403-145">Você pode usar um membro particular para implementar um membro de interface.</span><span class="sxs-lookup"><span data-stu-id="7b403-145">You can use a private member to implement an interface member.</span></span> <span data-ttu-id="7b403-146">Quando um membro particular implementa um membro de uma interface, esse membro fica disponível por meio da interface, embora não esteja disponível diretamente em variáveis de objeto para a classe.</span><span class="sxs-lookup"><span data-stu-id="7b403-146">When a private member implements a member of an interface, that member becomes available by way of the interface even though it is not available directly on object variables for the class.</span></span>  
   
-### <a name="interface-implementation-examples"></a>Exemplos de implementação de interface  
- As classes que implementam uma interface devem implementar todas as suas propriedades, métodos e eventos.  
+### <a name="interface-implementation-examples"></a><span data-ttu-id="7b403-147">Exemplos de implementação de interface</span><span class="sxs-lookup"><span data-stu-id="7b403-147">Interface Implementation Examples</span></span>  
+ <span data-ttu-id="7b403-148">As classes que implementam uma interface devem implementar todas as suas propriedades, métodos e eventos.</span><span class="sxs-lookup"><span data-stu-id="7b403-148">Classes that implement an interface must implement all its properties, methods, and events.</span></span>  
   
- O exemplo a seguir define duas interfaces. A segunda interface, `Interface2`, herda `Interface1` e define uma propriedade e um método adicionais.  
+ <span data-ttu-id="7b403-149">O exemplo a seguir define duas interfaces.</span><span class="sxs-lookup"><span data-stu-id="7b403-149">The following example defines two interfaces.</span></span> <span data-ttu-id="7b403-150">A segunda interface, `Interface2`, herda `Interface1` e define uma propriedade e um método adicionais.</span><span class="sxs-lookup"><span data-stu-id="7b403-150">The second interface, `Interface2`, inherits `Interface1` and defines an additional property and method.</span></span>  
   
  [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
   
- O exemplo a seguir implementa `Interface1`, a interface definida no exemplo anterior:  
+ <span data-ttu-id="7b403-151">O exemplo a seguir implementa `Interface1`, a interface definida no exemplo anterior:</span><span class="sxs-lookup"><span data-stu-id="7b403-151">The next example implements `Interface1`, the interface defined in the previous example:</span></span>  
   
  [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
   
- O exemplo final implementa `Interface2`, incluindo um método herdado de `Interface1`:  
+ <span data-ttu-id="7b403-152">O exemplo final implementa `Interface2`, incluindo um método herdado de `Interface1`:</span><span class="sxs-lookup"><span data-stu-id="7b403-152">The final example implements `Interface2`, including a method inherited from `Interface1`:</span></span>  
   
  [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
   
- Você pode implementar uma propriedade readonly com uma propriedade readwrite (ou seja, você não precisa declará-la como readonly na classe sendo implementada).  Implementar uma interface significa implementar pelo menos os membros que a interface declara, mas você pode oferecer mais funcionalidades, como permitir que a propriedade seja gravável.  
+ <span data-ttu-id="7b403-153">Você pode implementar uma propriedade readonly com uma propriedade readwrite (ou seja, você não precisa declará-la como readonly na classe sendo implementada).</span><span class="sxs-lookup"><span data-stu-id="7b403-153">You can implement a readonly property with a readwrite property (that is, you do not have to declare it readonly in the implementing class).</span></span>  <span data-ttu-id="7b403-154">Implementar uma interface significa implementar pelo menos os membros que a interface declara, mas você pode oferecer mais funcionalidades, como permitir que a propriedade seja gravável.</span><span class="sxs-lookup"><span data-stu-id="7b403-154">Implementing an interface promises to implement at least the members that the interface declares, but you can offer more functionality, such as allowing your property to be writable.</span></span>  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a><span data-ttu-id="7b403-155">Tópicos relacionados</span><span class="sxs-lookup"><span data-stu-id="7b403-155">Related Topics</span></span>  
   
-|Título|Descrição|  
+|<span data-ttu-id="7b403-156">Título</span><span class="sxs-lookup"><span data-stu-id="7b403-156">Title</span></span>|<span data-ttu-id="7b403-157">Descrição</span><span class="sxs-lookup"><span data-stu-id="7b403-157">Description</span></span>|  
 |-----------|-----------------|  
-|[Instruções passo a passo: criando e implementando interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.|  
-|[Variação em Interfaces Genéricas](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
-
+|[<span data-ttu-id="7b403-158">Instruções passo a passo: criando e implementando interfaces</span><span class="sxs-lookup"><span data-stu-id="7b403-158">Walkthrough: Creating and Implementing Interfaces</span></span>](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|<span data-ttu-id="7b403-159">Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.</span><span class="sxs-lookup"><span data-stu-id="7b403-159">Provides a detailed procedure that takes you through the process of defining and implementing your own interface.</span></span>|  
+|[<span data-ttu-id="7b403-160">Variação em Interfaces Genéricas</span><span class="sxs-lookup"><span data-stu-id="7b403-160">Variance in Generic Interfaces</span></span>](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|<span data-ttu-id="7b403-161">Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7b403-161">Discusses covariance and contravariance in generic interfaces and provides a list of variant generic interfaces in the .NET Framework.</span></span>|

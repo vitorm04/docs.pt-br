@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,78 +15,79 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 76645ae43ce6754ffdf505729ec1198785a71561
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: a79744d99571fa1428da1fade8f63c4c80ae7b6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="compiling-apps-with-net-native"></a>Compilando aplicativos com o .NET Nativo
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] é uma tecnologia de pré-compilação para compilação e implantação de aplicativos do Windows que está incluída com [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]. Ele compila automaticamente a versão de lançamento de aplicativos escritos em código gerenciado (C# ou Visual Basic) e que são destinados ao .NET Framework e ao Windows 10 para código nativo.  
+# <a name="compiling-apps-with-net-native"></a><span data-ttu-id="a30b0-102">Compilando aplicativos com o .NET Nativo</span><span class="sxs-lookup"><span data-stu-id="a30b0-102">Compiling Apps with .NET Native</span></span>
+[!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="a30b0-103">é uma tecnologia de pré-compilação para criar e implantar aplicativos do Windows que está incluída no Visual Studio 2015 e versões posteriores.</span><span class="sxs-lookup"><span data-stu-id="a30b0-103"> is a precompilation technology for building and deploying Windows apps that is included with Visual Studio 2015 and later versions.</span></span> <span data-ttu-id="a30b0-104">Ele compila automaticamente a versão de lançamento de aplicativos escritos em código gerenciado (C# ou Visual Basic) e que são destinados ao .NET Framework e ao Windows 10 para código nativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-104">It automatically compiles the release version of apps that are written in managed code (C# or Visual Basic) and that target the .NET Framework and Windows 10 to native code.</span></span>  
   
- Normalmente, os aplicativos com destino para o .NET Framework são compilados para IL (linguagem intermediária). No tempo de execução, uma compilação JIT (just-in-time) converte o IL em código nativo. Em contraste, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] compila aplicativos do Windows diretamente em código nativo. Para desenvolvedores, isso significa que:  
+ <span data-ttu-id="a30b0-105">Normalmente, os aplicativos com destino para o .NET Framework são compilados para IL (linguagem intermediária).</span><span class="sxs-lookup"><span data-stu-id="a30b0-105">Typically, apps that target the .NET Framework are compiled to intermediate language (IL).</span></span> <span data-ttu-id="a30b0-106">No tempo de execução, uma compilação JIT (just-in-time) converte o IL em código nativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-106">At run time, the just-in-time (JIT) compiler translates the IL to native code.</span></span> <span data-ttu-id="a30b0-107">Em contraste, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] compila aplicativos do Windows diretamente em código nativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-107">In contrast, [!INCLUDE[net_native](../../../includes/net-native-md.md)] compiles Windows apps directly to native code.</span></span> <span data-ttu-id="a30b0-108">Para desenvolvedores, isso significa que:</span><span class="sxs-lookup"><span data-stu-id="a30b0-108">For developers, this means:</span></span>  
   
--   Seus aplicativos fornecerão o melhor desempenho do código nativo.  
+-   <span data-ttu-id="a30b0-109">O desempenho do código nativo de recurso de seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="a30b0-109">Your apps feature the performance of native code.</span></span> <span data-ttu-id="a30b0-110">Geralmente, o desempenho será superior ao código que é compilado pela primeira vez para IL e, em seguida, compilado para código nativo, o compilador JIT.</span><span class="sxs-lookup"><span data-stu-id="a30b0-110">Usually, performance will be superior to code that is first compiled to IL and then compiled to native code by the JIT compiler.</span></span> 
   
--   Você pode continuar a programar em C# ou em Visual Basic.  
+-   <span data-ttu-id="a30b0-111">Você pode continuar a programar em C# ou em Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a30b0-111">You can continue to program in C# or Visual Basic.</span></span>  
   
--   Você pode continuar a aproveitar os recursos fornecidos pelo .NET Framework, incluindo sua biblioteca de classes, coleta de lixo, gerenciamento automático de memória e manipulação de exceção.  
+-   <span data-ttu-id="a30b0-112">Você pode continuar a aproveitar os recursos fornecidos pelo .NET Framework, incluindo sua biblioteca de classes, coleta de lixo, gerenciamento automático de memória e manipulação de exceção.</span><span class="sxs-lookup"><span data-stu-id="a30b0-112">You can continue to take advantage of the resources provided by the .NET Framework, including its class library, automatic memory management and garbage collection, and exception handling.</span></span>  
   
- Para os usuários dos seus aplicativos, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] oferece estas vantagens:  
+ <span data-ttu-id="a30b0-113">Para os usuários dos seus aplicativos, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] oferece estas vantagens:</span><span class="sxs-lookup"><span data-stu-id="a30b0-113">For users of your apps, [!INCLUDE[net_native](../../../includes/net-native-md.md)] offers these advantages:</span></span>  
   
--   Tempos de execução rápidos  
+-   <span data-ttu-id="a30b0-114">Tempos de execução mais rápidos para a maioria dos aplicativos e cenários.</span><span class="sxs-lookup"><span data-stu-id="a30b0-114">Faster execution times for the majority of apps and scenarios.</span></span>
   
--   Tempos de inicialização rápida consistentemente  
+-   <span data-ttu-id="a30b0-115">Tempos de inicialização mais rápidos para a maioria dos aplicativos e cenários.</span><span class="sxs-lookup"><span data-stu-id="a30b0-115">Faster startup times for the majority of apps and scenarios.</span></span> 
   
--   Custos baixos de implantação e atualização  
+-   <span data-ttu-id="a30b0-116">Baixo custo de implantação e atualização.</span><span class="sxs-lookup"><span data-stu-id="a30b0-116">Low deployment and update costs.</span></span>  
   
--   Uso da memória otimizada do aplicativo  
-  
- Porém, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] representa mais do que uma compilação para código nativo. Ele transforma a maneira que os aplicativos .NET Framework são criados e executados. Em particular:  
-  
--   Durante a pré-compilação, partes necessárias do .NET Framework são vinculadas estaticamente ao seu aplicativo. Isso permite que o aplicativo seja executado com as bibliotecas de aplicativo local do .NET Framework e o compilador realize análises globais para proporcionar vantagens de desempenho. Como resultado, os aplicativos são inicializados consistentemente mais rápido mesmo depois de atualizações do .NET Framework.  
-  
--   O tempo de execução do [!INCLUDE[net_native](../../../includes/net-native-md.md)] é otimizado para pré-compilação estática, podendo oferecer melhor desempenho. Ao mesmo tempo, ele mantém os recursos de reflexão principais que os desenvolvedores acham tão produtivos.  
-  
--   O [!INCLUDE[net_native](../../../includes/net-native-md.md)] usa o mesmo back-end que o compilador do C++, que é otimizado para cenários de pré-compilação estáticos.  
-  
- O [!INCLUDE[net_native](../../../includes/net-native-md.md)] também oferece benefícios de desempenho do C++ para desenvolvedores de código gerenciado porque ele usa as ferramentas iguais ou semelhantes às do C++ nos bastidores, conforme mostrado nesta tabela.  
-  
-||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
-|-|----------------------------------------------------------------|-----------|  
-|Libraries|O .NET Framework + Tempo de Execução do Windows|Win32 + Tempo de Execução do Windows|  
-|Compilador|Compilador de otimização de UTC|Compilador de otimização de UTC|  
-|Implantado|Binários prontos para execução|Binários prontos para execução (ASM)|  
-|Tempo de execução|MRT.dll (tempo de execução de CLR mínimo)|CRT.dll (tempo de execução C)|  
-  
- Para aplicativos do Windows para Windows 10, carregue os binários de compilação de código do .NET Native nos pacotes do aplicativo (arquivos .appx) para a Windows Store.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- Para obter mais informações sobre o desenvolvimento de aplicativos com compilação de código do .NET Nativo, consulte estes tópicos:  
-  
--   [Guia de Introdução à compilação de código do .NET Native: passo a passo da experiência de desenvolvedor](../../../docs/framework/net-native/getting-started-with-net-native.md)  
-  
--   [Compilação e .NET Native:](../../../docs/framework/net-native/net-native-and-compilation.md) como o .NET Native compila seu projeto para código nativo.  
-  
--   [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
-  
-    -   [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
-  
-    -   [Referência da API de reflexão](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
-  
-    -   [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
-  
--   [Serialização e metadados](../../../docs/framework/net-native/serialization-and-metadata.md)  
-  
--   [Migrando seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
-  
--   [Solução de problemas gerais do .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes do .NET Native](http://msdn.microsoft.com/vstudio/dn642499.aspx)
+-   <span data-ttu-id="a30b0-117">Otimização de uso de memória do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-117">Optimized app memory usage.</span></span>  
 
+> [!IMPORTANT]
+> <span data-ttu-id="a30b0-118">Para a maioria dos aplicativos e cenários .NET Native oferece tempos de inicialização significativamente mais rápidos e melhor desempenho quando comparado a um aplicativo compilado para IL ou para uma imagem NGEN.</span><span class="sxs-lookup"><span data-stu-id="a30b0-118">For the vast majority of apps and scenarios, .NET Native offers significantly faster startup times and superior performance when compared to an app compiled to IL or to an NGEN image.</span></span> <span data-ttu-id="a30b0-119">No entanto, os resultados podem variar.</span><span class="sxs-lookup"><span data-stu-id="a30b0-119">However, your results may vary.</span></span> <span data-ttu-id="a30b0-120">Para garantir que seu aplicativo tem se beneficiam dos aprimoramentos de desempenho do .NET nativo, você deve comparar seu desempenho com que a versão não - .NET nativo do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-120">To ensure that your app has benefited from the performance enhancements of .NET Native, you should compare its performance with that of the non-.NET Native version of your app.</span></span> <span data-ttu-id="a30b0-121">Para obter mais informações, consulte [visão geral de sessão de desempenho](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview).</span><span class="sxs-lookup"><span data-stu-id="a30b0-121">For more information, see [Performance Session Overview](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview).</span></span>
+ 
+<span data-ttu-id="a30b0-122">Porém, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] representa mais do que uma compilação para código nativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-122">But [!INCLUDE[net_native](../../../includes/net-native-md.md)] involves more than a compilation to native code.</span></span> <span data-ttu-id="a30b0-123">Ele transforma a maneira que os aplicativos .NET Framework são criados e executados.</span><span class="sxs-lookup"><span data-stu-id="a30b0-123">It transforms the way that .NET Framework apps are built and executed.</span></span> <span data-ttu-id="a30b0-124">Em particular:</span><span class="sxs-lookup"><span data-stu-id="a30b0-124">In particular:</span></span>  
+  
+-   <span data-ttu-id="a30b0-125">Durante a pré-compilação, partes necessárias do .NET Framework são vinculadas estaticamente ao seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-125">During precompilation, required portions of the .NET Framework are statically linked into your app.</span></span> <span data-ttu-id="a30b0-126">Isso permite que o aplicativo seja executado com as bibliotecas de aplicativo local do .NET Framework e o compilador realize análises globais para proporcionar vantagens de desempenho.</span><span class="sxs-lookup"><span data-stu-id="a30b0-126">This allows the app to run with app-local libraries of the .NET Framework, and the compiler to perform global analysis to deliver performance wins.</span></span> <span data-ttu-id="a30b0-127">Como resultado, os aplicativos são inicializados consistentemente mais rápido mesmo depois de atualizações do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a30b0-127">As a result, apps launch consistently faster even after .NET Framework updates.</span></span>  
+  
+-   <span data-ttu-id="a30b0-128">O [!INCLUDE[net_native](../../../includes/net-native-md.md)] tempo de execução é otimizado para pré-compilação estática e na grande maioria dos casos, oferece um desempenho superior.</span><span class="sxs-lookup"><span data-stu-id="a30b0-128">The [!INCLUDE[net_native](../../../includes/net-native-md.md)] runtime is optimized for static precompilation and in the vast majority of cases offers superior performance.</span></span> <span data-ttu-id="a30b0-129">Ao mesmo tempo, ele mantém os recursos de reflexão principais que os desenvolvedores acham tão produtivos.</span><span class="sxs-lookup"><span data-stu-id="a30b0-129">At the same time, it retains the core reflection features that developers find so productive.</span></span>  
+  
+-   <span data-ttu-id="a30b0-130">O [!INCLUDE[net_native](../../../includes/net-native-md.md)] usa o mesmo back-end que o compilador do C++, que é otimizado para cenários de pré-compilação estáticos.</span><span class="sxs-lookup"><span data-stu-id="a30b0-130">[!INCLUDE[net_native](../../../includes/net-native-md.md)] uses the same back end as the C++ compiler, which is optimized for static precompilation scenarios.</span></span>  
+  
+ <span data-ttu-id="a30b0-131">O [!INCLUDE[net_native](../../../includes/net-native-md.md)] também oferece benefícios de desempenho do C++ para desenvolvedores de código gerenciado porque ele usa as ferramentas iguais ou semelhantes às do C++ nos bastidores, conforme mostrado nesta tabela.</span><span class="sxs-lookup"><span data-stu-id="a30b0-131">[!INCLUDE[net_native](../../../includes/net-native-md.md)] is able to bring the performance benefits of C++ to managed code developers because it uses the same or similar tools as C++ under the hood, as shown in this table.</span></span>  
+  
+||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|<span data-ttu-id="a30b0-132">C++</span><span class="sxs-lookup"><span data-stu-id="a30b0-132">C++</span></span>|  
+|-|----------------------------------------------------------------|-----------|  
+|<span data-ttu-id="a30b0-133">Libraries</span><span class="sxs-lookup"><span data-stu-id="a30b0-133">Libraries</span></span>|<span data-ttu-id="a30b0-134">O .NET Framework + Tempo de Execução do Windows</span><span class="sxs-lookup"><span data-stu-id="a30b0-134">The .NET Framework + Windows Runtime</span></span>|<span data-ttu-id="a30b0-135">Win32 + Tempo de Execução do Windows</span><span class="sxs-lookup"><span data-stu-id="a30b0-135">Win32 + Windows Runtime</span></span>|  
+|<span data-ttu-id="a30b0-136">Compilador</span><span class="sxs-lookup"><span data-stu-id="a30b0-136">Compiler</span></span>|<span data-ttu-id="a30b0-137">Compilador de otimização de UTC</span><span class="sxs-lookup"><span data-stu-id="a30b0-137">UTC optimizing compiler</span></span>|<span data-ttu-id="a30b0-138">Compilador de otimização de UTC</span><span class="sxs-lookup"><span data-stu-id="a30b0-138">UTC optimizing compiler</span></span>|  
+|<span data-ttu-id="a30b0-139">Implantado</span><span class="sxs-lookup"><span data-stu-id="a30b0-139">Deployed</span></span>|<span data-ttu-id="a30b0-140">Binários prontos para execução</span><span class="sxs-lookup"><span data-stu-id="a30b0-140">Ready-to-run binaries</span></span>|<span data-ttu-id="a30b0-141">Binários prontos para execução (ASM)</span><span class="sxs-lookup"><span data-stu-id="a30b0-141">Ready-to-run binaries (ASM)</span></span>|  
+|<span data-ttu-id="a30b0-142">Tempo de execução</span><span class="sxs-lookup"><span data-stu-id="a30b0-142">Runtime</span></span>|<span data-ttu-id="a30b0-143">MRT.dll (tempo de execução de CLR mínimo)</span><span class="sxs-lookup"><span data-stu-id="a30b0-143">MRT.dll (Minimal CLR Runtime)</span></span>|<span data-ttu-id="a30b0-144">CRT.dll (tempo de execução C)</span><span class="sxs-lookup"><span data-stu-id="a30b0-144">CRT.dll (C Runtime)</span></span>|  
+  
+ <span data-ttu-id="a30b0-145">Para aplicativos do Windows para Windows 10, carregue os binários de compilação de código do .NET Native nos pacotes do aplicativo (arquivos .appx) para a Windows Store.</span><span class="sxs-lookup"><span data-stu-id="a30b0-145">For Windows apps for Windows 10, you upload .NET Native Code Compilation binaries in app packages (.appx files) to the Windows Store.</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="a30b0-146">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="a30b0-146">In This Section</span></span>  
+ <span data-ttu-id="a30b0-147">Para obter mais informações sobre o desenvolvimento de aplicativos com compilação de código do .NET Nativo, consulte estes tópicos:</span><span class="sxs-lookup"><span data-stu-id="a30b0-147">For more information about developing apps with .NET Native Code Compilation, see these topics:</span></span>  
+  
+-   [<span data-ttu-id="a30b0-148">Guia de Introdução à compilação de código do .NET Native: passo a passo da experiência de desenvolvedor</span><span class="sxs-lookup"><span data-stu-id="a30b0-148">Getting Started with .NET Native Code Compilation: The Developer Experience Walkthrough</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)  
+  
+-   <span data-ttu-id="a30b0-149">[Compilação e .NET Native:](../../../docs/framework/net-native/net-native-and-compilation.md) como o .NET Native compila seu projeto para código nativo.</span><span class="sxs-lookup"><span data-stu-id="a30b0-149">[.NET Native and Compilation:](../../../docs/framework/net-native/net-native-and-compilation.md) How .NET Native compiles your project to native code.</span></span>  
+  
+-   [<span data-ttu-id="a30b0-150">Reflexão e .NET Native</span><span class="sxs-lookup"><span data-stu-id="a30b0-150">Reflection and .NET Native</span></span>](../../../docs/framework/net-native/reflection-and-net-native.md)  
+  
+    -   [<span data-ttu-id="a30b0-151">APIs que dependem de reflexão</span><span class="sxs-lookup"><span data-stu-id="a30b0-151">APIs That Rely on Reflection</span></span>](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+  
+    -   [<span data-ttu-id="a30b0-152">Referência da API de reflexão</span><span class="sxs-lookup"><span data-stu-id="a30b0-152">Reflection API Reference</span></span>](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+  
+    -   [<span data-ttu-id="a30b0-153">Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="a30b0-153">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+  
+-   [<span data-ttu-id="a30b0-154">Serialização e metadados</span><span class="sxs-lookup"><span data-stu-id="a30b0-154">Serialization and Metadata</span></span>](../../../docs/framework/net-native/serialization-and-metadata.md)  
+  
+-   [<span data-ttu-id="a30b0-155">Migrando seu aplicativo da Windows Store para .NET Native</span><span class="sxs-lookup"><span data-stu-id="a30b0-155">Migrating Your Windows Store App to .NET Native</span></span>](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
+  
+-   [<span data-ttu-id="a30b0-156">Solução de problemas gerais do .NET Native</span><span class="sxs-lookup"><span data-stu-id="a30b0-156">.NET Native General Troubleshooting</span></span>](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
+  
+## <a name="see-also"></a><span data-ttu-id="a30b0-157">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a30b0-157">See Also</span></span>  
+ [<span data-ttu-id="a30b0-158">Perguntas frequentes do .NET Native</span><span class="sxs-lookup"><span data-stu-id="a30b0-158">.NET Native FAQ</span></span>](http://msdn.microsoft.com/vstudio/dn642499.aspx)

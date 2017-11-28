@@ -5,63 +5,60 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3c6410d06565c9dcb9696d0fcb4f3fc749a19c48
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: c68e00930b518a637a42e99c422e4acf7982f5f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-sql"></a>LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é um componente do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.  
+# <a name="linq-to-sql"></a><span data-ttu-id="b17b1-102">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="b17b1-102">LINQ to SQL</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b17b1-103"> é um componente do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.</span><span class="sxs-lookup"><span data-stu-id="b17b1-103"> is a component of [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] version 3.5 that provides a run-time infrastructure for managing relational data as objects.</span></span>  
   
 > [!NOTE]
->  Os dados relacionais aparecem como uma coleção de tabelas bidimensionais (*relações* ou *arquivos simples*), em que as colunas comuns relacionam as tabelas entre si. Para usar o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] efetivamente, você deve ter alguma familiaridade com os conceitos fundamentais de bancos de dados relacionais.  
+>  <span data-ttu-id="b17b1-104">Os dados relacionais aparecem como uma coleção de tabelas bidimensionais (*relações* ou *arquivos simples*), em que as colunas comuns relacionam as tabelas entre si.</span><span class="sxs-lookup"><span data-stu-id="b17b1-104">Relational data appears as a collection of two-dimensional tables (*relations* or *flat files*), where common columns relate tables to each other.</span></span> <span data-ttu-id="b17b1-105">Para usar o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] efetivamente, você deve ter alguma familiaridade com os conceitos fundamentais de bancos de dados relacionais.</span><span class="sxs-lookup"><span data-stu-id="b17b1-105">To use [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] effectively, you must have some familiarity with the underlying principles of relational databases.</span></span>  
   
- No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], o modelo de dados de um banco de dados relacional é mapeado para um modelo de objeto expresso na linguagem de programação do desenvolvedor. Quando o aplicativo é executado, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte em SQL as consultas integradas à linguagem no modelo de objeto e as envia ao banco de dados para execução. Quando o banco de dados retorna os resultados, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte-os novamente em objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
+ <span data-ttu-id="b17b1-106">No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], o modelo de dados de um banco de dados relacional é mapeado para um modelo de objeto expresso na linguagem de programação do desenvolvedor.</span><span class="sxs-lookup"><span data-stu-id="b17b1-106">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the data model of a relational database is mapped to an object model expressed in the programming language of the developer.</span></span> <span data-ttu-id="b17b1-107">Quando o aplicativo é executado, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte em SQL as consultas integradas à linguagem no modelo de objeto e as envia ao banco de dados para execução.</span><span class="sxs-lookup"><span data-stu-id="b17b1-107">When the application runs, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates into SQL the language-integrated queries in the object model and sends them to the database for execution.</span></span> <span data-ttu-id="b17b1-108">Quando o banco de dados retorna os resultados, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte-os novamente em objetos com os quais você pode trabalhar em sua própria linguagem de programação.</span><span class="sxs-lookup"><span data-stu-id="b17b1-108">When the database returns the results, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates them back to objects that you can work with in your own programming language.</span></span>  
   
- Os desenvolvedores que usam o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] normalmente usam o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], que fornece uma interface do usuário para implementar muitos dos recursos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ <span data-ttu-id="b17b1-109">Os desenvolvedores que usam o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] normalmente usam o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], que fornece uma interface do usuário para implementar muitos dos recursos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-109">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], which provides a user interface for implementing many of the features of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- A documentação incluída nessa versão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descreve as técnicas, os processos e os blocos de construção básicos necessários para compilar aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Você também pode pesquisar assuntos específicos na Biblioteca MSDN e participar do [Fórum da LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), no qual poderá discutir tópicos mais complexos detalhadamente com especialistas. Por fim, o white paper [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) (LINQ to SQL: consulta integrada à linguagem do .NET para dados relacionais) fornece informações detalhadas sobre a tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], com exemplos de código C# e do [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+ <span data-ttu-id="b17b1-110">A documentação incluída nessa versão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descreve as técnicas, os processos e os blocos de construção básicos necessários para compilar aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-110">The documentation that is included with this release of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] describes the basic building blocks, processes, and techniques you need for building [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications.</span></span> <span data-ttu-id="b17b1-111">Você também pode pesquisar Microsoft Docs para problemas específicos, e você pode participar de [Fórum do LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), onde você pode abordar tópicos mais complexos detalhadamente com especialistas.</span><span class="sxs-lookup"><span data-stu-id="b17b1-111">You can also search Microsoft Docs for specific issues, and you can participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span> <span data-ttu-id="b17b1-112">Por fim, o white paper [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) (LINQ to SQL: consulta integrada à linguagem do .NET para dados relacionais) fornece informações detalhadas sobre a tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], com exemplos de código C# e do [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-112">Finally, the [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) white paper details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# code examples.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
- Fornece uma visão concentrada do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] juntamente com informações sobre como começar a usar o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="b17b1-113">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="b17b1-113">In This Section</span></span>  
+ [<span data-ttu-id="b17b1-114">Introdução</span><span class="sxs-lookup"><span data-stu-id="b17b1-114">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
+ <span data-ttu-id="b17b1-115">Fornece uma visão concentrada do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] juntamente com informações sobre como começar a usar o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-115">Provides a condensed overview of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] along with information about how to get started using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [Guia de Programação](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- Fornece etapas para operações de mapeamento, atualização, depuração e tarefas semelhantes.  
+ [<span data-ttu-id="b17b1-116">Guia de Programação</span><span class="sxs-lookup"><span data-stu-id="b17b1-116">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ <span data-ttu-id="b17b1-117">Fornece etapas para operações de mapeamento, atualização, depuração e tarefas semelhantes.</span><span class="sxs-lookup"><span data-stu-id="b17b1-117">Provides steps for mapping, querying, updating, debugging, and similar tasks.</span></span>  
   
- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- Especifica informações de referência sobre vários aspectos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os tópicos incluem o mapeamento de tipos SQL-CLR, conversão padrão de operadores de consulta e muito mais.  
+ [<span data-ttu-id="b17b1-118">Referência</span><span class="sxs-lookup"><span data-stu-id="b17b1-118">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ <span data-ttu-id="b17b1-119">Especifica informações de referência sobre vários aspectos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-119">Provides reference information about several aspects of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="b17b1-120">Os tópicos incluem o mapeamento de tipos SQL-CLR, conversão padrão de operadores de consulta e muito mais.</span><span class="sxs-lookup"><span data-stu-id="b17b1-120">Topics include SQL-CLR Type Mapping, Standard Query Operator Translation, and more.</span></span>  
   
- [Amostras](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- Fornece links para exemplos de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e C#.  
+ [<span data-ttu-id="b17b1-121">Amostras</span><span class="sxs-lookup"><span data-stu-id="b17b1-121">Samples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
+ <span data-ttu-id="b17b1-122">Fornece links para exemplos de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e C#.</span><span class="sxs-lookup"><span data-stu-id="b17b1-122">Provides links to [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# samples.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Apresenta uma visão geral das tecnologias [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="b17b1-123">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="b17b1-123">Related Sections</span></span>  
+ [<span data-ttu-id="b17b1-124">LINQ (Consulta Integrada à Linguagem)</span><span class="sxs-lookup"><span data-stu-id="b17b1-124">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ <span data-ttu-id="b17b1-125">Apresenta uma visão geral das tecnologias [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-125">Provides an overview of [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] technologies.</span></span>  
   
- [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Descreve as tecnologias [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] para usuários de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+ [<span data-ttu-id="b17b1-126">LINQ</span><span class="sxs-lookup"><span data-stu-id="b17b1-126">LINQ</span></span>](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ <span data-ttu-id="b17b1-127">Descreve as tecnologias [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] para usuários de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-127">Describes [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] technologies for [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] users.</span></span>  
   
- [LINQ to ADO.NET](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- Links para o portal do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  
+ [<span data-ttu-id="b17b1-128">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b17b1-128">LINQ to ADO.NET</span></span>](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ <span data-ttu-id="b17b1-129">Links para o portal do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-129">Links to the [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] portal.</span></span>  
   
- [LINQ to SQL Walkthroughs](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374) (Passo a passo do LINQ to SQL)  
- Lista tutoriais disponíveis para o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ <span data-ttu-id="b17b1-130">[LINQ to SQL Walkthroughs](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374) (Passo a passo do LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="b17b1-130">[LINQ to SQL Walkthroughs](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)</span></span>  
+ <span data-ttu-id="b17b1-131">Lista tutoriais disponíveis para o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-131">Lists walkthroughs available for [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)  
- Descreve como baixar bancos de dados de exemplo usados na documentação.  
+ <span data-ttu-id="b17b1-132">[Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)</span><span class="sxs-lookup"><span data-stu-id="b17b1-132">[Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)</span></span>  
+ <span data-ttu-id="b17b1-133">Descreve como baixar bancos de dados de exemplo usados na documentação.</span><span class="sxs-lookup"><span data-stu-id="b17b1-133">Describes how to download sample databases used in the documentation.</span></span>  
   
- [Visão geral da tecnologia LinqDataSource](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
- Descreve como o controle <xref:System.Web.UI.WebControls.LinqDataSource> expõe o [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] para desenvolvedores Web por meio da arquitetura de controle de fonte de dados [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].
-
+ [<span data-ttu-id="b17b1-134">Visão geral da tecnologia LinqDataSource</span><span class="sxs-lookup"><span data-stu-id="b17b1-134">LinqDataSource Technology Overview</span></span>](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ <span data-ttu-id="b17b1-135">Descreve como o controle <xref:System.Web.UI.WebControls.LinqDataSource> expõe o [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] para desenvolvedores Web por meio da arquitetura de controle de fonte de dados [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b17b1-135">Describes how the <xref:System.Web.UI.WebControls.LinqDataSource> control exposes [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] to Web developers through the [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] data-source control architecture.</span></span>
