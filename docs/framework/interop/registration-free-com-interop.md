@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
 - COM interop, registration-free COM interop
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dd08f4d4466582b1e6ff1f80f586482cd3e2ec0c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28ecb3419bddcc8e9a192b240a7bf90474314c1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidade COM sem registro
 A interoperabilidade COM sem registro ativa um componente sem usar o Registro do Windows para armazenar informações de assembly. Em vez de registrar um componente em um computador durante a implantação, você pode criar arquivos de manifesto estilo Win32 em tempo de design que contêm informações sobre associação e a ativação. Esses arquivos de manifesto, em vez de chaves do Registro, direcionam a ativação de um objeto.  
@@ -60,15 +53,14 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configurando componentes COM para ativação sem registro  
   
-1.  Para um componente COM participar da ativação sem registro, ele deve ser implantado como um assembly lado a lado. Assemblies de lado a lado são não gerenciados.  Para obter mais informações, veja “Assemblies lado a lado” na Biblioteca MSDN.  
+1.  Para um componente COM participar da ativação sem registro, ele deve ser implantado como um assembly lado a lado. Assemblies de lado a lado são não gerenciados.  Para obter mais informações, consulte [Assemblies lado a lado de uso](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
   
      Para usar os assemblies com lado a lado COM, um desenvolvedor de aplicativos baseados em .NET em sua empresa deve fornecer um manifesto de aplicativo contendo as informações de associação e a ativação. O suporte para assemblies lado a lado não gerenciados é criado no sistema operacional Windows XP. O tempo de execução de COM, com suporte pelo sistema operacional, verifica um manifesto de aplicativo para obter informações de ativação quando o componente está sendo ativado não está no Registro.  
   
-     Ativação sem registro é opcional para componentes COM instalados no Windows XP. Para obter instruções detalhadas sobre como adicionar um assembly lado a lado para um aplicativo, pesquise por "Usando assemblies lado a lado" na biblioteca MSDN.  
+     Ativação sem registro é opcional para componentes COM instalados no Windows XP. Para obter instruções detalhadas sobre como adicionar um assembly lado a lado para um aplicativo, consulte [Assemblies lado a lado de uso](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
   
     > [!NOTE]
     >  A execução lado a lado é um recurso do .NET que habilita várias versões do tempo de execução e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador, ao mesmo tempo. Execução lado a lado e assemblies lado a lado são mecanismos diferentes para fornecer funcionalidade de lado a lado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
-

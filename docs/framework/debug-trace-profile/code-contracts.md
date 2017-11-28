@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Code contracts
+- csharp
+- vb
+helpviewer_keywords: Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 78553d77ea9a669f7cebdd9187e2436d3b095a75
-ms.openlocfilehash: c0eca978f32c4f96ad976718584c0bf92bf638ec
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="code-contracts"></a>Contratos de código
 Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código. As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade. As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado. As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.  
@@ -50,7 +45,7 @@ Os contratos de código fornecem uma maneira de especificar pré-condições, p�
  Para obter ferramentas e instruções detalhadas sobre como usar contratos de código, consulte [Contratos de código](http://go.microsoft.com/fwlink/?LinkId=152461) no site do DevLabs no MSDN.  
   
 ## <a name="preconditions"></a>Pré-condições  
- É possível expressar pré-condições usando o método <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=fullName>. As pré-condições especificam o estado quando um método é invocado. Geralmente, elas são usadas para especificar valores de parâmetro válidos. Todos os membros mencionados nas pré-condições devem ser, pelo menos, tão acessíveis quanto o próprio método; caso contrário, a pré-condição pode não ser compreendida por todos os chamadores de um método. A condição não deve ter efeitos colaterais. O comportamento em tempo de execução de pré-condições com falha é determinado pelo analisador de tempo de execução.  
+ É possível expressar pré-condições usando o método <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. As pré-condições especificam o estado quando um método é invocado. Geralmente, elas são usadas para especificar valores de parâmetro válidos. Todos os membros mencionados nas pré-condições devem ser, pelo menos, tão acessíveis quanto o próprio método; caso contrário, a pré-condição pode não ser compreendida por todos os chamadores de um método. A condição não deve ter efeitos colaterais. O comportamento em tempo de execução de pré-condições com falha é determinado pelo analisador de tempo de execução.  
   
  Por exemplo, a pré-condição a seguir expressa que o parâmetro `x` não deve ser nulo.  
   
@@ -67,7 +62,7 @@ Os contratos de código fornecem uma maneira de especificar pré-condições, p�
   
 -   O conjunto inteiro de instruções desse tipo é seguido por uma chamada de método <xref:System.Diagnostics.Contracts.Contract> explícita, como uma chamada ao método <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> ou <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>.  
   
- Quando as instruções `if`-`then`-`throw` aparecem neste formato, as ferramentas as reconhecem como instruções `requires` herdadas. Se nenhum outro contrato seguir a sequência `if`-`then`-`throw`, encerre o código com o método <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=fullName>.  
+ Quando as instruções `if`-`then`-`throw` aparecem neste formato, as ferramentas as reconhecem como instruções `requires` herdadas. Se nenhum outro contrato seguir a sequência `if`-`then`-`throw`, encerre o código com o método <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>.  
   
 ```  
 if ( x == null ) throw new ...  
@@ -87,7 +82,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
  `Contract.Ensures( this.F > 0 );`  
   
 ### <a name="exceptional-postconditions"></a>Pós-condições excepcionais  
- Pós-condições excepcionais são pós-condições que devem ser `true` quando uma exceção específica é gerada por um método. É possível especificar essas pós-condições usando o método <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=fullName>, como mostra o exemplo a seguir.  
+ Pós-condições excepcionais são pós-condições que devem ser `true` quando uma exceção específica é gerada por um método. É possível especificar essas pós-condições usando o método <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>, como mostra o exemplo a seguir.  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
@@ -193,7 +188,7 @@ Contract.Invariant(this.x > this.y);
   
 -   Qualquer método cujo nome totalmente qualificado começa com “System.Diagnostics.Contracts.Contract”, “System.String”, “System.IO.Path” ou “System.Type”.  
   
--   Qualquer representante invocado, desde que o próprio tipo de representante seja atribuído com o <xref:System.Diagnostics.Contracts.PureAttribute>. Os tipos de representante <xref:System.Predicate%601?displayProperty=fullName> e <xref:System.Comparison%601?displayProperty=fullName> são considerados puros.  
+-   Qualquer representante invocado, desde que o próprio tipo de representante seja atribuído com o <xref:System.Diagnostics.Contracts.PureAttribute>. Os tipos de representante <xref:System.Predicate%601?displayProperty=nameWithType> e <xref:System.Comparison%601?displayProperty=nameWithType> são considerados puros.  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>Visibilidade  
@@ -202,5 +197,5 @@ Contract.Invariant(this.x > this.y);
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra o uso de contratos de código.  
   
- [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)] [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]
-
+ [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
+ [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

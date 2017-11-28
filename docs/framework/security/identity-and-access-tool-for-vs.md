@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a009f37e1f16646df10e693a10827990b073c65c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Ferramenta de Identidade e Acesso para o Visual Studio 2012
 Este tópico descreve a nova Ferramenta de Identidade e Acesso para o Visual Studio 11. Você pode baixar essa ferramenta da seguinte URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) ou diretamente do Visual Studio 11 pesquisando por “identidade” diretamente no Gerenciador de Extensões.  
@@ -40,4 +38,3 @@ Este tópico descreve a nova Ferramenta de Identidade e Acesso para o Visual Stu
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do WIF](../../../docs/framework/security/wif-features.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas de executar código gerenciado em um thread que mantém o bloqueio do carregador do sistema operacional Microsoft Windows.  Qualquer execução desse tipo é inválida porque pode levar a deadlocks e ao uso de DLLs antes de elas terem sido inicializadas pelo carregador do sistema operacional.  
@@ -45,7 +38,7 @@ O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas 
  Por fim, há casos em que chamadas para DLLs podem ocorrer antes que essas DLLs tenham sido corretamente inicializadas pelo carregador do sistema operacional.  Ao contrário das falhas de deadlock, que podem ser diagnosticadas examinando as pilhas de todos os threads envolvidos no deadlock, é muito difícil diagnosticar o uso de DLLs não inicializadas sem usar esse MDA.  
   
 ## <a name="cause"></a>Causa  
- Assemblies C++ mistos gerenciados/não gerenciados criados para versões do .NET Framework 1.0 ou 1.1 geralmente tentam executar código gerenciado dentro do bloqueio do carregador, a menos que cuidado especial tenha sido tomado, por exemplo, vinculando com **/NOENTRY**.  Para obter uma descrição detalhada desses problemas, consulte "Problema no carregamento de DLL mista" na biblioteca MSDN.  
+ Assemblies C++ mistos gerenciados/não gerenciados criados para versões do .NET Framework 1.0 ou 1.1 geralmente tentam executar código gerenciado dentro do bloqueio do carregador, a menos que cuidado especial tenha sido tomado, por exemplo, vinculando com **/NOENTRY**.
   
  Assemblies C++ mistos gerenciados/não gerenciados criados para o .NET Framework versão 2.0 são menos suscetíveis a esses problemas, tendo o mesmo risco reduzido que aplicativos usando DLLs não gerenciadas que violam as regras do sistema operacional.  Por exemplo, se o ponto de entrada `DllMain` de uma DLL não gerenciada chama `CoCreateInstance` para obter um objeto gerenciado que foi exposto a COM, o resultado é uma tentativa de executar código gerenciado dentro do bloqueio do carregador. Para obter mais informações sobre problemas de bloqueio do carregador do .NET Framework versão 2.0 e posteriores, consulte [Inicialização de assemblies mistos](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
@@ -72,4 +65,3 @@ O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas 
   
 ## <a name="see-also"></a>Consulte também  
  [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
