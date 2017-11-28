@@ -8,23 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e83b85d970f36745bb1a0bcf04253c678764805e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="windows-workflow-foundation-configuration-schema"></a>Esquema de configuração do Windows Workflow Foundation
-[!INCLUDE[wf](../../../../../includes/wf-md.md)]elementos de configuração permitem que você configure aplicativos de fluxo de trabalho. Para um aplicativo de fluxo de trabalho, você pode configurar entre outras coisas, controle e rastreamento. Para obter mais informações sobre acompanhamento e rastreamento, consulte [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) (Acompanhamento e rastreamento de fluxo de trabalho). Para serviços de fluxo de trabalho, você também pode usar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] elementos de configuração. Para obter mais detalhes sobre [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], consulte [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md) (Esquema de configuração do WCF).  
+# <a name="windows-workflow-foundation-configuration-schema"></a><span data-ttu-id="42dad-102">Esquema de configuração do Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="42dad-102">Windows Workflow Foundation Configuration Schema</span></span>
+[!INCLUDE[wf](../../../../../includes/wf-md.md)]<span data-ttu-id="42dad-103">elementos de configuração permitem que você configure aplicativos de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="42dad-103"> configuration elements enable you to configure workflow applications.</span></span> <span data-ttu-id="42dad-104">Para um aplicativo de fluxo de trabalho, você pode configurar entre outras coisas, controle e rastreamento.</span><span class="sxs-lookup"><span data-stu-id="42dad-104">For a workflow application, you can configure among other things, tracking and tracing.</span></span> <span data-ttu-id="42dad-105">Para obter mais informações sobre acompanhamento e rastreamento, consulte [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) (Acompanhamento e rastreamento de fluxo de trabalho).</span><span class="sxs-lookup"><span data-stu-id="42dad-105">For more information about tracking and tracing, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span> <span data-ttu-id="42dad-106">Para serviços de fluxo de trabalho, você também pode usar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] elementos de configuração.</span><span class="sxs-lookup"><span data-stu-id="42dad-106">For workflow services, you can also use [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] configuration elements.</span></span> <span data-ttu-id="42dad-107">Para obter mais detalhes sobre [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], consulte [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md) (Esquema de configuração do WCF).</span><span class="sxs-lookup"><span data-stu-id="42dad-107">For more details about [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], see [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).</span></span>  
   
- Porque os arquivos de configuração são formatados como XML, você deve estar familiarizado com XML se você quiser editar manualmente usando um editor de texto. Caso contrário, você pode ter problemas, como uma marca de elemento XML unfound ou atributo. Isso ocorre porque marcas de elementos XML e atributos diferenciam maiúsculas de minúsculas.  
+ <span data-ttu-id="42dad-108">Porque os arquivos de configuração são formatados como XML, você deve estar familiarizado com XML se você quiser editar manualmente usando um editor de texto.</span><span class="sxs-lookup"><span data-stu-id="42dad-108">Because configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="42dad-109">Caso contrário, você pode ter problemas, como uma marca de elemento XML unfound ou atributo.</span><span class="sxs-lookup"><span data-stu-id="42dad-109">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="42dad-110">Isso ocorre porque marcas de elementos XML e atributos diferenciam maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="42dad-110">This is because XML element tags and attributes are case-sensitive.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/system-servicemodel-of-workflow.md)  
- Descreve o elemento **ServiceModel**.
-
+## <a name="in-this-section"></a><span data-ttu-id="42dad-111">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="42dad-111">In This Section</span></span>  
+ [<span data-ttu-id="42dad-112">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="42dad-112">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/system-servicemodel-of-workflow.md)  
+ <span data-ttu-id="42dad-113">Descreve o elemento **ServiceModel**.</span><span class="sxs-lookup"><span data-stu-id="42dad-113">Describes the **ServiceModel** element.</span></span>
