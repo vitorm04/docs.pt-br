@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b9cfd81b966e2bab95aa780a4fbde26abec74b00
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="manipulations-and-inertia-overview"></a>Visão geral de manipulações e inércia
 As *manipulações* permitem aos usuários mover, girar e redimensionar elementos de interface do usuário usando *manipuladores*. Um manipulador representa um mouse ou (em um cenário sensível ao toque) uma caneta ou um dedo.  
@@ -85,4 +83,3 @@ As *manipulações* permitem aos usuários mover, girar e redimensionar elemento
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Input.Manipulations>
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
 Você pode criar dois tipos de implantações de aplicativos do .NET Core:
@@ -82,4 +80,3 @@ Para obter exemplos passo a passo de como implantar aplicativos .NET Core com fe
 [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)   
 [Pacotes, metapacotes e estruturas](../packages.md)   
 [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
-

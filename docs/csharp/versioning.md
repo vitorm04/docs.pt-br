@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>Controle de versão em C# #
 
 Neste tutorial, você aprenderá o que significa o controle de versão no .NET. Você também aprenderá os fatores a serem considerados ao fazer o controle de versão de sua biblioteca, bem como atualizar para uma nova versão da biblioteca.
@@ -89,7 +87,7 @@ Você usa o modificador `new` para ocultar membros herdados de uma classe base. 
 
 Veja o exemplo a seguir:
 
-[!code-csharp[Exemplo de uso do modificador "new"](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
 **Saída**
 
@@ -107,7 +105,7 @@ Quando nenhum modificador `new` é especificado, uma classe derivada ocultará p
 
 O modificador `override` significa que uma implementação derivada estende a implementação de um membro da classe base, em vez de ocultá-lo. O membro da classe base precisa ter o modificador `virtual` aplicado a ele.
 
-[!code-csharp[Exemplo de uso do modificador "override"](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **Saída**
 
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 O modificador `override` é avaliado em tempo de compilação e o compilador gerará um erro se não encontrar um membro virtual para substituir.
 
 Seu conhecimento sobre as técnicas discutidas, bem como sua compreensão das situações em que usá-las, farão muita diferença para facilitar a transição entre versões de uma biblioteca.
-

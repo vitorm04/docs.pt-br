@@ -17,6 +17,3 @@
 ### [Como acessar elementos filho XML](how-to-access-xml-child-elements.md)
 ### [Como acessar atributos XML](how-to-access-xml-attributes.md)
 ### [Como declarar e usar prefixos de namespace de XML](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [XML IntelliSense](xml-intellisense.md)
-### [Como habilitar o IntelliSense XML](how-to-enable-xml-intellisense.md)
-### [Assistente de XML para Esquema](xml-to-schema-wizard.md)

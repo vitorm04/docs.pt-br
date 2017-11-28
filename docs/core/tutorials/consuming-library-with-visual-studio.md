@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
-ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Consumindo uma biblioteca de classes com .NET Core no Visual Studio 2017
 
 Depois de criar uma biblioteca de classes seguindo as etapas em [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Compilação de uma biblioteca de classes em C# com o .NET Core no Visual Studio 2017) ou [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Compilação de uma biblioteca de classes em Visual Basic com o .NET Core no Visual Studio 2017), testá-la em [Testar uma biblioteca de classes com .NET Core no Visual Studio 2017](testing-library-with-visual-studio.md), compilar uma versão de liberação da biblioteca, a próxima etapa é disponibilizá-la aos chamadores. Você pode fazer isso de duas maneiras:
@@ -104,4 +105,3 @@ Você pode fazer com que sua biblioteca de classes esteja amplamente disponível
    > Se o diretório que contém *dotnet.exe* não está no seu PATH, você pode encontrar seu local digitando `where dotnet.exe` na janela do console.
 
 Para obter mais informações sobre a criação de pacotes do NuGet, consulte [Como criar um pacote do NuGet com ferramentas de plataforma cruzada](../../core/deploying/creating-nuget-packages.md).
-

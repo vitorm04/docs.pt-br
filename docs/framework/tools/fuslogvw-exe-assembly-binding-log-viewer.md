@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - failed assembly binds
 - Fuslogvw.exe
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ad02ade9c9e60e53fa8fb91d9a38d6ec12bc2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 O Visualizador de Log de Associação do Assembly exibe detalhes das associações de assembly. Essas informações ajudam a diagnosticar por que o .NET Framework não pode localizar um assembly no tempo de execução. Essas falhas normalmente são o resultado de um assembly implantado no local incorreto, de uma imagem nativa que não é mais válida ou de uma incompatibilidade em números de versão ou culturas. A falha no Common Language Runtime em localizar um assembly costuma aparecer como um <xref:System.TypeLoadException> em seu aplicativo.  
@@ -221,7 +214,7 @@ Discarding native image.
      Consulte a observação Importante a respeito de assemblies carregados como tendo domínio neutro.  
   
 > [!IMPORTANT]
->  Quando um assembly é carregado como tendo domínio neutro, por exemplo, definindo-se a propriedade <xref:System.AppDomainSetup.LoaderOptimization%2A> como <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> ou a <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, a ativação do registro em log pode causar perda de memória em alguns casos. Isso poderá acontecer se uma entrada de log for feita quando um módulo de domínio neutro for carregado em um domínio do aplicativo e, posteriormente, o domínio do aplicativo for descarregado. A entrada de log talvez não seja liberada até o término do processo. Alguns depuradores ativam o registro em log automaticamente.  
+>  Quando um assembly é carregado como tendo domínio neutro, por exemplo, definindo-se a propriedade <xref:System.AppDomainSetup.LoaderOptimization%2A> como <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> ou a <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, a ativação do registro em log pode causar perda de memória em alguns casos. Isso poderá acontecer se uma entrada de log for feita quando um módulo de domínio neutro for carregado em um domínio do aplicativo e, posteriormente, o domínio do aplicativo for descarregado. A entrada de log talvez não seja liberada até o término do processo. Alguns depuradores ativam o registro em log automaticamente.  
   
 #### <a name="to-enable-a-custom-log-path"></a>Para habilitar um caminho de log personalizado  
   
@@ -244,9 +237,8 @@ Discarding native image.
     >  Essa caixa só está habilitada no Windows 8 ou posterior.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.TypeLoadException>   
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)   
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.TypeLoadException>  
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+ [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

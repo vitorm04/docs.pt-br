@@ -1,25 +1,21 @@
 ---
 title: "Programação LINQ to XML avançada (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0f451700dbd2bf9f924eacf6c3685b88ff2c8849
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4419d05874f8e4883711d0f4abb98bc4a416b7fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Programação LINQ to XML avançada (C#)
 Esta seção especifica informações somente aplicáveis a desenvolvedores avançados em determinados cenários do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -37,9 +33,8 @@ Esta seção especifica informações somente aplicáveis a desenvolvedores avan
 |[Como ler e escrever um documento codificado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Descreve como ler e gravar documentos XML codificados.|  
 |[Usando XSLT para transformar uma árvore XML (C#)](../../../../csharp/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|Descreve como transformar uma árvore XML usando XSLT.|  
 |[Como usar anotações para transformar árvores LINQ to XML em um estilo XSLT (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Descreve como as anotações podem ser usadas para facilitar transformações de uma árvore XML.|  
-|[Serializando gráficos de objeto que contêm objetos de XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Descreve como serializar gráficos de objeto que contêm objetos <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument>.|  
+|[Serializando gráficos de objeto que contêm objetos de XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Descreve como serializar grafos de objeto que contêm objetos <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument>.|  
 |[Vinculação de dados de WPF com LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Descreve como usar LINQ to XML como fonte de dados para vinculação de dados em aplicativos do Windows Presentation Foundation.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

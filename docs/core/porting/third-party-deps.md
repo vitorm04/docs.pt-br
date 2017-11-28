@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portabilidade para .NET Core – Analisar suas dependências de terceiros
 
 A primeira etapa no processo de portabilidade é entender suas dependências de terceiros.  Você precisa descobrir quais delas, se houver, ainda não são executadas no .NET Core e desenvolver um plano de contingência para elas.
@@ -97,4 +95,3 @@ Você pode ter uma dependência que não é um pacote NuGet, tal como uma DLL no
 ## <a name="next-steps"></a>Próximas etapas
 
 Se você estiver portando uma biblioteca, consulte [Portando suas bibliotecas](libraries.md).
-

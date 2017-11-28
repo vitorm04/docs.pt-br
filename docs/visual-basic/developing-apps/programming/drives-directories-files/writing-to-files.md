@@ -1,45 +1,27 @@
 ---
 title: Gravando em arquivos no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
-- files, writing to
+- files [Visual Basic], writing to
 - examples [Visual Basic], writing to files
-- writing to files
+- writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0fe0432ab37ee22869924e7885aefc0fcfa29312
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2bee678ced4cfbcae186f298b228e691d1e6cd3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Gravando em arquivos no Visual Basic
 Esta seção explica como realizar tarefas que envolvem gravação em arquivos.  
@@ -58,7 +40,7 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
  Demonstra como criar e gravar em um novo arquivo de texto no diretório **Meus Documentos**.  
   
  [Como gravar texto em arquivos com um StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Demonstra como gravar em um arquivo com um objeto <xref:System.IO.StreamWriter?displayProperty=fullName>.  
+ Demonstra como gravar em um arquivo com um objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Referência  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
@@ -85,4 +67,3 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
   
  [Codificações de Arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Fornece uma visão geral sobre codificações de arquivo.
-

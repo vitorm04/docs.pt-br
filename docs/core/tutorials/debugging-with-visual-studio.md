@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
+ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 19744773d18f6ea43e4b4a7518405b60e6b53acf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depurar seu aplicativo Olá, Mundo com o Visual Studio 2017
 
 Até agora, você seguiu as etapas em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](.\with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017) para criar e executar um aplicativo de console simples. Após escrever e compilar seu aplicativo, você pode começar a testá-lo. O Visual Studio inclui um conjunto abrangente de ferramentas de depuração que você pode usar ao testar e solucionar problemas de seu aplicativo.
@@ -65,13 +63,13 @@ Execute o programa no modo de Depuração e teste algumas funcionalidades de dep
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Digite `date = new DateTime(2016,11,01,11,59,00)` na **Janela Imediata** e pressione Enter.
 
-   A **Janela Imediata** exibe o valor da variável de cadeia de caracteres e as propriedades do valor @System.DateTime. Além disso, o valor das variáveis é atualizado nas janelas **Autos** e **Locais**.
+   A **Janela Imediata** exibe o valor da variável de cadeia de caracteres e as propriedades do valor <xref:System.DateTime>. Além disso, o valor das variáveis é atualizado nas janelas **Autos** e **Locais**.
 
    ![Janela Autos e Janela Imediata](./media/debugging-with-visual-studio/autosimmediate.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Digite `currentDate = new DateTime(2016,11,01,11,59,00)` na **Janela Imediata** e pressione Enter.
 
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the @System.DateTime value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
+<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
 
    ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
 -->
@@ -119,9 +117,9 @@ Para definir um ponto de interrupção condicional e testar o que acontece quand
 
 1. Na janela do console, pressione a tecla Enter quando solicitado a inserir seu nome.
 
-1. Como a condição que especificamos, `name` é `null` ou <xref:System.String.Empty?displayProperty=fullName>, foi atendida, a execução do programa para quando ele chega no ponto de interrupção e antes de o método `Console.WriteLine` ser executado.
+1. Como a condição que especificamos, `name` é `null` ou <xref:System.String.Empty?displayProperty=nameWithType>, foi atendida, a execução do programa para quando ele chega no ponto de interrupção e antes de o método `Console.WriteLine` ser executado.
 
-1. Selecione a janela **Locais**, que mostra os valores das variáveis que são locais para o método em execução no momento, que é o método `Main` no programa. Observe que o valor da variável `name` é `""` ou <xref:System.String.Empty?displayProperty=fullName>.
+1. Selecione a janela **Locais**, que mostra os valores das variáveis que são locais para o método em execução no momento, que é o método `Main` no programa. Observe que o valor da variável `name` é `""` ou <xref:System.String.Empty?displayProperty=nameWithType>.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Confirme se o valor é uma cadeia de caracteres vazia inserindo a seguinte instrução na **Janela Imediata**. O resultado é `true`.
@@ -175,13 +173,13 @@ O Visual Studio também permite percorrer linha por linha de um programa e monit
 
 1. Selecione **Depurar** > **Intervir** ou pressione F11. O Visual Studio destaca a instrução que inclui a atribuição de variável `name`. A janela **Autos** mostra que `name` é `null` (em C#) ou `Nothing` (em Visual Basic) e a janela do console exibe a cadeia de caracteres "Qual é o seu nome?".
 
-1. Responda à solicitação inserindo uma cadeia de caracteres na janela do console e pressionando Enter. O console não responde e a cadeia de caracteres inserida não é exibida na janela do console, mas o método <xref:System.Console.ReadLine%2A?displayProperty=fullName>, entretanto, capturará sua entrada.
+1. Responda à solicitação inserindo uma cadeia de caracteres na janela do console e pressionando Enter. O console não responde e a cadeia de caracteres inserida não é exibida na janela do console, mas o método <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>, entretanto, capturará sua entrada.
 
-1. Selecione **Depurar** > **Intervir** ou pressione F11. O Visual Studio destaca a instrução que inclui a atribuição de variável `date` (em C#) ou `currentDate` (em Visual Basic). A janela **Autos** mostra o valor da propriedade <xref:System.DateTime.Now?displayProperty=fullName> e o valor retornado pela chamada para o método <xref:System.Console.ReadLine%2A?displayProperty=fullName>. A janela de console também exibe a cadeia de caracteres inserida quando o console for solicitado para a entrada.
+1. Selecione **Depurar** > **Intervir** ou pressione F11. O Visual Studio destaca a instrução que inclui a atribuição de variável `date` (em C#) ou `currentDate` (em Visual Basic). A janela **Autos** mostra o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType> e o valor retornado pela chamada para o método <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>. A janela de console também exibe a cadeia de caracteres inserida quando o console for solicitado para a entrada.
 
-1. Selecione **Depurar** > **Intervir** ou pressione F11. A janela **Autos** mostra o valor da variável `date` após a atribuição da propriedade <xref:System.DateTime.Now?displayProperty=fullName>. A janela do console não é alterada.
+1. Selecione **Depurar** > **Intervir** ou pressione F11. A janela **Autos** mostra o valor da variável `date` após a atribuição da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>. A janela do console não é alterada.
 
-1. Selecione **Depurar** > **Intervir** ou pressione F11. O Visual Studio chama o método <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=fullName>. Os valores das variáveis `date` (ou `currentDate`) e `name` são exibidos na janela **Autos** e a janela do console exibe a cadeia de caracteres formatada.
+1. Selecione **Depurar** > **Intervir** ou pressione F11. O Visual Studio chama o método <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>. Os valores das variáveis `date` (ou `currentDate`) e `name` são exibidos na janela **Autos** e a janela do console exibe a cadeia de caracteres formatada.
 
 1. Selecione **Depurar** > **Sair** ou pressione Shift e a tecla F11. Isso interrompe a execução passo a passo. A janela do console exibe uma mensagem e aguarda até que uma tecla seja pressionada.
 
@@ -198,4 +196,3 @@ Para compilar e testar a versão de lançamento do seu aplicativo de console, al
 Ao pressionar F5 ou escolher **Compilar Solução** no menu **Compilar**, o Visual Studio compila a versão de lançamento do seu aplicativo de console. Você pode testá-lo como fez com a versão de depuração do aplicativo.
 
 Quando terminar de depurar seu aplicativo, a próxima etapa será publicar uma versão implantável do seu aplicativo. Para obter informações sobre como fazer isso, consulte [Publish the Hello World application with Visual Studio 2017](./publishing-with-visual-studio.md) (Publicar o aplicativo Olá, Mundo com o Visual Studio 2017).
-

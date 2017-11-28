@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees"></a>Árvores de expressão
 
 Se tiver usado o LINQ, você tem experiência com uma rica biblioteca em que os tipos `Func` fazem parte do conjunto de API. (Se não estiver familiarizado com o LINQ, você provavelmente deveria ler o [tutorial do LINQ](linq/index.md) e o tutorial sobre [expressões lambda](lambda-expressions.md) antes deste.) *Árvores de expressão* fornecem uma interação mais avançada com os argumentos que são funções.
@@ -60,4 +58,3 @@ As seções restantes deste tutorial explorarão o que são as árvores de expre
 
     Examine informações sobre as árvores de expressão.
     
-

@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
+ms.openlocfilehash: a8f70505d1bb043ab21f87edbb5aa2d9f18a7071
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
-ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidade das ferramentas da CLI do .NET Core
 
 Este documento aborda as diferentes maneiras que você pode estender as ferramentas da CLI (interface de linha de comando) do .NET Core e explica os cenários que orientam cada uma delas.
@@ -50,6 +48,8 @@ Por fim, esse modelo de extensibilidade dá suporte à criação de ferramentas 
 ### <a name="consuming-per-project-tools"></a>Consumir ferramentas por projeto
 Consumir essas ferramentas requer a adição de um elemento `<DotNetCliToolReference>` ao seu arquivo de projeto para cada ferramenta que você deseja usar. Dentro do elemento `<DotNetCliToolReference>`, você referencia o pacote no qual a ferramenta reside e especifica a versão necessária. Após executar [`dotnet restore`](dotnet-restore.md), a ferramenta e suas dependências são restauradas.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Para ferramentas que precisam carregar a saída do build do projeto para execução, geralmente há outra dependência listada nas dependências regulares no arquivo de projeto. Como a CLI usa o MSBuild como seu mecanismo de build, é recomendável que essas partes da ferramenta sejam gravadas como [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) personalizados do MSBuild, pois eles podem participar do processo geral de build. Além disso, eles podem obter todos os dados produzidos por meio do build facilmente, como o local dos arquivos de saída, a configuração atual que está sendo compilada, etc. Todas essas informações se tornam um conjunto de propriedades do MSBuild que pode ser lido de qualquer destino. Você pode ver como adicionar um destino personalizado usando o NuGet mais adiante neste documento.
 
 Vamos examinar um exemplo de como adicionar uma ferramenta única simples a um projeto simples. Dado um exemplo de comando chamado `dotnet-api-search` que permite que você pesquise os pacotes NuGet para a API especificada, veja este arquivo de projeto do aplicativo de console que usa essa ferramenta:
@@ -79,7 +79,7 @@ Depois de compilá-la, você usaria o comando [`dotnet pack`](dotnet-pack.md) pa
 
 Como ferramentas são aplicativos portáteis, o usuário que a consume precisa ter a versão das bibliotecas do .NET Core para as quais a biblioteca foi criada para executar a ferramenta. Qualquer outra dependência que a ferramenta usa e que não está contida em bibliotecas do .NET Core é restaurada e colocada no cache do NuGet. Toda a ferramenta é, portanto, executada usando os assemblies de bibliotecas .NET Core, bem como assemblies do cache do NuGet.
 
-Esses tipos de ferramentas têm um gráfico de dependência completamente separado do gráfico de dependência do projeto que as utiliza. O processo de restauração restaura primeiro as dependências do projeto e, em seguida, cada uma das ferramentas e suas dependências.
+Esses tipos de ferramentas têm um grafo de dependência completamente separado do grafo de dependência do projeto que as utiliza. O processo de restauração restaura primeiro as dependências do projeto e, em seguida, cada uma das ferramentas e suas dependências.
 
 Você pode encontrar exemplos mais sofisticados e diferentes combinações disso no [repositório da CLI do .NET Core](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects).
 Você também pode ver a [implementação das ferramentas utilizadas](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages) no mesmo repositório.
@@ -165,4 +165,3 @@ echo "Hello World"
 No macOS, podemos eliminar esse script como `dotnet-hello` e definir o bit executável com `chmod +x dotnet-hello`. Podemos então criar um link simbólico para ele em `/usr/local/bin` usando o comando `ln -s <full_path>/dotnet-hello /usr/local/bin/`. Isso tornará possível invocar o comando usando a sintaxe `dotnet hello`.
 
 No Windows, podemos eliminar esse script como `dotnet-hello.cmd` e colocá-lo em um local que está em um caminho do sistema (ou você pode adicioná-lo a uma pasta que já está no caminho). Depois disso, você pode simplesmente usar `dotnet hello` para executar este exemplo.
-

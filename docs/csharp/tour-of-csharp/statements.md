@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="statements"></a>Instruções
 
 As ações de um programa são expressas usando *instruções*. O C# oferece suporte a vários tipos diferentes de instruções, algumas delas definidas em termos de instruções inseridas.
@@ -46,7 +44,7 @@ A lista a seguir contém os tipos de instruções que podem ser usados, e fornec
 
 * Declaração de variável local:
 
- [!code-csharp[Declarações](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
+ [!code-csharp[Declarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
 
 * Declaração constante local:
 
@@ -54,7 +52,7 @@ A lista a seguir contém os tipos de instruções que podem ser usados, e fornec
 
 * Instrução de expressão:
 
- [!code-csharp[Expressões](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
+ [!code-csharp[Expressions](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
 
 * Instrução `if`:
 
@@ -119,4 +117,3 @@ A lista a seguir contém os tipos de instruções que podem ser usados, e fornec
 >[!div class="step-by-step"]
 [Anterior](expressions.md)
 [Próximo](classes-and-objects.md)
-

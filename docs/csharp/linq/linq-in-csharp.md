@@ -10,12 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
+ms.openlocfilehash: 8f5ef2ccc947ac2e6a237e25a94057e1677f14a4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8b005ae43816e852c3af7c014f994af30af1e2d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-in-c"></a>LINQ em C#
 Esta seção contém links para tópicos que fornecem informações mais detalhadas sobre a LINQ.  
@@ -46,4 +45,3 @@ Esta seção contém links para tópicos que fornecem informações mais detalha
  [Visão geral de operadores de consulta padrão](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
  Apresenta os métodos padrão usados na LINQ.  
   
-

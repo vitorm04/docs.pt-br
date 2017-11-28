@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -173,4 +172,3 @@ Com o sufixo da versão do projeto configurado como `<VersionSuffix>$(VersionSuf
 Defina a versão do pacote como `2.1.0` com a propriedade MSBuild `PackageVersion`:
 
 `dotnet pack /p:PackageVersion=2.1.0`
-

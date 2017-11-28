@@ -1,30 +1,21 @@
 ---
 title: 'Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)
 Se você inserir informações de um assembly gerenciado de nome forte, você poderá acoplar vagamente tipos em um aplicativo para atingir a independência de versão. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca gerenciada sem precisar ser recompilado para cada versão.  
@@ -49,7 +40,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 -   Constantes não são inseridas.  
   
--   A classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> não dá suporte a um tipo inserido como uma chave. Você pode implementar seu próprio tipo de dicionário para dar suporte a um tipo inserido como uma chave.  
+-   A classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> não dá suporte a um tipo inserido como uma chave. Você pode implementar seu próprio tipo de dicionário para dar suporte a um tipo inserido como uma chave.  
   
  Neste passo a passo, você fará o seguinte:  
   
@@ -250,8 +241,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
 6.  No Explorador de Arquivos, abra a pasta do caminho de saída (por exemplo, C:\TypeEquivalenceSample). Clique duas vezes em TypeEquivalenceClient.exe para executar o programa. O programa refletirá a nova versão do assembly TypeEquivalenceRuntime sem ter sido recompilado.  
   
 ## <a name="see-also"></a>Consulte também  
- [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)   
- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)   
+ [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+ [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

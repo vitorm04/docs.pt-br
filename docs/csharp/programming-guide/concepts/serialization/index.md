@@ -1,30 +1,21 @@
 ---
 title: "Serialização (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2eefd71abf07a96bb99b256571e6ac4529fb277d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-c-"></a>Serialização (C#)
 A serialização é o processo de converter um objeto em um fluxo de bytes para armazenar o objeto ou transmiti-los na memória, um banco de dados ou um arquivo. Sua finalidade principal é salvar o estado de um objeto para recriá-lo quando necessário. O processo inverso é chamado desserialização.  
@@ -73,7 +64,7 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
  Se você quiser que o objeto também seja desserializado de uma maneira personalizada, você deverá usar um construtor personalizado.  
   
 ## <a name="designer-serialization"></a>Serialização de designer  
- A serialização de designer é um formulário especial de serialização que envolve o tipo de persistência do objeto geralmente associado a ferramentas de desenvolvimento. A serialização de designer é o processo de conversão de um objeto gráfico em um arquivo de origem que pode, posteriormente, ser usado para recuperar o objeto gráfico. Um arquivo de origem pode conter código, marcação ou até mesmo informações de tabela do SQL.  
+ A serialização de designer é um formulário especial de serialização que envolve o tipo de persistência do objeto geralmente associado a ferramentas de desenvolvimento. A serialização de designer é o processo de conversão de um grafo do objeto em um arquivo de origem que pode, posteriormente, ser usado para recuperar o grafo do objeto. Um arquivo de origem pode conter código, marcação ou até mesmo informações de tabela do SQL.  
   
 ##  <a name="BKMK_RelatedTopics"></a> Exemplos e tópicos relacionados  
  [Passo a passo: mantendo um objeto no Visual Studio (C#)](../../../../csharp/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
@@ -84,4 +75,3 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
   
  [Como gravar dados de objeto em um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
  Mostra como gravar o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.
-

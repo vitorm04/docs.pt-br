@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c67018df35816b38828e548a88d25efe16d6a15a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
 Este tópico fornece uma lista de contadores de desempenho que você pode encontrar no [Monitor de Desempenho](http://technet.microsoft.com/library/cc749249.aspx).  
@@ -137,7 +130,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. de coletas de geração 0**|Exibe o número de vezes que os objetos da geração 0 (ou seja, a mais novos, objetos alocados mais recentemente) sofreram coleta de lixo desde que o aplicativo foi iniciado.<br /><br /> A coleta de lixo de geração 0 ocorre quando a memória disponível na geração 0 não é suficiente para atender a uma solicitação de alocação. Esse contador é incrementado no final de uma coleta de lixo da geração 0. Coletas de lixo de gerações mais elevadas incluem todas as coletas de gerações mais baixas. Esse contador é incrementado explicitamente quando ocorre uma coleta de lixo de geração mais elevada (geração 1 ou 2).<br /><br /> Esse contador exibe o último valor observado. O valor do contador **_Global\_** não é preciso e deve ser ignorado.|  
 |**N. de coletas de geração 1**|Exibe o número de vezes que os objetos da geração 1 sofreram coleta de lixo desde que o aplicativo foi iniciado.<br /><br /> O contador é incrementado no final de uma coleta de lixo da geração 1. Coletas de lixo de gerações mais elevadas incluem todas as coletas de gerações mais baixas. Esse contador é incrementado explicitamente quando ocorre uma coleta de lixo de geração mais elevada (geração 2).<br /><br /> Esse contador exibe o último valor observado. O valor do contador **_Global\_** não é preciso e deve ser ignorado.|  
 |**N. de coletas de geração 2**|Exibe o número de vezes que os objetos da geração 2 sofreram coleta de lixo desde que o aplicativo foi iniciado. O contador é incrementado no final de uma coleta de lixo da geração 2 (também conhecida como uma coleta de lixo completa).<br /><br /> Esse contador exibe o último valor observado. O valor do contador **_Global\_** não é preciso e deve ser ignorado.|  
-|**N. de GCs induzidas**|Exibe o número máximo de vezes que a coleta de lixo foi executada devido a uma chamada explícita para <xref:System.GC.Collect%2A?displayProperty=fullName>. É recomendável para permitir que o coletor de lixo ajuste a frequência das coletas dele.|  
+|**N. de GCs induzidas**|Exibe o número máximo de vezes que a coleta de lixo foi executada devido a uma chamada explícita para <xref:System.GC.Collect%2A?displayProperty=nameWithType>. É recomendável para permitir que o coletor de lixo ajuste a frequência das coletas dele.|  
 |**N. de objetos fixados**|Exibe o número de objetos fixados encontrados na última coleta de lixo. Um objeto fixado é um objeto que o coletor de lixo não consegue mover na memória. Esse contador controla os objetos fixados apenas nos heaps que sofrem coleta de lixo. Por exemplo, uma coleta de lixo de geração 0 causa a enumeração dos objetos fixados apenas no heap de geração 0.|  
 |**N. de blocos de sincronização em uso**|Exibe o número atual de blocos de sincronização em uso. Blocos de sincronização são estruturas de dados por objeto alocadas para armazenar informações de sincronização. Eles mantêm referências fracas a objetos gerenciados e devem ser verificados pelo coletor de lixo. Blocos de sincronização não se limitam a armazenar informações de sincronização, eles também podem armazenar metadados de interoperabilidade COM. Este contador indica problemas de desempenho com uso intensivo dos primitivos de sincronização.|  
 |**N. total de bytes confirmados**|Exibe a quantidade de memória virtual, em bytes, confirmada atualmente pelo coletor de lixo. A memória confirmada é a memória física para a qual o espaço foi reservado no arquivo de paginação de disco.|  
@@ -267,6 +260,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Verificações de tempo de execução total**|Exibe o número total de verificações de segurança de acesso do código de tempo de execução realizadas desde que o aplicativo foi iniciado. Verificações de segurança de acesso de código de tempo de execução são realizadas quando um chamador requer uma permissão específica. A verificação de tempo de execução é feita em cada chamada pelo chamador e examina a pilha do thread atual do chamador. Quando usado com o contador **Extensão do exame da pilha**, esse contador indica a penalidade de desempenho que ocorre para verificações de segurança.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)   
+ [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [Criação de perfil do tempo de execução](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-

@@ -8,22 +8,16 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documents-and-data"></a>Documentos e dados XML
 O .NET Framework fornece um conjunto de classes abrangente e integrado que permite que você crie aplicativos com reconhecimento de XML facilmente. As classes nos namespaces a seguir suportam a análise e gravação de XML, edição de dados XML na memória, validação de dados e transformação de XSLT.  
@@ -42,13 +36,13 @@ O .NET Framework fornece um conjunto de classes abrangente e integrado que permi
   
  As classes nesses namespaces suportam recomendações World Wide Web Consortium (W3C). Por exemplo:  
   
--   A classe <xref:System.Xml.XmlDocument?displayProperty=fullName> implementa as recomendações do [DOM (Modelo de Objeto do Documento) Core do W3C nível 1](http://www.w3.org/TR/REC-DOM-Level-1/) e do [DOM Core nível 2](http://www.w3.org/TR/DOM-Level-2-Core/).  
+-   A classe <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa as recomendações do [DOM (Modelo de Objeto do Documento) Core do W3C nível 1](http://www.w3.org/TR/REC-DOM-Level-1/) e do [DOM Core nível 2](http://www.w3.org/TR/DOM-Level-2-Core/).  
   
--   As classes <xref:System.Xml.XmlReader?displayProperty=fullName> e <xref:System.Xml.XmlWriter?displayProperty=fullName> dão suporte para as recomendações [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) e [Namespaces em XML](http://www.w3.org/TR/REC-xml-names/).  
+-   As classes <xref:System.Xml.XmlReader?displayProperty=nameWithType> e <xref:System.Xml.XmlWriter?displayProperty=nameWithType> dão suporte para as recomendações [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) e [Namespaces em XML](http://www.w3.org/TR/REC-xml-names/).  
   
--   Os esquemas na classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> dão suporte para as recomendações do [W3C XML Schema Part 1: Structures](http://www.w3.org/TR/xmlschema-1/) (Esquema XML do W3C Parte 1: estruturas) e do [XML Schema Part 2: Datatypes](http://www.w3.org/TR/xmlschema-2/) (Esquema XML Parte 2: tipos de dados).  
+-   Os esquemas na classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> dão suporte para as recomendações do [W3C XML Schema Part 1: Structures](http://www.w3.org/TR/xmlschema-1/) (Esquema XML do W3C Parte 1: estruturas) e do [XML Schema Part 2: Datatypes](http://www.w3.org/TR/xmlschema-2/) (Esquema XML Parte 2: tipos de dados).  
   
--   As classes no namespace <xref:System.Xml.Xsl?displayProperty=fullName> dão suporte para as transformações XSLT que estão em conformidade com a recomendação [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
+-   As classes no namespace <xref:System.Xml.Xsl?displayProperty=nameWithType> dão suporte para as transformações XSLT que estão em conformidade com a recomendação [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
   
  As classes XML do .NET Framework fornecem esses benefícios:  
   
@@ -101,4 +95,3 @@ O .NET Framework fornece um conjunto de classes abrangente e integrado que permi
   
  [Centro de desenvolvimento de XML](http://go.microsoft.com/fwlink/?linkid=42458)  
  Fornece informações técnicas, downloads, grupos de notícias e outros recursos adicionais para desenvolvedores do XML.
-

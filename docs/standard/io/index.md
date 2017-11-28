@@ -16,16 +16,15 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
@@ -33,7 +32,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
  Um arquivo é uma coleção ordenada e nomeada de bytes com armazenamento persistente. Ao trabalhar com arquivos, você trabalha com caminhos de diretórios, armazenamento em disco e nomes de arquivos e diretórios. Por outro lado, um fluxo é uma sequência de bytes que você pode usar para ler e gravar em um repositório, o qual pode ser uma entre vários tipos de mídia de armazenamento (por exemplo, discos ou memória). Assim como há vários repositórios diferentes de discos, há vários tipos diferentes de fluxos diferentes de fluxos de arquivos, como os fluxos de rede, memória e pipes.  
   
 ## <a name="files-and-directories"></a>Arquivos e Diretórios  
- Você pode usar os tipos no namespace <xref:System.IO?displayProperty=fullName> para interagir com arquivos e diretórios. Por exemplo, você pode obter e definir propriedades para arquivos e diretórios e recuperar coleções de arquivos e diretórios com base em critérios de pesquisa.  
+ Você pode usar os tipos no namespace <xref:System.IO?displayProperty=nameWithType> para interagir com arquivos e diretórios. Por exemplo, você pode obter e definir propriedades para arquivos e diretórios e recuperar coleções de arquivos e diretórios com base em critérios de pesquisa.  
   
  Aqui estão algumas classes de arquivos e diretórios comumente usadas:  
   
@@ -47,7 +46,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
 -   <xref:System.IO.Path> – Fornece métodos e propriedades para processar cadeias de caracteres de diretório de uma maneira compatível com várias plataformas.  
   
- Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> para E/S de arquivo.  
+ Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para E/S de arquivo.  
   
  Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
@@ -83,7 +82,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
  Para um exemplo de como trabalhar com fluxos de forma assíncrona, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="readers-and-writers"></a>Leitores e Gravadores  
- O namespace <xref:System.IO?displayProperty=fullName> também fornece tipos usados para ler caracteres codificados de fluxos e gravá-los em fluxos. Normalmente, os fluxos são criados para a entrada e a saída de bytes. Os tipos de leitor e de gravador tratam a conversão dos caracteres codificados de/para bytes para que o fluxo possa concluir a operação. Cada classe de leitor e gravador é associada a um fluxo, o qual pode ser recuperado pela propriedade `BaseStream` da classe.  
+ O namespace <xref:System.IO?displayProperty=nameWithType> também fornece tipos usados para ler caracteres codificados de fluxos e gravá-los em fluxos. Normalmente, os fluxos são criados para a entrada e a saída de bytes. Os tipos de leitor e de gravador tratam a conversão dos caracteres codificados de/para bytes para que o fluxo possa concluir a operação. Cada classe de leitor e gravador é associada a um fluxo, o qual pode ser recuperado pela propriedade `BaseStream` da classe.  
   
  Algumas classes de leitores e gravadores comumente usadas são:  
   
@@ -105,7 +104,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
  Para saber mais, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="compression"></a>Compactação  
- A compactação refere-se ao processo de reduzir o tamanho de um arquivo para fins de armazenamento. A descompactação é o processo de extrair o conteúdo de um arquivo compactado para um formato utilizável. O namespace <xref:System.IO.Compression?displayProperty=fullName> contém tipos para compactar e descompactar arquivos e fluxos.  
+ A compactação refere-se ao processo de reduzir o tamanho de um arquivo para fins de armazenamento. A descompactação é o processo de extrair o conteúdo de um arquivo compactado para um formato utilizável. O namespace <xref:System.IO.Compression?displayProperty=nameWithType> contém tipos para compactar e descompactar arquivos e fluxos.  
   
  As classes a seguir são frequentemente usadas para compactar e descompactar arquivos e fluxos:  
   
@@ -156,7 +155,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
  Para saber mais sobre operações de E/S em um aplicativo da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], confira [Guia de início rápido: lendo e gravando arquivos](http://go.microsoft.com/fwlink/p/?LinkId=243072) no Centro de Desenvolvimento do Windows.  
   
 ## <a name="io-and-security"></a>E/S e segurança  
- Ao usar as classes no namespace <xref:System.IO?displayProperty=fullName>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+ Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
  As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](../../../docs/standard/io/isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
@@ -183,4 +182,3 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
 -   [Arquivos mapeados em memória](../../../docs/standard/io/memory-mapped-files.md)  
   
  Descreve arquivos mapeados na memória, os quais armazenam o conteúdo de arquivos do disco na memória virtual. Você pode usar arquivos mapeados na memória para editar arquivos muito grandes e para criar memória compartilhada para a comunicação entre processos.
-

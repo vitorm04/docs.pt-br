@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 13cbd3a5b53ea9b0f1acb22684b6a28639d00751
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="classes"></a>Classes
 Uma *classe* é um constructo que permite que você crie seus próprios tipos personalizados através do agrupamento de variáveis de outros tipos, métodos e eventos. Uma classe é como um plano gráfico. Ela define os dados e o comportamento de um tipo. Se a classe não for declarada como estática, o código cliente poderá usá-la criando *objetos* ou *instâncias* que são atribuídas a uma variável. A variável permanece na memória até que todas as referências a ela saiam do escopo. Nesse momento, o CLR marca a variável como qualificada para a coleta de lixo. Se a classe for declarada como [estática](language-reference/keywords/static.md), haverá apenas uma cópia na memória e o código cliente só poderá acessá-la por meio da própria classe e não por uma *variável de instância*. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
@@ -84,5 +82,4 @@ Para obter mais informações, consulte a [Especificação da linguagem C#](lang
 [Construtores](programming-guide/classes-and-structs/constructors.md)   
 [Finalizadores](programming-guide/classes-and-structs/destructors.md)   
 [Objetos](programming-guide/classes-and-structs/objects.md)
-
 

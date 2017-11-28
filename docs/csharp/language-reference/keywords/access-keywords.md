@@ -1,38 +1,19 @@
 ---
 title: "Palavras-chave de acesso (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- access keywords [C#]
+helpviewer_keywords: access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c66378c3a61eef9f67994af6af425f79f1adf409
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b9aa1d98727dd4ecf20f7b183dd798a06bbd05e8
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="access-keywords-c-reference"></a>Palavras-chave de acesso (Referência de C#)
 Esta seção apresenta as seguintes palavras-chave de acesso:  
@@ -46,8 +27,7 @@ Esta seção apresenta as seguintes palavras-chave de acesso:
      Referencia a instância atual da classe.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)  
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-

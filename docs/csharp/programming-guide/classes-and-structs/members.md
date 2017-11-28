@@ -1,39 +1,21 @@
 ---
 title: "Membros (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
 Classes e structs têm membros que representam seus dados e comportamento. Os membros de uma classe incluem todos os membros declarados na classe, juntamente com todos os membros (exceto construtores e finalizadores) declarados em todas as classes em sua hierarquia de herança. Os membros privados em classes base são herdados, mas não podem ser acessados de classes derivadas.  
@@ -54,16 +36,15 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
 |[Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Os tipos aninhados são tipos declarados dentro de outro tipo. Geralmente, eles são usados para descrever objetos utilizados somente pelos tipos que os contêm.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
- [Eventos](../../../csharp/programming-guide/events/index.md)   
- [Tipos Aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
+ [Eventos](../../../csharp/programming-guide/events/index.md)  
+ [Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
  [Operadores sobrecarregáveis](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-

@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Visão geral da biblioteca de classes .NET Framework
 O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] inclui as classes, as interfaces e os tipos de valor que agilizam e otimizam o processo de desenvolvimento e dão acesso à funcionalidade do sistema. Para facilitar a interoperabilidade entre linguagens, os tipos do .NET Framework são compatíveis com CLS e, assim, podem ser usados por qualquer linguagem de programação cujo compilador esteja de acordo com a CLS (Common Language Specification).  
@@ -114,7 +113,6 @@ objetos ass|<xref:System.Object>|A raiz da hierarquia do objeto.|**Object**|**ob
  Para obter mais informações sobre namespaces, pesquise a [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195). Essa documentação de referência fornece uma visão geral resumida de cada namespace, bem como uma descrição formal de cada tipo e de seus membros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Common Type System](../../docs/standard/base-types/common-type-system.md)   
- [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [Common Type System](../../docs/standard/base-types/common-type-system.md)  
+ [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [Visão Geral](../../docs/framework/get-started/overview.md)
-

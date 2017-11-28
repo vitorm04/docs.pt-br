@@ -1,38 +1,19 @@
 ---
 title: "Como acionar eventos de classe base em classes derivadas (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- events [C#], in derived classes
+helpviewer_keywords: events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 548409d3f632213f3ff1de0a27a70b9f42b18332
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 13501f51a1e99eb6fb792a1c6abe5c7029cc020a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Como acionar eventos de classe base em classes derivadas (Guia de Programação em C#)
 O exemplo simples a seguir mostra o modo padrão para declarar os eventos em uma classe base para que eles também possam ser gerados das classes derivadas. Esse padrão é amplamente usado em classes do Windows Forms em uma biblioteca de classes de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -43,12 +24,11 @@ O exemplo simples a seguir mostra o modo padrão para declarar os eventos em uma
 >  Não declare eventos virtuais em uma classe base e substitua-os em uma classe derivada. O compilador C# não lida com eles corretamente e é imprevisível se um assinante do evento derivado realmente estará assinando o evento de classe base.  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
+ [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Eventos](../../../csharp/programming-guide/events/index.md)   
- [Delegados](../../../csharp/programming-guide/delegates/index.md)   
- [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Eventos](../../../csharp/programming-guide/events/index.md)  
+ [Delegados](../../../csharp/programming-guide/delegates/index.md)  
+ [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [Criando manipuladores de eventos no Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)
-

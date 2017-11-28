@@ -1,44 +1,26 @@
 ---
 title: "Como substituir o método ToString (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5b0f7bf35e5bd565e0bfa46fe91cf86aedcd2d8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 60cec855286a3bb572a0bacd08c0f7920a1fc912
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Como substituir o método ToString (Guia de Programação em C#)
 Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. Portanto, cada objeto no C# obtém o método <xref:System.Object.ToString%2A>, que retorna uma representação de cadeia de caracteres desse objeto. Por exemplo, todas as variáveis do tipo `int` tem um método `ToString`, que permite retornar seus conteúdos como uma cadeia de caracteres:  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  Ao criar uma classe ou struct personalizada, é necessário substituir o método <xref:System.Object.ToString%2A> a fim de fornecer informações sobre o tipo ao código cliente.  
   
@@ -59,20 +41,19 @@ Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. 
   
      O exemplo a seguir retorna o nome da classe, além dos dados específicos de uma instância particular da classe.  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
+     [!code-csharp[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      É possível testar o método `ToString`, conforme mostrado no exemplo de código a seguir:  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
+     [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IFormattable>   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)   
- [string](../../../csharp/language-reference/keywords/string.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
+ <xref:System.IFormattable>  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)  
+ [string](../../../csharp/language-reference/keywords/string.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
  [Formatando Tipos](../../../standard/base-types/formatting-types.md)
-

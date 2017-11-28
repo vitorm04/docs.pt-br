@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-updated-net-core-event-pattern"></a>O padrão de eventos atualizado do .NET Core Event
 
 [Anterior](event-pattern.md)
@@ -89,4 +87,3 @@ Essas são as principais atualizações do padrão de eventos do .NET. Você ver
 O próximo artigo desta série ajuda a distinguir entre o uso de `delegates` e de `events` em seus designs. Eles são conceitos similares e artigo o ajudará a tomar a melhor decisão para seus programas.
 
 [Avançar](distinguish-delegates-events.md)
-

@@ -1,41 +1,23 @@
 ---
 title: "Opções do compilador de C# listadas em ordem alfabética"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
 - C# language, compiler options listed alphabitically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 590253cc2899bc9efac9ce742d864195963a2b1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
-ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opções do compilador de C# listadas em ordem alfabética
 As opções do compilador a seguir estão em ordem alfabética. Para obter uma lista categórica, consulte [Opções de Compilador de C# Listadas por Categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md).  
@@ -100,8 +82,7 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |[/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|Especifica um arquivo de recurso win32 (.res).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Opções do Compilador do C# Listadas por Categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
- [Como Configurar Variáveis de Ambiente para a Linha de Comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
+ [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
-

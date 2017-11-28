@@ -1,30 +1,23 @@
 ---
 title: "Usuários do LINQ to XML para XPath (C#)"
-ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 69109cc8541970695d463e6163bf4d63925ca5bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4d350826d23e31463666ee4bd861867b6c40eb55
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>Usuários do LINQ to XML para XPath (C#)
 Este conjunto de tópicos mostra algumas expressões XPath e seus equivalentes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Todos os exemplos usam a funcionalidade XPath no [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] disponibilizada pelos métodos de extensão em <xref:System.Xml.XPath.Extensions?displayProperty=fullName>. Os exemplos executam a expressão XPath e a expressão [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Cada exemplo compara os resultados das duas consultas, validando se a expressão XPath é funcionalmente equivalente à consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Como os dois tipos de consultas retornam nós da mesma árvore XML, a comparação do resultado da consulta é feita usando identidade referencial.  
+ Todos os exemplos usam a funcionalidade XPath no [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] disponibilizada pelos métodos de extensão em <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>. Os exemplos executam a expressão XPath e a expressão [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Cada exemplo compara os resultados das duas consultas, validando se a expressão XPath é funcionalmente equivalente à consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Como os dois tipos de consultas retornam nós da mesma árvore XML, a comparação do resultado da consulta é feita usando identidade referencial.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -38,9 +31,9 @@ Este conjunto de tópicos mostra algumas expressões XPath e seus equivalentes [
 |[Como filtrar em um atributo (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|Compara como obter os elementos descendentes com um nome especificado e com um atributo com um valor especificado com XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`".//Address[@Type='Shipping']"`|  
 |[Como localizar elementos relacionados (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md)|Compara como obter um elemento selecionando em um atributo que é referenciado pelo valor de outro elemento com XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`".//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]"`|  
 |[Como localizar elementos em um namespace (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md)|Compara o uso da classe XPath <xref:System.Xml.XmlNamespaceManager> com a propriedade [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XName.Namespace%2A> da classe <xref:System.Xml.Linq.XName> para trabalhar com namespaces XML.<br /><br /> A expressão XPath associada é:`"./aw:*"`|  
-|[Como localizar irmãos anteriores (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md)|Compara o eixo XPath `preceding-sibling` com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] filho <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>.<br /><br /> A expressão XPath associada é:`"preceding-sibling::*"`|  
+|[Como localizar irmãos anteriores (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md)|Compara o eixo XPath `preceding-sibling` com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] filho <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.<br /><br /> A expressão XPath associada é:`"preceding-sibling::*"`|  
 |[Como localizar descendentes de um elemento filho (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md)|Compara como obter os elementos descendentes de um elemento filho com um nome específico com XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`"./Paragraph//Text/text()"`|  
-|[Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md)|Compara o uso do operador de união, `&#124;`, no XPath com o operador de consulta padrão <xref:System.Linq.Enumerable.Concat%2A> em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`"//Category&#124;//Price"`|  
+|[Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md)|Compara o uso do operador de união, <code>&#124;</code>, no XPath com o operador de consulta padrão <xref:System.Linq.Enumerable.Concat%2A> em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:<code>"//Category&#124;//Price"</code>|  
 |[Como localizar nós irmãos (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|Compara como localizar todos os irmãos de um nó que têm um nome específico com XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`"../Book"`|  
 |[Como localizar um atributo do pai (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Compara como navegar para o elemento pai e localizar um atributo associado usando XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`"../@id"`|  
 |[Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md)|Compara como localizar atributos específicos dos irmãos do nó de contexto com XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`"``../Book/@id``"`|  
@@ -49,7 +42,6 @@ Este conjunto de tópicos mostra algumas expressões XPath e seus equivalentes [
 |[Como localizar o irmão imediatamente anterior (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Compara como localizar o irmão imediatamente precedente de um nó usando XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> A expressão XPath associada é:`"preceding-sibling::*[1]"`|  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.XPath?displayProperty=fullName>   
- [Consultando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)   
+ <xref:System.Xml.XPath?displayProperty=nameWithType>  
+ [Consultando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
  [Processar dados XML usando o modelo de dados XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-

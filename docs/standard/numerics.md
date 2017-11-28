@@ -17,16 +17,15 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 087c1cc56abf2a00544e22023ce72fae670df369
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>Numéricos no  .NET Framework
 O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de ponto flutuante, bem como <xref:System.Numerics.BigInteger>, um tipo integral sem limite teórico superior ou inferior <xref:System.Numerics.Complex>, um tipo que representa números complexos e um conjunto de tipos de vetores habilitados por SIMD no namespace <xref:System.Numerics>.  
@@ -38,14 +37,14 @@ O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de pon
   
 |Tipo|Assinado/não assinado|Tamanho (bytes)|Valor mínimo|Valor Máximo|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
-|<xref:System.Byte?displayProperty=fullName>|Não assinado|1|0|255|  
-|<xref:System.Int16?displayProperty=fullName>|Assinado|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=fullName>|Assinado|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=fullName>|Assinado|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
-|<xref:System.SByte?displayProperty=fullName>|Assinado|1|-128|127|  
-|<xref:System.UInt16?displayProperty=fullName>|Não assinado|2|0|65,535|  
-|<xref:System.UInt32?displayProperty=fullName>|Não assinado|4|0|4,294,967,295|  
-|<xref:System.UInt64?displayProperty=fullName>|Não assinado|8|0|18,446,744,073,709,551,615|  
+|<xref:System.Byte?displayProperty=nameWithType>|Não assinado|1|0|255|  
+|<xref:System.Int16?displayProperty=nameWithType>|Assinado|2|-32,768|32,767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Assinado|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Assinado|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|Assinado|1|-128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Não assinado|2|0|65,535|  
+|<xref:System.UInt32?displayProperty=nameWithType>|Não assinado|4|0|4,294,967,295|  
+|<xref:System.UInt64?displayProperty=nameWithType>|Não assinado|8|0|18,446,744,073,709,551,615|  
   
  Cada tipo de integral dá suporte a um conjunto padrão de aritmética, de comparação, de igualdade, de conversão explícita e operadores de conversão implícita. Cada inteiro também inclui métodos para executar comparações de igualdade e comparações relativas, para converter a representação de cadeia de caracteres de um número para esse inteiro e para converter um inteiro na sua representação de cadeia de caracteres. Algumas operações matemáticas adicionais além das manipuladas pelos operadores padrão, como arredondamento e identificação do valor maior ou menor de dois inteiros, estão disponíveis na classe <xref:System.Math>. Você também pode trabalhar com os bits individuais nos valores usando a classe <xref:System.BitConverter>.  
   
@@ -56,16 +55,16 @@ O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de pon
   
 |Tipo|Tamanho (em bytes)|Mínimo|Máximo|  
 |----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=fullName>|8|-1.79769313486232e308|1.79769313486232e308|  
-|<xref:System.Single?displayProperty=fullName>|4|-3.402823e38|3.402823e38|  
-|<xref:System.Decimal?displayProperty=fullName>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
+|<xref:System.Double?displayProperty=nameWithType>|8|-1.79769313486232e308|1.79769313486232e308|  
+|<xref:System.Single?displayProperty=nameWithType>|4|-3.402823e38|3.402823e38|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
   
- Cada tipo de ponto flutuante dá suporte a um conjunto padrão de aritmética, de comparação, de igualdade, de conversão explícita e operadores de conversão implícita. Cada um também inclui métodos para executar comparações de igualdade e comparações relativas, para converter a representação de cadeia de caracteres de um número de ponto flutuante e para converter um número de ponto flutuante em sua representação de cadeia de caracteres. Algumas operações matemáticas, algébricas e trigonométricas adicionais são disponibilizadas pela classe <xref:System.Math>. Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter>. A estrutura <xref:System.Decimal?displayProperty=fullName> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=fullName> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=fullName>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.  
+ Cada tipo de ponto flutuante dá suporte a um conjunto padrão de aritmética, de comparação, de igualdade, de conversão explícita e operadores de conversão implícita. Cada um também inclui métodos para executar comparações de igualdade e comparações relativas, para converter a representação de cadeia de caracteres de um número de ponto flutuante e para converter um número de ponto flutuante em sua representação de cadeia de caracteres. Algumas operações matemáticas, algébricas e trigonométricas adicionais são disponibilizadas pela classe <xref:System.Math>. Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter>. A estrutura <xref:System.Decimal?displayProperty=nameWithType> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.  
   
- Os tipos <xref:System.Double> e <xref:System.Single> destinam-se a ser usados para valores que, por sua natureza, são imprecisos (como a distância entre duas estrelas do sistema solar) e para aplicativos em que um alto grau de precisão e erro de arredondamento pequeno não são necessários. Você deve usar o tipo <xref:System.Decimal?displayProperty=fullName> para casos em que uma maior precisão é necessária e o erro de arredondamento é indesejável,  
+ Os tipos <xref:System.Double> e <xref:System.Single> destinam-se a ser usados para valores que, por sua natureza, são imprecisos (como a distância entre duas estrelas do sistema solar) e para aplicativos em que um alto grau de precisão e erro de arredondamento pequeno não são necessários. Você deve usar o tipo <xref:System.Decimal?displayProperty=nameWithType> para casos em que uma maior precisão é necessária e o erro de arredondamento é indesejável,  
   
 ## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=fullName> é um tipo imutável que representa um inteiro arbitrariamente grande cujo valor, em teoria, não tem limites superiores ou inferiores. Os métodos do tipo <xref:System.Numerics.BigInteger> são muito semelhantes aos dos outros tipos integrais.  
+ <xref:System.Numerics.BigInteger?displayProperty=nameWithType> é um tipo imutável que representa um inteiro arbitrariamente grande cujo valor, em teoria, não tem limites superiores ou inferiores. Os métodos do tipo <xref:System.Numerics.BigInteger> são muito semelhantes aos dos outros tipos integrais.  
   
 ## <a name="complex"></a>Complexo  
  O tipo <xref:System.Numerics.Complex> representa um número complexo, ou seja, um número com uma parte de número real e uma parte de número imaginário. Dá suporte a um conjunto padrão de aritmética, de comparação, de igualdade, de conversão explícita e operadores de conversão implícita, bem como a métodos matemáticos, algébricos e trigonométricos.  
@@ -87,4 +86,3 @@ O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de pon
   
 ## <a name="see-also"></a>Consulte também  
  [Fundamentos do aplicativo](../../docs/standard/application-essentials.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains"></a>Domínios do aplicativo
 Sistemas operacionais e ambientes em tempo de execução normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  
@@ -65,7 +63,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
     > [!NOTE]
     >  Você não pode descarregar assemblies ou tipos individuais. Apenas um domínio completo pode ser descarregado.  
   
--   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto sendo chamado, a compilação poderá falhar com uma exceção de tipo **System.IO.FileNotFound**. Confira [Remote Objects](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58) (Objetos remotos) para obter mais detalhes. O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=fullName>.  
+-   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto sendo chamado, a compilação poderá falhar com uma exceção de tipo **System.IO.FileNotFound**. Confira [Remote Objects](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58) (Objetos remotos) para obter mais detalhes. O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   O escopo do comportamento do código é dado pelo aplicativo no qual ele é executado. Em outras palavras, o domínio do aplicativo fornece definições de configuração, como as políticas de versão do aplicativo, o local de qualquer assembly remoto acessado e informações sobre onde localizar assemblies carregados no domínio.  
   
@@ -110,12 +108,12 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  Não há uma correlação um-para-um entre domínios de aplicativo e threads. Vários threads podem ser executados em um único domínio de aplicativo a qualquer momento e um determinado thread não está confinado a um único domínio de aplicativo. Ou seja, threads são livres para atravessar limites de domínio de aplicativo; um novo thread não é criado para cada domínio de aplicativo.  
   
- A qualquer momento, cada thread é executado em um domínio de aplicativo. Zero, um ou vários threads podem estar em execução em um determinado domínio de aplicativo. O tempo de execução acompanha quais threads estão em execução em quais domínios de aplicativo. Você pode localizar o domínio no qual um thread está em execução a qualquer momento chamando o método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=fullName>.  
+ A qualquer momento, cada thread é executado em um domínio de aplicativo. Zero, um ou vários threads podem estar em execução em um determinado domínio de aplicativo. O tempo de execução acompanha quais threads estão em execução em quais domínios de aplicativo. Você pode localizar o domínio no qual um thread está em execução a qualquer momento chamando o método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
   
 ### <a name="application-domains-and-cultures"></a>Domínios e culturas de aplicativo  
- A cultura, que é representada por um objeto <xref:System.Globalization.CultureInfo>, está associada a threads. Você pode obter a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e obter ou definir a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>. Se a cultura associada a um thread tiver sido definida explicitamente usando-se a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>, ela continuará sendo associada a esse thread quando ele cruzar os limites de domínio do aplicativo. Do contrário, a cultura associada ao thread em um dado momento é determinada pelo valor da propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=fullName> no domínio do aplicativo no qual o thread está sendo executado:  
+ A cultura, que é representada por um objeto <xref:System.Globalization.CultureInfo>, está associada a threads. Você pode obter a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e obter ou definir a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Se a cultura associada a um thread tiver sido definida explicitamente usando-se a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, ela continuará sendo associada a esse thread quando ele cruzar os limites de domínio do aplicativo. Do contrário, a cultura associada ao thread em um dado momento é determinada pelo valor da propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> no domínio do aplicativo no qual o thread está sendo executado:  
   
--   Se o valor da propriedade não for `null`, a cultura retornada pela propriedade estará associada ao thread (e, assim, retornada pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>).  
+-   Se o valor da propriedade não for `null`, a cultura retornada pela propriedade estará associada ao thread (e, assim, retornada pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
 -   Se o valor da propriedade for `null`, a cultura do sistema atual estará associada ao thread.  
   
@@ -171,5 +169,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Referência  
- <xref:System.MarshalByRefObject?displayProperty=fullName>
-
+ <xref:System.MarshalByRefObject?displayProperty=nameWithType>

@@ -1,30 +1,21 @@
 ---
 title: Atributos comuns (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>Atributos comuns (C#)
 Este tópico descreve os atributos que são mais comumente usados nos programas em C#.  
@@ -67,7 +58,7 @@ Este tópico descreve os atributos que são mais comumente usados nos programas 
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Especifica se um assembly dá suporte à execução lado a lado no mesmo computador, no mesmo processo ou no mesmo domínio do aplicativo.|  
   
 ### <a name="informational-attributes"></a>Atributos Informativos  
- Você pode usar atributos informativos para fornecer informações adicionais corporativas ou de produto para um assembly. A tabela a seguir mostra os atributos informativos definidos no namespace <xref:System.Reflection?displayProperty=fullName>.  
+ Você pode usar atributos informativos para fornecer informações adicionais corporativas ou de produto para um assembly. A tabela a seguir mostra os atributos informativos definidos no namespace <xref:System.Reflection?displayProperty=nameWithType>.  
   
 |Atributo|Finalidade|  
 |---------------|-------------|  
@@ -80,7 +71,7 @@ Este tópico descreve os atributos que são mais comumente usados nos programas 
 |<xref:System.CLSCompliantAttribute>|Indica se o assembly está em conformidade com a CLS (Common Language Specification).|  
   
 ### <a name="assembly-manifest-attributes"></a>Atributos de Manifesto do Assembly  
- Você pode usar atributos de manifesto do assembly para fornecer informações no manifesto do assembly. Isso inclui título, descrição, alias padrão e configuração. A tabela a seguir mostra os atributos de manifesto do assembly definidos no namespace <xref:System.Reflection?displayProperty=fullName>.  
+ Você pode usar atributos de manifesto do assembly para fornecer informações no manifesto do assembly. Isso inclui título, descrição, alias padrão e configuração. A tabela a seguir mostra os atributos de manifesto do assembly definidos no namespace <xref:System.Reflection?displayProperty=nameWithType>.  
   
 |Atributo|Finalidade|  
 |---------------|-------------|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> Atributos de informações do chamador  
  Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número de linha no código-fonte e o nome do membro do chamador.  
   
- Para obter informações do chamador do membro, você usa os atributos que são aplicados aos parâmetros opcionais. Cada parâmetro opcional especifica um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ Para obter informações do chamador do membro, você usa os atributos que são aplicados aos parâmetros opcionais. Cada parâmetro opcional especifica um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
 |Atributo|Descrição|Tipo|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  Para obter mais informações sobre os atributos de informações do chamador, consulte [Informações do chamador (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)   
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+ [Atributos](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

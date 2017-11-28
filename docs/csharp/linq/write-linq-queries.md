@@ -7,18 +7,15 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
+ms.openlocfilehash: f3efbfd232bd7e19d3db56289f57724c71dca064
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="write-linq-queries-in-c"></a>Escrever consultas LINQ em C#
 
 Este tópico mostra as três maneiras em que você pode escrever uma consulta LINQ em C#:  
@@ -39,7 +36,7 @@ Este tópico mostra as três maneiras em que você pode escrever uma consulta LI
 ## <a name="query-syntax"></a>Sintaxe de consulta  
  A maneira recomendada de escrever a maioria das consultas é usar a *sintaxe de consulta* para criar *expressões de consulta*. O exemplo a seguir mostra três expressões de consulta. A primeira expressão de consulta demonstra como filtrar ou restringir os resultados aplicando condições com uma cláusula `where`. Ela retorna todos os elementos na sequência de origem cujos valores são maiores que 7 ou menores que 3. A segunda expressão demonstra como ordenar os resultados retornados. A terceira expressão demonstra como agrupar resultados de acordo com uma chave. Esta consulta retorna dois grupos com base na primeira letra da palavra.  
   
- [!code-cs[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
   
  Observe que o tipo das consultas é <xref:System.Collections.Generic.IEnumerable%601>. Todas essas consultas poderiam ser escritas usando `var` conforme mostrado no exemplo a seguir:  
   
@@ -52,25 +49,25 @@ Este tópico mostra as três maneiras em que você pode escrever uma consulta LI
 ## <a name="method-syntax"></a>Sintaxe do método  
  Algumas operações de consulta devem ser expressas como uma chamada de método. Os mais comuns desses métodos são aqueles que retornam valores numéricos singleton como <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Esses métodos devem sempre ser chamados por último em qualquer consulta porque representam apenas um único valor e não podem atuar como a fonte para uma operação de consulta adicional. O exemplo a seguir mostra uma chamada de método em uma expressão de consulta:  
   
- [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
 ## <a name="example"></a>Exemplo  
  Se o método tiver os parâmetros Action ou Func, eles serão fornecidos na forma de uma expressão [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md), como mostrado no exemplo a seguir:  
   
- [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
+ [!code-csharp[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
  Nas consultas anteriores, apenas a Query #4 é executada imediatamente. Isso ocorre porque ele retorna um único valor e não uma coleção <xref:System.Collections.Generic.IEnumerable%601> genérica. O próprio método tem que usar `foreach` para calcular seu valor.  
   
  Cada uma das consultas anteriores pode ser escrita usando a tipagem implícita com [var](../language-reference/keywords/var.md), como mostrado no exemplo a seguir:  
   
- [!code-cs[csProgGuideLINQ#8](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]  
+ [!code-csharp[csProgGuideLINQ#8](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]  
   
 ## <a name="example"></a>Exemplo  
   
 ## <a name="mixed-query-and-method-syntax"></a>Sintaxe de consulta e do método mista  
  Este exemplo mostra como usar a sintaxe do método nos resultados de uma cláusula de consulta. Simplesmente coloque a expressão de consulta entre parênteses e, em seguida, aplique o operador de ponto e chame o método. No exemplo a seguir, a Query #7 retorna uma contagem dos números cujo valor está entre 3 e 7. Em geral, no entanto, é melhor usar uma segunda variável para armazenar o resultado da chamada do método. Dessa forma, é menos provável que a consulta seja confundida com os resultados da consulta.  
   
- [!code-cs[csProgGuideLINQ#9](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]  
+ [!code-csharp[csProgGuideLINQ#9](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]  
   
  Como a Query #7 retorna um único valor e não uma coleção, a consulta é executada imediatamente.  
   
@@ -94,6 +91,5 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   
 ## <a name="see-also"></a>Consulte também  
   [Passo a passo: escrevendo consultas em C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [Expressões de Consulta LINQ](index.md)   
+ [Expressões de consulta LINQ](index.md)  
  [Cláusula where](../language-reference/keywords/where-clause.md)
-

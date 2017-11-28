@@ -1,28 +1,22 @@
 ---
 title: "-refout (Opções do compilador do C#)"
-ms.date: 2017-08-08
+ms.date: 08/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refout
-dev_langs:
-- CSharp
+f1_keywords: /refout
 helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: b1516356bf7ec8f5716c0c4183148f675f2ffa78
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refout-c-compiler-options"></a>/refout (Opções do compilador do C#)
 
 A opção **/refout** especifica um caminho de arquivo em que o assembly de referência deve ser gerado. Isso se converte em `metadataPeStream` na API de emissão.
@@ -54,6 +48,5 @@ Os assemblies de referência removem ainda mais metadados (membros particulares)
 As opções `/refout` e [`/refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
 
 ## <a name="see-also"></a>Consulte também
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
-

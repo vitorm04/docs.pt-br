@@ -1,40 +1,21 @@
 ---
 title: Desenvolvendo aplicativos com o Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3752d99e3e9860d5cac2996bb412fdb6c30b5af1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0dee8a19d22eb9b483a2d17fad43830971a8ab0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-applications-with-visual-basic"></a>Desenvolvendo aplicativos com o Visual Basic
 Esta seção aborda documentação conceitual para a linguagem do Visual Basic.  
@@ -47,7 +28,7 @@ Esta seção aborda documentação conceitual para a linguagem do Visual Basic.
  Discute um novo recurso chamado `My`, que fornece acesso a informações e a instâncias de objetos padrão que são relacionadas a um aplicativo e seu ambiente de tempo de execução.  
   
  [Acessando dados em aplicativos do Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
- Contém ajuda para acessar os dados do Visual Basic.   
+ Contém ajuda para acessar os dados do Visual Basic.  
   
  [Criando e usando componentes no Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Define o termo *componente* e discute como e quando criar componentes.  
@@ -67,4 +48,3 @@ Esta seção aborda documentação conceitual para a linguagem do Visual Basic.
   
  [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)  
  Contém documentação de referência para a linguagem do Visual Basic.
-

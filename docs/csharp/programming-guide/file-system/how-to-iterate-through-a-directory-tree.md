@@ -1,42 +1,24 @@
 ---
 title: "Como iterar em uma árvore de diretório (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como iterar em uma árvore de diretório (Guia de Programação em C#)
-A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=fullName> ou <xref:System.IO.DirectoryInfo?displayProperty=fullName>.  
+A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
 >  No Windows, os termos "diretório" e "pasta" são usados de forma intercambiável. A maior parte do texto da documentação e da interface do usuário usa o termo "pasta", mas a biblioteca de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa o termo "diretório".  
@@ -63,14 +45,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  As exceções específicas que são tratadas, bem como as ações específicas que são executadas em cada arquivo ou pasta, são fornecidas apenas como exemplo. Você deve modificar este código para atender às suas necessidades específicas. Consulte os comentários no código para obter mais informações.  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como iterar em arquivos e pastas em uma árvore de diretório sem o uso de recursão. Essa técnica usa o tipo de coleção genérico <xref:System.Collections.Generic.Stack%601>, que é uma pilha UEPS (último a entrar, primeiro a sair).  
   
  As exceções específicas que são tratadas, bem como as ações específicas que são executadas em cada arquivo ou pasta, são fornecidas apenas como exemplo. Você deve modificar este código para atender às suas necessidades específicas. Consulte os comentários no código para obter mais informações.  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  Geralmente, é muito demorado testar cada pasta para determinar se seu aplicativo tem permissão para abri-la. Portanto, o exemplo de código apenas coloca essa parte da operação em um bloco `try/catch`. É possível modificar o bloco `catch` para que, quando lhe for negado acesso a uma pasta, você possa tentar elevar as permissões e acessá-la novamente. Como regra, capture apenas as exceções que você puder manipular sem deixar seu aplicativo em um estado desconhecido.  
   
@@ -80,7 +62,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  O código de iteração de arquivo robusto deve levar em conta muitas complexidades do sistema de arquivos. Para obter mais informações, consulte [Referência técnica de NTFS](http://go.microsoft.com/fwlink/?LinkId=79488).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IO>   
- [LINQ e diretórios de arquivos](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)   
+ <xref:System.IO>  
+ [LINQ e Diretórios de Arquivos](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
  [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)
-

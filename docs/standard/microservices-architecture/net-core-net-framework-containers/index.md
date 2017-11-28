@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: f7a5fee26f4d138ae22f3551a25a674b22a2f6d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5650fed27546efc1485a4617559198f03823f2de
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Escolhendo entre o .NET Core e do .NET Framework para contêineres do Docker
 
@@ -22,4 +21,3 @@ Há duas implementações com suporte para criar aplicativos do Docker em contê
 
 >[!div class="step-by-step"]
 [Previous] (../container-docker-introduction/docker-containers-images-registries.md) [Next] (general-guidance.md)
-

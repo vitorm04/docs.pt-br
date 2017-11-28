@@ -1,42 +1,23 @@
 ---
 title: "Tipos de referência (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.referencetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.referencetypes
 helpviewer_keywords:
 - reference types [C#]
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4f87363246deccf282b499aa2afee2a14d41593
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ed7b9c8ed4aa1136c09049c8ffd6c68beeeb2a48
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reference-types-c-reference"></a>Tipos de referência (Referência de C#)
 Há dois tipos em C#: tipos de referência e valor. Variáveis de tipos de referência armazenam referências em seus dados (objetos) enquanto que variáveis de tipos de valor contém diretamente seus dados. Com tipos de referência, duas variáveis podem fazer referência ao mesmo objeto; portanto, operações em uma variável podem afetar o objeto referenciado pela outra variável. Com tipos de valor, cada variável tem sua própria cópia dos dados e não é possível que as operações em uma variável afetem a outra (exceto no caso de variáveis de parâmetros ref e out, consulte [ref](../../../csharp/language-reference/keywords/ref.md) e [modificador de parâmetro out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)).  
@@ -58,9 +39,8 @@ Há dois tipos em C#: tipos de referência e valor. Variáveis de tipos de refer
 -   [string](../../../csharp/language-reference/keywords/string.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipos](../../../csharp/language-reference/keywords/types.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tipos](../../../csharp/language-reference/keywords/types.md)  
  [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)
-

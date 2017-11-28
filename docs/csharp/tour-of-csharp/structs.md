@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="structs"></a>Structs
 
 Como classes, os ***structs*** são estruturas de dados que podem conter membros de dados e os membros da função, mas, ao contrário das classes, as estruturas são tipos de valor e não precisam de alocação de heap. Uma variável de um tipo struct armazena diretamente os dados do struct, enquanto que uma variável de um tipo de classe armazena uma referência a um objeto alocado dinamicamente. Os tipos de struct não dão suporte à herança especificada pelo usuário, e todos os tipos de structs são herdados implicitamente do tipo <xref:System.ValueType>, que, por sua vez, é herdado implicitamente de `object`.
@@ -45,4 +43,3 @@ O exemplo anterior destaca duas das limitações dos structs. Primeiro, copiar u
 >[!div class="step-by-step"]
 [Anterior](classes-and-objects.md)
 [Próximo](arrays.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="translating-expression-trees"></a>Movendo árvores de expressão
 
 [Anterior – Compilando expressões](expression-trees-building.md)
@@ -205,4 +203,3 @@ Espero que você tenha visto o verdadeiro poder das árvores de expressão.
 Você pode examinar um conjunto de códigos, fazer as alterações que desejar nesse código e executar a versão modificada. Como as árvores de expressão são imutáveis, você pode criar novas árvores usando os componentes de árvores existentes. Isso minimiza a quantidade de memória necessária para criar árvores de expressão modificadas.
 
 [Próximo – Resumindo](expression-trees-summary.md)
-

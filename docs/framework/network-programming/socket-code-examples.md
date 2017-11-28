@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +20,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3f84310486e61cf294539955600c3b399d3fff9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ac2363ce7c2affcc0b56f7ce8b9d41180b4c3a1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="socket-code-examples"></a>Exemplos de código de soquete
 Os exemplos de código a seguir demonstram como usar a classe <xref:System.Net.Sockets.Socket> como um cliente para se conectar aos serviços de rede remota e como um servidor para escutar conexões de clientes remotos.  
@@ -58,4 +52,3 @@ Os exemplos de código a seguir demonstram como usar a classe <xref:System.Net.S
   
  [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Descreve como usar técnicas padrão de segurança e autenticação da Internet.
-

@@ -1,42 +1,24 @@
 ---
 title: "Cláusula from (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - from_CSharpKeyword
 - from
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f718f50d2b8d6f5c612113414a2106fed37fe0fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0165144acfa8d0928015e8222179f7e69f19644
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
 Uma expressão de consulta deve começar com uma cláusula `from`. Além disso, uma expressão de consulta pode conter subconsultas, que também começam com uma cláusula `from`. A cláusula `from` especifica o seguinte:  
@@ -49,10 +31,10 @@ Uma expressão de consulta deve começar com uma cláusula `from`. Além disso, 
   
  No exemplo a seguir, `numbers` é a fonte de dados e `num` é a variável de intervalo. Observe que ambas as variáveis são fortemente tipadas, mesmo com o uso da palavra-chave [var](../../../csharp/language-reference/keywords/var.md).  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
 ## <a name="the-range-variable"></a>A Variável de Intervalo  
- O compilador infere que o tipo da variável de intervalo quando a fonte de dados implementa <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, se a fonte tem um tipo de `IEnumerable<Customer>`, então, a variável de intervalo será inferida como `Customer`. O tipo deve ser especificado explicitamente somente quando a fonte for um tipo `IEnumerable` não genérico, como <xref:System.Collections.ArrayList>. Para obter mais informações, consulte [Como Consultar um ArrayList com LINQ](http://msdn.microsoft.com/library/c318b79a-fa4d-4de3-b62d-c1162beb267e).  
+ O compilador infere que o tipo da variável de intervalo quando a fonte de dados implementa <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, se a fonte tem um tipo de `IEnumerable<Customer>`, então, a variável de intervalo será inferida como `Customer`. O tipo deve ser especificado explicitamente somente quando a fonte for um tipo `IEnumerable` não genérico, como <xref:System.Collections.ArrayList>. Para obter mais informações, consulte [Como Consultar um ArrayList com LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
  No exemplo anterior, `num` é inferido como do tipo `int`. Como a variável de intervalo é fortemente tipada, é possível chamar métodos nela ou usá-la em outras operações. Por exemplo, em vez de gravar `select num`, grave `select num.ToString()` para fazer com que a expressão de consulta retorne uma sequência de cadeias de caracteres em vez de números inteiros. Também é possível gravar `select n + 10` para fazer com que a expressão retorne a sequência 14, 11, 13, 12, 10. Para obter mais informações, consulte [cláusula select](../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -61,18 +43,17 @@ Uma expressão de consulta deve começar com uma cláusula `from`. Além disso, 
 ## <a name="compound-from-clauses"></a>Cláusulas from compostas  
  Em alguns casos, cada elemento na sequência de origem pode ser uma sequência ou conter uma sequência. Por exemplo, a fonte de dados pode ser um `IEnumerable<Student>` em que cada objeto do aluno na sequência contenha uma lista de resultados de avaliações. Para acessar a lista interna dentro de cada elemento `Student`, use cláusulas compostas `from`. A técnica é parecida com o uso de instruções [foreach](../../../csharp/language-reference/keywords/foreach-in.md) aninhadas. É possível adicionar cláusulas [where](../../../csharp/language-reference/keywords/partial-method.md) ou [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) a qualquer cláusula `from` para filtrar os resultados. O exemplo a seguir mostra uma sequência de objetos `Student`, em cada um contém uma `List` interna de inteiros que representam de resultados de avaliações. Para acessar a lista interna, use uma cláusula composta `from`. É possível inserir cláusulas entre as duas cláusulas `from`, se necessário.  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
 ## <a name="using-multiple-from-clauses-to-perform-joins"></a>Usando Várias Cláusulas from para Realizar Uniões  
  Uma cláusula composta `from` é usada para acessar coleções internas em uma fonte de dados única. No entanto, uma consulta também pode conter várias cláusulas `from` que geram consultas complementares de fontes de dados independentes. Essa técnica habilita a execução de determinados tipos de operações de união que não são possíveis por meio da [cláusula join](../../../csharp/language-reference/keywords/join-clause.md).  
   
  A exemplo a seguir mostra como duas cláusulas `from` podem ser usadas para formar uma união cruzada completa de duas fontes de dados.  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
  Para obter mais informações sobre as operações de união que usam várias cláusulas `from`, consulte [Como Executar Operações de União Personalizadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-
