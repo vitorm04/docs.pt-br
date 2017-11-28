@@ -1,82 +1,62 @@
 ---
 title: "-keyfile (opções do compilador C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /keyfile
-dev_langs:
-- CSharp
+f1_keywords: /keyfile
 helpviewer_keywords:
 - /keyfile compiler option [C#]
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5098067f640c13429c3e2524df0d87364980bb1c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="keyfile-c-compiler-options"></a>/keyfile (opções do compilador C#)
-Especifica o nome de arquivo que contém a chave de criptografia.  
+# <a name="keyfile-c-compiler-options"></a><span data-ttu-id="68496-102">/keyfile (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="68496-102">/keyfile (C# Compiler Options)</span></span>
+<span data-ttu-id="68496-103">Especifica o nome de arquivo que contém a chave de criptografia.</span><span class="sxs-lookup"><span data-stu-id="68496-103">Specifies the filename containing the cryptographic key.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="68496-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="68496-104">Syntax</span></span>  
   
 ```console  
 /keyfile:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a><span data-ttu-id="68496-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="68496-105">Arguments</span></span>  
   
-|Termo|Definição|  
+|<span data-ttu-id="68496-106">Termo</span><span class="sxs-lookup"><span data-stu-id="68496-106">Term</span></span>|<span data-ttu-id="68496-107">Definição</span><span class="sxs-lookup"><span data-stu-id="68496-107">Definition</span></span>|  
 |----------|----------------|  
-|`file`|O nome do arquivo que contém a chave de nome forte.|  
+|`file`|<span data-ttu-id="68496-108">O nome do arquivo que contém a chave de nome forte.</span><span class="sxs-lookup"><span data-stu-id="68496-108">The name of the file containing the strong name key.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- Quando esta opção é usada, o compilador insere a chave pública da linha especificada no manifesto do assembly e, em seguida, assina o assembly definitivo com a chave privada. Para gerar um arquivo de chave, digite sn -k `file` na linha de comando.  
+## <a name="remarks"></a><span data-ttu-id="68496-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="68496-109">Remarks</span></span>  
+ <span data-ttu-id="68496-110">Quando esta opção é usada, o compilador insere a chave pública da linha especificada no manifesto do assembly e, em seguida, assina o assembly definitivo com a chave privada.</span><span class="sxs-lookup"><span data-stu-id="68496-110">When this option is used, the compiler inserts the public key from the specified file into the assembly manifest and then signs the final assembly with the private key.</span></span> <span data-ttu-id="68496-111">Para gerar um arquivo de chave, digite sn -k `file` na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="68496-111">To generate a key file, type sn -k `file` at the command line.</span></span>  
   
- Se você compilar com **/target:module**, o nome do arquivo de chave será mantido no módulo e incorporado no assembly, criado quando você compilar um assembly com [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ <span data-ttu-id="68496-112">Se você compilar com **/target:module**, o nome do arquivo de chave será mantido no módulo e incorporado no assembly, criado quando você compilar um assembly com [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="68496-112">If you compile with **/target:module**, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span></span>  
   
- Também é possível passar suas informações de criptografia para o compilador com [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) se quiser um assembly parcialmente assinado.  
+ <span data-ttu-id="68496-113">Também é possível passar suas informações de criptografia para o compilador com [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="68496-113">You can also pass your encryption information to the compiler with [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span></span> <span data-ttu-id="68496-114">Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) se quiser um assembly parcialmente assinado.</span><span class="sxs-lookup"><span data-stu-id="68496-114">Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) if you want a partially signed assembly.</span></span>  
   
- Caso /keyfile e /keycontainer sejam especificados (pela opção de linha de comando ou pelo atributo personalizado) na mesma compilação, o compilador tentará primeiro o contêiner de chaves. Se isso ocorrer, o assembly será assinado com as informações no contêiner de chaves. Se o compilador não localizar o contêiner de chaves, ele tentará o arquivo especificado com /keyfile. Se isso ocorrer, o assembly será assinado com as informações no arquivo de chave e as informações da chave serão instaladas no contêiner de chaves (semelhante a sn -i), de forma que, na próxima compilação, o contêiner de chaves será válido.  
+ <span data-ttu-id="68496-115">Caso /keyfile e /keycontainer sejam especificados (pela opção de linha de comando ou pelo atributo personalizado) na mesma compilação, o compilador tentará primeiro o contêiner de chaves.</span><span class="sxs-lookup"><span data-stu-id="68496-115">In case both /keyfile and /keycontainer are specified (either by command line option or by custom attribute) in the same compilation, the compiler will first try the key container.</span></span> <span data-ttu-id="68496-116">Se isso ocorrer, o assembly será assinado com as informações no contêiner de chaves.</span><span class="sxs-lookup"><span data-stu-id="68496-116">If that succeeds, then the assembly is signed with the information in the key container.</span></span> <span data-ttu-id="68496-117">Se o compilador não localizar o contêiner de chaves, ele tentará o arquivo especificado com /keyfile.</span><span class="sxs-lookup"><span data-stu-id="68496-117">If the compiler does not find the key container, it will try the file specified with /keyfile.</span></span> <span data-ttu-id="68496-118">Se isso ocorrer, o assembly será assinado com as informações no arquivo de chave e as informações da chave serão instaladas no contêiner de chaves (semelhante a sn -i), de forma que, na próxima compilação, o contêiner de chaves será válido.</span><span class="sxs-lookup"><span data-stu-id="68496-118">If that succeeds, the assembly is signed with the information in the key file and the key information will be installed in the key container (similar to sn -i) so that on the next compilation, the key container will be valid.</span></span>  
   
- Observe que um arquivo de chave pode conter somente a chave pública.  
+ <span data-ttu-id="68496-119">Observe que um arquivo de chave pode conter somente a chave pública.</span><span class="sxs-lookup"><span data-stu-id="68496-119">Note that a key file might contain only the public key.</span></span>  
   
- Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](https://msdn.microsoft.com/library/xwb8f617) e [Atraso na Assinatura de um Assembly](../../../framework/app-domains/delay-sign-assembly.md).  
+ <span data-ttu-id="68496-120">Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) e [Atraso na Assinatura de um Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="68496-120">For more information, see [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) and [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="68496-121">Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="68496-121">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Abra a página **Propriedades** do projeto.  
+1.  <span data-ttu-id="68496-122">Abra a página **Propriedades** do projeto.</span><span class="sxs-lookup"><span data-stu-id="68496-122">Open the **Properties** page for the project.</span></span>  
   
-2.  Clique na página de propriedades **Assinatura**.  
+2.  <span data-ttu-id="68496-123">Clique na página de propriedades **Assinatura**.</span><span class="sxs-lookup"><span data-stu-id="68496-123">Click the **Signing** property page.</span></span>  
   
-3.  Modifique a propriedade **Escolha um arquivo de chave de nome forte**.  
+3.  <span data-ttu-id="68496-124">Modifique a propriedade **Escolha um arquivo de chave de nome forte**.</span><span class="sxs-lookup"><span data-stu-id="68496-124">Modify the **Choose a strong name key file** property.</span></span>  
   
- Você pode acessar programaticamente essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
+ <span data-ttu-id="68496-125">Você pode acessar programaticamente essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.</span><span class="sxs-lookup"><span data-stu-id="68496-125">You can programmatically access this compiler option with <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="68496-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="68496-126">See Also</span></span>  
+ [<span data-ttu-id="68496-127">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="68496-127">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="68496-128">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="68496-128">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

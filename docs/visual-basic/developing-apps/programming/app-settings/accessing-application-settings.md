@@ -1,62 +1,43 @@
 ---
 title: "Acessando configurações de aplicativo (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My.Settings object, application settings
+- My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea87d6a1d20a7d85b063990f6e401f90548627be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6ac0be10bbae9071a3ac128d1456d560836d0607
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="accessing-application-settings-visual-basic"></a>Acessando configurações de aplicativo (Visual Basic)
-Esta seção contém tópicos que descrevem o objeto `My.Settings` e as tarefas que ele permite que você realize.  
+# <a name="accessing-application-settings-visual-basic"></a><span data-ttu-id="0ee51-102">Acessando configurações de aplicativo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ee51-102">Accessing application settings (Visual Basic)</span></span>
+<span data-ttu-id="0ee51-103">Esta seção contém tópicos que descrevem o objeto `My.Settings` e as tarefas que ele permite que você realize.</span><span class="sxs-lookup"><span data-stu-id="0ee51-103">This section contains topics describing the `My.Settings` object and the tasks it enables you to accomplish.</span></span>  
   
-## <a name="mysettings"></a>My.Settings  
- As propriedades do objeto `My.Settings` fornecem acesso às configurações do seu aplicativo. Para adicionar ou remover configurações, use o painel **Configurações** do **Designer de Projeto**.  
+## <a name="mysettings"></a><span data-ttu-id="0ee51-104">My.Settings</span><span class="sxs-lookup"><span data-stu-id="0ee51-104">My.Settings</span></span>  
+ <span data-ttu-id="0ee51-105">As propriedades do objeto `My.Settings` fornecem acesso às configurações do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0ee51-105">The properties of the `My.Settings` object provide access to your application's settings.</span></span> <span data-ttu-id="0ee51-106">Para adicionar ou remover configurações, use o painel **Configurações** do **Designer de Projeto**.</span><span class="sxs-lookup"><span data-stu-id="0ee51-106">To add or remove settings, use the **Settings** pane of the **Project Designer**.</span></span>  
   
- Os métodos do objeto `My.Settings` permitem que você salve as configurações do usuário atual ou reverta as configurações do usuário para os últimos valores salvos.  
+ <span data-ttu-id="0ee51-107">Os métodos do objeto `My.Settings` permitem que você salve as configurações do usuário atual ou reverta as configurações do usuário para os últimos valores salvos.</span><span class="sxs-lookup"><span data-stu-id="0ee51-107">The methods of the `My.Settings` object allow you to save the current user settings or revert the user settings to the last saved values.</span></span>  
   
-## <a name="tasks"></a>Tarefas  
- A tabela a seguir lista exemplos que mostram como acessar os formulários de um aplicativo.  
+## <a name="tasks"></a><span data-ttu-id="0ee51-108">Tarefas</span><span class="sxs-lookup"><span data-stu-id="0ee51-108">Tasks</span></span>  
+ <span data-ttu-id="0ee51-109">A tabela a seguir lista exemplos que mostram como acessar os formulários de um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0ee51-109">The following table lists examples showing how to access an application's forms.</span></span>  
   
-|Para|Consulte|  
+|<span data-ttu-id="0ee51-110">Para</span><span class="sxs-lookup"><span data-stu-id="0ee51-110">To</span></span>|<span data-ttu-id="0ee51-111">Consulte</span><span class="sxs-lookup"><span data-stu-id="0ee51-111">See</span></span>|  
 |--------|---------|  
-|Atualizar o valor de uma configuração de usuário|[Como alterar configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Exibir configurações de aplicativo e de usuário em uma grade de propriedades|[Como criar grades de propriedades para configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Salvar valores atualizados de configuração de usuário|[Como persistir configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Determinar os valores das configurações de usuário|[Como ler configurações do aplicativo no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|<span data-ttu-id="0ee51-112">Atualizar o valor de uma configuração de usuário</span><span class="sxs-lookup"><span data-stu-id="0ee51-112">Update the value of a user setting</span></span>|[<span data-ttu-id="0ee51-113">Como alterar configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0ee51-113">How to: Change User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|<span data-ttu-id="0ee51-114">Exibir configurações de aplicativo e de usuário em uma grade de propriedades</span><span class="sxs-lookup"><span data-stu-id="0ee51-114">Display application and user settings in a property grid</span></span>|[<span data-ttu-id="0ee51-115">Como criar grades de propriedades para configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0ee51-115">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|<span data-ttu-id="0ee51-116">Salvar valores atualizados de configuração de usuário</span><span class="sxs-lookup"><span data-stu-id="0ee51-116">Save updated user setting values</span></span>|[<span data-ttu-id="0ee51-117">Como persistir configurações do usuário no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0ee51-117">How to: Persist User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|<span data-ttu-id="0ee51-118">Determinar os valores das configurações de usuário</span><span class="sxs-lookup"><span data-stu-id="0ee51-118">Determine the values of user settings</span></span>|[<span data-ttu-id="0ee51-119">Como ler configurações do aplicativo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0ee51-119">How to: Read Application Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet)   
- [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-
+## <a name="see-also"></a><span data-ttu-id="0ee51-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0ee51-120">See also</span></span>  
+ [<span data-ttu-id="0ee51-121">Gerenciando configurações de aplicativo (.NET)</span><span class="sxs-lookup"><span data-stu-id="0ee51-121">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)  
+ [<span data-ttu-id="0ee51-122">Objeto My.Settings</span><span class="sxs-lookup"><span data-stu-id="0ee51-122">My.Settings Object</span></span>](../../../../visual-basic/language-reference/objects/my-settings-object.md)

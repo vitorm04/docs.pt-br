@@ -9,38 +9,35 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="net-core-support"></a><span data-ttu-id="37688-104">Suporte do .NET Core</span><span class="sxs-lookup"><span data-stu-id="37688-104">.NET Core Support</span></span>
 
-# <a name="net-core-support"></a>Suporte do .NET Core
+<span data-ttu-id="37688-105">Esta é uma descrição geral do suporte do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="37688-105">This is a general description of .NET Core support.</span></span>
 
-Esta é uma descrição geral do suporte do .NET Core.
+## <a name="lts-and-current-release-trains"></a><span data-ttu-id="37688-106">Séries da Versões Atual e LTS</span><span class="sxs-lookup"><span data-stu-id="37688-106">LTS and Current Release Trains</span></span>
 
-## <a name="lts-and-current-release-trains"></a>Séries da Versões Atual e LTS
+<span data-ttu-id="37688-107">Ter duas séries de versões de suporte é um conceito comum usado no mundo dos softwares, especialmente para projetos com código-fonte aberto, como o .NET Core.</span><span class="sxs-lookup"><span data-stu-id="37688-107">Having two support release trains is a common concept in use throughout the software world, specially for open-source projects like .NET Core.</span></span> <span data-ttu-id="37688-108">O .NET Core possui as seguintes séries de versões: [Suporte a Longo Prazo (LTS)](https://en.wikipedia.org/wiki/Long-term_support) e Atual.</span><span class="sxs-lookup"><span data-stu-id="37688-108">.NET Core has the following support release trains: [Long Term Support (LTS)](https://en.wikipedia.org/wiki/Long-term_support) and Current.</span></span> <span data-ttu-id="37688-109">As versões de LTS são mantidas pela estabilidade ao longo do seu ciclo de vida, recebendo correções para problemas importantes e correções de segurança.</span><span class="sxs-lookup"><span data-stu-id="37688-109">LTS releases are maintained for stability over their lifecycle, receiving fixes for important issues and security fixes.</span></span> <span data-ttu-id="37688-110">O novo recurso funciona e correções de bug adicionais ocorrem nas versões Atuais.</span><span class="sxs-lookup"><span data-stu-id="37688-110">New feature work and additional bug fixes take place in Current releases.</span></span> <span data-ttu-id="37688-111">De uma perspectiva de suporte, essas séries de versões têm os seguintes atributos de ciclo de vida de suporte.</span><span class="sxs-lookup"><span data-stu-id="37688-111">From a support perspective, these release trains have the following support lifecycle attributes.</span></span>
 
-Ter duas séries de versões de suporte é um conceito comum usado no mundo dos softwares, especialmente para projetos com código-fonte aberto, como o .NET Core. O .NET Core possui as seguintes séries de versões: [Suporte a Longo Prazo (LTS)](https://en.wikipedia.org/wiki/Long-term_support) e Atual. As versões de LTS são mantidas pela estabilidade ao longo do seu ciclo de vida, recebendo correções para problemas importantes e correções de segurança. O novo recurso funciona e correções de bug adicionais ocorrem nas versões Atuais. De uma perspectiva de suporte, essas séries de versões têm os seguintes atributos de ciclo de vida de suporte.
+<span data-ttu-id="37688-112">As versões de LTS têm</span><span class="sxs-lookup"><span data-stu-id="37688-112">LTS releases are</span></span>
+* <span data-ttu-id="37688-113">Suporte por três anos após a data de disponibilidade geral de uma versão de LTS</span><span class="sxs-lookup"><span data-stu-id="37688-113">Supported for three years after the general availability date of a LTS release</span></span>
+* <span data-ttu-id="37688-114">Ou por um ano após a disponibilização de uma versão subsequente do LTS</span><span class="sxs-lookup"><span data-stu-id="37688-114">Or one year after the general availability of a subsequent LTS release</span></span>
 
-As versões de LTS têm
-* Suporte por três anos após a data de disponibilidade geral de uma versão de LTS
-* Ou por um ano após a disponibilização de uma versão subsequente do LTS
+<span data-ttu-id="37688-115">As versões atuais têm</span><span class="sxs-lookup"><span data-stu-id="37688-115">Current releases are</span></span>
+* <span data-ttu-id="37688-116">Suporte dentro da mesma janela de três anos como a versão de LTS pai</span><span class="sxs-lookup"><span data-stu-id="37688-116">Supported within the same three-year window as the parent LTS release</span></span>
+* <span data-ttu-id="37688-117">Suporte por três meses após a disponibilização geral de uma versão Atual subsequente</span><span class="sxs-lookup"><span data-stu-id="37688-117">Supported for three months after the general availability of a subsequent Current release</span></span>
+* <span data-ttu-id="37688-118">E por um ano após a disponibilização de uma versão subsequente do LTS</span><span class="sxs-lookup"><span data-stu-id="37688-118">And one year after the general availability of a subsequent LTS release</span></span>
 
-As versões atuais têm
-* Suporte dentro da mesma janela de três anos como a versão de LTS pai
-* Suporte por três meses após a disponibilização geral de uma versão Atual subsequente
-* E por um ano após a disponibilização de uma versão subsequente do LTS
+## <a name="versioning"></a><span data-ttu-id="37688-119">Controle de versão</span><span class="sxs-lookup"><span data-stu-id="37688-119">Versioning</span></span>
+<span data-ttu-id="37688-120">As novas versões de LTS são marcadas por um aumento no número da versão Principal.</span><span class="sxs-lookup"><span data-stu-id="37688-120">New LTS releases are marked by an increase in the Major version number.</span></span> <span data-ttu-id="37688-121">As versões atuais têm o mesmo número Principal que as séries de LTS correspondentes e são marcadas por um aumento no número de versão Secundária.</span><span class="sxs-lookup"><span data-stu-id="37688-121">Current releases have the same Major number as the corresponding LTS train and are marked by an increase in the Minor version number.</span></span> <span data-ttu-id="37688-122">Por exemplo, 1.0.3 seria LTS e 1.1.0 seria Atual.</span><span class="sxs-lookup"><span data-stu-id="37688-122">For example, 1.0.3 would be LTS and 1.1.0 would be Current.</span></span> <span data-ttu-id="37688-123">Atualizações de correção de bug para o incremento da série da versão de Patch.</span><span class="sxs-lookup"><span data-stu-id="37688-123">Bug fix updates to either train increment the Patch version.</span></span> <span data-ttu-id="37688-124">Para saber mais sobre o esquema de controle de versão, confira [Controle de versão do .NET Core](index.md).</span><span class="sxs-lookup"><span data-stu-id="37688-124">For more information on the versioning scheme, see [.NET Core Versioning](index.md).</span></span>
 
-## <a name="versioning"></a>Controle de versão
-As novas versões de LTS são marcadas por um aumento no número da versão Principal. As versões atuais têm o mesmo número Principal que as séries de LTS correspondentes e são marcadas por um aumento no número de versão Secundária. Por exemplo, 1.0.3 seria LTS e 1.1.0 seria Atual. Atualizações de correção de bug para o incremento da série da versão de Patch. Para saber mais sobre o esquema de controle de versão, confira [Controle de versão do .NET Core](index.md).
+## <a name="what-causes-updates-in-lts-and-current-trains"></a><span data-ttu-id="37688-125">O que causa as atualizações em séries de LTS e Atuais?</span><span class="sxs-lookup"><span data-stu-id="37688-125">What causes updates in LTS and Current trains?</span></span>
+<span data-ttu-id="37688-126">Para entender quais alterações específicas, como correções de bugs ou a adição de APIs, motivam atualizações para os números de versão, veja a seção de Árvore de Decisão na [Documentação de Controle de Versão](index.md).</span><span class="sxs-lookup"><span data-stu-id="37688-126">To understand what specific changes, such as bug fixes or the addition of APIs, cause updates to the version numbers review the Decision Tree section in the [Versioning Documentation](index.md).</span></span> <span data-ttu-id="37688-127">Não há um conjunto de regras de ouro que decide quais alterações são aplicadas na ramificação de LTS da Atual.</span><span class="sxs-lookup"><span data-stu-id="37688-127">There is not a golden set of rules that decide what changes are pulled into the LTS branch from Current.</span></span> <span data-ttu-id="37688-128">Normalmente, os patches e as atualizações de segurança necessários que corrigem o comportamento esperado são motivos para atualizar a ramificação de LTS.</span><span class="sxs-lookup"><span data-stu-id="37688-128">Typically, necessary security updates and patches that fix expected behaviour are reasons to update the LTS branch.</span></span> <span data-ttu-id="37688-129">Nós também pretendemos dar suporte a sistemas operacionais de desenvolvedor de área de trabalho recentes na ramificação de LTS, muito embora isso nem sempre seja possível.</span><span class="sxs-lookup"><span data-stu-id="37688-129">We also intend to support recent desktop developer operating systems on the LTS branch, though this may not always be possible.</span></span> <span data-ttu-id="37688-130">Uma boa maneira de acompanhar quais sistemas operacionais, correções e APIs têm suporte em uma determinada versão é procurar suas [notas de versão](https://github.com/dotnet/core/tree/master/release-notes) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="37688-130">A good way to catch up on what APIs, fixes, and operating systems are supported in a certain release is to browse its [release notes](https://github.com/dotnet/core/tree/master/release-notes) on GitHub.</span></span>
 
-## <a name="what-causes-updates-in-lts-and-current-trains"></a>O que causa as atualizações em séries de LTS e Atuais?
-Para entender quais alterações específicas, como correções de bugs ou a adição de APIs, motivam atualizações para os números de versão, veja a seção de Árvore de Decisão na [Documentação de Controle de Versão](index.md). Não há um conjunto de regras de ouro que decide quais alterações são aplicadas na ramificação de LTS da Atual. Normalmente, os patches e as atualizações de segurança necessários que corrigem o comportamento esperado são motivos para atualizar a ramificação de LTS. Nós também pretendemos dar suporte a sistemas operacionais de desenvolvedor de área de trabalho recentes na ramificação de LTS, muito embora isso nem sempre seja possível. Uma boa maneira de acompanhar quais sistemas operacionais, correções e APIs têm suporte em uma determinada versão é procurar suas [notas de versão](https://github.com/dotnet/core/tree/master/release-notes) no GitHub.
-
-### <a name="further-reading"></a>Leitura adicional
-* [Folha informativa sobre o ciclo de vida do suporte do .NET Core](https://www.microsoft.com/net/core/support)
-* [Versões e sistemas operacionais com suporte atualmente](https://github.com/dotnet/core/blob/master/roadmap.md)
-
+### <a name="further-reading"></a><span data-ttu-id="37688-131">Leitura adicional</span><span class="sxs-lookup"><span data-stu-id="37688-131">Further Reading</span></span>
+* [<span data-ttu-id="37688-132">Folha informativa sobre o ciclo de vida do suporte do .NET Core</span><span class="sxs-lookup"><span data-stu-id="37688-132">.NET Core Support Lifecycle Fact Sheet</span></span>](https://www.microsoft.com/net/core/support)
+* [<span data-ttu-id="37688-133">Versões e sistemas operacionais com suporte atualmente</span><span class="sxs-lookup"><span data-stu-id="37688-133">Currently supported operating systems and versions</span></span>](https://github.com/dotnet/core/blob/master/roadmap.md)

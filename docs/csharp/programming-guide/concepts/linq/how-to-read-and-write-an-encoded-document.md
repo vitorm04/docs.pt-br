@@ -1,42 +1,33 @@
 ---
 title: Como ler e escrever um documento codificado (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a08fa9404c92bd64b07059df2f419bff5f80da3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc7c21c1aa6f4035bfaee509c7bc542542635313
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Como ler e escrever um documento codificado (C#)
-Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration> à árvore XML, definindo a codificação para o nome da página de código desejada.  
+# <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="616f4-102">Como ler e escrever um documento codificado (C#)</span><span class="sxs-lookup"><span data-stu-id="616f4-102">How to: Read and Write an Encoded Document (C#)</span></span>
+<span data-ttu-id="616f4-103">Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration> à árvore XML, definindo a codificação para o nome da página de código desejada.</span><span class="sxs-lookup"><span data-stu-id="616f4-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
   
- Qualquer valor retornado por <xref:System.Text.Encoding.WebName%2A> é um valor válido.  
+ <span data-ttu-id="616f4-104">Qualquer valor retornado por <xref:System.Text.Encoding.WebName%2A> é um valor válido.</span><span class="sxs-lookup"><span data-stu-id="616f4-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
   
- Se você ler um documento codificado, a propriedade <xref:System.Xml.Linq.XDeclaration.Encoding%2A> será definida para o nome da página de código.  
+ <span data-ttu-id="616f4-105">Se você ler um documento codificado, a propriedade <xref:System.Xml.Linq.XDeclaration.Encoding%2A> será definida para o nome da página de código.</span><span class="sxs-lookup"><span data-stu-id="616f4-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
   
- Se você definir <xref:System.Xml.Linq.XDeclaration.Encoding%2A> como um nome válido de página de código, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializará com a codificação especificada.  
+ <span data-ttu-id="616f4-106">Se você definir <xref:System.Xml.Linq.XDeclaration.Encoding%2A> como um nome válido de página de código, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializará com a codificação especificada.</span><span class="sxs-lookup"><span data-stu-id="616f4-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir cria dois documentos, um com codificação utf-8 e um com codificação utf-16. Ele em seguida carrega os documentos e imprime a codificação para o console.  
+## <a name="example"></a><span data-ttu-id="616f4-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="616f4-107">Example</span></span>  
+ <span data-ttu-id="616f4-108">O exemplo a seguir cria dois documentos, um com codificação utf-8 e um com codificação utf-16.</span><span class="sxs-lookup"><span data-stu-id="616f4-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="616f4-109">Ele em seguida carrega os documentos e imprime a codificação para o console.</span><span class="sxs-lookup"><span data-stu-id="616f4-109">It then loads the documents and prints the encoding to the console.</span></span>  
   
 ```csharp  
 Console.WriteLine("Creating a document with utf-8 encoding");  
@@ -71,7 +62,7 @@ Console.WriteLine();
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ <span data-ttu-id="616f4-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="616f4-110">This example produces the following output:</span></span>  
   
 ```  
 Creating a document with utf-8 encoding  
@@ -93,7 +84,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
- [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="616f4-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="616f4-111">See Also</span></span>  
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="616f4-112">Programação LINQ to XML avançada (C#)</span><span class="sxs-lookup"><span data-stu-id="616f4-112">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

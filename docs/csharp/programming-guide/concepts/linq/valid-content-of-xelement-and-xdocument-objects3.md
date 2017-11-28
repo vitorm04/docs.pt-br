@@ -1,38 +1,29 @@
 ---
 title: "Conteúdo válido de objetos XElement e XDocument3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 113a187c9a852420ffcef3893a415a24bae2c655
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2552c233961c13816fd91c79c5e6b589674985f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="valid-content-of-xelement-and-xdocument-objects"></a>Conteúdo válido de objetos XElement e XDocument
-Este tópico descreve os argumentos válidos que podem ser passados para os construtores e os métodos que você usa para adicionar conteúdo a elementos e documentos.  
+# <a name="valid-content-of-xelement-and-xdocument-objects"></a><span data-ttu-id="49f82-102">Conteúdo válido de objetos XElement e XDocument</span><span class="sxs-lookup"><span data-stu-id="49f82-102">Valid Content of XElement and XDocument Objects</span></span>
+<span data-ttu-id="49f82-103">Este tópico descreve os argumentos válidos que podem ser passados para os construtores e os métodos que você usa para adicionar conteúdo a elementos e documentos.</span><span class="sxs-lookup"><span data-stu-id="49f82-103">This topic describes the valid arguments that can be passed to constructors and methods that you use to add content to elements and documents.</span></span>  
   
-## <a name="valid-content"></a>Conteúdo válido  
- As consultas geralmente avaliam para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> ou <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Você pode passar coleções de <xref:System.Xml.Linq.XElement> ou de objetos <xref:System.Xml.Linq.XAttribute> para o construtor de <xref:System.Xml.Linq.XElement>. Portanto, é conveniente passar os resultados de uma consulta como conteúdo em métodos e os construtores que você usa para popular árvores XML.  
+## <a name="valid-content"></a><span data-ttu-id="49f82-104">Conteúdo válido</span><span class="sxs-lookup"><span data-stu-id="49f82-104">Valid Content</span></span>  
+ <span data-ttu-id="49f82-105">As consultas geralmente avaliam para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> ou <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="49f82-105">Queries often evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> or <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XAttribute>.</span></span> <span data-ttu-id="49f82-106">Você pode passar coleções de <xref:System.Xml.Linq.XElement> ou de objetos <xref:System.Xml.Linq.XAttribute> para o construtor de <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="49f82-106">You can pass collections of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects to the <xref:System.Xml.Linq.XElement> constructor.</span></span> <span data-ttu-id="49f82-107">Portanto, é conveniente passar os resultados de uma consulta como conteúdo em métodos e os construtores que você usa para popular árvores XML.</span><span class="sxs-lookup"><span data-stu-id="49f82-107">Therefore, it is convenient to pass the results of a query as content into methods and constructors that you use to populate XML trees.</span></span>  
   
- Ao adicionar conteúdo simples, vários tipos podem ser passados para esse método. Os tipos válidos incluem:  
+ <span data-ttu-id="49f82-108">Ao adicionar conteúdo simples, vários tipos podem ser passados para esse método.</span><span class="sxs-lookup"><span data-stu-id="49f82-108">When adding simple content, various types can be passed to this method.</span></span> <span data-ttu-id="49f82-109">Os tipos válidos incluem:</span><span class="sxs-lookup"><span data-stu-id="49f82-109">Valid types include the following:</span></span>  
   
 -   <xref:System.String>  
   
@@ -50,11 +41,11 @@ Este tópico descreve os argumentos válidos que podem ser passados para os cons
   
 -   <xref:System.DateTimeOffset>  
   
--   Qualquer tipo que implemente `Object.ToString`.  
+-   <span data-ttu-id="49f82-110">Qualquer tipo que implemente `Object.ToString`.</span><span class="sxs-lookup"><span data-stu-id="49f82-110">Any type that implements `Object.ToString`.</span></span>  
   
--   Qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
+-   <span data-ttu-id="49f82-111">Qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="49f82-111">Any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
   
- Ao adicionar conteúdo complexo, vários tipos podem ser passados para esse método:  
+ <span data-ttu-id="49f82-112">Ao adicionar conteúdo complexo, vários tipos podem ser passados para esse método:</span><span class="sxs-lookup"><span data-stu-id="49f82-112">When adding complex content, various types can be passed to this method:</span></span>  
   
 -   <xref:System.Xml.Linq.XObject>  
   
@@ -62,49 +53,48 @@ Este tópico descreve os argumentos válidos que podem ser passados para os cons
   
 -   <xref:System.Xml.Linq.XAttribute>  
   
--   Qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>  
+-   <span data-ttu-id="49f82-113">Qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="49f82-113">Any type that implements <xref:System.Collections.Generic.IEnumerable%601></span></span>  
   
- Se um objeto implementar <xref:System.Collections.Generic.IEnumerable%601>, a coleção no objeto será enumerada, e todos os itens da coleção serão adicionados. Se a coleção contiver objetos <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, cada item da coleção será adicionado separadamente. Se a coleção contiver texto (ou objetos que são convertidos em texto), o texto da coleção será concatenado e adicionado como um único nó de texto.  
+ <span data-ttu-id="49f82-114">Se um objeto implementar <xref:System.Collections.Generic.IEnumerable%601>, a coleção no objeto será enumerada, e todos os itens da coleção serão adicionados.</span><span class="sxs-lookup"><span data-stu-id="49f82-114">If an object implements <xref:System.Collections.Generic.IEnumerable%601>, the collection in the object is enumerated, and all items in the collection are added.</span></span> <span data-ttu-id="49f82-115">Se a coleção contiver objetos <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, cada item da coleção será adicionado separadamente.</span><span class="sxs-lookup"><span data-stu-id="49f82-115">If the collection contains <xref:System.Xml.Linq.XNode> or <xref:System.Xml.Linq.XAttribute> objects, each item in the collection is added separately.</span></span> <span data-ttu-id="49f82-116">Se a coleção contiver texto (ou objetos que são convertidos em texto), o texto da coleção será concatenado e adicionado como um único nó de texto.</span><span class="sxs-lookup"><span data-stu-id="49f82-116">If the collection contains text (or objects that are converted to text), the text in the collection is concatenated and added as a single text node.</span></span>  
   
- Se o conteúdo for `null`, nada será adicionado. Ao passar itens de um coleção, a coleção pode ser `null`. Um item `null` na coleção não tem nenhum efeito na árvore.  
+ <span data-ttu-id="49f82-117">Se o conteúdo for `null`, nada será adicionado.</span><span class="sxs-lookup"><span data-stu-id="49f82-117">If content is `null`, nothing is added.</span></span> <span data-ttu-id="49f82-118">Ao passar itens de um coleção, a coleção pode ser `null`.</span><span class="sxs-lookup"><span data-stu-id="49f82-118">When passing a collection items in the collection can be `null`.</span></span> <span data-ttu-id="49f82-119">Um item `null` na coleção não tem nenhum efeito na árvore.</span><span class="sxs-lookup"><span data-stu-id="49f82-119">A `null` item in the collection has no effect on the tree.</span></span>  
   
- Um atributo adicionado deve ter um nome exclusivo dentro do elemento que o contém.  
+ <span data-ttu-id="49f82-120">Um atributo adicionado deve ter um nome exclusivo dentro do elemento que o contém.</span><span class="sxs-lookup"><span data-stu-id="49f82-120">An added attribute must have a unique name within its containing element.</span></span>  
   
- Ao adicionar objetos <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, se o novo conteúdo não tiver um pai, os objetos serão simplesmente anexados à árvore XML. Se o novo conteúdo já tiver um pai e fizer parte de outra árvore XML, o novo conteúdo será clonado, e o conteúdo recém-clonado será anexado à árvore XML.  
+ <span data-ttu-id="49f82-121">Ao adicionar objetos <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, se o novo conteúdo não tiver um pai, os objetos serão simplesmente anexados à árvore XML.</span><span class="sxs-lookup"><span data-stu-id="49f82-121">When adding <xref:System.Xml.Linq.XNode> or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, then the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="49f82-122">Se o novo conteúdo já tiver um pai e fizer parte de outra árvore XML, o novo conteúdo será clonado, e o conteúdo recém-clonado será anexado à árvore XML.</span><span class="sxs-lookup"><span data-stu-id="49f82-122">If the new content already is parented and is part of another XML tree, then the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span>  
   
-## <a name="valid-content-for-documents"></a>Conteúdo válido para documentos  
- Atributos e conteúdo simples não podem ser adicionados a um documento.  
+## <a name="valid-content-for-documents"></a><span data-ttu-id="49f82-123">Conteúdo válido para documentos</span><span class="sxs-lookup"><span data-stu-id="49f82-123">Valid Content for Documents</span></span>  
+ <span data-ttu-id="49f82-124">Atributos e conteúdo simples não podem ser adicionados a um documento.</span><span class="sxs-lookup"><span data-stu-id="49f82-124">Attributes and simple content cannot be added to a document.</span></span>  
   
- Não há muitos cenários que exijam a criação de um <xref:System.Xml.Linq.XDocument>. Em vez disso, você normalmente pode criar suas árvores XML com um nó raiz de <xref:System.Xml.Linq.XElement>. A menos que você tenha um requisito específico para criar um documento (por exemplo, porque você precisa criar instruções de processamento e comentários no nível superior ou precisa dar suporte a tipos de documento), geralmente é mais conveniente usar <xref:System.Xml.Linq.XElement> como o nó raiz.  
+ <span data-ttu-id="49f82-125">Não há muitos cenários que exijam a criação de um <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="49f82-125">There are not many scenarios that require you to create an <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="49f82-126">Em vez disso, você normalmente pode criar suas árvores XML com um nó raiz de <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="49f82-126">Instead, you can usually create your XML trees with an <xref:System.Xml.Linq.XElement> root node.</span></span> <span data-ttu-id="49f82-127">A menos que você tenha um requisito específico para criar um documento (por exemplo, porque você precisa criar instruções de processamento e comentários no nível superior ou precisa dar suporte a tipos de documento), geralmente é mais conveniente usar <xref:System.Xml.Linq.XElement> como o nó raiz.</span><span class="sxs-lookup"><span data-stu-id="49f82-127">Unless you have a specific requirement to create a document (for example, because you have to create processing instructions and comments at the top level, or you have to support document types), it is often more convenient to use <xref:System.Xml.Linq.XElement> as your root node.</span></span>  
   
- O conteúdo válido de um documento inclui o seguinte:  
+ <span data-ttu-id="49f82-128">O conteúdo válido de um documento inclui o seguinte:</span><span class="sxs-lookup"><span data-stu-id="49f82-128">Valid content for a document includes the following:</span></span>  
   
--   Zero ou um objeto <xref:System.Xml.Linq.XDocumentType>. Os tipos de documento devem vir antes do elemento.  
+-   <span data-ttu-id="49f82-129">Zero ou um objeto <xref:System.Xml.Linq.XDocumentType>.</span><span class="sxs-lookup"><span data-stu-id="49f82-129">Zero or one <xref:System.Xml.Linq.XDocumentType> objects.</span></span> <span data-ttu-id="49f82-130">Os tipos de documento devem vir antes do elemento.</span><span class="sxs-lookup"><span data-stu-id="49f82-130">The document types must come before the element.</span></span>  
   
--   Zero ou um elemento.  
+-   <span data-ttu-id="49f82-131">Zero ou um elemento.</span><span class="sxs-lookup"><span data-stu-id="49f82-131">Zero or one element.</span></span>  
   
--   Zero ou mais comentários.  
+-   <span data-ttu-id="49f82-132">Zero ou mais comentários.</span><span class="sxs-lookup"><span data-stu-id="49f82-132">Zero or more comments.</span></span>  
   
--   Zero ou mais instruções de processamento.  
+-   <span data-ttu-id="49f82-133">Zero ou mais instruções de processamento.</span><span class="sxs-lookup"><span data-stu-id="49f82-133">Zero or more processing instructions.</span></span>  
   
--   Zero ou mais nós de texto que contêm somente espaço em branco.  
+-   <span data-ttu-id="49f82-134">Zero ou mais nós de texto que contêm somente espaço em branco.</span><span class="sxs-lookup"><span data-stu-id="49f82-134">Zero or more text nodes that contain only white space.</span></span>  
   
-## <a name="constructors-and-functions-that-allow-adding-content"></a>Construtores e funções que permitem adicionar conteúdo  
- Os métodos a seguir permitem adicionar conteúdo filho a um <xref:System.Xml.Linq.XElement> ou a um <xref:System.Xml.Linq.XDocument>:  
+## <a name="constructors-and-functions-that-allow-adding-content"></a><span data-ttu-id="49f82-135">Construtores e funções que permitem adicionar conteúdo</span><span class="sxs-lookup"><span data-stu-id="49f82-135">Constructors and Functions that Allow Adding Content</span></span>  
+ <span data-ttu-id="49f82-136">Os métodos a seguir permitem adicionar conteúdo filho a um <xref:System.Xml.Linq.XElement> ou a um <xref:System.Xml.Linq.XDocument>:</span><span class="sxs-lookup"><span data-stu-id="49f82-136">The following methods allow you to add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|Método|Descrição|  
+|<span data-ttu-id="49f82-137">Método</span><span class="sxs-lookup"><span data-stu-id="49f82-137">Method</span></span>|<span data-ttu-id="49f82-138">Descrição</span><span class="sxs-lookup"><span data-stu-id="49f82-138">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.%23ctor%2A>|Constrói um <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Constrói um <xref:System.Xml.Linq.XDocument>.|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Adiciona ao final do conteúdo filho do <xref:System.Xml.Linq.XElement> ou do <xref:System.Xml.Linq.XDocument>.|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Adiciona conteúdo depois de <xref:System.Xml.Linq.XNode>.|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Adiciona conteúdo antes de <xref:System.Xml.Linq.XNode>.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Adiciona conteúdo ao início do conteúdo filho de <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|Substitui todo o conteúdo (nós filho e atributos) de um <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|Substitui os atributos de um <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Substitui os nós filho pelo novo conteúdo.|  
-|<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Substitui um nó pelo novo conteúdo.|  
+|<xref:System.Xml.Linq.XElement.%23ctor%2A>|<span data-ttu-id="49f82-139">Constrói um <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="49f82-139">Constructs an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XDocument.%23ctor%2A>|<span data-ttu-id="49f82-140">Constrói um <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="49f82-140">Constructs a <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="49f82-141">Adiciona ao final do conteúdo filho do <xref:System.Xml.Linq.XElement> ou do <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="49f82-141">Adds to the end of the child content of the <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="49f82-142">Adiciona conteúdo depois de <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="49f82-142">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="49f82-143">Adiciona conteúdo antes de <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="49f82-143">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="49f82-144">Adiciona conteúdo ao início do conteúdo filho de <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="49f82-144">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|<span data-ttu-id="49f82-145">Substitui todo o conteúdo (nós filho e atributos) de um <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="49f82-145">Replaces all content (child nodes and attributes) of an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|<span data-ttu-id="49f82-146">Substitui os atributos de um <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="49f82-146">Replaces the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|<span data-ttu-id="49f82-147">Substitui os nós filho pelo novo conteúdo.</span><span class="sxs-lookup"><span data-stu-id="49f82-147">Replaces the children nodes with new content.</span></span>|  
+|<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|<span data-ttu-id="49f82-148">Substitui um nó pelo novo conteúdo.</span><span class="sxs-lookup"><span data-stu-id="49f82-148">Replaces a node with new content.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-
+## <a name="see-also"></a><span data-ttu-id="49f82-149">Consulte também</span><span class="sxs-lookup"><span data-stu-id="49f82-149">See Also</span></span>  
+ [<span data-ttu-id="49f82-150">Criando árvores XML (C#)</span><span class="sxs-lookup"><span data-stu-id="49f82-150">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

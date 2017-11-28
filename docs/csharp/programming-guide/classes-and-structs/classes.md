@@ -1,99 +1,79 @@
 ---
 title: "Classes (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 37e810fc5a5397a6b9240346ac28505b11b1e817
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
-Uma *classe* é um constructo que permite que você crie seus próprios tipos personalizados através do agrupamento de variáveis de outros tipos, métodos e eventos. Uma classe é como um plano gráfico. Ela define os dados e o comportamento de um tipo. Se a classe não for declarada como estática, o código cliente poderá usá-la criando *objetos* ou *instâncias* que são atribuídas a uma variável. A variável permanece na memória até que todas as referências a ela saiam do escopo. Nesse momento, o CLR marca a variável como qualificada para a coleta de lixo. Se a classe for declarada como [estática](../../../csharp/language-reference/keywords/static.md), haverá apenas uma cópia na memória e o código cliente só poderá acessá-la por meio da própria classe e não por uma *variável de instância*. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+# <a name="classes-c-programming-guide"></a><span data-ttu-id="9d7e0-102">Classes (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="9d7e0-102">Classes (C# Programming Guide)</span></span>
+<span data-ttu-id="9d7e0-103">Uma *classe* é um constructo que permite que você crie seus próprios tipos personalizados através do agrupamento de variáveis de outros tipos, métodos e eventos.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-103">A *class* is a construct that enables you to create your own custom types by grouping together variables of other types, methods and events.</span></span> <span data-ttu-id="9d7e0-104">Uma classe é como um plano gráfico.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-104">A class is like a blueprint.</span></span> <span data-ttu-id="9d7e0-105">Ela define os dados e o comportamento de um tipo.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-105">It defines the data and behavior of a type.</span></span> <span data-ttu-id="9d7e0-106">Se a classe não for declarada como estática, o código cliente poderá usá-la criando *objetos* ou *instâncias* que são atribuídas a uma variável.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-106">If the class is not declared as static, client code can use it by creating *objects* or *instances* which are assigned to a variable.</span></span> <span data-ttu-id="9d7e0-107">A variável permanece na memória até que todas as referências a ela saiam do escopo.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-107">The variable remains in memory until all references to it go out of scope.</span></span> <span data-ttu-id="9d7e0-108">Nesse momento, o CLR marca a variável como qualificada para a coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-108">At that time, the CLR marks it as eligible for garbage collection.</span></span> <span data-ttu-id="9d7e0-109">Se a classe for declarada como [estática](../../../csharp/language-reference/keywords/static.md), haverá apenas uma cópia na memória e o código cliente só poderá acessá-la por meio da própria classe e não por uma *variável de instância*.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-109">If the class is declared as [static](../../../csharp/language-reference/keywords/static.md), then only one copy exists in memory and client code can only access it through the class itself, not an *instance variable*.</span></span> <span data-ttu-id="9d7e0-110">Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-110">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- Diferentemente de structs, as classes dão suporte à *herança*, uma característica fundamental da programação orientada a objeto. Para obter mais informações, consulte [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+ <span data-ttu-id="9d7e0-111">Diferentemente de structs, as classes dão suporte à *herança*, uma característica fundamental da programação orientada a objeto.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-111">Unlike structs, classes support *inheritance*, a fundamental characteristic of object-oriented programming.</span></span> <span data-ttu-id="9d7e0-112">Para obter mais informações, consulte [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-112">For more information, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span>  
   
-## <a name="declaring-classes"></a>Declarando Classes  
- As classes são declaradas usando a palavra-chave [class](../../../csharp/language-reference/keywords/class.md), conforme mostrado no exemplo a seguir:  
+## <a name="declaring-classes"></a><span data-ttu-id="9d7e0-113">Declarando Classes</span><span class="sxs-lookup"><span data-stu-id="9d7e0-113">Declaring Classes</span></span>  
+ <span data-ttu-id="9d7e0-114">As classes são declaradas usando a palavra-chave [class](../../../csharp/language-reference/keywords/class.md), conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="9d7e0-114">Classes are declared by using the [class](../../../csharp/language-reference/keywords/class.md) keyword, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
+ [!code-csharp[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
- A palavra-chave `class` é precedida pelo nível de acesso. Como [público](../../../csharp/language-reference/keywords/public.md) é usado nesse caso, qualquer pessoa pode criar objetos dessa classe. O nome da classe segue a palavra-chave `class`. O restante da definição é o corpo da classe, em que o comportamento e os dados são definidos. Campos, propriedades, métodos e eventos em uma classe são coletivamente denominados de *membros de classe*.  
+ <span data-ttu-id="9d7e0-115">A palavra-chave `class` é precedida pelo nível de acesso.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-115">The `class` keyword is preceded by the access level.</span></span> <span data-ttu-id="9d7e0-116">Como [público](../../../csharp/language-reference/keywords/public.md) é usado nesse caso, qualquer pessoa pode criar objetos dessa classe.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-116">Because [public](../../../csharp/language-reference/keywords/public.md) is used in this case, anyone can create objects from this class.</span></span> <span data-ttu-id="9d7e0-117">O nome da classe segue a palavra-chave `class`.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-117">The name of the class follows the `class` keyword.</span></span> <span data-ttu-id="9d7e0-118">O restante da definição é o corpo da classe, em que o comportamento e os dados são definidos.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-118">The remainder of the definition is the class body, where the behavior and data are defined.</span></span> <span data-ttu-id="9d7e0-119">Campos, propriedades, métodos e eventos em uma classe são coletivamente denominados de *membros de classe*.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-119">Fields, properties, methods, and events on a class are collectively referred to as *class members*.</span></span>  
   
-## <a name="creating-objects"></a>Criando Objetos  
- Embora eles sejam usados algumas vezes de maneira intercambiável, uma classe e um objeto são coisas diferentes. Uma classe define um tipo de objeto, mas não é um objeto em si. Um objeto é uma entidade concreta com base em uma classe e, às vezes, é conhecido como uma instância de uma classe.  
+## <a name="creating-objects"></a><span data-ttu-id="9d7e0-120">Criando Objetos</span><span class="sxs-lookup"><span data-stu-id="9d7e0-120">Creating Objects</span></span>  
+ <span data-ttu-id="9d7e0-121">Embora eles sejam usados algumas vezes de maneira intercambiável, uma classe e um objeto são coisas diferentes.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-121">Although they are sometimes used interchangeably, a class and an object are different things.</span></span> <span data-ttu-id="9d7e0-122">Uma classe define um tipo de objeto, mas não é um objeto em si.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-122">A class defines a type of object, but it is not an object itself.</span></span> <span data-ttu-id="9d7e0-123">Um objeto é uma entidade concreta com base em uma classe e, às vezes, é conhecido como uma instância de uma classe.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-123">An object is a concrete entity based on a class, and is sometimes referred to as an instance of a class.</span></span>  
   
- Os objetos podem ser criados usando a palavra-chave [new](../../../csharp/language-reference/keywords/new.md), seguida pelo nome da classe na qual ele se baseará, dessa maneira:  
+ <span data-ttu-id="9d7e0-124">Os objetos podem ser criados usando a palavra-chave [new](../../../csharp/language-reference/keywords/new.md), seguida pelo nome da classe na qual ele se baseará, dessa maneira:</span><span class="sxs-lookup"><span data-stu-id="9d7e0-124">Objects can be created by using the [new](../../../csharp/language-reference/keywords/new.md) keyword followed by the name of the class that the object will be based on, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
+ [!code-csharp[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
- Quando uma instância de uma classe é criada, uma referência ao objeto é passada de volta para o programador. No exemplo anterior, `object1` é uma referência a um objeto que é baseado em `Customer`. Esta referência refere-se ao novo objeto, mas não contém os dados de objeto. Na verdade, você pode criar uma referência de objeto sem criar um objeto:  
+ <span data-ttu-id="9d7e0-125">Quando uma instância de uma classe é criada, uma referência ao objeto é passada de volta para o programador.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-125">When an instance of a class is created, a reference to the object is passed back to the programmer.</span></span> <span data-ttu-id="9d7e0-126">No exemplo anterior, `object1` é uma referência a um objeto que é baseado em `Customer`.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-126">In the previous example, `object1` is a reference to an object that is based on `Customer`.</span></span> <span data-ttu-id="9d7e0-127">Esta referência refere-se ao novo objeto, mas não contém os dados de objeto.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-127">This reference refers to the new object but does not contain the object data itself.</span></span> <span data-ttu-id="9d7e0-128">Na verdade, você pode criar uma referência de objeto sem criar um objeto:</span><span class="sxs-lookup"><span data-stu-id="9d7e0-128">In fact, you can create an object reference without creating an object at all:</span></span>  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
+ [!code-csharp[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
- Não recomendamos a criação de referências de objeto como essa, que não faz referência a um objeto, porque tentar acessar um objeto por meio de uma referência desse tipo falhará em tempo de execução. Entretanto, essa referência pode ser feita para se referir a um objeto, criando um novo objeto ou atribuindo-a a um objeto existente, como abaixo:  
+ <span data-ttu-id="9d7e0-129">Não recomendamos a criação de referências de objeto como essa, que não faz referência a um objeto, porque tentar acessar um objeto por meio de uma referência desse tipo falhará em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-129">We don't recommend creating object references such as this one that don't refer to an object because trying to access an object through such a reference will fail at run time.</span></span> <span data-ttu-id="9d7e0-130">Entretanto, essa referência pode ser feita para se referir a um objeto, criando um novo objeto ou atribuindo-a a um objeto existente, como abaixo:</span><span class="sxs-lookup"><span data-stu-id="9d7e0-130">However, such a reference can be made to refer to an object, either by creating a new object, or by assigning it to an existing object, such as this:</span></span>  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
+ [!code-csharp[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
- Esse código cria duas referências de objeto que fazem referência ao mesmo objeto. Portanto, qualquer alteração no objeto feita por meio de `object3` será refletida no usos subsequentes de `object4`. Como os objetos que são baseados em classes são referenciados por referência, as classes são conhecidas como tipos de referência.  
+ <span data-ttu-id="9d7e0-131">Esse código cria duas referências de objeto que fazem referência ao mesmo objeto.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-131">This code creates two object references that both refer to the same object.</span></span> <span data-ttu-id="9d7e0-132">Portanto, qualquer alteração no objeto feita por meio de `object3` será refletida no usos subsequentes de `object4`.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-132">Therefore, any changes to the object made through `object3` will be reflected in subsequent uses of `object4`.</span></span> <span data-ttu-id="9d7e0-133">Como os objetos que são baseados em classes são referenciados por referência, as classes são conhecidas como tipos de referência.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-133">Because objects that are based on classes are referred to by reference, classes are known as reference types.</span></span>  
   
-## <a name="class-inheritance"></a>Herança da Classe  
- A herança é realizada usando uma *derivação*, o que significa que uma classe é declarada usando uma *classe base*, da qual ela herda o comportamento e os dados. Uma classe base é especificada ao acrescentar dois-pontos e o nome de classe base depois do nome de classe derivada, dessa maneira:  
+## <a name="class-inheritance"></a><span data-ttu-id="9d7e0-134">Herança da Classe</span><span class="sxs-lookup"><span data-stu-id="9d7e0-134">Class Inheritance</span></span>  
+ <span data-ttu-id="9d7e0-135">A herança é realizada usando uma *derivação*, o que significa que uma classe é declarada usando uma *classe base*, da qual ela herda o comportamento e os dados.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-135">Inheritance is accomplished by using a *derivation*, which means a class is declared by using a *base class* from which it inherits data and behavior.</span></span> <span data-ttu-id="9d7e0-136">Uma classe base é especificada ao acrescentar dois-pontos e o nome de classe base depois do nome de classe derivada, dessa maneira:</span><span class="sxs-lookup"><span data-stu-id="9d7e0-136">A base class is specified by appending a colon and the name of the base class following the derived class name, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
+ [!code-csharp[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
- Quando uma classe declara uma classe base, ela herda todos os membros da classe base, exceto os construtores.  
+ <span data-ttu-id="9d7e0-137">Quando uma classe declara uma classe base, ela herda todos os membros da classe base, exceto os construtores.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-137">When a class declares a base class, it inherits all the members of the base class except the constructors.</span></span>  
   
- Ao contrário do C++, uma classe no C# só pode herdar diretamente de uma classe base. No entanto, como uma classe base pode herdar de outra classe, uma classe pode herdar indiretamente várias classes base. Além disso, uma classe pode implementar diretamente mais de uma interface. Para obter mais informações, consulte [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ <span data-ttu-id="9d7e0-138">Ao contrário do C++, uma classe no C# só pode herdar diretamente de uma classe base.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-138">Unlike C++, a class in C# can only directly inherit from one base class.</span></span> <span data-ttu-id="9d7e0-139">No entanto, como uma classe base pode herdar de outra classe, uma classe pode herdar indiretamente várias classes base.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-139">However, because a base class may itself inherit from another class, a class may indirectly inherit multiple base classes.</span></span> <span data-ttu-id="9d7e0-140">Além disso, uma classe pode implementar diretamente mais de uma interface.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-140">Furthermore, a class can directly implement more than one interface.</span></span> <span data-ttu-id="9d7e0-141">Para obter mais informações, consulte [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-141">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
- Uma classe pode ser declarada [abstract](../../../csharp/language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../../csharp/language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ <span data-ttu-id="9d7e0-142">Uma classe pode ser declarada [abstract](../../../csharp/language-reference/keywords/abstract.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-142">A class can be declared [abstract](../../../csharp/language-reference/keywords/abstract.md).</span></span> <span data-ttu-id="9d7e0-143">Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-143">An abstract class contains abstract methods that have a signature definition but no implementation.</span></span> <span data-ttu-id="9d7e0-144">As classes abstratas não podem ser instanciadas.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-144">Abstract classes cannot be instantiated.</span></span> <span data-ttu-id="9d7e0-145">Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-145">They can only be used through derived classes that implement the abstract methods.</span></span> <span data-ttu-id="9d7e0-146">Por outro lado, uma classe [lacrada](../../../csharp/language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-146">By contrast, a [sealed](../../../csharp/language-reference/keywords/sealed.md) class does not allow other classes to derive from it.</span></span> <span data-ttu-id="9d7e0-147">Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-147">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- As definições de classe podem ser divididas entre arquivos de origem diferentes. Para obter mais informações, consulte [Classes e métodos parciais](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
+ <span data-ttu-id="9d7e0-148">As definições de classe podem ser divididas entre arquivos de origem diferentes.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-148">Class definitions can be split between different source files.</span></span> <span data-ttu-id="9d7e0-149">Para obter mais informações, consulte [Classes e métodos parciais](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-149">For more information, see [Partial Classes and Methods](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>  
   
-## <a name="description"></a>Descrição  
- No exemplo a seguir, é definida uma classe pública que contém um único campo, um método e um método chamado construtor. Para saber mais, veja [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md). Então, a classe é instanciada com a palavra-chave `new`.  
+## <a name="description"></a><span data-ttu-id="9d7e0-150">Descrição</span><span class="sxs-lookup"><span data-stu-id="9d7e0-150">Description</span></span>  
+ <span data-ttu-id="9d7e0-151">No exemplo a seguir, é definida uma classe pública que contém um único campo, um método e um método chamado construtor.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-151">In the following example, a public class that contains a single field, a method, and a special method called a constructor is defined.</span></span> <span data-ttu-id="9d7e0-152">Para saber mais, veja [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="9d7e0-152">For more information, see [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span> <span data-ttu-id="9d7e0-153">Então, a classe é instanciada com a palavra-chave `new`.</span><span class="sxs-lookup"><span data-stu-id="9d7e0-153">The class is then instantiated with the `new` keyword.</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
+## <a name="example"></a><span data-ttu-id="9d7e0-154">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9d7e0-154">Example</span></span>  
+ [!code-csharp[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="9d7e0-155">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="9d7e0-155">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Programação Orientada a Objeto](../concepts/object-oriented-programming.md)   
- [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [Membros](../../../csharp/programming-guide/classes-and-structs/members.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Objetos](../../../csharp/programming-guide/classes-and-structs/objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="9d7e0-156">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9d7e0-156">See Also</span></span>  
+ [<span data-ttu-id="9d7e0-157">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="9d7e0-157">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9d7e0-158">Programação Orientada a Objeto</span><span class="sxs-lookup"><span data-stu-id="9d7e0-158">Object-Oriented Programming</span></span>](../concepts/object-oriented-programming.md)  
+ [<span data-ttu-id="9d7e0-159">Polimorfismo</span><span class="sxs-lookup"><span data-stu-id="9d7e0-159">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [<span data-ttu-id="9d7e0-160">Membros</span><span class="sxs-lookup"><span data-stu-id="9d7e0-160">Members</span></span>](../../../csharp/programming-guide/classes-and-structs/members.md)  
+ [<span data-ttu-id="9d7e0-161">Métodos</span><span class="sxs-lookup"><span data-stu-id="9d7e0-161">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="9d7e0-162">Construtores</span><span class="sxs-lookup"><span data-stu-id="9d7e0-162">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="9d7e0-163">Finalizadores</span><span class="sxs-lookup"><span data-stu-id="9d7e0-163">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="9d7e0-164">Objetos</span><span class="sxs-lookup"><span data-stu-id="9d7e0-164">Objects</span></span>](../../../csharp/programming-guide/classes-and-structs/objects.md)

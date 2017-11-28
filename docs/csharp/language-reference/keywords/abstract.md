@@ -1,113 +1,93 @@
 ---
 title: "abstract (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- abstract keyword [C#]
+helpviewer_keywords: abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a109a8e37f84a2e91229bfce789a69cdc26adba9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="abstract-c-reference"></a>abstract (Referência de C#)
-O modificador `abstract` indica que o item que está sendo modificado tem uma implementação ausente ou incompleta. O modificador abstrato pode ser usado com classes, métodos, propriedades, indexadores e eventos. Use o modificador `abstract` em uma declaração de classe para indicar que uma classe destina-se apenas a ser uma classe base de outras classes. Membros marcados como abstratos ou incluídos em uma classe abstrata, devem ser implementados por classes que derivam da classe abstrata.  
+# <a name="abstract-c-reference"></a><span data-ttu-id="6c95f-102">abstract (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="6c95f-102">abstract (C# Reference)</span></span>
+<span data-ttu-id="6c95f-103">O modificador `abstract` indica que o item que está sendo modificado tem uma implementação ausente ou incompleta.</span><span class="sxs-lookup"><span data-stu-id="6c95f-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="6c95f-104">O modificador abstrato pode ser usado com classes, métodos, propriedades, indexadores e eventos.</span><span class="sxs-lookup"><span data-stu-id="6c95f-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="6c95f-105">Use o modificador `abstract` em uma declaração de classe para indicar que uma classe destina-se apenas a ser uma classe base de outras classes.</span><span class="sxs-lookup"><span data-stu-id="6c95f-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes.</span></span> <span data-ttu-id="6c95f-106">Membros marcados como abstratos ou incluídos em uma classe abstrata, devem ser implementados por classes que derivam da classe abstrata.</span><span class="sxs-lookup"><span data-stu-id="6c95f-106">Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Neste exemplo, a classe `Square` deve fornecer uma implementação de `Area` porque deriva de `ShapesClass`:  
+## <a name="example"></a><span data-ttu-id="6c95f-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6c95f-107">Example</span></span>  
+ <span data-ttu-id="6c95f-108">Neste exemplo, a classe `Square` deve fornecer uma implementação de `Area` porque deriva de `ShapesClass`:</span><span class="sxs-lookup"><span data-stu-id="6c95f-108">In this example, the class `Square` must provide an implementation of `Area` because it derives from `ShapesClass`:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
- As classes abstratas têm os seguintes recursos:  
+ <span data-ttu-id="6c95f-109">As classes abstratas têm os seguintes recursos:</span><span class="sxs-lookup"><span data-stu-id="6c95f-109">Abstract classes have the following features:</span></span>  
   
--   Uma classe abstrata não pode ser instanciada.  
+-   <span data-ttu-id="6c95f-110">Uma classe abstrata não pode ser instanciada.</span><span class="sxs-lookup"><span data-stu-id="6c95f-110">An abstract class cannot be instantiated.</span></span>  
   
--   Uma classe abstrata pode conter acessadores e métodos abstratos.  
+-   <span data-ttu-id="6c95f-111">Uma classe abstrata pode conter acessadores e métodos abstratos.</span><span class="sxs-lookup"><span data-stu-id="6c95f-111">An abstract class may contain abstract methods and accessors.</span></span>  
   
--   Não é possível modificar uma classe abstrata com o modificador [sealed](../../../csharp/language-reference/keywords/sealed.md) porque os dois modificadores têm significados opostos. O modificador `sealed` impede que uma classe seja herdada e o modificador `abstract` requer uma classe a ser herdada.  
+-   <span data-ttu-id="6c95f-112">Não é possível modificar uma classe abstrata com o modificador [sealed](../../../csharp/language-reference/keywords/sealed.md) porque os dois modificadores têm significados opostos.</span><span class="sxs-lookup"><span data-stu-id="6c95f-112">It is not possible to modify an abstract class with the [sealed](../../../csharp/language-reference/keywords/sealed.md) modifier because the two modifers have opposite meanings.</span></span> <span data-ttu-id="6c95f-113">O modificador `sealed` impede que uma classe seja herdada e o modificador `abstract` requer uma classe a ser herdada.</span><span class="sxs-lookup"><span data-stu-id="6c95f-113">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
   
--   Uma classe não abstrata derivada de uma classe abstrata deve incluir implementações reais de todos os acessadores e métodos abstratos herdados.  
+-   <span data-ttu-id="6c95f-114">Uma classe não abstrata derivada de uma classe abstrata deve incluir implementações reais de todos os acessadores e métodos abstratos herdados.</span><span class="sxs-lookup"><span data-stu-id="6c95f-114">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
   
- Use o modificador `abstract` em uma declaração de método ou propriedade para indicar que o método ou propriedade não contem a implementação.  
+ <span data-ttu-id="6c95f-115">Use o modificador `abstract` em uma declaração de método ou propriedade para indicar que o método ou propriedade não contem a implementação.</span><span class="sxs-lookup"><span data-stu-id="6c95f-115">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
   
- Os métodos abstratos têm os seguintes recursos:  
+ <span data-ttu-id="6c95f-116">Os métodos abstratos têm os seguintes recursos:</span><span class="sxs-lookup"><span data-stu-id="6c95f-116">Abstract methods have the following features:</span></span>  
   
--   Um método abstrato é implicitamente um método virtual.  
+-   <span data-ttu-id="6c95f-117">Um método abstrato é implicitamente um método virtual.</span><span class="sxs-lookup"><span data-stu-id="6c95f-117">An abstract method is implicitly a virtual method.</span></span>  
   
--   Declarações de método abstrato são permitidas apenas em classes abstratas.  
+-   <span data-ttu-id="6c95f-118">Declarações de método abstrato são permitidas apenas em classes abstratas.</span><span class="sxs-lookup"><span data-stu-id="6c95f-118">Abstract method declarations are only permitted in abstract classes.</span></span>  
   
--   Como uma declaração de método abstrato não fornece nenhuma implementação real, não há nenhum corpo de método, a declaração do método simplesmente termina com um ponto e vírgula e não há chaves ({ }) após a assinatura. Por exemplo:  
+-   <span data-ttu-id="6c95f-119">Como uma declaração de método abstrato não fornece nenhuma implementação real, não há nenhum corpo de método, a declaração do método simplesmente termina com um ponto e vírgula e não há chaves ({ }) após a assinatura.</span><span class="sxs-lookup"><span data-stu-id="6c95f-119">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="6c95f-120">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="6c95f-120">For example:</span></span>  
   
     ```  
     public abstract void MyMethod();  
     ```  
   
-     A implementação é fornecida por um método de substituição [override](../../../csharp/language-reference/keywords/override.md), que é um membro de uma classe não abstrata.  
+     <span data-ttu-id="6c95f-121">A implementação é fornecida por um método de substituição [override](../../../csharp/language-reference/keywords/override.md), que é um membro de uma classe não abstrata.</span><span class="sxs-lookup"><span data-stu-id="6c95f-121">The implementation is provided by an overriding method[override](../../../csharp/language-reference/keywords/override.md), which is a member of a non-abstract class.</span></span>  
   
--   É um erro usar os modificadores [static](../../../csharp/language-reference/keywords/static.md) ou [virtual](../../../csharp/language-reference/keywords/virtual.md) em uma declaração de método abstrato.  
+-   <span data-ttu-id="6c95f-122">É um erro usar os modificadores [static](../../../csharp/language-reference/keywords/static.md) ou [virtual](../../../csharp/language-reference/keywords/virtual.md) em uma declaração de método abstrato.</span><span class="sxs-lookup"><span data-stu-id="6c95f-122">It is an error to use the [static](../../../csharp/language-reference/keywords/static.md) or [virtual](../../../csharp/language-reference/keywords/virtual.md) modifiers in an abstract method declaration.</span></span>  
   
- Propriedades abstratas se comportam como métodos abstratos, exceto pelas diferenças na sintaxe de declaração e chamada.  
+ <span data-ttu-id="6c95f-123">Propriedades abstratas se comportam como métodos abstratos, exceto pelas diferenças na sintaxe de declaração e chamada.</span><span class="sxs-lookup"><span data-stu-id="6c95f-123">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   É um erro usar o modificador `abstract` em uma propriedade estática.  
+-   <span data-ttu-id="6c95f-124">É um erro usar o modificador `abstract` em uma propriedade estática.</span><span class="sxs-lookup"><span data-stu-id="6c95f-124">It is an error to use the `abstract` modifier on a static property.</span></span>  
   
--   Uma propriedade herdada abstrata pode ser substituída em uma classe derivada incluindo uma declaração de propriedade que usa o modificador [override](../../../csharp/language-reference/keywords/override.md).  
+-   <span data-ttu-id="6c95f-125">Uma propriedade herdada abstrata pode ser substituída em uma classe derivada incluindo uma declaração de propriedade que usa o modificador [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="6c95f-125">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](../../../csharp/language-reference/keywords/override.md) modifier.</span></span>  
   
- Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ <span data-ttu-id="6c95f-126">Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="6c95f-126">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- Uma classe abstrata deve fornecer uma implementação para todos os membros de interface.  
+ <span data-ttu-id="6c95f-127">Uma classe abstrata deve fornecer uma implementação para todos os membros de interface.</span><span class="sxs-lookup"><span data-stu-id="6c95f-127">An abstract class must provide implementation for all interface members.</span></span>  
   
- Uma classe abstrata que implementa uma interface pode mapear os métodos de interface em métodos abstratos. Por exemplo:  
+ <span data-ttu-id="6c95f-128">Uma classe abstrata que implementa uma interface pode mapear os métodos de interface em métodos abstratos.</span><span class="sxs-lookup"><span data-stu-id="6c95f-128">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="6c95f-129">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="6c95f-129">For example:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
-## <a name="example"></a>Exemplo  
- Nesse exemplo, a classe `DerivedClass` é derivada de uma classe abstrata `BaseClass`. A classe abstrata contém um método abstrato, `AbstractMethod` e duas propriedades abstratas, `X` e `Y`.  
+## <a name="example"></a><span data-ttu-id="6c95f-130">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6c95f-130">Example</span></span>  
+ <span data-ttu-id="6c95f-131">Nesse exemplo, a classe `DerivedClass` é derivada de uma classe abstrata `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="6c95f-131">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="6c95f-132">A classe abstrata contém um método abstrato, `AbstractMethod` e duas propriedades abstratas, `X` e `Y`.</span><span class="sxs-lookup"><span data-stu-id="6c95f-132">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
- No exemplo anterior, se você tentar instanciar a classe abstrata usando uma instrução como esta:  
+ <span data-ttu-id="6c95f-133">No exemplo anterior, se você tentar instanciar a classe abstrata usando uma instrução como esta:</span><span class="sxs-lookup"><span data-stu-id="6c95f-133">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
   
 ```  
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- você receberá uma mensagem de erro informando que o compilador não pode criar uma instância da classe abstrata 'BaseClass'.  
+ <span data-ttu-id="6c95f-134">você receberá uma mensagem de erro informando que o compilador não pode criar uma instância da classe abstrata 'BaseClass'.</span><span class="sxs-lookup"><span data-stu-id="6c95f-134">you will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="6c95f-135">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="6c95f-135">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="6c95f-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6c95f-136">See Also</span></span>  
+ [<span data-ttu-id="6c95f-137">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="6c95f-137">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="6c95f-138">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="6c95f-138">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="6c95f-139">Modificadores</span><span class="sxs-lookup"><span data-stu-id="6c95f-139">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+ [<span data-ttu-id="6c95f-140">virtual</span><span class="sxs-lookup"><span data-stu-id="6c95f-140">virtual</span></span>](../../../csharp/language-reference/keywords/virtual.md)  
+ [<span data-ttu-id="6c95f-141">override</span><span class="sxs-lookup"><span data-stu-id="6c95f-141">override</span></span>](../../../csharp/language-reference/keywords/override.md)  
+ [<span data-ttu-id="6c95f-142">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="6c95f-142">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

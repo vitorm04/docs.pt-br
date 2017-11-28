@@ -1,14 +1,10 @@
 ---
 title: "-reference (opções do compilador do C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /reference
-dev_langs:
-- CSharp
+f1_keywords: /reference
 helpviewer_keywords:
 - /r compiler option [C#]
 - reference compiler option [C#]
@@ -19,81 +15,66 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b3995cd22f50aa8a3a329b22a4fbe4e9b8ffa4ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reference-c-compiler-options"></a>/reference (opções do compilador C#)
-A opção **/reference** opção faz com que o compilador importe informações de tipo [públicas](../../../csharp/language-reference/keywords/public.md) no arquivo especificado para o projeto atual, permitindo que você referencie metadados nos arquivos do assembly especificado.  
+# <a name="reference-c-compiler-options"></a><span data-ttu-id="7ad3d-102">/reference (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="7ad3d-102">/reference (C# Compiler Options)</span></span>
+<span data-ttu-id="7ad3d-103">A opção **/reference** opção faz com que o compilador importe informações de tipo [públicas](../../../csharp/language-reference/keywords/public.md) no arquivo especificado para o projeto atual, permitindo que você referencie metadados nos arquivos do assembly especificado.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-103">The **/reference** option causes the compiler to import [public](../../../csharp/language-reference/keywords/public.md) type information in the specified file into the current project, thus enabling you to reference metadata from the specified assembly files.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="7ad3d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7ad3d-104">Syntax</span></span>  
   
 ```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a><span data-ttu-id="7ad3d-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="7ad3d-105">Arguments</span></span>  
  `filename`  
- O nome de um arquivo que contém um manifesto de assembly. Para importar mais de um arquivo, inclua uma opção **/reference** separada para cada arquivo.  
+ <span data-ttu-id="7ad3d-106">O nome de um arquivo que contém um manifesto de assembly.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-106">The name of a file that contains an assembly manifest.</span></span> <span data-ttu-id="7ad3d-107">Para importar mais de um arquivo, inclua uma opção **/reference** separada para cada arquivo.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-107">To import more than one file, include a separate **/reference** option for each file.</span></span>  
   
  `alias`  
- Um identificador C# válido que representará um namespace raiz que conterá todos os namespaces no assembly.  
+ <span data-ttu-id="7ad3d-108">Um identificador C# válido que representará um namespace raiz que conterá todos os namespaces no assembly.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-108">A valid C# identifier that will represent a root namespace that will contain all namespaces in the assembly.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Para importar de mais de um arquivo, inclua uma opção **/reference** para cada arquivo.  
+## <a name="remarks"></a><span data-ttu-id="7ad3d-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="7ad3d-109">Remarks</span></span>  
+ <span data-ttu-id="7ad3d-110">Para importar de mais de um arquivo, inclua uma opção **/reference** para cada arquivo.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-110">To import from more than one file, include a **/reference** option for each file.</span></span>  
   
- Os arquivos que você importar devem conter um manifesto; o arquivo de saída deve ter sido compilado com uma das opções [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) diferentes de [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ <span data-ttu-id="7ad3d-111">Os arquivos que você importar devem conter um manifesto; o arquivo de saída deve ter sido compilado com uma das opções [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) diferentes de [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="7ad3d-111">The files you import must contain a manifest; the output file must have been compiled with one of the [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) options other than [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span></span>  
   
- **/r** é a forma abreviada de **/reference**.  
+ <span data-ttu-id="7ad3d-112">**/r** é a forma abreviada de **/reference**.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-112">**/r** is the short form of **/reference**.</span></span>  
   
- Use [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) para importar metadados de um arquivo de saída que não contém um manifesto do assembly.  
+ <span data-ttu-id="7ad3d-113">Use [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) para importar metadados de um arquivo de saída que não contém um manifesto do assembly.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-113">Use [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) to import metadata from an output file that does not contain an assembly manifest.</span></span>  
   
- Se você referenciar um assembly (Assembly A) que referencia outro assembly (Assembly B), será necessário referenciar o Assembly B se:  
+ <span data-ttu-id="7ad3d-114">Se você referenciar um assembly (Assembly A) que referencia outro assembly (Assembly B), será necessário referenciar o Assembly B se:</span><span class="sxs-lookup"><span data-stu-id="7ad3d-114">If you reference an assembly (Assembly A) that references another assembly (Assembly B), you will need to reference Assembly B if:</span></span>  
   
--   o tipo A que você usar do Assembly A herdar de um tipo ou implementar uma interface do Assembly B.  
+-   <span data-ttu-id="7ad3d-115">o tipo A que você usar do Assembly A herdar de um tipo ou implementar uma interface do Assembly B.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-115">A type you use from Assembly A inherits from a type or implements an interface from Assembly B.</span></span>  
   
--   Você invoca um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B.  
+-   <span data-ttu-id="7ad3d-116">Você invoca um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-116">You invoke a field, property, event, or method that has a return type or parameter type from Assembly B.</span></span>  
   
- Use [/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) para especificar o diretório no qual uma ou mais das suas referências do assembly estão localizadas. O tópico **/lib** também aborda os diretórios nos quais o compilador pesquisa assemblies.  
+ <span data-ttu-id="7ad3d-117">Use [/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) para especificar o diretório no qual uma ou mais das suas referências do assembly estão localizadas.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-117">Use [/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) to specify the directory in which one or more of your assembly references is located.</span></span> <span data-ttu-id="7ad3d-118">O tópico **/lib** também aborda os diretórios nos quais o compilador pesquisa assemblies.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-118">The **/lib** topic also discusses the directories in which the compiler searches for assemblies.</span></span>  
   
- Para que o compilador reconheça um tipo em um assembly e não um módulo, ele precisa ser forçado a resolver o tipo, que você pode fazer definindo uma instância do tipo. Há outras maneiras de resolver nomes de tipo em um assembly para o compilador: por exemplo, se você herda de um tipo em um assembly, o nome do tipo será reconhecido pelo compilador.  
+ <span data-ttu-id="7ad3d-119">Para que o compilador reconheça um tipo em um assembly e não um módulo, ele precisa ser forçado a resolver o tipo, que você pode fazer definindo uma instância do tipo.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-119">In order for the compiler to recognize a type in an assembly, and not in a module, it needs to be forced to resolve the type, which you can do by defining an instance of the type.</span></span> <span data-ttu-id="7ad3d-120">Há outras maneiras de resolver nomes de tipo em um assembly para o compilador: por exemplo, se você herda de um tipo em um assembly, o nome do tipo será reconhecido pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-120">There are other ways to resolve type names in an assembly for the compiler: for example, if you inherit from a type in an assembly, the type name will then be recognized by the compiler.</span></span>  
   
- Às vezes, é necessário referenciar duas versões diferentes do mesmo componente de dentro de um assembly. Para fazer isso, use a subopção de alias na opção **/reference** para cada arquivo diferenciar entre os dois arquivos. Esse alias será usado como um qualificador do nome do componente e será resolvido para o componente em um dos arquivos.  
+ <span data-ttu-id="7ad3d-121">Às vezes, é necessário referenciar duas versões diferentes do mesmo componente de dentro de um assembly.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-121">Sometimes it is necessary to reference two different versions of the same component from within one assembly.</span></span> <span data-ttu-id="7ad3d-122">Para fazer isso, use a subopção de alias na opção **/reference** para cada arquivo diferenciar entre os dois arquivos.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-122">To do this, use the alias suboption on the **/reference** switch for each file to distinguish between the two files.</span></span> <span data-ttu-id="7ad3d-123">Esse alias será usado como um qualificador do nome do componente e será resolvido para o componente em um dos arquivos.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-123">This alias will be used as a qualifier for the component name, and will resolve to the component in one of the files.</span></span>  
   
- O arquivo de resposta csc (.rsp), que referencia assemblies .NET Framework usados com frequência, é usado por padrão. Use [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se você não desejar que o compilador use csc.rsp.  
+ <span data-ttu-id="7ad3d-124">O arquivo de resposta csc (.rsp), que referencia assemblies .NET Framework usados com frequência, é usado por padrão.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-124">The csc response (.rsp) file, which references commonly used .NET Framework assemblies, is used by default.</span></span> <span data-ttu-id="7ad3d-125">Use [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se você não desejar que o compilador use csc.rsp.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-125">Use [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) if you do not want the compiler to use csc.rsp.</span></span>  
   
 > [!NOTE]
-> No Visual Studio, use a caixa de diálogo **Adicionar Referência**. Para obter mais informações, consulte [Como adicionar ou remover referências usando o Gerenciador de Referências](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantir o comportamento equivalente entre adicionar referências usando `/reference` e usando a caixa de diálogo **Adicionar Referência**, defina a propriedade **Inserir Tipos de Interoperabilidade** como **False** para o assembly que você está adicionando. **True** é o valor padrão para a propriedade.  
+> <span data-ttu-id="7ad3d-126">No Visual Studio, use a caixa de diálogo **Adicionar Referência**.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-126">In Visual Studio, use the **Add Reference** dialog box.</span></span> <span data-ttu-id="7ad3d-127">Para obter mais informações, consulte [Como adicionar ou remover referências usando o Gerenciador de Referências](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).</span><span class="sxs-lookup"><span data-stu-id="7ad3d-127">For more information, see [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).</span></span> <span data-ttu-id="7ad3d-128">Para garantir o comportamento equivalente entre adicionar referências usando `/reference` e usando a caixa de diálogo **Adicionar Referência**, defina a propriedade **Inserir Tipos de Interoperabilidade** como **False** para o assembly que você está adicionando.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-128">To ensure equivalent behavior between adding references by using `/reference` and adding references by using the **Add Reference** dialog box, set the **Embed Interop Types** property to **False** for the assembly that you're adding.</span></span> <span data-ttu-id="7ad3d-129">**True** é o valor padrão para a propriedade.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-129">**True** is the default value for the property.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo mostra como usar o recurso [alias externo](../../../csharp/language-reference/keywords/extern-alias.md).  
+## <a name="example"></a><span data-ttu-id="7ad3d-130">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7ad3d-130">Example</span></span>  
+ <span data-ttu-id="7ad3d-131">Este exemplo mostra como usar o recurso [alias externo](../../../csharp/language-reference/keywords/extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="7ad3d-131">This example shows how to use the [extern alias](../../../csharp/language-reference/keywords/extern-alias.md) feature.</span></span>  
   
- Compile o arquivo de origem e importe os metadados de `grid.dll` e `grid20.dll`, que foram compilados anteriormente. As duas DLLs contêm versões separadas do mesmo componente e você usa dois **/reference** com opções de alias para compilar o arquivo de origem. As opções têm esta aparência:  
+ <span data-ttu-id="7ad3d-132">Compile o arquivo de origem e importe os metadados de `grid.dll` e `grid20.dll`, que foram compilados anteriormente.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-132">You compile the source file and import metadata from `grid.dll` and `grid20.dll`,which have been compiled previously.</span></span> <span data-ttu-id="7ad3d-133">As duas DLLs contêm versões separadas do mesmo componente e você usa dois **/reference** com opções de alias para compilar o arquivo de origem.</span><span class="sxs-lookup"><span data-stu-id="7ad3d-133">The two DLLs contain separate versions of the same component, and you use two **/reference** with alias options to compile the source file.</span></span> <span data-ttu-id="7ad3d-134">As opções têm esta aparência:</span><span class="sxs-lookup"><span data-stu-id="7ad3d-134">The options look like this:</span></span>  
   
- /reference:GridV1=grid.dll e /reference:GridV2=grid20.dll  
+ <span data-ttu-id="7ad3d-135">/reference:GridV1=grid.dll e /reference:GridV2=grid20.dll</span><span class="sxs-lookup"><span data-stu-id="7ad3d-135">/reference:GridV1=grid.dll and /reference:GridV2=grid20.dll</span></span>  
   
- Isso configura os aliases externos "GridV1" e "GridV2", que podem ser usados em seu programa por meio de uma instrução externa:  
+ <span data-ttu-id="7ad3d-136">Isso configura os aliases externos "GridV1" e "GridV2", que podem ser usados em seu programa por meio de uma instrução externa:</span><span class="sxs-lookup"><span data-stu-id="7ad3d-136">This sets up the external aliases "GridV1" and "GridV2," which you use in your program by means of an extern statement:</span></span>  
   
 ```csharp  
 extern alias GridV1;  
@@ -101,19 +82,18 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Quando isso for feito, será possível consultar o controle de grade de grid.dll, prefixando o nome do controle com GridV1, assim:  
+ <span data-ttu-id="7ad3d-137">Quando isso for feito, será possível consultar o controle de grade de grid.dll, prefixando o nome do controle com GridV1, assim:</span><span class="sxs-lookup"><span data-stu-id="7ad3d-137">Once this is done, you can refer to the grid control from grid.dll by prefixing the control name with GridV1, like this:</span></span>  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Além disso, será possível consultar o controle de grade de grid20.dll, prefixando o nome do controle com GridV2, assim:  
+ <span data-ttu-id="7ad3d-138">Além disso, será possível consultar o controle de grade de grid20.dll, prefixando o nome do controle com GridV2, assim:</span><span class="sxs-lookup"><span data-stu-id="7ad3d-138">In addition, you can refer to the grid control from grid20.dll by prefixing the control name with GridV2 like this:</span></span>  
   
 ```csharp  
 GridV2::Grid   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="7ad3d-139">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7ad3d-139">See Also</span></span>  
+ [<span data-ttu-id="7ad3d-140">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="7ad3d-140">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="7ad3d-141">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="7ad3d-141">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,74 +7,73 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-vstest"></a>dotnet vstest
+# <a name="dotnet-vstest"></a><span data-ttu-id="ed53e-103">dotnet vstest</span><span class="sxs-lookup"><span data-stu-id="ed53e-103">dotnet vstest</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a><span data-ttu-id="ed53e-104">Nome</span><span class="sxs-lookup"><span data-stu-id="ed53e-104">Name</span></span>
 
-`dotnet-vstest` - Executa testes a partir de arquivos especificados.
+<span data-ttu-id="ed53e-105">`dotnet-vstest` - Executa testes a partir de arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="ed53e-105">`dotnet-vstest` - Runs tests from the specified files.</span></span>
 
-## <a name="synopsis"></a>Sinopse
+## <a name="synopsis"></a><span data-ttu-id="ed53e-106">Sinopse</span><span class="sxs-lookup"><span data-stu-id="ed53e-106">Synopsis</span></span>
 
 `dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
 
-## <a name="description"></a>Descrição
+## <a name="description"></a><span data-ttu-id="ed53e-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="ed53e-107">Description</span></span>
 
-O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade e testes de aplicativo de IU codificado.
+<span data-ttu-id="ed53e-108">O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade e testes de aplicativo de IU codificado.</span><span class="sxs-lookup"><span data-stu-id="ed53e-108">The `dotnet-vstest` command runs the `VSTest.Console` command-line application to run automated unit and coded UI application tests.</span></span>
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a><span data-ttu-id="ed53e-109">Arguments</span><span class="sxs-lookup"><span data-stu-id="ed53e-109">Arguments</span></span>
 
 `TEST_FILE_NAMES`
 
-Execute testes a partir de assemblies especificados. Separe vários nomes de assembly de teste com espaços.
+<span data-ttu-id="ed53e-110">Execute testes a partir de assemblies especificados.</span><span class="sxs-lookup"><span data-stu-id="ed53e-110">Run tests from the specified assemblies.</span></span> <span data-ttu-id="ed53e-111">Separe vários nomes de assembly de teste com espaços.</span><span class="sxs-lookup"><span data-stu-id="ed53e-111">Separate multiple test assembly names with spaces.</span></span>
 
-## <a name="options"></a>Opções
+## <a name="options"></a><span data-ttu-id="ed53e-112">Opções</span><span class="sxs-lookup"><span data-stu-id="ed53e-112">Options</span></span>
 
 `--Settings|/Settings:<Settings File>`
 
-Configurações para usar ao executar testes.
+<span data-ttu-id="ed53e-113">Configurações para usar ao executar testes.</span><span class="sxs-lookup"><span data-stu-id="ed53e-113">Settings to use when running tests.</span></span>
 
 `--Tests|/Tests:<Test Names>`
 
-Execute testes com nomes que correspondam aos valores fornecidos. Separe vários valores com vírgulas.
+<span data-ttu-id="ed53e-114">Execute testes com nomes que correspondam aos valores fornecidos.</span><span class="sxs-lookup"><span data-stu-id="ed53e-114">Run tests with names that match the provided values.</span></span> <span data-ttu-id="ed53e-115">Separe vários valores com vírgulas.</span><span class="sxs-lookup"><span data-stu-id="ed53e-115">Separate multiple values with commas.</span></span>
 
 `--TestAdapterPath|/TestAdapterPath`
 
-Use adaptadores de teste personalizados para um determinado caminho (se houver) na execução de teste.
+<span data-ttu-id="ed53e-116">Use adaptadores de teste personalizados para um determinado caminho (se houver) na execução de teste.</span><span class="sxs-lookup"><span data-stu-id="ed53e-116">Use custom test adapters from a given path (if any) in the test run.</span></span>
 
 `--Platform|/Platform:<Platform type>`
 
-Arquitetura da plataforma de destino usada para a execução de teste. Os valores válidos são `x86`, `x64` e `ARM`.
+<span data-ttu-id="ed53e-117">Arquitetura da plataforma de destino usada para a execução de teste.</span><span class="sxs-lookup"><span data-stu-id="ed53e-117">Target platform architecture used for test execution.</span></span> <span data-ttu-id="ed53e-118">Os valores válidos são `x86`, `x64` e `ARM`.</span><span class="sxs-lookup"><span data-stu-id="ed53e-118">Valid values are `x86`, `x64`, and `ARM`.</span></span>
 
 `--Framework|/Framework:<Framework Version>`
 
-Versão do .NET Framework de destino usada na execução de teste. Os exemplos de valores válidos são `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0` etc. Outros valores com suporte são `Framework35`, `Framework40`, `Framework45` e `FrameworkCore10`.
+<span data-ttu-id="ed53e-119">Versão do .NET Framework de destino usada na execução de teste.</span><span class="sxs-lookup"><span data-stu-id="ed53e-119">Target .NET Framework version used for test execution.</span></span> <span data-ttu-id="ed53e-120">Os exemplos de valores válidos são `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0` etc. Outros valores com suporte são `Framework35`, `Framework40`, `Framework45` e `FrameworkCore10`.</span><span class="sxs-lookup"><span data-stu-id="ed53e-120">Examples of valid values are `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0`, etc. Other supported values are `Framework35`, `Framework40`, `Framework45`, and `FrameworkCore10`.</span></span>
 
 `--Parallel|/Parallel`
 
-Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Defina um número explícito de núcleos com um arquivo de configurações.
+<span data-ttu-id="ed53e-121">Execute testes em paralelo.</span><span class="sxs-lookup"><span data-stu-id="ed53e-121">Execute tests in parallel.</span></span> <span data-ttu-id="ed53e-122">Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso.</span><span class="sxs-lookup"><span data-stu-id="ed53e-122">By default, all available cores on the machine are available for use.</span></span> <span data-ttu-id="ed53e-123">Defina um número explícito de núcleos com um arquivo de configurações.</span><span class="sxs-lookup"><span data-stu-id="ed53e-123">Set an explicit number of cores with a settings file.</span></span>
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Execute testes que correspondam à expressão fornecida. `<Expression>` está no formato `<property>Operator<value>[|&<Expression>]`, onde Operator pode ser `=`, `!=` ou `~`.  O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Os parênteses `()` são usados para agrupar subexpressões.
+<span data-ttu-id="ed53e-124">Execute testes que correspondam à expressão fornecida.</span><span class="sxs-lookup"><span data-stu-id="ed53e-124">Run tests that match the given expression.</span></span> <span data-ttu-id="ed53e-125">`<Expression>` está no formato `<property>Operator<value>[|&<Expression>]`, onde Operator pode ser `=`, `!=` ou `~`.</span><span class="sxs-lookup"><span data-stu-id="ed53e-125">`<Expression>` is of the format `<property>Operator<value>[|&<Expression>]`, where Operator is one of `=`, `!=`, or `~`.</span></span>  <span data-ttu-id="ed53e-126">O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`.</span><span class="sxs-lookup"><span data-stu-id="ed53e-126">Operator `~` has 'contains' semantics and is applicable for string properties like `DisplayName`.</span></span> <span data-ttu-id="ed53e-127">Os parênteses `()` são usados para agrupar subexpressões.</span><span class="sxs-lookup"><span data-stu-id="ed53e-127">Parenthesis `()` are used to group sub-expressions.</span></span>
 
 `-?|--Help|/?|/Help`
 
-Imprime uma ajuda breve para o comando.
+<span data-ttu-id="ed53e-128">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="ed53e-128">Prints out a short help for the command.</span></span>
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Especificar um agente para resultados do teste.  
+<span data-ttu-id="ed53e-129">Especificar um agente para resultados do teste.</span><span class="sxs-lookup"><span data-stu-id="ed53e-129">Specify a logger for test results.</span></span>  
 
-* Para publicar resultados do teste no Team Foundation Server, use o provedor de agente `TfsPublisher`:
+* <span data-ttu-id="ed53e-130">Para publicar resultados do teste no Team Foundation Server, use o provedor de agente `TfsPublisher`:</span><span class="sxs-lookup"><span data-stu-id="ed53e-130">To publish test results to Team Foundation Server, use the `TfsPublisher` logger provider:</span></span>
 
   ```
   /logger:TfsPublisher;
@@ -86,7 +85,7 @@ Especificar um agente para resultados do teste.
       [;RunTitle=<title>]
   ```
 
-* Para registrar os resultados em um arquivo TRX (Resultados do teste) do Visual Studio, use o provedor de agente `trx`. Essa opção cria um arquivo no diretório dos resultados do teste com o nome de arquivo de log determinado. Se `LogFileName` não for fornecido, será criado um nome de arquivo exclusivo para armazenar os resultados do teste.
+* <span data-ttu-id="ed53e-131">Para registrar os resultados em um arquivo TRX (Resultados do teste) do Visual Studio, use o provedor de agente `trx`.</span><span class="sxs-lookup"><span data-stu-id="ed53e-131">To log results to a Visual Studio Test Results File (TRX), use the `trx` logger provider.</span></span> <span data-ttu-id="ed53e-132">Essa opção cria um arquivo no diretório dos resultados do teste com o nome de arquivo de log determinado.</span><span class="sxs-lookup"><span data-stu-id="ed53e-132">This switch creates a file in the test results directory with given log file name.</span></span> <span data-ttu-id="ed53e-133">Se `LogFileName` não for fornecido, será criado um nome de arquivo exclusivo para armazenar os resultados do teste.</span><span class="sxs-lookup"><span data-stu-id="ed53e-133">If `LogFileName` isn't provided, a unique file name is created to hold the test results.</span></span>
 
   ```
   /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -94,39 +93,38 @@ Especificar um agente para resultados do teste.
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Lista testes descobertos do contêiner de teste fornecido.
+<span data-ttu-id="ed53e-134">Lista testes descobertos do contêiner de teste fornecido.</span><span class="sxs-lookup"><span data-stu-id="ed53e-134">Lists discovered tests from the given test container.</span></span>
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
-ID de processo do processo pai responsável por iniciar o processo atual.
+<span data-ttu-id="ed53e-135">ID de processo do processo pai responsável por iniciar o processo atual.</span><span class="sxs-lookup"><span data-stu-id="ed53e-135">Process Id of the parent process responsible for launching the current process.</span></span>
 
 `--Port|/Port:<Port>`
 
-Especifica a porta para a conexão de soquete e recebimento das mensagens do evento.
+<span data-ttu-id="ed53e-136">Especifica a porta para a conexão de soquete e recebimento das mensagens do evento.</span><span class="sxs-lookup"><span data-stu-id="ed53e-136">Specifies the port for the socket connection and receiving the event messages.</span></span>
 
 `--Diag|/Diag:<Path to log file>`
 
-Permite logs detalhados na plataforma de teste. Os logs são gravados no arquivo fornecido.
+<span data-ttu-id="ed53e-137">Permite logs detalhados na plataforma de teste.</span><span class="sxs-lookup"><span data-stu-id="ed53e-137">Enables verbose logs for the test platform.</span></span> <span data-ttu-id="ed53e-138">Os logs são gravados no arquivo fornecido.</span><span class="sxs-lookup"><span data-stu-id="ed53e-138">Logs are written to the provided file.</span></span>
 
 `args`
 
-Especifica argumentos extras para passar ao adaptador. Os argumentos são especificados como pares de nome-valor no formato `<n>=<v>`, em que `<n>` é o nome de argumento e `<v>` é o valor do argumento. Use um espaço para separar vários argumentos.
+<span data-ttu-id="ed53e-139">Especifica argumentos extras para passar ao adaptador.</span><span class="sxs-lookup"><span data-stu-id="ed53e-139">Specifies extra arguments to pass to the adapter.</span></span> <span data-ttu-id="ed53e-140">Os argumentos são especificados como pares de nome-valor no formato `<n>=<v>`, em que `<n>` é o nome de argumento e `<v>` é o valor do argumento.</span><span class="sxs-lookup"><span data-stu-id="ed53e-140">Arguments are specified as name-value pairs of the form `<n>=<v>`, where `<n>` is the argument name and `<v>` is the argument value.</span></span> <span data-ttu-id="ed53e-141">Use um espaço para separar vários argumentos.</span><span class="sxs-lookup"><span data-stu-id="ed53e-141">Use a space to separate multiple arguments.</span></span>
 
-## <a name="examples"></a>Exemplos
+## <a name="examples"></a><span data-ttu-id="ed53e-142">Exemplos</span><span class="sxs-lookup"><span data-stu-id="ed53e-142">Examples</span></span>
 
-Execute testes em `mytestproject.dll`:
+<span data-ttu-id="ed53e-143">Execute testes em `mytestproject.dll`:</span><span class="sxs-lookup"><span data-stu-id="ed53e-143">Run tests in `mytestproject.dll`:</span></span>
 
 `dotnet vstest mytestproject.dll`
 
-Execute testes em `mytestproject.dll` e `myothertestproject.exe`:
+<span data-ttu-id="ed53e-144">Execute testes em `mytestproject.dll` e `myothertestproject.exe`:</span><span class="sxs-lookup"><span data-stu-id="ed53e-144">Run tests in `mytestproject.dll` and `myothertestproject.exe`:</span></span>
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
 
-Execute testes `TestMethod1`:
+<span data-ttu-id="ed53e-145">Execute testes `TestMethod1`:</span><span class="sxs-lookup"><span data-stu-id="ed53e-145">Run `TestMethod1` tests:</span></span>
 
 `dotnet vstest /Tests:TestMethod1`
 
-Execute testes `TestMethod1` e `TestMethod2`:
+<span data-ttu-id="ed53e-146">Execute testes `TestMethod1` e `TestMethod2`:</span><span class="sxs-lookup"><span data-stu-id="ed53e-146">Run `TestMethod1` and `TestMethod2` tests:</span></span>
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
-

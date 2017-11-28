@@ -1,66 +1,47 @@
 ---
 title: "decimal (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- decimal keyword [C#]
+helpviewer_keywords: decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 114c2c68f50704595b71f22386625091b5b05e8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="decimal-c-reference"></a>decimal (Referência de C#)
-A palavra-chave `decimal` indica um tipo de dados de 128 bits. Comparado a outros tipos de pontos flutuantes, o tipo `decimal` tem mais precisão e um intervalo menor que o torna apropriado para cálculos financeiros e monetários. O intervalo e a precisão aproximados para o tipo `decimal` são mostrados na tabela a seguir.  
+# <a name="decimal-c-reference"></a><span data-ttu-id="c42e4-102">decimal (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="c42e4-102">decimal (C# Reference)</span></span>
+<span data-ttu-id="c42e4-103">A palavra-chave `decimal` indica um tipo de dados de 128 bits.</span><span class="sxs-lookup"><span data-stu-id="c42e4-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="c42e4-104">Comparado a outros tipos de pontos flutuantes, o tipo `decimal` tem mais precisão e um intervalo menor que o torna apropriado para cálculos financeiros e monetários.</span><span class="sxs-lookup"><span data-stu-id="c42e4-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="c42e4-105">O intervalo e a precisão aproximados para o tipo `decimal` são mostrados na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="c42e4-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  
   
-|Tipo|Intervalo aproximado|Precisão|Tipo do .NET Framework|  
+|<span data-ttu-id="c42e4-106">Tipo</span><span class="sxs-lookup"><span data-stu-id="c42e4-106">Type</span></span>|<span data-ttu-id="c42e4-107">Intervalo aproximado</span><span class="sxs-lookup"><span data-stu-id="c42e4-107">Approximate Range</span></span>|<span data-ttu-id="c42e4-108">Precisão</span><span class="sxs-lookup"><span data-stu-id="c42e4-108">Precision</span></span>|<span data-ttu-id="c42e4-109">Tipo do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c42e4-109">.NET Framework type</span></span>|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(-7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> a 10<sup>28</sup>)|28 a 29 dígitos significativos|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|<span data-ttu-id="c42e4-110">(-7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> a 10<sup>28</sup>)</span><span class="sxs-lookup"><span data-stu-id="c42e4-110">(-7.9 x 10<sup>28</sup> to 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> to 10<sup>28</sup>)</span></span>|<span data-ttu-id="c42e4-111">28 a 29 dígitos significativos</span><span class="sxs-lookup"><span data-stu-id="c42e4-111">28-29 significant digits</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|  
   
-## <a name="literals"></a>Literais  
- Se você desejar tratar um literal numérico como `decimal`, use o sufixo m ou M, por exemplo:  
+## <a name="literals"></a><span data-ttu-id="c42e4-112">Literais</span><span class="sxs-lookup"><span data-stu-id="c42e4-112">Literals</span></span>  
+ <span data-ttu-id="c42e4-113">Se você desejar tratar um literal numérico como `decimal`, use o sufixo m ou M, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="c42e4-113">If you want a numeric real literal to be treated as `decimal`, use the suffix m or M, for example:</span></span>  
   
 ```csharp
 decimal myMoney = 300.5m;  
 ```  
   
- Sem o sufixo m, o número será tratado como [double](../../../csharp/language-reference/keywords/double.md) e gerará um erro do compilador.  
+ <span data-ttu-id="c42e4-114">Sem o sufixo m, o número será tratado como [double](../../../csharp/language-reference/keywords/double.md) e gerará um erro do compilador.</span><span class="sxs-lookup"><span data-stu-id="c42e4-114">Without the suffix m, the number is treated as a [double](../../../csharp/language-reference/keywords/double.md) and generates a compiler error.</span></span>  
   
-## <a name="conversions"></a>Conversões  
- Os tipos integrais são convertidos implicitamente em `decimal` e o resultado é avaliado como `decimal`. Portanto, você pode inicializar uma variável decimal com um literal inteiro sem o sufixo como a seguir:  
+## <a name="conversions"></a><span data-ttu-id="c42e4-115">Conversões</span><span class="sxs-lookup"><span data-stu-id="c42e4-115">Conversions</span></span>  
+ <span data-ttu-id="c42e4-116">Os tipos integrais são convertidos implicitamente em `decimal` e o resultado é avaliado como `decimal`.</span><span class="sxs-lookup"><span data-stu-id="c42e4-116">The integral types are implicitly converted to `decimal` and the result evaluates to `decimal`.</span></span> <span data-ttu-id="c42e4-117">Portanto, você pode inicializar uma variável decimal com um literal inteiro sem o sufixo como a seguir:</span><span class="sxs-lookup"><span data-stu-id="c42e4-117">Therefore you can initialize a decimal variable using an integer literal, without the suffix, as follows:</span></span>  
   
 ```csharp
 decimal myMoney = 300;  
 ```  
   
- Não há nenhuma conversão implícita entre outros tipos de pontos flutuantes e o tipo `decimal`. Portanto, uma conversão deve ser usada para converter entre esses dois tipos. Por exemplo:  
+ <span data-ttu-id="c42e4-118">Não há nenhuma conversão implícita entre outros tipos de pontos flutuantes e o tipo `decimal`. Portanto, uma conversão deve ser usada para converter entre esses dois tipos.</span><span class="sxs-lookup"><span data-stu-id="c42e4-118">There is no implicit conversion between other floating-point types and the `decimal` type; therefore, a cast must be used to convert between these two types.</span></span> <span data-ttu-id="c42e4-119">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="c42e4-119">For example:</span></span>  
   
 ```csharp
 decimal myMoney = 99.9m;  
@@ -68,17 +49,17 @@ double x = (double)myMoney;
 myMoney = (decimal)x;  
 ```  
   
- Você também pode misturar `decimal` e tipos integrais numéricos na mesma expressão. No entanto, misturar `decimal` e outros tipos de pontos flutuantes sem uma conversão causa um erro de compilação.  
+ <span data-ttu-id="c42e4-120">Você também pode misturar `decimal` e tipos integrais numéricos na mesma expressão.</span><span class="sxs-lookup"><span data-stu-id="c42e4-120">You can also mix `decimal` and numeric integral types in the same expression.</span></span> <span data-ttu-id="c42e4-121">No entanto, misturar `decimal` e outros tipos de pontos flutuantes sem uma conversão causa um erro de compilação.</span><span class="sxs-lookup"><span data-stu-id="c42e4-121">However, mixing `decimal` and other floating-point types without a cast causes a compilation error.</span></span>  
   
- Para obter mais informações sobre as conversões numéricas implícitas, consulte [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ <span data-ttu-id="c42e4-122">Para obter mais informações sobre as conversões numéricas implícitas, consulte [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="c42e4-122">For more information about implicit numeric conversions, see [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
- Para obter mais informações sobre as conversões numéricas explícitas, consulte [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
+ <span data-ttu-id="c42e4-123">Para obter mais informações sobre as conversões numéricas explícitas, consulte [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="c42e4-123">For more information about explicit numeric conversions, see [Explicit Numeric Conversions Table](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="formatting-decimal-output"></a>Formatando saída decimal  
- Você pode formatar os resultados ao usar o método `String.Format` ou <xref:System.Console.Write%2A?displayProperty=fullName> que chama `String.Format()`. O formato de moeda é especificado ao usar a cadeia de caracteres de formato de moeda padrão "C" ou "c", como mostrado no segundo exemplo posteriormente neste artigo. Para obter mais informações sobre o método `String.Format`, consulte <xref:System.String.Format%2A?displayProperty=fullName>.  
+## <a name="formatting-decimal-output"></a><span data-ttu-id="c42e4-124">Formatando saída decimal</span><span class="sxs-lookup"><span data-stu-id="c42e4-124">Formatting Decimal Output</span></span>  
+ <span data-ttu-id="c42e4-125">Você pode formatar os resultados ao usar o método `String.Format` ou <xref:System.Console.Write%2A?displayProperty=nameWithType> que chama `String.Format()`.</span><span class="sxs-lookup"><span data-stu-id="c42e4-125">You can format the results by using the `String.Format` method, or through the <xref:System.Console.Write%2A?displayProperty=nameWithType> method, which calls `String.Format()`.</span></span> <span data-ttu-id="c42e4-126">O formato de moeda é especificado ao usar a cadeia de caracteres de formato de moeda padrão "C" ou "c", como mostrado no segundo exemplo posteriormente neste artigo.</span><span class="sxs-lookup"><span data-stu-id="c42e4-126">The currency format is specified by using the standard currency format string "C" or "c," as shown in the second example later in this article.</span></span> <span data-ttu-id="c42e4-127">Para obter mais informações sobre o método `String.Format`, consulte <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c42e4-127">For more information about the `String.Format` method, see <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir causa um erro do compilador ao tentar adicionar variáveis [double](../../../csharp/language-reference/keywords/double.md) e `decimal`.  
+## <a name="example"></a><span data-ttu-id="c42e4-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c42e4-128">Example</span></span>  
+ <span data-ttu-id="c42e4-129">O exemplo a seguir causa um erro do compilador ao tentar adicionar variáveis [double](../../../csharp/language-reference/keywords/double.md) e `decimal`.</span><span class="sxs-lookup"><span data-stu-id="c42e4-129">The following example causes a compiler error by trying to add [double](../../../csharp/language-reference/keywords/double.md) and `decimal` variables.</span></span>  
   
 ```csharp  
 double dub = 9;  
@@ -91,30 +72,29 @@ Console.WriteLine(dec + (decimal)dub);
 Console.WriteLine((double)dec + dub);  
 ```  
   
- O resultado é o seguinte erro:  
+ <span data-ttu-id="c42e4-130">O resultado é o seguinte erro:</span><span class="sxs-lookup"><span data-stu-id="c42e4-130">The result is the following error:</span></span>  
   
  `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`  
   
- Neste exemplo, um `decimal` e um [int](../../../csharp/language-reference/keywords/int.md) são misturados na mesma expressão. O resultado é avaliado como o tipo `decimal`.  
+ <span data-ttu-id="c42e4-131">Neste exemplo, um `decimal` e um [int](../../../csharp/language-reference/keywords/int.md) são misturados na mesma expressão.</span><span class="sxs-lookup"><span data-stu-id="c42e4-131">In this example, a `decimal` and an [int](../../../csharp/language-reference/keywords/int.md) are mixed in the same expression.</span></span> <span data-ttu-id="c42e4-132">O resultado é avaliado como o tipo `decimal`.</span><span class="sxs-lookup"><span data-stu-id="c42e4-132">The result evaluates to the `decimal` type.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
   
-## <a name="example"></a>Exemplo  
- Neste exemplo, a saída é formatada usando a cadeia de caracteres de formato de moeda. Observe que `x` é arredondado porque as casas decimais excedem US$ 0,99. A variável `y`, que representa os dígitos exatos máximos, é exibida exatamente no formato correto.  
+## <a name="example"></a><span data-ttu-id="c42e4-133">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c42e4-133">Example</span></span>  
+ <span data-ttu-id="c42e4-134">Neste exemplo, a saída é formatada usando a cadeia de caracteres de formato de moeda.</span><span class="sxs-lookup"><span data-stu-id="c42e4-134">In this example, the output is formatted by using the currency format string.</span></span> <span data-ttu-id="c42e4-135">Observe que `x` é arredondado porque as casas decimais excedem US$ 0,99.</span><span class="sxs-lookup"><span data-stu-id="c42e4-135">Notice that `x` is rounded because the decimal places exceed $0.99.</span></span> <span data-ttu-id="c42e4-136">A variável `y`, que representa os dígitos exatos máximos, é exibida exatamente no formato correto.</span><span class="sxs-lookup"><span data-stu-id="c42e4-136">The variable `y`, which represents the maximum exact digits, is displayed exactly in the correct format.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="c42e4-137">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="c42e4-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Decimal>   
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabela de Tipos Integrais](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
- [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)
-
+## <a name="see-also"></a><span data-ttu-id="c42e4-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c42e4-138">See Also</span></span>  
+ <xref:System.Decimal>  
+ [<span data-ttu-id="c42e4-139">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="c42e4-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="c42e4-140">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="c42e4-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c42e4-141">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="c42e4-141">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="c42e4-142">Tabela de tipos integrais</span><span class="sxs-lookup"><span data-stu-id="c42e4-142">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="c42e4-143">Tabela de tipos internos</span><span class="sxs-lookup"><span data-stu-id="c42e4-143">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="c42e4-144">Tabela de conversões numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="c42e4-144">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="c42e4-145">Tabela de conversões numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="c42e4-145">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="c42e4-146">Cadeias de Caracteres de Formato Numérico Padrão</span><span class="sxs-lookup"><span data-stu-id="c42e4-146">Standard Numeric Format Strings</span></span>](../../../standard/base-types/standard-numeric-format-strings.md)

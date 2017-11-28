@@ -5,52 +5,44 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd06e38413d7a7fc666743938d0f03067717b6f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
-Esta seção da documentação do .NET Framework fornece informações para desenvolvedores que desejam instalar o .NET Framework com seus aplicativos e administradores que desejam implantar o .NET Framework em uma rede. Ele também aborda os problemas de ativação e reinicialização associados à implantação e como monitorar o andamento da instalação do .NET Framework.  
+# <a name="deploying-the-net-framework"></a><span data-ttu-id="bf1eb-102">Implantando o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bf1eb-102">Deploying the .NET Framework</span></span>
+<span data-ttu-id="bf1eb-103">Esta seção da documentação do .NET Framework fornece informações para desenvolvedores que desejam instalar o .NET Framework com seus aplicativos e administradores que desejam implantar o .NET Framework em uma rede.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-103">This section of the .NET Framework documentation provides information for developers who want to install the .NET Framework with their applications, and administrators who want to deploy the .NET Framework across a network.</span></span> <span data-ttu-id="bf1eb-104">Ele também aborda os problemas de ativação e reinicialização associados à implantação e como monitorar o andamento da instalação do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-104">It also discusses activation and restart issues associated with deployment, and how to monitor the progress of your .NET Framework installation.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.  
+## <a name="in-this-section"></a><span data-ttu-id="bf1eb-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="bf1eb-105">In This Section</span></span>  
+ [<span data-ttu-id="bf1eb-106">Guia de implantação para desenvolvedores</span><span class="sxs-lookup"><span data-stu-id="bf1eb-106">Deployment Guide for Developers</span></span>](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ <span data-ttu-id="bf1eb-107">Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-107">Explains how developers can install .NET Framework on their users' computers with their applications.</span></span>  
   
- [Guia de implantação para administradores](../../../docs/framework/deployment/guide-for-administrators.md)  
- Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).  
+ [<span data-ttu-id="bf1eb-108">Guia de implantação para administradores</span><span class="sxs-lookup"><span data-stu-id="bf1eb-108">Deployment Guide for Administrators</span></span>](../../../docs/framework/deployment/guide-for-administrators.md)  
+ <span data-ttu-id="bf1eb-109">Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).</span><span class="sxs-lookup"><span data-stu-id="bf1eb-109">Explains how a system administrator can deploy the .NET Framework and its system dependencies across a network by using System Center Configuration Manager (SCCM).</span></span>  
   
- [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
- Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.  
+ [<span data-ttu-id="bf1eb-110">Redução de reinicializações do sistema durante instalações do .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="bf1eb-110">Reducing System Restarts During .NET Framework 4.5 Installations</span></span>](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ <span data-ttu-id="bf1eb-111">Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-111">Describes the Restart Manager, which prevents reboots whenever possible, and explains how applications that install the .NET Framework can take advantage of it.</span></span>  
   
- [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
- Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.  
+ [<span data-ttu-id="bf1eb-112">Como acompanhar o progresso do instalador do .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="bf1eb-112">How to: Get Progress from the .NET Framework 4.5 Installer</span></span>](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
+ <span data-ttu-id="bf1eb-113">Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-113">Describes how to silently launch and track the .NET Framework setup process while showing your own view of the setup progress.</span></span>  
   
- [Erros de inicialização do .NET Framework: gerenciando a experiência do usuário](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
- Explica o que acontece quando um aplicativo do .NET Framework requer uma versão do CLR inválida ou não instalada no computador do usuário, como resolver esses erros e como controlar a mensagem de erro exibida para o usuário.  
+ [<span data-ttu-id="bf1eb-114">Erros de inicialização do .NET Framework: gerenciando a experiência do usuário</span><span class="sxs-lookup"><span data-stu-id="bf1eb-114">.NET Framework Initialization Errors: Managing the User Experience</span></span>](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ <span data-ttu-id="bf1eb-115">Explica o que acontece quando um aplicativo do .NET Framework requer uma versão do CLR inválida ou não instalada no computador do usuário, como resolver esses erros e como controlar a mensagem de erro exibida para o usuário.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-115">Explains what happens when a .NET Framework application requires a CLR version that's invalid or not installed on the user's computer, how to resolve these errors, and how to control the error message displayed to the user.</span></span>  
   
- [Como depurar problemas de ativação do CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
- Explica como exibir e depurar os logs de ativação do CLR para resolver problemas que você pode encontrar para fazer com que seu aplicativo seja executado com a versão correta do CLR.  
+ [<span data-ttu-id="bf1eb-116">Como depurar problemas de ativação do CLR</span><span class="sxs-lookup"><span data-stu-id="bf1eb-116">How to: Debug CLR Activation Issues</span></span>](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ <span data-ttu-id="bf1eb-117">Explica como exibir e depurar os logs de ativação do CLR para resolver problemas que você pode encontrar para fazer com que seu aplicativo seja executado com a versão correta do CLR.</span><span class="sxs-lookup"><span data-stu-id="bf1eb-117">Explains how you can view and debug CLR activation logs to resolve issues you may encounter in getting your application to run with the correct version of the CLR.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de desenvolvimento](../../../docs/framework/development-guide.md)
-
+## <a name="see-also"></a><span data-ttu-id="bf1eb-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bf1eb-118">See Also</span></span>  
+ [<span data-ttu-id="bf1eb-119">Guia de desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="bf1eb-119">Development Guide</span></span>](../../../docs/framework/development-guide.md)

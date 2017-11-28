@@ -1,95 +1,76 @@
 ---
 title: "Criando e lançando exceções (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - catching exceptions [C#]
 - throwing exceptions [C#]
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a4008323d264c02e0417e775077958f857ceed31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: ea3104b1850fd2014ef0d4b8fcd31098d2c4b9d4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
-As exceções são usadas para indicar que ocorreu um erro durante a execução do programa. Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../../csharp/language-reference/keywords/throw.md). Então, o tempo de execução procura o manipulador de exceção mais compatível.  
+# <a name="creating-and-throwing-exceptions-c-programming-guide"></a><span data-ttu-id="56228-102">Criando e lançando exceções (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="56228-102">Creating and Throwing Exceptions (C# Programming Guide)</span></span>
+<span data-ttu-id="56228-103">As exceções são usadas para indicar que ocorreu um erro durante a execução do programa.</span><span class="sxs-lookup"><span data-stu-id="56228-103">Exceptions are used to indicate that an error has occurred while running the program.</span></span> <span data-ttu-id="56228-104">Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../../csharp/language-reference/keywords/throw.md).</span><span class="sxs-lookup"><span data-stu-id="56228-104">Exception objects that describe an error are created and then *thrown* with the [throw](../../../csharp/language-reference/keywords/throw.md) keyword.</span></span> <span data-ttu-id="56228-105">Então, o tempo de execução procura o manipulador de exceção mais compatível.</span><span class="sxs-lookup"><span data-stu-id="56228-105">The runtime then searches for the most compatible exception handler.</span></span>  
   
- Os programadores devem lançar exceções quando uma ou mais das seguintes condições forem verdadeiras:  
+ <span data-ttu-id="56228-106">Os programadores devem lançar exceções quando uma ou mais das seguintes condições forem verdadeiras:</span><span class="sxs-lookup"><span data-stu-id="56228-106">Programmers should throw exceptions when one or more of the following conditions are true:</span></span>  
   
--   O método não pode concluir sua funcionalidade definida.  
+-   <span data-ttu-id="56228-107">O método não pode concluir sua funcionalidade definida.</span><span class="sxs-lookup"><span data-stu-id="56228-107">The method cannot complete its defined functionality.</span></span>  
   
-     Por exemplo, se um parâmetro para um método tem um valor inválido:  
+     <span data-ttu-id="56228-108">Por exemplo, se um parâmetro para um método tem um valor inválido:</span><span class="sxs-lookup"><span data-stu-id="56228-108">For example, if a parameter to a method has an invalid value:</span></span>  
   
-     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
+     [!code-csharp[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
   
--   É feita uma chamada inadequada a um objeto, com base no estado do objeto.  
+-   <span data-ttu-id="56228-109">É feita uma chamada inadequada a um objeto, com base no estado do objeto.</span><span class="sxs-lookup"><span data-stu-id="56228-109">An inappropriate call to an object is made, based on the object state.</span></span>  
   
-     Um exemplo pode ser a tentativa de gravar em um arquivo somente leitura. Em casos em que um estado do objeto não permite uma operação, lance uma instância de <xref:System.InvalidOperationException> ou um objeto com base em uma derivação dessa classe. Este é um exemplo de um método que gera um objeto <xref:System.InvalidOperationException>:  
+     <span data-ttu-id="56228-110">Um exemplo pode ser a tentativa de gravar em um arquivo somente leitura.</span><span class="sxs-lookup"><span data-stu-id="56228-110">One example might be trying to write to a read-only file.</span></span> <span data-ttu-id="56228-111">Em casos em que um estado do objeto não permite uma operação, lance uma instância de <xref:System.InvalidOperationException> ou um objeto com base em uma derivação dessa classe.</span><span class="sxs-lookup"><span data-stu-id="56228-111">In cases where an object state does not allow an operation, throw an instance of <xref:System.InvalidOperationException> or an object based on a derivation of this class.</span></span> <span data-ttu-id="56228-112">Este é um exemplo de um método que gera um objeto <xref:System.InvalidOperationException>:</span><span class="sxs-lookup"><span data-stu-id="56228-112">This is an example of a method that throws an <xref:System.InvalidOperationException> object:</span></span>  
   
-     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
+     [!code-csharp[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
--   Quando um argumento para um método causa uma exceção.  
+-   <span data-ttu-id="56228-113">Quando um argumento para um método causa uma exceção.</span><span class="sxs-lookup"><span data-stu-id="56228-113">When an argument to a method causes an exception.</span></span>  
   
-     Nesse caso, a exceção original deve ser capturada e uma instância de <xref:System.ArgumentException> deve ser criada. A exceção original deve ser passada para o construtor do <xref:System.ArgumentException> como o parâmetro <xref:System.Exception.InnerException%2A>:  
+     <span data-ttu-id="56228-114">Nesse caso, a exceção original deve ser capturada e uma instância de <xref:System.ArgumentException> deve ser criada.</span><span class="sxs-lookup"><span data-stu-id="56228-114">In this case, the original exception should be caught and an <xref:System.ArgumentException> instance should be created.</span></span> <span data-ttu-id="56228-115">A exceção original deve ser passada para o construtor do <xref:System.ArgumentException> como o parâmetro <xref:System.Exception.InnerException%2A>:</span><span class="sxs-lookup"><span data-stu-id="56228-115">The original exception should be passed to the constructor of the <xref:System.ArgumentException> as the <xref:System.Exception.InnerException%2A> parameter:</span></span>  
   
-     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
+     [!code-csharp[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
- As exceções contêm uma propriedade chamada <xref:System.Exception.StackTrace%2A>. Essa cadeia de caracteres contém o nome dos métodos na pilha de chamadas atual, junto com o nome de arquivo e o número de linha em que a exceção foi lançada para cada método. Um objeto <xref:System.Exception.StackTrace%2A> é criado automaticamente pelo CLR (Common Language Runtime) no ponto da instrução `throw`, de modo que as exceções devem ser lançadas do ponto em que o rastreamento de pilha deve começar.  
+ <span data-ttu-id="56228-116">As exceções contêm uma propriedade chamada <xref:System.Exception.StackTrace%2A>.</span><span class="sxs-lookup"><span data-stu-id="56228-116">Exceptions contain a property named <xref:System.Exception.StackTrace%2A>.</span></span> <span data-ttu-id="56228-117">Essa cadeia de caracteres contém o nome dos métodos na pilha de chamadas atual, junto com o nome de arquivo e o número de linha em que a exceção foi lançada para cada método.</span><span class="sxs-lookup"><span data-stu-id="56228-117">This string contains the name of the methods on the current call stack, together with the file name and line number where the exception was thrown for each method.</span></span> <span data-ttu-id="56228-118">Um objeto <xref:System.Exception.StackTrace%2A> é criado automaticamente pelo CLR (Common Language Runtime) no ponto da instrução `throw`, de modo que as exceções devem ser lançadas do ponto em que o rastreamento de pilha deve começar.</span><span class="sxs-lookup"><span data-stu-id="56228-118">A <xref:System.Exception.StackTrace%2A> object is created automatically by the common language runtime (CLR) from the point of the `throw` statement, so that exceptions must be thrown from the point where the stack trace should begin.</span></span>  
   
- Todas as exceções contêm uma propriedade chamada <xref:System.Exception.Message%2A>. Essa cadeia de caracteres deve ser definida para explicar o motivo da exceção. Observe que as informações que são sensíveis à segurança não devem ser colocadas no texto da mensagem. Além <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contém uma propriedade chamada <xref:System.ArgumentException.ParamName%2A> que deve ser definida como o nome do argumento que causou a exceção a ser lançada. No caso de um setter de propriedade <xref:System.ArgumentException.ParamName%2A> deve ser definido como `value`.  
+ <span data-ttu-id="56228-119">Todas as exceções contêm uma propriedade chamada <xref:System.Exception.Message%2A>.</span><span class="sxs-lookup"><span data-stu-id="56228-119">All exceptions contain a property named <xref:System.Exception.Message%2A>.</span></span> <span data-ttu-id="56228-120">Essa cadeia de caracteres deve ser definida para explicar o motivo da exceção.</span><span class="sxs-lookup"><span data-stu-id="56228-120">This string should be set to explain the reason for the exception.</span></span> <span data-ttu-id="56228-121">Observe que as informações que são sensíveis à segurança não devem ser colocadas no texto da mensagem.</span><span class="sxs-lookup"><span data-stu-id="56228-121">Note that information that is sensitive to security should not be put in the message text.</span></span> <span data-ttu-id="56228-122">Além <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contém uma propriedade chamada <xref:System.ArgumentException.ParamName%2A> que deve ser definida como o nome do argumento que causou a exceção a ser lançada.</span><span class="sxs-lookup"><span data-stu-id="56228-122">In addition to <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contains a property named <xref:System.ArgumentException.ParamName%2A> that should be set to the name of the argument that caused the exception to be thrown.</span></span> <span data-ttu-id="56228-123">No caso de um setter de propriedade <xref:System.ArgumentException.ParamName%2A> deve ser definido como `value`.</span><span class="sxs-lookup"><span data-stu-id="56228-123">In the case of a property setter, <xref:System.ArgumentException.ParamName%2A> should be set to `value`.</span></span>  
   
- Os membros de métodos públicos e protegidos devem lançar exceções sempre que não puderem concluir suas funções pretendidas. A classe de exceção que é lançada deve ser a exceção mais específica disponível que se adapta às condições do erro. Essas exceções devem ser documentadas como parte da funcionalidade de classe e as classes derivadas ou as atualizações da classe original devem manter o mesmo comportamento para compatibilidade com versões anteriores.  
+ <span data-ttu-id="56228-124">Os membros de métodos públicos e protegidos devem lançar exceções sempre que não puderem concluir suas funções pretendidas.</span><span class="sxs-lookup"><span data-stu-id="56228-124">Public and protected methods members should throw exceptions whenever they cannot complete their intended functions.</span></span> <span data-ttu-id="56228-125">A classe de exceção que é lançada deve ser a exceção mais específica disponível que se adapta às condições do erro.</span><span class="sxs-lookup"><span data-stu-id="56228-125">The exception class that is thrown should be the most specific exception available that fits the error conditions.</span></span> <span data-ttu-id="56228-126">Essas exceções devem ser documentadas como parte da funcionalidade de classe e as classes derivadas ou as atualizações da classe original devem manter o mesmo comportamento para compatibilidade com versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="56228-126">These exceptions should be documented as part of the class functionality, and derived classes or updates to the original class should retain the same behavior for backward compatibility.</span></span>  
   
-## <a name="things-to-avoid-when-throwing-exceptions"></a>Coisas a serem evitadas ao lançar exceções  
- A lista a seguir identifica as práticas a serem evitadas ao lançar exceções:  
+## <a name="things-to-avoid-when-throwing-exceptions"></a><span data-ttu-id="56228-127">Coisas a serem evitadas ao lançar exceções</span><span class="sxs-lookup"><span data-stu-id="56228-127">Things to Avoid When Throwing Exceptions</span></span>  
+ <span data-ttu-id="56228-128">A lista a seguir identifica as práticas a serem evitadas ao lançar exceções:</span><span class="sxs-lookup"><span data-stu-id="56228-128">The following list identifies practices to avoid when throwing exceptions:</span></span>  
   
--   As exceções não devem ser usadas para alterar o fluxo de um programa, como parte da execução normal. As exceções só devem ser usadas para relatar e tratar condições de erro.  
+-   <span data-ttu-id="56228-129">As exceções não devem ser usadas para alterar o fluxo de um programa, como parte da execução normal.</span><span class="sxs-lookup"><span data-stu-id="56228-129">Exceptions should not be used to change the flow of a program as part of ordinary execution.</span></span> <span data-ttu-id="56228-130">As exceções só devem ser usadas para relatar e tratar condições de erro.</span><span class="sxs-lookup"><span data-stu-id="56228-130">Exceptions should only be used to report and handle error conditions.</span></span>  
   
--   As exceções não devem ser retornadas como um valor retornado ou um parâmetro em vez de serem lançadas.  
+-   <span data-ttu-id="56228-131">As exceções não devem ser retornadas como um valor retornado ou um parâmetro em vez de serem lançadas.</span><span class="sxs-lookup"><span data-stu-id="56228-131">Exceptions should not be returned as a return value or parameter instead of being thrown.</span></span>  
   
--   Não lance <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> ou <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> intencionalmente de seu próprio código-fonte.  
+-   <span data-ttu-id="56228-132">Não lance <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> ou <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> intencionalmente de seu próprio código-fonte.</span><span class="sxs-lookup"><span data-stu-id="56228-132">Do not throw <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType>, or <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> intentionally from your own source code.</span></span>  
   
--   Não crie exceções que podem ser lançadas no modo de depuração, mas não no modo de versão. Em vez disso, use o Debug Assert para identificar erros em tempo de execução durante a fase de desenvolvimento.  
+-   <span data-ttu-id="56228-133">Não crie exceções que podem ser lançadas no modo de depuração, mas não no modo de versão.</span><span class="sxs-lookup"><span data-stu-id="56228-133">Do not create exceptions that can be thrown in debug mode but not release mode.</span></span> <span data-ttu-id="56228-134">Em vez disso, use o Debug Assert para identificar erros em tempo de execução durante a fase de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="56228-134">To identify run-time errors during the development phase, use Debug Assert instead.</span></span>  
   
-## <a name="defining-exception-classes"></a>Definindo classes de exceção  
- Os programas podem lançar uma classe de exceção predefinida no namespace <xref:System> (exceto quando observado anteriormente) ou criar suas próprias classes de exceção, derivando de <xref:System.Exception>. AS classes derivadas devem definir pelo menos quatro construtores: um construtor padrão, um que define a propriedade de mensagem e um que define as propriedades <xref:System.Exception.Message%2A> e <xref:System.Exception.InnerException%2A>. O quarto construtor é usado para serializar a exceção. Novas classes de exceção devem ser serializáveis. Por exemplo:  
+## <a name="defining-exception-classes"></a><span data-ttu-id="56228-135">Definindo classes de exceção</span><span class="sxs-lookup"><span data-stu-id="56228-135">Defining Exception Classes</span></span>  
+ <span data-ttu-id="56228-136">Os programas podem lançar uma classe de exceção predefinida no namespace <xref:System> (exceto quando observado anteriormente) ou criar suas próprias classes de exceção, derivando de <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="56228-136">Programs can throw a predefined exception class in the <xref:System> namespace (except where previously noted), or create their own exception classes by deriving from <xref:System.Exception>.</span></span> <span data-ttu-id="56228-137">AS classes derivadas devem definir pelo menos quatro construtores: um construtor padrão, um que define a propriedade de mensagem e um que define as propriedades <xref:System.Exception.Message%2A> e <xref:System.Exception.InnerException%2A>.</span><span class="sxs-lookup"><span data-stu-id="56228-137">The derived classes should define at least four constructors: one default constructor, one that sets the message property, and one that sets both the <xref:System.Exception.Message%2A> and <xref:System.Exception.InnerException%2A> properties.</span></span> <span data-ttu-id="56228-138">O quarto construtor é usado para serializar a exceção.</span><span class="sxs-lookup"><span data-stu-id="56228-138">The fourth constructor is used to serialize the exception.</span></span> <span data-ttu-id="56228-139">Novas classes de exceção devem ser serializáveis.</span><span class="sxs-lookup"><span data-stu-id="56228-139">New exception classes should be serializable.</span></span> <span data-ttu-id="56228-140">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="56228-140">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   
- Novas propriedades só devem ser adicionadas à classe de exceção quando os dados que elas fornecem são úteis para resolver a exceção. Se forem adicionadas novas propriedades à classe de exceção derivada, `ToString()` deverá ser substituído para retornar as informações adicionadas.  
+ <span data-ttu-id="56228-141">Novas propriedades só devem ser adicionadas à classe de exceção quando os dados que elas fornecem são úteis para resolver a exceção.</span><span class="sxs-lookup"><span data-stu-id="56228-141">New properties should only be added to the exception class when the data they provide is useful to resolving the exception.</span></span> <span data-ttu-id="56228-142">Se forem adicionadas novas propriedades à classe de exceção derivada, `ToString()` deverá ser substituído para retornar as informações adicionadas.</span><span class="sxs-lookup"><span data-stu-id="56228-142">If new properties are added to the derived exception class, `ToString()` should be overridden to return the added information.</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="56228-143">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="56228-143">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Exceções e tratamento de exceções](../../../csharp/programming-guide/exceptions/index.md)   
- [Hierarquia de exceções](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
- [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)
-
+## <a name="see-also"></a><span data-ttu-id="56228-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="56228-144">See Also</span></span>  
+ [<span data-ttu-id="56228-145">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="56228-145">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="56228-146">Exceções e manipulação de exceções</span><span class="sxs-lookup"><span data-stu-id="56228-146">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)  
+ [<span data-ttu-id="56228-147">Hierarquia de exceções</span><span class="sxs-lookup"><span data-stu-id="56228-147">Exception Hierarchy</span></span>](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+ [<span data-ttu-id="56228-148">Tratamento de Exceção</span><span class="sxs-lookup"><span data-stu-id="56228-148">Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/exception-handling.md)

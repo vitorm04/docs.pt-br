@@ -1,62 +1,52 @@
 ---
 title: "LINQ e diretórios de arquivos (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 62c7ee272c788ca687b84bb76a853e58f83f69ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e7324e3b1d165bfe7ef477fa73bac5d3e7735dc5
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-and-file-directories-c"></a>LINQ e diretórios de arquivos (C#)
-Muitas operações do sistema de arquivos são essencialmente consultas e, portanto, são ideais para a abordagem do LINQ.  
+# <a name="linq-and-file-directories-c"></a><span data-ttu-id="c9640-102">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-102">LINQ and File Directories (C#)</span></span>
+<span data-ttu-id="c9640-103">Muitas operações do sistema de arquivos são essencialmente consultas e, portanto, são ideais para a abordagem do LINQ.</span><span class="sxs-lookup"><span data-stu-id="c9640-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  
   
- Observe que as consultas nesta seção são não destrutivas. Elas não são usadas para alterar o conteúdo dos arquivos ou pastas originais. Isso segue a regra de que consultas não devem causar efeitos colaterais. Em geral, qualquer código (incluindo consultas que executam operadores criar / atualizar / excluir) que modifique dados de origem deve ser mantido separado do código que apenas consulta os dados.  
+ <span data-ttu-id="c9640-104">Observe que as consultas nesta seção são não destrutivas.</span><span class="sxs-lookup"><span data-stu-id="c9640-104">Note that the queries in this section are non-destructive.</span></span> <span data-ttu-id="c9640-105">Elas não são usadas para alterar o conteúdo dos arquivos ou pastas originais.</span><span class="sxs-lookup"><span data-stu-id="c9640-105">They are not used to change the contents of the original files or folders.</span></span> <span data-ttu-id="c9640-106">Isso segue a regra de que consultas não devem causar efeitos colaterais.</span><span class="sxs-lookup"><span data-stu-id="c9640-106">This follows the rule that queries should not cause any side-effects.</span></span> <span data-ttu-id="c9640-107">Em geral, qualquer código (incluindo consultas que executam operadores criar / atualizar / excluir) que modifique dados de origem deve ser mantido separado do código que apenas consulta os dados.</span><span class="sxs-lookup"><span data-stu-id="c9640-107">In general, any code (including queries that perform create / update / delete operators) that modifies source data should be kept separate from the code that just queries the data.</span></span>  
   
- Esta seção contém os tópicos a seguir:  
+ <span data-ttu-id="c9640-108">Esta seção contém os tópicos a seguir:</span><span class="sxs-lookup"><span data-stu-id="c9640-108">This section contains the following topics:</span></span>  
   
- [Como consultar arquivos com um atributo ou nome especificado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- Mostra como pesquisar arquivos, examinando uma ou mais propriedades de seu objeto <xref:System.IO.FileInfo>.  
+ [<span data-ttu-id="c9640-109">Como consultar arquivos com um atributo ou nome especificado (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-109">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ <span data-ttu-id="c9640-110">Mostra como pesquisar arquivos, examinando uma ou mais propriedades de seu objeto <xref:System.IO.FileInfo>.</span><span class="sxs-lookup"><span data-stu-id="c9640-110">Shows how to search for files by examining one or more properties of its <xref:System.IO.FileInfo> object.</span></span>  
   
- [Como agrupar arquivos por extensão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- Mostra como retornar grupos de objetos <xref:System.IO.FileInfo> com base em sua extensão de nome de arquivo.  
+ [<span data-ttu-id="c9640-111">Como agrupar arquivos por extensão (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-111">How to: Group Files by Extension (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ <span data-ttu-id="c9640-112">Mostra como retornar grupos de objetos <xref:System.IO.FileInfo> com base em sua extensão de nome de arquivo.</span><span class="sxs-lookup"><span data-stu-id="c9640-112">Shows how to return groups of <xref:System.IO.FileInfo> object based on their file name extension.</span></span>  
   
- [Como consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
- Mostra como retornar o número total de bytes em todos os arquivos de uma árvore de diretórios especificada.  
+ [<span data-ttu-id="c9640-113">Como consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-113">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
+ <span data-ttu-id="c9640-114">Mostra como retornar o número total de bytes em todos os arquivos de uma árvore de diretórios especificada.</span><span class="sxs-lookup"><span data-stu-id="c9640-114">Shows how to return the total number of bytes in all the files in a specified directory tree.</span></span>  
   
- [Como comparar o conteúdo de duas pastas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
- Mostra como retornar todos os arquivos que estão presentes em duas pastas especificadas e também todos os arquivos que estão presentes em uma pasta, mas não na outra.  
+ <span data-ttu-id="c9640-115">[Como comparar o conteúdo de duas pastas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span><span class="sxs-lookup"><span data-stu-id="c9640-115">[How to: Compare the Contents of Two Folders (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span></span>  
+ <span data-ttu-id="c9640-116">Mostra como retornar todos os arquivos que estão presentes em duas pastas especificadas e também todos os arquivos que estão presentes em uma pasta, mas não na outra.</span><span class="sxs-lookup"><span data-stu-id="c9640-116">Shows how to return all the files that are present in two specified folders, and also all the files that are present in one folder but not the other.</span></span>  
   
- [Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
- Mostra como retornar o maior ou o menor arquivo ou um número especificado de arquivos, em uma árvore de diretório.  
+ [<span data-ttu-id="c9640-117">Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-117">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ <span data-ttu-id="c9640-118">Mostra como retornar o maior ou o menor arquivo ou um número especificado de arquivos, em uma árvore de diretório.</span><span class="sxs-lookup"><span data-stu-id="c9640-118">Shows how to return the largest or smallest file, or a specified number of files, in a directory tree.</span></span>  
   
- [Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
- Mostra como agrupar todos os nomes de arquivo que ocorrem em mais de um local em uma árvore de diretórios especificada. Também mostra como realizar comparações mais complexas com base em um comparador personalizado.  
+ [<span data-ttu-id="c9640-119">Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-119">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ <span data-ttu-id="c9640-120">Mostra como agrupar todos os nomes de arquivo que ocorrem em mais de um local em uma árvore de diretórios especificada.</span><span class="sxs-lookup"><span data-stu-id="c9640-120">Shows how to group for all file names that occur in more than one location in a specified directory tree.</span></span> <span data-ttu-id="c9640-121">Também mostra como realizar comparações mais complexas com base em um comparador personalizado.</span><span class="sxs-lookup"><span data-stu-id="c9640-121">Also shows how to perform more complex comparisons based on a custom comparer.</span></span>  
   
- [Como consultar o conteúdo de arquivos em uma pasta (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
- Mostra como iterar pelas pastas em uma árvore, abrir cada arquivo e consultar o conteúdo do arquivo.  
+ [<span data-ttu-id="c9640-122">Como consultar o conteúdo de arquivos em uma pasta (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-122">How to: Query the Contents of Files in a Folder (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ <span data-ttu-id="c9640-123">Mostra como iterar pelas pastas em uma árvore, abrir cada arquivo e consultar o conteúdo do arquivo.</span><span class="sxs-lookup"><span data-stu-id="c9640-123">Shows how to iterate through folders in a tree, open each file, and query the file's contents.</span></span>  
   
-## <a name="comments"></a>Comentários  
- Há certa complexidade envolvida na criação de uma fonte de dados que representa o conteúdo do sistema de arquivos com precisão e trata exceções de maneira elegante. Os exemplos nesta seção criam uma coleção de instantâneos de objetos <xref:System.IO.FileInfo> que representa todos os arquivos em uma pasta raiz especificada e todas as suas subpastas. O estado real de cada <xref:System.IO.FileInfo> pode ser alterado no tempo entre o momento em que você começa e termina a execução de uma consulta. Por exemplo, você pode criar uma lista de objetos <xref:System.IO.FileInfo> para usar como uma fonte de dados. Se você tentar acessar a propriedade `Length` em uma consulta, o objeto <xref:System.IO.FileInfo> tentará acessar o sistema de arquivos para atualizar o valor de `Length`. Se o arquivo não existir, você obterá uma <xref:System.IO.FileNotFoundException> em sua consulta, embora não esteja consultando diretamente o sistema de arquivos. Algumas consultas nesta seção usam um método separado que consome essas exceções específicas em determinados casos. Outra opção é manter a fonte de dados atualizada dinamicamente usando o <xref:System.IO.FileSystemWatcher>.  
+## <a name="comments"></a><span data-ttu-id="c9640-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9640-124">Comments</span></span>  
+ <span data-ttu-id="c9640-125">Há certa complexidade envolvida na criação de uma fonte de dados que representa o conteúdo do sistema de arquivos com precisão e trata exceções de maneira elegante.</span><span class="sxs-lookup"><span data-stu-id="c9640-125">There is some complexity involved in creating a data source that accurately represents the contents of the file system and handles exceptions gracefully.</span></span> <span data-ttu-id="c9640-126">Os exemplos nesta seção criam uma coleção de instantâneos de objetos <xref:System.IO.FileInfo> que representa todos os arquivos em uma pasta raiz especificada e todas as suas subpastas.</span><span class="sxs-lookup"><span data-stu-id="c9640-126">The examples in this section create a snapshot collection of <xref:System.IO.FileInfo> objects that represents all the files under a specified root folder and all its subfolders.</span></span> <span data-ttu-id="c9640-127">O estado real de cada <xref:System.IO.FileInfo> pode ser alterado no tempo entre o momento em que você começa e termina a execução de uma consulta.</span><span class="sxs-lookup"><span data-stu-id="c9640-127">The actual state of each <xref:System.IO.FileInfo> may change in the time between when you begin and end executing a query.</span></span> <span data-ttu-id="c9640-128">Por exemplo, você pode criar uma lista de objetos <xref:System.IO.FileInfo> para usar como uma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="c9640-128">For example, you can create a list of <xref:System.IO.FileInfo> objects to use as a data source.</span></span> <span data-ttu-id="c9640-129">Se você tentar acessar a propriedade `Length` em uma consulta, o objeto <xref:System.IO.FileInfo> tentará acessar o sistema de arquivos para atualizar o valor de `Length`.</span><span class="sxs-lookup"><span data-stu-id="c9640-129">If you try to access the `Length` property in a query, the <xref:System.IO.FileInfo> object will try to access the file system to update the value of `Length`.</span></span> <span data-ttu-id="c9640-130">Se o arquivo não existir, você obterá uma <xref:System.IO.FileNotFoundException> em sua consulta, embora não esteja consultando diretamente o sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="c9640-130">If the file no longer exists, you will get a <xref:System.IO.FileNotFoundException> in your query, even though you are not querying the file system directly.</span></span> <span data-ttu-id="c9640-131">Algumas consultas nesta seção usam um método separado que consome essas exceções específicas em determinados casos.</span><span class="sxs-lookup"><span data-stu-id="c9640-131">Some queries in this section use a separate method that consumes these particular exceptions in certain cases.</span></span> <span data-ttu-id="c9640-132">Outra opção é manter a fonte de dados atualizada dinamicamente usando o <xref:System.IO.FileSystemWatcher>.</span><span class="sxs-lookup"><span data-stu-id="c9640-132">Another option is to keep your data source updated dynamically by using the <xref:System.IO.FileSystemWatcher>.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="c9640-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9640-133">See Also</span></span>  
+ [<span data-ttu-id="c9640-134">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="c9640-134">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

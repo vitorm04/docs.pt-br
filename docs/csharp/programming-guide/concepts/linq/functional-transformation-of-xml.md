@@ -1,51 +1,46 @@
 ---
 title: "Transformação funcional de XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: bd63407901ed32f982a30aa7610590c853f15cf6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 57b4d25b7c2257c16401339f590b3487fba7d12a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="functional-transformation-of-xml-c"></a>Transformação funcional de XML (C#)
-Este tópico descreve a abordagem funcional pura de transformação aos documentos XML de alteração, e ele contrastes com uma abordagem procedural.  
+# <a name="functional-transformation-of-xml-c"></a><span data-ttu-id="28f98-102">Transformação funcional de XML (C#)</span><span class="sxs-lookup"><span data-stu-id="28f98-102">Functional Transformation of XML (C#)</span></span>
+<span data-ttu-id="28f98-103">Este tópico descreve a abordagem funcional pura de transformação aos documentos XML de alteração, e ele contrastes com uma abordagem procedural.</span><span class="sxs-lookup"><span data-stu-id="28f98-103">This topic discusses the pure functional transformation approach to modifying XML documents, and contrasts it with a procedural approach.</span></span>  
   
-## <a name="modifying-an-xml-document"></a>Alterando um documento XML  
- Uma das tarefas mais comuns para um programador XML está transformando XML de uma forma para outra. A forma de um documento XML é a estrutura do documento, que inclui o seguinte:  
+## <a name="modifying-an-xml-document"></a><span data-ttu-id="28f98-104">Alterando um documento XML</span><span class="sxs-lookup"><span data-stu-id="28f98-104">Modifying an XML Document</span></span>  
+ <span data-ttu-id="28f98-105">Uma das tarefas mais comuns para um programador XML está transformando XML de uma forma para outra.</span><span class="sxs-lookup"><span data-stu-id="28f98-105">One of the most common tasks for an XML programmer is transforming XML from one shape to another.</span></span> <span data-ttu-id="28f98-106">A forma de um documento XML é a estrutura do documento, que inclui o seguinte:</span><span class="sxs-lookup"><span data-stu-id="28f98-106">The shape of an XML document is the structure of the document, which includes the following:</span></span>  
   
--   A hierarquia expressa pelo documento.  
+-   <span data-ttu-id="28f98-107">A hierarquia expressa pelo documento.</span><span class="sxs-lookup"><span data-stu-id="28f98-107">The hierarchy expressed by the document.</span></span>  
   
--   Nomes de elementos e atributos.  
+-   <span data-ttu-id="28f98-108">Nomes de elementos e atributos.</span><span class="sxs-lookup"><span data-stu-id="28f98-108">The element and attribute names.</span></span>  
   
--   Os tipos de dados de elementos e atributos.  
+-   <span data-ttu-id="28f98-109">Os tipos de dados de elementos e atributos.</span><span class="sxs-lookup"><span data-stu-id="28f98-109">The data types of the elements and attributes.</span></span>  
   
- Em geral, a abordagem mais eficiente para transformar XML de uma forma para outra é a de transformação funcional pura. Nessa abordagem, a tarefa principal do programador é criar uma transformação que é aplicada ao documento XML inteiro (ou a um ou mais nós estritamente definido). A transformação funcional é teoricamente a mais fácil de código (após um programador estiver familiarizado com a abordagem), produz o código o mais sustentável, e é geralmente mais compacta de abordagens alternativas.  
+ <span data-ttu-id="28f98-110">Em geral, a abordagem mais eficiente para transformar XML de uma forma para outra é a de transformação funcional pura.</span><span class="sxs-lookup"><span data-stu-id="28f98-110">In general, the most effective approach to transforming XML from one shape to another is that of pure functional transformation.</span></span> <span data-ttu-id="28f98-111">Nessa abordagem, a tarefa principal do programador é criar uma transformação que é aplicada ao documento XML inteiro (ou a um ou mais nós estritamente definido).</span><span class="sxs-lookup"><span data-stu-id="28f98-111">In this approach, the primary programmer task is to create a transformation which is applied to the entire XML document (or to one or more strictly defined nodes).</span></span> <span data-ttu-id="28f98-112">A transformação funcional é teoricamente a mais fácil de código (após um programador estiver familiarizado com a abordagem), produz o código o mais sustentável, e é geralmente mais compacta de abordagens alternativas.</span><span class="sxs-lookup"><span data-stu-id="28f98-112">Functional transformation is arguably the easiest to code (after a programmer is familiar with the approach), yields the most maintainable code, and is often more compact than alternative approaches.</span></span>  
   
-### <a name="xml-functional-transformational-technologies"></a>Tecnologias transformacionais funcionais XML  
- A Microsoft oferece duas tecnologias funcionais de transformação para uso em documentos XML: XSLT e LINQ to XML. XSLT é suportado no namespace gerenciada <xref:System.Xml.Xsl> e na implementação nativo COM de MSXML. Embora XSLT é uma tecnologia robusta para documentos XML de tratamento, requer a experiência em um domínio especializado, como o idioma XSLT e seus APIs de suporte.  
+### <a name="xml-functional-transformational-technologies"></a><span data-ttu-id="28f98-113">Tecnologias transformacionais funcionais XML</span><span class="sxs-lookup"><span data-stu-id="28f98-113">XML Functional Transformational Technologies</span></span>  
+ <span data-ttu-id="28f98-114">A Microsoft oferece duas tecnologias funcionais de transformação para uso em documentos XML: XSLT e LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="28f98-114">Microsoft offers two functional transformation technologies for use on XML documents: XSLT and LINQ to XML.</span></span> <span data-ttu-id="28f98-115">XSLT é suportado no namespace gerenciada <xref:System.Xml.Xsl> e na implementação nativo COM de MSXML.</span><span class="sxs-lookup"><span data-stu-id="28f98-115">XSLT is supported in the <xref:System.Xml.Xsl> managed namespace and in the native COM implementation of MSXML.</span></span> <span data-ttu-id="28f98-116">Embora XSLT é uma tecnologia robusta para documentos XML de tratamento, requer a experiência em um domínio especializado, como o idioma XSLT e seus APIs de suporte.</span><span class="sxs-lookup"><span data-stu-id="28f98-116">Although XSLT is a robust technology for manipulating XML documents, it requires expertise in a specialized domain, namely the XSLT language and its supporting APIs.</span></span>  
   
- LINQ to XML fornece as ferramentas necessárias codificação transformações e puras de uma maneira poderosa completo expressive e, em C# ou de código Visual Basic. Por exemplo, muitos dos exemplos o uso da documentação LINQ to XML uma abordagem funcional pura. Além disso, no [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md), usamos LINQ to XML em uma abordagem funcional para manipular informações em um documento do Microsoft Word.  
+ <span data-ttu-id="28f98-117">LINQ to XML fornece as ferramentas necessárias codificação transformações e puras de uma maneira poderosa completo expressive e, em C# ou de código Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="28f98-117">LINQ to XML provides the tools necessary to code pure functional transformations in an expressive and powerful way, within C# or Visual Basic code.</span></span> <span data-ttu-id="28f98-118">Por exemplo, muitos dos exemplos o uso da documentação LINQ to XML uma abordagem funcional pura.</span><span class="sxs-lookup"><span data-stu-id="28f98-118">For example, many of the examples in the LINQ to XML documentation use a pure functional approach.</span></span> <span data-ttu-id="28f98-119">Além disso, no [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md), usamos LINQ to XML em uma abordagem funcional para manipular informações em um documento do Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="28f98-119">Also, in the [Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial, we use LINQ to XML in a functional approach to manipulate information in a Microsoft Word document.</span></span>  
   
- Para obter uma comparação mais completa entre LINQ to XML e outras tecnologias Microsoft XML, consulte [LINQ to XML versus Outras Tecnologias XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).  
+ <span data-ttu-id="28f98-120">Para obter uma comparação mais completa entre LINQ to XML e outras tecnologias Microsoft XML, consulte [LINQ to XML versus Outras Tecnologias XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).</span><span class="sxs-lookup"><span data-stu-id="28f98-120">For a more complete comparison of LINQ to XML with other Microsoft XML technologies, see [LINQ to XML vs. Other XML Technologies](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).</span></span>  
   
- XSLT a ferramenta é recomendada para transformações um documento céntricas quando o documento de origem tem uma estrutura denteada. No entanto, LINQ to XML também pode executar um documento centralizado em transformações. Para obter mais informações, consulte [Como usar anotações para transformar árvores LINQ to XML em um estilo XSLT (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+ <span data-ttu-id="28f98-121">XSLT a ferramenta é recomendada para transformações um documento céntricas quando o documento de origem tem uma estrutura denteada.</span><span class="sxs-lookup"><span data-stu-id="28f98-121">XSLT is the recommended tool for  document-centric transformations when the source document has an irregular structure.</span></span> <span data-ttu-id="28f98-122">No entanto, LINQ to XML também pode executar um documento centralizado em transformações.</span><span class="sxs-lookup"><span data-stu-id="28f98-122">However, LINQ to XML can also perform document-centric transforms.</span></span> <span data-ttu-id="28f98-123">Para obter mais informações, consulte [Como usar anotações para transformar árvores LINQ to XML em um estilo XSLT (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).</span><span class="sxs-lookup"><span data-stu-id="28f98-123">For more information, see [How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [LINQ to XML versus Outras Tecnologias XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
-
+## <a name="see-also"></a><span data-ttu-id="28f98-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="28f98-124">See Also</span></span>  
+ [<span data-ttu-id="28f98-125">Introdução às transformações funcionais puras (C#)</span><span class="sxs-lookup"><span data-stu-id="28f98-125">Introduction to Pure Functional Transformations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [<span data-ttu-id="28f98-126">Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="28f98-126">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="28f98-127">LINQ to XML versus Outras Tecnologias XML</span><span class="sxs-lookup"><span data-stu-id="28f98-127">LINQ to XML vs. Other XML Technologies</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

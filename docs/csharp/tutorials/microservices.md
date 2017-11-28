@@ -10,169 +10,168 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
+ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5585db33fb5020ed18c26f32ce0b63f97353d20f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="microservices-hosted-in-docker"></a><span data-ttu-id="04995-104">Microsserviços hospedados no Docker</span><span class="sxs-lookup"><span data-stu-id="04995-104">Microservices hosted in Docker</span></span>
 
-# <a name="microservices-hosted-in-docker"></a>Microsserviços hospedados no Docker
+## <a name="introduction"></a><span data-ttu-id="04995-105">Introdução</span><span class="sxs-lookup"><span data-stu-id="04995-105">Introduction</span></span>
 
-## <a name="introduction"></a>Introdução
+<span data-ttu-id="04995-106">Este tutorial detalha as tarefas necessárias para compilar e implantar um microsserviço ASP.NET Core em um contêiner do Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-106">This tutorial details the tasks necessary to build and deploy an ASP.NET Core microservice in a Docker container.</span></span> <span data-ttu-id="04995-107">Durante este tutorial, você aprenderá:</span><span class="sxs-lookup"><span data-stu-id="04995-107">During the course of this tutorial, you'll learn:</span></span>
 
-Este tutorial detalha as tarefas necessárias para compilar e implantar um microsserviço ASP.NET Core em um contêiner do Docker. Durante este tutorial, você aprenderá:
+* <span data-ttu-id="04995-108">Como gerar um aplicativo ASP.NET Core usando Yeoman</span><span class="sxs-lookup"><span data-stu-id="04995-108">How to generate an ASP.NET Core application using Yeoman</span></span>
+* <span data-ttu-id="04995-109">Como criar um ambiente de desenvolvimento do Docker</span><span class="sxs-lookup"><span data-stu-id="04995-109">How to create a development Docker environment</span></span>
+* <span data-ttu-id="04995-110">Como compilar uma imagem do Docker com base em uma imagem existente.</span><span class="sxs-lookup"><span data-stu-id="04995-110">How to build a Docker image based on an existing image.</span></span>
+* <span data-ttu-id="04995-111">Como implantar seu serviço em um contêiner do Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-111">How to deploy your service into a Docker container.</span></span>
 
-* Como gerar um aplicativo ASP.NET Core usando Yeoman
-* Como criar um ambiente de desenvolvimento do Docker
-* Como compilar uma imagem do Docker com base em uma imagem existente.
-* Como implantar seu serviço em um contêiner do Docker.
+<span data-ttu-id="04995-112">Ao longo do caminho, você também verá alguns recursos da linguagem C#:</span><span class="sxs-lookup"><span data-stu-id="04995-112">Along the way, you'll also see some C# language features:</span></span>
 
-Ao longo do caminho, você também verá alguns recursos da linguagem C#:
+* <span data-ttu-id="04995-113">Como converter objetos C# em cargas JSON.</span><span class="sxs-lookup"><span data-stu-id="04995-113">How to convert C# objects into JSON payloads.</span></span>
+* <span data-ttu-id="04995-114">Como compilar Objetos de Transferência de Dados imutáveis</span><span class="sxs-lookup"><span data-stu-id="04995-114">How to build immutable Data Transfer Objects</span></span>
+* <span data-ttu-id="04995-115">Como processar solicitações HTTP de entrada e gerar a resposta HTTP</span><span class="sxs-lookup"><span data-stu-id="04995-115">How to process incoming HTTP Requests and generate the HTTP Response</span></span>
+* <span data-ttu-id="04995-116">Como trabalhar com tipos de valor anulável</span><span class="sxs-lookup"><span data-stu-id="04995-116">How to work with nullable value types</span></span>
 
-* Como converter objetos C# em cargas JSON.
-* Como compilar Objetos de Transferência de Dados imutáveis
-* Como processar solicitações HTTP de entrada e gerar a resposta HTTP
-* Como trabalhar com tipos de valor anulável
+<span data-ttu-id="04995-117">Você pode [exibir ou baixar o aplicativo de exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) deste tópico.</span><span class="sxs-lookup"><span data-stu-id="04995-117">You can [view or download the sample app](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) for this topic.</span></span> <span data-ttu-id="04995-118">Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="04995-118">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-Você pode [exibir ou baixar o aplicativo de exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+### <a name="why-docker"></a><span data-ttu-id="04995-119">Por que o Docker?</span><span class="sxs-lookup"><span data-stu-id="04995-119">Why Docker?</span></span>
 
-### <a name="why-docker"></a>Por que o Docker?
+<span data-ttu-id="04995-120">O Docker facilita a criação de imagens de máquina padrão para hospedar seus serviços em um data center ou na nuvem pública.</span><span class="sxs-lookup"><span data-stu-id="04995-120">Docker makes it easy to create standard machine images to host your services in a data center, or the public cloud.</span></span> <span data-ttu-id="04995-121">O Docker permite que você configure a imagem e replique-a conforme o necessário para dimensionar a instalação de seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-121">Docker enables you to configure the image, and replicate it as needed to scale the installation of your application.</span></span>
 
-O Docker facilita a criação de imagens de máquina padrão para hospedar seus serviços em um data center ou na nuvem pública. O Docker permite que você configure a imagem e replique-a conforme o necessário para dimensionar a instalação de seu aplicativo.
+<span data-ttu-id="04995-122">Todo o código neste tutorial funcionará em qualquer ambiente .NET Core.</span><span class="sxs-lookup"><span data-stu-id="04995-122">All the code in this tutorial will work in any .NET Core environment.</span></span>
+<span data-ttu-id="04995-123">As tarefas adicionais para uma instalação do Docker funcionarão para um aplicativo ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="04995-123">The additional tasks for a Docker installation will work for an ASP.NET Core application.</span></span> 
 
-Todo o código neste tutorial funcionará em qualquer ambiente .NET Core.
-As tarefas adicionais para uma instalação do Docker funcionarão para um aplicativo ASP.NET Core. 
+## <a name="prerequisites"></a><span data-ttu-id="04995-124">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="04995-124">Prerequisites</span></span>
+<span data-ttu-id="04995-125">Você precisará configurar seu computador para executar o .NET Core.</span><span class="sxs-lookup"><span data-stu-id="04995-125">You’ll need to setup your machine to run .NET core.</span></span> <span data-ttu-id="04995-126">Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="04995-126">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
+<span data-ttu-id="04995-127">Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-127">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="04995-128">Será necessário instalar o editor de código de sua preferência.</span><span class="sxs-lookup"><span data-stu-id="04995-128">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="04995-129">As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma.</span><span class="sxs-lookup"><span data-stu-id="04995-129">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="04995-130">No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.</span><span class="sxs-lookup"><span data-stu-id="04995-130">However, you can use whatever tools you are comfortable with.</span></span>
 
-## <a name="prerequisites"></a>Pré-requisitos
-Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core).
-Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
+<span data-ttu-id="04995-131">Também precisará instalar o mecanismo Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-131">You'll also need to install the Docker engine.</span></span> <span data-ttu-id="04995-132">Consulte a [página Instalação de Docker](http://www.docker.com/products/docker) para obter instruções para sua plataforma.</span><span class="sxs-lookup"><span data-stu-id="04995-132">See the [Docker Installation page](http://www.docker.com/products/docker) for instructions for your platform.</span></span>
+<span data-ttu-id="04995-133">O Docker pode ser instalado em muitas distribuições do Linux, macOS ou Windows.</span><span class="sxs-lookup"><span data-stu-id="04995-133">Docker can be installed in many Linux distributions, macOS, or Windows.</span></span> <span data-ttu-id="04995-134">A página mencionada acima contém seções para cada uma das instalações disponíveis.</span><span class="sxs-lookup"><span data-stu-id="04995-134">The page referenced above contains sections to each of the available installations.</span></span>
 
-Também precisará instalar o mecanismo Docker. Consulte a [página Instalação de Docker](http://www.docker.com/products/docker) para obter instruções para sua plataforma.
-O Docker pode ser instalado em muitas distribuições do Linux, macOS ou Windows. A página mencionada acima contém seções para cada uma das instalações disponíveis.
+<span data-ttu-id="04995-135">A maioria das instalações dos componentes é realizada por um gerenciador de pacotes.</span><span class="sxs-lookup"><span data-stu-id="04995-135">Most components to be installed are done by a package manager.</span></span> <span data-ttu-id="04995-136">Se o gerenciador de pacotes do node.js `npm` estiver instalado, ignore esta etapa.</span><span class="sxs-lookup"><span data-stu-id="04995-136">If you have node.js's package manager `npm` installed you can skip this step.</span></span> <span data-ttu-id="04995-137">Caso contrário, instale o NodeJs mais recente do [nodejs.org](https://nodejs.org), que instalará o gerenciador de pacotes npm.</span><span class="sxs-lookup"><span data-stu-id="04995-137">Otherwise install the latest NodeJs from [nodejs.org](https://nodejs.org) which will install the npm package manager.</span></span> 
 
-A maioria das instalações dos componentes é realizada por um gerenciador de pacotes. Se o gerenciador de pacotes do node.js `npm` estiver instalado, ignore esta etapa. Caso contrário, instale o NodeJs mais recente do [nodejs.org](https://nodejs.org), que instalará o gerenciador de pacotes npm. 
-
-Aqui, você precisará instalar uma série de ferramentas de linha de comando que oferecem suporte ao desenvolvimento em ASP.NET Core. Os modelos de linha de comando usam Yeoman, Bower, Grunt e Gulp. Se você os tiver instalado, ótimo, caso contrário, digite o seguinte em seu shell favorito:
+<span data-ttu-id="04995-138">Aqui, você precisará instalar uma série de ferramentas de linha de comando que oferecem suporte ao desenvolvimento em ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="04995-138">At this point you will need to install a number of command line tools that support ASP.NET core development.</span></span> <span data-ttu-id="04995-139">Os modelos de linha de comando usam Yeoman, Bower, Grunt e Gulp.</span><span class="sxs-lookup"><span data-stu-id="04995-139">The command line templates use Yeoman, Bower, Grunt, and Gulp.</span></span> <span data-ttu-id="04995-140">Se você os tiver instalado, ótimo, caso contrário, digite o seguinte em seu shell favorito:</span><span class="sxs-lookup"><span data-stu-id="04995-140">If you have them installed that is good, otherwise type the following into your favorite shell:</span></span>
 
 `npm install -g yo bower grunt-cli gulp`
 
-A opção `-g` indica que é uma instalação global, e essas ferramentas estão disponíveis em todo o sistema. (Uma instalação local define o escopo do pacote para um único projeto). Após a instalação dessas ferramentas essenciais, você precisará instalar os geradores de modelo asp.net de yeoman:
+<span data-ttu-id="04995-141">A opção `-g` indica que é uma instalação global, e essas ferramentas estão disponíveis em todo o sistema.</span><span class="sxs-lookup"><span data-stu-id="04995-141">The `-g` option indicates that it is a global install, and those tools are available system wide.</span></span> <span data-ttu-id="04995-142">(Uma instalação local define o escopo do pacote para um único projeto).</span><span class="sxs-lookup"><span data-stu-id="04995-142">(A local install scopes the package to a single project).</span></span> <span data-ttu-id="04995-143">Após a instalação dessas ferramentas essenciais, você precisará instalar os geradores de modelo asp.net de yeoman:</span><span class="sxs-lookup"><span data-stu-id="04995-143">Once you've installed those core tools, you need to install the yeoman asp.net template generators:</span></span>
 
 `npm install -g generator-aspnet`
 
-## <a name="create-the-application"></a>Criar o aplicativo
+## <a name="create-the-application"></a><span data-ttu-id="04995-144">Criar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="04995-144">Create the Application</span></span>
 
-Agora que você instalou todas as ferramentas, crie um novo aplicativo asp.net core. Para usar o gerador de linha de comando, execute o seguinte comando yeoman no shell de sua preferência:
+<span data-ttu-id="04995-145">Agora que você instalou todas as ferramentas, crie um novo aplicativo asp.net core.</span><span class="sxs-lookup"><span data-stu-id="04995-145">Now that you've installed all the tools, create a new asp.net core application.</span></span> <span data-ttu-id="04995-146">Para usar o gerador de linha de comando, execute o seguinte comando yeoman no shell de sua preferência:</span><span class="sxs-lookup"><span data-stu-id="04995-146">To use the command line generator, execute the following yeoman command in your favorite shell:</span></span>
 
 `yo aspnet`
 
-Esse comando solicita a seleção do Tipo de aplicativo que você deseja criar. Para este microsserviço, convém ter o aplicativo Web mais simples e mais leve possível, portanto, selecione 'Aplicativo Web Vazio'. O modelo solicitará um nome. Selecione 'WeatherMicroservice'. 
+<span data-ttu-id="04995-147">Esse comando solicita a seleção do Tipo de aplicativo que você deseja criar.</span><span class="sxs-lookup"><span data-stu-id="04995-147">This command prompts you to select what Type of application you want to create.</span></span> <span data-ttu-id="04995-148">Para este microsserviço, convém ter o aplicativo Web mais simples e mais leve possível, portanto, selecione 'Aplicativo Web Vazio'.</span><span class="sxs-lookup"><span data-stu-id="04995-148">For this microservice, you want the simplest, most lightweight web application possible, so select 'Empty Web Application'.</span></span> <span data-ttu-id="04995-149">O modelo solicitará um nome.</span><span class="sxs-lookup"><span data-stu-id="04995-149">The template will prompt you for a name.</span></span> <span data-ttu-id="04995-150">Selecione 'WeatherMicroservice'.</span><span class="sxs-lookup"><span data-stu-id="04995-150">Select 'WeatherMicroservice'.</span></span> 
 
-O modelo cria oito arquivos para você:
+<span data-ttu-id="04995-151">O modelo cria oito arquivos para você:</span><span class="sxs-lookup"><span data-stu-id="04995-151">The template creates eight files for you:</span></span>
 
-* Um .gitignore, personalizado para aplicativos asp.net core.
-* Um arquivo Startup.cs. Contém a base do aplicativo.
-* Um arquivo Program.cs. Contém o ponto de entrada do aplicativo.
-* Um arquivo WeatherMicroservice.csproj. Esse é o arquivo de compilação do aplicativo.
-* Um dockerfile. Esse script cria uma imagem do Docker para o aplicativo.
-* Um README.md. Contém links para outros recursos do asp.net core.
-* Um arquivo web.config. Contém informações básicas de configuração.
-* Um arquivo runtimeconfig.template.json. Contém as configurações de depuração usadas pelos IDEs.
+* <span data-ttu-id="04995-152">Um .gitignore, personalizado para aplicativos asp.net core.</span><span class="sxs-lookup"><span data-stu-id="04995-152">A .gitignore, customized for asp.net core applications.</span></span>
+* <span data-ttu-id="04995-153">Um arquivo Startup.cs.</span><span class="sxs-lookup"><span data-stu-id="04995-153">A Startup.cs file.</span></span> <span data-ttu-id="04995-154">Contém a base do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-154">This contains the basis of the application.</span></span>
+* <span data-ttu-id="04995-155">Um arquivo Program.cs.</span><span class="sxs-lookup"><span data-stu-id="04995-155">A Program.cs file.</span></span> <span data-ttu-id="04995-156">Contém o ponto de entrada do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-156">This contains the entry point of the application.</span></span>
+* <span data-ttu-id="04995-157">Um arquivo WeatherMicroservice.csproj.</span><span class="sxs-lookup"><span data-stu-id="04995-157">A WeatherMicroservice.csproj file.</span></span> <span data-ttu-id="04995-158">Esse é o arquivo de compilação do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-158">This is the build file for the application.</span></span>
+* <span data-ttu-id="04995-159">Um dockerfile.</span><span class="sxs-lookup"><span data-stu-id="04995-159">A Dockerfile.</span></span> <span data-ttu-id="04995-160">Esse script cria uma imagem do Docker para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-160">This script creates a Docker image for the application.</span></span>
+* <span data-ttu-id="04995-161">Um README.md.</span><span class="sxs-lookup"><span data-stu-id="04995-161">A README.md.</span></span> <span data-ttu-id="04995-162">Contém links para outros recursos do asp.net core.</span><span class="sxs-lookup"><span data-stu-id="04995-162">This contains links to other asp.net core resources.</span></span>
+* <span data-ttu-id="04995-163">Um arquivo web.config.</span><span class="sxs-lookup"><span data-stu-id="04995-163">A web.config file.</span></span> <span data-ttu-id="04995-164">Contém informações básicas de configuração.</span><span class="sxs-lookup"><span data-stu-id="04995-164">This contains basic configuration information.</span></span>
+* <span data-ttu-id="04995-165">Um arquivo runtimeconfig.template.json.</span><span class="sxs-lookup"><span data-stu-id="04995-165">A runtimeconfig.template.json file.</span></span> <span data-ttu-id="04995-166">Contém as configurações de depuração usadas pelos IDEs.</span><span class="sxs-lookup"><span data-stu-id="04995-166">This contains debugging settings used by IDEs.</span></span>
 
-Agora você pode executar o aplicativo gerado pelo modelo. Isso é feito usando uma série de ferramentas na linha de comando. O comando `dotnet` executa as ferramentas necessárias para desenvolvimento em .NET. Cada verbo executa um comando diferente
+<span data-ttu-id="04995-167">Agora você pode executar o aplicativo gerado pelo modelo.</span><span class="sxs-lookup"><span data-stu-id="04995-167">Now you can run the template generated application.</span></span> <span data-ttu-id="04995-168">Isso é feito usando uma série de ferramentas na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="04995-168">That's done using a series of tools from the command line.</span></span> <span data-ttu-id="04995-169">O comando `dotnet` executa as ferramentas necessárias para desenvolvimento em .NET.</span><span class="sxs-lookup"><span data-stu-id="04995-169">The `dotnet` command runs the tools necessary for .NET development.</span></span> <span data-ttu-id="04995-170">Cada verbo executa um comando diferente</span><span class="sxs-lookup"><span data-stu-id="04995-170">Each verb executes a different command</span></span>
 
-A primeira etapa é restaurar todas as dependências:
+<span data-ttu-id="04995-171">A primeira etapa é restaurar todas as dependências:</span><span class="sxs-lookup"><span data-stu-id="04995-171">The first step is to restore all the dependencies:</span></span>
 
 ```console
 dotnet restore
 ```
 
-A restauração do dotnet usa o gerenciador de pacotes do NuGet para instalar todos os pacotes necessários no diretório do aplicativo. Ele também gera um arquivo project.json.lock. Esse arquivo contém informações sobre cada pacote referenciado. Depois de restaurar todas as dependências, compile o aplicativo:
+<span data-ttu-id="04995-172">A restauração do dotnet usa o gerenciador de pacotes do NuGet para instalar todos os pacotes necessários no diretório do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-172">Dotnet restore uses the NuGet package manager to install all the necessary packages into the application directory.</span></span> <span data-ttu-id="04995-173">Ele também gera um arquivo project.json.lock.</span><span class="sxs-lookup"><span data-stu-id="04995-173">It also generates a project.json.lock file.</span></span> <span data-ttu-id="04995-174">Esse arquivo contém informações sobre cada pacote referenciado.</span><span class="sxs-lookup"><span data-stu-id="04995-174">This file contains information about each package that is referenced.</span></span> <span data-ttu-id="04995-175">Depois de restaurar todas as dependências, compile o aplicativo:</span><span class="sxs-lookup"><span data-stu-id="04995-175">After restoring all the dependencies, you build the application:</span></span>
 
 ```console
 dotnet build
 ```
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-E, depois de compilar o aplicativo, execute-o na linha de comando:
+<span data-ttu-id="04995-176">E, depois de compilar o aplicativo, execute-o na linha de comando:</span><span class="sxs-lookup"><span data-stu-id="04995-176">And once you build the application, you run it from the command line:</span></span>
 
 ```console
 dotnet run
 ```
 
-A configuração padrão escuta http://localhost:5000. Abra um navegador, navegue até a página e veja uma mensagem "Hello World!" .
+<span data-ttu-id="04995-177">A configuração padrão escuta http://localhost:5000.</span><span class="sxs-lookup"><span data-stu-id="04995-177">The default configuration listens to http://localhost:5000.</span></span> <span data-ttu-id="04995-178">Abra um navegador, navegue até a página e veja uma mensagem "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="04995-178">You can open a browser and navigate to that page and see a "Hello World!"</span></span> <span data-ttu-id="04995-179">.</span><span class="sxs-lookup"><span data-stu-id="04995-179">message.</span></span>
 
-### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomia de um aplicativo ASP.NET Core
+### <a name="anatomy-of-an-aspnet-core-application"></a><span data-ttu-id="04995-180">Anatomia de um aplicativo ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="04995-180">Anatomy of an ASP.NET Core application</span></span>
 
-Agora que você criou o aplicativo, vamos analisar como essa funcionalidade é implementada. Há dois dos arquivos gerados que são particularmente interessantes neste ponto: project.json e Startup.cs. 
+<span data-ttu-id="04995-181">Agora que você criou o aplicativo, vamos analisar como essa funcionalidade é implementada.</span><span class="sxs-lookup"><span data-stu-id="04995-181">Now that you've built the application, let's look at how this functionality is implemented.</span></span> <span data-ttu-id="04995-182">Há dois dos arquivos gerados que são particularmente interessantes neste ponto: project.json e Startup.cs.</span><span class="sxs-lookup"><span data-stu-id="04995-182">There are two of the generated files that are particularly interesting at this point: project.json and Startup.cs.</span></span> 
 
-Project.json contém informações sobre o projeto. Os dois nós com os quais você trabalhará com frequência são 'dependências' e 'estruturas'. O nó dependências lista todos os pacotes necessários para este aplicativo.
-No momento, este é um nó pequeno que precisa apenas dos pacotes que executam o servidor Web.
+<span data-ttu-id="04995-183">Project.json contém informações sobre o projeto.</span><span class="sxs-lookup"><span data-stu-id="04995-183">Project.json contains information about the project.</span></span> <span data-ttu-id="04995-184">Os dois nós com os quais você trabalhará com frequência são 'dependências' e 'estruturas'.</span><span class="sxs-lookup"><span data-stu-id="04995-184">The two nodes you'll often work with are 'dependencies' and 'frameworks'.</span></span> <span data-ttu-id="04995-185">O nó dependências lista todos os pacotes necessários para este aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-185">The dependencies node lists all the packages that are needed for this application.</span></span>
+<span data-ttu-id="04995-186">No momento, este é um nó pequeno que precisa apenas dos pacotes que executam o servidor Web.</span><span class="sxs-lookup"><span data-stu-id="04995-186">At the moment, this is a small node, needing only the packages that run the web server.</span></span>
 
-O nó 'estruturas' especifica as versões e as configurações da estrutura .NET que executará esse aplicativo.
+<span data-ttu-id="04995-187">O nó 'estruturas' especifica as versões e as configurações da estrutura .NET que executará esse aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-187">The 'frameworks' node specifies the versions and configurations of the .NET framework that will run this application.</span></span>
 
-O aplicativo é implementado em Startup.cs. Esse arquivo contém a classe de inicialização.
+<span data-ttu-id="04995-188">O aplicativo é implementado em Startup.cs.</span><span class="sxs-lookup"><span data-stu-id="04995-188">The application is implemented in Startup.cs.</span></span> <span data-ttu-id="04995-189">Esse arquivo contém a classe de inicialização.</span><span class="sxs-lookup"><span data-stu-id="04995-189">This file contains the startup class.</span></span>
 
-Os dois métodos são chamados pela infraestrutura do asp.net core para configurar e executar o aplicativo. O método `ConfigureServices` descreve os serviços que são necessários para este aplicativo. Você está compilando um microsserviço enxuto, portanto, não precisa configurar dependências. O método `Configure` configura os manipuladores para solicitações HTTP de entrada. O modelo gera um manipulador simples que responde a qualquer solicitação com o texto "Hello World!".
+<span data-ttu-id="04995-190">Os dois métodos são chamados pela infraestrutura do asp.net core para configurar e executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-190">The two methods are called by the asp.net core infrastructure to configure and run the application.</span></span> <span data-ttu-id="04995-191">O método `ConfigureServices` descreve os serviços que são necessários para este aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-191">The `ConfigureServices` method describes the services that are necessary for this application.</span></span> <span data-ttu-id="04995-192">Você está compilando um microsserviço enxuto, portanto, não precisa configurar dependências.</span><span class="sxs-lookup"><span data-stu-id="04995-192">You're building a lean microservice, so it doesn't need to configure any dependencies.</span></span> <span data-ttu-id="04995-193">O método `Configure` configura os manipuladores para solicitações HTTP de entrada.</span><span class="sxs-lookup"><span data-stu-id="04995-193">The `Configure` method configures the handlers for incoming HTTP Requests.</span></span> <span data-ttu-id="04995-194">O modelo gera um manipulador simples que responde a qualquer solicitação com o texto "Hello World!".</span><span class="sxs-lookup"><span data-stu-id="04995-194">The template generates a simple handler that responds to any request with the text 'Hello World!'.</span></span>
 
-## <a name="build-a-microservice"></a>Criar um microsserviço
+## <a name="build-a-microservice"></a><span data-ttu-id="04995-195">Criar um microsserviço</span><span class="sxs-lookup"><span data-stu-id="04995-195">Build a microservice</span></span>
 
-O serviço criado fornecerá relatórios meteorológicos de qualquer lugar do mundo. Em um aplicativo de produção, você chamaria algum serviço para obter os dados meteorológicos. Em nosso exemplo, geraremos uma previsão do tempo aleatória. 
+<span data-ttu-id="04995-196">O serviço criado fornecerá relatórios meteorológicos de qualquer lugar do mundo.</span><span class="sxs-lookup"><span data-stu-id="04995-196">The service you're going to build will deliver weather reports from anywhere around the globe.</span></span> <span data-ttu-id="04995-197">Em um aplicativo de produção, você chamaria algum serviço para obter os dados meteorológicos.</span><span class="sxs-lookup"><span data-stu-id="04995-197">In a production application, you'd call some service to retrieve weather data.</span></span> <span data-ttu-id="04995-198">Em nosso exemplo, geraremos uma previsão do tempo aleatória.</span><span class="sxs-lookup"><span data-stu-id="04995-198">For our sample, we'll generate a random weather forecast.</span></span> 
 
-Há várias tarefas que você precisará executar para implementar nosso serviço meteorológico aleatório:
+<span data-ttu-id="04995-199">Há várias tarefas que você precisará executar para implementar nosso serviço meteorológico aleatório:</span><span class="sxs-lookup"><span data-stu-id="04995-199">There are a number of tasks you'll need to perform in order to implement our random weather service:</span></span>
 
-* Analise a solicitação de entrada para ler a latitude e a longitude.
-* Gere alguns dados de previsão aleatórios.
-* Converta esses dados de previsão aleatórios de objetos C# para pacotes JSON.
-* Defina o cabeçalho de resposta para indicar que o serviço retorna JSON.
-* Escreva a resposta.
+* <span data-ttu-id="04995-200">Analise a solicitação de entrada para ler a latitude e a longitude.</span><span class="sxs-lookup"><span data-stu-id="04995-200">Parse the incoming request to read the latitude and longitude.</span></span>
+* <span data-ttu-id="04995-201">Gere alguns dados de previsão aleatórios.</span><span class="sxs-lookup"><span data-stu-id="04995-201">Generate some random forecast data.</span></span>
+* <span data-ttu-id="04995-202">Converta esses dados de previsão aleatórios de objetos C# para pacotes JSON.</span><span class="sxs-lookup"><span data-stu-id="04995-202">Convert that random forecast data from C# objects into JSON packets.</span></span>
+* <span data-ttu-id="04995-203">Defina o cabeçalho de resposta para indicar que o serviço retorna JSON.</span><span class="sxs-lookup"><span data-stu-id="04995-203">Set the response header to indicate that your service sends back JSON.</span></span>
+* <span data-ttu-id="04995-204">Escreva a resposta.</span><span class="sxs-lookup"><span data-stu-id="04995-204">Write the response.</span></span>
 
-As próximas seções orientarão você por cada uma dessas etapas.
+<span data-ttu-id="04995-205">As próximas seções orientarão você por cada uma dessas etapas.</span><span class="sxs-lookup"><span data-stu-id="04995-205">The next sections walk you through each of these steps.</span></span>
 
-### <a name="parsing-the-query-string"></a>Análise da cadeia de caracteres de consulta.
+### <a name="parsing-the-query-string"></a><span data-ttu-id="04995-206">Análise da cadeia de caracteres de consulta.</span><span class="sxs-lookup"><span data-stu-id="04995-206">Parsing the Query String.</span></span>
 
-Você começará pela análise de cadeia de caracteres de consulta. O serviço aceitará os argumentos 'lat' e 'long' na cadeia de consulta nesta forma:
+<span data-ttu-id="04995-207">Você começará pela análise de cadeia de caracteres de consulta.</span><span class="sxs-lookup"><span data-stu-id="04995-207">You'll begin by parsing the query string.</span></span> <span data-ttu-id="04995-208">O serviço aceitará os argumentos 'lat' e 'long' na cadeia de consulta nesta forma:</span><span class="sxs-lookup"><span data-stu-id="04995-208">The service will accept 'lat' and 'long' arguments on the query string in this form:</span></span>
 
 `http://localhost:5000/?lat=-35.55&long=-12.35`  
 
-Todas as alterações que você precisa fazer estão na expressão lambda definida como o argumento `app.Run` em sua classe de inicialização.
+<span data-ttu-id="04995-209">Todas as alterações que você precisa fazer estão na expressão lambda definida como o argumento `app.Run` em sua classe de inicialização.</span><span class="sxs-lookup"><span data-stu-id="04995-209">All the changes you need to make are in the lambda expression defined as the argument to `app.Run` in your startup class.</span></span>
 
-O argumento na expressão lambda é o `HttpContext` para a solicitação. Uma de suas propriedades é o objeto `Request`. O objeto `Request` tem uma propriedade `Query` que contém um dicionário com todos os valores na cadeia de consulta da solicitação. A primeira adição serve para encontrar os valores de latitude e longitude:
+<span data-ttu-id="04995-210">O argumento na expressão lambda é o `HttpContext` para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="04995-210">The argument on the lambda expression is the `HttpContext` for the request.</span></span> <span data-ttu-id="04995-211">Uma de suas propriedades é o objeto `Request`.</span><span class="sxs-lookup"><span data-stu-id="04995-211">One of its properties is the `Request` object.</span></span> <span data-ttu-id="04995-212">O objeto `Request` tem uma propriedade `Query` que contém um dicionário com todos os valores na cadeia de consulta da solicitação.</span><span class="sxs-lookup"><span data-stu-id="04995-212">The `Request` object has a `Query` property that contains a dictionary of all the values on the query string for the request.</span></span> <span data-ttu-id="04995-213">A primeira adição serve para encontrar os valores de latitude e longitude:</span><span class="sxs-lookup"><span data-stu-id="04995-213">The first addition is to find the latitude and longitude values:</span></span>
 
-[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "ler variáveis da cadeia de consulta")]
+[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
-Os valores de dicionário de Consulta são do tipo `StringValue`. Esse tipo pode conter uma coleção de cadeias de caracteres. Para o serviço meteorológico, cada valor é uma cadeia de caracteres única. É por isso que há a chamada para `FirstOrDefault()` no código acima. 
+<span data-ttu-id="04995-214">Os valores de dicionário de Consulta são do tipo `StringValue`.</span><span class="sxs-lookup"><span data-stu-id="04995-214">The Query dictionary values are `StringValue` type.</span></span> <span data-ttu-id="04995-215">Esse tipo pode conter uma coleção de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="04995-215">That type can contain a collection of strings.</span></span> <span data-ttu-id="04995-216">Para o serviço meteorológico, cada valor é uma cadeia de caracteres única.</span><span class="sxs-lookup"><span data-stu-id="04995-216">For your weather service, each value is a single string.</span></span> <span data-ttu-id="04995-217">É por isso que há a chamada para `FirstOrDefault()` no código acima.</span><span class="sxs-lookup"><span data-stu-id="04995-217">That's why there's the call to `FirstOrDefault()` in the code above.</span></span> 
 
-Em seguida, você precisa converter as cadeias de caracteres em doubles. O método que você usará para converter a cadeia de caracteres em um double é `double.TryParse()`:
+<span data-ttu-id="04995-218">Em seguida, você precisa converter as cadeias de caracteres em doubles.</span><span class="sxs-lookup"><span data-stu-id="04995-218">Next, you need to convert the strings to doubles.</span></span> <span data-ttu-id="04995-219">O método que você usará para converter a cadeia de caracteres em um double é `double.TryParse()`:</span><span class="sxs-lookup"><span data-stu-id="04995-219">The method you'll use to convert the string to a double is `double.TryParse()`:</span></span>
 
 ```csharp
 bool TryParse(string s, out double result);
 ```
 
-Esse método utiliza parâmetros C# para indicar se a cadeia de caracteres de entrada pode ser convertida em um double. Se a cadeia de caracteres for uma representação válida de um double, o método retornará true, e o argumento `result` conterá o valor. Se a cadeia de caracteres não representar um double válida, o método retornará false.
+<span data-ttu-id="04995-220">Esse método utiliza parâmetros C# para indicar se a cadeia de caracteres de entrada pode ser convertida em um double.</span><span class="sxs-lookup"><span data-stu-id="04995-220">This method leverages C# out parameters to indicate if the input string can be converted to a double.</span></span> <span data-ttu-id="04995-221">Se a cadeia de caracteres for uma representação válida de um double, o método retornará true, e o argumento `result` conterá o valor.</span><span class="sxs-lookup"><span data-stu-id="04995-221">If the string does represent a valid representation for a double, the method returns true, and the `result` argument contains the value.</span></span> <span data-ttu-id="04995-222">Se a cadeia de caracteres não representar um double válida, o método retornará false.</span><span class="sxs-lookup"><span data-stu-id="04995-222">If the string does not represent a valid double, the method returns false.</span></span>
 
-Adapte essa API com o uso de um *método de extensão* que retorna um *double anulável*. O *tipo de valor anulável* é um tipo que representa algum tipo de valor e também pode apresentar um valor ausente ou nulo. Um tipo que permite valor nulo é representado por meio do acréscimo do caractere `?` à declaração de tipo. 
+<span data-ttu-id="04995-223">Adapte essa API com o uso de um *método de extensão* que retorna um *double anulável*.</span><span class="sxs-lookup"><span data-stu-id="04995-223">You can adapt that API with the use of an *extension method* that returns a *nullable double*.</span></span> <span data-ttu-id="04995-224">O *tipo de valor anulável* é um tipo que representa algum tipo de valor e também pode apresentar um valor ausente ou nulo.</span><span class="sxs-lookup"><span data-stu-id="04995-224">A *nullable value type* is a type that represents some value type, and can also hold a missing, or null value.</span></span> <span data-ttu-id="04995-225">Um tipo que permite valor nulo é representado por meio do acréscimo do caractere `?` à declaração de tipo.</span><span class="sxs-lookup"><span data-stu-id="04995-225">A nullable type is represented by appending the `?` character to the type declaration.</span></span> 
 
-Métodos de extensão são métodos definidos como estáticos, mas ao adicionar o modificador `this` no primeiro parâmetro é possível chamá-los como se fossem membros dessa classe. Os métodos de extensão só podem ser definidos em classes estáticas. Confira aqui a definição da classe que contém o método de extensão para análise:
+<span data-ttu-id="04995-226">Métodos de extensão são métodos definidos como estáticos, mas ao adicionar o modificador `this` no primeiro parâmetro é possível chamá-los como se fossem membros dessa classe.</span><span class="sxs-lookup"><span data-stu-id="04995-226">Extension methods are methods that are defined as static methods, but by adding the `this` modifier on the first parameter, can be called as though they are members of that class.</span></span> <span data-ttu-id="04995-227">Os métodos de extensão só podem ser definidos em classes estáticas.</span><span class="sxs-lookup"><span data-stu-id="04995-227">Extension methods may only be defined in static classes.</span></span> <span data-ttu-id="04995-228">Confira aqui a definição da classe que contém o método de extensão para análise:</span><span class="sxs-lookup"><span data-stu-id="04995-228">Here's the definition of the class containing the extension method for parse:</span></span>
 
-[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse para um valor anulável")]
+[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
-A expressão `default(double?)` retorna o valor padrão para o tipo `double?`. O valor padrão é o valor nulo (ou ausente).
+<span data-ttu-id="04995-229">A expressão `default(double?)` retorna o valor padrão para o tipo `double?`.</span><span class="sxs-lookup"><span data-stu-id="04995-229">The `default(double?)` expression returns the default value for the `double?` type.</span></span> <span data-ttu-id="04995-230">O valor padrão é o valor nulo (ou ausente).</span><span class="sxs-lookup"><span data-stu-id="04995-230">That default value is the null (or missing) value.</span></span>
 
-Use esse método de extensão para converter os argumentos da cadeia de caracteres de consulta no tipo double:
+<span data-ttu-id="04995-231">Use esse método de extensão para converter os argumentos da cadeia de caracteres de consulta no tipo double:</span><span class="sxs-lookup"><span data-stu-id="04995-231">You can use this extension method to convert the query string arguments into the double type:</span></span>
 
-[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Usar o método de extensão try parse")]
+[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
-Para testar o código de análise com facilidade, atualize a resposta para incluir os valores dos argumentos:
+<span data-ttu-id="04995-232">Para testar o código de análise com facilidade, atualize a resposta para incluir os valores dos argumentos:</span><span class="sxs-lookup"><span data-stu-id="04995-232">To easily test the parsing code, update the response to include the values of the arguments:</span></span>
 
-[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Gravar a resposta de saída")]
+[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Write the output response")]
 
-Neste ponto, você pode executar o aplicativo Web e verificar se o código de análise está funcionando. Adicione valores à solicitação da Web em um navegador e você verá os resultados atualizados.
+<span data-ttu-id="04995-233">Neste ponto, você pode executar o aplicativo Web e verificar se o código de análise está funcionando.</span><span class="sxs-lookup"><span data-stu-id="04995-233">At this point, you can run the web application and see if your parsing code is working.</span></span> <span data-ttu-id="04995-234">Adicione valores à solicitação da Web em um navegador e você verá os resultados atualizados.</span><span class="sxs-lookup"><span data-stu-id="04995-234">Add values to the web request in a browser, and you should see the updated results.</span></span>
 
-### <a name="build-a-random-weather-forecast"></a>Compilar uma previsão do tempo aleatória
+### <a name="build-a-random-weather-forecast"></a><span data-ttu-id="04995-235">Compilar uma previsão do tempo aleatória</span><span class="sxs-lookup"><span data-stu-id="04995-235">Build a random weather forecast</span></span>
 
-A próxima tarefa é compilar uma previsão do tempo aleatória. Vamos começar com um contêiner de dados com os valores que você gostaria para uma previsão do tempo:
+<span data-ttu-id="04995-236">A próxima tarefa é compilar uma previsão do tempo aleatória.</span><span class="sxs-lookup"><span data-stu-id="04995-236">Your next task is to build a random weather forecast.</span></span> <span data-ttu-id="04995-237">Vamos começar com um contêiner de dados com os valores que você gostaria para uma previsão do tempo:</span><span class="sxs-lookup"><span data-stu-id="04995-237">Let's start with a data container that holds the values you'd want for a weather forecast:</span></span>
 
 ```csharp
 public class WeatherReport
@@ -194,53 +193,53 @@ public class WeatherReport
 }
 ```
 
-Em seguida, compile um construtor que define aleatoriamente os valores. Este construtor usa os valores de latitude e longitude para propagar o Gerador de número aleatório. Isso significa que a previsão para o mesmo local é a mesma. Se você alterar os argumentos para a latitude e longitude, obterá uma previsão diferente (porque começou com uma propagação diferente.)
+<span data-ttu-id="04995-238">Em seguida, compile um construtor que define aleatoriamente os valores.</span><span class="sxs-lookup"><span data-stu-id="04995-238">Next, build a constructor that randomly sets those values.</span></span> <span data-ttu-id="04995-239">Este construtor usa os valores de latitude e longitude para propagar o Gerador de número aleatório.</span><span class="sxs-lookup"><span data-stu-id="04995-239">This constructor uses the values for the latitude and longitude to seed the Random number generator.</span></span> <span data-ttu-id="04995-240">Isso significa que a previsão para o mesmo local é a mesma.</span><span class="sxs-lookup"><span data-stu-id="04995-240">That means the forecast for the same location is the same.</span></span> <span data-ttu-id="04995-241">Se você alterar os argumentos para a latitude e longitude, obterá uma previsão diferente (porque começou com uma propagação diferente.)</span><span class="sxs-lookup"><span data-stu-id="04995-241">If you change the arguments for the latitude and longitude, you'll get a different forecast (because you start with a different seed.)</span></span>
 
-[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Construtor do Relatório Meteorológico")]
+[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
-Agora você pode gerar a previsão de cinco dias em seu método de resposta:
+<span data-ttu-id="04995-242">Agora você pode gerar a previsão de cinco dias em seu método de resposta:</span><span class="sxs-lookup"><span data-stu-id="04995-242">You can now generate the 5-day forecast in your response method:</span></span>
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Gerar um relatório meteorológico aleatório")]
+[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
 
-### <a name="build-the-json-response"></a>Compile a resposta JSON.
+### <a name="build-the-json-response"></a><span data-ttu-id="04995-243">Compile a resposta JSON.</span><span class="sxs-lookup"><span data-stu-id="04995-243">Build the JSON response.</span></span>
 
-A tarefa de código final no servidor é converter a matriz WeatherReport em um pacote JSON e enviá-lo de volta ao cliente. Vamos começar criando o pacote JSON. Você adicionará o Serializador de JSON da NewtonSoft à lista de dependências. Faça isso usando a CLI `dotnet`:
+<span data-ttu-id="04995-244">A tarefa de código final no servidor é converter a matriz WeatherReport em um pacote JSON e enviá-lo de volta ao cliente.</span><span class="sxs-lookup"><span data-stu-id="04995-244">The final code task on the server is to convert the WeatherReport array into a JSON packet, and send that back to the client.</span></span> <span data-ttu-id="04995-245">Vamos começar criando o pacote JSON.</span><span class="sxs-lookup"><span data-stu-id="04995-245">Let's start by creating the JSON packet.</span></span> <span data-ttu-id="04995-246">Você adicionará o Serializador de JSON da NewtonSoft à lista de dependências.</span><span class="sxs-lookup"><span data-stu-id="04995-246">You'll add the NewtonSoft JSON Serializer to the list of dependencies.</span></span> <span data-ttu-id="04995-247">Faça isso usando a CLI `dotnet`:</span><span class="sxs-lookup"><span data-stu-id="04995-247">You can do that using the `dotnet` CLI:</span></span>
 
 ```
 dotnet add package Newtonsoft.Json
 ```
 
-Em seguida, use a classe `JsonConvert` para gravar o objeto em uma cadeia de caracteres:
+<span data-ttu-id="04995-248">Em seguida, use a classe `JsonConvert` para gravar o objeto em uma cadeia de caracteres:</span><span class="sxs-lookup"><span data-stu-id="04995-248">Then, you can use the `JsonConvert` class to write the object to a string:</span></span>
 
-[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Converter objetos em JSON")]
+[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
-O código acima converte o objeto de previsão (uma lista de `WeatherForecast` objetos) em um pacote JSON. Após a construção do pacote de resposta, defina o tipo de conteúdo como `application/json` e grave a cadeia de caracteres.
+<span data-ttu-id="04995-249">O código acima converte o objeto de previsão (uma lista de `WeatherForecast` objetos) em um pacote JSON.</span><span class="sxs-lookup"><span data-stu-id="04995-249">The code above converts the forecast object (a list of `WeatherForecast` objects) into a JSON packet.</span></span> <span data-ttu-id="04995-250">Após a construção do pacote de resposta, defina o tipo de conteúdo como `application/json` e grave a cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="04995-250">After you've constructed the response packet, you set the content type to `application/json`, and write the string.</span></span>
 
-Agora, o aplicativo é executado e retorna previsões aleatórias.
+<span data-ttu-id="04995-251">Agora, o aplicativo é executado e retorna previsões aleatórias.</span><span class="sxs-lookup"><span data-stu-id="04995-251">The application now runs and returns random forecasts.</span></span>
 
-## <a name="build-a-docker-image"></a>Criar uma imagem do Docker
+## <a name="build-a-docker-image"></a><span data-ttu-id="04995-252">Criar uma imagem do Docker</span><span class="sxs-lookup"><span data-stu-id="04995-252">Build a Docker image</span></span>
 
-Nossa tarefa final é executar o aplicativo no Docker. Vamos criar um contêiner do Docker que executa uma imagem do Docker que representa nosso aplicativo.
+<span data-ttu-id="04995-253">Nossa tarefa final é executar o aplicativo no Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-253">Our final task is to run the application in Docker.</span></span> <span data-ttu-id="04995-254">Vamos criar um contêiner do Docker que executa uma imagem do Docker que representa nosso aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-254">We'll create a Docker container that runs a Docker image that represents our application.</span></span>
 
-Uma ***imagem do Docker*** é um arquivo que define o ambiente para execução do aplicativo.
+<span data-ttu-id="04995-255">Uma ***imagem do Docker*** é um arquivo que define o ambiente para execução do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-255">A ***Docker Image*** is a file that defines the environment for running the application.</span></span>
 
-Um ***Contêiner do Docker*** representa uma instância em execução de uma imagem do Docker.
+<span data-ttu-id="04995-256">Um ***Contêiner do Docker*** representa uma instância em execução de uma imagem do Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-256">A ***Docker Container*** represents a running instance of a Docker image.</span></span>
 
-Por analogia, você pode considerar a *imagem do Docker* como uma *classe* e o *Contêiner do Docker* como um objeto ou uma instância dessa classe.  
+<span data-ttu-id="04995-257">Por analogia, você pode considerar a *imagem do Docker* como uma *classe* e o *Contêiner do Docker* como um objeto ou uma instância dessa classe.</span><span class="sxs-lookup"><span data-stu-id="04995-257">By analogy, you can think of the *Docker Image* as a *class*, and the *Docker Container* as an object, or an instance of that class.</span></span>  
 
-O Dockerfile criado pelo modelo asp.net servirá para os nossos objetivos. Vamos analisar o conteúdo.
+<span data-ttu-id="04995-258">O Dockerfile criado pelo modelo asp.net servirá para os nossos objetivos.</span><span class="sxs-lookup"><span data-stu-id="04995-258">The Dockerfile created by the asp.net template will serve for our purposes.</span></span> <span data-ttu-id="04995-259">Vamos analisar o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="04995-259">Let's go over its contents.</span></span>
 
-A primeira linha especifica a imagem de origem:
+<span data-ttu-id="04995-260">A primeira linha especifica a imagem de origem:</span><span class="sxs-lookup"><span data-stu-id="04995-260">The first line specifies the source image:</span></span>
 
 ```
 FROM microsoft/dotnet:1.1-sdk-msbuild
 ```
 
-O Docker permite que você configure uma imagem de máquina com base em um modelo de origem. Isso significa que não é necessário fornecer todos os parâmetros da máquina ao iniciar, você só precisa fornecer as alterações. As alterações feitas aqui servem para incluir nosso aplicativo.
+<span data-ttu-id="04995-261">O Docker permite que você configure uma imagem de máquina com base em um modelo de origem.</span><span class="sxs-lookup"><span data-stu-id="04995-261">Docker allows you to configure a machine image based on a source template.</span></span> <span data-ttu-id="04995-262">Isso significa que não é necessário fornecer todos os parâmetros da máquina ao iniciar, você só precisa fornecer as alterações.</span><span class="sxs-lookup"><span data-stu-id="04995-262">That means you don't have to supply all the machine parameters when you start, you only need to supply any changes.</span></span> <span data-ttu-id="04995-263">As alterações feitas aqui servem para incluir nosso aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-263">The changes here will be to include our application.</span></span>
 
-Neste primeiro exemplo, usaremos a versão `1.1-sdk-msbuild` da imagem do dotnet. Essa é a maneira mais fácil de criar um ambiente funcional do Docker. Essa imagem inclui o tempo de execução do dotnet core e o SDK do dotnet. Isso facilita o início e a compilação, mas cria uma imagem maior.
+<span data-ttu-id="04995-264">Neste primeiro exemplo, usaremos a versão `1.1-sdk-msbuild` da imagem do dotnet.</span><span class="sxs-lookup"><span data-stu-id="04995-264">In this first sample, we'll use the `1.1-sdk-msbuild` version of the dotnet image.</span></span> <span data-ttu-id="04995-265">Essa é a maneira mais fácil de criar um ambiente funcional do Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-265">This is the easiest way to create a working Docker environment.</span></span> <span data-ttu-id="04995-266">Essa imagem inclui o tempo de execução do dotnet core e o SDK do dotnet.</span><span class="sxs-lookup"><span data-stu-id="04995-266">This image include the dotnet core runtime, and the dotnet SDK.</span></span> <span data-ttu-id="04995-267">Isso facilita o início e a compilação, mas cria uma imagem maior.</span><span class="sxs-lookup"><span data-stu-id="04995-267">That makes it easier to get started and build, but does create a larger image.</span></span>
 
-As próximas cinco linhas configuram e compilam seu aplicativo:
+<span data-ttu-id="04995-268">As próximas cinco linhas configuram e compilam seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="04995-268">The next five lines setup and build your application:</span></span>
 
 ```
 WORKDIR /app
@@ -248,7 +247,7 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 
 COPY WeatherMicroservice.csproj .
-RUN dotnet restore
+RUN dotnet restore 
 
 # copy and build everything else
 
@@ -258,19 +257,21 @@ COPY . .
 RUN dotnet publish -c Release -o out
 ```
 
-Isso copiará o arquivo de projeto do diretório atual para a VM do docker e restaurará todos os pacotes. Usar a CLI do dotnet significa que a imagem do Docker deve incluir o SDK do .NET Core. Depois disso, o restante de seu aplicativo será copiado e o comando publish do dotnet compilará e empacotará seu aplicativo.
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-A linha final do arquivo executa o aplicativo:
+<span data-ttu-id="04995-269">Isso copiará o arquivo de projeto do diretório atual para a VM do docker e restaurará todos os pacotes.</span><span class="sxs-lookup"><span data-stu-id="04995-269">This will copy the project file from the  current directory to the docker VM, and restore all the packages.</span></span> <span data-ttu-id="04995-270">Usar a CLI do dotnet significa que a imagem do Docker deve incluir o SDK do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="04995-270">Using the dotnet CLI means that the Docker image must include the .NET Core SDK.</span></span> <span data-ttu-id="04995-271">Depois disso, o restante de seu aplicativo será copiado e o comando publish do dotnet compilará e empacotará seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="04995-271">After that, the rest of your application gets copied, and the dotnet publish command builds and packages your application.</span></span>
+
+<span data-ttu-id="04995-272">A linha final do arquivo executa o aplicativo:</span><span class="sxs-lookup"><span data-stu-id="04995-272">The final line of the file runs the application:</span></span>
 
 ```
 ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
-Essa porta configurada é referenciada no argumento `--server.urls` para `dotnet` na última linha do Dockerfile. O comando `ENTRYPOINT` informa ao Docker qual comando, e opções de linha de comando, inicia o serviço. 
+<span data-ttu-id="04995-273">Essa porta configurada é referenciada no argumento `--server.urls` para `dotnet` na última linha do Dockerfile.</span><span class="sxs-lookup"><span data-stu-id="04995-273">This configured port is referenced in the `--server.urls` argument to `dotnet` on the last  line of the Dockerfile.</span></span> <span data-ttu-id="04995-274">O comando `ENTRYPOINT` informa ao Docker qual comando, e opções de linha de comando, inicia o serviço.</span><span class="sxs-lookup"><span data-stu-id="04995-274">The `ENTRYPOINT` command informs Docker  what command and command line options start the service.</span></span> 
 
-## <a name="building-and-running-the-image-in-a-container"></a>Crie e execute a imagem em um contêiner.
+## <a name="building-and-running-the-image-in-a-container"></a><span data-ttu-id="04995-275">Crie e execute a imagem em um contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-275">Building and running the image in a container.</span></span>
 
-Vamos compilar uma imagem e executar o serviço dentro de um contêiner do Docker. Você não quer que todos os arquivos de seu diretório local sejam copiados na imagem. Em vez disso, compile o aplicativo no contêiner. Você criará um arquivo `.dockerignore` para especificar os diretórios que não são copiados na imagem. Você não que copiar nenhum ativo de compilação. Especifique os diretórios de compilação e publicação no arquivo `.dockerignore`:
+<span data-ttu-id="04995-276">Vamos compilar uma imagem e executar o serviço dentro de um contêiner do Docker.</span><span class="sxs-lookup"><span data-stu-id="04995-276">Let's build an image and run the service inside a Docker container.</span></span> <span data-ttu-id="04995-277">Você não quer que todos os arquivos de seu diretório local sejam copiados na imagem.</span><span class="sxs-lookup"><span data-stu-id="04995-277">You don't want all the files from your local directory copied into the image.</span></span> <span data-ttu-id="04995-278">Em vez disso, compile o aplicativo no contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-278">Instead, you'll build the application in the container.</span></span> <span data-ttu-id="04995-279">Você criará um arquivo `.dockerignore` para especificar os diretórios que não são copiados na imagem.</span><span class="sxs-lookup"><span data-stu-id="04995-279">You'll create a `.dockerignore` file to specify the directories that are not copied into the image.</span></span> <span data-ttu-id="04995-280">Você não que copiar nenhum ativo de compilação.</span><span class="sxs-lookup"><span data-stu-id="04995-280">You don't want any of the build assets copied.</span></span> <span data-ttu-id="04995-281">Especifique os diretórios de compilação e publicação no arquivo `.dockerignore`:</span><span class="sxs-lookup"><span data-stu-id="04995-281">Specify the build and publish directories in the `.dockerignore` file:</span></span>
 
 ```
 bin/*
@@ -278,76 +279,75 @@ obj/*
 out/*
 ```
 
-Compile a imagem usando o comando de compilação do docker. Execute o seguinte comando no diretório que contém seu código.
+<span data-ttu-id="04995-282">Compile a imagem usando o comando de compilação do docker.</span><span class="sxs-lookup"><span data-stu-id="04995-282">You build the image using the docker build command.</span></span> <span data-ttu-id="04995-283">Execute o seguinte comando no diretório que contém seu código.</span><span class="sxs-lookup"><span data-stu-id="04995-283">Run the following command from the directory containing your code.</span></span>
 
 ```console
 docker build -t weather-microservice .
 ```
 
-Esse comando compila a imagem do contêiner com base em todas as informações de seu Dockerfile. O argumento `-t` fornece uma marca, ou nome, para essa imagem de contêiner. Na linha de comando acima, a marca usada para o contêiner do Docker é `weather-microservice`. Quando esse comando for concluído, você terá um contêiner pronto para executar seu novo serviço. 
+<span data-ttu-id="04995-284">Esse comando compila a imagem do contêiner com base em todas as informações de seu Dockerfile.</span><span class="sxs-lookup"><span data-stu-id="04995-284">This command builds the container image based on all the information in your Dockerfile.</span></span> <span data-ttu-id="04995-285">O argumento `-t` fornece uma marca, ou nome, para essa imagem de contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-285">The `-t` argument provides a tag, or name, for this container image.</span></span> <span data-ttu-id="04995-286">Na linha de comando acima, a marca usada para o contêiner do Docker é `weather-microservice`.</span><span class="sxs-lookup"><span data-stu-id="04995-286">In the command line above, the tag used for the Docker container is `weather-microservice`.</span></span> <span data-ttu-id="04995-287">Quando esse comando for concluído, você terá um contêiner pronto para executar seu novo serviço.</span><span class="sxs-lookup"><span data-stu-id="04995-287">When this command completes, you have a container ready to run your new service.</span></span> 
 
-Execute o seguinte comando para iniciar o contêiner e também o serviço:
+<span data-ttu-id="04995-288">Execute o seguinte comando para iniciar o contêiner e também o serviço:</span><span class="sxs-lookup"><span data-stu-id="04995-288">Run the following command to start the container and launch your service:</span></span>
 
 ```console
 docker run -d -p 80:5000 --name hello-docker weather-microservice
 ```
 
-A opção `-d` representa a execução do contêiner desanexado do terminal atual. Isso significa que você não verá a saída do comando em seu terminal. A opção `-p` indica o mapeamento de porta entre o serviço e o host. Aqui ela informa que qualquer solicitação de entrada na porta 80 deve ser encaminhada para a porta 5000 no contêiner. 5000 corresponde à porta na qual o serviço está escutando a partir dos argumentos de linha de comando especificados no Dockerfile acima. O argumento `--name` nomeia o contêiner em execução. É um nome conveniente que você pode usar para trabalhar com esse contêiner. 
+<span data-ttu-id="04995-289">A opção `-d` representa a execução do contêiner desanexado do terminal atual.</span><span class="sxs-lookup"><span data-stu-id="04995-289">The `-d` option means to run the container detached from the current terminal.</span></span> <span data-ttu-id="04995-290">Isso significa que você não verá a saída do comando em seu terminal.</span><span class="sxs-lookup"><span data-stu-id="04995-290">That means you won't see the command output in your terminal.</span></span> <span data-ttu-id="04995-291">A opção `-p` indica o mapeamento de porta entre o serviço e o host.</span><span class="sxs-lookup"><span data-stu-id="04995-291">The `-p` option indicates the port mapping between the service and the host.</span></span> <span data-ttu-id="04995-292">Aqui ela informa que qualquer solicitação de entrada na porta 80 deve ser encaminhada para a porta 5000 no contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-292">Here it says that any incoming request on port 80 should be forwarded to port 5000 on the container.</span></span> <span data-ttu-id="04995-293">5000 corresponde à porta na qual o serviço está escutando a partir dos argumentos de linha de comando especificados no Dockerfile acima.</span><span class="sxs-lookup"><span data-stu-id="04995-293">Using 5000 matches the port your service is listening on from the command line arguments specified in the Dockerfile above.</span></span> <span data-ttu-id="04995-294">O argumento `--name` nomeia o contêiner em execução.</span><span class="sxs-lookup"><span data-stu-id="04995-294">The `--name` argument names your running container.</span></span> <span data-ttu-id="04995-295">É um nome conveniente que você pode usar para trabalhar com esse contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-295">It's a convenient name you can use to work with that container.</span></span> 
 
-É possível ver se a imagem está sendo executada verificando o comando:
+<span data-ttu-id="04995-296">É possível ver se a imagem está sendo executada verificando o comando:</span><span class="sxs-lookup"><span data-stu-id="04995-296">You can see if the image is running by checking the command:</span></span>
 
 ```console
 docker ps
 ```
 
-Se o contêiner estiver em execução, você verá uma linha que o lista nos processos em execução. (Pode ser o único).
+<span data-ttu-id="04995-297">Se o contêiner estiver em execução, você verá uma linha que o lista nos processos em execução.</span><span class="sxs-lookup"><span data-stu-id="04995-297">If your container is running, you'll see a line that lists it in the running processes.</span></span> <span data-ttu-id="04995-298">(Pode ser o único).</span><span class="sxs-lookup"><span data-stu-id="04995-298">(It may be the only one).</span></span>
 
-Teste seu serviço abrindo um navegador, navegando até localhost e especificando uma latitude e longitude:
+<span data-ttu-id="04995-299">Teste seu serviço abrindo um navegador, navegando até localhost e especificando uma latitude e longitude:</span><span class="sxs-lookup"><span data-stu-id="04995-299">You can test your service by opening a browser and navigating to localhost, and specifying a latitude and longitude:</span></span>
 
 ```
 http://localhost/?lat=35.5&long=40.75
 ```
 
-## <a name="attaching-to-a-running-container"></a>Anexar um contêiner em execução
+## <a name="attaching-to-a-running-container"></a><span data-ttu-id="04995-300">Anexar um contêiner em execução</span><span class="sxs-lookup"><span data-stu-id="04995-300">Attaching to a running container</span></span>
 
-Quando você executa o serviço em uma janela de comando, pode ver informações de diagnóstico impressas para cada solicitação. Você não vê essas informações quando o contêiner está sendo executado no modo desconectado. O comando attach do Docker permite que você anexe a um contêiner em execução para que você possa ver as informações de log.  Execute este comando a partir de uma janela de comando:
+<span data-ttu-id="04995-301">Quando você executa o serviço em uma janela de comando, pode ver informações de diagnóstico impressas para cada solicitação.</span><span class="sxs-lookup"><span data-stu-id="04995-301">When you ran your sevice in a command window, you could see diagnostic information printed for each request.</span></span> <span data-ttu-id="04995-302">Você não vê essas informações quando o contêiner está sendo executado no modo desconectado.</span><span class="sxs-lookup"><span data-stu-id="04995-302">You don't see that information when your container is running in detached mode.</span></span> <span data-ttu-id="04995-303">O comando attach do Docker permite que você anexe a um contêiner em execução para que você possa ver as informações de log.</span><span class="sxs-lookup"><span data-stu-id="04995-303">The Docker attach command enables you to attach to a running container so that you can see the log information.</span></span>  <span data-ttu-id="04995-304">Execute este comando a partir de uma janela de comando:</span><span class="sxs-lookup"><span data-stu-id="04995-304">Run this command from a command window:</span></span>
 
 ```console
 docker attach --sig-proxy=false hello-docker
 ```
 
-O argumento `--sig-proxy=false` significa que os comandos `Ctrl-C` não são enviados ao processo do contêiner, mas, em vez disso, interrompem o comando `docker attach`. O argumento final é o nome fornecido ao contêiner no comando `docker run`. 
+<span data-ttu-id="04995-305">O argumento `--sig-proxy=false` significa que os comandos `Ctrl-C` não são enviados ao processo do contêiner, mas, em vez disso, interrompem o comando `docker attach`.</span><span class="sxs-lookup"><span data-stu-id="04995-305">The `--sig-proxy=false` argument means that `Ctrl-C` commands do not get sent to the container process, but rather stop the `docker attach` command.</span></span> <span data-ttu-id="04995-306">O argumento final é o nome fornecido ao contêiner no comando `docker run`.</span><span class="sxs-lookup"><span data-stu-id="04995-306">The final argument is the name given to the container in the `docker run` command.</span></span> 
 
 > [!NOTE]
-> Use também a ID de contêiner atribuída pelo docker para se referir a qualquer contêiner. Se você não tiver especificado um nome para seu contêiner no `docker run`, use a id do contêiner.
+> <span data-ttu-id="04995-307">Use também a ID de contêiner atribuída pelo docker para se referir a qualquer contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-307">You can also use the docker assigned container ID to refer to any container.</span></span> <span data-ttu-id="04995-308">Se você não tiver especificado um nome para seu contêiner no `docker run`, use a id do contêiner.</span><span class="sxs-lookup"><span data-stu-id="04995-308">If you didn't specify a name for your container in `docker run` you must use the container id.</span></span>
 
-Abra um navegador e navegue até seu serviço. Você verá as mensagens de diagnóstico nas janelas de comando do contêiner anexado em execução.
+<span data-ttu-id="04995-309">Abra um navegador e navegue até seu serviço.</span><span class="sxs-lookup"><span data-stu-id="04995-309">Open a browser and navigate to your service.</span></span> <span data-ttu-id="04995-310">Você verá as mensagens de diagnóstico nas janelas de comando do contêiner anexado em execução.</span><span class="sxs-lookup"><span data-stu-id="04995-310">You'll see the diagnostic messages in the command windows from the attached running container.</span></span>
 
-Pressione `Ctrl-C` para interromper o processo de conexão.
+<span data-ttu-id="04995-311">Pressione `Ctrl-C` para interromper o processo de conexão.</span><span class="sxs-lookup"><span data-stu-id="04995-311">Press `Ctrl-C` to stop the attach process.</span></span>
 
-Quando você terminar de trabalhar com seu contêiner, interrompa-o:
+<span data-ttu-id="04995-312">Quando você terminar de trabalhar com seu contêiner, interrompa-o:</span><span class="sxs-lookup"><span data-stu-id="04995-312">When you are done working with your container, you can stop it:</span></span>
 
 ```console
 docker stop hello-docker
 ```
 
-O contêiner e a imagem ainda estão disponíveis para a reinicialização.  Se você quiser remover o contêiner do seu computador, use este comando:
+<span data-ttu-id="04995-313">O contêiner e a imagem ainda estão disponíveis para a reinicialização.</span><span class="sxs-lookup"><span data-stu-id="04995-313">The container and image is still available for you to restart.</span></span>  <span data-ttu-id="04995-314">Se você quiser remover o contêiner do seu computador, use este comando:</span><span class="sxs-lookup"><span data-stu-id="04995-314">If you want to remove the container from your machine, you use this command:</span></span>
 
 ```console
 docker rm hello-docker
 ```
 
-Se você quiser remover imagens não usadas do seu computador, use este comando:
+<span data-ttu-id="04995-315">Se você quiser remover imagens não usadas do seu computador, use este comando:</span><span class="sxs-lookup"><span data-stu-id="04995-315">If you want to remove unused images from your machine, you use this command:</span></span>
 
 ```console
 docker rmi weather-microservice
 ```
 
-## <a name="conclusion"></a>Conclusão 
+## <a name="conclusion"></a><span data-ttu-id="04995-316">Conclusão</span><span class="sxs-lookup"><span data-stu-id="04995-316">Conclusion</span></span> 
 
-Neste tutorial, você criou um microsserviço do asp.net core e adicionou alguns recursos simples.
+<span data-ttu-id="04995-317">Neste tutorial, você criou um microsserviço do asp.net core e adicionou alguns recursos simples.</span><span class="sxs-lookup"><span data-stu-id="04995-317">In this tutorial, you built an asp.net core microservice, and added a few simple features.</span></span>
 
-Você criou uma imagem de contêiner do docker para o serviço e executou o contêiner em seu computador. Você anexou uma janela de terminal ao serviço e viu as mensagens de diagnóstico de seu serviço.
+<span data-ttu-id="04995-318">Você criou uma imagem de contêiner do docker para o serviço e executou o contêiner em seu computador.</span><span class="sxs-lookup"><span data-stu-id="04995-318">You built a docker container image for that service, and ran that container on your machine.</span></span> <span data-ttu-id="04995-319">Você anexou uma janela de terminal ao serviço e viu as mensagens de diagnóstico de seu serviço.</span><span class="sxs-lookup"><span data-stu-id="04995-319">You attached a terminal window to the service, and saw the diagnostic messages from your service.</span></span>
 
-Durante o tutorial, você viu vários recursos da linguagem C# em ação.
-
+<span data-ttu-id="04995-320">Durante o tutorial, você viu vários recursos da linguagem C# em ação.</span><span class="sxs-lookup"><span data-stu-id="04995-320">Along the way, you saw several features of the C# language in action.</span></span>

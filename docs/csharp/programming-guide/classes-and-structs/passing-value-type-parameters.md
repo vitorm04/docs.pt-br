@@ -1,68 +1,49 @@
 ---
 title: "Passando parâmetros de tipo de valor (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 08a336e9aa34ac3ce5bb8848df533caa563972f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a3377630fc4294831f6b9d66a69377aa42d973f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="passing-value-type-parameters-c-programming-guide"></a>Passando parâmetros de tipo de valor (Guia de Programação em C#)
-Uma variável de [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) contém seus dados diretamente, o que não acontece com uma variável de [tipo de referência](../../../csharp/language-reference/keywords/reference-types.md), que contém uma referência a seus dados. Passar uma variável de tipo de valor para um método por valor significa passar uma cópia da variável para o método. Quaisquer alterações no parâmetro que ocorrem dentro do método não afetam os dados originais armazenados na variável de argumento. Se desejar que o método chamado altere o valor do parâmetro, é necessário passá-lo por referência, usando a palavra-chave [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md). Para simplificar, os exemplos a seguir usam `ref`.  
+# <a name="passing-value-type-parameters-c-programming-guide"></a><span data-ttu-id="89bd7-102">Passando parâmetros de tipo de valor (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="89bd7-102">Passing Value-Type Parameters (C# Programming Guide)</span></span>
+<span data-ttu-id="89bd7-103">Uma variável de [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) contém seus dados diretamente, o que não acontece com uma variável de [tipo de referência](../../../csharp/language-reference/keywords/reference-types.md), que contém uma referência a seus dados.</span><span class="sxs-lookup"><span data-stu-id="89bd7-103">A [value-type](../../../csharp/language-reference/keywords/value-types.md) variable contains its data directly as opposed to a [reference-type](../../../csharp/language-reference/keywords/reference-types.md) variable, which contains a reference to its data.</span></span> <span data-ttu-id="89bd7-104">Passar uma variável de tipo de valor para um método por valor significa passar uma cópia da variável para o método.</span><span class="sxs-lookup"><span data-stu-id="89bd7-104">Passing a value-type variable to a method by value means passing a copy of the variable to the method.</span></span> <span data-ttu-id="89bd7-105">Quaisquer alterações no parâmetro que ocorrem dentro do método não afetam os dados originais armazenados na variável de argumento.</span><span class="sxs-lookup"><span data-stu-id="89bd7-105">Any changes to the parameter that take place inside the method have no affect on the original data stored in the argument variable.</span></span> <span data-ttu-id="89bd7-106">Se desejar que o método chamado altere o valor do parâmetro, é necessário passá-lo por referência, usando a palavra-chave [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md).</span><span class="sxs-lookup"><span data-stu-id="89bd7-106">If you want the called method to change the value of the parameter, you must pass it by reference, using the [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) keyword.</span></span> <span data-ttu-id="89bd7-107">Para simplificar, os exemplos a seguir usam `ref`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-107">For simplicity, the following examples use `ref`.</span></span>  
   
-## <a name="passing-value-types-by-value"></a>Passando tipos de valor por valor  
- O exemplo a seguir demonstra a passagem de parâmetros de tipo de valor por valor. A variável `n` é passada por valor para o método `SquareIt`. Quaisquer alterações que ocorrem dentro do método não afetam o valor original da variável.  
+## <a name="passing-value-types-by-value"></a><span data-ttu-id="89bd7-108">Passando tipos de valor por valor</span><span class="sxs-lookup"><span data-stu-id="89bd7-108">Passing Value Types by Value</span></span>  
+ <span data-ttu-id="89bd7-109">O exemplo a seguir demonstra a passagem de parâmetros de tipo de valor por valor.</span><span class="sxs-lookup"><span data-stu-id="89bd7-109">The following example demonstrates passing value-type parameters by value.</span></span> <span data-ttu-id="89bd7-110">A variável `n` é passada por valor para o método `SquareIt`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-110">The variable `n` is passed by value to the method `SquareIt`.</span></span> <span data-ttu-id="89bd7-111">Quaisquer alterações que ocorrem dentro do método não afetam o valor original da variável.</span><span class="sxs-lookup"><span data-stu-id="89bd7-111">Any changes that take place inside the method have no affect on the original value of the variable.</span></span>  
   
- [!code-cs[csProgGuideParameters#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_1.cs)]  
+ [!code-csharp[csProgGuideParameters#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_1.cs)]  
   
- A variável `n` é um tipo de valor. Ela contém seus dados, o valor `5`. Quando `SquareIt` é invocado, o conteúdo de `n` é copiado para o parâmetro `x`, que é elevado ao quadrado dentro do método. No entanto, em `Main`, o valor de `n` é o mesmo depois de chamar o método `SquareIt` como era antes. A alteração que ocorre dentro do método afeta apenas a variável local `x`.  
+ <span data-ttu-id="89bd7-112">A variável `n` é um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="89bd7-112">The variable `n` is a value type.</span></span> <span data-ttu-id="89bd7-113">Ela contém seus dados, o valor `5`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-113">It contains its data, the value `5`.</span></span> <span data-ttu-id="89bd7-114">Quando `SquareIt` é invocado, o conteúdo de `n` é copiado para o parâmetro `x`, que é elevado ao quadrado dentro do método.</span><span class="sxs-lookup"><span data-stu-id="89bd7-114">When `SquareIt` is invoked, the contents of `n` are copied into the parameter `x`, which is squared inside the method.</span></span> <span data-ttu-id="89bd7-115">No entanto, em `Main`, o valor de `n` é o mesmo depois de chamar o método `SquareIt` como era antes.</span><span class="sxs-lookup"><span data-stu-id="89bd7-115">In `Main`, however, the value of `n` is the same after calling the `SquareIt` method as it was before.</span></span> <span data-ttu-id="89bd7-116">A alteração que ocorre dentro do método afeta apenas a variável local `x`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-116">The change that takes place inside the method only affects the local variable `x`.</span></span>  
   
-## <a name="passing-value-types-by-reference"></a>Passando tipos de valor por referência  
- O exemplo a seguir é o mesmo que o exemplo anterior, exceto que o argumento é passado como um parâmetro `ref`. O valor do argumento subjacente, `n`, é alterado quando `x` é alterado no método.  
+## <a name="passing-value-types-by-reference"></a><span data-ttu-id="89bd7-117">Passando tipos de valor por referência</span><span class="sxs-lookup"><span data-stu-id="89bd7-117">Passing Value Types by Reference</span></span>  
+ <span data-ttu-id="89bd7-118">O exemplo a seguir é o mesmo que o exemplo anterior, exceto que o argumento é passado como um parâmetro `ref`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-118">The following example is the same as the previous example, except that the argument is passed as a `ref` parameter.</span></span> <span data-ttu-id="89bd7-119">O valor do argumento subjacente, `n`, é alterado quando `x` é alterado no método.</span><span class="sxs-lookup"><span data-stu-id="89bd7-119">The value of the underlying argument, `n`, is changed when `x` is changed in the method.</span></span>  
   
- [!code-cs[csProgGuideParameters#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_2.cs)]  
+ [!code-csharp[csProgGuideParameters#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_2.cs)]  
   
- Neste exemplo, não é o valor de `n` que é passado; em vez disso, é passada uma referência a `n`. O parâmetro `x` não é um [int](../../../csharp/language-reference/keywords/int.md); é uma referência a um `int`, nesse caso, uma referência a `n`. Portanto, quando `x` é elevado ao quadrado dentro do método, o que é realmente é elevado ao quadrado é aquilo a que `x` se refere, `n`.  
+ <span data-ttu-id="89bd7-120">Neste exemplo, não é o valor de `n` que é passado; em vez disso, é passada uma referência a `n`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-120">In this example, it is not the value of `n` that is passed; rather, a reference to `n` is passed.</span></span> <span data-ttu-id="89bd7-121">O parâmetro `x` não é um [int](../../../csharp/language-reference/keywords/int.md); é uma referência a um `int`, nesse caso, uma referência a `n`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-121">The parameter `x` is not an [int](../../../csharp/language-reference/keywords/int.md); it is a reference to an `int`, in this case, a reference to `n`.</span></span> <span data-ttu-id="89bd7-122">Portanto, quando `x` é elevado ao quadrado dentro do método, o que é realmente é elevado ao quadrado é aquilo a que `x` se refere, `n`.</span><span class="sxs-lookup"><span data-stu-id="89bd7-122">Therefore, when `x` is squared inside the method, what actually is squared is what `x` refers to, `n`.</span></span>  
   
-## <a name="swapping-value-types"></a>Trocar valores de tipo  
- Um exemplo comum de alteração dos valores de argumentos é um método de troca, em que você passa duas variáveis para o método e o método troca seu conteúdo. É necessário passar os argumentos para o método de troca por referência. Caso contrário, você troca cópias locais dos parâmetros dentro do método e nenhuma alteração ocorre no método de chamada. O exemplo a seguir troca valores inteiros.  
+## <a name="swapping-value-types"></a><span data-ttu-id="89bd7-123">Trocar valores de tipo</span><span class="sxs-lookup"><span data-stu-id="89bd7-123">Swapping Value Types</span></span>  
+ <span data-ttu-id="89bd7-124">Um exemplo comum de alteração dos valores de argumentos é um método de troca, em que você passa duas variáveis para o método e o método troca seu conteúdo.</span><span class="sxs-lookup"><span data-stu-id="89bd7-124">A common example of changing the values of arguments is a swap method, where you pass two variables to the method, and the method swaps their contents.</span></span> <span data-ttu-id="89bd7-125">É necessário passar os argumentos para o método de troca por referência.</span><span class="sxs-lookup"><span data-stu-id="89bd7-125">You must pass the arguments to the swap method by reference.</span></span> <span data-ttu-id="89bd7-126">Caso contrário, você troca cópias locais dos parâmetros dentro do método e nenhuma alteração ocorre no método de chamada.</span><span class="sxs-lookup"><span data-stu-id="89bd7-126">Otherwise, you swap local copies of the parameters inside the method, and no change occurs in the calling method.</span></span> <span data-ttu-id="89bd7-127">O exemplo a seguir troca valores inteiros.</span><span class="sxs-lookup"><span data-stu-id="89bd7-127">The following example swaps integer values.</span></span>  
   
- [!code-cs[csProgGuideParameters#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_3.cs)]  
+ [!code-csharp[csProgGuideParameters#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_3.cs)]  
   
- Quando você chama o método `SwapByRef`, use a palavra-chave `ref` na chamada, conforme mostrado no exemplo a seguir.  
+ <span data-ttu-id="89bd7-128">Quando você chama o método `SwapByRef`, use a palavra-chave `ref` na chamada, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="89bd7-128">When you call the `SwapByRef` method, use the `ref` keyword in the call, as shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
+ [!code-csharp[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Passando Parâmetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [Passando parâmetros de tipo de referência](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)
-
+## <a name="see-also"></a><span data-ttu-id="89bd7-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="89bd7-129">See Also</span></span>  
+ [<span data-ttu-id="89bd7-130">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="89bd7-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="89bd7-131">Passando parâmetros</span><span class="sxs-lookup"><span data-stu-id="89bd7-131">Passing Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [<span data-ttu-id="89bd7-132">Passando parâmetros de tipo de referência</span><span class="sxs-lookup"><span data-stu-id="89bd7-132">Passing Reference-Type Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)

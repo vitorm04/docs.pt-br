@@ -5,73 +5,66 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - platform invoke, marshaling data
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="marshaling-data-with-platform-invoke"></a>Marshaling de dados com invocação de plataforma
-Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativo do .NET Framework requer um protótipo de função em código gerenciado que representa a função não gerenciada. Para criar um protótipo que habilita a invocação de plataforma a realizar marshaling de dados corretamente, você deve fazer o seguinte:  
+# <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="1478d-102">Marshaling de dados com invocação de plataforma</span><span class="sxs-lookup"><span data-stu-id="1478d-102">Marshaling Data with Platform Invoke</span></span>
+<span data-ttu-id="1478d-103">Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativo do .NET Framework requer um protótipo de função em código gerenciado que representa a função não gerenciada.</span><span class="sxs-lookup"><span data-stu-id="1478d-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="1478d-104">Para criar um protótipo que habilita a invocação de plataforma a realizar marshaling de dados corretamente, você deve fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="1478d-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  
   
--   Aplique o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> à função estática ou método em código gerenciado.  
+-   <span data-ttu-id="1478d-105">Aplique o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> à função estática ou método em código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="1478d-105">Apply the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to the static function or method in managed code.</span></span>  
   
--   Substitua os tipos de dados gerenciados por tipos de dados não gerenciados.  
+-   <span data-ttu-id="1478d-106">Substitua os tipos de dados gerenciados por tipos de dados não gerenciados.</span><span class="sxs-lookup"><span data-stu-id="1478d-106">Substitute managed data types for unmanaged data types.</span></span>  
   
- Você pode usar a documentação fornecida com uma função não gerenciada para construir um protótipo gerenciado equivalente, aplicando o atributo com os respectivos campos opcionais e substituindo os tipos de dados gerenciados por tipos não gerenciados. Para obter instruções sobre como aplicar o **DllImportAttribute**, consulte [Consumindo funções de DLL não gerenciadas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).  
+ <span data-ttu-id="1478d-107">Você pode usar a documentação fornecida com uma função não gerenciada para construir um protótipo gerenciado equivalente, aplicando o atributo com os respectivos campos opcionais e substituindo os tipos de dados gerenciados por tipos não gerenciados.</span><span class="sxs-lookup"><span data-stu-id="1478d-107">You can use the documentation supplied with an unmanaged function to construct an equivalent managed prototype by applying the attribute with its optional fields and substituting managed data types for unmanaged types.</span></span> <span data-ttu-id="1478d-108">Para obter instruções sobre como aplicar o **DllImportAttribute**, consulte [Consumindo funções de DLL não gerenciadas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).</span><span class="sxs-lookup"><span data-stu-id="1478d-108">For instructions about how to apply the **DllImportAttribute**, see [Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).</span></span>  
   
- Esta seção fornece amostras que demonstram como criar protótipos de função gerenciada para passar argumentos para e receber valores retornados de funções exportadas por bibliotecas não gerenciadas. As amostras também demonstram quando usar o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> e a classe <xref:System.Runtime.InteropServices.Marshal> para realizar marshaling de dados explicitamente.  
+ <span data-ttu-id="1478d-109">Esta seção fornece amostras que demonstram como criar protótipos de função gerenciada para passar argumentos para e receber valores retornados de funções exportadas por bibliotecas não gerenciadas.</span><span class="sxs-lookup"><span data-stu-id="1478d-109">This section provides samples that demonstrate how to create managed function prototypes for passing arguments to and receiving return values from functions exported by unmanaged libraries.</span></span> <span data-ttu-id="1478d-110">As amostras também demonstram quando usar o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> e a classe <xref:System.Runtime.InteropServices.Marshal> para realizar marshaling de dados explicitamente.</span><span class="sxs-lookup"><span data-stu-id="1478d-110">The samples also demonstrate when to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute and the <xref:System.Runtime.InteropServices.Marshal> class to explicitly marshal data.</span></span>  
   
-## <a name="platform-invoke-data-types"></a>Tipos de dados de invocação de plataforma  
- A tabela a seguir lista os tipos de dados usados na API do Win32 (listados em Wtypes.h) e funções de estilo C. Muitas bibliotecas não gerenciadas contêm funções que passam esses tipos de dados como parâmetros e valores retornados. A terceira coluna lista a classe ou tipo de valor interno correspondente do .NET Framework que você usa em código gerenciado. Em alguns casos, você pode substituir um tipo do mesmo tamanho pelo tipo listado na tabela.  
+## <a name="platform-invoke-data-types"></a><span data-ttu-id="1478d-111">Tipos de dados de invocação de plataforma</span><span class="sxs-lookup"><span data-stu-id="1478d-111">Platform invoke data types</span></span>  
+ <span data-ttu-id="1478d-112">A tabela a seguir lista os tipos de dados usados na API do Win32 (listados em Wtypes.h) e funções de estilo C.</span><span class="sxs-lookup"><span data-stu-id="1478d-112">The following table lists data types used in the Win32 API (listed in Wtypes.h) and C-style functions.</span></span> <span data-ttu-id="1478d-113">Muitas bibliotecas não gerenciadas contêm funções que passam esses tipos de dados como parâmetros e valores retornados.</span><span class="sxs-lookup"><span data-stu-id="1478d-113">Many unmanaged libraries contain functions that pass these data types as parameters and return values.</span></span> <span data-ttu-id="1478d-114">A terceira coluna lista a classe ou tipo de valor interno correspondente do .NET Framework que você usa em código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="1478d-114">The third column lists the corresponding .NET Framework built-in value type or class that you use in managed code.</span></span> <span data-ttu-id="1478d-115">Em alguns casos, você pode substituir um tipo do mesmo tamanho pelo tipo listado na tabela.</span><span class="sxs-lookup"><span data-stu-id="1478d-115">In some cases, you can substitute a type of the same size for the type listed in the table.</span></span>  
   
-|Tipo não gerenciado em Wtypes.h|Tipo de linguagem C não gerenciado|Nome de classe gerenciada|Descrição|  
+|<span data-ttu-id="1478d-116">Tipo não gerenciado em Wtypes.h</span><span class="sxs-lookup"><span data-stu-id="1478d-116">Unmanaged type in Wtypes.h</span></span>|<span data-ttu-id="1478d-117">Tipo de linguagem C não gerenciado</span><span class="sxs-lookup"><span data-stu-id="1478d-117">Unmanaged C language type</span></span>|<span data-ttu-id="1478d-118">Nome de classe gerenciada</span><span class="sxs-lookup"><span data-stu-id="1478d-118">Managed class name</span></span>|<span data-ttu-id="1478d-119">Descrição</span><span class="sxs-lookup"><span data-stu-id="1478d-119">Description</span></span>|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**IDENTIFICADOR**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|32 bits em Sistemas Operacionais Windows 32 bits, 64 bits em Sistemas Operacionais Windows 64 bits.|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8 bits|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16 bits|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16 bits|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32 bits|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32 bits|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32 bits|  
-|**BOOL**|**long**|<xref:System.Byte>|32 bits|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 bits|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 bits|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|Decore com ANSI.|  
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=fullName>|Decore com Unicode.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> ou <xref:System.Text.StringBuilder?displayProperty=fullName>|Decore com ANSI.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> ou <xref:System.Text.StringBuilder?displayProperty=fullName>|Decore com ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=fullName> ou <xref:System.Text.StringBuilder?displayProperty=fullName>|Decore com Unicode.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=fullName> ou <xref:System.Text.StringBuilder?displayProperty=fullName>|Decore com Unicode.|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32 bits|  
-|**DOUBLE**|**Duplo**|<xref:System.Double?displayProperty=fullName>|64 bits|  
+|<span data-ttu-id="1478d-120">**IDENTIFICADOR**</span><span class="sxs-lookup"><span data-stu-id="1478d-120">**HANDLE**</span></span>|<span data-ttu-id="1478d-121">**void\***</span><span class="sxs-lookup"><span data-stu-id="1478d-121">**void\***</span></span>|<xref:System.IntPtr?displayProperty=nameWithType>|<span data-ttu-id="1478d-122">32 bits em Sistemas Operacionais Windows 32 bits, 64 bits em Sistemas Operacionais Windows 64 bits.</span><span class="sxs-lookup"><span data-stu-id="1478d-122">32 bits on 32-bit Windows operating systems, 64 bits on 64-bit Windows operating systems.</span></span>|  
+|<span data-ttu-id="1478d-123">**BYTE**</span><span class="sxs-lookup"><span data-stu-id="1478d-123">**BYTE**</span></span>|<span data-ttu-id="1478d-124">**unsigned char**</span><span class="sxs-lookup"><span data-stu-id="1478d-124">**unsigned char**</span></span>|<xref:System.Byte?displayProperty=nameWithType>|<span data-ttu-id="1478d-125">8 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-125">8 bits</span></span>|  
+|<span data-ttu-id="1478d-126">**SHORT**</span><span class="sxs-lookup"><span data-stu-id="1478d-126">**SHORT**</span></span>|<span data-ttu-id="1478d-127">**short**</span><span class="sxs-lookup"><span data-stu-id="1478d-127">**short**</span></span>|<xref:System.Int16?displayProperty=nameWithType>|<span data-ttu-id="1478d-128">16 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-128">16 bits</span></span>|  
+|<span data-ttu-id="1478d-129">**WORD**</span><span class="sxs-lookup"><span data-stu-id="1478d-129">**WORD**</span></span>|<span data-ttu-id="1478d-130">**unsigned short**</span><span class="sxs-lookup"><span data-stu-id="1478d-130">**unsigned short**</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|<span data-ttu-id="1478d-131">16 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-131">16 bits</span></span>|  
+|<span data-ttu-id="1478d-132">**INT**</span><span class="sxs-lookup"><span data-stu-id="1478d-132">**INT**</span></span>|<span data-ttu-id="1478d-133">**int**</span><span class="sxs-lookup"><span data-stu-id="1478d-133">**int**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="1478d-134">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-134">32 bits</span></span>|  
+|<span data-ttu-id="1478d-135">**UINT**</span><span class="sxs-lookup"><span data-stu-id="1478d-135">**UINT**</span></span>|<span data-ttu-id="1478d-136">**unsigned int**</span><span class="sxs-lookup"><span data-stu-id="1478d-136">**unsigned int**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="1478d-137">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-137">32 bits</span></span>|  
+|<span data-ttu-id="1478d-138">**LONG**</span><span class="sxs-lookup"><span data-stu-id="1478d-138">**LONG**</span></span>|<span data-ttu-id="1478d-139">**long**</span><span class="sxs-lookup"><span data-stu-id="1478d-139">**long**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="1478d-140">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-140">32 bits</span></span>|  
+|<span data-ttu-id="1478d-141">**BOOL**</span><span class="sxs-lookup"><span data-stu-id="1478d-141">**BOOL**</span></span>|<span data-ttu-id="1478d-142">**long**</span><span class="sxs-lookup"><span data-stu-id="1478d-142">**long**</span></span>|<xref:System.Byte>|<span data-ttu-id="1478d-143">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-143">32 bits</span></span>|  
+|<span data-ttu-id="1478d-144">**DWORD**</span><span class="sxs-lookup"><span data-stu-id="1478d-144">**DWORD**</span></span>|<span data-ttu-id="1478d-145">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="1478d-145">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="1478d-146">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-146">32 bits</span></span>|  
+|<span data-ttu-id="1478d-147">**ULONG**</span><span class="sxs-lookup"><span data-stu-id="1478d-147">**ULONG**</span></span>|<span data-ttu-id="1478d-148">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="1478d-148">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="1478d-149">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-149">32 bits</span></span>|  
+|<span data-ttu-id="1478d-150">**CHAR**</span><span class="sxs-lookup"><span data-stu-id="1478d-150">**CHAR**</span></span>|<span data-ttu-id="1478d-151">**char**</span><span class="sxs-lookup"><span data-stu-id="1478d-151">**char**</span></span>|<xref:System.Char?displayProperty=nameWithType>|<span data-ttu-id="1478d-152">Decore com ANSI.</span><span class="sxs-lookup"><span data-stu-id="1478d-152">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="1478d-153">**WCHAR**</span><span class="sxs-lookup"><span data-stu-id="1478d-153">**WCHAR**</span></span>|<span data-ttu-id="1478d-154">**wchar_t**</span><span class="sxs-lookup"><span data-stu-id="1478d-154">**wchar_t**</span></span>|<xref:System.Char?displayProperty=nameWithType>|<span data-ttu-id="1478d-155">Decore com Unicode.</span><span class="sxs-lookup"><span data-stu-id="1478d-155">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="1478d-156">**LPSTR**</span><span class="sxs-lookup"><span data-stu-id="1478d-156">**LPSTR**</span></span>|<span data-ttu-id="1478d-157">**char\***</span><span class="sxs-lookup"><span data-stu-id="1478d-157">**char\***</span></span>|<span data-ttu-id="1478d-158"><xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="1478d-158"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="1478d-159">Decore com ANSI.</span><span class="sxs-lookup"><span data-stu-id="1478d-159">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="1478d-160">**LPCSTR**</span><span class="sxs-lookup"><span data-stu-id="1478d-160">**LPCSTR**</span></span>|<span data-ttu-id="1478d-161">**Const char\***</span><span class="sxs-lookup"><span data-stu-id="1478d-161">**Const char\***</span></span>|<span data-ttu-id="1478d-162"><xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="1478d-162"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="1478d-163">Decore com ANSI.</span><span class="sxs-lookup"><span data-stu-id="1478d-163">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="1478d-164">**LPWSTR**</span><span class="sxs-lookup"><span data-stu-id="1478d-164">**LPWSTR**</span></span>|<span data-ttu-id="1478d-165">**wchar_t\***</span><span class="sxs-lookup"><span data-stu-id="1478d-165">**wchar_t\***</span></span>|<span data-ttu-id="1478d-166"><xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="1478d-166"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="1478d-167">Decore com Unicode.</span><span class="sxs-lookup"><span data-stu-id="1478d-167">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="1478d-168">**LPCWSTR**</span><span class="sxs-lookup"><span data-stu-id="1478d-168">**LPCWSTR**</span></span>|<span data-ttu-id="1478d-169">**Const wchar_t\***</span><span class="sxs-lookup"><span data-stu-id="1478d-169">**Const wchar_t\***</span></span>|<span data-ttu-id="1478d-170"><xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="1478d-170"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="1478d-171">Decore com Unicode.</span><span class="sxs-lookup"><span data-stu-id="1478d-171">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="1478d-172">**FLOAT**</span><span class="sxs-lookup"><span data-stu-id="1478d-172">**FLOAT**</span></span>|<span data-ttu-id="1478d-173">**Float**</span><span class="sxs-lookup"><span data-stu-id="1478d-173">**Float**</span></span>|<xref:System.Single?displayProperty=nameWithType>|<span data-ttu-id="1478d-174">32 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-174">32 bits</span></span>|  
+|<span data-ttu-id="1478d-175">**DOUBLE**</span><span class="sxs-lookup"><span data-stu-id="1478d-175">**DOUBLE**</span></span>|<span data-ttu-id="1478d-176">**Duplo**</span><span class="sxs-lookup"><span data-stu-id="1478d-176">**Double**</span></span>|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="1478d-177">64 bits</span><span class="sxs-lookup"><span data-stu-id="1478d-177">64 bits</span></span>|  
   
- Para tipos correspondentes em [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, consulte a [Introdução à biblioteca de classes .NET Framework](../../../docs/standard/class-library-overview.md).  
+ <span data-ttu-id="1478d-178">Para tipos correspondentes em [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, consulte a [Introdução à biblioteca de classes .NET Framework](../../../docs/standard/class-library-overview.md).</span><span class="sxs-lookup"><span data-stu-id="1478d-178">For corresponding types in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Introduction to the .NET Framework Class Library](../../../docs/standard/class-library-overview.md).</span></span>  
   
-## <a name="pinvokelibdll"></a>PinvokeLib.dll  
- O código a seguir define as funções de biblioteca fornecidas por Pinvoke.dll. Muitos exemplos descritos nesta seção chamam essa biblioteca.  
+## <a name="pinvokelibdll"></a><span data-ttu-id="1478d-179">PinvokeLib.dll</span><span class="sxs-lookup"><span data-stu-id="1478d-179">PinvokeLib.dll</span></span>  
+ <span data-ttu-id="1478d-180">O código a seguir define as funções de biblioteca fornecidas por Pinvoke.dll.</span><span class="sxs-lookup"><span data-stu-id="1478d-180">The following code defines the library functions provided by Pinvoke.dll.</span></span> <span data-ttu-id="1478d-181">Muitos exemplos descritos nesta seção chamam essa biblioteca.</span><span class="sxs-lookup"><span data-stu-id="1478d-181">Many samples described in this section call this library.</span></span>  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a><span data-ttu-id="1478d-182">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1478d-182">Example</span></span>  
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
-

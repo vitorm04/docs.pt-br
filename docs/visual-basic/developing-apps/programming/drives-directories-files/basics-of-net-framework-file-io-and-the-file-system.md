@@ -1,15 +1,12 @@
 ---
 title: "Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
 - file attributes, determining
@@ -18,59 +15,43 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
-As classes no namespace <xref:System.IO> são usadas para trabalhar com unidades, arquivos e diretórios.  
+# <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a><span data-ttu-id="9f193-102">Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f193-102">Basics of .NET Framework File I/O and the File System (Visual Basic)</span></span>
+<span data-ttu-id="9f193-103">As classes no namespace <xref:System.IO> são usadas para trabalhar com unidades, arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="9f193-103">Classes in the <xref:System.IO> namespace are used to work with drives, files, and directories.</span></span>  
   
- O namespace <xref:System.IO> contém as classes <xref:System.IO.File> e <xref:System.IO.Directory>, que fornecem a funcionalidade [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] que manipula arquivos e diretórios. Como os métodos desses objetos são estáticos ou membros compartilhados, você pode usá-los diretamente sem antes criar uma instância da classe. Associadas a essas classes estão as classes <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo>, conhecidas pelos usuários do recurso `My`. Para usar essas classes, você deve qualificar totalmente os nomes ou importar os namespaces apropriados, incluindo as declarações `Imports` no início do código afetado. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+ <span data-ttu-id="9f193-104">O namespace <xref:System.IO> contém as classes <xref:System.IO.File> e <xref:System.IO.Directory>, que fornecem a funcionalidade [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] que manipula arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="9f193-104">The <xref:System.IO> namespace contains the <xref:System.IO.File> and <xref:System.IO.Directory> classes, which provide the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] functionality that manipulates files and directories.</span></span> <span data-ttu-id="9f193-105">Como os métodos desses objetos são estáticos ou membros compartilhados, você pode usá-los diretamente sem antes criar uma instância da classe.</span><span class="sxs-lookup"><span data-stu-id="9f193-105">Because the methods of these objects are static or shared members, you can use them directly without creating an instance of the class first.</span></span> <span data-ttu-id="9f193-106">Associadas a essas classes estão as classes <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo>, conhecidas pelos usuários do recurso `My`.</span><span class="sxs-lookup"><span data-stu-id="9f193-106">Associated with these classes are the <xref:System.IO.FileInfo> and <xref:System.IO.DirectoryInfo> classes, which will be familiar to users of the `My` feature.</span></span> <span data-ttu-id="9f193-107">Para usar essas classes, você deve qualificar totalmente os nomes ou importar os namespaces apropriados, incluindo as declarações `Imports` no início do código afetado.</span><span class="sxs-lookup"><span data-stu-id="9f193-107">To use these classes, you must fully qualify the names or import the appropriate namespaces by including the `Imports` statement(s) at the beginning of the affected code.</span></span> <span data-ttu-id="9f193-108">Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="9f193-108">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
 > [!NOTE]
->  Os outros tópicos nesta seção usam o objeto `My.Computer.FileSystem`, em vez das classes `System.IO`, para trabalhar com unidades, arquivos e diretórios. O objeto `My.Computer.FileSystem` destina-se principalmente para uso em programas do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. As classes `System.IO` são destinadas para uso por qualquer linguagem que dê suporte ao [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], incluindo o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+>  <span data-ttu-id="9f193-109">Os outros tópicos nesta seção usam o objeto `My.Computer.FileSystem`, em vez das classes `System.IO`, para trabalhar com unidades, arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="9f193-109">Other topics in this section use the `My.Computer.FileSystem` object instead of `System.IO` classes to work with drives, files, and directories.</span></span> <span data-ttu-id="9f193-110">O objeto `My.Computer.FileSystem` destina-se principalmente para uso em programas do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f193-110">The `My.Computer.FileSystem` object is intended primarily for use in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programs.</span></span> <span data-ttu-id="9f193-111">As classes `System.IO` são destinadas para uso por qualquer linguagem que dê suporte ao [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], incluindo o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f193-111">`System.IO` classes are intended for use by any language that supports the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], including [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="definition-of-a-stream"></a>Definição de um fluxo  
- O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa fluxos para dar suporte à leitura e gravação em arquivos. Você pode pensar em um fluxo como um conjunto unidimensional de dados contíguos, que tem um início e um fim e um local em que o cursor indica a posição atual no fluxo.  
+## <a name="definition-of-a-stream"></a><span data-ttu-id="9f193-112">Definição de um fluxo</span><span class="sxs-lookup"><span data-stu-id="9f193-112">Definition of a Stream</span></span>  
+ <span data-ttu-id="9f193-113">O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa fluxos para dar suporte à leitura e gravação em arquivos.</span><span class="sxs-lookup"><span data-stu-id="9f193-113">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uses streams to support reading from and writing to files.</span></span> <span data-ttu-id="9f193-114">Você pode pensar em um fluxo como um conjunto unidimensional de dados contíguos, que tem um início e um fim e um local em que o cursor indica a posição atual no fluxo.</span><span class="sxs-lookup"><span data-stu-id="9f193-114">You can think of a stream as a one-dimensional set of contiguous data, which has a beginning and an end, and where the cursor indicates the current position in the stream.</span></span>  
   
- ![Cursor mostra a posição atual no fluxo de arquivos.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
+ <span data-ttu-id="9f193-115">![Cursor mostra a posição atual no fluxo de arquivos.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")</span><span class="sxs-lookup"><span data-stu-id="9f193-115">![Cursor shows current position in the filestream.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")</span></span>  
   
-## <a name="stream-operations"></a>Operações de fluxo  
- Os dados contidos no fluxo podem vir da memória, de um arquivo ou de um soquete TCP/IP. Os fluxos têm operações fundamentais que podem ser aplicadas a eles:  
+## <a name="stream-operations"></a><span data-ttu-id="9f193-116">Operações de fluxo</span><span class="sxs-lookup"><span data-stu-id="9f193-116">Stream Operations</span></span>  
+ <span data-ttu-id="9f193-117">Os dados contidos no fluxo podem vir da memória, de um arquivo ou de um soquete TCP/IP.</span><span class="sxs-lookup"><span data-stu-id="9f193-117">The data contained in the stream may come from memory, a file, or a TCP/IP socket.</span></span> <span data-ttu-id="9f193-118">Os fluxos têm operações fundamentais que podem ser aplicadas a eles:</span><span class="sxs-lookup"><span data-stu-id="9f193-118">Streams have fundamental operations that can be applied to them:</span></span>  
   
--   Leitura. Você pode ler em um fluxo, transferindo dados do fluxo para uma estrutura de dados, como uma cadeia de caracteres ou uma matriz de bytes.  
+-   <span data-ttu-id="9f193-119">Leitura.</span><span class="sxs-lookup"><span data-stu-id="9f193-119">Reading.</span></span> <span data-ttu-id="9f193-120">Você pode ler em um fluxo, transferindo dados do fluxo para uma estrutura de dados, como uma cadeia de caracteres ou uma matriz de bytes.</span><span class="sxs-lookup"><span data-stu-id="9f193-120">You can read from a stream, transferring data from the stream into a data structure, such as a string or an array of bytes.</span></span>  
   
--   **Gravação**. Você pode gravar em um fluxo, transferindo dados de uma fonte de dados para o fluxo.  
+-   <span data-ttu-id="9f193-121">**Gravação**.</span><span class="sxs-lookup"><span data-stu-id="9f193-121">**Writing**.</span></span> <span data-ttu-id="9f193-122">Você pode gravar em um fluxo, transferindo dados de uma fonte de dados para o fluxo.</span><span class="sxs-lookup"><span data-stu-id="9f193-122">You can write to a stream, transferring data from a data source into the stream.</span></span>  
   
--   **Busca**. Você pode consultar e modificar a sua posição no fluxo.  
+-   <span data-ttu-id="9f193-123">**Busca**.</span><span class="sxs-lookup"><span data-stu-id="9f193-123">**Seeking**.</span></span> <span data-ttu-id="9f193-124">Você pode consultar e modificar a sua posição no fluxo.</span><span class="sxs-lookup"><span data-stu-id="9f193-124">You can query and modify your position in the stream.</span></span>  
   
- Para obter mais informações, consulte [Compondo fluxos](https://msdn.microsoft.com/library/e4y2dch9).  
+ <span data-ttu-id="9f193-125">Para obter mais informações, consulte [Compondo fluxos](https://msdn.microsoft.com/library/e4y2dch9).</span><span class="sxs-lookup"><span data-stu-id="9f193-125">For more information, see [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).</span></span>  
   
-## <a name="types-of-streams"></a>Tipos de fluxos  
- No [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], um fluxo é representado pela classe <xref:System.IO.Stream>, que forma a classe abstrata para todos os outros fluxos. Você não pode criar diretamente uma instância da classe <xref:System.IO.Stream>, mas deve usar uma das classes que ela implementa.  
+## <a name="types-of-streams"></a><span data-ttu-id="9f193-126">Tipos de fluxos</span><span class="sxs-lookup"><span data-stu-id="9f193-126">Types of Streams</span></span>  
+ <span data-ttu-id="9f193-127">No [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], um fluxo é representado pela classe <xref:System.IO.Stream>, que forma a classe abstrata para todos os outros fluxos.</span><span class="sxs-lookup"><span data-stu-id="9f193-127">In the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], a stream is represented by the <xref:System.IO.Stream> class, which forms the abstract class for all other streams.</span></span> <span data-ttu-id="9f193-128">Você não pode criar diretamente uma instância da classe <xref:System.IO.Stream>, mas deve usar uma das classes que ela implementa.</span><span class="sxs-lookup"><span data-stu-id="9f193-128">You cannot directly create an instance of the <xref:System.IO.Stream> class, but must use one of the classes it implements.</span></span>  
   
- Há muitos tipos de fluxos, porém, com a finalidade de trabalhar com entrada/saída (E/S) de arquivos, os tipos mais importantes são a classe <xref:System.IO.FileStream>, que fornece uma maneira de ler e gravar arquivos, e a classe <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>, que fornece uma maneira de criar arquivos e diretórios em armazenamento isolado. Outros fluxos que podem ser usados ao trabalhar com E/S de arquivo incluem:  
+ <span data-ttu-id="9f193-129">Há muitos tipos de fluxos, porém, com a finalidade de trabalhar com entrada/saída (E/S) de arquivos, os tipos mais importantes são a classe <xref:System.IO.FileStream>, que fornece uma maneira de ler e gravar arquivos, e a classe <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>, que fornece uma maneira de criar arquivos e diretórios em armazenamento isolado.</span><span class="sxs-lookup"><span data-stu-id="9f193-129">There are many types of streams, but for the purposes of working with file input/output (I/O), the most important types are the <xref:System.IO.FileStream> class, which provides a way to read from and write to files, and the <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> class, which provides a way to create files and directories in isolated storage.</span></span> <span data-ttu-id="9f193-130">Outros fluxos que podem ser usados ao trabalhar com E/S de arquivo incluem:</span><span class="sxs-lookup"><span data-stu-id="9f193-130">Other streams that can be used when working with file I/O include:</span></span>  
   
 -   <xref:System.IO.BufferedStream>  
   
@@ -78,56 +59,55 @@ As classes no namespace <xref:System.IO> são usadas para trabalhar com unidades
   
 -   <xref:System.IO.MemoryStream>  
   
--   <xref:System.Net.Sockets.NetworkStream>.  
+-   <span data-ttu-id="9f193-131"><xref:System.Net.Sockets.NetworkStream>.</span><span class="sxs-lookup"><span data-stu-id="9f193-131"><xref:System.Net.Sockets.NetworkStream>.</span></span>  
   
- A tabela a seguir lista as tarefas comumente realizadas com um fluxo:  
+ <span data-ttu-id="9f193-132">A tabela a seguir lista as tarefas comumente realizadas com um fluxo:</span><span class="sxs-lookup"><span data-stu-id="9f193-132">The following table lists tasks commonly accomplished with a stream:</span></span>  
   
-|Para|Consulte|
+|<span data-ttu-id="9f193-133">Para</span><span class="sxs-lookup"><span data-stu-id="9f193-133">To</span></span>|<span data-ttu-id="9f193-134">Consulte</span><span class="sxs-lookup"><span data-stu-id="9f193-134">See</span></span>|
 |---|---|   
-|Ler e gravar em um arquivo de dados|[Como ler e gravar em um arquivo de dados recém-criado](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|Ler texto de um arquivo|[Como ler texto de um arquivo](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|Gravar texto em um arquivo|[Como gravar texto em um arquivo](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|Ler caracteres de uma cadeia de caracteres|[Como ler caracteres de uma cadeia de caracteres](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|Gravar caracteres em uma cadeia de caracteres|[Como gravar caracteres em uma cadeia de caracteres](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|Criptografar dados|[Criptografando dados](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|Descriptografar dados|[Descriptografando dados](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|<span data-ttu-id="9f193-135">Ler e gravar em um arquivo de dados</span><span class="sxs-lookup"><span data-stu-id="9f193-135">Read and write to a data file</span></span>|[<span data-ttu-id="9f193-136">Como ler e gravar em um arquivo de dados recém-criado</span><span class="sxs-lookup"><span data-stu-id="9f193-136">How to: Read and Write to a Newly Created Data File</span></span>](https://msdn.microsoft.com/library/36b93480.aspx)|  
+|<span data-ttu-id="9f193-137">Ler texto de um arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-137">Read text from a file</span></span>|[<span data-ttu-id="9f193-138">Como ler texto de um arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-138">How to: Read Text from a File</span></span>](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
+|<span data-ttu-id="9f193-139">Gravar texto em um arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-139">Write text to a file</span></span>|[<span data-ttu-id="9f193-140">Como gravar texto em um arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-140">How to: Write Text to a File</span></span>](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
+|<span data-ttu-id="9f193-141">Ler caracteres de uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="9f193-141">Read characters from a string</span></span>|[<span data-ttu-id="9f193-142">Como ler caracteres de uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="9f193-142">How to: Read Characters from a String</span></span>](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
+|<span data-ttu-id="9f193-143">Gravar caracteres em uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="9f193-143">Write characters to a string</span></span>|[<span data-ttu-id="9f193-144">Como gravar caracteres em uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="9f193-144">How to: Write Characters to a String</span></span>](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
+|<span data-ttu-id="9f193-145">Criptografar dados</span><span class="sxs-lookup"><span data-stu-id="9f193-145">Encrypt data</span></span>|[<span data-ttu-id="9f193-146">Criptografando dados</span><span class="sxs-lookup"><span data-stu-id="9f193-146">Encrypting Data</span></span>](https://msdn.microsoft.com/library/as0w18af.aspx)|  
+|<span data-ttu-id="9f193-147">Descriptografar dados</span><span class="sxs-lookup"><span data-stu-id="9f193-147">Decrypt data</span></span>|[<span data-ttu-id="9f193-148">Descriptografando dados</span><span class="sxs-lookup"><span data-stu-id="9f193-148">Decrypting Data</span></span>](https://msdn.microsoft.com/library/te15te69.aspx)|  
   
-## <a name="file-access-and-attributes"></a>Acesso a arquivos e atributos  
- Você pode controlar como os arquivos são criados, abertos e compartilhados com as enumerações <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> e <xref:System.IO.FileShare>, que contêm os sinalizadores usados pelos construtores da classe <xref:System.IO.FileStream>. Por exemplo, quando você abre ou cria uma nova <xref:System.IO.FileStream>, a enumeração <xref:System.IO.FileMode> permite especificar se o arquivo está aberto para acréscimos, se um novo arquivo será criado caso o arquivo especificado não exista, se o arquivo será substituído e assim por diante.  
+## <a name="file-access-and-attributes"></a><span data-ttu-id="9f193-149">Acesso a arquivos e atributos</span><span class="sxs-lookup"><span data-stu-id="9f193-149">File Access and Attributes</span></span>  
+ <span data-ttu-id="9f193-150">Você pode controlar como os arquivos são criados, abertos e compartilhados com as enumerações <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> e <xref:System.IO.FileShare>, que contêm os sinalizadores usados pelos construtores da classe <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="9f193-150">You can control how files are created, opened, and shared with the <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>, and <xref:System.IO.FileShare> enumerations, which contain the flags used by the constructors of the <xref:System.IO.FileStream> class.</span></span> <span data-ttu-id="9f193-151">Por exemplo, quando você abre ou cria uma nova <xref:System.IO.FileStream>, a enumeração <xref:System.IO.FileMode> permite especificar se o arquivo está aberto para acréscimos, se um novo arquivo será criado caso o arquivo especificado não exista, se o arquivo será substituído e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="9f193-151">For example, when you open or create a new <xref:System.IO.FileStream>, the <xref:System.IO.FileMode> enumeration allows you to specify whether the file is opened for appending, whether a new file is created if the specified file does not exist, whether the file is overwritten, and so forth.</span></span>  
   
- A enumeração <xref:System.IO.FileAttributes> habilita a coleta de informações específicas do arquivo. A enumeração <xref:System.IO.FileAttributes> retorna os atributos armazenados do arquivo, por exemplo, se ele é compactado, criptografado, oculto, somente leitura, um arquivo, um diretório, um arquivo de sistema ou um arquivo temporário.  
+ <span data-ttu-id="9f193-152">A enumeração <xref:System.IO.FileAttributes> habilita a coleta de informações específicas do arquivo.</span><span class="sxs-lookup"><span data-stu-id="9f193-152">The <xref:System.IO.FileAttributes> enumeration enables the gathering of file-specific information.</span></span> <span data-ttu-id="9f193-153">A enumeração <xref:System.IO.FileAttributes> retorna os atributos armazenados do arquivo, por exemplo, se ele é compactado, criptografado, oculto, somente leitura, um arquivo, um diretório, um arquivo de sistema ou um arquivo temporário.</span><span class="sxs-lookup"><span data-stu-id="9f193-153">The <xref:System.IO.FileAttributes> enumeration returns the file's stored attributes, such as whether it is compressed, encrypted, hidden, read-only, an archive, a directory, a system file, or a temporary file.</span></span>  
   
- A tabela a seguir lista as tarefas que envolvem o acesso a arquivos e atributos de arquivo:  
+ <span data-ttu-id="9f193-154">A tabela a seguir lista as tarefas que envolvem o acesso a arquivos e atributos de arquivo:</span><span class="sxs-lookup"><span data-stu-id="9f193-154">The following table lists tasks involving file access and file attributes:</span></span>  
   
-|Para|Consulte|  
+|<span data-ttu-id="9f193-155">Para</span><span class="sxs-lookup"><span data-stu-id="9f193-155">To</span></span>|<span data-ttu-id="9f193-156">Consulte</span><span class="sxs-lookup"><span data-stu-id="9f193-156">See</span></span>|  
 |---|---|
-|Abrir e acrescentar texto a um arquivo de log|[Como abrir e acrescentar a um arquivo de log](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
-|Determinar os atributos de um arquivo|<xref:System.IO.FileAttributes>|  
+|<span data-ttu-id="9f193-157">Abrir e acrescentar texto a um arquivo de log</span><span class="sxs-lookup"><span data-stu-id="9f193-157">Open and append text to a log file</span></span>|[<span data-ttu-id="9f193-158">Como abrir e acrescentar a um arquivo de log</span><span class="sxs-lookup"><span data-stu-id="9f193-158">How to: Open and Append to a Log File</span></span>](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|<span data-ttu-id="9f193-159">Determinar os atributos de um arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-159">Determine the attributes of a file</span></span>|<xref:System.IO.FileAttributes>|  
   
-## <a name="file-permissions"></a>Permissões de arquivo  
- É possível controlar o acesso a arquivos e diretórios com a classe <xref:System.Security.Permissions.FileIOPermission>. Isso pode ser especialmente importante para desenvolvedores que trabalham com Web Forms, que, por padrão, são executados no contexto de uma conta de usuário local especial denominada ASPNET, que é criada como parte das instalações do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Quando esse tipo de aplicativo solicita acesso a um recurso, a conta de usuário ASPNET tem permissões limitadas, que podem impedir que o usuário realize ações como gravar em um arquivo de um aplicativo Web. Para saber mais, confira [Permissões de segurança](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) e <xref:System.Security.Permissions.FileIOPermission>.  
+## <a name="file-permissions"></a><span data-ttu-id="9f193-160">Permissões de arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-160">File Permissions</span></span>  
+ <span data-ttu-id="9f193-161">É possível controlar o acesso a arquivos e diretórios com a classe <xref:System.Security.Permissions.FileIOPermission>.</span><span class="sxs-lookup"><span data-stu-id="9f193-161">Controlling access to files and directories can be done with the <xref:System.Security.Permissions.FileIOPermission> class.</span></span> <span data-ttu-id="9f193-162">Isso pode ser especialmente importante para desenvolvedores que trabalham com Web Forms, que, por padrão, são executados no contexto de uma conta de usuário local especial denominada ASPNET, que é criada como parte das instalações do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f193-162">This may be particularly important for developers working with Web Forms, which by default run within the context of a special local user account named ASPNET, which is created as part of the [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] and [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] installations.</span></span> <span data-ttu-id="9f193-163">Quando esse tipo de aplicativo solicita acesso a um recurso, a conta de usuário ASPNET tem permissões limitadas, que podem impedir que o usuário realize ações como gravar em um arquivo de um aplicativo Web.</span><span class="sxs-lookup"><span data-stu-id="9f193-163">When such an application requests access to a resource, the ASPNET user account has limited permissions, which may prevent the user from performing actions such as writing to a file from a Web application.</span></span> <span data-ttu-id="9f193-164">Para saber mais, confira [Permissões de segurança](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) e <xref:System.Security.Permissions.FileIOPermission>.</span><span class="sxs-lookup"><span data-stu-id="9f193-164">For more information, see [Security Permissions](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0), and the <xref:System.Security.Permissions.FileIOPermission>.</span></span>  
   
-## <a name="isolated-file-storage"></a>Armazenamento isolado de arquivo  
- O armazenamento isolado é uma tentativa de resolver problemas criados ao trabalhar com arquivos em que o usuário ou código pode não ter as permissões necessárias. O armazenamento isolado atribui a cada usuário um compartimento de dados, que pode conter uma ou mais repositórios. Os repositórios podem ser isolados uns dos outros, por usuário e por assembly. Somente o usuário e o assembly que criou um repositório tem acesso a ele. Um repositório atua como um sistema de arquivos virtual completo. Você pode criar e manipular pastas e arquivos em um repositório.  
+## <a name="isolated-file-storage"></a><span data-ttu-id="9f193-165">Armazenamento isolado de arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-165">Isolated File Storage</span></span>  
+ <span data-ttu-id="9f193-166">O armazenamento isolado é uma tentativa de resolver problemas criados ao trabalhar com arquivos em que o usuário ou código pode não ter as permissões necessárias.</span><span class="sxs-lookup"><span data-stu-id="9f193-166">Isolated storage is an attempt to solve problems created when working with files where the user or code may lack necessary permissions.</span></span> <span data-ttu-id="9f193-167">O armazenamento isolado atribui a cada usuário um compartimento de dados, que pode conter uma ou mais repositórios.</span><span class="sxs-lookup"><span data-stu-id="9f193-167">Isolated storage assigns each user a data compartment, which can hold one or more stores.</span></span> <span data-ttu-id="9f193-168">Os repositórios podem ser isolados uns dos outros, por usuário e por assembly.</span><span class="sxs-lookup"><span data-stu-id="9f193-168">Stores can be isolated from each other by user and by assembly.</span></span> <span data-ttu-id="9f193-169">Somente o usuário e o assembly que criou um repositório tem acesso a ele.</span><span class="sxs-lookup"><span data-stu-id="9f193-169">Only the user and assembly that created a store have access to it.</span></span> <span data-ttu-id="9f193-170">Um repositório atua como um sistema de arquivos virtual completo. Você pode criar e manipular pastas e arquivos em um repositório.</span><span class="sxs-lookup"><span data-stu-id="9f193-170">A store acts as a complete virtual file system—within one store you can create and manipulate directories and files.</span></span>  
   
- A tabela a seguir lista as tarefas comumente associadas ao armazenamento isolado de arquivo.  
+ <span data-ttu-id="9f193-171">A tabela a seguir lista as tarefas comumente associadas ao armazenamento isolado de arquivo.</span><span class="sxs-lookup"><span data-stu-id="9f193-171">The following table lists tasks commonly associated with isolated file storage.</span></span>  
   
-|Para|Consulte|
+|<span data-ttu-id="9f193-172">Para</span><span class="sxs-lookup"><span data-stu-id="9f193-172">To</span></span>|<span data-ttu-id="9f193-173">Consulte</span><span class="sxs-lookup"><span data-stu-id="9f193-173">See</span></span>|
 |---|---|  
-|Criar um repositório isolado|[Como obter repositórios para o armazenamento isolado](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|Enumerar repositórios isolados|[Como enumerar repositórios para o armazenamento isolado](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|Excluir um repositório isolado|[Como excluir repositórios no armazenamento isolado](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|Criar um arquivo ou diretório no armazenamento isolado|[Como criar arquivos e diretórios no armazenamento isolado](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|Localizar um arquivo no armazenamento isolado|[Como localizar arquivos e diretórios existentes no armazenamento isolado](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|Ler ou gravar em um arquivo no armazenamento isolado|[Como ler e gravar em arquivos no armazenamento isolado](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|Excluir um arquivo ou diretório no armazenamento isolado|[Como excluir arquivos e diretórios no armazenamento isolado](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|<span data-ttu-id="9f193-174">Criar um repositório isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-174">Create an isolated store</span></span>|[<span data-ttu-id="9f193-175">Como obter repositórios para o armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-175">How to: Obtain Stores for Isolated Storage</span></span>](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
+|<span data-ttu-id="9f193-176">Enumerar repositórios isolados</span><span class="sxs-lookup"><span data-stu-id="9f193-176">Enumerate isolated stores</span></span>|[<span data-ttu-id="9f193-177">Como enumerar repositórios para o armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-177">How to: Enumerate Stores for Isolated Storage</span></span>](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
+|<span data-ttu-id="9f193-178">Excluir um repositório isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-178">Delete an isolated store</span></span>|[<span data-ttu-id="9f193-179">Como excluir repositórios no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-179">How to: Delete Stores in Isolated Storage</span></span>](https://msdn.microsoft.com/library/5w71t104.aspx)|  
+|<span data-ttu-id="9f193-180">Criar um arquivo ou diretório no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-180">Create a file or directory in isolated storage</span></span>|[<span data-ttu-id="9f193-181">Como criar arquivos e diretórios no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-181">How to: Create Files and Directories in Isolated Storage</span></span>](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
+|<span data-ttu-id="9f193-182">Localizar um arquivo no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-182">Find a file in isolated storage</span></span>|[<span data-ttu-id="9f193-183">Como localizar arquivos e diretórios existentes no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-183">How to: Find Existing Files and Directories in Isolated Storage</span></span>](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
+|<span data-ttu-id="9f193-184">Ler ou gravar em um arquivo no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-184">Read from or write to a file in insolated storage</span></span>|[<span data-ttu-id="9f193-185">Como ler e gravar em arquivos no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-185">How to: Read and Write to Files in Isolated Storage</span></span>](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
+|<span data-ttu-id="9f193-186">Excluir um arquivo ou diretório no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-186">Delete a file or directory in isolated storage</span></span>|[<span data-ttu-id="9f193-187">Como excluir arquivos e diretórios no armazenamento isolado</span><span class="sxs-lookup"><span data-stu-id="9f193-187">How to: Delete Files and Directories in Isolated Storage</span></span>](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
   
-## <a name="file-events"></a>Eventos de arquivo  
- O componente <xref:System.IO.FileSystemWatcher> permite observar alterações em arquivos e diretórios em seu sistema ou em qualquer computador em que você tem acesso à rede. Por exemplo, se um arquivo é modificado, convém enviar a um usuário um alerta sobre a alteração ocorrida. Quando ocorrem alterações, um ou mais eventos são acionados, armazenados em um buffer e enviados ao componente <xref:System.IO.FileSystemWatcher> para processamento.  
+## <a name="file-events"></a><span data-ttu-id="9f193-188">Eventos de arquivo</span><span class="sxs-lookup"><span data-stu-id="9f193-188">File Events</span></span>  
+ <span data-ttu-id="9f193-189">O componente <xref:System.IO.FileSystemWatcher> permite observar alterações em arquivos e diretórios em seu sistema ou em qualquer computador em que você tem acesso à rede.</span><span class="sxs-lookup"><span data-stu-id="9f193-189">The <xref:System.IO.FileSystemWatcher> component allows you to watch for changes in files and directories on your system or on any computer to which you have network access.</span></span> <span data-ttu-id="9f193-190">Por exemplo, se um arquivo é modificado, convém enviar a um usuário um alerta sobre a alteração ocorrida.</span><span class="sxs-lookup"><span data-stu-id="9f193-190">For example, if a file is modified, you might want to send a user an alert that the change has taken place.</span></span> <span data-ttu-id="9f193-191">Quando ocorrem alterações, um ou mais eventos são acionados, armazenados em um buffer e enviados ao componente <xref:System.IO.FileSystemWatcher> para processamento.</span><span class="sxs-lookup"><span data-stu-id="9f193-191">When changes occur, one or more events are raised, stored in a buffer, and handed to the <xref:System.IO.FileSystemWatcher> component for processing.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Compondo fluxos](https://msdn.microsoft.com/library/e4y2dch9)   
- [E/S de arquivo e de fluxo](https://msdn.microsoft.com/library/k3352a4t)   
- [E/S de arquivo assíncrona](https://msdn.microsoft.com/library/kztecsys)   
- [Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
-
+## <a name="see-also"></a><span data-ttu-id="9f193-192">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9f193-192">See Also</span></span>  
+ [<span data-ttu-id="9f193-193">Compondo fluxos</span><span class="sxs-lookup"><span data-stu-id="9f193-193">Composing Streams</span></span>](https://msdn.microsoft.com/library/e4y2dch9)  
+ [<span data-ttu-id="9f193-194">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="9f193-194">File and Stream I/O</span></span>](https://msdn.microsoft.com/library/k3352a4t)  
+ [<span data-ttu-id="9f193-195">E/S de arquivo assíncrona</span><span class="sxs-lookup"><span data-stu-id="9f193-195">Asynchronous File I/O</span></span>](https://msdn.microsoft.com/library/kztecsys)  
+ [<span data-ttu-id="9f193-196">Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f193-196">Classes Used in .NET Framework File I/O and the File System (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

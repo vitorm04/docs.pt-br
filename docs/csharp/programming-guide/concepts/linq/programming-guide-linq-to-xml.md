@@ -1,57 +1,47 @@
 ---
 title: "Guia de Programação (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7ee6ac9d13d265442e6d5b9f02c6d5788e75c50f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ed4b0aff72654b9ac0928fae933e34268aede7fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="programming-guide-linq-to-xml-c"></a>Guia de Programação (LINQ to XML) (C#)
-Esta seção fornece informações e instruções conceituais sobre como programar com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="programming-guide-linq-to-xml-c"></a><span data-ttu-id="7566a-102">Guia de Programação (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-102">Programming Guide (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="7566a-103">Esta seção fornece informações e instruções conceituais sobre como programar com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7566a-103">This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
-## <a name="who-should-read-this-documentation"></a>Quem deve ler esta documentação  
- Esta documentação é direcionada aos desenvolvedores que já compreendem o C# e alguns aspectos básicos do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+## <a name="who-should-read-this-documentation"></a><span data-ttu-id="7566a-104">Quem deve ler esta documentação</span><span class="sxs-lookup"><span data-stu-id="7566a-104">Who Should Read This Documentation</span></span>  
+ <span data-ttu-id="7566a-105">Esta documentação é direcionada aos desenvolvedores que já compreendem o C# e alguns aspectos básicos do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7566a-105">This documentation targets developers who already understand C# and some basic aspects of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
- A meta desta documentação é facilitar o uso do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para todos os tipos de desenvolvedores. O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] facilita a programação XML. Você não precisa ser um desenvolvedor especialista para usá-lo.  
+ <span data-ttu-id="7566a-106">A meta desta documentação é facilitar o uso do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para todos os tipos de desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="7566a-106">The goal of this documentation is to make [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] easy to use for all kinds of developers.</span></span> <span data-ttu-id="7566a-107">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] facilita a programação XML.</span><span class="sxs-lookup"><span data-stu-id="7566a-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] makes XML programming easier.</span></span> <span data-ttu-id="7566a-108">Você não precisa ser um desenvolvedor especialista para usá-lo.</span><span class="sxs-lookup"><span data-stu-id="7566a-108">You do not have to be an expert developer to use it.</span></span>  
   
- O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] depende fortemente de classes genéricas. Portanto, é muito importante que você compreenda como usar classes genéricas. Além disso, será útil se você estiver familiarizado com os representantes declarados como tipos parametrizados. Se você não estiver familiarizado com as classes genéricas do C#, consulte [Classes genéricas](../../../../csharp/programming-guide/generics/generic-classes.md).  
+ <span data-ttu-id="7566a-109">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] depende fortemente de classes genéricas.</span><span class="sxs-lookup"><span data-stu-id="7566a-109">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] relies heavily on generic classes.</span></span> <span data-ttu-id="7566a-110">Portanto, é muito importante que você compreenda como usar classes genéricas.</span><span class="sxs-lookup"><span data-stu-id="7566a-110">Therefore, is very important that you understand the use of generic classes.</span></span> <span data-ttu-id="7566a-111">Além disso, será útil se você estiver familiarizado com os representantes declarados como tipos parametrizados.</span><span class="sxs-lookup"><span data-stu-id="7566a-111">Further, it is helpful if you are familiar with delegates that are declared as parameterized types.</span></span> <span data-ttu-id="7566a-112">Se você não estiver familiarizado com as classes genéricas do C#, consulte [Classes genéricas](../../../../csharp/programming-guide/generics/generic-classes.md).</span><span class="sxs-lookup"><span data-stu-id="7566a-112">If you are not familiar with C# generic classes, see [Generic Classes](../../../../csharp/programming-guide/generics/generic-classes.md).</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="7566a-113">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7566a-113">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="7566a-114">Tópico</span><span class="sxs-lookup"><span data-stu-id="7566a-114">Topic</span></span>|<span data-ttu-id="7566a-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="7566a-115">Description</span></span>|  
 |-----------|-----------------|  
-|[Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Fornece uma visão geral das classes do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e informações detalhadas sobre três das classes mais importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.|  
-|[Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Fornece informações conceituais e baseadas em tarefas sobre como criar árvores XML. Você pode criar árvores XML usando construção funcional ou analisando o texto XML de uma cadeia de caracteres ou de um arquivo. Você também pode usar um <xref:System.Xml.XmlReader> para popular uma árvore XML.|  
-|[Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Fornece informações detalhadas sobre como criar árvores XML que usam namespaces.|  
-|[Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|Descreve várias abordagens para serializar uma árvore XML e fornece orientações sobre qual abordagem usar.|  
-|[Eixos do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enumera e descreve os métodos de eixo do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], que você deve compreender antes de escrever consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Consultando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)|Fornece exemplos comuns de como consultar árvores XML.|  
-|[Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Como o DOM (Modelo de Objeto do Documento), o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite modificar uma árvore XML no lugar.|  
-|[Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Fornece informações sobre anotações, eventos, streaming e outros cenários avançados.|  
-|[Segurança do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|Descreve problemas de segurança associados ao LINQ to XML e fornece alguma orientação para minimizar a exposição de segurança.|  
-|[Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contém os documentos XML de exemplo que são usados por muitos exemplos desta documentação.|  
+|[<span data-ttu-id="7566a-116">Visão geral da programação LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-116">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|<span data-ttu-id="7566a-117">Fornece uma visão geral das classes do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e informações detalhadas sobre três das classes mais importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="7566a-117">Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, and detailed information about three of the most important classes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, and <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|[<span data-ttu-id="7566a-118">Criando árvores XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-118">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|<span data-ttu-id="7566a-119">Fornece informações conceituais e baseadas em tarefas sobre como criar árvores XML.</span><span class="sxs-lookup"><span data-stu-id="7566a-119">Provides conceptual and task-based information about creating XML trees.</span></span> <span data-ttu-id="7566a-120">Você pode criar árvores XML usando construção funcional ou analisando o texto XML de uma cadeia de caracteres ou de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="7566a-120">You can create XML trees by using functional construction, or by parsing XML text from a string or a file.</span></span> <span data-ttu-id="7566a-121">Você também pode usar um <xref:System.Xml.XmlReader> para popular uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="7566a-121">You can also use an <xref:System.Xml.XmlReader> to populate an XML tree.</span></span>|  
+|[<span data-ttu-id="7566a-122">Trabalhando com namespaces XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-122">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|<span data-ttu-id="7566a-123">Fornece informações detalhadas sobre como criar árvores XML que usam namespaces.</span><span class="sxs-lookup"><span data-stu-id="7566a-123">Provides detailed information about creating XML trees that use namespaces.</span></span>|  
+|[<span data-ttu-id="7566a-124">Serializando árvores XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-124">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|<span data-ttu-id="7566a-125">Descreve várias abordagens para serializar uma árvore XML e fornece orientações sobre qual abordagem usar.</span><span class="sxs-lookup"><span data-stu-id="7566a-125">Describes multiple approaches to serializing an XML tree, and gives guidance on which approach to use.</span></span>|  
+|[<span data-ttu-id="7566a-126">Eixos do LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-126">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|<span data-ttu-id="7566a-127">Enumera e descreve os métodos de eixo do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], que você deve compreender antes de escrever consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7566a-127">Enumerates and describes the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis methods, which you must understand before you can write [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>|  
+|[<span data-ttu-id="7566a-128">Consultando árvores XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-128">Querying XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)|<span data-ttu-id="7566a-129">Fornece exemplos comuns de como consultar árvores XML.</span><span class="sxs-lookup"><span data-stu-id="7566a-129">Provides common examples of querying XML trees.</span></span>|  
+|[<span data-ttu-id="7566a-130">Modificando árvores XML (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-130">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|<span data-ttu-id="7566a-131">Como o DOM (Modelo de Objeto do Documento), o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite modificar uma árvore XML no lugar.</span><span class="sxs-lookup"><span data-stu-id="7566a-131">Like the Document Object Model (DOM), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enables you to modify an XML tree in place.</span></span>|  
+|[<span data-ttu-id="7566a-132">Programação LINQ to XML avançada (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-132">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|<span data-ttu-id="7566a-133">Fornece informações sobre anotações, eventos, streaming e outros cenários avançados.</span><span class="sxs-lookup"><span data-stu-id="7566a-133">Provides information about annotations, events, streaming, and other advanced scenarios.</span></span>|  
+|[<span data-ttu-id="7566a-134">Segurança do LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-134">LINQ to XML Security (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|<span data-ttu-id="7566a-135">Descreve problemas de segurança associados ao LINQ to XML e fornece alguma orientação para minimizar a exposição de segurança.</span><span class="sxs-lookup"><span data-stu-id="7566a-135">Describes security issues associated with LINQ to XML and provides some guidance for mitigating security exposure.</span></span>|  
+|[<span data-ttu-id="7566a-136">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7566a-136">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|<span data-ttu-id="7566a-137">Contém os documentos XML de exemplo que são usados por muitos exemplos desta documentação.</span><span class="sxs-lookup"><span data-stu-id="7566a-137">Contains the sample XML documents that are used by many examples in this documentation.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="7566a-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7566a-138">See Also</span></span>  
+ [<span data-ttu-id="7566a-139">Introdução (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7566a-139">Getting Started (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [<span data-ttu-id="7566a-140">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7566a-140">LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
