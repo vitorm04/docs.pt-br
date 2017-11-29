@@ -1,42 +1,22 @@
 ---
 title: LINQ no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- what's new [Visual Basic]
+helpviewer_keywords: what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 33327e5baa9c17613f35d0007ed156c07b3e1814
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 7dc6fb3c53df9bec7808031513051e628096a0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>LINQ no Visual Basic
 Esta seção contém exemplos, visões gerais e informações que ajudarão você a compreender e usar o Visual Basic e [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -73,8 +53,7 @@ Esta seção contém exemplos, visões gerais e informações que ajudarão voc�
  Fornece um exemplo de como retornar os resultados de uma consulta LINQ como um tipo específico em vez de um tipo anônimo.  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ (consulta integrada à linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
- [Visão geral de LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [Visão geral do LINQ to DataSet](https://msdn.microsoft.com/library/bb399399)   
+ [LINQ (Consulta Integrada à Linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ [LINQ para visão geral do conjunto de dados](https://msdn.microsoft.com/library/bb399399)  
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)
-

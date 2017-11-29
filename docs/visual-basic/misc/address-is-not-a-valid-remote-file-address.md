@@ -1,34 +1,18 @@
 ---
-title: "&lt;endereço&gt; não é um endereço válido de arquivo remoto | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "&lt;endereço&gt; não é um endereço de arquivo remoto válido"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0e3782cf78279cdd073f863ca1571bbb398e9465
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9c9b527fafde8e221750fcda046bd7d17f251197
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;endereço&gt; não é um endereço de arquivo remoto válido
 \<endereço > não é um endereço de arquivo remoto válido. Um endereço válido deve incluir um protocolo, um caminho e um nome de arquivo.  
@@ -40,8 +24,8 @@ ms.lasthandoff: 03/13/2017
 -   Verifique o endereço que você especificou para determinar onde ele falha e forneça as informações necessárias.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método UploadFile](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)   
- [Método DownloadFile](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)   
- [Como: carregar um arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)   
- [Como: baixar um arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)   
+ [Método UploadFile](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
+ [Método DownloadFile](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
+ [Como Carregar um Arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [Como Baixar um Arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  [Operações de rede no .NET Framework com Visual Basic](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)

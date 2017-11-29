@@ -1,0 +1,63 @@
+---
+title: "Modos de seleção no controle DataGridView dos Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- selection [Windows Forms], modes in DataGridView control
+- DataGridView control [Windows Forms], selection mode
+ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modos de seleção no controle DataGridView dos Windows Forms
+Às vezes você deseja que seu aplicativo para executar ações com base nas seleções do usuário dentro de um <xref:System.Windows.Forms.DataGridView> controle. Dependendo das ações, você talvez queira restringir os tipos de seleção possíveis. Por exemplo, suponha que seu aplicativo possa imprimir um relatório para o registro selecionado no momento. Nesse caso, você talvez queira configurar o <xref:System.Windows.Forms.DataGridView> controle para que clicar em qualquer lugar dentro de uma linha sempre seleciona a linha inteira e portanto pode ser selecionada para que somente uma linha por vez.  
+  
+ Você pode especificar as seleções permitidas, definindo o <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> propriedade para um dos seguintes <xref:System.Windows.Forms.DataGridViewSelectionMode> valores de enumeração.  
+  
+|Valor de DataGridViewSelectionMode|Descrição|  
+|-------------------------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Clicar em uma célula a seleciona. Cabeçalhos de linha e coluna não podem ser usados para seleção.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Clicar em uma célula a seleciona. Clicar em um cabeçalho de coluna seleciona a coluna inteira. Cabeçalhos de coluna não podem ser usados para classificação.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Clicar em um cabeçalho de coluna ou célula seleciona a coluna inteira. Cabeçalhos de coluna não podem ser usados para classificação.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Clicar em um cabeçalho de linha ou célula seleciona toda a linha.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Modo de seleção padrão. Clicar em uma célula a seleciona. Clicar em um cabeçalho de linha seleciona toda a linha.|  
+  
+> [!NOTE]
+>  Alterar o modo de seleção em tempo de execução automaticamente limpa a seleção atual.  
+  
+ Por padrão, os usuários podem selecionar várias linhas, colunas ou células arrastando com o mouse, pressionando CTRL ou SHIFT ao selecionar para estender ou modificar uma seleção ou clicando na célula de cabeçalho do canto superior esquerdo para selecionar todas as células no controle. Para evitar esse comportamento, defina o <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propriedade `false`.  
+  
+ O <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> e <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> modos de permitir que os usuários excluir linhas selecionando-os e pressionando a tecla DELETE. Os usuários podem excluir linhas apenas quando a célula atual não está no modo de edição, o <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> está definida como `true`, e a fonte de dados subjacente oferece suporte a exclusão da linha controlada pelo usuário. Observe que essas configurações não impedem a exclusão programática de linha.  
+  
+## <a name="programmatic-selection"></a>Seleção programática  
+ O modo de seleção atual restringe o comportamento de seleção programática, bem como a seleção do usuário. Você pode alterar a seleção atual por meio de programação, definindo a `Selected` propriedade de todas as células, linhas ou colunas presentes no <xref:System.Windows.Forms.DataGridView> controle. Você também pode selecionar todas as células no controle por meio de <xref:System.Windows.Forms.DataGridView.SelectAll%2A> método, dependendo do modo de seleção. Para limpar a seleção, use o <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> método.  
+  
+ Se o <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> está definida como `true`, você pode adicionar <xref:System.Windows.Forms.DataGridView> elementos ou removê-los da seleção, alterando o `Selected` propriedade do elemento. Caso contrário, configurar a propriedade `Selected` como `true` para um elemento remove automaticamente os outros elementos da seleção.  
+  
+ Observe que o valor de alterar o <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propriedade não altera a seleção atual.  
+  
+ Você pode recuperar uma coleção das células selecionadas no momento, linhas ou colunas por meio de <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, e <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> propriedades do <xref:System.Windows.Forms.DataGridView> controle. O acesso a essas propriedades é ineficiente quando todas as células no controle estão selecionadas. Para evitar uma penalidade de desempenho nesse caso, use o <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> método primeiro. Além disso, acessar essas coleções para determinar o número de células, linhas ou colunas selecionadas pode ser ineficiente. Em vez disso, você deve usar o <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, ou <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> método, passando o <xref:System.Windows.Forms.DataGridViewElementStates.Selected> valor.  
+  
+> [!TIP]
+>  Código de exemplo que demonstra o uso programático das células selecionadas pode ser encontrado no <xref:System.Windows.Forms.DataGridView> visão geral da classe.  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
+ <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
+ <xref:System.Windows.Forms.DataGridViewSelectionMode>  
+ [Seleção e uso da Área de Transferência com o controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [Como definir o modo de seleção do controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

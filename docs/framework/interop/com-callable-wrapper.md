@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CCW
 - COM interop, COM wrappers
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbf466fb52af94d51babb30fdee85f4a056298c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874550511ed04427003f6fd54fdd97b3001356fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando um cliente COM chama um objeto .NET, o Common Language Runtime cria o objeto gerenciado e um CCW (COM Callable Wrapper) para o objeto. Se não é possível referenciar um objeto .NET diretamente, os clientes COM usam o CCW como um proxy do objeto gerenciado.  
@@ -189,11 +185,10 @@ public class LoanApp : IAnother {
  Uma interface dupla gerada automaticamente pode ser apropriada em casos raros. No entanto, com mais frequência, ela cria complexidade relacionada à versão. Por exemplo, os clientes COM que usam a interface de classe de uma classe derivada podem ser facilmente interrompidos com alterações na classe base. Quando um terceiro fornece a classe base, o layout da interface de classe fica fora de seu controle. Além disso, ao contrário de uma interface somente de expedição, uma interface dupla (**ClassInterface.AutoDual**) fornece uma descrição da interface de classe na biblioteca de tipos exportada. Uma descrição como essa incentiva os clientes de associação tardia a armazenarem em cache os DispIds em tempo de execução.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)   
- [Wrappers COM](../../../docs/framework/interop/com-wrappers.md)   
- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Simulando interfaces COM](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)   
- [Qualificando tipos do .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [Wrappers COM](../../../docs/framework/interop/com-wrappers.md)  
+ [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Simulando Interfaces de COM](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md)
-

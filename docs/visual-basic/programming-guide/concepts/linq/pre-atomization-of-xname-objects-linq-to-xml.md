@@ -1,31 +1,27 @@
 ---
-title: "A pré-compilação Atomização de XName objetos (LINQ to XML) (Visual Basic) | Documentos do Microsoft"
+title: "A pré-compilação Atomização de XName objetos (LINQ para XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 519b64a96e03e098d7325cfb779bcd5d53db3741
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 967e41afc70290a4e4bdccabb8f3f4dd4ac4f6ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>A pré-compilação Atomização de XName objetos (LINQ to XML) (Visual Basic)
-Uma maneira de melhorar o desempenho em LINQ to XML é pré-compilação atomizar <xref:System.Xml.Linq.XName>objetos.</xref:System.Xml.Linq.XName> A pré-compilação atomização significa que você atribuir uma cadeia de caracteres para um <xref:System.Xml.Linq.XName>antes de criar a árvore XML usando os construtores de objeto de <xref:System.Xml.Linq.XElement>e <xref:System.Xml.Linq.XAttribute>classes.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XName> Em seguida, em vez de passar uma cadeia de caracteres para o construtor, que usaria a conversão implícita de cadeia de caracteres para <xref:System.Xml.Linq.XName>, você passa o inicializado <xref:System.Xml.Linq.XName>objeto.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName>  
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>A pré-compilação Atomização de XName objetos (LINQ para XML) (Visual Basic)
+Uma maneira para melhorar o desempenho em LINQ to XML é pré-compilação atomizar objetos de <xref:System.Xml.Linq.XName> . a pré-compilação atomização significa que você atribuir uma cadeia de caracteres a um objeto de <xref:System.Xml.Linq.XName> antes de criar a árvore XML usando os construtores de classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XAttribute> . Em seguida, em vez de passar uma cadeia de caracteres para o construtor, que usaria a conversão implícita de cadeia de caracteres a <xref:System.Xml.Linq.XName>, você passa o objeto inicializado de <xref:System.Xml.Linq.XName> .  
   
- Isso melhora o desempenho quando você cria uma grande árvore XML em que os nomes específicos são repetidos. Para fazer isso, você pode declarar e inicializar <xref:System.Xml.Linq.XName>objetos antes de construir a árvore XML e, em seguida, usar o <xref:System.Xml.Linq.XName>objetos em vez de especificar cadeias de caracteres para os nomes de elemento e atributo.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName> Essa técnica pode produzir ganhos significativos de desempenho se você estiver criando um grande número de elementos ou atributos () com o mesmo nome.  
+ Isso melhora o desempenho quando você cria uma grande árvore XML em que os nomes específicos são repetidos. Para fazer isso, você declarar e inicializar objetos de <xref:System.Xml.Linq.XName> antes que você construa a árvore XML e em seguida, usar objetos de <xref:System.Xml.Linq.XName> em vez de especificar cadeias de caracteres para nomes de elementos e atributos. Essa técnica pode produzir ganhos significativos de desempenho se você estiver criando um grande número de elementos ou atributos () com o mesmo nome.  
   
  Você deve testar a pré-compilação atomização com seu cenário para decidir se você usar o.  
   
@@ -100,5 +96,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Desempenho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)   
- [Atomizados de XName e XNamespace objeto (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+ [Desempenho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)  
+ [Atomizado XName e XNamespace objeto (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
