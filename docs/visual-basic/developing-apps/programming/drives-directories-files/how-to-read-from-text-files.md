@@ -1,97 +1,78 @@
 ---
 title: Como ler a partir de arquivos de texto no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- extended characters, reading
-- reading text files
+- extended characters [Visual Basic], reading
+- reading text files [Visual Basic]
 - reading data, text files
 - examples [Visual Basic], reading text files
-- text files, reading
+- text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f75d89fb4ab10a8c116d4a0ab79c17ceb3efd0ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9b38b7f869a1d4ff290042a18a9bc2e0fa2709b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>Como ler a partir de arquivos de texto no Visual Basic
-O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> do objeto `My.Computer.FileSystem` permite que você leia um arquivo de texto. A codificação do arquivo pode ser especificada se o conteúdo do arquivo usar uma codificação, como ASCII ou UTF-8.  
+# <a name="how-to-read-from-text-files-in-visual-basic"></a><span data-ttu-id="01107-102">Como ler a partir de arquivos de texto no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="01107-102">How to: Read From Text Files in Visual Basic</span></span>
+<span data-ttu-id="01107-103">O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> do objeto `My.Computer.FileSystem` permite que você leia um arquivo de texto.</span><span class="sxs-lookup"><span data-stu-id="01107-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> method of the `My.Computer.FileSystem` object allows you to read from a text file.</span></span> <span data-ttu-id="01107-104">A codificação do arquivo pode ser especificada se o conteúdo do arquivo usar uma codificação, como ASCII ou UTF-8.</span><span class="sxs-lookup"><span data-stu-id="01107-104">The file encoding can be specified if the contents of the file use an encoding such as ASCII or UTF-8.</span></span>  
   
- Se você estiver lendo um arquivo com caracteres estendidos, será necessário especificar a codificação do arquivo.  
+ <span data-ttu-id="01107-105">Se você estiver lendo um arquivo com caracteres estendidos, será necessário especificar a codificação do arquivo.</span><span class="sxs-lookup"><span data-stu-id="01107-105">If you are reading from a file with extended characters, you will need to specify the file encoding.</span></span>  
   
 > [!NOTE]
->  Para ler em um arquivo uma linha de texto por vez, use o método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> do objeto `My.Computer.FileSystem`. O método `OpenTextFileReader` retorna um objeto <xref:System.IO.StreamReader>. Você pode usar o método <xref:System.IO.StreamReader.ReadLine%2A> do objeto `StreamReader` para ler o arquivo uma linha por vez. Você pode testar o final do arquivo usando o método <xref:System.IO.StreamReader.EndOfStream%2A> do objeto `StreamReader`.  
+>  <span data-ttu-id="01107-106">Para ler em um arquivo uma linha de texto por vez, use o método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> do objeto `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="01107-106">To read a file a single line of text at a time, use the <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> method of the `My.Computer.FileSystem` object.</span></span> <span data-ttu-id="01107-107">O método `OpenTextFileReader` retorna um objeto <xref:System.IO.StreamReader>.</span><span class="sxs-lookup"><span data-stu-id="01107-107">The `OpenTextFileReader` method returns a <xref:System.IO.StreamReader> object.</span></span> <span data-ttu-id="01107-108">Você pode usar o método <xref:System.IO.StreamReader.ReadLine%2A> do objeto `StreamReader` para ler o arquivo uma linha por vez.</span><span class="sxs-lookup"><span data-stu-id="01107-108">You can use the <xref:System.IO.StreamReader.ReadLine%2A> method of the `StreamReader` object to read a file one line at a time.</span></span> <span data-ttu-id="01107-109">Você pode testar o final do arquivo usando o método <xref:System.IO.StreamReader.EndOfStream%2A> do objeto `StreamReader`.</span><span class="sxs-lookup"><span data-stu-id="01107-109">You can test for the end of the file using the <xref:System.IO.StreamReader.EndOfStream%2A> method of the `StreamReader` object.</span></span>  
   
-### <a name="to-read-from-a-text-file"></a>Para ler um arquivo de texto  
+### <a name="to-read-from-a-text-file"></a><span data-ttu-id="01107-110">Para ler um arquivo de texto</span><span class="sxs-lookup"><span data-stu-id="01107-110">To read from a text file</span></span>  
   
--   Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho. O exemplo a seguir lê o conteúdo de test.txt em uma cadeia de caracteres e o exibe em uma caixa de mensagem.  
+-   <span data-ttu-id="01107-111">Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho.</span><span class="sxs-lookup"><span data-stu-id="01107-111">Use the `ReadAllText` method of the `My.Computer.FileSystem` object to read the contents of a text file into a string, supplying the path.</span></span> <span data-ttu-id="01107-112">O exemplo a seguir lê o conteúdo de test.txt em uma cadeia de caracteres e o exibe em uma caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="01107-112">The following example reads the contents of test.txt into a string and then displays it in a message box.</span></span>  
   
      [!code-vb[VbFileIORead#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_1.vb)]  
   
-### <a name="to-read-from-a-text-file-that-is-encoded"></a>Para ler de um arquivo de texto que está codificado  
+### <a name="to-read-from-a-text-file-that-is-encoded"></a><span data-ttu-id="01107-113">Para ler de um arquivo de texto que está codificado</span><span class="sxs-lookup"><span data-stu-id="01107-113">To read from a text file that is encoded</span></span>  
   
--   Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho e o tipo da codificação do arquivo. O exemplo a seguir lê o conteúdo do arquivo test.txt UTF32 em uma cadeia de caracteres e depois o exibe em uma caixa de mensagem.  
+-   <span data-ttu-id="01107-114">Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho e o tipo da codificação do arquivo.</span><span class="sxs-lookup"><span data-stu-id="01107-114">Use the `ReadAllText` method of the `My.Computer.FileSystem` object to read the contents of a text file into a string, supplying the path and file encoding type.</span></span> <span data-ttu-id="01107-115">O exemplo a seguir lê o conteúdo do arquivo test.txt UTF32 em uma cadeia de caracteres e depois o exibe em uma caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="01107-115">The following example reads the contents of the UTF32 file test.txt into a string and then displays it in a message box.</span></span>  
   
      [!code-vb[VbFileIORead#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_2.vb)]  
   
-## <a name="robust-programming"></a>Programação robusta  
- As seguintes condições podem causar uma exceção:  
+## <a name="robust-programming"></a><span data-ttu-id="01107-116">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="01107-116">Robust Programming</span></span>  
+ <span data-ttu-id="01107-117">As seguintes condições podem causar uma exceção:</span><span class="sxs-lookup"><span data-stu-id="01107-117">The following conditions may cause an exception:</span></span>  
   
--   O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero, contém somente espaço em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="01107-118">O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero, contém somente espaço em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="01107-118">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (<xref:System.ArgumentException>).</span></span>  
   
--   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="01107-119">O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="01107-119">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   O arquivo não existe (<xref:System.IO.FileNotFoundException>).  
+-   <span data-ttu-id="01107-120">O arquivo não existe (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="01107-120">The file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   O arquivo está em uso por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="01107-121">O arquivo está em uso por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="01107-121">The file is in use by another process or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
   
--   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="01107-122">O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="01107-122">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="01107-123">Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="01107-123">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   Não há memória suficiente para gravar a cadeia de caracteres no buffer (<xref:System.OutOfMemoryException>).  
+-   <span data-ttu-id="01107-124">Não há memória suficiente para gravar a cadeia de caracteres no buffer (<xref:System.OutOfMemoryException>).</span><span class="sxs-lookup"><span data-stu-id="01107-124">There is not enough memory to write the string to buffer (<xref:System.OutOfMemoryException>).</span></span>  
   
--   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="01107-125">O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="01107-125">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
- Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Por exemplo, o arquivo Form1.vb pode não ser um arquivo de código-fonte do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ <span data-ttu-id="01107-126">Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="01107-126">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="01107-127">Por exemplo, o arquivo Form1.vb pode não ser um arquivo de código-fonte do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="01107-127">For example, the file Form1.vb may not be a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] source file.</span></span>  
   
- Verifique todas as entradas antes de usar os dados no seu aplicativo. O conteúdo do arquivo pode não ser esperado, e os métodos para ler o arquivo podem falhar.  
+ <span data-ttu-id="01107-128">Verifique todas as entradas antes de usar os dados no seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="01107-128">Verify all inputs before using the data in your application.</span></span> <span data-ttu-id="01107-129">O conteúdo do arquivo pode não ser esperado, e os métodos para ler o arquivo podem falhar.</span><span class="sxs-lookup"><span data-stu-id="01107-129">The contents of the file may not be what is expected, and methods to read from the file may fail.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>   
- [Leitura de Arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [Como ler com base em arquivos de texto separados por vírgulas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [Como ler em arquivos de texto de largura fixa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
- [Como ler em arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
- [Solução de Problemas: Lendo e Gravando em Arquivos de Texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
- [Passo a passo: manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)   
- [Codificações de Arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
-
+## <a name="see-also"></a><span data-ttu-id="01107-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="01107-130">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
+ [<span data-ttu-id="01107-131">Leitura de arquivos</span><span class="sxs-lookup"><span data-stu-id="01107-131">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [<span data-ttu-id="01107-132">Como ler a partir de arquivos de texto separados por vírgulas</span><span class="sxs-lookup"><span data-stu-id="01107-132">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [<span data-ttu-id="01107-133">Como ler a partir de arquivos de texto de largura fixa</span><span class="sxs-lookup"><span data-stu-id="01107-133">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [<span data-ttu-id="01107-134">Como ler a partir de arquivos de texto com vários formatos</span><span class="sxs-lookup"><span data-stu-id="01107-134">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [<span data-ttu-id="01107-135">Solução de problemas: lendo e gravando em arquivos de texto</span><span class="sxs-lookup"><span data-stu-id="01107-135">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
+ [<span data-ttu-id="01107-136">Passo a passo: manipulando arquivos e diretórios no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="01107-136">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [<span data-ttu-id="01107-137">Codificações de Arquivo</span><span class="sxs-lookup"><span data-stu-id="01107-137">File Encodings</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)

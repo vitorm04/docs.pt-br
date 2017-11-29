@@ -8,73 +8,70 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework development
+helpviewer_keywords: .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
 ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="net-framework-application-essentials"></a>Fundamentos do aplicativo .NET Framework
-Esta seção da documentação do .NET Framework oferece informações sobre tarefas básicas de desenvolvimento do aplicativo no .NET Framework.  
+# <a name="net-framework-application-essentials"></a><span data-ttu-id="5ea1e-102">Fundamentos do aplicativo .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5ea1e-102">.NET Framework Application Essentials</span></span>
+<span data-ttu-id="5ea1e-103">Esta seção da documentação do .NET Framework oferece informações sobre tarefas básicas de desenvolvimento do aplicativo no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-103">This section of the .NET Framework documentation provides information about basic application development tasks in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Tipos base](../../docs/standard/base-types/index.md)  
- Discute os tipos de bancos de dados de formatação e análise e o uso de expressões regulares para processar o texto.  
+## <a name="in-this-section"></a><span data-ttu-id="5ea1e-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5ea1e-104">In This Section</span></span>  
+ [<span data-ttu-id="5ea1e-105">Tipos base</span><span class="sxs-lookup"><span data-stu-id="5ea1e-105">Base Types</span></span>](../../docs/standard/base-types/index.md)  
+ <span data-ttu-id="5ea1e-106">Discute os tipos de bancos de dados de formatação e análise e o uso de expressões regulares para processar o texto.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-106">Discusses formatting and parsing base data types and using regular expressions to process text.</span></span>  
   
- [Coleções e Estruturas de Dados](../../docs/standard/collections/index.md)  
- Discute os vários tipos de coleção disponíveis no .NET Framework, incluindo pilhas, filas, listas, matrizes e structs.  
+ [<span data-ttu-id="5ea1e-107">Coleções e Estruturas de Dados</span><span class="sxs-lookup"><span data-stu-id="5ea1e-107">Collections and Data Structures</span></span>](../../docs/standard/collections/index.md)  
+ <span data-ttu-id="5ea1e-108">Discute os vários tipos de coleção disponíveis no .NET Framework, incluindo pilhas, filas, listas, matrizes e structs.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-108">Discusses the various collection types available in the .NET Framework, including stacks, queues, lists, arrays, and structs.</span></span>  
   
- [Genéricos](../../docs/standard/generics/index.md)  
- Descreve o recurso Genéricos, incluindo coleções, interfaces e representantes genéricos fornecidos pelo .NET Framework. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e a tecnologias de suporte como Reflection.  
+ [<span data-ttu-id="5ea1e-109">Genéricos</span><span class="sxs-lookup"><span data-stu-id="5ea1e-109">Generics</span></span>](../../docs/standard/generics/index.md)  
+ <span data-ttu-id="5ea1e-110">Descreve o recurso Genéricos, incluindo coleções, interfaces e representantes genéricos fornecidos pelo .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-110">Describes the Generics feature, including the generic collections, delegates, and interfaces provided by the .NET Framework.</span></span> <span data-ttu-id="5ea1e-111">Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e a tecnologias de suporte como Reflection.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-111">Provides links to feature documentation for C#, Visual Basic and Visual C++, and to supporting technologies such as Reflection.</span></span>  
   
- [Numéricos](../../docs/standard/numerics.md)  
- Descreve os tipos numéricos no .NET Framework.  
+ [<span data-ttu-id="5ea1e-112">Numéricos</span><span class="sxs-lookup"><span data-stu-id="5ea1e-112">Numerics</span></span>](../../docs/standard/numerics.md)  
+ <span data-ttu-id="5ea1e-113">Descreve os tipos numéricos no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-113">Describes the numeric types in the .NET Framework.</span></span>  
   
- [Eventos](../../docs/standard/events/index.md)  
- Apresenta uma visão geral do modelo de evento no .NET Framework.  
+ [<span data-ttu-id="5ea1e-114">Eventos</span><span class="sxs-lookup"><span data-stu-id="5ea1e-114">Events</span></span>](../../docs/standard/events/index.md)  
+ <span data-ttu-id="5ea1e-115">Apresenta uma visão geral do modelo de evento no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-115">Provides an overview of the event model in the .NET Framework.</span></span>  
   
- [Exceções](../../docs/standard/exceptions/index.md)  
- Descreve o tratamento de erro oferecido pelo .NET Framework e os fundamentos do gerenciamento de exceções.  
+ [<span data-ttu-id="5ea1e-116">Exceções</span><span class="sxs-lookup"><span data-stu-id="5ea1e-116">Exceptions</span></span>](../../docs/standard/exceptions/index.md)  
+ <span data-ttu-id="5ea1e-117">Descreve o tratamento de erro oferecido pelo .NET Framework e os fundamentos do gerenciamento de exceções.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-117">Describes error handling provided by the .NET Framework and the fundamentals of handling exceptions.</span></span>  
   
- [E/S de arquivo e de fluxo](../../docs/standard/io/index.md)  
- Explica como você pode realizar o acesso a fluxo de arquivos e dados de maneira síncrona e assíncrona, e como usar armazenamento isolado.  
+ [<span data-ttu-id="5ea1e-118">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="5ea1e-118">File and Stream I-O</span></span>](../../docs/standard/io/index.md)  
+ <span data-ttu-id="5ea1e-119">Explica como você pode realizar o acesso a fluxo de arquivos e dados de maneira síncrona e assíncrona, e como usar armazenamento isolado.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-119">Explains how you can perform synchronous and asynchronous file and data stream access and how to use to isolated storage.</span></span>  
   
- [Datas, horas e fusos horários](../../docs/standard/datetime/index.md)  
- Descreve como trabalhar com fusos horários e conversões de fusos horários em aplicativos com distinção de fusos horários.  
+ [<span data-ttu-id="5ea1e-120">Datas, horas e fusos horários</span><span class="sxs-lookup"><span data-stu-id="5ea1e-120">Dates, Times, and Time Zones</span></span>](../../docs/standard/datetime/index.md)  
+ <span data-ttu-id="5ea1e-121">Descreve como trabalhar com fusos horários e conversões de fusos horários em aplicativos com distinção de fusos horários.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-121">Describes how to work with time zones and time zone conversions in time zone-aware applications.</span></span>  
   
- [Domínios do aplicativo e assemblies](../../docs/framework/app-domains/index.md)  
- Descreve como criar e trabalhar com assemblies e domínios de aplicativos.  
+ [<span data-ttu-id="5ea1e-122">Domínios do aplicativo e assemblies</span><span class="sxs-lookup"><span data-stu-id="5ea1e-122">Application Domains and Assemblies</span></span>](../../docs/framework/app-domains/index.md)  
+ <span data-ttu-id="5ea1e-123">Descreve como criar e trabalhar com assemblies e domínios de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-123">Describes how to create and work with assemblies and application domains.</span></span>  
   
- [Serialização](../../docs/standard/serialization/index.md)  
- Discute o processo de conversão do estado de um objeto em formato que possa ser persistido ou transportado.  
+ [<span data-ttu-id="5ea1e-124">Serialização</span><span class="sxs-lookup"><span data-stu-id="5ea1e-124">Serialization</span></span>](../../docs/standard/serialization/index.md)  
+ <span data-ttu-id="5ea1e-125">Discute o processo de conversão do estado de um objeto em formato que possa ser persistido ou transportado.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-125">Discusses the process of converting the state of an object into a form that can be persisted or transported.</span></span>  
   
- [Recursos em aplicativos de área de trabalho](../../docs/framework/resources/index.md)  
- Descreve o suporte do .NET Framework para a criação e o armazenamento de recursos. Esta seção também descreve o suporte a recursos localizados e o modelo de recursos de assembly satélite para embalar e implantar esses recursos localizados.  
+ [<span data-ttu-id="5ea1e-126">Recursos em aplicativos de área de trabalho</span><span class="sxs-lookup"><span data-stu-id="5ea1e-126">Resources in Desktop Apps</span></span>](../../docs/framework/resources/index.md)  
+ <span data-ttu-id="5ea1e-127">Descreve o suporte do .NET Framework para a criação e o armazenamento de recursos.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-127">Describes the .NET Framework support for creating and storing resources.</span></span> <span data-ttu-id="5ea1e-128">Esta seção também descreve o suporte a recursos localizados e o modelo de recursos de assembly satélite para embalar e implantar esses recursos localizados.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-128">This section also describes support for localized resources and the satellite assembly resource model for packaging and deploying those localized resources.</span></span>  
   
- [Globalização e localização](../../docs/standard/globalization-localization/index.md)  
- Oferece informações para ajudar você a projetar e desenvolver aplicativos prontos para uso.  
+ [<span data-ttu-id="5ea1e-129">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="5ea1e-129">Globalization and Localization</span></span>](../../docs/standard/globalization-localization/index.md)  
+ <span data-ttu-id="5ea1e-130">Oferece informações para ajudar você a projetar e desenvolver aplicativos prontos para uso.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-130">Provides information to help you design and develop world-ready applications.</span></span>  
   
- Acessibilidade  
- Oferece informações sobre a Automação da Interface do Usuário Microsoft, que é uma estrutura de acessibilidade que lida com as necessidades de produtos de tecnologia adaptativa e estruturas de teste automatizado fornecendo acesso programático a informações sobre a interface do usuário.  
+ <span data-ttu-id="5ea1e-131">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="5ea1e-131">Accessibility</span></span>  
+ <span data-ttu-id="5ea1e-132">Oferece informações sobre a Automação da Interface do Usuário Microsoft, que é uma estrutura de acessibilidade que lida com as necessidades de produtos de tecnologia adaptativa e estruturas de teste automatizado fornecendo acesso programático a informações sobre a interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-132">Provides information about Microsoft UI Automation, which is an accessibility framework that addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span>  
   
- [Atributos](../../docs/standard/attributes/index.md)  
- Descreve como usar atributos para personalizar metadados.  
+ [<span data-ttu-id="5ea1e-133">Atributos</span><span class="sxs-lookup"><span data-stu-id="5ea1e-133">Attributes</span></span>](../../docs/standard/attributes/index.md)  
+ <span data-ttu-id="5ea1e-134">Descreve como usar atributos para personalizar metadados.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-134">Describes how you can use attributes to customize metadata.</span></span>  
   
- [Aplicativos de 64 bits](../../docs/framework/64-bit-apps.md)  
- Discute questões relevantes ao desenvolvimento de aplicativos que serão executados no sistema operacional Windows de 64 bits.  
+ [<span data-ttu-id="5ea1e-135">Aplicativos de 64 bits</span><span class="sxs-lookup"><span data-stu-id="5ea1e-135">64-bit Applications</span></span>](../../docs/framework/64-bit-apps.md)  
+ <span data-ttu-id="5ea1e-136">Discute questões relevantes ao desenvolvimento de aplicativos que serão executados no sistema operacional Windows de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-136">Discusses issues relevant to developing applications that will run on a Windows 64-bit operating system.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Guia de desenvolvimento](../../docs/framework/development-guide.md)  
- Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
+## <a name="related-sections"></a><span data-ttu-id="5ea1e-137">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="5ea1e-137">Related Sections</span></span>  
+ [<span data-ttu-id="5ea1e-138">Guia de desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="5ea1e-138">Development Guide</span></span>](../../docs/framework/development-guide.md)  
+ <span data-ttu-id="5ea1e-139">Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-139">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
   
- [Segurança](../../docs/standard/security/index.md)  
- Oferece informações sobre classes e serviços no Command Language Runtime e no .NET Framework que facilitam um desenvolvimento seguro do aplicativo.
-
+ [<span data-ttu-id="5ea1e-140">Segurança</span><span class="sxs-lookup"><span data-stu-id="5ea1e-140">Security</span></span>](../../docs/standard/security/index.md)  
+ <span data-ttu-id="5ea1e-141">Oferece informações sobre classes e serviços no Command Language Runtime e no .NET Framework que facilitam um desenvolvimento seguro do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5ea1e-141">Provides information about the classes and services in the common language runtime and the .NET Framework that facilitate secure application development.</span></span>

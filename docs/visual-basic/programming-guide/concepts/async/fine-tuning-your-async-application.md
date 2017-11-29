@@ -1,62 +1,54 @@
 ---
-title: Ajustando seu aplicativo Async (Visual Basic) | Documentos do Microsoft
+title: Ajustando seu aplicativo Async (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7d0cac2fe7305031b93a375a08e785285a291320
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: eb5f85701c3b298fea30586797c9411347e8ec84
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="fine-tuning-your-async-application-visual-basic"></a>Ajustando seu aplicativo Async (Visual Basic)
-Você pode adicionar flexibilidade e precisão aos seus aplicativos assíncronos usando os métodos e propriedades que o <xref:System.Threading.Tasks.Task>tipo disponibiliza.</xref:System.Threading.Tasks.Task> Os tópicos nesta seção mostram exemplos que usam <xref:System.Threading.CancellationToken>e importante `Task` métodos como <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>.</xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> </xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> </xref:System.Threading.CancellationToken>  
+# <a name="fine-tuning-your-async-application-visual-basic"></a><span data-ttu-id="a21b9-102">Ajustando seu aplicativo Async (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a21b9-102">Fine-Tuning Your Async Application (Visual Basic)</span></span>
+<span data-ttu-id="a21b9-103">É possível adicionar flexibilidade e precisão a seus aplicativos assíncronos usando os métodos e propriedades que o tipo <xref:System.Threading.Tasks.Task> disponibiliza.</span><span class="sxs-lookup"><span data-stu-id="a21b9-103">You can add precision and flexibility to your async applications by using the methods and properties that the <xref:System.Threading.Tasks.Task> type makes available.</span></span> <span data-ttu-id="a21b9-104">Os tópicos nesta seção mostram exemplos que usam <xref:System.Threading.CancellationToken> e métodos de `Task` importantes como <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a21b9-104">The topics in this section show examples that use <xref:System.Threading.CancellationToken> and important `Task` methods such as <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.</span></span>  
   
- Usando `WhenAny` e `WhenAll`, você pode iniciar várias tarefas e aguardar sua conclusão por uma única tarefa de monitoramento mais facilmente.  
+ <span data-ttu-id="a21b9-105">Usando `WhenAny` e `WhenAll`, é possível, com facilidade, iniciar várias tarefas e aguardar sua conclusão monitorando uma única tarefa.</span><span class="sxs-lookup"><span data-stu-id="a21b9-105">By using `WhenAny` and `WhenAll`, you can more easily start multiple tasks and await their completion by monitoring a single task.</span></span>  
   
--   `WhenAny`Retorna uma tarefa concluída quando qualquer tarefa em uma coleção for concluída.  
+-   <span data-ttu-id="a21b9-106">`WhenAny` retorna uma tarefa que é concluída quando qualquer tarefa em uma coleção for concluída.</span><span class="sxs-lookup"><span data-stu-id="a21b9-106">`WhenAny` returns a task that completes when any task in a collection is complete.</span></span>  
   
-     Para obter exemplos que usam `WhenAny`, consulte [Cancelar tarefas de Async restantes após um é concluído (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)e [iniciar várias tarefas assíncronas e processo-los como eles completo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).  
+     <span data-ttu-id="a21b9-107">Para obter exemplos que usam `WhenAny`, consulte [Cancelar assíncrono as tarefas restantes após uma for concluída (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)e [iniciar várias tarefas assíncronas e processo-los como eles completo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).</span><span class="sxs-lookup"><span data-stu-id="a21b9-107">For examples that use `WhenAny`, see  [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)and [Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).</span></span>  
   
--   `WhenAll`Retorna uma tarefa concluída quando todas as tarefas em uma coleção forem concluídas.  
+-   <span data-ttu-id="a21b9-108">`WhenAll` retorna uma tarefa que é concluída quando todas as tarefas em uma coleção forem concluídas.</span><span class="sxs-lookup"><span data-stu-id="a21b9-108">`WhenAll` returns a task that completes when all tasks in a collection are complete.</span></span>  
   
-     Para obter mais informações e um exemplo que usa `WhenAll`, consulte [como: estender o Async Walkthrough por usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     <span data-ttu-id="a21b9-109">Para obter mais informações e um exemplo que usa `WhenAll`, consulte [como: estender a Async Walkthrough por usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="a21b9-109">For more information and an example that uses `WhenAll`, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
   
- Esta seção inclui os exemplos a seguir.  
+ <span data-ttu-id="a21b9-110">Esta seção inclui os seguintes exemplos.</span><span class="sxs-lookup"><span data-stu-id="a21b9-110">This section includes the following examples.</span></span>  
   
--   [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md).  
+-   <span data-ttu-id="a21b9-111">[Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md).</span><span class="sxs-lookup"><span data-stu-id="a21b9-111">[Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md).</span></span>  
   
--   [Cancelar tarefas assíncronas após um período de tempo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)  
+-   [<span data-ttu-id="a21b9-112">Cancelar tarefas assíncronas após um período de tempo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a21b9-112">Cancel Async Tasks after a Period of Time (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)  
   
--   [Cancelar as demais tarefas assíncronas após um completo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)  
+-   [<span data-ttu-id="a21b9-113">Cancelar as demais tarefas assíncronas após um completo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a21b9-113">Cancel Remaining Async Tasks after One Is Complete (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)  
   
--   [Iniciar várias tarefas assíncronas e processá-las assim que são concluídas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)  
+-   [<span data-ttu-id="a21b9-114">Iniciar várias tarefas assíncronas e processá-las na conclusão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a21b9-114">Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)  
   
 > [!NOTE]
->  Para executar os exemplos, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior esteja instalado no computador.  
+>  <span data-ttu-id="a21b9-115">Para executar os exemplos, você precisa ter o Visual Studio 2012 ou uma versão mais recente e o .NET Framework 4.5 ou posterior instalados em seu computador.</span><span class="sxs-lookup"><span data-stu-id="a21b9-115">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
- Os projetos de criar uma interface do usuário que contém um botão que inicia o processo e um botão cancela, como mostra a imagem a seguir. Os botões são nomeados `startButton` e `cancelButton`.  
+ <span data-ttu-id="a21b9-116">Os projetos criam uma interface do usuário que contém um botão que inicia o processo e um botão que o cancela, como mostra a imagem a seguir.</span><span class="sxs-lookup"><span data-stu-id="a21b9-116">The projects create a UI that contains a button that starts the process and a button that cancels it, as the following image shows.</span></span> <span data-ttu-id="a21b9-117">Os botões são chamados `startButton` e `cancelButton`.</span><span class="sxs-lookup"><span data-stu-id="a21b9-117">The buttons are named `startButton` and `cancelButton`.</span></span>  
   
- ![Janela WPF com o botão Cancelar](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "cancelamento")  
+ <span data-ttu-id="a21b9-118">![Janela do WPF com o botão Cancelar](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "Cancelamento")</span><span class="sxs-lookup"><span data-stu-id="a21b9-118">![WPF window with Cancel button](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "Cancellation")</span></span>  
   
- Você pode baixar os projetos Windows Presentation Foundation (WPF) completa de [exemplo de assincronia: bem ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ <span data-ttu-id="a21b9-119">É possível baixar projetos completos do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046).</span><span class="sxs-lookup"><span data-stu-id="a21b9-119">You can download the complete Windows Presentation Foundation (WPF) projects from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a><span data-ttu-id="a21b9-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a21b9-120">See Also</span></span>  
+ [<span data-ttu-id="a21b9-121">Programação assíncrona com Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a21b9-121">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)

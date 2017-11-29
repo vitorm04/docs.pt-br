@@ -1,183 +1,166 @@
 ---
-title: 'Passo a passo: Chamando APIs do Windows (Visual Basic) | Documentos do Microsoft'
+title: "Instruções passo a passo: chamando APIs do Windows (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - DLLs, calling
 - Windows API, walkthroughs
 - platform invoke, walkthroughs
-- API calls, walkthroughs [Visual Basic]
+- API calls [Visual Basic], walkthroughs [Visual Basic]
 - Windows API, calling
 - walkthroughs [Visual Basic], API calls
 - DllImport attribute, calling Windows API
-- Declare statement, declaring DLL functions
+- Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5001ccebb0a5b8cadd4e856342601506cf1d033f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d494ad0f8bd4eb0dac57de214064fd2d208011ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Instruções passo a passo: chamando APIs do Windows (Visual Basic)
-APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows. Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência. Por exemplo, o Windows fornece uma função chamada `FlashWindowEx` que permite que você crie a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.  
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a><span data-ttu-id="2b20b-102">Instruções passo a passo: chamando APIs do Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b20b-102">Walkthrough: Calling Windows APIs (Visual Basic)</span></span>
+<span data-ttu-id="2b20b-103">APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows.</span><span class="sxs-lookup"><span data-stu-id="2b20b-103">Windows APIs are dynamic-link libraries (DLLs) that are part of the Windows operating system.</span></span> <span data-ttu-id="2b20b-104">Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência.</span><span class="sxs-lookup"><span data-stu-id="2b20b-104">You use them to perform tasks when it is difficult to write equivalent procedures of your own.</span></span> <span data-ttu-id="2b20b-105">Por exemplo, o Windows fornece uma função chamada `FlashWindowEx` que permite que você crie a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.</span><span class="sxs-lookup"><span data-stu-id="2b20b-105">For example, Windows provides a function named `FlashWindowEx` that lets you make the title bar for an application alternate between light and dark shades.</span></span>  
   
- A vantagem de usar APIs do Windows em seu código é que elas podem economizar tempo de desenvolvimento porque eles contêm dezenas de funções úteis que já estão gravadas e esperando para ser usado. A desvantagem é que APIs do Windows pode ser difícil trabalhar com e implacável quando as coisas dão errado.  
+ <span data-ttu-id="2b20b-106">A vantagem de usar APIs do Windows em seu código é que eles podem economizar tempo de desenvolvimento, porque eles contêm dezenas de funções úteis que já estão gravadas e esperando para ser usado.</span><span class="sxs-lookup"><span data-stu-id="2b20b-106">The advantage of using Windows APIs in your code is that they can save development time because they contain dozens of useful functions that are already written and waiting to be used.</span></span> <span data-ttu-id="2b20b-107">A desvantagem é que as APIs do Windows pode ser difícil trabalhar com e implacável quando as coisas dão erradas.</span><span class="sxs-lookup"><span data-stu-id="2b20b-107">The disadvantage is that Windows APIs can be difficult to work with and unforgiving when things go wrong.</span></span>  
   
- APIs do Windows representam uma categoria especial de interoperabilidade. APIs do Windows não usar código gerenciado, não têm interno bibliotecas de tipos e usar tipos de dados que são diferentes daqueles usados com o Visual Studio. Devido a essas diferenças, e como APIs do Windows não são objetos COM, interoperabilidade com APIs do Windows e o [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] é realizada usando a plataforma invoke, ou PInvoke. Invocação de plataforma é um serviço que permite que código gerenciado para chamar funções não gerenciadas implementadas em DLLs. Para obter mais informações, consulte [consumindo funções de DLL não gerenciada](http://msdn.microsoft.com/library/eca7606e-ebfb-4f47-b8d9-289903fdc045). Você pode usar PInvoke em [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] usando o `Declare` instrução ou aplicar o `DllImport` atributo a um procedimento vazio.  
+ <span data-ttu-id="2b20b-108">APIs do Windows representam uma categoria especial de interoperabilidade.</span><span class="sxs-lookup"><span data-stu-id="2b20b-108">Windows APIs represent a special category of interoperability.</span></span> <span data-ttu-id="2b20b-109">APIs do Windows não usam código gerenciado, não têm interno bibliotecas de tipos e usar tipos de dados que são diferentes daqueles usados com o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2b20b-109">Windows APIs do not use managed code, do not have built-in type libraries, and use data types that are different than those used with Visual Studio.</span></span> <span data-ttu-id="2b20b-110">Devido a essas diferenças, e como as APIs do Windows não são objetos COM, interoperabilidade com APIs do Windows e o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] é realizada usando a plataforma invocar, ou PInvoke.</span><span class="sxs-lookup"><span data-stu-id="2b20b-110">Because of these differences, and because Windows APIs are not COM objects, interoperability with Windows APIs and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] is performed using platform invoke, or PInvoke.</span></span> <span data-ttu-id="2b20b-111">Invocação de plataforma é um serviço que permite que o código para chamar funções não gerenciadas implementadas em DLLs gerenciado.</span><span class="sxs-lookup"><span data-stu-id="2b20b-111">Platform invoke is a service that enables managed code to call unmanaged functions implemented in DLLs.</span></span> <span data-ttu-id="2b20b-112">Para obter mais informações, consulte [consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md).</span><span class="sxs-lookup"><span data-stu-id="2b20b-112">For more information, see [Consuming Unmanaged DLL Functions](../../../framework/interop/consuming-unmanaged-dll-functions.md).</span></span> <span data-ttu-id="2b20b-113">Você pode usar PInvoke em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usando o `Declare` instrução ou aplicar o `DllImport` de atributo para um procedimento vazio.</span><span class="sxs-lookup"><span data-stu-id="2b20b-113">You can use PInvoke in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] by using either the `Declare` statement or applying the `DllImport` attribute to an empty procedure.</span></span>  
   
- Chamadas de API do Windows foram uma parte importante da [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] de programação no passado, mas raramente são necessárias com [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]. Sempre que possível, você deve usar código gerenciado do [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] para executar tarefas, em vez de chamadas de API do Windows. Este passo a passo fornece informações sobre as situações nas quais o uso APIs do Windows é necessária.  
+ <span data-ttu-id="2b20b-114">Chamadas de API do Windows foram uma parte importante da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programação no passado, mas raramente são necessárias com Visual Basic .NET.</span><span class="sxs-lookup"><span data-stu-id="2b20b-114">Windows API calls were an important part of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programming in the past, but are seldom necessary with Visual Basic .NET.</span></span> <span data-ttu-id="2b20b-115">Sempre que possível, você deve usar código gerenciado do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para executar tarefas, em vez de chamadas de API do Windows.</span><span class="sxs-lookup"><span data-stu-id="2b20b-115">Whenever possible, you should use managed code from the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] to perform tasks, instead of Windows API calls.</span></span> <span data-ttu-id="2b20b-116">Este passo a passo fornece informações para situações nas quais usando APIs do Windows é necessária.</span><span class="sxs-lookup"><span data-stu-id="2b20b-116">This walkthrough provides information for those situations in which using Windows APIs is necessary.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="api-calls-using-declare"></a>Chamadas de API usando Declare  
- É a maneira mais comum de chamar APIs do Windows usando o `Declare` instrução.  
+## <a name="api-calls-using-declare"></a><span data-ttu-id="2b20b-117">Chamadas de API usando Declare</span><span class="sxs-lookup"><span data-stu-id="2b20b-117">API Calls Using Declare</span></span>  
+ <span data-ttu-id="2b20b-118">É a maneira mais comum de chamar APIs do Windows usando o `Declare` instrução.</span><span class="sxs-lookup"><span data-stu-id="2b20b-118">The most common way to call Windows APIs is by using the `Declare` statement.</span></span>  
   
-#### <a name="to-declare-a-dll-procedure"></a>Para declarar um procedimento DLL  
+#### <a name="to-declare-a-dll-procedure"></a><span data-ttu-id="2b20b-119">Para declarar um procedimento DLL</span><span class="sxs-lookup"><span data-stu-id="2b20b-119">To declare a DLL procedure</span></span>  
   
-1.  Determine o nome da função que você deseja chamar, mais seus argumentos, tipos de argumento e retornar o valor, bem como o nome e o local da DLL que contém.  
+1.  <span data-ttu-id="2b20b-120">Determine o nome de função que você deseja chamar, mais argumentos, tipos de argumento e retorna o valor, bem como o nome e o local da DLL que contém.</span><span class="sxs-lookup"><span data-stu-id="2b20b-120">Determine the name of the function you want to call, plus its arguments, argument types, and return value, as well as the name and location of the DLL that contains it.</span></span>  
   
     > [!NOTE]
-    >  Para obter informações completas sobre as APIs do Windows, consulte a documentação do SDK do Win32 na API do Windows Platform SDK. Para obter mais informações sobre as constantes que usam APIs do Windows, examine os arquivos de cabeçalho, como Windows. h incluído no SDK da plataforma.  
+    >  <span data-ttu-id="2b20b-121">Para obter informações completas sobre as APIs do Windows, consulte a documentação do SDK do Win32 na API do Windows Platform SDK.</span><span class="sxs-lookup"><span data-stu-id="2b20b-121">For complete information about the Windows APIs, see the Win32 SDK documentation in the Platform SDK Windows API.</span></span> <span data-ttu-id="2b20b-122">Para obter mais informações sobre as constantes que usam APIs do Windows, examine os arquivos de cabeçalho, como Windows. h incluído no SDK da plataforma.</span><span class="sxs-lookup"><span data-stu-id="2b20b-122">For more information about the constants that Windows APIs use, examine the header files such as Windows.h included with the Platform SDK.</span></span>  
   
-2.  Abra um novo projeto de aplicativo do Windows clicando em **novo** no **arquivo** menu e, em seguida, clicando em **projeto**. A caixa de diálogo **Novo Projeto** é exibida.  
+2.  <span data-ttu-id="2b20b-123">Abra um novo projeto de aplicativo do Windows clicando em **novo** no **arquivo** menu e, em seguida, clicando em **projeto**.</span><span class="sxs-lookup"><span data-stu-id="2b20b-123">Open a new Windows Application project by clicking **New** on the **File** menu, and then clicking **Project**.</span></span> <span data-ttu-id="2b20b-124">A caixa de diálogo **Novo Projeto** é exibida.</span><span class="sxs-lookup"><span data-stu-id="2b20b-124">The **New Project** dialog box appears.</span></span>  
   
-3.  Selecione **Windows Application** da lista de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] modelos de projeto. O novo projeto é exibido.  
+3.  <span data-ttu-id="2b20b-125">Selecione **aplicativo do Windows** da lista de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelos de projeto.</span><span class="sxs-lookup"><span data-stu-id="2b20b-125">Select **Windows Application** from the list of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] project templates.</span></span> <span data-ttu-id="2b20b-126">O novo projeto é exibido.</span><span class="sxs-lookup"><span data-stu-id="2b20b-126">The new project is displayed.</span></span>  
   
-4.  Adicione o seguinte `Declare` função para a classe ou módulo no qual você deseja usar a DLL:  
+4.  <span data-ttu-id="2b20b-127">Adicione o seguinte `Declare` para a classe ou o módulo no qual você deseja usar a DLL de função:</span><span class="sxs-lookup"><span data-stu-id="2b20b-127">Add the following `Declare` function either to the class or module in which you want to use the DLL:</span></span>  
   
-     [!code-vb[VbVbalrInterop n º&9;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
+     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
   
-### <a name="parts-of-the-declare-statement"></a>Partes da instrução Declare  
- O `Declare` instrução inclui os seguintes elementos.  
+### <a name="parts-of-the-declare-statement"></a><span data-ttu-id="2b20b-128">Partes da instrução Declare</span><span class="sxs-lookup"><span data-stu-id="2b20b-128">Parts of the Declare Statement</span></span>  
+ <span data-ttu-id="2b20b-129">O `Declare` instrução inclui os seguintes elementos.</span><span class="sxs-lookup"><span data-stu-id="2b20b-129">The `Declare` statement includes the following elements.</span></span>  
   
-#### <a name="auto-modifier"></a>Modificador auto  
- O `Auto` modificador instrui o runtime a converter a cadeia de caracteres com base no nome do método de acordo com regras de tempo de execução de linguagem comum (ou alias se especificado).  
+#### <a name="auto-modifier"></a><span data-ttu-id="2b20b-130">Modificador auto</span><span class="sxs-lookup"><span data-stu-id="2b20b-130">Auto modifier</span></span>  
+ <span data-ttu-id="2b20b-131">O `Auto` modificador instrui o tempo de execução ao converter a cadeia de caracteres com base no nome do método de acordo com regras de tempo de execução de linguagem comum (ou alias se especificado).</span><span class="sxs-lookup"><span data-stu-id="2b20b-131">The `Auto` modifier instructs the runtime to convert the string based on the method name according to common language runtime rules (or alias name if specified).</span></span>  
   
-#### <a name="lib-and-alias-keywords"></a>Palavras-chave lib e Alias  
- O nome após o `Function` palavra-chave é o nome que seu programa usa para acessar a função importada. Pode ser o mesmo que o nome real da função que você está chamando, ou você pode usar qualquer nome válido de procedimento e, em seguida, utilize o `Alias` palavra-chave para especificar o nome real da função que você está chamando.  
+#### <a name="lib-and-alias-keywords"></a><span data-ttu-id="2b20b-132">Palavras-chave lib e Alias</span><span class="sxs-lookup"><span data-stu-id="2b20b-132">Lib and Alias keywords</span></span>  
+ <span data-ttu-id="2b20b-133">O nome após o `Function` palavra-chave é o nome do seu programa usa para acessar a função importada.</span><span class="sxs-lookup"><span data-stu-id="2b20b-133">The name following the `Function` keyword is the name your program uses to access the imported function.</span></span> <span data-ttu-id="2b20b-134">Pode ser o mesmo que o nome real da função que está chamando, ou você pode usar qualquer nome válido de procedimento e, em seguida, utilize o `Alias` palavra-chave para especificar o nome real da função chamada.</span><span class="sxs-lookup"><span data-stu-id="2b20b-134">It can be the same as the real name of the function you are calling, or you can use any valid procedure name and then employ the `Alias` keyword to specify the real name of the function you are calling.</span></span>  
   
- Especifique o `Lib` palavra-chave, seguido do nome e local da DLL que contém a função que você está chamando. Você não precisa especificar o caminho para arquivos localizados nos diretórios do sistema Windows.  
+ <span data-ttu-id="2b20b-135">Especifique o `Lib` palavra-chave, seguido do nome e local da DLL que contém a função chamada.</span><span class="sxs-lookup"><span data-stu-id="2b20b-135">Specify the `Lib` keyword, followed by the name and location of the DLL that contains the function you are calling.</span></span> <span data-ttu-id="2b20b-136">Você não precisa especificar o caminho para arquivos localizados em pastas do sistema Windows.</span><span class="sxs-lookup"><span data-stu-id="2b20b-136">You do not need to specify the path for files located in the Windows system directories.</span></span>  
   
- Use o `Alias` palavra-chave se o nome da função que você está chamando não é válido [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] nome do procedimento ou está em conflito com o nome de outros itens em seu aplicativo. `Alias`indica o nome da função que está sendo chamado.  
+ <span data-ttu-id="2b20b-137">Use o `Alias` palavra-chave se o nome da função de chamada não é válido [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nome do procedimento ou está em conflito com o nome de outros itens em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2b20b-137">Use the `Alias` keyword if the name of the function you are calling is not a valid [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] procedure name, or conflicts with the name of other items in your application.</span></span> <span data-ttu-id="2b20b-138">`Alias`indica o nome da função que está sendo chamado.</span><span class="sxs-lookup"><span data-stu-id="2b20b-138">`Alias` indicates the true name of the function being called.</span></span>  
   
-#### <a name="argument-and-data-type-declarations"></a>Argumento e declarações de tipo de dados  
- Declare os argumentos e seus tipos de dados. Esta parte pode ser desafiadora porque os tipos de dados que o Windows usa não correspondem aos tipos de dados do Visual Studio. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]faz muito do trabalho ao converter argumentos para tipos de dados compatíveis, um processo chamado *empacotamento*. Você pode controlar explicitamente como argumentos são empacotados usando o <xref:System.Runtime.InteropServices.MarshalAsAttribute>atributo definido no <xref:System.Runtime.InteropServices>namespace.</xref:System.Runtime.InteropServices> </xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+#### <a name="argument-and-data-type-declarations"></a><span data-ttu-id="2b20b-139">Argumento e declarações de tipo de dados</span><span class="sxs-lookup"><span data-stu-id="2b20b-139">Argument and Data Type Declarations</span></span>  
+ <span data-ttu-id="2b20b-140">Declare os argumentos e seus tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="2b20b-140">Declare the arguments and their data types.</span></span> <span data-ttu-id="2b20b-141">Esta parte pode ser desafiadora porque os tipos de dados que usa o Windows não correspondem aos tipos de dados do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2b20b-141">This part can be challenging because the data types that Windows uses do not correspond to Visual Studio data types.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="2b20b-142">faz muito do trabalho ao converter argumentos para tipos de dados compatíveis, um processo chamado *marshaling*.</span><span class="sxs-lookup"><span data-stu-id="2b20b-142"> does a lot of the work for you by converting arguments to compatible data types, a process called *marshaling*.</span></span> <span data-ttu-id="2b20b-143">Você pode controlar explicitamente como argumentos são empacotados usando o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo definido no <xref:System.Runtime.InteropServices> namespace.</span><span class="sxs-lookup"><span data-stu-id="2b20b-143">You can explicitly control how arguments are marshaled by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute defined in the <xref:System.Runtime.InteropServices> namespace.</span></span>  
   
 > [!NOTE]
->  Versões anteriores do [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] permitido declarar parâmetros `As Any`, que significa que os dados de qualquer dado tipo pode ser usado. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]requer que você use um tipo de dados específico para todas as `Declare` instruções.  
+>  <span data-ttu-id="2b20b-144">Versões anteriores do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] permitido declarar parâmetros `As Any`, significando que dados de qualquer dado de tipo pode ser usado.</span><span class="sxs-lookup"><span data-stu-id="2b20b-144">Previous versions of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] allowed you to declare parameters `As Any`, meaning that data of any data type could be used.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="2b20b-145">requer que você use um tipo de dados específico para todos os `Declare` instruções.</span><span class="sxs-lookup"><span data-stu-id="2b20b-145"> requires that you use a specific data type for all `Declare` statements.</span></span>  
   
-#### <a name="windows-api-constants"></a>Constantes de API do Windows  
- Alguns argumentos são combinações de constantes. Por exemplo, o `MessageBox` API mostrado neste passo a passo aceita um argumento integer chamado `Typ` que controla como a caixa de mensagem é exibida. Você pode determinar o valor numérico de constantes examinando o `#define` instruções no arquivo WinUser. H. Os valores numéricos geralmente são mostrados em hexadecimal, portanto você pode usar uma calculadora para adicioná-los e converter em decimal. Por exemplo, se você desejar combinar as constantes para o estilo de exclamação `MB_ICONEXCLAMATION` 0x00000030 e Sim/não estilo `MB_YESNO` 0x00000004, você pode adicionar os números e obter um resultado de 0x00000034, ou 52 decimal. Embora você possa usar diretamente o resultado decimal, é melhor declarar esses valores como constantes em seu aplicativo e combiná-los usando o `Or` operador.  
+#### <a name="windows-api-constants"></a><span data-ttu-id="2b20b-146">Constantes de API do Windows</span><span class="sxs-lookup"><span data-stu-id="2b20b-146">Windows API Constants</span></span>  
+ <span data-ttu-id="2b20b-147">Alguns argumentos são combinações de constantes.</span><span class="sxs-lookup"><span data-stu-id="2b20b-147">Some arguments are combinations of constants.</span></span> <span data-ttu-id="2b20b-148">Por exemplo, o `MessageBox` API mostrado neste passo a passo aceita um argumento inteiro chamado `Typ` que controla como a caixa de mensagem é exibida.</span><span class="sxs-lookup"><span data-stu-id="2b20b-148">For example, the `MessageBox` API shown in this walkthrough accepts an integer argument called `Typ` that controls how the message box is displayed.</span></span> <span data-ttu-id="2b20b-149">Você pode determinar o valor numérico de constantes examinando o `#define` instruções no arquivo WinUser.</span><span class="sxs-lookup"><span data-stu-id="2b20b-149">You can determine the numeric value of these constants by examining the `#define` statements in the file WinUser.h.</span></span> <span data-ttu-id="2b20b-150">Os valores numéricos geralmente são mostrados em hexadecimal, portanto, você talvez queira usar uma calculadora para adicioná-los e converter em decimal.</span><span class="sxs-lookup"><span data-stu-id="2b20b-150">The numeric values are generally shown in hexadecimal, so you may want to use a calculator to add them and convert to decimal.</span></span> <span data-ttu-id="2b20b-151">Por exemplo, se você desejar combinar as constantes para o estilo de exclamação `MB_ICONEXCLAMATION` 0x00000030 e Sim/não estilo `MB_YESNO` 0x00000004, você pode adicionar os números e obter um resultado de 0x00000034, ou 52 decimal.</span><span class="sxs-lookup"><span data-stu-id="2b20b-151">For example, if you want to combine the constants for the exclamation style `MB_ICONEXCLAMATION` 0x00000030 and the Yes/No style `MB_YESNO` 0x00000004, you can add the numbers and get a result of 0x00000034, or 52 decimal.</span></span> <span data-ttu-id="2b20b-152">Embora você possa usar diretamente o resultado decimal, é melhor declarar esses valores como constantes em seu aplicativo e combiná-los usando o `Or` operador.</span><span class="sxs-lookup"><span data-stu-id="2b20b-152">Although you can use the decimal result directly, it is better to declare these values as constants in your application and combine them using the `Or` operator.</span></span>  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>Para declarar constantes para chamadas de API do Windows  
+###### <a name="to-declare-constants-for-windows-api-calls"></a><span data-ttu-id="2b20b-153">Para declarar constantes para chamadas de API do Windows</span><span class="sxs-lookup"><span data-stu-id="2b20b-153">To declare constants for Windows API calls</span></span>  
   
-1.  Consulte a documentação para a função do Windows que você está chamando. Determine o nome de constantes que são usadas e o nome do arquivo. h que contém os valores numéricos para constantes.  
+1.  <span data-ttu-id="2b20b-154">Consulte a documentação para a função do Windows que está chamando.</span><span class="sxs-lookup"><span data-stu-id="2b20b-154">Consult the documentation for the Windows function you are calling.</span></span> <span data-ttu-id="2b20b-155">Determine o nome de constantes que são usadas e o nome do arquivo. h que contém os valores numéricos para constantes.</span><span class="sxs-lookup"><span data-stu-id="2b20b-155">Determine the name of the constants it uses and the name of the .h file that contains the numeric values for these constants.</span></span>  
   
-2.  Use um editor de texto, como o bloco de notas, para exibir o conteúdo do arquivo de cabeçalho (. h) e localizar os valores associados às constantes que você está usando. Por exemplo, o `MessageBox` API usa a constante `MB_ICONQUESTION` para mostrar um ponto de interrogação na caixa de mensagem. A definição de `MB_ICONQUESTION` está na WinUser. H e aparece da seguinte maneira:  
+2.  <span data-ttu-id="2b20b-156">Use um editor de texto, como o bloco de notas, para exibir o conteúdo do arquivo de cabeçalho (. h) e localizar os valores associados com as constantes que você está usando.</span><span class="sxs-lookup"><span data-stu-id="2b20b-156">Use a text editor, such as Notepad, to view the contents of the header (.h) file, and find the values associated with the constants you are using.</span></span> <span data-ttu-id="2b20b-157">Por exemplo, o `MessageBox` API usa a constante `MB_ICONQUESTION` para mostrar um ponto de interrogação na caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="2b20b-157">For example, the `MessageBox` API uses the constant `MB_ICONQUESTION` to show a question mark in the message box.</span></span> <span data-ttu-id="2b20b-158">A definição de `MB_ICONQUESTION` está em winuser. H e aparece da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="2b20b-158">The definition for `MB_ICONQUESTION` is in WinUser.h and appears as follows:</span></span>  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  Adicionar equivalente `Const` instruções à sua classe ou módulo para tornar essas constantes disponíveis para seu aplicativo. Por exemplo:  
+3.  <span data-ttu-id="2b20b-159">Adicionar equivalente `Const` instruções para sua classe ou módulo para tornar essas constantes disponíveis para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2b20b-159">Add equivalent `Const` statements to your class or module to make these constants available to your application.</span></span> <span data-ttu-id="2b20b-160">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="2b20b-160">For example:</span></span>  
   
-     [!code-vb[VbVbalrInterop n º&11;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
+     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
-###### <a name="to-call-the-dll-procedure"></a>Para chamar o procedimento DLL  
+###### <a name="to-call-the-dll-procedure"></a><span data-ttu-id="2b20b-161">Para chamar o procedimento DLL</span><span class="sxs-lookup"><span data-stu-id="2b20b-161">To call the DLL procedure</span></span>  
   
-1.  Adicione um botão chamado `Button1` para a inicialização do formulário para o seu projeto e, em seguida, clique duas vezes nele para exibir seu código. O manipulador de eventos para o botão é exibido.  
+1.  <span data-ttu-id="2b20b-162">Adicione um botão chamado `Button1` para a inicialização do formulário para o seu projeto e, em seguida, clique duas vezes nele para exibir seu código.</span><span class="sxs-lookup"><span data-stu-id="2b20b-162">Add a button named `Button1` to the startup form for your project, and then double-click it to view its code.</span></span> <span data-ttu-id="2b20b-163">O manipulador de eventos para o botão é exibido.</span><span class="sxs-lookup"><span data-stu-id="2b20b-163">The event handler for the button is displayed.</span></span>  
   
-2.  Adicione código para o `Click` manipulador de eventos para o botão é adicionado, para chamar o procedimento e forneça os argumentos apropriados:  
+2.  <span data-ttu-id="2b20b-164">Adicione código para o `Click` manipulador de eventos para o botão é adicionado, para chamar o procedimento e forneça os argumentos apropriados:</span><span class="sxs-lookup"><span data-stu-id="2b20b-164">Add code to the `Click` event handler for the button you added, to call the procedure and provide the appropriate arguments:</span></span>  
   
-     [!code-vb[VbVbalrInterop&#12;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
+     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
   
-3.  Execute o projeto pressionando F5. A caixa de mensagem é exibida com as **Sim** e **não** botões de resposta. Clique em qualquer um.  
+3.  <span data-ttu-id="2b20b-165">Execute o projeto, pressionando F5.</span><span class="sxs-lookup"><span data-stu-id="2b20b-165">Run the project by pressing F5.</span></span> <span data-ttu-id="2b20b-166">A caixa de mensagem é exibida com as **Sim** e **não** botões de resposta.</span><span class="sxs-lookup"><span data-stu-id="2b20b-166">The message box is displayed with both **Yes** and **No** response buttons.</span></span> <span data-ttu-id="2b20b-167">Clique em qualquer um.</span><span class="sxs-lookup"><span data-stu-id="2b20b-167">Click either one.</span></span>  
   
-#### <a name="data-marshaling"></a>Marshaling de dados  
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]automaticamente converte os tipos de dados de parâmetros e valores de retorno para chamadas de API do Windows, mas você podem usar o `MarshalAs` atributo para especificar os tipos de dados não gerenciados que esperam uma API explicitamente. Para obter mais informações sobre empacotamento de interoperabilidade, consulte [Interop Marshaling](http://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a).  
+#### <a name="data-marshaling"></a><span data-ttu-id="2b20b-168">Marshaling em dados</span><span class="sxs-lookup"><span data-stu-id="2b20b-168">Data Marshaling</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="2b20b-169">converte os tipos de dados de parâmetros e valores de retorno para chamadas de API do Windows, mas você podem usar automaticamente o `MarshalAs` atributo para especificar explicitamente os tipos de dados não gerenciados que esperam uma API.</span><span class="sxs-lookup"><span data-stu-id="2b20b-169"> automatically converts the data types of parameters and return values for Windows API calls, but you can use the `MarshalAs` attribute to explicitly specify unmanaged data types that an API expects.</span></span> <span data-ttu-id="2b20b-170">Para obter mais informações sobre o marshaling de interoperabilidade, consulte [Marshaling de interoperabilidade](../../../framework/interop/interop-marshaling.md).</span><span class="sxs-lookup"><span data-stu-id="2b20b-170">For more information about interop marshaling, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).</span></span>  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Para usar Declare e MarshalAs em uma chamada de API  
+###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a><span data-ttu-id="2b20b-171">Para usar Declare e MarshalAs em uma chamada de API</span><span class="sxs-lookup"><span data-stu-id="2b20b-171">To use Declare and MarshalAs in an API call</span></span>  
   
-1.  Determinar o nome da função que você deseja chamar, mais seus argumentos, tipos de dados, e o valor de retorno.  
+1.  <span data-ttu-id="2b20b-172">Determinar o nome da função que você deseja chamar, mais seus argumentos, tipos de dados, e o valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="2b20b-172">Determine the name of the function you want to call, plus its arguments, data types, and return value.</span></span>  
   
-2.  Para simplificar o acesso para o `MarshalAs` de atributo, adicione um `Imports` à parte superior do código para a classe ou módulo, como no exemplo a seguir:  
+2.  <span data-ttu-id="2b20b-173">Para simplificar o acesso para o `MarshalAs` de atributo, adicione um `Imports` à parte superior do código para a classe ou módulo, como no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="2b20b-173">To simplify access to the `MarshalAs` attribute, add an `Imports` statement to the top of the code for the class or module, as in the following example:</span></span>  
   
-     [!code-vb[VbVbalrInterop&13;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
-3.  Adicione um protótipo de função para a função importada para a classe ou módulo que você está usando e aplica o `MarshalAs` atributo aos parâmetros ou valor de retorno. No exemplo a seguir, uma chamada de API que espera que o tipo `void*` é empacotada como `AsAny`:  
+3.  <span data-ttu-id="2b20b-174">Adicionar um protótipo de função para a função importada para a classe ou módulo que você está usando e aplica o `MarshalAs` para os parâmetros de atributo ou valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="2b20b-174">Add a function prototype for the imported function to the class or module you are using, and apply the `MarshalAs` attribute to the parameters or return value.</span></span> <span data-ttu-id="2b20b-175">No exemplo a seguir, uma chamada à API que espera o tipo `void*` é empacotado como `AsAny`:</span><span class="sxs-lookup"><span data-stu-id="2b20b-175">In the following example, an API call that expects the type `void*` is marshaled as `AsAny`:</span></span>  
   
-     [!code-vb[VbVbalrInterop&#14;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
+     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
-## <a name="api-calls-using-dllimport"></a>Chamadas de API usando DllImport  
- O `DllImport` atributo fornece uma segunda maneira para chamar funções em DLLs sem bibliotecas de tipos. `DllImport`é aproximadamente equivalente a usar um `Declare` instrução mas oferece mais controle sobre como as funções são chamadas.  
+## <a name="api-calls-using-dllimport"></a><span data-ttu-id="2b20b-176">Chamadas de API usando DllImport</span><span class="sxs-lookup"><span data-stu-id="2b20b-176">API Calls Using DllImport</span></span>  
+ <span data-ttu-id="2b20b-177">O `DllImport` atributo fornece uma segunda maneira para chamar funções em DLLs sem bibliotecas de tipo.</span><span class="sxs-lookup"><span data-stu-id="2b20b-177">The `DllImport` attribute provides a second way to call functions in DLLs without type libraries.</span></span> <span data-ttu-id="2b20b-178">`DllImport`é aproximadamente equivalente a usar um `Declare` instrução mas oferece mais controle sobre como as funções são chamadas.</span><span class="sxs-lookup"><span data-stu-id="2b20b-178">`DllImport` is roughly equivalent to using a `Declare` statement but provides more control over how functions are called.</span></span>  
   
- Você pode usar `DllImport` com a API do Windows a maioria das chamadas, desde a chamada se refira a um compartilhado (às vezes chamado de *estático*) método. Você não pode usar os métodos que requerem uma instância de uma classe. Ao contrário de `Declare` instruções, `DllImport` chamadas não é possível usar o `MarshalAs` atributo.  
+ <span data-ttu-id="2b20b-179">Você pode usar `DllImport` com a API do Windows a maioria das chamadas desde que a chamada se refere a um compartilhado (às vezes chamado de *estático*) método.</span><span class="sxs-lookup"><span data-stu-id="2b20b-179">You can use `DllImport` with most Windows API calls as long as the call refers to a shared (sometimes called *static*) method.</span></span> <span data-ttu-id="2b20b-180">Você não pode usar os métodos que exigem uma instância de uma classe.</span><span class="sxs-lookup"><span data-stu-id="2b20b-180">You cannot use methods that require an instance of a class.</span></span> <span data-ttu-id="2b20b-181">Ao contrário de `Declare` instruções, `DllImport` chamadas não é possível usar o `MarshalAs` atributo.</span><span class="sxs-lookup"><span data-stu-id="2b20b-181">Unlike `Declare` statements, `DllImport` calls cannot use the `MarshalAs` attribute.</span></span>  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Para chamar uma API do Windows usando o atributo DllImport  
+#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a><span data-ttu-id="2b20b-182">Para chamar uma API do Windows usando o atributo DllImport</span><span class="sxs-lookup"><span data-stu-id="2b20b-182">To call a Windows API using the DllImport attribute</span></span>  
   
-1.  Abra um novo projeto de aplicativo do Windows clicando em **novo** no **arquivo** menu e, em seguida, clicando em **projeto**. A caixa de diálogo **Novo Projeto** é exibida.  
+1.  <span data-ttu-id="2b20b-183">Abra um novo projeto de aplicativo do Windows clicando em **novo** no **arquivo** menu e, em seguida, clicando em **projeto**.</span><span class="sxs-lookup"><span data-stu-id="2b20b-183">Open a new Windows Application project by clicking **New** on the **File** menu, and then clicking **Project**.</span></span> <span data-ttu-id="2b20b-184">A caixa de diálogo **Novo Projeto** é exibida.</span><span class="sxs-lookup"><span data-stu-id="2b20b-184">The **New Project** dialog box appears.</span></span>  
   
-2.  Selecione **Windows Application** da lista de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] modelos de projeto. O novo projeto é exibido.  
+2.  <span data-ttu-id="2b20b-185">Selecione **aplicativo do Windows** da lista de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelos de projeto.</span><span class="sxs-lookup"><span data-stu-id="2b20b-185">Select **Windows Application** from the list of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] project templates.</span></span> <span data-ttu-id="2b20b-186">O novo projeto é exibido.</span><span class="sxs-lookup"><span data-stu-id="2b20b-186">The new project is displayed.</span></span>  
   
-3.  Adicione um botão chamado `Button2` para o formulário de inicialização.  
+3.  <span data-ttu-id="2b20b-187">Adicione um botão chamado `Button2` para o formulário de inicialização.</span><span class="sxs-lookup"><span data-stu-id="2b20b-187">Add a button named `Button2` to the startup form.</span></span>  
   
-4.  Clique duas vezes em `Button2` para abrir o modo de exibição de código para o formulário.  
+4.  <span data-ttu-id="2b20b-188">Clique duas vezes em `Button2` para abrir o modo de exibição de código para o formulário.</span><span class="sxs-lookup"><span data-stu-id="2b20b-188">Double-click `Button2` to open the code view for the form.</span></span>  
   
-5.  Para simplificar o acesso ao `DllImport`, adicione um `Imports` à parte superior do código para a classe de formulário de inicialização:  
+5.  <span data-ttu-id="2b20b-189">Para simplificar o acesso ao `DllImport`, adicione um `Imports` à parte superior do código para a classe de formulário de inicialização:</span><span class="sxs-lookup"><span data-stu-id="2b20b-189">To simplify access to `DllImport`, add an `Imports` statement to the top of the code for the startup form class:</span></span>  
   
-     [!code-vb[VbVbalrInterop&13;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
-6.  Declarar uma função vazia que precede o `End Class` instrução para o formulário e nomeie a função `MoveFile`.  
+6.  <span data-ttu-id="2b20b-190">Declarar uma função vazia que precede o `End Class` instrução para o formulário e o nome de função `MoveFile`.</span><span class="sxs-lookup"><span data-stu-id="2b20b-190">Declare an empty function preceding the `End Class` statement for the form, and name the function `MoveFile`.</span></span>  
   
-7.  Aplicar o `Public` e `Shared` modificadores à função de declaração e definir parâmetros para `MoveFile` com base nos argumentos que função API do Windows usa:  
+7.  <span data-ttu-id="2b20b-191">Aplicar o `Public` e `Shared` modificadores de declaração de função e definir parâmetros para `MoveFile` com base nos argumentos de função de API do Windows usa:</span><span class="sxs-lookup"><span data-stu-id="2b20b-191">Apply the `Public` and `Shared` modifiers to the function declaration and set parameters for `MoveFile` based on the arguments the Windows API function uses:</span></span>  
   
-     [!code-vb[VbVbalrInterop n º&16;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
+     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
   
-     Sua função pode ter qualquer nome válido de procedimento; o `DllImport` atributo especifica o nome na DLL. Ele também trata interoperabilidade de empacotamento para os parâmetros e a API usa tipos de valores de retorno, assim você pode escolher os tipos de dados do Visual Studio que são semelhantes aos dados.  
+     <span data-ttu-id="2b20b-192">Sua função pode ter qualquer nome válido de procedimento; o `DllImport` atributo especifica o nome na DLL.</span><span class="sxs-lookup"><span data-stu-id="2b20b-192">Your function can have any valid procedure name; the `DllImport` attribute specifies the name in the DLL.</span></span> <span data-ttu-id="2b20b-193">Ele também trata interoperabilidade de empacotamento para os parâmetros e a API usa tipos de valores de retorno, assim você pode escolher os tipos de dados do Visual Studio que são semelhantes aos dados.</span><span class="sxs-lookup"><span data-stu-id="2b20b-193">It also handles interoperability marshaling for the parameters and return values, so you can choose Visual Studio data types that are similar to the data types the API uses.</span></span>  
   
-8.  Aplicar o `DllImport` atributo à função vazia. O primeiro parâmetro é o nome e o local da DLL que contém a função que você está chamando. Você não precisa especificar o caminho para arquivos localizados nos diretórios do sistema Windows. O segundo parâmetro é um argumento nomeado que especifica o nome da função da API do Windows. Neste exemplo, o `DllImport` atributo força chamadas para `MoveFile` sejam encaminhados para `MoveFileW` em KERNEL32. DLL. O `MoveFileW` método copia um arquivo do caminho de `src` para o caminho `dst`.  
+8.  <span data-ttu-id="2b20b-194">Aplicar o `DllImport` atributo à função vazia.</span><span class="sxs-lookup"><span data-stu-id="2b20b-194">Apply the `DllImport` attribute to the empty function.</span></span> <span data-ttu-id="2b20b-195">O primeiro parâmetro é o nome e o local da DLL que contém a função que está chamando.</span><span class="sxs-lookup"><span data-stu-id="2b20b-195">The first parameter is the name and location of the DLL containing the function you are calling.</span></span> <span data-ttu-id="2b20b-196">Você não precisa especificar o caminho para arquivos localizados em pastas do sistema Windows.</span><span class="sxs-lookup"><span data-stu-id="2b20b-196">You do not need to specify the path for files located in the Windows system directories.</span></span> <span data-ttu-id="2b20b-197">O segundo parâmetro é um argumento nomeado que especifica o nome da função da API do Windows.</span><span class="sxs-lookup"><span data-stu-id="2b20b-197">The second parameter is a named argument that specifies the name of the function in the Windows API.</span></span> <span data-ttu-id="2b20b-198">Neste exemplo, o `DllImport` atributo força chamadas para `MoveFile` a serem encaminhados para `MoveFileW` em KERNEL32. DLL.</span><span class="sxs-lookup"><span data-stu-id="2b20b-198">In this example, the `DllImport` attribute forces calls to `MoveFile` to be forwarded to `MoveFileW` in KERNEL32.DLL.</span></span> <span data-ttu-id="2b20b-199">O `MoveFileW` método copia um arquivo do caminho `src` para o caminho `dst`.</span><span class="sxs-lookup"><span data-stu-id="2b20b-199">The `MoveFileW` method copies a file from the path `src` to the path `dst`.</span></span>  
   
-     [!code-vb[17 VbVbalrInterop](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
+     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
   
-9. Adicione código para o `Button2_Click` manipulador de eventos para chamar a função:  
+9. <span data-ttu-id="2b20b-200">Adicione código para o `Button2_Click` manipulador de eventos para chamar a função:</span><span class="sxs-lookup"><span data-stu-id="2b20b-200">Add code to the `Button2_Click` event handler to call the function:</span></span>  
   
-     [!code-vb[VbVbalrInterop n º&18;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
+     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
   
-10. Crie um arquivo chamado Test. txt e coloque-na pasta C:\Tmp em seu disco rígido. Crie a pasta Tmp, se necessário.  
+10. <span data-ttu-id="2b20b-201">Crie um arquivo chamado Test. txt e coloque-na pasta C:\Tmp em seu disco rígido.</span><span class="sxs-lookup"><span data-stu-id="2b20b-201">Create a file named Test.txt and place it in the C:\Tmp directory on your hard drive.</span></span> <span data-ttu-id="2b20b-202">Crie a pasta Tmp, se necessário.</span><span class="sxs-lookup"><span data-stu-id="2b20b-202">Create the Tmp directory if necessary.</span></span>  
   
-11. Pressione F5 para iniciar o aplicativo. O formulário principal é exibido.  
+11. <span data-ttu-id="2b20b-203">Pressione F5 para iniciar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2b20b-203">Press F5 to start the application.</span></span> <span data-ttu-id="2b20b-204">O formulário principal é exibido.</span><span class="sxs-lookup"><span data-stu-id="2b20b-204">The main form appears.</span></span>  
   
-12. Clique em **Button2**. A mensagem "o arquivo foi movido com êxito" será exibida se o arquivo pode ser movido.  
+12. <span data-ttu-id="2b20b-205">Clique em **Button2**.</span><span class="sxs-lookup"><span data-stu-id="2b20b-205">Click **Button2**.</span></span> <span data-ttu-id="2b20b-206">A mensagem "o arquivo foi movido com êxito" será exibida se o arquivo pode ser movido.</span><span class="sxs-lookup"><span data-stu-id="2b20b-206">The message "The file was moved successfully" is displayed if the file can be moved.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute>   
- <xref:System.Runtime.InteropServices.MarshalAsAttribute></xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Automático](../../../visual-basic/language-reference/modifiers/auto.md)   
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)   
- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)   
- [Criando protótipos em código gerenciado](http://msdn.microsoft.com/library/ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d)   
- [Empacotamento de um delegado como um método de retorno de chamada](http://msdn.microsoft.com/library/6ddd7866-9804-4571-84de-83f5cc017a5a)
+## <a name="see-also"></a><span data-ttu-id="2b20b-207">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2b20b-207">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="2b20b-208">Instrução Declare</span><span class="sxs-lookup"><span data-stu-id="2b20b-208">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="2b20b-209">Auto</span><span class="sxs-lookup"><span data-stu-id="2b20b-209">Auto</span></span>](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [<span data-ttu-id="2b20b-210">Alias</span><span class="sxs-lookup"><span data-stu-id="2b20b-210">Alias</span></span>](../../../visual-basic/language-reference/statements/alias-clause.md)  
+ [<span data-ttu-id="2b20b-211">Interoperabilidade COM</span><span class="sxs-lookup"><span data-stu-id="2b20b-211">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [<span data-ttu-id="2b20b-212">Criando protótipos em código gerenciado</span><span class="sxs-lookup"><span data-stu-id="2b20b-212">Creating Prototypes in Managed Code</span></span>](../../../framework/interop/creating-prototypes-in-managed-code.md)  
+ [<span data-ttu-id="2b20b-213">Realizando marshaling de um delegado como um método de retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="2b20b-213">Marshaling a Delegate as a Callback Method</span></span>](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

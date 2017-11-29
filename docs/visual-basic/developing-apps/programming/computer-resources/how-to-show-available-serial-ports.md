@@ -1,77 +1,58 @@
 ---
 title: "Como mostrar portas seriais disponíveis no Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - serial ports, availability
 - My.Computer.Ports.SerialPortNames property
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1dc12d8ad4c27eff346ccb6a7f5fd2ae3bd76701
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bab6177c788a847b46586db19a525c1a1b36476d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Como mostrar portas seriais disponíveis no Visual Basic
-Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seriais disponíveis do computador no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a><span data-ttu-id="6312d-102">Como mostrar portas seriais disponíveis no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6312d-102">How to: Show Available Serial Ports in Visual Basic</span></span>
+<span data-ttu-id="6312d-103">Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seriais disponíveis do computador no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6312d-103">This topic describes how to use `My.Computer.Ports` to show the available serial ports of the computer in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- Para permitir que um usuário selecione qual porta usar, os nomes das portas seriais são colocados em um controle <xref:System.Windows.Forms.ListBox>.  
+ <span data-ttu-id="6312d-104">Para permitir que um usuário selecione qual porta usar, os nomes das portas seriais são colocados em um controle <xref:System.Windows.Forms.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="6312d-104">To allow a user to select which port to use, the names of the serial ports are placed in a <xref:System.Windows.Forms.ListBox> control.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo faz um loop em todas as cadeias de caracteres que a propriedade `My.Computer.Ports.SerialPortNames` retorna. Essas cadeias de caracteres são os nomes das portas seriais disponíveis no computador.  
+## <a name="example"></a><span data-ttu-id="6312d-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6312d-105">Example</span></span>  
+ <span data-ttu-id="6312d-106">Este exemplo faz um loop em todas as cadeias de caracteres que a propriedade `My.Computer.Ports.SerialPortNames` retorna.</span><span class="sxs-lookup"><span data-stu-id="6312d-106">This example loops over all the strings that the `My.Computer.Ports.SerialPortNames` property returns.</span></span> <span data-ttu-id="6312d-107">Essas cadeias de caracteres são os nomes das portas seriais disponíveis no computador.</span><span class="sxs-lookup"><span data-stu-id="6312d-107">These strings are the names of the available serial ports on the computer.</span></span>  
   
- Normalmente, um usuário seleciona qual porta serial o aplicativo deve usar na lista de portas disponíveis. Neste exemplo, os nomes das portas seriais são armazenados em um controle <xref:System.Windows.Forms.ListBox>. Para saber mais, veja [Controle ListBox](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
+ <span data-ttu-id="6312d-108">Normalmente, um usuário seleciona qual porta serial o aplicativo deve usar na lista de portas disponíveis.</span><span class="sxs-lookup"><span data-stu-id="6312d-108">Typically, a user selects which serial port the application should use from the list of available ports.</span></span> <span data-ttu-id="6312d-109">Neste exemplo, os nomes das portas seriais são armazenados em um controle <xref:System.Windows.Forms.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="6312d-109">In this example, the serial port names are stored in a <xref:System.Windows.Forms.ListBox> control.</span></span> <span data-ttu-id="6312d-110">Para saber mais, veja [Controle ListBox](../../../../framework/winforms/controls/listbox-control-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="6312d-110">For more information, see [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).</span></span>  
   
  [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
- Este exemplo de código também está disponível como um trecho de código do IntelliSense. No selecionador de trecho de código, ele está localizado em **Conectividade e Redes**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+ <span data-ttu-id="6312d-111">Este exemplo de código também está disponível como um trecho de código do IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="6312d-111">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="6312d-112">No selecionador de trecho de código, ele está localizado em **Conectividade e Redes**.</span><span class="sxs-lookup"><span data-stu-id="6312d-112">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="6312d-113">Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="6312d-113">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Este exemplo requer:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6312d-114">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="6312d-114">Compiling the Code</span></span>  
+ <span data-ttu-id="6312d-115">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="6312d-115">This example requires:</span></span>  
   
--   Uma referência de projeto ao System.Windows.Forms.dll.  
+-   <span data-ttu-id="6312d-116">Uma referência de projeto ao System.Windows.Forms.dll.</span><span class="sxs-lookup"><span data-stu-id="6312d-116">A project reference to System.Windows.Forms.dll.</span></span>  
   
--   Acesso aos membros do namespace <xref:System.Windows.Forms>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+-   <span data-ttu-id="6312d-117">Acesso aos membros do namespace <xref:System.Windows.Forms>.</span><span class="sxs-lookup"><span data-stu-id="6312d-117">Access to the members of the <xref:System.Windows.Forms> namespace.</span></span> <span data-ttu-id="6312d-118">Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código.</span><span class="sxs-lookup"><span data-stu-id="6312d-118">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="6312d-119">Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="6312d-119">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
--   Que seu formulário tenha um controle <xref:System.Windows.Forms.ListBox> chamado `ListBox1`.  
+-   <span data-ttu-id="6312d-120">Que seu formulário tenha um controle <xref:System.Windows.Forms.ListBox> chamado `ListBox1`.</span><span class="sxs-lookup"><span data-stu-id="6312d-120">That your form have a <xref:System.Windows.Forms.ListBox> control named `ListBox1`.</span></span>  
   
-## <a name="robust-programming"></a>Programação robusta  
- Você não precisa usar o controle <xref:System.Windows.Forms.ListBox> para exibir os nomes das portas seriais disponíveis. Em vez disso, você pode usar um <xref:System.Windows.Forms.ComboBox> ou outro controle. Se o aplicativo não precisa de uma resposta do usuário, você pode usar um controle <xref:System.Windows.Forms.TextBox> para exibir as informações.  
+## <a name="robust-programming"></a><span data-ttu-id="6312d-121">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="6312d-121">Robust Programming</span></span>  
+ <span data-ttu-id="6312d-122">Você não precisa usar o controle <xref:System.Windows.Forms.ListBox> para exibir os nomes das portas seriais disponíveis.</span><span class="sxs-lookup"><span data-stu-id="6312d-122">You do not have to use the <xref:System.Windows.Forms.ListBox> control to display the available serial port names.</span></span> <span data-ttu-id="6312d-123">Em vez disso, você pode usar um <xref:System.Windows.Forms.ComboBox> ou outro controle.</span><span class="sxs-lookup"><span data-stu-id="6312d-123">Instead, you can use a <xref:System.Windows.Forms.ComboBox> or other control.</span></span> <span data-ttu-id="6312d-124">Se o aplicativo não precisa de uma resposta do usuário, você pode usar um controle <xref:System.Windows.Forms.TextBox> para exibir as informações.</span><span class="sxs-lookup"><span data-stu-id="6312d-124">If the application does not need a response from the user, you can use a <xref:System.Windows.Forms.TextBox> control to display the information.</span></span>  
   
 > [!NOTE]
->  Os nomes das portas retornados por `My.Computer.Ports.SerialPortNames` podem estar incorretos quando executados no Windows 98. Para evitar erros de aplicativo, use o tratamento de exceções, como a instrução `Try...Catch...Finally` ou a instrução `Using`, ao usar os nomes de portas para abrir portas.  
+>  <span data-ttu-id="6312d-125">Os nomes das portas retornados por `My.Computer.Ports.SerialPortNames` podem estar incorretos quando executados no Windows 98.</span><span class="sxs-lookup"><span data-stu-id="6312d-125">The port names returned by `My.Computer.Ports.SerialPortNames` may be incorrect when run on Windows 98.</span></span> <span data-ttu-id="6312d-126">Para evitar erros de aplicativo, use o tratamento de exceções, como a instrução `Try...Catch...Finally` ou a instrução `Using`, ao usar os nomes de portas para abrir portas.</span><span class="sxs-lookup"><span data-stu-id="6312d-126">To prevent application errors, use exception handling, such as the `Try...Catch...Finally` statement or the `Using` statement, when using the port names to open ports.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- [Como discar modems conectados às portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
- [Como enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
- [Como Receber Cadeias de Caracteres de Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-
+## <a name="see-also"></a><span data-ttu-id="6312d-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6312d-127">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Devices.Ports>  
+ [<span data-ttu-id="6312d-128">Como Discar Modems Conectados a Portas Seriais</span><span class="sxs-lookup"><span data-stu-id="6312d-128">How to: Dial Modems Attached to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [<span data-ttu-id="6312d-129">Como Enviar Cadeias de Caracteres para Portas Seriais</span><span class="sxs-lookup"><span data-stu-id="6312d-129">How to: Send Strings to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [<span data-ttu-id="6312d-130">Como Receber Cadeias de Caracteres de Portas Seriais</span><span class="sxs-lookup"><span data-stu-id="6312d-130">How to: Receive Strings From Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)

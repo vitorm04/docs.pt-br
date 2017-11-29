@@ -1,46 +1,29 @@
 ---
-title: "Não acessível &quot;&lt;methodname&gt;&quot; pode ser chamado com esses argumentos sem uma conversão de restrição | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não acessível sobrecarregado &#39; &lt;methodname&gt;&#39; pode ser chamado com estes argumentos sem uma conversão de restrição"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAmbiguousMatch_NarrowingConversion1
+f1_keywords: vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf02ed1d9d004f64e9ba59661d83985a02cb9d43
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 636dbb082323718d8df0371751828e547d99c760
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com esses argumentos sem uma conversão de restrição
-Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista dos argumentos fornecidos sem uma conversão de restrição.  
+# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="06667-102">Não acessível sobrecarregado &#39; &lt;methodname&gt;&#39; pode ser chamado com estes argumentos sem uma conversão de restrição</span><span class="sxs-lookup"><span data-stu-id="06667-102">No accessible overloaded &#39;&lt;methodname&gt;&#39; can be called with these arguments without a narrowing conversion</span></span>
+<span data-ttu-id="06667-103">Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista dos argumentos fornecidos sem uma conversão de restrição.</span><span class="sxs-lookup"><span data-stu-id="06667-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="06667-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="06667-104">To correct this error</span></span>  
   
-1.  Especifique `Option Strict Off`.  
+1.  <span data-ttu-id="06667-105">Especifique `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="06667-105">Specify `Option Strict Off`.</span></span>  
   
-2.  Altere os argumentos para coincidir com as assinaturas do método sobrecarregado.  
+2.  <span data-ttu-id="06667-106">Altere os argumentos para coincidir com as assinaturas do método sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="06667-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Conversões de Widening e Narrowing](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="06667-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="06667-107">See Also</span></span>  
+ [<span data-ttu-id="06667-108">Passando Argumentos por Valor e por Referência</span><span class="sxs-lookup"><span data-stu-id="06667-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="06667-109">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="06667-109">Widening and Narrowing Conversions</span></span>](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

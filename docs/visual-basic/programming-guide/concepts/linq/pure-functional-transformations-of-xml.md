@@ -1,43 +1,39 @@
 ---
-title: "Transformações e puras XML (Visual Basic) | Documentos do Microsoft"
+title: "Transformações e puras XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 901585a249ca270d526796e7b1c0a5cfb664240a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 01ad228d91037de1585d1e66292fddb80c785ada
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Transformações e puras XML (Visual Basic)
-Esta seção fornece um tutorial funcional de transformação para XML. Isso inclui explicações sobre conceitos e as compilações de idioma que você deve compreender para usar transformações funcionais, e os exemplos chave de usar transformações e para manipular um documento XML. Embora este tutorial fornece exemplos de código LINQ to XML, todos os conceitos fundamentais também se aplicam ao outro LINQ tecnologias.  
+# <a name="pure-functional-transformations-of-xml-visual-basic"></a><span data-ttu-id="60b71-102">Transformações e puras XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60b71-102">Pure Functional Transformations of XML (Visual Basic)</span></span>
+<span data-ttu-id="60b71-103">Esta seção fornece um tutorial funcional de transformação para XML.</span><span class="sxs-lookup"><span data-stu-id="60b71-103">This section provides a functional transformation tutorial for XML.</span></span> <span data-ttu-id="60b71-104">Isso inclui explicações sobre conceitos e as compilações de idioma que você deve compreender para usar transformações funcionais, e os exemplos chave de usar transformações e para manipular um documento XML.</span><span class="sxs-lookup"><span data-stu-id="60b71-104">This includes explanations of the main concepts and language constructs that you must understand to use functional transformations, and examples of using functional transformations to manipulate an XML document.</span></span> <span data-ttu-id="60b71-105">Embora este tutorial fornece exemplos de código LINQ to XML, todos os conceitos fundamentais também se aplicam ao outro LINQ tecnologias.</span><span class="sxs-lookup"><span data-stu-id="60b71-105">Although this tutorial provides LINQ to XML code examples, all of the underlying concepts also apply to other LINQ technologies.</span></span>  
   
- O [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial fornece uma série de exemplos, cada prédio em anterior. Esses exemplos demonstram a abordagem transformacional funcional pura a manipular XML.  
+ <span data-ttu-id="60b71-106">O [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial fornece uma série de exemplos, cada prédio em anterior.</span><span class="sxs-lookup"><span data-stu-id="60b71-106">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial provides a series of examples, each building on the previous one.</span></span> <span data-ttu-id="60b71-107">Esses exemplos demonstram a abordagem transformacional funcional pura a manipular XML.</span><span class="sxs-lookup"><span data-stu-id="60b71-107">These examples demonstrate the pure functional transformational approach to manipulating XML.</span></span>  
   
- Este tutorial presume um conhecimento prático do Visual Basic. Semânticas detalhada sobre as compilações de linguagem não é fornecida neste tutorial, mas os links são fornecidos para a documentação de linguagem conforme apropriado.  
+ <span data-ttu-id="60b71-108">Este tutorial presume um conhecimento prático do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="60b71-108">This tutorial assumes a working knowledge of Visual Basic.</span></span> <span data-ttu-id="60b71-109">Semânticas detalhada sobre as compilações de linguagem não é fornecida neste tutorial, mas os links são fornecidos para a documentação de linguagem conforme apropriado.</span><span class="sxs-lookup"><span data-stu-id="60b71-109">Detailed semantics of the language constructs are not provided in this tutorial, but links are provided to the language documentation as appropriate.</span></span>  
   
- Um conhecimento trabalhando dos conceitos básicos e XML de computadores, incluindo namespaces XML, também será adotado.  
+ <span data-ttu-id="60b71-110">Um conhecimento trabalhando dos conceitos básicos e XML de computadores, incluindo namespaces XML, também será adotado.</span><span class="sxs-lookup"><span data-stu-id="60b71-110">A working knowledge of basic computer science concepts and XML, including XML namespaces, is also assumed.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="60b71-111">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="60b71-111">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="60b71-112">Tópico</span><span class="sxs-lookup"><span data-stu-id="60b71-112">Topic</span></span>|<span data-ttu-id="60b71-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="60b71-113">Description</span></span>|  
 |-----------|-----------------|  
-|[Introdução às transformações e puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Descreve transformações funcionais e define a terminologia relevante.|  
-|[Tutorial: Adiada execução (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Descreve a avaliação lazy e a execução adiada em detalhes.|  
-|[Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Um tutorial que demonstra uma transformação funcional.|  
+|[<span data-ttu-id="60b71-114">Introdução às transformações e puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60b71-114">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|<span data-ttu-id="60b71-115">Descreve transformações funcionais e define a terminologia relevante.</span><span class="sxs-lookup"><span data-stu-id="60b71-115">Describes functional transformations and defines the relevant terminology.</span></span>|  
+|[<span data-ttu-id="60b71-116">Tutorial: Adiada execução (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60b71-116">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|<span data-ttu-id="60b71-117">Descreve a avaliação lazy e a execução adiada em detalhes.</span><span class="sxs-lookup"><span data-stu-id="60b71-117">Describes lazy evaluation and deferred execution in detail.</span></span>|  
+|[<span data-ttu-id="60b71-118">Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60b71-118">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|<span data-ttu-id="60b71-119">Um tutorial que demonstra uma transformação funcional.</span><span class="sxs-lookup"><span data-stu-id="60b71-119">A tutorial that demonstrates a functional transformation.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Consultando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="60b71-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="60b71-120">See Also</span></span>  
+ [<span data-ttu-id="60b71-121">Consultando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60b71-121">Querying XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -1,43 +1,26 @@
 ---
-title: "Defina não permitido | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Set não permitido"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID387
+f1_keywords: vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 69a9fc47d6bf99ba437df720a9c042749387ce1b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 854384a84ccc6f31aef6c350049cc18c8a72a6fd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="set-not-permitted"></a>Set não permitido
-Você tentou alterar uma propriedade cujas configurações tanto não podem ser definidas em tempo de execução ou então podem ser definidas apenas em determinadas condições. Por exemplo, você pode ter tentado alterar a `Appearance`, `ControlBox`,`MinButton`, ou `MaxButton` configurações de propriedade para o formulário em tempo de execução, ou você podem ter tentado configurar a `Visible` propriedade `False` para o último submenu remanescente num menu pai.  
+# <a name="set-not-permitted"></a><span data-ttu-id="0b225-102">Set não permitido</span><span class="sxs-lookup"><span data-stu-id="0b225-102">Set not permitted</span></span>
+<span data-ttu-id="0b225-103">Você tentou alterar uma propriedade cujas configurações de um não podem ser definidas em tempo de execução ou então podem ser definidas apenas em determinadas condições.</span><span class="sxs-lookup"><span data-stu-id="0b225-103">You attempted to change a property whose settings either cannot be set at run time or else can only be set under certain conditions.</span></span> <span data-ttu-id="0b225-104">Por exemplo, você pode ter tentado alterar o `Appearance`, `ControlBox`,`MinButton`, ou `MaxButton` configurações de propriedade para o formulário no tempo de execução, ou você podem ter tentado definir o `Visible` propriedade `False` para a última restante submenu visível em um menu pai.</span><span class="sxs-lookup"><span data-stu-id="0b225-104">For example, you may have tried to change the `Appearance`, `ControlBox`,`MinButton`, or `MaxButton` property settings for the form at run time, or you may have tried to set the `Visible` property to `False` for the last remaining visible submenu on a parent menu.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0b225-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0b225-105">To correct this error</span></span>  
   
-1.  Verifique a propriedade e determine sob quais condições ela pode ser definida.  
+1.  <span data-ttu-id="0b225-106">Verifique a propriedade e determinar em quais condições podem ser definida.</span><span class="sxs-lookup"><span data-stu-id="0b225-106">Check the property and determine under what conditions it can be set.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [NIB: como modificar as propriedades do projeto e as definições de configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="0b225-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0b225-107">See Also</span></span>  
+ [<span data-ttu-id="0b225-108">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="0b225-108">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

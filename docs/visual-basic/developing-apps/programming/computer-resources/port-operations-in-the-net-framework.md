@@ -1,63 +1,43 @@
 ---
 title: "Operações de porta no .NET Framework com Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ports, Visual Basic
+helpviewer_keywords: ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8db016461ea204eaf349a2c588670a237c9e583b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e01853cba19ffa0a7d9997eef3d25d2b2e3166dd
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Operações de porta no .NET Framework com Visual Basic
-Você pode acessar as portas seriais do seu computador por meio de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] no namespace <xref:System.IO.Ports?displayProperty=fullName>. A classe mais importante, <xref:System.IO.Ports.SerialPort>, fornece uma estrutura para a E/S síncrona e orientada a eventos, acesso aos estados de fixação e interrupção e acesso às propriedades do driver serial. Ela pode ser encapsulada em um objeto <xref:System.IO.Stream>, acessível por meio da propriedade <xref:System.IO.Ports.SerialPort.BaseStream%2A>. O encapsulamento de <xref:System.IO.Ports.SerialPort> em um objeto <xref:System.IO.Stream> permite que a porta serial seja acessada por classes que usam fluxos. O namespace inclui enumerações que simplificam o controle de portas seriais.  
+# <a name="port-operations-in-the-net-framework-with-visual-basic"></a><span data-ttu-id="3ddd0-102">Operações de porta no .NET Framework com Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3ddd0-102">Port Operations in the .NET Framework with Visual Basic</span></span>
+<span data-ttu-id="3ddd0-103">Você pode acessar as portas seriais do seu computador por meio de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] no namespace <xref:System.IO.Ports?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-103">You can access your computer's serial ports through the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes in the <xref:System.IO.Ports?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="3ddd0-104">A classe mais importante, <xref:System.IO.Ports.SerialPort>, fornece uma estrutura para a E/S síncrona e orientada a eventos, acesso aos estados de fixação e interrupção e acesso às propriedades do driver serial.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-104">The most important class, <xref:System.IO.Ports.SerialPort>, provides a framework for synchronous and event-driven I/O, access to pin and break states, and access to serial driver properties.</span></span> <span data-ttu-id="3ddd0-105">Ela pode ser encapsulada em um objeto <xref:System.IO.Stream>, acessível por meio da propriedade <xref:System.IO.Ports.SerialPort.BaseStream%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-105">It can be wrapped in a <xref:System.IO.Stream> object, accessible through the <xref:System.IO.Ports.SerialPort.BaseStream%2A> property.</span></span> <span data-ttu-id="3ddd0-106">O encapsulamento de <xref:System.IO.Ports.SerialPort> em um objeto <xref:System.IO.Stream> permite que a porta serial seja acessada por classes que usam fluxos.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-106">Wrapping <xref:System.IO.Ports.SerialPort> in a <xref:System.IO.Stream> object allows the serial port to be accessed by classes that use streams.</span></span> <span data-ttu-id="3ddd0-107">O namespace inclui enumerações que simplificam o controle de portas seriais.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-107">The namespace includes enumerations that simplify the control of serial ports.</span></span>  
   
- A maneira mais simples para criar um objeto <xref:System.IO.Ports.SerialPort> é por meio do método <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ <span data-ttu-id="3ddd0-108">A maneira mais simples para criar um objeto <xref:System.IO.Ports.SerialPort> é por meio do método <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-108">The simplest way to create a <xref:System.IO.Ports.SerialPort> object is through the <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> method.</span></span>  
   
 > [!NOTE]
->  Não é possível usar classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para acessar diretamente outros tipos de portas, como portas paralelas, portas USB e assim por diante.  
+>  <span data-ttu-id="3ddd0-109">Não é possível usar classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para acessar diretamente outros tipos de portas, como portas paralelas, portas USB e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-109">You cannot use [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes to directly access other types of ports, such as parallel ports, USB ports, and so on.</span></span>  
   
-## <a name="enumerations"></a>Enumerações  
- Esta tabela lista e descreve as principais enumerações usadas para acessar uma porta serial:  
+## <a name="enumerations"></a><span data-ttu-id="3ddd0-110">Enumerações</span><span class="sxs-lookup"><span data-stu-id="3ddd0-110">Enumerations</span></span>  
+ <span data-ttu-id="3ddd0-111">Esta tabela lista e descreve as principais enumerações usadas para acessar uma porta serial:</span><span class="sxs-lookup"><span data-stu-id="3ddd0-111">This table lists and describes the main enumerations used for accessing a serial port:</span></span>  
   
-|Enumeração|Descrição|  
+|<span data-ttu-id="3ddd0-112">Enumeração</span><span class="sxs-lookup"><span data-stu-id="3ddd0-112">Enumeration</span></span>|<span data-ttu-id="3ddd0-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="3ddd0-113">Description</span></span>|  
 |---|---|   
-|<xref:System.IO.Ports.Handshake>|Especifica o protocolo de controle utilizado para estabelecer uma comunicação de porta serial para um objeto <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.Parity>|Especifica o bit de paridade para um objeto <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.SerialData>|Especifica o tipo de caractere que foi recebido na porta serial do objeto <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.SerialError>|Especifica os erros que ocorrem no objeto <xref:System.IO.Ports.SerialPort>|  
-|<xref:System.IO.Ports.SerialPinChange>|Especifica o tipo de alteração ocorrida no objeto <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.StopBits>|Especifica o número de bits de parada usado no objeto <xref:System.IO.Ports.SerialPort>.|  
+|<xref:System.IO.Ports.Handshake>|<span data-ttu-id="3ddd0-114">Especifica o protocolo de controle utilizado para estabelecer uma comunicação de porta serial para um objeto <xref:System.IO.Ports.SerialPort>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-114">Specifies the control protocol used in establishing a serial port communication for a <xref:System.IO.Ports.SerialPort> object.</span></span>|  
+|<xref:System.IO.Ports.Parity>|<span data-ttu-id="3ddd0-115">Especifica o bit de paridade para um objeto <xref:System.IO.Ports.SerialPort>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-115">Specifies the parity bit for a <xref:System.IO.Ports.SerialPort> object.</span></span>|  
+|<xref:System.IO.Ports.SerialData>|<span data-ttu-id="3ddd0-116">Especifica o tipo de caractere que foi recebido na porta serial do objeto <xref:System.IO.Ports.SerialPort>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-116">Specifies the type of character that was received on the serial port of the <xref:System.IO.Ports.SerialPort> object.</span></span>|  
+|<xref:System.IO.Ports.SerialError>|<span data-ttu-id="3ddd0-117">Especifica os erros que ocorrem no objeto <xref:System.IO.Ports.SerialPort></span><span class="sxs-lookup"><span data-stu-id="3ddd0-117">Specifies errors that occur on the <xref:System.IO.Ports.SerialPort> object</span></span>|  
+|<xref:System.IO.Ports.SerialPinChange>|<span data-ttu-id="3ddd0-118">Especifica o tipo de alteração ocorrida no objeto <xref:System.IO.Ports.SerialPort>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-118">Specifies the type of change that occurred on the <xref:System.IO.Ports.SerialPort> object.</span></span>|  
+|<xref:System.IO.Ports.StopBits>|<span data-ttu-id="3ddd0-119">Especifica o número de bits de parada usado no objeto <xref:System.IO.Ports.SerialPort>.</span><span class="sxs-lookup"><span data-stu-id="3ddd0-119">Specifies the number of stop bits used on the <xref:System.IO.Ports.SerialPort> object.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- [Acessando as Portas do Computador](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)
-
+## <a name="see-also"></a><span data-ttu-id="3ddd0-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3ddd0-120">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Devices.Ports>  
+ [<span data-ttu-id="3ddd0-121">Acessando as Portas do Computador</span><span class="sxs-lookup"><span data-stu-id="3ddd0-121">Accessing the Computer's Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)

@@ -1,43 +1,26 @@
 ---
-title: "Método &quot;&lt;methodname&gt;&quot;não tem nenhum parâmetro denominado&quot;&lt;parametername&gt;&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Método &#39; &lt;methodname&gt;&#39; tem nenhum parâmetro denominado &#39;&lt; nome do parâmetro&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_InvalidNamedArg2
+f1_keywords: vbrArgument_InvalidNamedArg2
 ms.assetid: b4346b6a-87da-4e65-a2de-ee5239c671f8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fff61b8966ed18f5b1828822fff3f01d74ca5cdb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1d1e5e8fb0f26b8e5ada4409fb0a5cf6ec3d80e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a>Método '&lt;methodname&gt;'não tem nenhum parâmetro denominado'&lt;parametername&gt;'
-Um argumento de nome fornecido não corresponde a nenhum dos argumentos do método de destino.  
+# <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a><span data-ttu-id="5cc94-102">Método &#39; &lt;methodname&gt;&#39; tem nenhum parâmetro denominado &#39;&lt; nome do parâmetro&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="5cc94-102">Method &#39;&lt;methodname&gt;&#39; has no parameter named &#39;&lt;parametername&gt;&#39;</span></span>
+<span data-ttu-id="5cc94-103">Um argumento de nome fornecido não corresponde a nenhum dos argumentos de método de destino.</span><span class="sxs-lookup"><span data-stu-id="5cc94-103">A supplied named argument does not match any of the arguments of the target method.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5cc94-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5cc94-104">To correct this error</span></span>  
   
-1.  Certifique-se de que o argumento nomeado foi fornecido corretamente.  
+1.  <span data-ttu-id="5cc94-105">Certifique-se de que o argumento nomeado foi fornecido corretamente.</span><span class="sxs-lookup"><span data-stu-id="5cc94-105">Ensure that the named argument was supplied correctly.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="5cc94-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5cc94-106">See Also</span></span>  
+ [<span data-ttu-id="5cc94-107">Passando Argumentos por Valor e por Referência</span><span class="sxs-lookup"><span data-stu-id="5cc94-107">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

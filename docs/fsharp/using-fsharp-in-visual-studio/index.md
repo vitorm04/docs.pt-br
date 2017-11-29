@@ -1,14 +1,12 @@
 ---
-redirect_url: /dotnet/articles/fsharp/using-fsharp-in-visual-studio/configuring-projects
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c27bed7dbad6b24c55734fcab0333bd3a1de85d6
-ms.openlocfilehash: c7c061cdd37809866ab4af813dee2af48a850a66
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/05/2017
-
+redirect_url: /dotnet/fsharp/using-fsharp-in-visual-studio/configuring-projects
+ms.openlocfilehash: 9b67dd3af366e09f98516ea17082ab7786b2af9d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="using-f-in-visual-studio"></a>Usando F# no Visual Studio
+# <a name="using-f-in-visual-studio"></a><span data-ttu-id="e56f5-101">Usando F# no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e56f5-101">Using F# in Visual Studio</span></span>
 
 > [!NOTE]
-Ainda está em andamento.
+<span data-ttu-id="e56f5-102">Ainda está em andamento.</span><span class="sxs-lookup"><span data-stu-id="e56f5-102">This is still in progress.</span></span>

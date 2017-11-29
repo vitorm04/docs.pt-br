@@ -7,92 +7,90 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
 ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/23/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
+# <a name="net-architectural-components"></a><span data-ttu-id="c770d-103">Componentes de arquitetura do .NET</span><span class="sxs-lookup"><span data-stu-id="c770d-103">.NET architectural components</span></span>
 
-Um aplicativo .NET é desenvolvido para e é executado em uma ou mais *implementações do .NET*.  Implementações do .NET incluem o .NET Framework, o .NET Core e o Mono. Há uma especificação de API comum a todas as implementações de .NET que é chamada de .NET Standard. Este artigo fornece uma breve introdução a cada um desses conceitos.
+<span data-ttu-id="c770d-104">Um aplicativo .NET é desenvolvido para e é executado em uma ou mais *implementações do .NET*.</span><span class="sxs-lookup"><span data-stu-id="c770d-104">A .NET app is developed for and runs in one or more *implementations of .NET*.</span></span>  <span data-ttu-id="c770d-105">Implementações do .NET incluem o .NET Framework, o .NET Core e o Mono.</span><span class="sxs-lookup"><span data-stu-id="c770d-105">Implementations of .NET include the .NET Framework, .NET Core, and Mono.</span></span> <span data-ttu-id="c770d-106">Há uma especificação de API comum a todas as implementações de .NET que é chamada de .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="c770d-106">There is an API specification common to all implementations of .NET that's called the .NET Standard.</span></span> <span data-ttu-id="c770d-107">Este artigo fornece uma breve introdução a cada um desses conceitos.</span><span class="sxs-lookup"><span data-stu-id="c770d-107">This article gives a brief introduction to each of these concepts.</span></span>
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a><span data-ttu-id="c770d-108">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="c770d-108">.NET Standard</span></span>
 
-O .NET Standard é um conjunto de APIs que são implementadas pela Biblioteca de classes base de uma implementação do .NET. De maneira mais formal, é uma especificação das APIs do .NET que compõem um conjunto uniforme de contratos nos quais você compila seu código. Esses contratos são implementados em cada implementação do .NET. Isso permite a portabilidade entre diferentes implementações de .NET, possibilitando efetivamente que seu código seja executado em qualquer lugar.
+<span data-ttu-id="c770d-109">O .NET Standard é um conjunto de APIs que são implementadas pela Biblioteca de classes base de uma implementação do .NET.</span><span class="sxs-lookup"><span data-stu-id="c770d-109">The .NET Standard is a set of APIs that are implemented by the Base Class Library of a .NET implementation.</span></span> <span data-ttu-id="c770d-110">De maneira mais formal, é uma especificação das APIs do .NET que compõem um conjunto uniforme de contratos nos quais você compila seu código.</span><span class="sxs-lookup"><span data-stu-id="c770d-110">More formally, it's a specification of .NET APIs that make up a uniform set of contracts that you compile your code against.</span></span> <span data-ttu-id="c770d-111">Esses contratos são implementados em cada implementação do .NET.</span><span class="sxs-lookup"><span data-stu-id="c770d-111">These contracts are implemented in each .NET implementation.</span></span> <span data-ttu-id="c770d-112">Isso permite a portabilidade entre diferentes implementações de .NET, possibilitando efetivamente que seu código seja executado em qualquer lugar.</span><span class="sxs-lookup"><span data-stu-id="c770d-112">This enables portability across different .NET implementations, effectively allowing your code to run everywhere.</span></span>
 
-O .NET Standard também é uma [estrutura de destino](glossary.md#target-framework). Se seu código se destina a uma versão do .NET Standard, ele pode ser executado em qualquer implementação do .NET que dê suporte a essa versão do .NET Standard.
+<span data-ttu-id="c770d-113">O .NET Standard também é uma [estrutura de destino](glossary.md#target-framework).</span><span class="sxs-lookup"><span data-stu-id="c770d-113">The .NET Standard is also a [target framework](glossary.md#target-framework).</span></span> <span data-ttu-id="c770d-114">Se seu código se destina a uma versão do .NET Standard, ele pode ser executado em qualquer implementação do .NET que dê suporte a essa versão do .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="c770d-114">If your code targets a version of the .NET Standard, it can run on any .NET implementation which supports that version of the .NET Standard.</span></span>
 
-Para saber mais sobre o NET Standard e como destinar a ele, consulte o tópico [.NET Standard](net-standard.md).
+<span data-ttu-id="c770d-115">Para saber mais sobre o NET Standard e como destinar a ele, consulte o tópico [.NET Standard](net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="c770d-115">To learn more about the .NET Standard and how to target it, see the [.NET Standard](net-standard.md) topic.</span></span>
 
-## <a name="net-implementations"></a>Implementações do .NET
+## <a name="net-implementations"></a><span data-ttu-id="c770d-116">Implementações do .NET</span><span class="sxs-lookup"><span data-stu-id="c770d-116">.NET implementations</span></span>
 
-Cada implementação do .NET inclui os seguintes componentes:
+<span data-ttu-id="c770d-117">Cada implementação do .NET inclui os seguintes componentes:</span><span class="sxs-lookup"><span data-stu-id="c770d-117">Each implementation of .NET includes the following components:</span></span>
 
-- Um ou mais tempos de execução. Exemplos: o CLR para o .NET Framework, o CoreCLR e o CoreRT para o .NET Core.
-- Uma biblioteca de classes que implemente o .NET Standard e possa implementar APIs adicionais. Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.
-- Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) estão incluídos no .NET Framework.
-- Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
+- <span data-ttu-id="c770d-118">Um ou mais tempos de execução.</span><span class="sxs-lookup"><span data-stu-id="c770d-118">One or more runtimes.</span></span> <span data-ttu-id="c770d-119">Exemplos: o CLR para o .NET Framework, o CoreCLR e o CoreRT para o .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c770d-119">Examples: CLR for .NET Framework, CoreCLR and CoreRT for .NET Core.</span></span>
+- <span data-ttu-id="c770d-120">Uma biblioteca de classes que implemente o .NET Standard e possa implementar APIs adicionais.</span><span class="sxs-lookup"><span data-stu-id="c770d-120">A class library that implements the .NET Standard and may implement additional APIs.</span></span> <span data-ttu-id="c770d-121">Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c770d-121">Examples: .NET Framework Base Class Library, .NET Core Base Class Library.</span></span>
+- <span data-ttu-id="c770d-122">Opcionalmente, uma ou mais estruturas de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c770d-122">Optionally, one or more application frameworks.</span></span> <span data-ttu-id="c770d-123">Exemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) estão incluídos no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c770d-123">Examples: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md), and [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) are included in the .NET Framework.</span></span>
+- <span data-ttu-id="c770d-124">Opcionalmente, ferramentas de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="c770d-124">Optionally, development tools.</span></span> <span data-ttu-id="c770d-125">Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.</span><span class="sxs-lookup"><span data-stu-id="c770d-125">Some development tools are shared among multiple implementations.</span></span>
 
-Há quatro implementações principais de .NET que a Microsoft desenvolve e mantém ativamente: .NET Core, .NET Framework, Mono e UWP.
+<span data-ttu-id="c770d-126">Há quatro implementações principais de .NET que a Microsoft desenvolve e mantém ativamente: .NET Core, .NET Framework, Mono e UWP.</span><span class="sxs-lookup"><span data-stu-id="c770d-126">There are four primary .NET implementations that Microsoft actively develops and maintains: .NET Core, .NET Framework, Mono, and UWP.</span></span>
 
-### <a name="net-core"></a>.NET Core
+### <a name="net-core"></a><span data-ttu-id="c770d-127">.NET Core</span><span class="sxs-lookup"><span data-stu-id="c770d-127">.NET Core</span></span>
 
-O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, no Linux e no macOS. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O ASP.NET Core é executado no .NET Core. 
+<span data-ttu-id="c770d-128">O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala.</span><span class="sxs-lookup"><span data-stu-id="c770d-128">.NET Core is a cross-platform implementation of .NET and designed to handle server and cloud workloads at scale.</span></span> <span data-ttu-id="c770d-129">Ele é executado no Windows, no Linux e no macOS.</span><span class="sxs-lookup"><span data-stu-id="c770d-129">It runs on Windows, macOS and Linux.</span></span> <span data-ttu-id="c770d-130">Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c770d-130">It implements the .NET Standard, so code that targets the .NET Standard can run on .NET Core.</span></span> <span data-ttu-id="c770d-131">O ASP.NET Core é executado no .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c770d-131">ASP.NET Core runs on .NET Core.</span></span> 
 
-Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
+<span data-ttu-id="c770d-132">Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).</span><span class="sxs-lookup"><span data-stu-id="c770d-132">To learn more about .NET Core, see the [.NET Core Guide](../core/index.md) and [Choosing between .NET Core and .NET Framework for server apps](choosing-core-framework-server.md).</span></span>
 
-### <a name="net-framework"></a>.NET Framework
+### <a name="net-framework"></a><span data-ttu-id="c770d-133">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="c770d-133">.NET Framework</span></span>
 
-O.NET Framework é a implementação original do .NET que existe desde 2002. É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram. As versões 4.5 e posteriores implementam o .NET Standard, assim, o código que se destina ao .NET Standard pode ser executado nessas versões do .NET Framework. Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF. O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.
+<span data-ttu-id="c770d-134">O.NET Framework é a implementação original do .NET que existe desde 2002.</span><span class="sxs-lookup"><span data-stu-id="c770d-134">The.NET Framework is the original .NET implementation that has existed since 2002.</span></span> <span data-ttu-id="c770d-135">É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram.</span><span class="sxs-lookup"><span data-stu-id="c770d-135">It's the same .NET Framework that existing .NET developers have always used.</span></span> <span data-ttu-id="c770d-136">As versões 4.5 e posteriores implementam o .NET Standard, assim, o código que se destina ao .NET Standard pode ser executado nessas versões do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c770d-136">Versions 4.5 and later implement the .NET Standard, so code that targets the .NET Standard can run on those versions of the .NET Framework.</span></span> <span data-ttu-id="c770d-137">Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF.</span><span class="sxs-lookup"><span data-stu-id="c770d-137">It contains additional Windows-specific APIs, such as APIs for Windows desktop development with Windows Forms and WPF.</span></span> <span data-ttu-id="c770d-138">O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.</span><span class="sxs-lookup"><span data-stu-id="c770d-138">The .NET Framework is optimized for building Windows desktop applications.</span></span>
 
-Para saber mais sobre o .NET Framework, consulte o [Guia do .NET Framework](../framework/index.md).
+<span data-ttu-id="c770d-139">Para saber mais sobre o .NET Framework, consulte o [Guia do .NET Framework](../framework/index.md).</span><span class="sxs-lookup"><span data-stu-id="c770d-139">To learn more about the .NET Framework, see the [.NET Framework Guide](../framework/index.md).</span></span>
 
-### <a name="mono"></a>Mono
+### <a name="mono"></a><span data-ttu-id="c770d-140">Mono</span><span class="sxs-lookup"><span data-stu-id="c770d-140">Mono</span></span>
 
-O Mono é uma implementação do .NET que é usada principalmente quando um pequeno tempo de execução é necessário. É o tempo de execução que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em um impacto pequeno.
+<span data-ttu-id="c770d-141">O Mono é uma implementação do .NET que é usada principalmente quando um pequeno tempo de execução é necessário.</span><span class="sxs-lookup"><span data-stu-id="c770d-141">Mono is a .NET implementation that is mainly used when a small runtime is required.</span></span> <span data-ttu-id="c770d-142">É o tempo de execução que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em um impacto pequeno.</span><span class="sxs-lookup"><span data-stu-id="c770d-142">It is the runtime that powers Xamarin applications on Android, Mac, iOS, tvOS and watchOS and is focused primarily on a small footprint.</span></span>
 
-Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.
+<span data-ttu-id="c770d-143">Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.</span><span class="sxs-lookup"><span data-stu-id="c770d-143">It supports all of the currently published .NET Standard versions.</span></span>
 
-Historicamente, o Mono implementava a maior API do .NET Framework e emulava alguns dos recursos mais populares do Unix. Às vezes, ele é usado para executar aplicativos .NET que dependem desses recursos no Unix.
+<span data-ttu-id="c770d-144">Historicamente, o Mono implementava a maior API do .NET Framework e emulava alguns dos recursos mais populares do Unix.</span><span class="sxs-lookup"><span data-stu-id="c770d-144">Historically, Mono implemented the larger API of the .NET Framework and emulated some of the most popular capabilities on Unix.</span></span> <span data-ttu-id="c770d-145">Às vezes, ele é usado para executar aplicativos .NET que dependem desses recursos no Unix.</span><span class="sxs-lookup"><span data-stu-id="c770d-145">It is sometimes used to run .NET applications that rely on those capabilities on Unix.</span></span>
 
-O Mono normalmente é usado com um compilador Just-In-Time, mas ele também apresenta um compilador estático completo (compilação Ahead Of Time) que é usado em plataformas como iOS.
+<span data-ttu-id="c770d-146">O Mono normalmente é usado com um compilador Just-In-Time, mas ele também apresenta um compilador estático completo (compilação Ahead Of Time) que é usado em plataformas como iOS.</span><span class="sxs-lookup"><span data-stu-id="c770d-146">Mono is typically used with a just-in-time compiler, but it also features a full static compiler (ahead-of-time compilation) that is used on platforms like iOS.</span></span>
 
-Para saber mais sobre o Mono, consulte a [Documentação do Mono](http://www.mono-project.com/docs/).
+<span data-ttu-id="c770d-147">Para saber mais sobre o Mono, consulte a [Documentação do Mono](http://www.mono-project.com/docs/).</span><span class="sxs-lookup"><span data-stu-id="c770d-147">To learn more about Mono, see the [Mono documentation](http://www.mono-project.com/docs/).</span></span>
 
-### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
+### <a name="universal-windows-platform-uwp"></a><span data-ttu-id="c770d-148">UWP (Plataforma Universal do Windows)</span><span class="sxs-lookup"><span data-stu-id="c770d-148">Universal Windows Platform (UWP)</span></span>
 
-A UWP é uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, VB.NET e JavaScript. Ao usar o C# e VB.NET, as APIs do .NET são fornecidas pelo .NET Core.
+<span data-ttu-id="c770d-149">A UWP é uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas).</span><span class="sxs-lookup"><span data-stu-id="c770d-149">UWP is an implementation of .NET that is used for building modern, touch-enabled Windows applications and software for the Internet of Things (IoT).</span></span> <span data-ttu-id="c770d-150">Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox.</span><span class="sxs-lookup"><span data-stu-id="c770d-150">It's designed to unify the different types of devices that you may want to target, including PCs, tablets, phablets, phones, and even the Xbox.</span></span> <span data-ttu-id="c770d-151">A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT).</span><span class="sxs-lookup"><span data-stu-id="c770d-151">UWP provides many services, such as a centralized app store, an execution environment (AppContainer), and a set of Windows APIs to use instead of Win32 (WinRT).</span></span> <span data-ttu-id="c770d-152">Os aplicativos podem ser escritos em C++, C#, VB.NET e JavaScript.</span><span class="sxs-lookup"><span data-stu-id="c770d-152">Apps can be written in C++, C#, VB.NET, and JavaScript.</span></span> <span data-ttu-id="c770d-153">Ao usar o C# e VB.NET, as APIs do .NET são fornecidas pelo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c770d-153">When using C# and VB.NET, the .NET APIs are provided by .NET Core.</span></span>
 
-Para saber mais sobre a UWP, consulte [Introdução à Plataforma Universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+<span data-ttu-id="c770d-154">Para saber mais sobre a UWP, consulte [Introdução à Plataforma Universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).</span><span class="sxs-lookup"><span data-stu-id="c770d-154">To learn more about UWP, see [Intro to the Universal Windows Platform](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).</span></span>
 
-## <a name="net-runtimes"></a>Tempos de execução do .NET
+## <a name="net-runtimes"></a><span data-ttu-id="c770d-155">Tempos de execução do .NET</span><span class="sxs-lookup"><span data-stu-id="c770d-155">.NET runtimes</span></span>
 
-Um tempo de execução é o ambiente de execução de um programa gerenciado. O SO faz parte do ambiente do tempo de execução, mas não faz parte do tempo de execução do .NET. Aqui estão alguns exemplos de tempos de execução do .NET:
+<span data-ttu-id="c770d-156">Um tempo de execução é o ambiente de execução de um programa gerenciado.</span><span class="sxs-lookup"><span data-stu-id="c770d-156">A runtime is the execution environment for a managed program.</span></span> <span data-ttu-id="c770d-157">O SO faz parte do ambiente do tempo de execução, mas não faz parte do tempo de execução do .NET.</span><span class="sxs-lookup"><span data-stu-id="c770d-157">The OS is part of the runtime environment but is not part of the .NET runtime.</span></span> <span data-ttu-id="c770d-158">Aqui estão alguns exemplos de tempos de execução do .NET:</span><span class="sxs-lookup"><span data-stu-id="c770d-158">Here are some examples of .NET runtimes:</span></span>
  
- - CLR (Common Language Runtime) para o .NET Framework
- - Core Common Language Runtime (CoreCLR) para o .NET Core
- - .NET Native para a Plataforma Universal do Windows 
- - O tempo de execução Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
+ - <span data-ttu-id="c770d-159">CLR (Common Language Runtime) para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c770d-159">Common Language Runtime (CLR) for the .NET Framework</span></span>
+ - <span data-ttu-id="c770d-160">Core Common Language Runtime (CoreCLR) para o .NET Core</span><span class="sxs-lookup"><span data-stu-id="c770d-160">Core Common Language Runtime (CoreCLR) for .NET Core</span></span>
+ - <span data-ttu-id="c770d-161">.NET Native para a Plataforma Universal do Windows</span><span class="sxs-lookup"><span data-stu-id="c770d-161">.NET Native for Universal Windows Platform</span></span> 
+ - <span data-ttu-id="c770d-162">O tempo de execução Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono</span><span class="sxs-lookup"><span data-stu-id="c770d-162">The Mono runtime for Xamarin.iOS, Xamarin.Android, Xamarin.Mac, and the Mono desktop framework</span></span>
 
-## <a name="net-tooling-and-common-infrastructure"></a>Ferramentas do .NET e infraestrutura comum
+## <a name="net-tooling-and-common-infrastructure"></a><span data-ttu-id="c770d-163">Ferramentas do .NET e infraestrutura comum</span><span class="sxs-lookup"><span data-stu-id="c770d-163">.NET tooling and common infrastructure</span></span>
 
-Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrutura que funcionam com todas as implementações do .NET. Elas incluem, mas não são limitadas a, o seguinte:
+<span data-ttu-id="c770d-164">Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrutura que funcionam com todas as implementações do .NET.</span><span class="sxs-lookup"><span data-stu-id="c770d-164">You have access to an extensive set of tools and infrastructure components that work with every implementation of .NET.</span></span> <span data-ttu-id="c770d-165">Elas incluem, mas não são limitadas a, o seguinte:</span><span class="sxs-lookup"><span data-stu-id="c770d-165">These include, but are not limited to the following:</span></span>
 
-- As linguagens do .NET e seus compiladores
-- O sistema de projetos do .NET (com base em arquivos *.csproj*, *.vbproj* e *.fsproj*)
-- [MSBuild](/visualstudio/msbuild/msbuild), o mecanismo de build usado para compilar projetos
-- [NuGet](/nuget/), o gerenciador de pacotes da Microsoft para o .NET
-- Ferramentas de orquestração de build em software livre, como [CAKE](http://cakebuild.net/) e [FAKE](https://fake.build/)
+- <span data-ttu-id="c770d-166">As linguagens do .NET e seus compiladores</span><span class="sxs-lookup"><span data-stu-id="c770d-166">The .NET languages and their compilers</span></span>
+- <span data-ttu-id="c770d-167">O sistema de projetos do .NET (com base em arquivos *.csproj*, *.vbproj* e *.fsproj*)</span><span class="sxs-lookup"><span data-stu-id="c770d-167">The .NET project system (based on *.csproj*, *.vbproj*, and *.fsproj* files)</span></span>
+- <span data-ttu-id="c770d-168">[MSBuild](/visualstudio/msbuild/msbuild), o mecanismo de build usado para compilar projetos</span><span class="sxs-lookup"><span data-stu-id="c770d-168">[MSBuild](/visualstudio/msbuild/msbuild), the build engine used to build projects</span></span>
+- <span data-ttu-id="c770d-169">[NuGet](/nuget/), o gerenciador de pacotes da Microsoft para o .NET</span><span class="sxs-lookup"><span data-stu-id="c770d-169">[NuGet](/nuget/), Microsoft's package manager for .NET</span></span>
+- <span data-ttu-id="c770d-170">Ferramentas de orquestração de build em software livre, como [CAKE](http://cakebuild.net/) e [FAKE](https://fake.build/)</span><span class="sxs-lookup"><span data-stu-id="c770d-170">Open-source build orchestration tools, such as [CAKE](http://cakebuild.net/) and [FAKE](https://fake.build/)</span></span>
 
-## <a name="see-also"></a>Consulte também
-[Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[Guia do .NET Core](../core/index.md)  
-[Guia do .NET Framework](../framework/index.md)  
-[Guia do C#](../csharp/index.md)  
-[Guia do F#](../fsharp/index.md)  
-[Guia do VB.NET](../visual-basic/index.md)  
-
+## <a name="see-also"></a><span data-ttu-id="c770d-171">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c770d-171">See also</span></span>
+<span data-ttu-id="c770d-172">[Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md) </span><span class="sxs-lookup"><span data-stu-id="c770d-172">[Choosing between .NET Core and .NET Framework for server apps](choosing-core-framework-server.md) </span></span>  
+[<span data-ttu-id="c770d-173">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="c770d-173">.NET Standard</span></span>](net-standard.md)  
+[<span data-ttu-id="c770d-174">Guia do .NET Core</span><span class="sxs-lookup"><span data-stu-id="c770d-174">.NET Core Guide</span></span>](../core/index.md)  
+[<span data-ttu-id="c770d-175">Guia do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c770d-175">.NET Framework Guide</span></span>](../framework/index.md)  
+[<span data-ttu-id="c770d-176">Guia do C#</span><span class="sxs-lookup"><span data-stu-id="c770d-176">C# Guide</span></span>](../csharp/index.md)  
+[<span data-ttu-id="c770d-177">Guia do F#</span><span class="sxs-lookup"><span data-stu-id="c770d-177">F# Guide</span></span>](../fsharp/index.md)  
+[<span data-ttu-id="c770d-178">Guia do VB.NET</span><span class="sxs-lookup"><span data-stu-id="c770d-178">VB.NET Guide</span></span>](../visual-basic/index.md)  
 

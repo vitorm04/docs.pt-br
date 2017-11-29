@@ -1,175 +1,156 @@
 ---
 title: Novidades do Visual Basic
-ms.date: 2017-04-27
+ms.date: 04/27/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- VB.StartPage.WhatsNew
-dev_langs:
-- VB
+f1_keywords: VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 145
+caps.latest.revision: "145"
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
+# <a name="whats-new-for-visual-basic"></a><span data-ttu-id="c6162-102">Novidades do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c6162-102">What's new for Visual Basic</span></span>
 
-Este tópico lista os nomes das principais funcionalidades para cada versão do Visual Basic, com descrições detalhadas das funcionalidades novas e aprimoradas na versão mais recente da linguagem.
+<span data-ttu-id="c6162-103">Este tópico lista os nomes das principais funcionalidades para cada versão do Visual Basic, com descrições detalhadas das funcionalidades novas e aprimoradas na versão mais recente da linguagem.</span><span class="sxs-lookup"><span data-stu-id="c6162-103">This topic lists key feature names for each version of Visual Basic, with detailed descriptions of the new and enhanced features in the lastest version of the language.</span></span>
   
-## <a name="current-version"></a>Versão atual
+## <a name="current-version"></a><span data-ttu-id="c6162-104">Versão atual</span><span class="sxs-lookup"><span data-stu-id="c6162-104">Current Version</span></span>
 
-Visual Basic / Visual Studio .NET 2017   
-Para as novas funcionalidades, consulte [Visual Basic 2017](#visual-basic-2017)
+<span data-ttu-id="c6162-105">Visual Basic / Visual Studio .NET 2017</span><span class="sxs-lookup"><span data-stu-id="c6162-105">Visual Basic / Visual Studio .NET 2017</span></span>   
+<span data-ttu-id="c6162-106">Para as novas funcionalidades, consulte [Visual Basic 2017](#visual-basic-2017)</span><span class="sxs-lookup"><span data-stu-id="c6162-106">For new features, see [Visual Basic 2017](#visual-basic-2017)</span></span>
 
-## <a name="previous-versions"></a>Versões anteriores
+## <a name="previous-versions"></a><span data-ttu-id="c6162-107">Versões anteriores</span><span class="sxs-lookup"><span data-stu-id="c6162-107">Previous versions</span></span>
 
-Visual Basic / Visual Studio .NET 2015   
-Para as novas funcionalidades, consulte [Visual Basic 14](#visual-basic-14)
+<span data-ttu-id="c6162-108">Visual Basic / Visual Studio .NET 2015</span><span class="sxs-lookup"><span data-stu-id="c6162-108">Visual Basic / Visual Studio .NET 2015</span></span>   
+<span data-ttu-id="c6162-109">Para as novas funcionalidades, consulte [Visual Basic 14](#visual-basic-14)</span><span class="sxs-lookup"><span data-stu-id="c6162-109">For new features, see [Visual Basic 14](#visual-basic-14)</span></span>
 
-Visual Basic / Visual Studio .NET 2013  
-Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
+<span data-ttu-id="c6162-110">Visual Basic / Visual Studio .NET 2013</span><span class="sxs-lookup"><span data-stu-id="c6162-110">Visual Basic / Visual Studio .NET 2013</span></span>  
+<span data-ttu-id="c6162-111">Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)</span><span class="sxs-lookup"><span data-stu-id="c6162-111">Technology previews of the .NET Compiler Platform (“Roslyn”)</span></span>
 
-Visual Basic / Visual Studio .NET 2012   
-palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador
+<span data-ttu-id="c6162-112">Visual Basic / Visual Studio .NET 2012</span><span class="sxs-lookup"><span data-stu-id="c6162-112">Visual Basic / Visual Studio .NET 2012</span></span>   
+<span data-ttu-id="c6162-113">palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador</span><span class="sxs-lookup"><span data-stu-id="c6162-113">`Async` and `await` keywords, iterators, caller info attributes</span></span>
 
-Visual Basic, Visual Studio .NET 2010   
-Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global
+<span data-ttu-id="c6162-114">Visual Basic, Visual Studio .NET 2010</span><span class="sxs-lookup"><span data-stu-id="c6162-114">Visual Basic, Visual Studio .NET 2010</span></span>   
+<span data-ttu-id="c6162-115">Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global</span><span class="sxs-lookup"><span data-stu-id="c6162-115">Auto-implemented properties, collection initializers, implicit line continuation, dynamic, generic co/contra variance, global namespace access</span></span>
 
-Visual Basic / Visual Studio .NET 2008   
-LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável  
+<span data-ttu-id="c6162-116">Visual Basic / Visual Studio .NET 2008</span><span class="sxs-lookup"><span data-stu-id="c6162-116">Visual Basic / Visual Studio .NET 2008</span></span>   
+<span data-ttu-id="c6162-117">LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável</span><span class="sxs-lookup"><span data-stu-id="c6162-117">Language Integrated Query (LINQ), XML literals, local type inference, object initializers, anonymous types, extension methods, local `var` type inference, lambda expressions, `if` operator, partial methods, nullable value types</span></span>  
 
-Visual Basic / Visual Studio .NET 2005   
-O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)
+<span data-ttu-id="c6162-118">Visual Basic / Visual Studio .NET 2005</span><span class="sxs-lookup"><span data-stu-id="c6162-118">Visual Basic / Visual Studio .NET 2005</span></span>   
+<span data-ttu-id="c6162-119">O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)</span><span class="sxs-lookup"><span data-stu-id="c6162-119">The `My` type and helper types (access to app, computer, files system, network)</span></span>
 
-Visual Basic / Visual Studio .NET 2003   
-Operadores bit shift, declaração de variável de loop
+<span data-ttu-id="c6162-120">Visual Basic / Visual Studio .NET 2003</span><span class="sxs-lookup"><span data-stu-id="c6162-120">Visual Basic / Visual Studio .NET 2003</span></span>   
+<span data-ttu-id="c6162-121">Operadores bit shift, declaração de variável de loop</span><span class="sxs-lookup"><span data-stu-id="c6162-121">Bit-shift operators, loop variable declaration</span></span>
 
-Visual Basic / Visual Studio .NET 2002   
-A primeira versão do Visual Basic .NET
+<span data-ttu-id="c6162-122">Visual Basic / Visual Studio .NET 2002</span><span class="sxs-lookup"><span data-stu-id="c6162-122">Visual Basic / Visual Studio .NET 2002</span></span>   
+<span data-ttu-id="c6162-123">A primeira versão do Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="c6162-123">The first release of Visual Basic .NET</span></span>
 
-## <a name="visual-basic-2017"></a>Visual Basic 2017
+## <a name="visual-basic-2017"></a><span data-ttu-id="c6162-124">Visual Basic 2017</span><span class="sxs-lookup"><span data-stu-id="c6162-124">Visual Basic 2017</span></span>
 
-[Tuplas](../programming-guide/language-features/data-types/tuples.md)
+[<span data-ttu-id="c6162-125">Tuplas</span><span class="sxs-lookup"><span data-stu-id="c6162-125">Tuples</span></span>](../programming-guide/language-features/data-types/tuples.md)
 
-As tuplas são uma estrutura de dados leve que é mais comumente usada para retornar vários valores de uma única chamada de método. Normalmente, para retornar vários valores de um método, você precisa realizar uma das seguintes ações:
+<span data-ttu-id="c6162-126">As tuplas são uma estrutura de dados leve que é mais comumente usada para retornar vários valores de uma única chamada de método.</span><span class="sxs-lookup"><span data-stu-id="c6162-126">Tuples are a lightweight data structure that most commonly is used to return multiple values from a single method call.</span></span> <span data-ttu-id="c6162-127">Normalmente, para retornar vários valores de um método, você precisa realizar uma das seguintes ações:</span><span class="sxs-lookup"><span data-stu-id="c6162-127">Ordinarily, to return multiple values from a method, you have to do one of the following:</span></span>
 
-- Defina um tipo personalizado (uma `Class` ou `Structure`). Esta é uma solução pesada.
+- <span data-ttu-id="c6162-128">Defina um tipo personalizado (uma `Class` ou `Structure`).</span><span class="sxs-lookup"><span data-stu-id="c6162-128">Define a custom type (a `Class` or a `Structure`).</span></span> <span data-ttu-id="c6162-129">Esta é uma solução pesada.</span><span class="sxs-lookup"><span data-stu-id="c6162-129">This is a heavyweight solution.</span></span>
 
-- Definir um ou mais parâmetros `ByRef`, além de retornar um valor do método.
+- <span data-ttu-id="c6162-130">Definir um ou mais parâmetros `ByRef`, além de retornar um valor do método.</span><span class="sxs-lookup"><span data-stu-id="c6162-130">Define one or more `ByRef` parameters, in addition to returning a value from the method.</span></span>
  
-O suporte do Visual Basic para tuplas permite definir rapidamente uma tupla, opcionalmente atribuir nomes semânticos para seus valores e recuperar rapidamente seus valores. O exemplo a seguir encapsula uma chamada para o método <xref:System.Int32.TryParse%2A> e retorna uma tupla.
+<span data-ttu-id="c6162-131">O suporte do Visual Basic para tuplas permite definir rapidamente uma tupla, opcionalmente atribuir nomes semânticos para seus valores e recuperar rapidamente seus valores.</span><span class="sxs-lookup"><span data-stu-id="c6162-131">Visual Basic's support for tuples lets you quickly define a tuple, optionally assign semantic names to its values, and quickly retrieve its values.</span></span> <span data-ttu-id="c6162-132">O exemplo a seguir encapsula uma chamada para o método <xref:System.Int32.TryParse%2A> e retorna uma tupla.</span><span class="sxs-lookup"><span data-stu-id="c6162-132">The following example wraps a call to the <xref:System.Int32.TryParse%2A> method and returns a tuple.</span></span>
 
 [!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
-O chamador pode então chamar o método e manipular a tupla retornada com o código semelhante ao seguinte.
+<span data-ttu-id="c6162-133">O chamador pode então chamar o método e manipular a tupla retornada com o código semelhante ao seguinte.</span><span class="sxs-lookup"><span data-stu-id="c6162-133">You can then call the method and handle the returned tuple with code like the following.</span></span>
 
 [!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)] 
 
-**Literais binários e os separadores de dígito**
+<span data-ttu-id="c6162-134">**Literais binários e os separadores de dígito**</span><span class="sxs-lookup"><span data-stu-id="c6162-134">**Binary literals and digit separators**</span></span>
 
-Você pode definir um literal binário usando o prefixo `&B` ou `&b`. Além disso, você pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade. O exemplo a seguir usa as duas funcionalidades para atribuir um valor `Byte` e exibi-lo como um número decimal, hexadecimal e binário.
+<span data-ttu-id="c6162-135">Você pode definir um literal binário usando o prefixo `&B` ou `&b`.</span><span class="sxs-lookup"><span data-stu-id="c6162-135">You can define a binary literal by using the prefix `&B` or `&b`.</span></span> <span data-ttu-id="c6162-136">Além disso, você pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade.</span><span class="sxs-lookup"><span data-stu-id="c6162-136">In addition, you can use the underscore character, `_`, as a digit separator to enhance readability.</span></span> <span data-ttu-id="c6162-137">O exemplo a seguir usa as duas funcionalidades para atribuir um valor `Byte` e exibi-lo como um número decimal, hexadecimal e binário.</span><span class="sxs-lookup"><span data-stu-id="c6162-137">The following example uses both features to assign a `Byte` value and to display it as a decimal, hexadecimal, and binary number.</span></span>
 
 [!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
-Para obter mais informações, consulte a seção "Atribuições de literal" dos tipos de dados [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) e [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
+<span data-ttu-id="c6162-138">Para obter mais informações, consulte a seção "Atribuições de literal" dos tipos de dados [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) e [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).</span><span class="sxs-lookup"><span data-stu-id="c6162-138">For more information, see the "Literal assignments" section of the [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments), and [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) data types.</span></span>
 
-**Suporte para valores retornados de referência do C#**
+<span data-ttu-id="c6162-139">**Suporte para valores retornados de referência do C#**</span><span class="sxs-lookup"><span data-stu-id="c6162-139">**Support for C# reference return values**</span></span>
 
-Começando com o C# 7, o C# dá suporte a valores retornados de referência. Isto é, quando o método de chamada recebe um valor retornado por referência, ele pode alterar o valor da referência. O Visual Basic não permite a criação de métodos com valores retornados de referência, mas isso não permite o consumo e a modificação de valores de retorno de referência.
+<span data-ttu-id="c6162-140">Começando com o C# 7, o C# dá suporte a valores retornados de referência.</span><span class="sxs-lookup"><span data-stu-id="c6162-140">Starting with C# 7, C# supports reference return values.</span></span> <span data-ttu-id="c6162-141">Isto é, quando o método de chamada recebe um valor retornado por referência, ele pode alterar o valor da referência.</span><span class="sxs-lookup"><span data-stu-id="c6162-141">That is, when the calling method receives a value returned by reference, it can change the value of the reference.</span></span> <span data-ttu-id="c6162-142">O Visual Basic não permite a criação de métodos com valores retornados de referência, mas isso não permite o consumo e a modificação de valores de retorno de referência.</span><span class="sxs-lookup"><span data-stu-id="c6162-142">Visual Basic does not allow you to author methods with reference return values, but it does allow you to consume and modify the reference return values.</span></span>
 
-Por exemplo, a classe `Sentence` a seguir escrita em C# inclui um método `FindNext` que localiza a próxima palavra em uma sentença que começa com uma subcadeia de caracteres especificada. A cadeia de caracteres é retornada como um valor retornado de referência e uma variável `Boolean` passada pela referência para o método indica se a pesquisa foi bem-sucedida. Isso significa que o chamador não pode apenas ler o valor retornado, ele também pode modificá-lo e essa modificação é refletida na classe `Sentence`.
+<span data-ttu-id="c6162-143">Por exemplo, a classe `Sentence` a seguir escrita em C# inclui um método `FindNext` que localiza a próxima palavra em uma sentença que começa com uma subcadeia de caracteres especificada.</span><span class="sxs-lookup"><span data-stu-id="c6162-143">For example, the following `Sentence` class written in C# includes a `FindNext` method that finds the next word in a sentence that begins with a specified substring.</span></span> <span data-ttu-id="c6162-144">A cadeia de caracteres é retornada como um valor retornado de referência e uma variável `Boolean` passada pela referência para o método indica se a pesquisa foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="c6162-144">The string is returned as a reference return value, and a `Boolean` variable passed by reference to the method indicates whether the search was successful.</span></span> <span data-ttu-id="c6162-145">Isso significa que o chamador não pode apenas ler o valor retornado, ele também pode modificá-lo e essa modificação é refletida na classe `Sentence`.</span><span class="sxs-lookup"><span data-stu-id="c6162-145">This means that the caller can not only read the returned value; he or she can also modify it, and that modification is reflected in the `Sentence` class.</span></span>
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-Em sua forma mais simples, você pode modificar a palavra encontrada na frase usando um código semelhante ao seguinte. Observe que você não está atribuindo um valor ao método, mas para a expressão que o método retorna, que é o valor retornado de referência.
+<span data-ttu-id="c6162-146">Em sua forma mais simples, você pode modificar a palavra encontrada na frase usando um código semelhante ao seguinte.</span><span class="sxs-lookup"><span data-stu-id="c6162-146">In its simplest form, you can modify the word found in the sentence by using code like the following.</span></span> <span data-ttu-id="c6162-147">Observe que você não está atribuindo um valor ao método, mas para a expressão que o método retorna, que é o valor retornado de referência.</span><span class="sxs-lookup"><span data-stu-id="c6162-147">Note that you are not assigning a value to the method, but rather to the expression that the method returns, which is the reference return value.</span></span>
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#1)]
 
-Um problema com esse código, no entanto, é que, se uma correspondência não for encontrada, o método retornará a primeira palavra. Como o exemplo não examina o valor do argumento `Boolean` para determinar se uma correspondência foi encontrada, ele modificará a primeira palavra se não houver nenhuma correspondência. O exemplo a seguir corrige isso substituindo a primeira palavra por ela mesma se não há nenhuma correspondência.
+<span data-ttu-id="c6162-148">Um problema com esse código, no entanto, é que, se uma correspondência não for encontrada, o método retornará a primeira palavra.</span><span class="sxs-lookup"><span data-stu-id="c6162-148">A problem with this code, though, is that if a match is not found, the method returns the first word.</span></span> <span data-ttu-id="c6162-149">Como o exemplo não examina o valor do argumento `Boolean` para determinar se uma correspondência foi encontrada, ele modificará a primeira palavra se não houver nenhuma correspondência.</span><span class="sxs-lookup"><span data-stu-id="c6162-149">Since the example does not examine the value of the `Boolean` argument to determine whether a match is found, it modifies the first word if there is no match.</span></span> <span data-ttu-id="c6162-150">O exemplo a seguir corrige isso substituindo a primeira palavra por ela mesma se não há nenhuma correspondência.</span><span class="sxs-lookup"><span data-stu-id="c6162-150">The following example corrects this by replacing the first word with itself if there is no match.</span></span>
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
 
-Uma solução melhor é usar um método auxiliar para o qual o valor retornado de referência é passado por referência. O método auxiliar pode modificar o argumento passado para ele por referência. O exemplo a seguir faz isso.
+<span data-ttu-id="c6162-151">Uma solução melhor é usar um método auxiliar para o qual o valor retornado de referência é passado por referência.</span><span class="sxs-lookup"><span data-stu-id="c6162-151">A better solution is to use a helper method to which the reference return value is passed by reference.</span></span> <span data-ttu-id="c6162-152">O método auxiliar pode modificar o argumento passado para ele por referência.</span><span class="sxs-lookup"><span data-stu-id="c6162-152">The helper method can then modify the argument passed to it by reference.</span></span> <span data-ttu-id="c6162-153">O exemplo a seguir faz isso.</span><span class="sxs-lookup"><span data-stu-id="c6162-153">The following example does that.</span></span>
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-Para obter mais informações, consulte [Reference return values](../programming-guide/language-features/procedures/ref-return-values.md) (Valores retornados de referência).
+<span data-ttu-id="c6162-154">Para obter mais informações, consulte [Reference return values](../programming-guide/language-features/procedures/ref-return-values.md) (Valores retornados de referência).</span><span class="sxs-lookup"><span data-stu-id="c6162-154">For more information, see [Reference Return Values](../programming-guide/language-features/procedures/ref-return-values.md).</span></span>
 
-## <a name="visual-basic-14"></a>Visual Basic 14
+## <a name="visual-basic-14"></a><span data-ttu-id="c6162-155">Visual Basic 14</span><span class="sxs-lookup"><span data-stu-id="c6162-155">Visual Basic 14</span></span>
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)  
- Você pode obter o nome da cadeia de caracteres não qualificada de um tipo ou de um membro para uso em uma mensagem de erro sem realizar hard-coding de uma cadeia de caracteres.  Isso permite que seu código permaneça correto ao refatorar.  Esse recurso também é útil para conectar links MVC do tipo modelo-exibição-controlador e acionar eventos de alteração de propriedade.  
+[<span data-ttu-id="c6162-156">Nameof</span><span class="sxs-lookup"><span data-stu-id="c6162-156">Nameof</span></span>](../../csharp/language-reference/keywords/nameof.md)  
+ <span data-ttu-id="c6162-157">Você pode obter o nome da cadeia de caracteres não qualificada de um tipo ou de um membro para uso em uma mensagem de erro sem realizar hard-coding de uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="c6162-157">You can get the unqualified string name of a type or member for use in an error message without hard coding a string.</span></span>  <span data-ttu-id="c6162-158">Isso permite que seu código permaneça correto ao refatorar.</span><span class="sxs-lookup"><span data-stu-id="c6162-158">This allows your code to remain correct when refactoring.</span></span>  <span data-ttu-id="c6162-159">Esse recurso também é útil para conectar links MVC do tipo modelo-exibição-controlador e acionar eventos de alteração de propriedade.</span><span class="sxs-lookup"><span data-stu-id="c6162-159">This feature is also useful for hooking up model-view-controller MVC links and firing property changed events.</span></span>  
   
-[Interpolação de cadeia de caracteres](../../csharp/language-reference/keywords/interpolated-strings.md)  
- Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-format.md).  
+[<span data-ttu-id="c6162-160">Interpolação de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c6162-160">String Interpolation</span></span>](../../csharp/language-reference/keywords/interpolated-strings.md)  
+ <span data-ttu-id="c6162-161">Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="c6162-161">You can use string interpolation expressions to construct strings.</span></span>  <span data-ttu-id="c6162-162">Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.</span><span class="sxs-lookup"><span data-stu-id="c6162-162">An interpolated string expression looks like a template string that contains expressions.</span></span>  <span data-ttu-id="c6162-163">Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-format.md).</span><span class="sxs-lookup"><span data-stu-id="c6162-163">An interpolated string is easier to understand with respect to arguments than [Composite Formatting](../../standard/base-types/composite-format.md).</span></span>  
   
-[Acesso de membro nulo condicional e indexação](../../csharp/language-reference/operators/null-conditional-operators.md)  
-Você pode testar a nulidade de uma maneira sintática muito simples antes de executar uma operação de acesso de membro (`?.`) ou índice (`?[]`).  Esses operadores ajudam a escrever menos código para lidar com verificações de nulidade, especialmente para entrar em estruturas de dados.  Se a referência de objeto ou o operando esquerdo for nulo, as operações retornarão valores nulos.  
+[<span data-ttu-id="c6162-164">Acesso de membro nulo condicional e indexação</span><span class="sxs-lookup"><span data-stu-id="c6162-164">Null-conditional Member Access and Indexing</span></span>](../../csharp/language-reference/operators/null-conditional-operators.md)  
+<span data-ttu-id="c6162-165">Você pode testar a nulidade de uma maneira sintática muito simples antes de executar uma operação de acesso de membro (`?.`) ou índice (`?[]`).</span><span class="sxs-lookup"><span data-stu-id="c6162-165">You can test for null in a very light syntactic way before performing a member access (`?.`) or index (`?[]`) operation.</span></span>  <span data-ttu-id="c6162-166">Esses operadores ajudam a escrever menos código para lidar com verificações de nulidade, especialmente para entrar em estruturas de dados.</span><span class="sxs-lookup"><span data-stu-id="c6162-166">These operators help you write less code to handle null checks, especially for descending into data structures.</span></span>  <span data-ttu-id="c6162-167">Se a referência de objeto ou o operando esquerdo for nulo, as operações retornarão valores nulos.</span><span class="sxs-lookup"><span data-stu-id="c6162-167">If the left operand or object reference is null, the operations returns null.</span></span>  
   
-[Literais de cadeia de caracteres multilinha](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Literais de cadeia de caracteres podem conter sequências de nova linha.  Você não precisa da solução alternativa antiga de usar `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
+[<span data-ttu-id="c6162-168">Literais de cadeia de caracteres multilinha</span><span class="sxs-lookup"><span data-stu-id="c6162-168">Multi-line String Literals</span></span>](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ <span data-ttu-id="c6162-169">Literais de cadeia de caracteres podem conter sequências de nova linha.</span><span class="sxs-lookup"><span data-stu-id="c6162-169">String literals can contain newline sequences.</span></span>  <span data-ttu-id="c6162-170">Você não precisa da solução alternativa antiga de usar `<xml><![CDATA[...text with newlines...]]></xml>.Value`</span><span class="sxs-lookup"><span data-stu-id="c6162-170">You no longer need the old work around of using `<xml><![CDATA[...text with newlines...]]></xml>.Value`</span></span>  
   
-Comentários  
-É possível colocar comentários após continuações de linha implícitas, em expressões de inicializador e entre termos de expressão do LINQ.  
+<span data-ttu-id="c6162-171">Comentários</span><span class="sxs-lookup"><span data-stu-id="c6162-171">Comments</span></span>  
+<span data-ttu-id="c6162-172">É possível colocar comentários após continuações de linha implícitas, em expressões de inicializador e entre termos de expressão do LINQ.</span><span class="sxs-lookup"><span data-stu-id="c6162-172">You can put comments after implicit line continuations, inside initializer expressions, and amongst LINQ expression terms.</span></span>  
   
- Resolução de nome totalmente qualificado mais inteligente  
- Dado um código como `Threading.Thread.Sleep(1000)`, o Visual Basic pesquisava o namespace "Threading", descobria que ele era ambíguo entre System.Threading e System.Windows.Threading e, então, relatava um erro.  Agora, o Visual Basic considera os dois namespaces possíveis juntos.  Se você mostrar a lista de conclusão, o editor do Visual Studio listará membros dos dois tipos na lista de conclusão.  
+ <span data-ttu-id="c6162-173">Resolução de nome totalmente qualificado mais inteligente</span><span class="sxs-lookup"><span data-stu-id="c6162-173">Smarter Fully-qualified Name Resolution</span></span>  
+ <span data-ttu-id="c6162-174">Dado um código como `Threading.Thread.Sleep(1000)`, o Visual Basic pesquisava o namespace "Threading", descobria que ele era ambíguo entre System.Threading e System.Windows.Threading e, então, relatava um erro.</span><span class="sxs-lookup"><span data-stu-id="c6162-174">Given code such as `Threading.Thread.Sleep(1000)`, Visual Basic used to look up the namespace "Threading", discover it was ambiguous between System.Threading and System.Windows.Threading, and then report an error.</span></span>  <span data-ttu-id="c6162-175">Agora, o Visual Basic considera os dois namespaces possíveis juntos.</span><span class="sxs-lookup"><span data-stu-id="c6162-175">Visual Basic now considers both possible namespaces together.</span></span>  <span data-ttu-id="c6162-176">Se você mostrar a lista de conclusão, o editor do Visual Studio listará membros dos dois tipos na lista de conclusão.</span><span class="sxs-lookup"><span data-stu-id="c6162-176">If you show the completion list, the Visual Studio editor lists members from both types in the completion list.</span></span>  
   
- Literais de data do primeiro ano  
- Você pode ter literais de data no formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`.  
+ <span data-ttu-id="c6162-177">Literais de data do primeiro ano</span><span class="sxs-lookup"><span data-stu-id="c6162-177">Year-first Date Literals</span></span>  
+ <span data-ttu-id="c6162-178">Você pode ter literais de data no formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`.</span><span class="sxs-lookup"><span data-stu-id="c6162-178">You can have date literals in yyyy-mm-dd format, `#2015-03-17 16:10 PM#`.</span></span>  
   
- Propriedades de interface readonly  
- Você pode implementar propriedades de interface readonly usando uma propriedade readwrite.  A interface garante a funcionalidade mínima e não impede que uma classe de implementação permita que a propriedade seja definida.  
+ <span data-ttu-id="c6162-179">Propriedades de interface readonly</span><span class="sxs-lookup"><span data-stu-id="c6162-179">Readonly Interface Properties</span></span>  
+ <span data-ttu-id="c6162-180">Você pode implementar propriedades de interface readonly usando uma propriedade readwrite.</span><span class="sxs-lookup"><span data-stu-id="c6162-180">You can implement readonly interface properties using a readwrite property.</span></span>  <span data-ttu-id="c6162-181">A interface garante a funcionalidade mínima e não impede que uma classe de implementação permita que a propriedade seja definida.</span><span class="sxs-lookup"><span data-stu-id="c6162-181">The interface guarantees minimum functionality, and it does not stop an implementing class from allowing the property to be set.</span></span>  
   
- [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)  
- Para facilitar a leitura do seu código, agora você pode usar `TypeOf` com `IsNot`.  
+ [<span data-ttu-id="c6162-182">TypeOf \<expr> IsNot \<type></span><span class="sxs-lookup"><span data-stu-id="c6162-182">TypeOf \<expr> IsNot \<type></span></span>](../../visual-basic/language-reference/operators/typeof-operator.md)  
+ <span data-ttu-id="c6162-183">Para facilitar a leitura do seu código, agora você pode usar `TypeOf` com `IsNot`.</span><span class="sxs-lookup"><span data-stu-id="c6162-183">For more readability of your code, you can now use `TypeOf` with `IsNot`.</span></span>  
   
- [#Disable Warning \<ID> e #Enable Warning \<ID>](../../visual-basic/language-reference/directives/directives.md)  
- É possível desabilitar e habilitar avisos específicos para regiões dentro de um arquivo de origem.  
+ [<span data-ttu-id="c6162-184">#Disable Warning \<ID> e #Enable Warning \<ID></span><span class="sxs-lookup"><span data-stu-id="c6162-184">#Disable Warning \<ID> and #Enable Warning \<ID></span></span>](../../visual-basic/language-reference/directives/directives.md)  
+ <span data-ttu-id="c6162-185">É possível desabilitar e habilitar avisos específicos para regiões dentro de um arquivo de origem.</span><span class="sxs-lookup"><span data-stu-id="c6162-185">You can disable and enable specific warnings for regions within a source file.</span></span>  
   
- Aprimoramentos de comentário de documento XML  
- Ao escrever comentários de documento, você obtém o editor inteligente e suporte de build para validar nomes de parâmetro, tratamento adequado de `crefs` (genéricos, operadores etc.), coloração e refatoração.  
+ <span data-ttu-id="c6162-186">Aprimoramentos de comentário de documento XML</span><span class="sxs-lookup"><span data-stu-id="c6162-186">XML Doc-comment Improvements</span></span>  
+ <span data-ttu-id="c6162-187">Ao escrever comentários de documento, você obtém o editor inteligente e suporte de build para validar nomes de parâmetro, tratamento adequado de `crefs` (genéricos, operadores etc.), coloração e refatoração.</span><span class="sxs-lookup"><span data-stu-id="c6162-187">When writing doc comments, you get smart editor and build support for validating parameter names, proper handling of `crefs` (generics, operators, etc.), colorizing, and refactoring.</span></span>  
   
- [Definições de interface e módulo parcial](../../visual-basic/language-reference/modifiers/partial.md)  
- Além das classes e structs, você pode declarar interfaces e módulos parciais.  
+ [<span data-ttu-id="c6162-188">Definições de interface e módulo parcial</span><span class="sxs-lookup"><span data-stu-id="c6162-188">Partial Module and Interface Definitions</span></span>](../../visual-basic/language-reference/modifiers/partial.md)  
+ <span data-ttu-id="c6162-189">Além das classes e structs, você pode declarar interfaces e módulos parciais.</span><span class="sxs-lookup"><span data-stu-id="c6162-189">In addition to classes and structs, you can declare partial modules and interfaces.</span></span>  
   
- [Diretivas #Region dentro de corpos de método](../../visual-basic/language-reference/directives/region-directive.md)  
- Você pode colocar delimitadores #Region...#End Region em qualquer lugar em um arquivo, dentro de funções e até mesmo estendê-los por corpos de função.  
+ [<span data-ttu-id="c6162-190">Diretivas #Region dentro de corpos de método</span><span class="sxs-lookup"><span data-stu-id="c6162-190">#Region Directives inside Method Bodies</span></span>](../../visual-basic/language-reference/directives/region-directive.md)  
+ <span data-ttu-id="c6162-191">Você pode colocar delimitadores #Region...#End Region em qualquer lugar em um arquivo, dentro de funções e até mesmo estendê-los por corpos de função.</span><span class="sxs-lookup"><span data-stu-id="c6162-191">You can put #Region…#End Region delimiters anywhere in a file, inside functions, and even spanning across function bodies.</span></span>  
   
- [Definições de substituição são sobrecargas implicitamente](../../visual-basic/language-reference/modifiers/overrides.md)  
- Se você adicionar o modificador `Overrides` a uma definição, o compilador adicionará implicitamente `Overloads`, para que você possa digitar menos código em casos comuns.  
+ [<span data-ttu-id="c6162-192">Definições de substituição são sobrecargas implicitamente</span><span class="sxs-lookup"><span data-stu-id="c6162-192">Overrides Definitions are Implicitly Overloads</span></span>](../../visual-basic/language-reference/modifiers/overrides.md)  
+ <span data-ttu-id="c6162-193">Se você adicionar o modificador `Overrides` a uma definição, o compilador adicionará implicitamente `Overloads`, para que você possa digitar menos código em casos comuns.</span><span class="sxs-lookup"><span data-stu-id="c6162-193">If you add the `Overrides` modifier to a definition, the compiler implicitly adds `Overloads` so that you can type less code in common cases.</span></span>  
   
- CObj permitido em argumentos de atributos  
- O compilador apresentava um erro de que CObj(...) não era uma constante quando usado em construções de atributo.  
+ <span data-ttu-id="c6162-194">CObj permitido em argumentos de atributos</span><span class="sxs-lookup"><span data-stu-id="c6162-194">CObj Allowed in Attributes Arguments</span></span>  
+ <span data-ttu-id="c6162-195">O compilador apresentava um erro de que CObj(...) não era uma constante quando usado em construções de atributo.</span><span class="sxs-lookup"><span data-stu-id="c6162-195">The compiler used to give an error that CObj(…) was not a constant when used in attribute constructions.</span></span>  
   
- Declarando e consumindo métodos ambíguos de interfaces diferentes  
- Anteriormente, o código a seguir gerava erros que impediam você de declarar `IMock` ou chamar `GetDetails` (se eles tivessem sido declarados em C#):  
+ <span data-ttu-id="c6162-196">Declarando e consumindo métodos ambíguos de interfaces diferentes</span><span class="sxs-lookup"><span data-stu-id="c6162-196">Declaring and Consuming Ambiguous Methods from Different Interfaces</span></span>  
+ <span data-ttu-id="c6162-197">Anteriormente, o código a seguir gerava erros que impediam você de declarar `IMock` ou chamar `GetDetails` (se eles tivessem sido declarados em C#):</span><span class="sxs-lookup"><span data-stu-id="c6162-197">Previously the following code yielded errors that prevented you from declaring `IMock` or from calling `GetDetails` (if these had been declared in C#):</span></span>  
   
 ```vb  
 Interface ICustomer  
@@ -188,8 +169,7 @@ Interface IMock2 : Inherits ICustomer, ITime
 End Interface  
 ```  
   
- Agora, o compilador usará regras de resolução de sobrecarga normais para escolher o `GetDetails` mais apropriado a ser chamado e você pode declarar relações de interface no Visual Basic, como aquelas mostradas no exemplo.  
+ <span data-ttu-id="c6162-198">Agora, o compilador usará regras de resolução de sobrecarga normais para escolher o `GetDetails` mais apropriado a ser chamado e você pode declarar relações de interface no Visual Basic, como aquelas mostradas no exemplo.</span><span class="sxs-lookup"><span data-stu-id="c6162-198">Now the compiler will use normal overload resolution rules to choose the most appropriate `GetDetails` to call, and you can declare interface relationships in Visual Basic like those shown in the sample.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
-
+## <a name="see-also"></a><span data-ttu-id="c6162-199">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6162-199">See also</span></span>  
+ [<span data-ttu-id="c6162-200">Novidades no Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="c6162-200">What's New in Visual Studio 2017</span></span>](/visualstudio/ide/whats-new-in-visual-studio)

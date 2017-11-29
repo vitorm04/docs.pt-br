@@ -1,81 +1,63 @@
 ---
-title: "Como: usar uma classe genérica (Visual Basic) | Documentos do Microsoft"
+title: "Como usar uma classe genérica (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- type parameters, defining
-- data type arguments, defining
+- type parameters [Visual Basic], defining
+- data type arguments [Visual Basic], defining
 - arguments [Visual Basic], data types
-- Of keyword, using
+- Of keyword [Visual Basic], using
 - generic parameters
 - data type parameters
 - generics [Visual Basic], about generics
 - data types [Visual Basic], as parameters
 - data types [Visual Basic], as arguments
-- parameters, type
+- parameters [Visual Basic], type
 - types [Visual Basic], generic
-- parameters, generic
+- parameters [Visual Basic], generic
 - generics [Visual Basic], creating generic types
 - data type arguments
-- parameters, data type
-- data type parameters, defining
-- type arguments, defining
+- parameters [Visual Basic], data type
+- data type parameters [Visual Basic], defining
+- type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eeb55be1c368e9ca80ab94de814a5e2ba9bc9f1f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b32707456c9e59d5a81d76c73d867b33554bdbcb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-generic-class-visual-basic"></a>Como usar uma classe genérica (Visual Basic)
-Uma classe que usa *parâmetros de tipo* é chamado um *classe genérica*. Se você estiver usando uma classe genérica, você pode gerar um *classe construída* dela, fornecendo um *o argumento de tipo* para cada um desses parâmetros. Em seguida, você pode declarar uma variável do tipo de classe construído, e você pode criar uma instância da classe construída e atribuí-lo a essa variável.  
+# <a name="how-to-use-a-generic-class-visual-basic"></a><span data-ttu-id="827e7-102">Como usar uma classe genérica (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="827e7-102">How to: Use a Generic Class (Visual Basic)</span></span>
+<span data-ttu-id="827e7-103">Uma classe que usa *parâmetros de tipo* é chamado um *classe genérica*.</span><span class="sxs-lookup"><span data-stu-id="827e7-103">A class that takes *type parameters* is called a *generic class*.</span></span> <span data-ttu-id="827e7-104">Se você estiver usando uma classe genérica, você pode gerar um *classe construída* dele, fornecendo um *argumento de tipo* para cada um desses parâmetros.</span><span class="sxs-lookup"><span data-stu-id="827e7-104">If you are using a generic class, you can generate a *constructed class* from it by supplying a *type argument* for each of these parameters.</span></span> <span data-ttu-id="827e7-105">Em seguida, você pode declarar uma variável do tipo de classe construído, e você pode criar uma instância da classe construída e atribuí-la para a variável.</span><span class="sxs-lookup"><span data-stu-id="827e7-105">You can then declare a variable of the constructed class type, and you can create an instance of the constructed class and assign it to that variable.</span></span>  
   
- Além de classes, você também pode definir e usar delegados, interfaces, procedimentos e estruturas genéricas.  
+ <span data-ttu-id="827e7-106">Além das classes, você também pode definir e usar delegados, interfaces, procedimentos e estruturas genéricas.</span><span class="sxs-lookup"><span data-stu-id="827e7-106">In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.</span></span>  
   
- O procedimento a seguir usa uma classe genérica definida no [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] e cria uma instância dele.  
+ <span data-ttu-id="827e7-107">O procedimento a seguir usa uma classe genérica definida no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e cria uma instância dele.</span><span class="sxs-lookup"><span data-stu-id="827e7-107">The following procedure takes a generic class defined in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] and creates an instance from it.</span></span>  
   
-### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Para usar uma classe que leva um parâmetro de tipo  
+### <a name="to-use-a-class-that-takes-a-type-parameter"></a><span data-ttu-id="827e7-108">Para usar uma classe que usa um parâmetro de tipo</span><span class="sxs-lookup"><span data-stu-id="827e7-108">To use a class that takes a type parameter</span></span>  
   
-1.  No início do seu arquivo de origem, inclua uma [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar o <xref:System.Collections.Generic?displayProperty=fullName>namespace.</xref:System.Collections.Generic?displayProperty=fullName> Isso permite que você se referir à <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>classe sem precisar qualificar totalmente para diferenciá-la de outras classes de consulta, como <xref:System.Collections.Queue?displayProperty=fullName>.</xref:System.Collections.Queue?displayProperty=fullName> </xref:System.Collections.Generic.Queue%601?displayProperty=fullName>  
+1.  <span data-ttu-id="827e7-109">No início do seu arquivo de origem, inclua uma [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar o <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span><span class="sxs-lookup"><span data-stu-id="827e7-109">At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="827e7-110">Isso permite que você se refira a <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> classe sem ter que qualificar totalmente para diferenciá-la de outras classes de consulta, como <xref:System.Collections.Queue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="827e7-110">This allows you to refer to the <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> class without having to fully qualify it to differentiate it from other queue classes such as <xref:System.Collections.Queue?displayProperty=nameWithType>.</span></span>  
   
-2.  Cria o objeto da forma normal, mas adiciona `(Of` `type``)` imediatamente após o nome da classe.  
+2.  <span data-ttu-id="827e7-111">Criar o objeto da maneira normal, mas adicionar `(Of` `type``)` imediatamente após o nome da classe.</span><span class="sxs-lookup"><span data-stu-id="827e7-111">Create the object in the normal way, but add `(Of` `type``)` immediately after the class name.</span></span>  
   
-     O exemplo a seguir usa a mesma classe (<xref:System.Collections.Generic.Queue%601?displayProperty=fullName>) para criar dois objetos de fila que mantêm itens de diferentes tipos de dados.</xref:System.Collections.Generic.Queue%601?displayProperty=fullName> Adiciona itens ao final de cada fila e, em seguida, remove e exibe itens da frente de cada fila.  
+     <span data-ttu-id="827e7-112">O exemplo a seguir usa a mesma classe (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) para criar dois objetos de fila que mantêm itens de diferentes tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="827e7-112">The following example uses the same class (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) to create two queue objects that hold items of different data types.</span></span> <span data-ttu-id="827e7-113">Adiciona itens ao final de cada fila e, em seguida, remove e exibe itens da frente de cada fila.</span><span class="sxs-lookup"><span data-stu-id="827e7-113">It adds items to the end of each queue and then removes and displays items from the front of each queue.</span></span>  
   
-     [!code-vb[VbVbalrDataTypes n º&9;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Independência da linguagem e componentes independentes de linguagem](https://msdn.microsoft.com/library/12a7a7h3)   
- [De](../../../../visual-basic/language-reference/statements/of-clause.md)   
- [Instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Como: definir uma classe que pode fornecer funcionalidade idêntica em diferentes tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)   
- [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a><span data-ttu-id="827e7-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="827e7-114">See Also</span></span>  
+ [<span data-ttu-id="827e7-115">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="827e7-115">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="827e7-116">Tipos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="827e7-116">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="827e7-117">Componentes de independência de linguagem e componentes independentes da linguagem</span><span class="sxs-lookup"><span data-stu-id="827e7-117">Language Independence and Language-Independent Components</span></span>](https://msdn.microsoft.com/library/12a7a7h3)  
+ [<span data-ttu-id="827e7-118">Of</span><span class="sxs-lookup"><span data-stu-id="827e7-118">Of</span></span>](../../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="827e7-119">Instrução Imports (Tipo e Namespace .NET)</span><span class="sxs-lookup"><span data-stu-id="827e7-119">Imports Statement (.NET Namespace and Type)</span></span>](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="827e7-120">Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes</span><span class="sxs-lookup"><span data-stu-id="827e7-120">How to: Define a Class That Can Provide Identical Functionality on Different Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+ [<span data-ttu-id="827e7-121">Iteradores</span><span class="sxs-lookup"><span data-stu-id="827e7-121">Iterators</span></span>](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

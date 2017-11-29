@@ -1,59 +1,42 @@
 ---
-title: "Resumo de entrada e saída (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Resumo de entrada e saída (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - input, Visual Basic functions
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 65f9aed83b4656166df17287b6d59803967b1979
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 51b7676bbe85655799280d5bad7f41241920f570
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="input-and-output-summary-visual-basic"></a>Resumo de entrada e saída (Visual Basic)
-Palavras-chave de linguagem Visual Basic e membros da biblioteca em tempo de execução são organizados por propósito e usarem.  
+# <a name="input-and-output-summary-visual-basic"></a><span data-ttu-id="b8e90-102">Resumo de entrada e saída (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b8e90-102">Input and Output Summary (Visual Basic)</span></span>
+<span data-ttu-id="b8e90-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="b8e90-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|Ação|Elemento de linguagem|  
+|<span data-ttu-id="b8e90-104">Ação</span><span class="sxs-lookup"><span data-stu-id="b8e90-104">Action</span></span>|<span data-ttu-id="b8e90-105">Elemento de linguagem</span><span class="sxs-lookup"><span data-stu-id="b8e90-105">Language element</span></span>|  
 |------------|----------------------|  
-|Acessar ou criar um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A></xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
-|Fechar arquivos.|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>,<xref:Microsoft.VisualBasic.FileSystem.Reset%2A></xref:Microsoft.VisualBasic.FileSystem.Reset%2A></xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>|  
-|Controlar a aparência de saída.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A></xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A></xref:Microsoft.VisualBasic.FileSystem.TAB%2A></xref:Microsoft.VisualBasic.FileSystem.SPC%2A></xref:Microsoft.VisualBasic.FileSystem.Print%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|Copie um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A></xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Obtenha informações sobre um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A></xref:Microsoft.VisualBasic.FileSystem.Seek%2A></xref:Microsoft.VisualBasic.FileSystem.LOF%2A></xref:Microsoft.VisualBasic.FileSystem.Loc%2A></xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A></xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A></xref:Microsoft.VisualBasic.FileSystem.FileLen%2A></xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A></xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A></xref:Microsoft.VisualBasic.FileSystem.EOF%2A>|  
-|Obter ou fornecer informações de/para o usuário por meio de uma caixa de diálogo de controle.|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>,<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A></xref:Microsoft.VisualBasic.Interaction.MsgBox%2A></xref:Microsoft.VisualBasic.Interaction.InputBox%2A>|  
-|Gerencie arquivos.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A></xref:Microsoft.VisualBasic.FileSystem.Unlock%2A></xref:Microsoft.VisualBasic.FileSystem.Lock%2A></xref:Microsoft.VisualBasic.FileSystem.Kill%2A></xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Ler de um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A></xref:Microsoft.VisualBasic.FileSystem.LineInput%2A></xref:Microsoft.VisualBasic.FileSystem.InputString%2A></xref:Microsoft.VisualBasic.FileSystem.Input%2A></xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A></xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>|  
-|Retorna o comprimento de um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A></xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Definir ou obter atributos de arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A></xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A></xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A></xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>|  
-|Definir a posição de leitura / gravação em um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A></xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
-|Gravar em um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A></xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A></xref:Microsoft.VisualBasic.FileSystem.Write%2A></xref:Microsoft.VisualBasic.FileSystem.Print%2A></xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A></xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>|  
+|<span data-ttu-id="b8e90-106">Acessar ou criar um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-106">Access or create a file.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
+|<span data-ttu-id="b8e90-107">Fechar os arquivos.</span><span class="sxs-lookup"><span data-stu-id="b8e90-107">Close files.</span></span>|<span data-ttu-id="b8e90-108"><xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-108"><xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A></span></span>|  
+|<span data-ttu-id="b8e90-109">Controlar a aparência de saída.</span><span class="sxs-lookup"><span data-stu-id="b8e90-109">Control output appearance.</span></span>|<span data-ttu-id="b8e90-110"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-110"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A></span></span>|  
+|<span data-ttu-id="b8e90-111">Copie um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-111">Copy a file.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|<span data-ttu-id="b8e90-112">Obter informações sobre um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-112">Get information about a file.</span></span>|<span data-ttu-id="b8e90-113"><xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-113"><xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A></span></span>|  
+|<span data-ttu-id="b8e90-114">Obter ou fornecer informações do/para o usuário por meio de uma caixa de diálogo de controle.</span><span class="sxs-lookup"><span data-stu-id="b8e90-114">Get or provide information from/to the user by means of a control dialog box.</span></span>|<span data-ttu-id="b8e90-115"><xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-115"><xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A></span></span>|  
+|<span data-ttu-id="b8e90-116">Gerencie arquivos.</span><span class="sxs-lookup"><span data-stu-id="b8e90-116">Manage files.</span></span>|<span data-ttu-id="b8e90-117"><xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-117"><xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A></span></span>|  
+|<span data-ttu-id="b8e90-118">Ler um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-118">Read from a file.</span></span>|<span data-ttu-id="b8e90-119"><xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-119"><xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A></span></span>|  
+|<span data-ttu-id="b8e90-120">Retorna o comprimento de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-120">Return length of a file.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|<span data-ttu-id="b8e90-121">Definir ou obter atributos de arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-121">Set or get file attributes.</span></span>|<span data-ttu-id="b8e90-122"><xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-122"><xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A></span></span>|  
+|<span data-ttu-id="b8e90-123">Definir a posição de leitura / gravação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-123">Set read-write position in a file.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
+|<span data-ttu-id="b8e90-124">Grave em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="b8e90-124">Write to a file.</span></span>|<span data-ttu-id="b8e90-125"><xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A></span><span class="sxs-lookup"><span data-stu-id="b8e90-125"><xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A></span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)   
- [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="b8e90-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b8e90-126">See Also</span></span>  
+ [<span data-ttu-id="b8e90-127">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="b8e90-127">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="b8e90-128">Membros da Biblioteca em Tempo de Execução do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b8e90-128">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

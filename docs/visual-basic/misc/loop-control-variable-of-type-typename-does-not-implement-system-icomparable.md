@@ -1,43 +1,26 @@
 ---
-title: "Variável de controle de loop do tipo &quot;&lt;typename&gt;&quot; não implementa a interface &quot;System. IComparable&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Loop de variável de controle do tipo &#39; &lt;typename&gt;&#39; não implementa o &#39; System. IComparable &#39; interface"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_IComparable2
+f1_keywords: vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7849b2517de909131918940e9d26a4e58cf68f65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: daf475d05edd3a520644aef23ba40e054ba95c6d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="loop-control-variable-of-type-39lttypenamegt39-does-not-implement-the-39systemicomparable39-interface"></a>Variável de controle de loop do tipo '&lt;typename&gt;' não implementa a interface 'System. IComparable'
-Uma variável é de um tipo que implementa o `System.IComparable` interface. `System.IComparable`deve ser implementado por um tipo de valor ou classe.  
+# <a name="loop-control-variable-of-type-39lttypenamegt39-does-not-implement-the-39systemicomparable39-interface"></a><span data-ttu-id="3d634-102">Loop de variável de controle do tipo &#39; &lt;typename&gt;&#39; não implementa o &#39; System. IComparable &#39; interface</span><span class="sxs-lookup"><span data-stu-id="3d634-102">Loop control variable of type &#39;&lt;typename&gt;&#39; does not implement the &#39;System.IComparable&#39; interface</span></span>
+<span data-ttu-id="3d634-103">Uma variável é de um tipo que não implementa o `System.IComparable` interface.</span><span class="sxs-lookup"><span data-stu-id="3d634-103">A variable is of a type that does not implement the `System.IComparable` interface.</span></span> <span data-ttu-id="3d634-104">`System.IComparable`deve ser implementada por uma classe ou um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="3d634-104">`System.IComparable` must be implemented by a value type or a class.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3d634-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="3d634-105">To correct this error</span></span>  
   
-1.  Certifique-se de que a variável é um tipo de valor.  
+1.  <span data-ttu-id="3d634-106">Certifique-se de que a variável é um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="3d634-106">Ensure that the variable is a value type.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IComparable></xref:System.IComparable>
+## <a name="see-also"></a><span data-ttu-id="3d634-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3d634-107">See Also</span></span>  
+ <xref:System.IComparable>

@@ -1,65 +1,48 @@
 ---
-title: "Resumo de diretórios e arquivos (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Resumo de diretórios e arquivos (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4305ddee7624bc226d88188877129d3a9f94bbe4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b07c2c400bd682d2340349435d03e192a1840c6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="directories-and-files-summary-visual-basic"></a>Resumo de diretórios e arquivos (Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]palavras-chave e membros da biblioteca em tempo de execução são organizados por propósito e usam.  
+# <a name="directories-and-files-summary-visual-basic"></a><span data-ttu-id="d03d9-102">Resumo de diretórios e arquivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d03d9-102">Directories and Files Summary (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="d03d9-103">palavras-chave e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="d03d9-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
- Usando o `My` recurso oferece maior produtividade e desempenho em operações de e/s de arquivo que usar esses membros. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <span data-ttu-id="d03d9-104">Usando o `My` recurso oferece maior produtividade e desempenho em operações de e/s de arquivo que usar esses membros.</span><span class="sxs-lookup"><span data-stu-id="d03d9-104">Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members.</span></span> <span data-ttu-id="d03d9-105">Para obter mais informações, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span><span class="sxs-lookup"><span data-stu-id="d03d9-105">For more information, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
   
-|**Ação**|**Elemento de linguagem**|  
+|<span data-ttu-id="d03d9-106">**Ação**</span><span class="sxs-lookup"><span data-stu-id="d03d9-106">**Action**</span></span>|<span data-ttu-id="d03d9-107">**Elemento de linguagem**</span><span class="sxs-lookup"><span data-stu-id="d03d9-107">**Language element**</span></span>|  
 |----------------|--------------------------|  
-|Altere um diretório ou pasta.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A></xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Altere a unidade.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A></xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|Copie um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A></xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Crie um diretório ou pasta.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A></xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Remova um diretório ou pasta.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A></xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|Renomear um arquivo, diretório ou pasta.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A></xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|Retorna o caminho atual.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A></xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Retorna o carimbo de data/hora do arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A></xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Retorne o arquivo, diretório ou atributos do rótulo.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A></xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Retorna o comprimento de um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A></xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Retorna o rótulo de volume ou o nome do arquivo.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A></xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Definir informações de atributo para um arquivo.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A></xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|<span data-ttu-id="d03d9-108">Altere um diretório ou pasta.</span><span class="sxs-lookup"><span data-stu-id="d03d9-108">Change a directory or folder.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|<span data-ttu-id="d03d9-109">Altere a unidade.</span><span class="sxs-lookup"><span data-stu-id="d03d9-109">Change the drive.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|<span data-ttu-id="d03d9-110">Copie um arquivo.</span><span class="sxs-lookup"><span data-stu-id="d03d9-110">Copy a file.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|<span data-ttu-id="d03d9-111">Crie um diretório ou a pasta.</span><span class="sxs-lookup"><span data-stu-id="d03d9-111">Make a directory or folder.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|<span data-ttu-id="d03d9-112">Remova um diretório ou pasta.</span><span class="sxs-lookup"><span data-stu-id="d03d9-112">Remove a directory or folder.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|<span data-ttu-id="d03d9-113">Renomear um arquivo, diretório ou pasta.</span><span class="sxs-lookup"><span data-stu-id="d03d9-113">Rename a file, directory, or folder.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|<span data-ttu-id="d03d9-114">Retorna o caminho atual.</span><span class="sxs-lookup"><span data-stu-id="d03d9-114">Return the current path.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|<span data-ttu-id="d03d9-115">Retorna o carimbo de data/hora do arquivo.</span><span class="sxs-lookup"><span data-stu-id="d03d9-115">Return a file's date/time stamp.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|<span data-ttu-id="d03d9-116">Retorne o arquivo, diretório ou atributos do rótulo.</span><span class="sxs-lookup"><span data-stu-id="d03d9-116">Return file, directory, or label attributes.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|<span data-ttu-id="d03d9-117">Retorna o comprimento de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="d03d9-117">Return a file's length.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|<span data-ttu-id="d03d9-118">Retorna o rótulo de volume ou o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="d03d9-118">Return a file's name or volume label.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|<span data-ttu-id="d03d9-119">Definir informações de atributo para um arquivo.</span><span class="sxs-lookup"><span data-stu-id="d03d9-119">Set attribute information for a file.</span></span>|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)   
- [Membros de biblioteca de tempo de execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)   
- [Leitura de arquivos](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [Gravando em arquivos](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)   
- [Criar, excluir e mover arquivos e diretórios](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
- [Analisando arquivos de texto com o objeto TextFieldParser](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+## <a name="see-also"></a><span data-ttu-id="d03d9-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d03d9-120">See Also</span></span>  
+ [<span data-ttu-id="d03d9-121">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="d03d9-121">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="d03d9-122">Membros da Biblioteca em Tempo de Execução do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d03d9-122">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="d03d9-123">Leitura de arquivos</span><span class="sxs-lookup"><span data-stu-id="d03d9-123">Reading from Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [<span data-ttu-id="d03d9-124">Gravando em arquivos</span><span class="sxs-lookup"><span data-stu-id="d03d9-124">Writing to Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [<span data-ttu-id="d03d9-125">Criando, excluindo e movendo arquivos e diretórios</span><span class="sxs-lookup"><span data-stu-id="d03d9-125">Creating, Deleting, and Moving Files and Directories</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [<span data-ttu-id="d03d9-126">Analisando arquivos de texto com o objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="d03d9-126">Parsing Text Files with the TextFieldParser Object</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

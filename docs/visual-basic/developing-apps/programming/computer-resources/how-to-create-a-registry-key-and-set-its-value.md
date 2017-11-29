@@ -1,105 +1,86 @@
 ---
 title: 'Como criar uma chave do Registro e definir o valor no Visual Basic:'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - RegistryKey.CreateSubKey
 - RegistryKey.SetValue
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, creating
-- registry, adding values
-- registry, adding keys
-- registry keys, setting values
+- registry keys [Visual Basic], creating
+- registry [Visual Basic], adding values
+- registry [Visual Basic], adding keys
+- registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106a98a1b15c37eb2cac05e1a681bf7dfed3543d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como criar uma chave do Registro e definir o valor no Visual Basic:
-O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.  
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a><span data-ttu-id="905e8-102">Como criar uma chave do Registro e definir o valor no Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="905e8-102">How to: Create a Registry Key and Set Its Value in Visual Basic</span></span>
+<span data-ttu-id="905e8-103">O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.</span><span class="sxs-lookup"><span data-stu-id="905e8-103">The `CreateSubKey` method of the `My.Computer.Registry` object can be used to create a registry key.</span></span>  
   
-## <a name="procedure"></a>Procedimento  
+## <a name="procedure"></a><span data-ttu-id="905e8-104">Procedimento</span><span class="sxs-lookup"><span data-stu-id="905e8-104">Procedure</span></span>  
   
-#### <a name="to-create-a-registry-key"></a>Criar uma chave do Registro  
+#### <a name="to-create-a-registry-key"></a><span data-ttu-id="905e8-105">Criar uma chave do Registro</span><span class="sxs-lookup"><span data-stu-id="905e8-105">To create a registry key</span></span>  
   
--   Use o método `CreateSubKey` especificando em qual hive a chave será colocada, bem como o nome da chave. O parâmetro `Subkey` não diferencia maiúsculas e minúsculas. Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.  
-  
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
-  
-#### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Criar uma chave do Registro e definir o valor  
-  
-1.  Use o método `CreateSubkey` especificando em qual hive a chave será colocada, bem como o nome da chave. Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.  
+-   <span data-ttu-id="905e8-106">Use o método `CreateSubKey` especificando em qual hive a chave será colocada, bem como o nome da chave.</span><span class="sxs-lookup"><span data-stu-id="905e8-106">Use the `CreateSubKey` method, specifying which hive to place the key under as well as the name of the key.</span></span> <span data-ttu-id="905e8-107">O parâmetro `Subkey` não diferencia maiúsculas e minúsculas.</span><span class="sxs-lookup"><span data-stu-id="905e8-107">The parameter `Subkey` is not case-sensitive.</span></span> <span data-ttu-id="905e8-108">Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.</span><span class="sxs-lookup"><span data-stu-id="905e8-108">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.</span></span>  
   
      [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
-2.  Defina o valor com o método `SetValue`. Este exemplo define o valor da cadeia de caracteres. De "MyTestKeyValue" para "Este é um valor de teste".  
+#### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a><span data-ttu-id="905e8-109">Criar uma chave do Registro e definir o valor</span><span class="sxs-lookup"><span data-stu-id="905e8-109">To create a registry key and set a value in it</span></span>  
+  
+1.  <span data-ttu-id="905e8-110">Use o método `CreateSubkey` especificando em qual hive a chave será colocada, bem como o nome da chave.</span><span class="sxs-lookup"><span data-stu-id="905e8-110">Use the `CreateSubkey` method, specifying which hive to place the key under as well as the name of the key.</span></span> <span data-ttu-id="905e8-111">Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.</span><span class="sxs-lookup"><span data-stu-id="905e8-111">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.</span></span>  
+  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
+  
+2.  <span data-ttu-id="905e8-112">Defina o valor com o método `SetValue`.</span><span class="sxs-lookup"><span data-stu-id="905e8-112">Set the value with the `SetValue` method.</span></span> <span data-ttu-id="905e8-113">Este exemplo define o valor da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="905e8-113">This example sets the string value.</span></span> <span data-ttu-id="905e8-114">De "MyTestKeyValue" para "Este é um valor de teste".</span><span class="sxs-lookup"><span data-stu-id="905e8-114">"MyTestKeyValue" to "This is a test value".</span></span>  
   
      [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
-## <a name="example"></a>Exemplo  
- Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER e, em seguida, define o valor da cadeia de caracteres de `MyTestKeyValue` para `This is a test value`.  
+## <a name="example"></a><span data-ttu-id="905e8-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="905e8-115">Example</span></span>  
+ <span data-ttu-id="905e8-116">Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER e, em seguida, define o valor da cadeia de caracteres de `MyTestKeyValue` para `This is a test value`.</span><span class="sxs-lookup"><span data-stu-id="905e8-116">This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER and then sets the string value `MyTestKeyValue` to `This is a test value`.</span></span>  
   
  [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
-## <a name="robust-programming"></a>Programação robusta  
- Analise a estrutura do Registro para encontrar um local adequado para a chave. Por exemplo, caso você queira abrir a chave HKEY_CURRENT_USER\Software do usuário atual e criar uma chave com o nome da empresa. Em seguida, adicione os valores do Registro à chave da empresa.  
+## <a name="robust-programming"></a><span data-ttu-id="905e8-117">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="905e8-117">Robust Programming</span></span>  
+ <span data-ttu-id="905e8-118">Analise a estrutura do Registro para encontrar um local adequado para a chave.</span><span class="sxs-lookup"><span data-stu-id="905e8-118">Examine the registry structure to find a suitable location for your key.</span></span> <span data-ttu-id="905e8-119">Por exemplo, caso você queira abrir a chave HKEY_CURRENT_USER\Software do usuário atual e criar uma chave com o nome da empresa.</span><span class="sxs-lookup"><span data-stu-id="905e8-119">For example, you may want to open the HKEY_CURRENT_USER\Software key of the current user, and create a key with your company's name.</span></span> <span data-ttu-id="905e8-120">Em seguida, adicione os valores do Registro à chave da empresa.</span><span class="sxs-lookup"><span data-stu-id="905e8-120">Then add the registry values to your company's key.</span></span>  
   
- Ao ler o Registro de um aplicativo Web, o usuário atual depende da autenticação e da representação implementadas no aplicativo Web.  
+ <span data-ttu-id="905e8-121">Ao ler o Registro de um aplicativo Web, o usuário atual depende da autenticação e da representação implementadas no aplicativo Web.</span><span class="sxs-lookup"><span data-stu-id="905e8-121">When reading the registry from a Web application, the current user depends on the authentication and impersonation implemented in the Web application.</span></span>  
   
- É mais seguro gravar dados na pasta do usuário (<xref:Microsoft.Win32.Registry.CurrentUser>) em vez de no computador local (<xref:Microsoft.Win32.Registry.LocalMachine>).  
+ <span data-ttu-id="905e8-122">É mais seguro gravar dados na pasta do usuário (<xref:Microsoft.Win32.Registry.CurrentUser>) em vez de no computador local (<xref:Microsoft.Win32.Registry.LocalMachine>).</span><span class="sxs-lookup"><span data-stu-id="905e8-122">It is more secure to write data to the user folder (<xref:Microsoft.Win32.Registry.CurrentUser>) rather than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>).</span></span>  
   
- Ao criar um valor de Registro, é necessário decidir o que fazer se esse valor já existir. Outro processo, talvez um mal-intencionado, pode já ter criado o valor e tem acesso a ele. Ao colocar dados no valor de Registro, os dados estarão disponíveis para o outro processo. Para impedir isso, use o método <xref:Microsoft.Win32.RegistryKey.GetValue%2A>. Ele retornará `Nothing` se a chave ainda não existir.  
+ <span data-ttu-id="905e8-123">Ao criar um valor de Registro, é necessário decidir o que fazer se esse valor já existir.</span><span class="sxs-lookup"><span data-stu-id="905e8-123">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="905e8-124">Outro processo, talvez um mal-intencionado, pode já ter criado o valor e tem acesso a ele.</span><span class="sxs-lookup"><span data-stu-id="905e8-124">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="905e8-125">Ao colocar dados no valor de Registro, os dados estarão disponíveis para o outro processo.</span><span class="sxs-lookup"><span data-stu-id="905e8-125">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="905e8-126">Para impedir isso, use o método <xref:Microsoft.Win32.RegistryKey.GetValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="905e8-126">To prevent this, use the <xref:Microsoft.Win32.RegistryKey.GetValue%2A> method.</span></span> <span data-ttu-id="905e8-127">Ele retornará `Nothing` se a chave ainda não existir.</span><span class="sxs-lookup"><span data-stu-id="905e8-127">It returns `Nothing` if the key does not already exist.</span></span>  
   
- Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACLs (Listas de Controle de Acesso).  
+ <span data-ttu-id="905e8-128">Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACLs (Listas de Controle de Acesso).</span><span class="sxs-lookup"><span data-stu-id="905e8-128">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (Access Control Lists).</span></span>  
   
- As seguintes condições podem causar uma exceção:  
+ <span data-ttu-id="905e8-129">As seguintes condições podem causar uma exceção:</span><span class="sxs-lookup"><span data-stu-id="905e8-129">The following conditions may cause an exception:</span></span>  
   
--   O nome da chave é `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="905e8-130">O nome da chave é `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="905e8-130">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   O usuário não tem permissões para criar chaves do Registro (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="905e8-131">O usuário não tem permissões para criar chaves do Registro (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="905e8-131">The user does not have permissions to create registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
--   O nome da chave excede o limite de 255 caracteres (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="905e8-132">O nome da chave excede o limite de 255 caracteres (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="905e8-132">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
--   A chave é fechada (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="905e8-133">A chave é fechada (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="905e8-133">The key is closed (<xref:System.IO.IOException>).</span></span>  
   
--   A chave do Registro é somente leitura (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="905e8-134">A chave do Registro é somente leitura (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="905e8-134">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8).  
+## <a name="net-framework-security"></a><span data-ttu-id="905e8-135">Segurança do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="905e8-135">.NET Framework Security</span></span>  
+ <span data-ttu-id="905e8-136">Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>.</span><span class="sxs-lookup"><span data-stu-id="905e8-136">To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class.</span></span> <span data-ttu-id="905e8-137">Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes.</span><span class="sxs-lookup"><span data-stu-id="905e8-137">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="905e8-138">Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações.</span><span class="sxs-lookup"><span data-stu-id="905e8-138">Similarly, the user must have the correct ACLs for creating or writing to settings.</span></span> <span data-ttu-id="905e8-139">Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="905e8-139">For example, a local application that has the code access security permission might not have operating system permission.</span></span> <span data-ttu-id="905e8-140">Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8).</span><span class="sxs-lookup"><span data-stu-id="905e8-140">For more information, see [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
- [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8)
-
+## <a name="see-also"></a><span data-ttu-id="905e8-141">Consulte também</span><span class="sxs-lookup"><span data-stu-id="905e8-141">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
+ <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
+ [<span data-ttu-id="905e8-142">Lendo e Gravando do Registro</span><span class="sxs-lookup"><span data-stu-id="905e8-142">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
+ [<span data-ttu-id="905e8-143">Noções Básicas da Segurança de Acesso do Código</span><span class="sxs-lookup"><span data-stu-id="905e8-143">Code Access Security Basics</span></span>](https://msdn.microsoft.com/library/33tceax8)

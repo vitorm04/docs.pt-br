@@ -1,55 +1,37 @@
 ---
-title: "&quot;&lt;Nome1&gt;&quot;é ambíguo, importado dos namespaces ou tipos&quot;&lt;nome2&gt;&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "&#39; &lt;name1&gt;&#39; é ambíguo, importado dos namespaces ou tipos de &#39;&lt; NAME2&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30561
 - bc30561
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30561
+helpviewer_keywords: BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90e1f77650845f9d0a49ba0b6c3b0b470dca5a9b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b6ebc9b75d171a28b4388d48625b772ac6f20dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>'&lt;Nome1&gt;'é ambíguo, importado dos namespaces ou tipos'&lt;nome2&gt;'
-Você forneceu um nome que é ambíguo e, portanto, está em conflito com outro nome. O [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador não tem nenhuma regra de resolução de conflitos; você deve eliminar a ambiguidade por conta própria.  
+# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a><span data-ttu-id="31906-102">&#39; &lt;name1&gt;&#39; é ambíguo, importado dos namespaces ou tipos de &#39;&lt; NAME2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="31906-102">&#39;&lt;name1&gt;&#39; is ambiguous, imported from the namespaces or types &#39;&lt;name2&gt;&#39;</span></span>
+<span data-ttu-id="31906-103">Você forneceu um nome que é ambíguo e, portanto, está em conflito com outro nome.</span><span class="sxs-lookup"><span data-stu-id="31906-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="31906-104">O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador não tem nenhuma regra de resolução de conflitos; você deve resolver a ambiguidade de nomes por conta própria.</span><span class="sxs-lookup"><span data-stu-id="31906-104">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- **ID do erro:** BC30561  
+ <span data-ttu-id="31906-105">**ID do erro:** BC30561</span><span class="sxs-lookup"><span data-stu-id="31906-105">**Error ID:** BC30561</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="31906-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="31906-106">To correct this error</span></span>  
   
-1.  Ambiguidade o nome, removendo as importações de namespace.  
+1.  <span data-ttu-id="31906-107">Desfazer a ambiguidade o nome, removendo as importações de namespace.</span><span class="sxs-lookup"><span data-stu-id="31906-107">Disambiguate the name by removing namespace imports.</span></span>  
   
-2.  Qualificar totalmente o nome.  
+2.  <span data-ttu-id="31906-108">Qualifica totalmente o nome.</span><span class="sxs-lookup"><span data-stu-id="31906-108">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+## <a name="see-also"></a><span data-ttu-id="31906-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="31906-109">See Also</span></span>  
+ [<span data-ttu-id="31906-110">Instrução Imports (Tipo e Namespace .NET)</span><span class="sxs-lookup"><span data-stu-id="31906-110">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="31906-111">Namespaces no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="31906-111">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ [<span data-ttu-id="31906-112">Instrução Namespace</span><span class="sxs-lookup"><span data-stu-id="31906-112">Namespace Statement</span></span>](../../../visual-basic/language-reference/statements/namespace-statement.md)

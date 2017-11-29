@@ -1,62 +1,44 @@
 ---
-title: "Conversão implícita de &quot;&lt;typename1&gt;&quot;para&quot;&lt;typename2&gt;&quot;ao copiar o valor do parâmetro &quot;ByRef&quot; &quot;&lt;parametername&gt;&quot; para o argumento correspondente. | Microsoft Docs"
-ms.date: 2015-07-20
+title: "Conversão implícita de &#39; &lt;typename1&gt;&#39; para &#39;&lt; typename2&gt;&#39; ao copiar o valor de &#39; ByRef &#39; parâmetro &#39; &lt;parametername&gt;&#39; volta para o argumento correspondente."
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc41999
 - bc41999
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC41999
+helpviewer_keywords: BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e397241aab78e17ea4efde0ea682d0e237fb8f8a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9e858b475a816a35d18822643de5a273abe28562
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Conversão implícita de '&lt;typename1&gt;'para'&lt;typename2&gt;'ao copiar o valor do parâmetro 'ByRef' '&lt;parametername&gt;' para o argumento correspondente.
-Um procedimento é chamado com um [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumento de um tipo diferente do seu parâmetro correspondente.  
+# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a><span data-ttu-id="54a19-102">Conversão implícita de &#39; &lt;typename1&gt;&#39; para &#39;&lt; typename2&gt;&#39; ao copiar o valor de &#39; ByRef &#39; parâmetro &#39; &lt;parametername&gt;&#39; volta para o argumento correspondente.</span><span class="sxs-lookup"><span data-stu-id="54a19-102">Implicit conversion from &#39;&lt;typename1&gt;&#39; to &#39;&lt;typename2&gt;&#39; in copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument.</span></span>
+<span data-ttu-id="54a19-103">Um procedimento é chamado com um [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumento de um tipo diferente do seu parâmetro correspondente.</span><span class="sxs-lookup"><span data-stu-id="54a19-103">A procedure is called with a [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument of a different type than that of its corresponding parameter.</span></span>  
   
- Se você passar um argumento `ByRef`, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] algumas vezes copia o valor do argumento para uma variável local no procedimento em vez de passar uma referência. Nesse caso, quando o procedimento retorna, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deve copiar o valor da variável local novamente para o argumento no código de chamada.  
+ <span data-ttu-id="54a19-104">Se você passar um argumento `ByRef`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] algumas vezes copia o valor do argumento para uma variável local no procedimento em vez de passar uma referência.</span><span class="sxs-lookup"><span data-stu-id="54a19-104">If you pass an argument `ByRef`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sometimes copies the argument value into a local variable in the procedure instead of passing a reference.</span></span> <span data-ttu-id="54a19-105">Nesse caso, quando o procedimento retorna, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve copiar o valor da variável local novamente para o argumento no código de chamada.</span><span class="sxs-lookup"><span data-stu-id="54a19-105">In such a case, when the procedure returns, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must then copy the local variable value back into the argument in the calling code.</span></span>  
   
- Se um `ByRef` o valor do argumento é copiado no procedimento e o argumento e parâmetro são do mesmo tipo, nenhuma conversão é necessária. Mas se os tipos forem diferentes, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deve converter em ambas as direções. Porque você não pode usar `CType` ou qualquer um dos outras conversão palavras-chave em um argumento de procedimento ou parâmetro, essa conversão é sempre implícita.  
+ <span data-ttu-id="54a19-106">Se um `ByRef` o valor do argumento é copiado para o procedimento e o argumento e parâmetro são do mesmo tipo, nenhuma conversão é necessária.</span><span class="sxs-lookup"><span data-stu-id="54a19-106">If a `ByRef` argument value is copied into the procedure and the argument and parameter are of the same type, no conversion is necessary.</span></span> <span data-ttu-id="54a19-107">Porém, se os tipos forem diferentes, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve converter em ambas as direções.</span><span class="sxs-lookup"><span data-stu-id="54a19-107">But if the types are different, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must convert in both directions.</span></span> <span data-ttu-id="54a19-108">Porque você não pode usar `CType` ou qualquer um dos outros conversão palavras-chave em um argumento de procedimento ou parâmetro, tal conversão sempre está implícito.</span><span class="sxs-lookup"><span data-stu-id="54a19-108">Because you cannot use `CType` or any of the other conversion keywords on a procedure argument or parameter, such a conversion is always implicit.</span></span>  
   
- Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="54a19-109">Por padrão, esta mensagem é um aviso.</span><span class="sxs-lookup"><span data-stu-id="54a19-109">By default, this message is a warning.</span></span> <span data-ttu-id="54a19-110">Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="54a19-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **ID do erro:** BC41999  
+ <span data-ttu-id="54a19-111">**ID do erro:** BC41999</span><span class="sxs-lookup"><span data-stu-id="54a19-111">**Error ID:** BC41999</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="54a19-112">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="54a19-112">To correct this error</span></span>  
   
--   Se possível, use um argumento chamando do mesmo tipo que o parâmetro do procedimento, dessa forma [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] não precisa fazer nenhuma conversão.  
+-   <span data-ttu-id="54a19-113">Se possível, use um argumento chamando do mesmo tipo que o parâmetro do procedimento, portanto [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] não precisa fazer nenhuma conversão.</span><span class="sxs-lookup"><span data-stu-id="54a19-113">If possible, use a calling argument of the same type as the procedure parameter, so [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] does not need to do any conversion.</span></span>  
   
--   Se você precisar chamar o procedimento com um argumento de tipo diferente do tipo de parâmetro mas não precisa retornar um valor para o argumento de chamada, defina o parâmetro para ser [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) em vez de `ByRef`.  
+-   <span data-ttu-id="54a19-114">Se você precisar chamar o procedimento com um argumento de tipo diferente do tipo de parâmetro, mas não precisa retornar um valor para o argumento de chamada, defina o parâmetro para ser [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) em vez de `ByRef`.</span><span class="sxs-lookup"><span data-stu-id="54a19-114">If you need to call the procedure with an argument type different from the parameter type but do not need to return a value into the calling argument, define the parameter to be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) instead of `ByRef`.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Argumentos e parâmetros de procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Passando argumentos por valor e por referência](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="54a19-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54a19-115">See Also</span></span>  
+ [<span data-ttu-id="54a19-116">Procedimentos</span><span class="sxs-lookup"><span data-stu-id="54a19-116">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [<span data-ttu-id="54a19-117">Parâmetros e Argumentos de Procedimento</span><span class="sxs-lookup"><span data-stu-id="54a19-117">Procedure Parameters and Arguments</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="54a19-118">Passando Argumentos por Valor e por Referência</span><span class="sxs-lookup"><span data-stu-id="54a19-118">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="54a19-119">Conversões Implícitas e Explícitas</span><span class="sxs-lookup"><span data-stu-id="54a19-119">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

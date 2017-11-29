@@ -1,1 +1,1 @@
-Gerenciamento do Ciclo de Vida do Aplicativo no Visual Studio
+<span data-ttu-id="619be-101">Gerenciamento do Ciclo de Vida do Aplicativo no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="619be-101">Visual Studio Application Lifecycle Management</span></span>

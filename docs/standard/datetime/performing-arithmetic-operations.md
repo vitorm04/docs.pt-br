@@ -1,320 +1,99 @@
 ---
 title: "Executando operações aritméticas com datas e horários"
-description: "Executando operações aritméticas com datas e horários"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/16/2016
-ms.topic: article
+ms.custom: 
+ms.date: 04/10/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 589ac5ec-8365-4a0d-bc38-72183718110c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: b872cc4c2b799ddafc9df263795d860754d1ec17
-ms.lasthandoff: 03/02/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- times [.NET Framework], arithmetic operations
+- dates [.NET Framework], arithmetic operations
+- time zones [.NET Framework], arithmetic operations
+- arithmetic operations [.NET Framework], dates and times
+- dates [.NET Framework], comparing
+- DateTime structure, arithmetic operations
+- DateTimeOffset structure, arithmetic operations
+ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: def43f84186b53f9b0d2ade0a5a92e59606ee2af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="performing-arithmetic-operations-with-dates-and-times"></a><span data-ttu-id="75e9f-102">Executando operações aritméticas com datas e horários</span><span class="sxs-lookup"><span data-stu-id="75e9f-102">Performing arithmetic operations with dates and times</span></span>
 
-# <a name="performing-arithmetic-operations-with-dates-and-times"></a>Executando operações aritméticas com datas e horários
+<span data-ttu-id="75e9f-103">Embora tanto o <xref:System.DateTime> e <xref:System.DateTimeOffset> estruturas fornecem aos membros que executam operações aritméticas em seus valores, os resultados das operações aritméticas são muito diferentes.</span><span class="sxs-lookup"><span data-stu-id="75e9f-103">Although both the <xref:System.DateTime> and the <xref:System.DateTimeOffset> structures provide members that perform arithmetic operations on their values, the results of arithmetic operations are very different.</span></span> <span data-ttu-id="75e9f-104">Este tópico examina essas diferenças, relaciona a graus de reconhecimento de fuso horário em dados de data e hora e discute como totalmente executar operações com reconhecimento de fuso horário usando dados de data e hora.</span><span class="sxs-lookup"><span data-stu-id="75e9f-104">This topic examines those differences, relates them to degrees of time zone awareness in date and time data, and discusses how to perform fully time zone aware operations using date and time data.</span></span>
 
-Apesar de as estruturas [System.DateTime](xref:System.DateTime) e [System.DateTimeOffset](xref:System.DateTimeOffset) oferecerem membros que executam operações aritméticas em seus valores, os resultados das operações aritméticas são muito diferentes. Este artigo examina tais diferenças, as relaciona a graus de reconhecimento de fuso horário em dados de data e hora e discute como executar totalmente operações de reconhecimento de fuso horário usando dados de data e hora.
+## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a><span data-ttu-id="75e9f-105">Comparações e operações aritméticas com valores de data e hora</span><span class="sxs-lookup"><span data-stu-id="75e9f-105">Comparisons and arithmetic operations with DateTime values</span></span>
 
-## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a>Comparações e operações aritméticas com valores DateTime
+<span data-ttu-id="75e9f-106">O <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriedade permite que uma <xref:System.DateTimeKind> valor a ser atribuído para a data e hora para indicar se ele representa a hora local, Tempo Universal Coordenado (UTC) ou a hora em um fuso horário não especificado.</span><span class="sxs-lookup"><span data-stu-id="75e9f-106">The <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property allows a <xref:System.DateTimeKind> value to be assigned to the date and time to indicate whether it represents local time, Coordinated Universal Time (UTC), or the time in an unspecified time zone.</span></span> <span data-ttu-id="75e9f-107">No entanto, essas informações de fuso horário limitado são ignoradas ao comparar ou executar a data e hora em <xref:System.DateTimeKind> valores.</span><span class="sxs-lookup"><span data-stu-id="75e9f-107">However, this limited time zone information is ignored when comparing or performing date and time arithmetic on <xref:System.DateTimeKind> values.</span></span> <span data-ttu-id="75e9f-108">O exemplo a seguir, que compara o horário local atual com o horário UTC atual, ilustra isso.</span><span class="sxs-lookup"><span data-stu-id="75e9f-108">The following example, which compares the current local time with the current UTC time, illustrates this.</span></span>
 
-Os valores [System.DateTime](xref:System.DateTime) têm um grau limitado de reconhecimento de fuso horário. A propriedade [DateTime.Kind](xref:System.DateTime.Kind) permite que um valor [System.DateTimeKind](xref:System.DateTimeKind) seja atribuído à data e à hora para indicar se representa um horário local, o UTC (Tempo Universal Coordenado) ou o horário em um fuso horário não especificado. No entanto, essas informações de fuso horário limitado são ignoradas ao comparar ou executar a aritmética de data e hora em valores [DateTime](xref:System.DateTime). O exemplo a seguir, que compara o horário local atual com o horário UTC atual, ilustra isso.
+[!code-csharp[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual2.cs#2)]
+[!code-vb[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual2.vb#2)]
 
-```csharp
-using System;
+<span data-ttu-id="75e9f-109">O <xref:System.DateTime.CompareTo%28System.DateTime%29> método informa que a hora local anterior (ou menor que) a hora UTC e a operação de subtração indica que a diferença entre o UTC e a hora local para um sistema nos EUA. Pacífico dos EUA é de sete horas.</span><span class="sxs-lookup"><span data-stu-id="75e9f-109">The <xref:System.DateTime.CompareTo%28System.DateTime%29> method reports that the local time is earlier than (or less than) the UTC time, and the subtraction operation indicates that the difference between UTC and the local time for a system in the U.S. Pacific Standard Time zone is seven hours.</span></span> <span data-ttu-id="75e9f-110">Porém, como esses dois valores oferecem representações diferentes de um único momento, fica claro que, nesse caso, o intervalo de tempo é completamente atribuível ao deslocamento do fuso horário local em relação ao UTC.</span><span class="sxs-lookup"><span data-stu-id="75e9f-110">But because these two values provide different representations of a single point in time, it is clear in this case that this time interval is completely attributable to the local time zone's offset from UTC.</span></span>
 
-public enum TimeComparison
-{
-   EarlierThan = -1,
-   TheSameAs = 0,
-   LaterThan = 1
-}
+<span data-ttu-id="75e9f-111">Geralmente, o <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriedade não afeta os resultados retornados por <xref:System.DateTime.Kind> métodos de comparação e de aritmética (como indica a comparação dos dois pontos idênticos no tempo), embora ele possa afetar a interpretação dos resultados.</span><span class="sxs-lookup"><span data-stu-id="75e9f-111">More generally, the <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property does not affect the results returned by <xref:System.DateTime.Kind> comparison and arithmetic methods (as the comparison of two identical points in time indicates), although it can affect the interpretation of those results.</span></span> <span data-ttu-id="75e9f-112">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="75e9f-112">For example:</span></span>
 
-public class DateManipulation
-{
-   public static void Main()
-   {
-      DateTime localTime = DateTime.Now;
-      DateTime utcTime = DateTime.UtcNow;
+* <span data-ttu-id="75e9f-113">O resultado de qualquer operação aritmética executada em dois valores de data e hora cujas <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> igual a ambas as propriedades <xref:System.DateTimeKind> reflete o intervalo de tempo real entre os dois valores.</span><span class="sxs-lookup"><span data-stu-id="75e9f-113">The result of any arithmetic operation performed on two date and time values whose <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> properties both equal <xref:System.DateTimeKind> reflects the actual time interval between the two values.</span></span> <span data-ttu-id="75e9f-114">Da mesma forma, a comparação dos dois valores de data e hora reflete com precisão a relação entre horários.</span><span class="sxs-lookup"><span data-stu-id="75e9f-114">Similarly, the comparison of two such date and time values accurately reflects the relationship between times.</span></span>
 
-      Console.WriteLine("Difference between {0} and {1} time: {2}:{3} hours", 
-                        localTime.Kind.ToString(), 
-                        utcTime.Kind.ToString(), 
-                        (localTime - utcTime).Hours, 
-                        (localTime - utcTime).Minutes);
-      Console.WriteLine("The {0} time is {1} the {2} time.", 
-                        localTime.Kind.ToString(), 
-                        Enum.GetName(typeof(TimeComparison), localTime.CompareTo(utcTime)), 
-                        utcTime.Kind.ToString());  
-   }
-}
-// If run in the U.S. Pacific Standard Time zone, the example displays 
-// the following output to the console:
-//    Difference between Local and Utc time: -7:0 hours
-//    The Local time is EarlierThan the Utc time.
-```
+* <span data-ttu-id="75e9f-115">O resultado de qualquer operação aritmética ou de comparação executada em dois valores de data e hora cujas <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> igual a ambas as propriedades <xref:System.DateTimeKind> ou dois valores de data e hora com diferentes <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> valores de propriedade refletem a diferença de hora do relógio entre os dois valores.</span><span class="sxs-lookup"><span data-stu-id="75e9f-115">The result of any arithmetic or comparison operation performed on two date and time values whose <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> properties both equal <xref:System.DateTimeKind> or on two date and time values with different <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property values reflects the difference in clock time between the two values.</span></span>
 
-```vb
-Public Enum TimeComparison As Integer
-   EarlierThan = -1
-   TheSameAs = 0
-   LaterThan = 1
-End Enum
+* <span data-ttu-id="75e9f-116">As operações aritméticas ou de comparação em valores de data e hora local não consideram se um valor específico é ambíguo ou inválido nem levam em conta o efeito de regras de ajuste que resultam da transição do fuso horário local de ou para o horário de verão.</span><span class="sxs-lookup"><span data-stu-id="75e9f-116">Arithmetic or comparison operations on local date and time values do not consider whether a particular value is ambiguous or invalid, nor do they take account of the effect of any adjustment rules that result from the local time zone's transition to or from daylight saving time.</span></span>
 
-Module DateManipulation
-   Public Sub Main()
-      Dim localTime As Date = Date.Now
-      Dim utcTime As Date = Date.UtcNow
+* <span data-ttu-id="75e9f-117">Qualquer operação que compara ou calcula a diferença entre o UTC e o horário local inclui um intervalo de tempo igual ao deslocamento do fuso horário local em relação ao UTC no resultado.</span><span class="sxs-lookup"><span data-stu-id="75e9f-117">Any operation that compares or calculates the difference between UTC and a local time includes a time interval equal to the local time zone's offset from UTC in the result.</span></span>
 
-      Console.WriteLine("Difference between {0} and {1} time: {2}:{3} hours", _
-                        localTime.Kind.ToString(), _
-                        utcTime.Kind.ToString(), _
-                        (localTime - utcTime).Hours, _
-                        (localTime - utcTime).Minutes)
-      Console.WriteLine("The {0} time is {1} the {2} time.", _
-                        localTime.Kind.ToString(), _ 
-                        [Enum].GetName(GetType(TimeComparison), localTime.CompareTo(utcTime)), _
-                        utcTime.Kind.ToString())  
-      ' If run in the U.S. Pacific Standard Time zone, the example displays 
-      ' the following output to the console:
-      '    Difference between Local and Utc time: -7:0 hours
-      '    The Local time is EarlierThan the Utc time.                                                    
-   End Sub
-End Module
-```
+* <span data-ttu-id="75e9f-118">Qualquer operação que compara ou calcula a diferença entre um horário não especificado e o UTC ou o horário local reflete a hora do relógio simples.</span><span class="sxs-lookup"><span data-stu-id="75e9f-118">Any operation that compares or calculates the difference between an unspecified time and either UTC or the local time reflects simple clock time.</span></span> <span data-ttu-id="75e9f-119">As diferenças de fuso horário não são consideradas; o resultado não reflete a aplicação das regras de ajuste de fuso horário.</span><span class="sxs-lookup"><span data-stu-id="75e9f-119">Time zone differences are not considered, and the result does not reflect the application of time zone adjustment rules.</span></span>
 
-O método [DateTime.CompareTo(DateTime, DateTime)](xref:System.DateTime.Compare(System.DateTime,System.DateTime)) informa que o horário local é anterior (ou inferior) ao horário UTC; a operação de subtração indica que a diferença entre UTC e o horário local para um sistema no fuso horário padrão do Pacífico dos EUA é de sete horas. Porém, como esses dois valores oferecem representações diferentes de um único momento, fica claro que, nesse caso, o intervalo de tempo é completamente atribuível ao deslocamento do fuso horário local em relação ao UTC. 
+* <span data-ttu-id="75e9f-120">Qualquer operação que compara ou calcula a diferença entre dois horários não especificados poderá incluir um intervalo desconhecido que reflete a diferença entre o horário em dois fusos horários diferentes.</span><span class="sxs-lookup"><span data-stu-id="75e9f-120">Any operation that compares or calculates the difference between two unspecified times may include an unknown interval that reflects the difference between the time in two different time zones.</span></span>
 
-Normalmente, a propriedade [DateTimeKind](xref:System.DateTimeKind) não afeta os resultados retornado pelos métodos aritméticos e de comparação [DateTime](xref:System.DateTime) (como indica a comparação de dois momentos idênticos), embora possa afetar a interpretação dos resultados. Por exemplo:
+<span data-ttu-id="75e9f-121">Há muitos cenários em qual fuso horário diferenças não afetam os cálculos de data e hora (para uma discussão sobre algumas delas, consulte [escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)) ou em que o contexto da data e hora de dados definem o significado das operações de comparação ou aritmética.</span><span class="sxs-lookup"><span data-stu-id="75e9f-121">There are many scenarios in which time zone differences do not affect date and time calculations (for a discussion of some of these, see [Choosing between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)) or in which the context of the date and time data defines the meaning of comparison or arithmetic operations.</span></span>
 
-* O resultado de qualquer operação aritmética executada em dois valores de data e hora cujas propriedades [DateTimeKind](xref:System.DateTimeKind) equivalem a [DateTimeKind](xref:System.DateTimeKind.Utc) refletem o intervalo de tempo real entre os dois valores. Da mesma forma, a comparação dos dois valores de data e hora reflete com precisão a relação entre horários.
+## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a><span data-ttu-id="75e9f-122">Comparações e operações aritméticas com valores de DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="75e9f-122">Comparisons and arithmetic operations with DateTimeOffset values</span></span>
 
-* O resultado de qualquer operação aritmética ou de comparação executada em dois valores de data e hora cujas propriedades [DateTimeKind](xref:System.DateTimeKind) equivalem a [DateTimeKind.Local](xref:System.DateTimeKind.Local) ou em dois valores de data e hora com valores de propriedade [DateTimeKind](xref:System.DateTimeKind) diferentes reflete a diferença de hora do relógio entre os dois valores. 
+<span data-ttu-id="75e9f-123">Um <xref:System.DateTimeOffset> valor inclui não apenas uma data e hora, mas também um deslocamento que define especificamente que data e hora em relação ao UTC.</span><span class="sxs-lookup"><span data-stu-id="75e9f-123">A <xref:System.DateTimeOffset> value includes not only a date and time, but also an offset that unambiguously defines that date and time relative to UTC.</span></span> <span data-ttu-id="75e9f-124">Isso torna possível definir a igualdade de forma um pouco diferente para <xref:System.DateTimeOffset> valores.</span><span class="sxs-lookup"><span data-stu-id="75e9f-124">This makes it possible to define equality somewhat differently than for <xref:System.DateTimeOffset> values.</span></span> <span data-ttu-id="75e9f-125">Enquanto <xref:System.DateTime> os valores são iguais se eles tiverem o mesmo valor de data e hora, <xref:System.DateTimeOffset> valores são iguais se os dois se referirem ao mesmo ponto no tempo.</span><span class="sxs-lookup"><span data-stu-id="75e9f-125">Whereas <xref:System.DateTime> values are equal if they have the same date and time value, <xref:System.DateTimeOffset> values are equal if they both refer to the same point in time.</span></span> <span data-ttu-id="75e9f-126">Isso faz com que um <xref:System.DateTimeOffset> valor mais preciso e menos precisa ser interpretação quando usado em comparações e na maioria das operações aritméticas que determinam o intervalo entre duas datas e horas.</span><span class="sxs-lookup"><span data-stu-id="75e9f-126">This makes a <xref:System.DateTimeOffset> value more accurate and less in need of interpretation when used in comparisons and in most arithmetic operations that determine the interval between two dates and times.</span></span> <span data-ttu-id="75e9f-127">O exemplo a seguir, que é o <xref:System.DateTimeOffset> equivalente ao exemplo anterior que comparava local e UTC <xref:System.DateTimeOffset> valores, ilustra essa diferença no comportamento.</span><span class="sxs-lookup"><span data-stu-id="75e9f-127">The following example, which is the <xref:System.DateTimeOffset> equivalent to the previous example that compared local and UTC <xref:System.DateTimeOffset> values, illustrates this difference in behavior.</span></span>
 
-* As operações aritméticas ou de comparação em valores de data e hora local não consideram se um valor específico é ambíguo ou inválido nem levam em conta o efeito de regras de ajuste que resultam da transição do fuso horário local de ou para o horário de verão.
+[!code-csharp[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual3.cs#3)]
+[!code-vb[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual3.vb#3)]
 
-* Qualquer operação que compara ou calcula a diferença entre o UTC e o horário local inclui um intervalo de tempo igual ao deslocamento do fuso horário local em relação ao UTC no resultado. 
+<span data-ttu-id="75e9f-128">Neste exemplo, o <xref:System.DateTimeOffset.CompareTo%2A> método indica que a hora local atual e a hora UTC atual são iguais e subtração de <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> valores indica que a diferença entre as duas horas é <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="75e9f-128">In this example, the <xref:System.DateTimeOffset.CompareTo%2A> method indicates that the current local time and the current UTC time are equal, and subtraction of <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> values indicates that the difference between the two times is <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span></span>
 
-* Qualquer operação que compara ou calcula a diferença entre um horário não especificado e o UTC ou o horário local reflete a hora do relógio simples. As diferenças de fuso horário não são consideradas; o resultado não reflete a aplicação das regras de ajuste de fuso horário. 
+<span data-ttu-id="75e9f-129">A limitação principal de usar <xref:System.DateTimeOffset> valores de data e hora é que, embora <xref:System.DateTimeOffset> valores têm alguns reconhecimento de fuso horário, eles não são totalmente com reconhecimento de fuso horário.</span><span class="sxs-lookup"><span data-stu-id="75e9f-129">The chief limitation of using <xref:System.DateTimeOffset> values in date and time arithmetic is that although <xref:System.DateTimeOffset> values have some time zone awareness, they are not fully time zone aware.</span></span> <span data-ttu-id="75e9f-130">Embora o <xref:System.DateTimeOffset> deslocamento do valor reflete o deslocamento de um fuso horário UTC quando um <xref:System.DateTimeOffset> variável primeiro é atribuída a um valor, ele se torna desassociado da zona de tempo posteriormente.</span><span class="sxs-lookup"><span data-stu-id="75e9f-130">Although the <xref:System.DateTimeOffset> value's offset reflects a time zone's offset from UTC when a <xref:System.DateTimeOffset> variable is first assigned a value, it becomes disassociated from the time zone thereafter.</span></span> <span data-ttu-id="75e9f-131">Como não estão mais diretamente associadas a um horário identificável, a adição e a subtração dos intervalos de data e hora não consideram as regras de ajuste de um fuso horário.</span><span class="sxs-lookup"><span data-stu-id="75e9f-131">Because it is no longer directly associated with an identifiable time, the addition and subtraction of date and time intervals does not consider a time zone's adjustment rules.</span></span>
 
-* Qualquer operação que compara ou calcula a diferença entre dois horários não especificados poderá incluir um intervalo desconhecido que reflete a diferença entre o horário em dois fusos horários diferentes.
+<span data-ttu-id="75e9f-132">Para ilustrar, a transição para o horário de verão no fuso horário padrão da região central EUA ocorre às 2h.</span><span class="sxs-lookup"><span data-stu-id="75e9f-132">To illustrate, the transition to daylight saving time in the U.S. Central Standard Time zone occurs at 2:00 A.M.</span></span> <span data-ttu-id="75e9f-133">em 9 de março de 2008.</span><span class="sxs-lookup"><span data-stu-id="75e9f-133">on March 9, 2008.</span></span> <span data-ttu-id="75e9f-134">Isso significa que adicionar um intervalo de duas horas e meia ao fuso horário padrão da região central de 1h30min</span><span class="sxs-lookup"><span data-stu-id="75e9f-134">This means that adding a two and a half hour interval to a Central Standard time of 1:30 A.M.</span></span> <span data-ttu-id="75e9f-135">em 9 de março de 2008 deve produzir uma data e hora de 5h</span><span class="sxs-lookup"><span data-stu-id="75e9f-135">on March 9, 2008, should produce a date and time of 5:00 A.M.</span></span> <span data-ttu-id="75e9f-136">em 9 de março de 2008.</span><span class="sxs-lookup"><span data-stu-id="75e9f-136">on March 9, 2008.</span></span> <span data-ttu-id="75e9f-137">No entanto, como mostra o exemplo a seguir, o resultado da adição é 4h</span><span class="sxs-lookup"><span data-stu-id="75e9f-137">However, as the following example shows, the result of the addition is 4:00 A.M.</span></span> <span data-ttu-id="75e9f-138">em 9 de março de 2008.</span><span class="sxs-lookup"><span data-stu-id="75e9f-138">on March 9, 2008.</span></span> <span data-ttu-id="75e9f-139">Observe que o resultado dessa operação representa o momento correto, embora não seja o horário no fuso horário em que estamos interessados (ou seja, não tem o deslocamento de fuso horário esperado).</span><span class="sxs-lookup"><span data-stu-id="75e9f-139">Note that this result of this operation does represent the correct point in time, although it is not the time in the time zone in which we are interested (that is, it does not have the expected time zone offset).</span></span>
 
-Há muitos cenários nos quais as diferenças de fuso horário não afetam os cálculos de data e hora ou em que o contexto dos dados de data e hora define o significado das operações aritméticas ou de comparação. Para ver uma discussão entre alguns deles, consulte [Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](choosing-between-datetime.md).
+[!code-csharp[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual4.cs#4)]
+[!code-vb[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual4.vb#4)]
 
-## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a>Comparações e operações aritméticas com valores DateTimeOffset
+## <a name="arithmetic-operations-with-times-in-time-zones"></a><span data-ttu-id="75e9f-140">Operações aritméticas com horários em fusos horários</span><span class="sxs-lookup"><span data-stu-id="75e9f-140">Arithmetic operations with times in time zones</span></span>
 
-Um valor [System.DateTimeOffset](xref:System.DateTimeOffset) não inclui apenas data e hora, mas também um deslocamento que define sem ambiguidade a data e hora relativas ao UTC. Isso possibilita definir a igualdade de forma diferente do que para valores [System.DateTime](xref:System.DateTime). Apesar de os valores [DateTime](xref:System.DateTime) serem iguais se tiverem o mesmo valor de data e hora, os valores [DateTimeOffset](xref:System.DateTimeOffset) valores são iguais caso ambos se refiram ao mesmo momento. Isso torna um valor [DateTimeOffset](xref:System.DateTimeOffset) mais preciso e com menos necessidade de interpretação quando usado em comparações e na maioria das operações aritméticas que determinam o intervalo entre duas datas e horas. O exemplo a seguir, que é o equivalente [DateTimeOffset](xref:System.DateTimeOffset) ao exemplo anterior que comparou valores DateTime locais e do UTC, mostra essa diferença no comportamento.
+<span data-ttu-id="75e9f-141">O <xref:System.TimeZoneInfo> classe inclui um número de métodos de conversão que aplicam ajustes automaticamente quando eles convertem horas de um fuso horário para outro.</span><span class="sxs-lookup"><span data-stu-id="75e9f-141">The <xref:System.TimeZoneInfo> class includes a number of conversion methods that automatically apply adjustments when they convert times from one time zone to another.</span></span> <span data-ttu-id="75e9f-142">Eles incluem o seguinte:</span><span class="sxs-lookup"><span data-stu-id="75e9f-142">These include the following:</span></span>
 
-```csharp
-using System;
+* <span data-ttu-id="75e9f-143">O <xref:System.TimeZoneInfo.ConvertTime%2A> e <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> métodos que convertem horas entre quaisquer dois fusos horários.</span><span class="sxs-lookup"><span data-stu-id="75e9f-143">The <xref:System.TimeZoneInfo.ConvertTime%2A> and <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> methods, which convert times between any two time zones.</span></span>
 
-public enum TimeComparison
-{
-   EarlierThan = -1,
-   TheSameAs = 0,
-   LaterThan = 1
-}
+* <span data-ttu-id="75e9f-144">O <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> e <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> métodos que converter a hora em um determinado fuso horário UTC ou converter a hora em um determinado fuso horário UTC.</span><span class="sxs-lookup"><span data-stu-id="75e9f-144">The <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> and <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> methods, which convert the time in a particular time zone to UTC, or convert UTC to the time in a particular time zone.</span></span>
 
-public class DateTimeOffsetManipulation
-{
-   public static void Main()
-   {
-      DateTimeOffset localTime = DateTimeOffset.Now;
-      DateTimeOffset utcTime = DateTimeOffset.UtcNow;
+<span data-ttu-id="75e9f-145">Para obter detalhes, consulte [convertendo horários entre fusos horários](../../../docs/standard/datetime/converting-between-time-zones.md).</span><span class="sxs-lookup"><span data-stu-id="75e9f-145">For details, see [Converting times between time zones](../../../docs/standard/datetime/converting-between-time-zones.md).</span></span>
 
-      Console.WriteLine("Difference between local time and UTC: {0}:{1:D2} hours", 
-                        (localTime - utcTime).Hours, 
-                        (localTime - utcTime).Minutes);
-      Console.WriteLine("The local time is {0} UTC.", 
-                        Enum.GetName(typeof(TimeComparison), localTime.CompareTo(utcTime)));  
-   }
-}
-// Regardless of the local time zone, the example displays 
-// the following output to the console:
-//    Difference between local time and UTC: 0:00 hours.
-//    The local time is TheSameAs UTC.
-```
+<span data-ttu-id="75e9f-146">O <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe fornece os métodos que aplicam regras de ajuste automaticamente quando você executa a data e hora.</span><span class="sxs-lookup"><span data-stu-id="75e9f-146">The <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> class does not provide any methods that automatically apply adjustment rules when you perform date and time arithmetic.</span></span> <span data-ttu-id="75e9f-147">No entanto, é possível fazer isso convertendo o horário em um fuso horário para UTC, executando a operação aritmética e, em seguida, convertendo do UTC novamente para o horário no fuso horário.</span><span class="sxs-lookup"><span data-stu-id="75e9f-147">However, you can do this by converting the time in a time zone to UTC, performing the arithmetic operation, and then converting from UTC back to the time in the time zone.</span></span> <span data-ttu-id="75e9f-148">Para obter detalhes, consulte [como: usar fusos horários em data e hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).</span><span class="sxs-lookup"><span data-stu-id="75e9f-148">For details, see [How to: Use time zones in date and time arithmetic](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).</span></span>
 
-```vb
-Public Enum TimeComparison As Integer
-   EarlierThan = -1
-   TheSameAs = 0
-   LaterThan = 1
-End Enum
+<span data-ttu-id="75e9f-149">Por exemplo, o código a seguir é semelhante ao código anterior, que adicionou duas horas e meia às 2h</span><span class="sxs-lookup"><span data-stu-id="75e9f-149">For example, the following code is similar to the previous code that added two-and-a-half hours to 2:00 A.M.</span></span> <span data-ttu-id="75e9f-150">em 9 de março de 2008.</span><span class="sxs-lookup"><span data-stu-id="75e9f-150">on March 9, 2008.</span></span> <span data-ttu-id="75e9f-151">No entanto, como converte um horário padrão da região central em UTC antes de realizar a aritmética de data e hora e, depois, converte o resultado do UTC novamente no horário padrão da região central, o horário resultante reflete a transição do fuso horário padrão da região central para o horário de verão.</span><span class="sxs-lookup"><span data-stu-id="75e9f-151">However, because it converts a Central Standard time to UTC before it performs date and time arithmetic, and then converts the result from UTC back to Central Standard time, the resulting time reflects the Central Standard Time Zone's transition to daylight saving time.</span></span>
 
-Module DateTimeOffsetManipulation
-   Public Sub Main()
-      Dim localTime As DateTimeOffset = DateTimeOffset.Now
-      Dim utcTime As DateTimeOffset = DateTimeOffset.UtcNow
+[!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
+[!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
 
-      Console.WriteLine("Difference between local time and UTC: {0}:{1:D2} hours.", _
-                        (localTime - utcTime).Hours, _
-                        (localTime - utcTime).Minutes)
-      Console.WriteLine("The local time is {0} UTC.", _
-                        [Enum].GetName(GetType(TimeComparison), localTime.CompareTo(utcTime)))  
-   End Sub
-End Module
-' Regardless of the local time zone, the example displays 
-' the following output to the console:
-'    Difference between local time and UTC: 0:00 hours.
-'    The local time is TheSameAs UTC.
-'          Console.WriteLine(e.GetType().Name)
-```
+## <a name="see-also"></a><span data-ttu-id="75e9f-152">Consulte também</span><span class="sxs-lookup"><span data-stu-id="75e9f-152">See also</span></span>
 
-Neste exemplo, o método [DateTimeOffset.CompareTo](xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)) indica que o horário local atual e o horário UTC atual são iguais; a subtração dos valores [DateTimeOffset](xref:System.DateTimeOffset) indica que a diferença entre os dois horários é [TimeSpan.Zero](xref:System.TimeSpan.Zero). 
-
-A limitação principal do uso de valores [DateTimeOffset](xref:System.DateTimeOffset) na aritmética de data e hora é que, apesar de os valores [DateTimeOffset](xref:System.DateTimeOffset) terem algum reconhecimento de fuso horário, não fazem reconhecimento total de fuso horário. Apesar de o deslocamento do valor [DateTimeOffset](xref:System.DateTimeOffset) refletir um deslocamento do fuso horário em relação ao UTC quando uma variável [DateTimeOffset](xref:System.DateTimeOffset) é atribuída pela primeira vez a um valor, ele se torna desassociado do fuso horário posteriormente. Como não estão mais diretamente associadas a um horário identificável, a adição e a subtração dos intervalos de data e hora não consideram as regras de ajuste de um fuso horário. 
-
-Para ilustrar, a transição para o horário de verão no fuso horário padrão da região central EUA ocorre às 2h. em 9 de março de 2008. Isso significa que adicionar um intervalo de duas horas e meia ao fuso horário padrão da região central de 1h30min em 9 de março de 2008 deve produzir uma data e hora de 5h em 9 de março de 2008. No entanto, como mostra o exemplo a seguir, o resultado da adição é 4h em 9 de março de 2008. Observe que o resultado dessa operação representa o momento correto, embora não seja o horário no fuso horário em que estamos interessados (ou seja, não tem o deslocamento de fuso horário esperado).
-
-```csharp
-using System;
-
-public class IntervalArithmetic
-{
-   public static void Main()
-   {
-      DateTime generalTime = new DateTime(2008, 3, 9, 1, 30, 0);
-      const string tzName = "Central Standard Time";
-      TimeSpan twoAndAHalfHours = new TimeSpan(2, 30, 0);
-
-      // Instantiate DateTimeOffset value to have correct CST offset
-      try
-      {
-         DateTimeOffset centralTime1 = new DateTimeOffset(generalTime, 
-                    TimeZoneInfo.FindSystemTimeZoneById(tzName).GetUtcOffset(generalTime));
-
-         // Add two and a half hours      
-         DateTimeOffset centralTime2 = centralTime1.Add(twoAndAHalfHours);
-         // Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, 
-                                                    twoAndAHalfHours.ToString(), 
-                                                    centralTime2);  
-      }
-      catch (TimeZoneNotFoundException)
-      {
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.");
-      }
-   }
-}
-// The example displays the following output to the console:
-//    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 4:00:00 AM -06:00
-```
-
-```vb
-Module IntervalArithmetic
-   Public Sub Main()
-      Dim generalTime As Date = #03/09/2008 1:30AM#
-      Const tzName As String = "Central Standard Time"
-      Dim twoAndAHalfHours As New TimeSpan(2, 30, 0)
-
-      ' Instantiate DateTimeOffset value to have correct CST offset
-      Try
-         Dim centralTime1 As New DateTimeOffset(generalTime, _
-                    TimeZoneInfo.FindSystemTimeZoneById(tzName).GetUtcOffset(generalTime))
-
-         ' Add two and a half hours      
-         Dim centralTime2 As DateTimeOffset = centralTime1.Add(twoAndAHalfHours)
-         ' Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, _
-                                                    twoAndAHalfHours.ToString(), _
-                                                    centralTime2)   
-      Catch e As TimeZoneNotFoundException
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.")
-      End Try
-   End Sub
-End Module
-' The example displays the following output to the console:
-'    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 4:00:00 AM -06:00
-```
-
-## <a name="arithmetic-operations-with-times-in-time-zones"></a>Operações aritméticas com horários nos fusos horários
-
-A classe [System.TimeZoneInfo](xref:System.TimeZoneInfo) não fornece os métodos que aplicam regras de ajuste automaticamente quando você executa a aritmética de data e hora. No entanto, é possível fazer isso convertendo o horário em um fuso horário para UTC, executando a operação aritmética e, em seguida, convertendo do UTC novamente para o horário no fuso horário. Para ver detalhes, consulte [Como usar fusos horários em aritmética de data e hora](use-time-zones-in-arithmetic.md).
-
-Por exemplo, o código a seguir é semelhante ao código anterior, que adicionou duas horas e meia às 2h em 9 de março de 2008. No entanto, como converte um horário padrão da região central em UTC antes de realizar a aritmética de data e hora e, depois, converte o resultado do UTC novamente no horário padrão da região central, o horário resultante reflete a transição do fuso horário padrão da região central para o horário de verão.
-
-```csharp
-using System;
-
-public class TimeZoneAwareArithmetic
-{
-   public static void Main()
-   {
-      const string tzName = "Central Standard Time";
-
-      DateTime generalTime = new DateTime(2008, 3, 9, 1, 30, 0);
-      TimeZoneInfo cst = TimeZoneInfo.FindSystemTimeZoneById(tzName);
-      TimeSpan twoAndAHalfHours = new TimeSpan(2, 30, 0);
-
-      // Instantiate DateTimeOffset value to have correct CST offset
-      try
-      {
-         DateTimeOffset centralTime1 = new DateTimeOffset(generalTime, 
-                                       cst.GetUtcOffset(generalTime));
-
-         // Add two and a half hours
-         DateTimeOffset utcTime = centralTime1.ToUniversalTime();
-         utcTime += twoAndAHalfHours;
-
-         DateTimeOffset centralTime2 = TimeZoneInfo.ConvertTime(utcTime, cst);
-         // Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, 
-                                                    twoAndAHalfHours.ToString(), 
-                                                    centralTime2);  
-      }
-      catch (TimeZoneNotFoundException)
-      {
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.");
-      }
-   }
-}
-// The example displays the following output to the console:
-//    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 5:00:00 AM -05:00
-```
-
-```vb
-Module TimeZoneAwareArithmetic
-   Public Sub Main()
-      Const tzName As String = "Central Standard Time"
-
-      Dim generalTime As Date = #03/09/2008 1:30AM#
-      Dim cst As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(tzName) 
-      Dim twoAndAHalfHours As New TimeSpan(2, 30, 0)
-
-      ' Instantiate DateTimeOffset value to have correct CST offset
-      Try
-         Dim centralTime1 As New DateTimeOffset(generalTime, _
-                    cst.GetUtcOffset(generalTime))
-
-         ' Add two and a half hours 
-         Dim utcTime As DateTimeOffset = centralTime1.ToUniversalTime()
-         utcTime += twoAndAHalfHours
-
-         Dim centralTime2 As DateTimeOffset = TimeZoneInfo.ConvertTime(utcTime, cst)
-         ' Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, _
-                                                    twoAndAHalfHours.ToString(), _
-                                                    centralTime2)   
-      Catch e As TimeZoneNotFoundException
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.")
-      End Try
-   End Sub
-End Module
-' The example displays the following output to the console:
-'    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 5:00:00 AM -05:00
-```
-
-## <a name="see-also"></a>Consulte também
-
-[Datas, horas e fusos horários](index.md)
-
-[Como usar fusos horários em aritmética de data e hora](use-time-zones-in-arithmetic.md)
-
-
-
+<span data-ttu-id="75e9f-153">[Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+[como: usar fusos horários em data e hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)</span><span class="sxs-lookup"><span data-stu-id="75e9f-153">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[How to: Use time zones in date and time arithmetic](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)</span></span>

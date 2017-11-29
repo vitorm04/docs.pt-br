@@ -1,62 +1,44 @@
 ---
-title: Tipo de dados (Visual Basic) char | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Tipo de dados Char (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Char
-dev_langs:
-- VB
+f1_keywords: vb.Char
 helpviewer_keywords:
-- literal type characters, C
+- literal type characters [Visual Basic], C
 - Char data type
-- C literal type character
+- C literal type character [Visual Basic]
 - data types [Visual Basic], assigning
-- Char data type, character literals
+- Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8f6d61c2bba25acc46a575ba4eec3e7177c47fc4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="char-data-type-visual-basic"></a>Tipo de dados Char (Visual Basic)
-Armazena pontos de código de (2 bytes) de 16 bits sem sinal cujo valor varia de 0 a 65535. Cada *ponto de código*, ou código de caractere, representa um único caractere Unicode.  
+# <a name="char-data-type-visual-basic"></a><span data-ttu-id="8e556-102">Tipo de dados Char (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e556-102">Char Data Type (Visual Basic)</span></span>
+<span data-ttu-id="8e556-103">Armazena pontos de código de (2 bytes) de 16 bits sem sinal que variam de 0 a 65535.</span><span class="sxs-lookup"><span data-stu-id="8e556-103">Holds unsigned 16-bit (2-byte) code points ranging in value from 0 through 65535.</span></span> <span data-ttu-id="8e556-104">Cada *ponto de código*, ou código de caractere, representa um único caractere Unicode.</span><span class="sxs-lookup"><span data-stu-id="8e556-104">Each *code point*, or character code, represents a single Unicode character.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Use o `Char` de tipo de dados quando você precisa armazenar um único caractere e não é necessário para a sobrecarga de `String`. Em alguns casos, você pode usar `Char()`, uma matriz de `Char` elementos, para manter vários caracteres.  
+## <a name="remarks"></a><span data-ttu-id="8e556-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="8e556-105">Remarks</span></span>  
+ <span data-ttu-id="8e556-106">Use o `Char` quando você precisa manter um único tipo de dados de caracteres e não precisa da sobrecarga do `String`.</span><span class="sxs-lookup"><span data-stu-id="8e556-106">Use the `Char` data type when you need to hold only a single character and do not need the overhead of `String`.</span></span> <span data-ttu-id="8e556-107">Em alguns casos, você pode usar `Char()`, uma matriz de `Char` elementos, para manter vários caracteres.</span><span class="sxs-lookup"><span data-stu-id="8e556-107">In some cases you can use `Char()`, an array of `Char` elements, to hold multiple characters.</span></span>  
   
- O valor padrão de `Char` é o caractere com um ponto de código de 0.  
+ <span data-ttu-id="8e556-108">O valor padrão de `Char` é o caractere com um ponto de código de 0.</span><span class="sxs-lookup"><span data-stu-id="8e556-108">The default value of `Char` is the character with a code point of 0.</span></span>  
   
-## <a name="unicode-characters"></a>Caracteres Unicode  
- Os primeiro 128 pontos de código (0 – 127) do Unicode correspondem às letras e símbolos de um teclado americano padrão. Esses pontos de 128 código primeiro são as mesmas que as define o conjunto de caracteres ASCII. Os 128 pontos de código (128 – 255) representam caracteres especiais, como letras do alfabeto latino, acentos, símbolos monetários e frações. O Unicode usa os pontos de código restantes (256-65535) para uma ampla variedade de símbolos, incluindo caracteres textuais em todo o mundo, sinais diacríticos e símbolos matemáticos e técnicos.  
+## <a name="unicode-characters"></a><span data-ttu-id="8e556-109">Caracteres Unicode</span><span class="sxs-lookup"><span data-stu-id="8e556-109">Unicode Characters</span></span>  
+ <span data-ttu-id="8e556-110">Os primeiro 128 pontos de código (0 – 127) do Unicode correspondem às letras e símbolos de um teclado americano padrão.</span><span class="sxs-lookup"><span data-stu-id="8e556-110">The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard.</span></span> <span data-ttu-id="8e556-111">Esses pontos de 128 código primeira são os mesmos define o conjunto de caracteres ASCII.</span><span class="sxs-lookup"><span data-stu-id="8e556-111">These first 128 code points are the same as those the ASCII character set defines.</span></span> <span data-ttu-id="8e556-112">Os segundo 128 pontos de código (128 – 255) representam caracteres especiais, como letras do alfabeto latino, acentos, símbolos de moeda e frações.</span><span class="sxs-lookup"><span data-stu-id="8e556-112">The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions.</span></span> <span data-ttu-id="8e556-113">O Unicode usa os pontos de código restantes (256-65535) para uma ampla variedade de símbolos, incluindo caracteres de textuais em todo o mundo, sinais diacríticos e símbolos matemáticos e técnicos.</span><span class="sxs-lookup"><span data-stu-id="8e556-113">Unicode uses the remaining code points (256-65535) for a wide variety of symbols, including worldwide textual characters, diacritics, and mathematical and technical symbols.</span></span>  
   
- Você pode usar métodos como <xref:System.Char.IsDigit%2A>e <xref:System.Char.IsPunctuation%2A>em um `Char` variável para determinar sua classificação Unicode.</xref:System.Char.IsPunctuation%2A> </xref:System.Char.IsDigit%2A>  
+ <span data-ttu-id="8e556-114">Você pode usar métodos como <xref:System.Char.IsDigit%2A> e <xref:System.Char.IsPunctuation%2A> em um `Char` variável para determinar sua classificação Unicode.</span><span class="sxs-lookup"><span data-stu-id="8e556-114">You can use methods like <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on a `Char` variable to determine its Unicode classification.</span></span>  
   
-## <a name="type-conversions"></a>Conversões de tipo  
- O Visual Basic não converter diretamente entre `Char` e os tipos numéricos. Você pode usar o <xref:Microsoft.VisualBasic.Strings.Asc%2A>ou <xref:Microsoft.VisualBasic.Strings.AscW%2A>função para converter um `Char` valor para um `Integer` que representa seu ponto de código.</xref:Microsoft.VisualBasic.Strings.AscW%2A> </xref:Microsoft.VisualBasic.Strings.Asc%2A> Você pode usar o <xref:Microsoft.VisualBasic.Strings.Chr%2A>ou <xref:Microsoft.VisualBasic.Strings.ChrW%2A>função para converter um `Integer` valor para um `Char` que tem esse ponto de código.</xref:Microsoft.VisualBasic.Strings.ChrW%2A> </xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+## <a name="type-conversions"></a><span data-ttu-id="8e556-115">Conversões de tipo</span><span class="sxs-lookup"><span data-stu-id="8e556-115">Type Conversions</span></span>  
+ <span data-ttu-id="8e556-116">Visual Basic não converter diretamente entre `Char` e os tipos numéricos.</span><span class="sxs-lookup"><span data-stu-id="8e556-116">Visual Basic does not convert directly between `Char` and the numeric types.</span></span> <span data-ttu-id="8e556-117">Você pode usar o <xref:Microsoft.VisualBasic.Strings.Asc%2A> ou <xref:Microsoft.VisualBasic.Strings.AscW%2A> function para converter um `Char` valor para um `Integer` que representa o ponto de código.</span><span class="sxs-lookup"><span data-stu-id="8e556-117">You can use the <xref:Microsoft.VisualBasic.Strings.Asc%2A> or <xref:Microsoft.VisualBasic.Strings.AscW%2A> function to convert a `Char` value to an `Integer` that represents its code point.</span></span> <span data-ttu-id="8e556-118">Você pode usar o <xref:Microsoft.VisualBasic.Strings.Chr%2A> ou <xref:Microsoft.VisualBasic.Strings.ChrW%2A> function para converter um `Integer` valor para um `Char` com esse ponto de código.</span><span class="sxs-lookup"><span data-stu-id="8e556-118">You can use the <xref:Microsoft.VisualBasic.Strings.Chr%2A> or <xref:Microsoft.VisualBasic.Strings.ChrW%2A> function to convert an `Integer` value to a `Char` that has that code point.</span></span>  
   
- Se a verificação de tipo muda ([instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)) estiver ativado, você deve acrescentar o caractere de tipo literal em uma cadeia de único caractere literal para identificá-lo como o `Char` tipo de dados. O exemplo a seguir ilustra essa situação.  
+ <span data-ttu-id="8e556-119">Se a verificação de tipo muda ([instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)) está ativada, você deve acrescentar o caractere de tipo literal em uma cadeia de caracteres de único caractere literal para identificá-lo como o `Char` tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="8e556-119">If the type checking switch ([Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) is on, you must append the literal type character to a single-character string literal to identify it as the `Char` data type.</span></span> <span data-ttu-id="8e556-120">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="8e556-120">The following example illustrates this.</span></span>  
   
 ```  
 Option Strict On  
@@ -68,27 +50,27 @@ charVar = "Z"
 charVar = "Z"C  
 ```  
   
-## <a name="programming-tips"></a>Dicas de programação  
+## <a name="programming-tips"></a><span data-ttu-id="8e556-121">Dicas de programação</span><span class="sxs-lookup"><span data-stu-id="8e556-121">Programming Tips</span></span>  
   
--   **Números negativos.** `Char`é um tipo sem sinal e não pode representar um valor negativo. Em qualquer caso, você não deve usar `Char` para armazenar valores numéricos.  
+-   <span data-ttu-id="8e556-122">**Números negativos.**</span><span class="sxs-lookup"><span data-stu-id="8e556-122">**Negative Numbers.**</span></span> <span data-ttu-id="8e556-123">`Char`é um tipo não assinado e não pode representar um valor negativo.</span><span class="sxs-lookup"><span data-stu-id="8e556-123">`Char` is an unsigned type and cannot represent a negative value.</span></span> <span data-ttu-id="8e556-124">Em qualquer caso, você não deve usar `Char` para armazenar valores numéricos.</span><span class="sxs-lookup"><span data-stu-id="8e556-124">In any case, you should not use `Char` to hold numeric values.</span></span>  
   
--   **Considerações de interoperabilidade.** Interface com componentes não escritos para o .NET Framework, como objetos de automação ou COM, lembre-se de que tipos de caracteres uma largura de dados diferente (8 bits) em outros ambientes. Se você passar um argumento de 8 bits para tal um componente, declare-o como `Byte` em vez de `Char` em seu novo código Visual Basic.  
+-   <span data-ttu-id="8e556-125">**Considerações de interoperabilidade.**</span><span class="sxs-lookup"><span data-stu-id="8e556-125">**Interop Considerations.**</span></span> <span data-ttu-id="8e556-126">Interface com componentes não escritos para o .NET Framework, como objetos de automação ou COM, lembre-se de que tipos de caracteres uma largura de dados diferente (8 bits) em outros ambientes.</span><span class="sxs-lookup"><span data-stu-id="8e556-126">If you interface with components not written for the .NET Framework, for example Automation or COM objects, remember that character types have a different data width (8 bits) in other environments.</span></span> <span data-ttu-id="8e556-127">Se você passar um argumento de 8 bits para tal componente, declare-o como `Byte` em vez de `Char` no seu novo código do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8e556-127">If you pass an 8-bit argument to such a component, declare it as `Byte` instead of `Char` in your new Visual Basic code.</span></span>  
   
--   **Ampliação.** O `Char` tipo de dados amplia a `String`. Isso significa que você pode converter `Char` para `String` e não encontrará um <xref:System.OverflowException?displayProperty=fullName>erro.</xref:System.OverflowException?displayProperty=fullName>  
+-   <span data-ttu-id="8e556-128">**Ampliação.**</span><span class="sxs-lookup"><span data-stu-id="8e556-128">**Widening.**</span></span> <span data-ttu-id="8e556-129">O `Char` tipo de dados amplia a `String`.</span><span class="sxs-lookup"><span data-stu-id="8e556-129">The `Char` data type widens to `String`.</span></span> <span data-ttu-id="8e556-130">Isso significa que você pode converter `Char` para `String` e não encontrará um <xref:System.OverflowException?displayProperty=nameWithType> erro.</span><span class="sxs-lookup"><span data-stu-id="8e556-130">This means you can convert `Char` to `String` and will not encounter a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `C` para uma cadeia de caracteres único literal força-o `Char` tipo de dados. `Char`não tem nenhum caractere de tipo identificador.  
+-   <span data-ttu-id="8e556-131">**Caracteres de tipo.**</span><span class="sxs-lookup"><span data-stu-id="8e556-131">**Type Characters.**</span></span> <span data-ttu-id="8e556-132">Acrescentar o caractere de tipo literal `C` para uma cadeia de único caractere literal força-o `Char` tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="8e556-132">Appending the literal type character `C` to a single-character string literal forces it to the `Char` data type.</span></span> <span data-ttu-id="8e556-133">`Char`não tem nenhum caractere de tipo identificador.</span><span class="sxs-lookup"><span data-stu-id="8e556-133">`Char` has no identifier type character.</span></span>  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.Char?displayProperty=fullName>estrutura.</xref:System.Char?displayProperty=fullName>  
+-   <span data-ttu-id="8e556-134">**Tipo de estrutura.**</span><span class="sxs-lookup"><span data-stu-id="8e556-134">**Framework Type.**</span></span> <span data-ttu-id="8e556-135">O tipo correspondente no .NET Framework é a estrutura <xref:System.Char?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8e556-135">The corresponding type in the .NET Framework is the <xref:System.Char?displayProperty=nameWithType> structure.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Char?displayProperty=fullName></xref:System.Char?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Strings.Asc%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- [Tipos de dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Tipo de dados String](../../../visual-basic/language-reference/data-types/string-data-type.md)   
- [Funções de conversão de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumo da conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Como: chamar uma função do Windows que use tipos não assinados](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="8e556-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8e556-136">See Also</span></span>  
+ <xref:System.Char?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ [<span data-ttu-id="8e556-137">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="8e556-137">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="8e556-138">Tipo de Dados String</span><span class="sxs-lookup"><span data-stu-id="8e556-138">String Data Type</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)  
+ [<span data-ttu-id="8e556-139">Funções de Conversão do Tipo</span><span class="sxs-lookup"><span data-stu-id="8e556-139">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="8e556-140">Resumo da Conversão</span><span class="sxs-lookup"><span data-stu-id="8e556-140">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="8e556-141">Como chamar uma função do Windows que use tipos não assinados</span><span class="sxs-lookup"><span data-stu-id="8e556-141">How to: Call a Windows Function that Takes Unsigned Types</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [<span data-ttu-id="8e556-142">Uso Eficiente de Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="8e556-142">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

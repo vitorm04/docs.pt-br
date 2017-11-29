@@ -1,47 +1,30 @@
 ---
-title: "Um delimitador não pode ser nada ou uma cadeia de caracteres vazia | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Um delimitador não pode ser Nothing ou uma cadeia de caracteres vazia"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrTextFieldParser_DelimiterNothing
+f1_keywords: vbrTextFieldParser_DelimiterNothing
 ms.assetid: 8885fcd1-c201-409d-9a32-6ff2b13c0c13
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa430c128bf173464e8535b8599547dd9f533081
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 141b8926ebe86778113ddfc929798f29736b90ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>Um delimitador não pode ser nada ou uma cadeia de caracteres vazia
-O `TextFieldParser` não é capaz de ler o arquivo porque o `Delimiters` está definida como `Nothing` ou está vazio `String` ("").  
+# <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a><span data-ttu-id="26c92-102">Um delimitador não pode ser Nothing ou uma cadeia de caracteres vazia</span><span class="sxs-lookup"><span data-stu-id="26c92-102">A delimiter cannot be Nothing or an empty String</span></span>
+<span data-ttu-id="26c92-103">O `TextFieldParser` não pode ler o arquivo porque o `Delimiters` está definida como `Nothing` ou está vazio `String` ("").</span><span class="sxs-lookup"><span data-stu-id="26c92-103">The `TextFieldParser` is unable to read from the file because the `Delimiters` property is set to `Nothing` or is an empty `String` ("").</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="26c92-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="26c92-104">To correct this error</span></span>  
   
--   Forneça um valor válido para `Delimiters`.  
+-   <span data-ttu-id="26c92-105">Forneça um valor válido para `Delimiters`.</span><span class="sxs-lookup"><span data-stu-id="26c92-105">Supply a valid value for `Delimiters`.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Método TextFieldParser.SetDelimiters](http://msdn.microsoft.com/en-us/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)   
- [Propriedade Delimiters](http://msdn.microsoft.com/en-us/4eb18f4d-3011-40a9-b668-be93eed0444f)   
- [Como: ler arquivos de texto delimitado por vírgula](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)   
- [Analisando arquivos de texto com o objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+## <a name="see-also"></a><span data-ttu-id="26c92-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="26c92-106">See Also</span></span>  
+ [<span data-ttu-id="26c92-107">Método TextFieldParser.SetDelimiters</span><span class="sxs-lookup"><span data-stu-id="26c92-107">TextFieldParser.SetDelimiters Method</span></span>](http://msdn.microsoft.com/en-us/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)  
+ [<span data-ttu-id="26c92-108">Propriedade Delimiters</span><span class="sxs-lookup"><span data-stu-id="26c92-108">TextFieldParser.Delimiters Property</span></span>](http://msdn.microsoft.com/en-us/4eb18f4d-3011-40a9-b668-be93eed0444f)  
+ [<span data-ttu-id="26c92-109">Como ler a partir de arquivos de texto separados por vírgulas</span><span class="sxs-lookup"><span data-stu-id="26c92-109">How to: Read From Comma-Delimited Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [<span data-ttu-id="26c92-110">Objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="26c92-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+ [<span data-ttu-id="26c92-111">Analisando arquivos de texto com o objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="26c92-111">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

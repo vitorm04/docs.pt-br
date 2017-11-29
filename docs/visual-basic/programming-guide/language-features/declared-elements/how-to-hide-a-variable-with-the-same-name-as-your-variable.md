@@ -1,76 +1,59 @@
 ---
-title: "Como: ocultar uma variável com o mesmo nome que sua variável (Visual Basic) | Documentos do Microsoft"
+title: "Como ocultar uma variável com o mesmo nome que a variável (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- qualification, of element names
-- declarations, elements
-- element names, qualification
-- references, declared elements
-- declaration statements, declared elements
-- declaring elements
-- referencing declared elements
-- declared elements, referencing
-- declared elements, about declared elements
+- qualification [Visual Basic], of element names
+- declarations [Visual Basic], elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declaration statements [Visual Basic], declared elements
+- declaring elements [Visual Basic]
+- referencing declared elements [Visual Basic]
+- declared elements [Visual Basic], referencing
+- declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e568d41fc4a194ab6231ade201f95658c85a13fe
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Como ocultar uma variável com o mesmo nome que a variável (Visual Basic)
-Você pode ocultar uma variável por *sombreamento* -lo, ou seja, redefinindo-o com uma variável de mesmo nome. Você pode sombrear a variável que você deseja ocultar de duas maneiras:  
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a><span data-ttu-id="a8b22-102">Como ocultar uma variável com o mesmo nome que a variável (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8b22-102">How to: Hide a Variable with the Same Name as Your Variable (Visual Basic)</span></span>
+<span data-ttu-id="a8b22-103">Você pode ocultar uma variável por *sombreamento* -lo, ou seja, redefinindo-o com uma variável de mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="a8b22-103">You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name.</span></span> <span data-ttu-id="a8b22-104">Você pode sombrear a variável que você deseja ocultar de duas maneiras:</span><span class="sxs-lookup"><span data-stu-id="a8b22-104">You can shadow the variable you want to hide in two ways:</span></span>  
   
--   **Sombreamento através de escopo.** Você pode sombreá-lo através de escopo redeclarando-dentro uma sub-região da região que contém a variável que você deseja ocultar.  
+-   <span data-ttu-id="a8b22-105">**Sombreamento através de escopo.**</span><span class="sxs-lookup"><span data-stu-id="a8b22-105">**Shadowing Through Scope.**</span></span> <span data-ttu-id="a8b22-106">Você pode sombreá-lo através de escopo, se está redeclarando dentro uma sub-região da região que contém a variável que você deseja ocultar.</span><span class="sxs-lookup"><span data-stu-id="a8b22-106">You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.</span></span>  
   
--   **Sombreamento através de herança.** Se a variável que você deseja ocultar é definida no nível de classe, você pode sombreá-lo por meio da herança redeclarando com o [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palavra-chave em uma classe derivada.  
+-   <span data-ttu-id="a8b22-107">**Sombreamento através de herança.**</span><span class="sxs-lookup"><span data-stu-id="a8b22-107">**Shadowing Through Inheritance.**</span></span> <span data-ttu-id="a8b22-108">Se a variável que você deseja ocultar é definida no nível de classe, você pode sombreá-lo por meio da herança por declarar novamente com o [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palavra-chave em uma classe derivada.</span><span class="sxs-lookup"><span data-stu-id="a8b22-108">If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.</span></span>  
   
-## <a name="two-ways-to-hide-a-variable"></a>Duas maneiras para ocultar uma variável  
+## <a name="two-ways-to-hide-a-variable"></a><span data-ttu-id="a8b22-109">Duas maneiras para ocultar uma variável</span><span class="sxs-lookup"><span data-stu-id="a8b22-109">Two Ways to Hide a Variable</span></span>  
   
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Para ocultar uma variável de sombreamento-lo através de escopo  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a><span data-ttu-id="a8b22-110">Para ocultar uma variável de sombreamento-lo através de escopo</span><span class="sxs-lookup"><span data-stu-id="a8b22-110">To hide a variable by shadowing it through scope</span></span>  
   
-1.  Determine a definição da variável que você deseja ocultar a região e determinar uma sub-região no qual deseja redefini-la com sua variável.  
+1.  <span data-ttu-id="a8b22-111">Determinar a região definindo a variável que você deseja ocultar e determinar uma sub-região no qual redefini-la com sua variável.</span><span class="sxs-lookup"><span data-stu-id="a8b22-111">Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.</span></span>  
   
-    |Região da variável|Sub-região permitido para redefinir a ele|  
+    |<span data-ttu-id="a8b22-112">Região da variável</span><span class="sxs-lookup"><span data-stu-id="a8b22-112">Variable's region</span></span>|<span data-ttu-id="a8b22-113">Sub-região permitido para redefinir a ele</span><span class="sxs-lookup"><span data-stu-id="a8b22-113">Allowable subregion for redefining it</span></span>|  
     |-----------------------|-------------------------------------------|  
-    |Módulo|Uma classe dentro do módulo|  
-    |Classe|Uma subclasse da classe<br /><br /> Um procedimento dentro da classe|  
+    |<span data-ttu-id="a8b22-114">Módulo</span><span class="sxs-lookup"><span data-stu-id="a8b22-114">Module</span></span>|<span data-ttu-id="a8b22-115">Uma classe dentro do módulo</span><span class="sxs-lookup"><span data-stu-id="a8b22-115">A class within the module</span></span>|  
+    |<span data-ttu-id="a8b22-116">Classe</span><span class="sxs-lookup"><span data-stu-id="a8b22-116">Class</span></span>|<span data-ttu-id="a8b22-117">Uma subclasse da classe</span><span class="sxs-lookup"><span data-stu-id="a8b22-117">A subclass within the class</span></span><br /><br /> <span data-ttu-id="a8b22-118">Um procedimento dentro da classe</span><span class="sxs-lookup"><span data-stu-id="a8b22-118">A procedure within the class</span></span>|  
   
-     Você não pode redefinir uma variável de procedimento em um bloco dentro desse procedimento, por exemplo em um `If`... `End If` construção ou um `For` loop.  
+     <span data-ttu-id="a8b22-119">Você não pode redefinir uma variável de procedimento em um bloco dentro desse procedimento, por exemplo em um `If`... `End If` construção ou `For` loop.</span><span class="sxs-lookup"><span data-stu-id="a8b22-119">You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.</span></span>  
   
-2.  Crie a sub-região se ele ainda não existir.  
+2.  <span data-ttu-id="a8b22-120">Crie a sub-região se ele ainda não existir.</span><span class="sxs-lookup"><span data-stu-id="a8b22-120">Create the subregion if it does not already exist.</span></span>  
   
-3.  Dentro da sub-região, escrever um [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) declarando a variável de sombreamento.  
+3.  <span data-ttu-id="a8b22-121">Dentro da sub-região, gravar um [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) declarar a variável de sombreamento.</span><span class="sxs-lookup"><span data-stu-id="a8b22-121">Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.</span></span>  
   
-     Quando o código dentro a sub-região refere-se ao nome da variável, o compilador resolve a referência à variável de sombreamento.  
+     <span data-ttu-id="a8b22-122">Quando o código dentro a sub-região refere-se ao nome da variável, o compilador resolve a referência à variável de sombreamento.</span><span class="sxs-lookup"><span data-stu-id="a8b22-122">When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.</span></span>  
   
-     O exemplo a seguir ilustra sombreamento através de escopo, bem como uma referência que ignora o sombreamento.  
+     <span data-ttu-id="a8b22-123">O exemplo a seguir ilustra sombreamento através de escopo, bem como uma referência que ignora o sombreamento.</span><span class="sxs-lookup"><span data-stu-id="a8b22-123">The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.</span></span>  
   
     ```  
     Module shadowByScope  
@@ -92,21 +75,21 @@ Você pode ocultar uma variável por *sombreamento* -lo, ou seja, redefinindo-o 
     End Module  
     ```  
   
-     O exemplo anterior declara a variável `num` no nível de módulo e no nível de procedimento (no procedimento `show`). A variável local `num` sombreia a variável de nível de módulo `num` em `show`, portanto, a variável local é definida como 2. No entanto, não há nenhuma variável local a sombra `num` no `useModuleLevelNum` procedimento. Portanto, `useModuleLevelNum` define o valor da variável de nível de módulo para 1.  
+     <span data-ttu-id="a8b22-124">O exemplo anterior declara a variável `num` no nível de módulo e no nível de procedimento (no procedimento `show`).</span><span class="sxs-lookup"><span data-stu-id="a8b22-124">The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`).</span></span> <span data-ttu-id="a8b22-125">A variável local `num` sombreia a variável de nível de módulo `num` em `show`, portanto, a variável local é definida como 2.</span><span class="sxs-lookup"><span data-stu-id="a8b22-125">The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2.</span></span> <span data-ttu-id="a8b22-126">No entanto, não há nenhuma variável local para sombra `num` no `useModuleLevelNum` procedimento.</span><span class="sxs-lookup"><span data-stu-id="a8b22-126">However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure.</span></span> <span data-ttu-id="a8b22-127">Portanto, `useModuleLevelNum` define o valor da variável de nível de módulo como 1.</span><span class="sxs-lookup"><span data-stu-id="a8b22-127">Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.</span></span>  
   
-     O `MsgBox` chamar dentro `show` ignora o mecanismo de sombreamento qualificando `num` com o nome do módulo. Portanto, ele exibe a variável de nível de módulo em vez da variável local.  
+     <span data-ttu-id="a8b22-128">O `MsgBox` chamar dentro de `show` ignora o mecanismo de sombreamento qualificando `num` com o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="a8b22-128">The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name.</span></span> <span data-ttu-id="a8b22-129">Portanto, ele exibe a variável de nível de módulo em vez da variável local.</span><span class="sxs-lookup"><span data-stu-id="a8b22-129">Therefore, it displays the module-level variable instead of the local variable.</span></span>  
   
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Para ocultar uma variável de sombreamento-lo através de herança  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a><span data-ttu-id="a8b22-130">Para ocultar uma variável de sombreamento-lo através de herança</span><span class="sxs-lookup"><span data-stu-id="a8b22-130">To hide a variable by shadowing it through inheritance</span></span>  
   
-1.  Certifique-se de que a variável que você deseja ocultar é declarada em uma classe e no nível de classe (fora de qualquer procedimento). Caso contrário, você não pode sombreá-lo por meio da herança.  
+1.  <span data-ttu-id="a8b22-131">Certifique-se de que a variável que você deseja ocultar é declarada em uma classe e no nível de classe (fora de qualquer procedimento).</span><span class="sxs-lookup"><span data-stu-id="a8b22-131">Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure).</span></span> <span data-ttu-id="a8b22-132">Caso contrário, você não pode sombreá-lo por meio da herança.</span><span class="sxs-lookup"><span data-stu-id="a8b22-132">Otherwise you cannot shadow it through inheritance.</span></span>  
   
-2.  Defina uma classe derivada da classe da variável se ainda não existir.  
+2.  <span data-ttu-id="a8b22-133">Defina uma classe derivada da classe de variável, se ainda não existir.</span><span class="sxs-lookup"><span data-stu-id="a8b22-133">Define a class derived from the variable's class if one does not already exist.</span></span>  
   
-3.  Dentro da classe derivada, escreva um `Dim` declarando a variável de instrução. Incluir o [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palavra-chave na declaração.  
+3.  <span data-ttu-id="a8b22-134">Dentro da classe derivada, escreva um `Dim` declarar a variável de instrução.</span><span class="sxs-lookup"><span data-stu-id="a8b22-134">Inside the derived class, write a `Dim` statement declaring your variable.</span></span> <span data-ttu-id="a8b22-135">Incluir o [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palavra-chave na declaração.</span><span class="sxs-lookup"><span data-stu-id="a8b22-135">Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.</span></span>  
   
-     Quando o código na classe derivada refere-se ao nome da variável, o compilador resolve a referência à variável.  
+     <span data-ttu-id="a8b22-136">Quando o código na classe derivada refere-se ao nome da variável, o compilador resolve a referência à sua variável.</span><span class="sxs-lookup"><span data-stu-id="a8b22-136">When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.</span></span>  
   
-     O exemplo a seguir ilustra sombreamento através de herança. Ele faz duas referências, que acessa a variável de sombreamento e outra que ignora o sombreamento.  
+     <span data-ttu-id="a8b22-137">O exemplo a seguir ilustra sombreamento através de herança.</span><span class="sxs-lookup"><span data-stu-id="a8b22-137">The following example illustrates shadowing through inheritance.</span></span> <span data-ttu-id="a8b22-138">Ele faz duas referências, uma que acessa a variável de sombreamento e outra que ignora o sombreamento.</span><span class="sxs-lookup"><span data-stu-id="a8b22-138">It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.</span></span>  
   
     ```  
     Public Class shadowBaseClass  
@@ -123,17 +106,17 @@ Você pode ocultar uma variável por *sombreamento* -lo, ou seja, redefinindo-o 
     End Class  
     ```  
   
-     O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada. O procedimento `showStrings` na classe derivada exibe a versão sombreada da cadeia de caracteres quando o nome `shadowString` não está qualificado. Em seguida, exibe a versão sombreada quando `shadowString` qualificado com o `MyBase`palavra-chave.  
+     <span data-ttu-id="a8b22-139">O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada.</span><span class="sxs-lookup"><span data-stu-id="a8b22-139">The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class.</span></span> <span data-ttu-id="a8b22-140">O procedimento `showStrings` na classe derivada exibe a versão sombreada da cadeia de caracteres quando o nome `shadowString` não está qualificado.</span><span class="sxs-lookup"><span data-stu-id="a8b22-140">The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified.</span></span> <span data-ttu-id="a8b22-141">Em seguida, exibe a versão sombreada quando `shadowString` é qualificado com o `MyBase` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="a8b22-141">It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.</span></span>  
   
-## <a name="robust-programming"></a>Programação robusta  
- Sombreamento introduz mais de uma versão de uma variável com o mesmo nome. Quando uma declaração de código refere-se ao nome da variável, a versão para que o compilador resolve a referência depende de fatores como o local da instrução do código e a presença de uma cadeia de caracteres de qualificação. Isso pode aumentar o risco de se referir a uma versão não intencional de uma variável sombreada. Você pode diminuir esse risco qualificar totalmente todas as referências a uma variável sombreada.  
+## <a name="robust-programming"></a><span data-ttu-id="a8b22-142">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="a8b22-142">Robust Programming</span></span>  
+ <span data-ttu-id="a8b22-143">Sombreamento apresenta mais de uma versão de uma variável com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="a8b22-143">Shadowing introduces more than one version of a variable with the same name.</span></span> <span data-ttu-id="a8b22-144">Quando uma declaração de código se refere ao nome da variável, a versão para o qual o compilador resolve a referência depende de fatores como o local da instrução do código e a presença de uma cadeia de caracteres de qualificação.</span><span class="sxs-lookup"><span data-stu-id="a8b22-144">When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string.</span></span> <span data-ttu-id="a8b22-145">Isso pode aumentar o risco de fazer referência a uma versão não intencional de uma variável sombreada.</span><span class="sxs-lookup"><span data-stu-id="a8b22-145">This can increase the risk of referring to an unintended version of a shadowed variable.</span></span> <span data-ttu-id="a8b22-146">Você pode reduzir esse risco qualificando totalmente todas as referências a uma variável sombreada.</span><span class="sxs-lookup"><span data-stu-id="a8b22-146">You can lower that risk by fully qualifying all references to a shadowed variable.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Sombreamento no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Diferenças entre sombreamento e sobreposição](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [Como: ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Como: acessar uma variável ocultada por uma classe derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Substituições](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Noções Básicas de Herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="a8b22-147">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a8b22-147">See Also</span></span>  
+ [<span data-ttu-id="a8b22-148">Referências a Elementos Declarados</span><span class="sxs-lookup"><span data-stu-id="a8b22-148">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="a8b22-149">Sombreamento no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a8b22-149">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="a8b22-150">Diferenças entre sombreamento e sobreposição</span><span class="sxs-lookup"><span data-stu-id="a8b22-150">Differences Between Shadowing and Overriding</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [<span data-ttu-id="a8b22-151">Como ocultar uma variável herdada</span><span class="sxs-lookup"><span data-stu-id="a8b22-151">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="a8b22-152">Como acessar uma variável oculta por uma classe derivada</span><span class="sxs-lookup"><span data-stu-id="a8b22-152">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="a8b22-153">Substituições</span><span class="sxs-lookup"><span data-stu-id="a8b22-153">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="a8b22-154">Me, My, MyBase e MyClass</span><span class="sxs-lookup"><span data-stu-id="a8b22-154">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="a8b22-155">Noções Básicas de Herança</span><span class="sxs-lookup"><span data-stu-id="a8b22-155">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

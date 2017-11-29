@@ -1,15 +1,12 @@
 ---
 title: "Criando, excluindo e movendo arquivos e diretórios no Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
 - I/O [Visual Basic], deleting folders
@@ -31,120 +28,104 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 388d8567235230003f0b770c2266e4a4d77ca754
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00144ca80e267ef2f24df0bdaa1c9f689a43af77
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Criando, excluindo e movendo arquivos e diretórios no Visual Basic
-Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arquivos e pastas no Visual Basic.  
+# <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a><span data-ttu-id="29d9a-102">Criando, excluindo e movendo arquivos e diretórios no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="29d9a-102">Creating, Deleting, and Moving Files and Directories in Visual Basic</span></span>
+<span data-ttu-id="29d9a-103">Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arquivos e pastas no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="29d9a-103">This section lists tasks associated with creating, deleting, moving, and renaming files and directories in Visual Basic.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Como copiar arquivos com um padrão específico para um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- Demonstra como copiar arquivos com um padrão de nome de arquivo específico, como somente arquivos .txt, para um diretório.  
+## <a name="in-this-section"></a><span data-ttu-id="29d9a-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="29d9a-104">In This Section</span></span>  
+ [<span data-ttu-id="29d9a-105">Como copiar arquivos com um padrão específico para um diretório</span><span class="sxs-lookup"><span data-stu-id="29d9a-105">How to: Copy Files with a Specific Pattern to a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ <span data-ttu-id="29d9a-106">Demonstra como copiar arquivos com um padrão de nome de arquivo específico, como somente arquivos .txt, para um diretório.</span><span class="sxs-lookup"><span data-stu-id="29d9a-106">Demonstrates how to copy files with a specific file name pattern, such as only .txt files, to a directory.</span></span>  
   
- [Como criar uma cópia de um arquivo no mesmo diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- Demonstra como criar uma cópia de um arquivo no mesmo diretório.  
+ [<span data-ttu-id="29d9a-107">Como criar uma cópia de um arquivo no mesmo diretório</span><span class="sxs-lookup"><span data-stu-id="29d9a-107">How to: Create a Copy of a File in the Same Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ <span data-ttu-id="29d9a-108">Demonstra como criar uma cópia de um arquivo no mesmo diretório.</span><span class="sxs-lookup"><span data-stu-id="29d9a-108">Demonstrates how to create a copy of a file in the same directory.</span></span>  
   
- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- Demonstra como copiar um arquivo para outro diretório.  
+ [<span data-ttu-id="29d9a-109">Como criar uma cópia de um arquivo em um diretório diferente</span><span class="sxs-lookup"><span data-stu-id="29d9a-109">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ <span data-ttu-id="29d9a-110">Demonstra como copiar um arquivo para outro diretório.</span><span class="sxs-lookup"><span data-stu-id="29d9a-110">Demonstrates how to copy a file to another directory.</span></span>  
   
- [Como criar um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
- Demonstra como criar um arquivo.  
+ [<span data-ttu-id="29d9a-111">Como criar um arquivo</span><span class="sxs-lookup"><span data-stu-id="29d9a-111">How to: Create a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ <span data-ttu-id="29d9a-112">Demonstra como criar um arquivo.</span><span class="sxs-lookup"><span data-stu-id="29d9a-112">Demonstrates how to create a file.</span></span>  
   
- [Como excluir um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
- Demonstra como excluir um arquivo.  
+ [<span data-ttu-id="29d9a-113">Como excluir um arquivo</span><span class="sxs-lookup"><span data-stu-id="29d9a-113">How to: Delete a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ <span data-ttu-id="29d9a-114">Demonstra como excluir um arquivo.</span><span class="sxs-lookup"><span data-stu-id="29d9a-114">Demonstrates how to delete a file.</span></span>  
   
- [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- Demonstra como listar somente os arquivos com um padrão de nome de arquivo específico em um diretório.  
+ [<span data-ttu-id="29d9a-115">Como localizar arquivos com um padrão específico</span><span class="sxs-lookup"><span data-stu-id="29d9a-115">How to: Find Files with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ <span data-ttu-id="29d9a-116">Demonstra como listar somente os arquivos com um padrão de nome de arquivo específico em um diretório.</span><span class="sxs-lookup"><span data-stu-id="29d9a-116">Demonstrates how to list only files with a specific file name pattern in a directory.</span></span>  
   
- [Como mover um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- Demonstra como mover um arquivo para um diretório diferente.  
+ [<span data-ttu-id="29d9a-117">Como mover um arquivo</span><span class="sxs-lookup"><span data-stu-id="29d9a-117">How to: Move a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ <span data-ttu-id="29d9a-118">Demonstra como mover um arquivo para um diretório diferente.</span><span class="sxs-lookup"><span data-stu-id="29d9a-118">Demonstrates how to move a file to a different directory.</span></span>  
   
- [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- Demonstra como renomear um arquivo.  
+ [<span data-ttu-id="29d9a-119">Como renomear um arquivo</span><span class="sxs-lookup"><span data-stu-id="29d9a-119">How to: Rename a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ <span data-ttu-id="29d9a-120">Demonstra como renomear um arquivo.</span><span class="sxs-lookup"><span data-stu-id="29d9a-120">Demonstrates how to rename a file.</span></span>  
   
- [Como copiar um diretório para outro diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- Demonstra como copiar um diretório para outro local.  
+ [<span data-ttu-id="29d9a-121">Como copiar um diretório para outro diretório</span><span class="sxs-lookup"><span data-stu-id="29d9a-121">How to: Copy a Directory to Another Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ <span data-ttu-id="29d9a-122">Demonstra como copiar um diretório para outro local.</span><span class="sxs-lookup"><span data-stu-id="29d9a-122">Demonstrates how to copy a directory to another location.</span></span>  
   
- [Como criar um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
- Demonstra como criar um diretório.  
+ [<span data-ttu-id="29d9a-123">Como criar um diretório</span><span class="sxs-lookup"><span data-stu-id="29d9a-123">How to: Create a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ <span data-ttu-id="29d9a-124">Demonstra como criar um diretório.</span><span class="sxs-lookup"><span data-stu-id="29d9a-124">Demonstrates how to create a directory.</span></span>  
   
- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- Demonstra como listar diretórios com um padrão específico no nome.  
+ [<span data-ttu-id="29d9a-125">Como localizar subdiretórios com um padrão específico</span><span class="sxs-lookup"><span data-stu-id="29d9a-125">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ <span data-ttu-id="29d9a-126">Demonstra como listar diretórios com um padrão específico no nome.</span><span class="sxs-lookup"><span data-stu-id="29d9a-126">Demonstrates how to list directories with a specific pattern in their name.</span></span>  
   
- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
- Demonstra como listar arquivos em um diretório.  
+ [<span data-ttu-id="29d9a-127">Como obter a coleção de arquivos em um diretório</span><span class="sxs-lookup"><span data-stu-id="29d9a-127">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ <span data-ttu-id="29d9a-128">Demonstra como listar arquivos em um diretório.</span><span class="sxs-lookup"><span data-stu-id="29d9a-128">Demonstrates how to list the files in a directory.</span></span>  
   
- [Como recuperar o conteúdo do diretório Meus Documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
- Demonstra como ler de diretórios especiais.  
+ [<span data-ttu-id="29d9a-129">Como recuperar o conteúdo do diretório Meus Documentos</span><span class="sxs-lookup"><span data-stu-id="29d9a-129">How to: Retrieve the Contents of the My Documents Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ <span data-ttu-id="29d9a-130">Demonstra como ler de diretórios especiais.</span><span class="sxs-lookup"><span data-stu-id="29d9a-130">Demonstrates how to read from special directories.</span></span>  
   
- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- Demonstra como usar métodos `My` para combinar caminhos de arquivo.  
+ [<span data-ttu-id="29d9a-131">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="29d9a-131">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ <span data-ttu-id="29d9a-132">Demonstra como usar métodos `My` para combinar caminhos de arquivo.</span><span class="sxs-lookup"><span data-stu-id="29d9a-132">Demonstrates how to use `My` methods to combine file paths.</span></span>  
   
-## <a name="reference"></a>Referência  
+## <a name="reference"></a><span data-ttu-id="29d9a-133">Referência</span><span class="sxs-lookup"><span data-stu-id="29d9a-133">Reference</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Descreve o objeto `My.Computer.FileSystem` e seus membros.  
+ <span data-ttu-id="29d9a-134">Descreve o objeto `My.Computer.FileSystem` e seus membros.</span><span class="sxs-lookup"><span data-stu-id="29d9a-134">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- Descreve o método `CombinePath`.  
+ <span data-ttu-id="29d9a-135">Descreve o método `CombinePath`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-135">Describes the `CombinePath` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- Descreve o método `CopyDirectory`.  
+ <span data-ttu-id="29d9a-136">Descreve o método `CopyDirectory`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-136">Describes the `CopyDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- Descreve o método `CopyFile`.  
+ <span data-ttu-id="29d9a-137">Descreve o método `CopyFile`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-137">Describes the `CopyFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
- Descreve o método `CreateDirectory`.  
+ <span data-ttu-id="29d9a-138">Descreve o método `CreateDirectory`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-138">Describes the `CreateDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory%2A>  
- Descreve o método `DeleteDirectory`.  
+ <span data-ttu-id="29d9a-139">Descreve o método `DeleteDirectory`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-139">Describes the `DeleteDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A>  
- Descreve o método `DeleteFile`.  
+ <span data-ttu-id="29d9a-140">Descreve o método `DeleteFile`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-140">Describes the `DeleteFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A>  
- Descreve o método `GetParentPath`.  
+ <span data-ttu-id="29d9a-141">Descreve o método `GetParentPath`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-141">Describes the `GetParentPath` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveDirectory%2A>  
- Descreve o método `MoveDirectory`.  
+ <span data-ttu-id="29d9a-142">Descreve o método `MoveDirectory`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-142">Describes the `MoveDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- Descreve o método `MoveFile`.  
+ <span data-ttu-id="29d9a-143">Descreve o método `MoveFile`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-143">Describes the `MoveFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameDirectory%2A>  
- Descreve o método `RenameDirectory`.  
+ <span data-ttu-id="29d9a-144">Descreve o método `RenameDirectory`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-144">Describes the `RenameDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- Descreve o método `RenameFile`.  
+ <span data-ttu-id="29d9a-145">Descreve o método `RenameFile`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-145">Describes the `RenameFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
- Descreve o objeto `SpecialDirectories`.  
+ <span data-ttu-id="29d9a-146">Descreve o objeto `SpecialDirectories`.</span><span class="sxs-lookup"><span data-stu-id="29d9a-146">Describes the `SpecialDirectories` object.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Lista as tarefas associadas à leitura de arquivos.  
+## <a name="related-sections"></a><span data-ttu-id="29d9a-147">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="29d9a-147">Related Sections</span></span>  
+ [<span data-ttu-id="29d9a-148">Leitura de arquivos</span><span class="sxs-lookup"><span data-stu-id="29d9a-148">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ <span data-ttu-id="29d9a-149">Lista as tarefas associadas à leitura de arquivos.</span><span class="sxs-lookup"><span data-stu-id="29d9a-149">Lists tasks associated with reading from files.</span></span>  
   
- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- Lista as tarefas que envolvem a gravação em arquivos.
-
+ [<span data-ttu-id="29d9a-150">Gravando em arquivos</span><span class="sxs-lookup"><span data-stu-id="29d9a-150">Writing to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ <span data-ttu-id="29d9a-151">Lista as tarefas que envolvem a gravação em arquivos.</span><span class="sxs-lookup"><span data-stu-id="29d9a-151">Lists tasks involving writing to files.</span></span>
