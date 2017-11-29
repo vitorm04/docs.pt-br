@@ -1,56 +1,48 @@
 ---
-title: "Guia de programação (LINQ to XML) (Visual Basic) | Documentos do Microsoft"
+title: "Guia de programação (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7e7ef63d587778d54bb4dd4d3d6cf3dc24442882
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a68c72dd30059063c86dc79be0dfd5a470b9d72c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="programming-guide-linq-to-xml-visual-basic"></a>Guia de programação (LINQ to XML) (Visual Basic)
-Esta seção fornece informações e instruções conceituais sobre como programar com o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+# <a name="programming-guide-linq-to-xml-visual-basic"></a><span data-ttu-id="cfba4-102">Guia de programação (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-102">Programming Guide (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="cfba4-103">Esta seção fornece informações e instruções conceituais sobre como programar com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cfba4-103">This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
-## <a name="who-should-read-this-documentation"></a>Quem deve ler esta documentação  
- Esta documentação é direcionada aos desenvolvedores que já conhecem o Visual Basic e alguns aspectos básicos do [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+## <a name="who-should-read-this-documentation"></a><span data-ttu-id="cfba4-104">Quem deve ler esta documentação</span><span class="sxs-lookup"><span data-stu-id="cfba4-104">Who Should Read This Documentation</span></span>  
+ <span data-ttu-id="cfba4-105">Esta documentação tem como alvo os desenvolvedores que já conhecem o Visual Basic e alguns aspectos básicos de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cfba4-105">This documentation targets developers who already understand Visual Basic and some basic aspects of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
- O objetivo desta documentação é tornar [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] fácil de usar para todos os tipos de desenvolvedores. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]facilita a programação de XML. Você não precisa ser um desenvolvedor especialista para usá-lo.  
+ <span data-ttu-id="cfba4-106">A meta desta documentação é facilitar o uso do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para todos os tipos de desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="cfba4-106">The goal of this documentation is to make [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] easy to use for all kinds of developers.</span></span> <span data-ttu-id="cfba4-107">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] facilita a programação XML.</span><span class="sxs-lookup"><span data-stu-id="cfba4-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] makes XML programming easier.</span></span> <span data-ttu-id="cfba4-108">Você não precisa ser um desenvolvedor especialista para usá-lo.</span><span class="sxs-lookup"><span data-stu-id="cfba4-108">You do not have to be an expert developer to use it.</span></span>  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]depende muito classes genéricas. Portanto, é muito importante que você compreenda o uso de classes e tipos genéricos. Para obter mais informações, consulte [tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+ <span data-ttu-id="cfba4-109">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] depende fortemente de classes genéricas.</span><span class="sxs-lookup"><span data-stu-id="cfba4-109">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] relies heavily on generic classes.</span></span> <span data-ttu-id="cfba4-110">Portanto, é muito importante entender o uso de classes e tipos genéricos.</span><span class="sxs-lookup"><span data-stu-id="cfba4-110">Therefore, is very important that you understand the use of generic types and classes.</span></span> <span data-ttu-id="cfba4-111">Para obter mais informações, consulte [tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span><span class="sxs-lookup"><span data-stu-id="cfba4-111">For more information, see [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="cfba4-112">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="cfba4-112">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="cfba4-113">Tópico</span><span class="sxs-lookup"><span data-stu-id="cfba4-113">Topic</span></span>|<span data-ttu-id="cfba4-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="cfba4-114">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ para visão geral da programação XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Fornece uma visão geral de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] classes e informações detalhadas sobre três das classes mais importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>e <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement>|  
-|[Criando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|Fornece informações conceituais e baseadas em tarefas sobre como criar árvores XML. Você pode criar árvores XML usando construção funcional ou analisando o texto XML de uma cadeia de caracteres ou de um arquivo. Você também pode usar um <xref:System.Xml.XmlReader>para preencher uma árvore XML.</xref:System.Xml.XmlReader>|  
-|[Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Fornece informações detalhadas sobre como criar árvores XML que usam namespaces.|  
-|[Serializando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|Descreve várias abordagens para serializar uma árvore XML e fornece orientações sobre qual abordagem usar.|  
-|[Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enumera e descreve o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] métodos de eixo, que você deve compreender antes de escrever [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] consultas.|  
-|[Consultando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|Fornece exemplos comuns de como consultar árvores XML.|  
-|[Modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Como o modelo de objeto de documento (DOM), [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] permite que você modifique uma árvore XML no lugar.|  
-|[Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Fornece informações sobre anotações, eventos, streaming e outros cenários avançados.|  
-|[Segurança LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Descreve problemas de segurança associados ao LINQ to XML e fornece alguma orientação para minimizar a exposição de segurança.|  
-|[Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contém os documentos XML de exemplo que são usados por muitos exemplos desta documentação.|  
+|[<span data-ttu-id="cfba4-115">LINQ para visão geral da programação XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-115">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|<span data-ttu-id="cfba4-116">Fornece uma visão geral das classes do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e informações detalhadas sobre três das classes mais importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="cfba4-116">Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, and detailed information about three of the most important classes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, and <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|[<span data-ttu-id="cfba4-117">Criando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-117">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|<span data-ttu-id="cfba4-118">Fornece informações conceituais e baseadas em tarefas sobre como criar árvores XML.</span><span class="sxs-lookup"><span data-stu-id="cfba4-118">Provides conceptual and task-based information about creating XML trees.</span></span> <span data-ttu-id="cfba4-119">Você pode criar árvores XML usando construção funcional ou analisando o texto XML de uma cadeia de caracteres ou de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="cfba4-119">You can create XML trees by using functional construction, or by parsing XML text from a string or a file.</span></span> <span data-ttu-id="cfba4-120">Você também pode usar um <xref:System.Xml.XmlReader> para popular uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="cfba4-120">You can also use an <xref:System.Xml.XmlReader> to populate an XML tree.</span></span>|  
+|[<span data-ttu-id="cfba4-121">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-121">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)|<span data-ttu-id="cfba4-122">Fornece informações detalhadas sobre como criar árvores XML que usam namespaces.</span><span class="sxs-lookup"><span data-stu-id="cfba4-122">Provides detailed information about creating XML trees that use namespaces.</span></span>|  
+|[<span data-ttu-id="cfba4-123">Serializando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-123">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|<span data-ttu-id="cfba4-124">Descreve várias abordagens para serializar uma árvore XML e fornece orientações sobre qual abordagem usar.</span><span class="sxs-lookup"><span data-stu-id="cfba4-124">Describes multiple approaches to serializing an XML tree, and gives guidance on which approach to use.</span></span>|  
+|[<span data-ttu-id="cfba4-125">Eixos LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-125">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|<span data-ttu-id="cfba4-126">Enumera e descreve os métodos de eixo do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], que você deve compreender antes de escrever consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cfba4-126">Enumerates and describes the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis methods, which you must understand before you can write [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>|  
+|[<span data-ttu-id="cfba4-127">Consultando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-127">Querying XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|<span data-ttu-id="cfba4-128">Fornece exemplos comuns de como consultar árvores XML.</span><span class="sxs-lookup"><span data-stu-id="cfba4-128">Provides common examples of querying XML trees.</span></span>|  
+|[<span data-ttu-id="cfba4-129">Modificando árvores XML (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-129">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|<span data-ttu-id="cfba4-130">Como o DOM (Modelo de Objeto do Documento), o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite modificar uma árvore XML no lugar.</span><span class="sxs-lookup"><span data-stu-id="cfba4-130">Like the Document Object Model (DOM), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enables you to modify an XML tree in place.</span></span>|  
+|[<span data-ttu-id="cfba4-131">Avançada LINQ to XML programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-131">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|<span data-ttu-id="cfba4-132">Fornece informações sobre anotações, eventos, streaming e outros cenários avançados.</span><span class="sxs-lookup"><span data-stu-id="cfba4-132">Provides information about annotations, events, streaming, and other advanced scenarios.</span></span>|  
+|[<span data-ttu-id="cfba4-133">Segurança LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-133">LINQ to XML Security (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|<span data-ttu-id="cfba4-134">Descreve problemas de segurança associados ao LINQ to XML e fornece alguma orientação para minimizar a exposição de segurança.</span><span class="sxs-lookup"><span data-stu-id="cfba4-134">Describes security issues associated with LINQ to XML and provides some guidance for mitigating security exposure.</span></span>|  
+|[<span data-ttu-id="cfba4-135">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cfba4-135">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|<span data-ttu-id="cfba4-136">Contém os documentos XML de exemplo que são usados por muitos exemplos desta documentação.</span><span class="sxs-lookup"><span data-stu-id="cfba4-136">Contains the sample XML documents that are used by many examples in this documentation.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Introdução (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)   
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cfba4-137">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cfba4-137">See Also</span></span>  
+ [<span data-ttu-id="cfba4-138">Introdução (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cfba4-138">Getting Started (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [<span data-ttu-id="cfba4-139">LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfba4-139">LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

@@ -1,44 +1,27 @@
 ---
-title: "Arquivo de e/s com tipo &quot;&lt;typename&gt;&quot; não é válido | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "E/s de arquivo com o tipo de &#39; &lt;typename&gt;&#39; não é válido"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_UnsupportedIOType1
+f1_keywords: vbrArgument_UnsupportedIOType1
 ms.assetid: b6c527e3-b75a-4c1a-b6f1-ee9f7460b5f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 631116f0423bedeac5c416f0c1cf8e7f7ec746e4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e562105eff748859f3b240dfce6a3bd5cd675d17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>Arquivo de e/s com tipo '&lt;typename&gt;' não é válido
-Você está tentando gravar um tipo sem suporte em um arquivo.  
+# <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="8fc2d-102">E/s de arquivo com o tipo de &#39; &lt;typename&gt;&#39; não é válido</span><span class="sxs-lookup"><span data-stu-id="8fc2d-102">File I/O with type &#39;&lt;typename&gt;&#39; is not valid</span></span>
+<span data-ttu-id="8fc2d-103">Você está tentando gravar um tipo sem suporte em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="8fc2d-103">You are attempting to write an unsupported type to a file.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8fc2d-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="8fc2d-104">To correct this error</span></span>  
   
--   Verifique a estrutura para determinar onde o tipo sem suporte ocorre e altere-o para um tipo válido.  
+-   <span data-ttu-id="8fc2d-105">Verifique a estrutura para determinar onde o tipo sem suporte ocorre e, em seguida, altere-o para um tipo válido.</span><span class="sxs-lookup"><span data-stu-id="8fc2d-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   
- [Método WriteAllBytes](http://msdn.microsoft.com/en-us/b1a24dc1-eac8-4e22-8ffa-cc3bacbaf826)
+## <a name="see-also"></a><span data-ttu-id="8fc2d-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8fc2d-106">See Also</span></span>  
+ [<span data-ttu-id="8fc2d-107">Objeto My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="8fc2d-107">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [<span data-ttu-id="8fc2d-108">Método WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="8fc2d-108">My.Computer.FileSystem.WriteAllBytes Method</span></span>](http://msdn.microsoft.com/en-us/b1a24dc1-eac8-4e22-8ffa-cc3bacbaf826)

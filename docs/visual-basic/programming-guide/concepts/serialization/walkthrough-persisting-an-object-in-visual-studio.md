@@ -1,59 +1,50 @@
 ---
-title: Mantendo um objeto no Visual Studio (Visual Basic) | Documentos da Microsoft
+title: Mantendo um objeto no Visual Studio (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
-ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)
-Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a><span data-ttu-id="9fabb-102">Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9fabb-102">Walkthrough: Persisting an Object in Visual Studio (Visual Basic)</span></span>
+<span data-ttu-id="9fabb-103">Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído.</span><span class="sxs-lookup"><span data-stu-id="9fabb-103">Although you can set an object's properties to default values at design time, any values entered at run time are lost when the object is destroyed.</span></span> <span data-ttu-id="9fabb-104">Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.</span><span class="sxs-lookup"><span data-stu-id="9fabb-104">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>  
   
 > [!NOTE]
->  No Visual Basic, para armazenar dados simples, como um nome ou número, você pode usar o objeto `My.Settings`. Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+>  <span data-ttu-id="9fabb-105">No Visual Basic, para armazenar dados simples, como um nome ou número, você pode usar o objeto `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="9fabb-105">In Visual Basic, to store simple data, such as a name or number, you can use the `My.Settings` object.</span></span> <span data-ttu-id="9fabb-106">Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).</span><span class="sxs-lookup"><span data-stu-id="9fabb-106">For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).</span></span>  
   
- Neste passo a passo, você criará um objeto `Loan` simples e manterá seus dados em um arquivo. Em seguida, você recuperará os dados do arquivo quando recriar o objeto.  
-  
-> [!IMPORTANT]
->  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, esse aplicativo precisará da permissão `Create` para a pasta. Permissões são definidas usando listas de controle de acesso. Se o arquivo já existir, o aplicativo precisará somente da permissão `Write`, que é uma permissão menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder permissões `Read` a um único arquivo (em vez de permissões Create para uma pasta). Além disso, é mais seguro gravar dados em pastas de usuário do que na pasta raiz ou na pasta Arquivos de Programas.  
+ <span data-ttu-id="9fabb-107">Neste passo a passo, você criará um objeto `Loan` simples e manterá seus dados em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-107">In this walkthrough, you will create a simple `Loan` object and persist its data to a file.</span></span> <span data-ttu-id="9fabb-108">Em seguida, você recuperará os dados do arquivo quando recriar o objeto.</span><span class="sxs-lookup"><span data-stu-id="9fabb-108">You will then retrieve the data from the file when you re-create the object.</span></span>  
   
 > [!IMPORTANT]
->  Este exemplo armazena dados em um arquivo binário. Esses formatos não devem ser usados para dados confidenciais, como senhas ou informações de cartão de crédito.  
+>  <span data-ttu-id="9fabb-109">Este exemplo cria um novo arquivo, se o arquivo ainda não existe.</span><span class="sxs-lookup"><span data-stu-id="9fabb-109">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="9fabb-110">Se um aplicativo precisar criar um arquivo, esse aplicativo precisará da permissão `Create` para a pasta.</span><span class="sxs-lookup"><span data-stu-id="9fabb-110">If an application must create a file, that application must `Create` permission for the folder.</span></span> <span data-ttu-id="9fabb-111">Permissões são definidas usando listas de controle de acesso.</span><span class="sxs-lookup"><span data-stu-id="9fabb-111">Permissions are set by using access control lists.</span></span> <span data-ttu-id="9fabb-112">Se o arquivo já existir, o aplicativo precisará somente da permissão `Write`, que é uma permissão menor.</span><span class="sxs-lookup"><span data-stu-id="9fabb-112">If the file already exists, the application needs only `Write` permission, a lesser permission.</span></span> <span data-ttu-id="9fabb-113">Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder permissões `Read` a um único arquivo (em vez de permissões Create para uma pasta).</span><span class="sxs-lookup"><span data-stu-id="9fabb-113">Where possible, it is more secure to create the file during deployment, and only grant `Read` permissions to a single file (instead of Create permissions for a folder).</span></span> <span data-ttu-id="9fabb-114">Além disso, é mais seguro gravar dados em pastas de usuário do que na pasta raiz ou na pasta Arquivos de Programas.</span><span class="sxs-lookup"><span data-stu-id="9fabb-114">Also, it is more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="9fabb-115">Este exemplo armazena dados em um arquivo binário.</span><span class="sxs-lookup"><span data-stu-id="9fabb-115">This example stores data in a binary.</span></span> <span data-ttu-id="9fabb-116">Esses formatos não devem ser usados para dados confidenciais, como senhas ou informações de cartão de crédito.</span><span class="sxs-lookup"><span data-stu-id="9fabb-116">These formats should not be used for sensitive data, such as passwords or credit-card information.</span></span>  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="9fabb-117">As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.</span><span class="sxs-lookup"><span data-stu-id="9fabb-117">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="9fabb-118">Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="9fabb-118">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="9fabb-119">Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="9fabb-119">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## <a name="creating-the-loan-object"></a>Criando o objeto Loan  
- A primeira etapa é criar uma classe `Loan` e um aplicativo de teste que usa a classe.  
+## <a name="creating-the-loan-object"></a><span data-ttu-id="9fabb-120">Criando o objeto Loan</span><span class="sxs-lookup"><span data-stu-id="9fabb-120">Creating the Loan Object</span></span>  
+ <span data-ttu-id="9fabb-121">A primeira etapa é criar uma classe `Loan` e um aplicativo de teste que usa a classe.</span><span class="sxs-lookup"><span data-stu-id="9fabb-121">The first step is to create a `Loan` class and a test application that uses the class.</span></span>  
   
-### <a name="to-create-the-loan-class"></a>Para criar a classe Loan  
+### <a name="to-create-the-loan-class"></a><span data-ttu-id="9fabb-122">Para criar a classe Loan</span><span class="sxs-lookup"><span data-stu-id="9fabb-122">To create the Loan class</span></span>  
   
-1.  Crie um novo projeto de Biblioteca de classes e denomine-o “LoanClass". Para obter mais informações, consulte [Criando soluções e projetos](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1.  <span data-ttu-id="9fabb-123">Crie um novo projeto de Biblioteca de classes e denomine-o “LoanClass".</span><span class="sxs-lookup"><span data-stu-id="9fabb-123">Create a new Class Library project and name it "LoanClass".</span></span> <span data-ttu-id="9fabb-124">Para obter mais informações, consulte [Criando soluções e projetos](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).</span><span class="sxs-lookup"><span data-stu-id="9fabb-124">For more information, see [Creating Solutions and Projects](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).</span></span>  
   
-2.  No **Gerenciador de Soluções**, abra o menu de atalho para o arquivo Class1 e escolha **Renomear**. Renomeie o arquivo como `Loan` e pressione ENTER. Renomear o arquivo também renomeará a classe para `Loan`.  
+2.  <span data-ttu-id="9fabb-125">No **Gerenciador de Soluções**, abra o menu de atalho para o arquivo Class1 e escolha **Renomear**.</span><span class="sxs-lookup"><span data-stu-id="9fabb-125">In **Solution Explorer**, open the shortcut menu for the Class1 file and choose **Rename**.</span></span> <span data-ttu-id="9fabb-126">Renomeie o arquivo como `Loan` e pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="9fabb-126">Rename the file to `Loan` and press ENTER.</span></span> <span data-ttu-id="9fabb-127">Renomear o arquivo também renomeará a classe para `Loan`.</span><span class="sxs-lookup"><span data-stu-id="9fabb-127">Renaming the file will also rename the class to `Loan`.</span></span>  
   
-3.  Adicione os seguintes membros públicos à classe:  
+3.  <span data-ttu-id="9fabb-128">Adicione os seguintes membros públicos à classe:</span><span class="sxs-lookup"><span data-stu-id="9fabb-128">Add the following public members to the class:</span></span>  
   
     ```vb  
     Public Class Loan  
@@ -91,27 +82,27 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
     End Class  
     ```  
   
- Você também precisará criar um aplicativo simples que usa a classe `Loan`.  
+ <span data-ttu-id="9fabb-129">Você também precisará criar um aplicativo simples que usa a classe `Loan`.</span><span class="sxs-lookup"><span data-stu-id="9fabb-129">You will also have to create a simple application that uses the `Loan` class.</span></span>  
   
-### <a name="to-create-a-test-application"></a>Para criar um aplicativo de teste  
+### <a name="to-create-a-test-application"></a><span data-ttu-id="9fabb-130">Para criar um aplicativo de teste</span><span class="sxs-lookup"><span data-stu-id="9fabb-130">To create a test application</span></span>  
   
-1.  Para adicionar um projeto de Aplicativo do Windows Forms à sua solução, no menu **Arquivo**, escolha **Adicionar**, **Novo Projeto**.  
+1.  <span data-ttu-id="9fabb-131">Para adicionar um projeto de Aplicativo do Windows Forms à sua solução, no menu **Arquivo**, escolha **Adicionar**, **Novo Projeto**.</span><span class="sxs-lookup"><span data-stu-id="9fabb-131">To add a Windows Forms Application project to your solution, on the **File** menu, choose **Add**,**New Project**.</span></span>  
   
-2.  Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Aplicativo do Windows Forms** e insira `LoanApp` como o nome do projeto e clique **OK** para fechar a caixa de diálogo.  
+2.  <span data-ttu-id="9fabb-132">Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Aplicativo do Windows Forms** e insira `LoanApp` como o nome do projeto e clique **OK** para fechar a caixa de diálogo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-132">In the **Add New Project** dialog box, choose **Windows Forms Application**, and enter `LoanApp` as the name of the project, and then click **OK** to close the dialog box.</span></span>  
   
-3.  No **Gerenciador de Soluções**, escolha o projeto LoanApp.  
+3.  <span data-ttu-id="9fabb-133">No **Gerenciador de Soluções**, escolha o projeto LoanApp.</span><span class="sxs-lookup"><span data-stu-id="9fabb-133">In **Solution Explorer**, choose the LoanApp project.</span></span>  
   
-4.  No menu **Projeto**, escolha **Definir como Projeto de Inicialização**.  
+4.  <span data-ttu-id="9fabb-134">No menu **Projeto**, escolha **Definir como Projeto de Inicialização**.</span><span class="sxs-lookup"><span data-stu-id="9fabb-134">On the **Project** menu, choose **Set as StartUp Project**.</span></span>  
   
-5.  No menu **Projeto**, escolha **Adicionar Referência**.  
+5.  <span data-ttu-id="9fabb-135">No menu **Projeto**, escolha **Adicionar Referência**.</span><span class="sxs-lookup"><span data-stu-id="9fabb-135">On the **Project** menu, choose **Add Reference**.</span></span>  
   
-6.  Na caixa de diálogo **Adicionar Referência**, escolha a guia **Projetos** e escolha o projeto LoanClass.  
+6.  <span data-ttu-id="9fabb-136">Na caixa de diálogo **Adicionar Referência**, escolha a guia **Projetos** e escolha o projeto LoanClass.</span><span class="sxs-lookup"><span data-stu-id="9fabb-136">In the **Add Reference** dialog box, choose the **Projects** tab and then choose the LoanClass project.</span></span>  
   
-7.  Clique em **OK** para fechar a caixa de diálogo.  
+7.  <span data-ttu-id="9fabb-137">Clique em **OK** para fechar a caixa de diálogo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-137">Click **OK** to close the dialog box.</span></span>  
   
-8.  No designer, adicione quatro controles <xref:System.Windows.Forms.TextBox> ao formulário.  
+8.  <span data-ttu-id="9fabb-138">No designer, adicione quatro controles <xref:System.Windows.Forms.TextBox> ao formulário.</span><span class="sxs-lookup"><span data-stu-id="9fabb-138">In the designer, add four <xref:System.Windows.Forms.TextBox> controls to the form.</span></span>  
   
-9. No Editor de Códigos, adicione o seguinte código:  
+9. <span data-ttu-id="9fabb-139">No Editor de Códigos, adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="9fabb-139">In the Code Editor, add the following code:</span></span>  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -124,7 +115,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
     End Sub  
     ```  
   
-10. Adicione um manipulador de eventos para o evento `PropertyChanged` do formulário usando o seguinte código:  
+10. <span data-ttu-id="9fabb-140">Adicione um manipulador de eventos para o evento `PropertyChanged` do formulário usando o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="9fabb-140">Add an event handler for the `PropertyChanged` event to the form by using the following code:</span></span>  
   
     ```vb  
     Public Sub CustomerPropertyChanged(  
@@ -136,27 +127,27 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
     End Sub  
     ```  
   
- Neste ponto, você pode compilar e executar o aplicativo. Observe que os valores padrão da classe `Loan` aparecem nas caixas de texto. Tente alterar o valor de taxa de juros de 7,5 para 7,1 e, em seguida, feche o aplicativo e execute-o novamente – o valor será revertido para o padrão de 7,5.  
+ <span data-ttu-id="9fabb-141">Neste ponto, você pode compilar e executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-141">At this point, you can build and run the application.</span></span> <span data-ttu-id="9fabb-142">Observe que os valores padrão da classe `Loan` aparecem nas caixas de texto.</span><span class="sxs-lookup"><span data-stu-id="9fabb-142">Note that the default values from the `Loan` class appear in the text boxes.</span></span> <span data-ttu-id="9fabb-143">Tente alterar o valor de taxa de juros de 7,5 para 7,1 e, em seguida, feche o aplicativo e execute-o novamente – o valor será revertido para o padrão de 7,5.</span><span class="sxs-lookup"><span data-stu-id="9fabb-143">Try to change the interest-rate value from 7.5 to 7.1, and then close the application and run it again—the value reverts to the default of 7.5.</span></span>  
   
- No mundo real, as taxas de juros mudam periodicamente, mas não necessariamente toda vez que o aplicativo for executado. Em vez de fazer o usuário atualizar a taxa de juros sempre que o aplicativo for executado, é melhor preservar a taxa de juros mais recente entre instâncias do aplicativo. Na próxima etapa, você fará exatamente isso adicionando a serialização à classe Loan.  
+ <span data-ttu-id="9fabb-144">No mundo real, as taxas de juros mudam periodicamente, mas não necessariamente toda vez que o aplicativo for executado.</span><span class="sxs-lookup"><span data-stu-id="9fabb-144">In the real world, interest rates change periodically, but not necessarily every time that the application is run.</span></span> <span data-ttu-id="9fabb-145">Em vez de fazer o usuário atualizar a taxa de juros sempre que o aplicativo for executado, é melhor preservar a taxa de juros mais recente entre instâncias do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-145">Rather than making the user update the interest rate every time that the application runs, it is better to preserve the most recent interest rate between instances of the application.</span></span> <span data-ttu-id="9fabb-146">Na próxima etapa, você fará exatamente isso adicionando a serialização à classe Loan.</span><span class="sxs-lookup"><span data-stu-id="9fabb-146">In the next step, you will do just that by adding serialization to the Loan class.</span></span>  
   
-## <a name="using-serialization-to-persist-the-object"></a>Usando a serialização para manter o objeto  
- Para manter os valores da classe Loan, primeiro você deve marcar a classe com o atributo `Serializable`.  
+## <a name="using-serialization-to-persist-the-object"></a><span data-ttu-id="9fabb-147">Usando a serialização para manter o objeto</span><span class="sxs-lookup"><span data-stu-id="9fabb-147">Using Serialization to Persist the Object</span></span>  
+ <span data-ttu-id="9fabb-148">Para manter os valores da classe Loan, primeiro você deve marcar a classe com o atributo `Serializable`.</span><span class="sxs-lookup"><span data-stu-id="9fabb-148">In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.</span></span>  
   
-### <a name="to-mark-a-class-as-serializable"></a>Para marcar uma classe como serializável  
+### <a name="to-mark-a-class-as-serializable"></a><span data-ttu-id="9fabb-149">Para marcar uma classe como serializável</span><span class="sxs-lookup"><span data-stu-id="9fabb-149">To mark a class as serializable</span></span>  
   
--   Altere a declaração da classe para a classe Loan da seguinte maneira:  
+-   <span data-ttu-id="9fabb-150">Altere a declaração da classe para a classe Loan da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="9fabb-150">Change the class declaration for the Loan class as follows:</span></span>  
   
     ```vb  
     <Serializable()>  
     Public Class Loan  
     ```  
   
- O atributo `Serializable` informa ao compilador que tudo na classe pode ser mantido em um arquivo. Como o evento `PropertyChanged` é manipulado por um objeto do Windows Forms, ele não pode ser serializado. O atributo `NonSerialized` pode ser usado para marcar os membros da classe que não devem ser mantidos.  
+ <span data-ttu-id="9fabb-151">O atributo `Serializable` informa ao compilador que tudo na classe pode ser mantido em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-151">The `Serializable` attribute tells the compiler that everything in the class can be persisted to a file.</span></span> <span data-ttu-id="9fabb-152">Como o evento `PropertyChanged` é manipulado por um objeto do Windows Forms, ele não pode ser serializado.</span><span class="sxs-lookup"><span data-stu-id="9fabb-152">Because the `PropertyChanged` event is handled by a Windows Form object, it cannot be serialized.</span></span> <span data-ttu-id="9fabb-153">O atributo `NonSerialized` pode ser usado para marcar os membros da classe que não devem ser mantidos.</span><span class="sxs-lookup"><span data-stu-id="9fabb-153">The `NonSerialized` attribute can be used to mark class members that should not be persisted.</span></span>  
   
-### <a name="to-prevent-a-member-from-being-serialized"></a>Para impedir que um membro seja serializado  
+### <a name="to-prevent-a-member-from-being-serialized"></a><span data-ttu-id="9fabb-154">Para impedir que um membro seja serializado</span><span class="sxs-lookup"><span data-stu-id="9fabb-154">To prevent a member from being serialized</span></span>  
   
--   Altere a declaração para o evento `PropertyChanged` da seguinte maneira:  
+-   <span data-ttu-id="9fabb-155">Altere a declaração para o evento `PropertyChanged` da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="9fabb-155">Change the declaration for the `PropertyChanged` event as follows:</span></span>  
   
     ```vb  
     <NonSerialized()>  
@@ -164,30 +155,30 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
       Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged  
     ```  
   
- A etapa seguinte é adicionar o código de serialização ao aplicativo LoanApp. Para serializar a classe e gravá-la em um arquivo, use os namespaces <xref:System.IO> e <xref:System.Xml.Serialization>. Para evitar digitar os nomes totalmente qualificados, você pode adicionar referências às bibliotecas de classe necessárias.  
+ <span data-ttu-id="9fabb-156">A etapa seguinte é adicionar o código de serialização ao aplicativo LoanApp.</span><span class="sxs-lookup"><span data-stu-id="9fabb-156">The next step is to add the serialization code to the LoanApp application.</span></span> <span data-ttu-id="9fabb-157">Para serializar a classe e gravá-la em um arquivo, use os namespaces <xref:System.IO> e <xref:System.Xml.Serialization>.</span><span class="sxs-lookup"><span data-stu-id="9fabb-157">In order to serialize the class and write it to a file, you will use the <xref:System.IO> and <xref:System.Xml.Serialization> namespaces.</span></span> <span data-ttu-id="9fabb-158">Para evitar digitar os nomes totalmente qualificados, você pode adicionar referências às bibliotecas de classe necessárias.</span><span class="sxs-lookup"><span data-stu-id="9fabb-158">To avoid typing the fully qualified names, you can add references to the necessary class libraries.</span></span>  
   
-### <a name="to-add-references-to-namespaces"></a>Para adicionar referências a namespaces  
+### <a name="to-add-references-to-namespaces"></a><span data-ttu-id="9fabb-159">Para adicionar referências a namespaces</span><span class="sxs-lookup"><span data-stu-id="9fabb-159">To add references to namespaces</span></span>  
   
--   Adicione as seguintes instruções ao topo da classe `Form1`:  
+-   <span data-ttu-id="9fabb-160">Adicione as seguintes instruções ao topo da classe `Form1`:</span><span class="sxs-lookup"><span data-stu-id="9fabb-160">Add the following statements to the top of the `Form1` class:</span></span>  
   
     ```vb  
     Imports System.IO  
     Imports System.Runtime.Serialization.Formatters.Binary  
     ```  
   
-     Nesse caso, você está usando um formatador binário para salvar o objeto em um formato binário.  
+     <span data-ttu-id="9fabb-161">Nesse caso, você está usando um formatador binário para salvar o objeto em um formato binário.</span><span class="sxs-lookup"><span data-stu-id="9fabb-161">In this case, you are using a binary formatter to save the object in a binary format.</span></span>  
   
- A próxima etapa é adicionar código para desserializar o objeto do arquivo quando o objeto for criado.  
+ <span data-ttu-id="9fabb-162">A próxima etapa é adicionar código para desserializar o objeto do arquivo quando o objeto for criado.</span><span class="sxs-lookup"><span data-stu-id="9fabb-162">The next step is to add code to deserialize the object from the file when the object is created.</span></span>  
   
-### <a name="to-deserialize-an-object"></a>Para desserializar um objeto  
+### <a name="to-deserialize-an-object"></a><span data-ttu-id="9fabb-163">Para desserializar um objeto</span><span class="sxs-lookup"><span data-stu-id="9fabb-163">To deserialize an object</span></span>  
   
-1.  Adicione uma constante à classe para o nome do arquivo de dados serializado.  
+1.  <span data-ttu-id="9fabb-164">Adicione uma constante à classe para o nome do arquivo de dados serializado.</span><span class="sxs-lookup"><span data-stu-id="9fabb-164">Add a constant to the class for the serialized data's file name.</span></span>  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  Modifique o código no procedimento do evento `Form1_Load` da seguinte maneira:  
+2.  <span data-ttu-id="9fabb-165">Modifique o código no procedimento do evento `Form1_Load` da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="9fabb-165">Modify the code in the `Form1_Load` event procedure as follows:</span></span>  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -209,13 +200,13 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
     End Sub  
     ```  
   
-     Observe que primeiro você deve verificar se o arquivo existe. Se ele existir, crie uma classe <xref:System.IO.Stream> para ler o arquivo binário e uma classe <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para converter o arquivo. Você também precisa converter do tipo de fluxo para o tipo de objeto Loan.  
+     <span data-ttu-id="9fabb-166">Observe que primeiro você deve verificar se o arquivo existe.</span><span class="sxs-lookup"><span data-stu-id="9fabb-166">Note that you first must check that the file exists.</span></span> <span data-ttu-id="9fabb-167">Se ele existir, crie uma classe <xref:System.IO.Stream> para ler o arquivo binário e uma classe <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para converter o arquivo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-167">If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file.</span></span> <span data-ttu-id="9fabb-168">Você também precisa converter do tipo de fluxo para o tipo de objeto Loan.</span><span class="sxs-lookup"><span data-stu-id="9fabb-168">You also need to convert from the stream type to the Loan object type.</span></span>  
   
- Em seguida, você deve adicionar código para salvar os dados inseridos nas caixas de texto na classe `Loan` e, então, precisa serializar a classe em um arquivo.  
+ <span data-ttu-id="9fabb-169">Em seguida, você deve adicionar código para salvar os dados inseridos nas caixas de texto na classe `Loan` e, então, precisa serializar a classe em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="9fabb-169">Next you must add code to save the data entered in the text boxes to the `Loan` class, and then you must serialize the class to a file.</span></span>  
   
-### <a name="to-save-the-data-and-serialize-the-class"></a>Para salvar os dados e serializar a classe  
+### <a name="to-save-the-data-and-serialize-the-class"></a><span data-ttu-id="9fabb-170">Para salvar os dados e serializar a classe</span><span class="sxs-lookup"><span data-stu-id="9fabb-170">To save the data and serialize the class</span></span>  
   
--   Adicione o seguinte código ao procedimento do evento `Form1_FormClosing`:  
+-   <span data-ttu-id="9fabb-171">Adicione o seguinte código ao procedimento do evento `Form1_FormClosing`:</span><span class="sxs-lookup"><span data-stu-id="9fabb-171">Add the following code to the `Form1_FormClosing` event procedure:</span></span>  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  
@@ -231,8 +222,8 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
     End Sub  
     ```  
   
- Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
+ <span data-ttu-id="9fabb-172">Neste ponto, você pode compilar e executar o aplicativo novamente.</span><span class="sxs-lookup"><span data-stu-id="9fabb-172">At this point, you can again build and run the application.</span></span> <span data-ttu-id="9fabb-173">Inicialmente, os valores padrão aparecem nas caixas de texto.</span><span class="sxs-lookup"><span data-stu-id="9fabb-173">Initially, the default values appear in the text boxes.</span></span> <span data-ttu-id="9fabb-174">Tente alterar os valores e digite um nome na quarta caixa de texto.</span><span class="sxs-lookup"><span data-stu-id="9fabb-174">Try to change the values and enter a name in the fourth text box.</span></span> <span data-ttu-id="9fabb-175">Feche o aplicativo e execute-o novamente.</span><span class="sxs-lookup"><span data-stu-id="9fabb-175">Close the application and then run it again.</span></span> <span data-ttu-id="9fabb-176">Observe que agora os novos valores aparecem nas caixas de texto.</span><span class="sxs-lookup"><span data-stu-id="9fabb-176">Note that the new values now appear in the text boxes.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="9fabb-177">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9fabb-177">See Also</span></span>  
+ [<span data-ttu-id="9fabb-178">Serialização (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9fabb-178">Serialization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
+ [<span data-ttu-id="9fabb-179">Guia de programação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9fabb-179">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)

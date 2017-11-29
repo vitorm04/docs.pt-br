@@ -1,64 +1,56 @@
 ---
-title: "Cancelar tarefas assíncronas após um período de tempo (Visual Basic) | Documentos do Microsoft"
+title: "Cancelar tarefas assíncronas após um período de tempo (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6708bd92d8dc2455b9dcb8e02dcc0a4455e00cda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f479a0b8897ba86c4bd750c87afe15600e1df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Cancelar tarefas assíncronas após um período de tempo (Visual Basic)
-Você pode cancelar uma operação assíncrona após um período de tempo usando o <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName>método se você não quiser aguardar a conclusão da operação.</xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName> Esse método agenda o cancelamento de quaisquer tarefas associadas que não estão concluídos dentro do período de tempo designado pelo `CancelAfter` expressão.  
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a><span data-ttu-id="37679-102">Cancelar tarefas assíncronas após um período de tempo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37679-102">Cancel Async Tasks after a Period of Time (Visual Basic)</span></span>
+<span data-ttu-id="37679-103">Você pode cancelar uma operação assíncrona após um período de tempo usando o método <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> se você não deseja aguardar a conclusão da operação.</span><span class="sxs-lookup"><span data-stu-id="37679-103">You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish.</span></span> <span data-ttu-id="37679-104">Esse método agenda o cancelamento de quaisquer tarefas associadas que não são concluídas dentro do período designado pela expressão `CancelAfter`.</span><span class="sxs-lookup"><span data-stu-id="37679-104">This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.</span></span>  
   
- Este exemplo adiciona o código desenvolvido em [cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para baixar uma lista de sites e exiba o comprimento do conteúdo de cada um.  
+ <span data-ttu-id="37679-105">Este exemplo adiciona o código que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para baixar uma lista de sites e exibir o comprimento do conteúdo de cada um.</span><span class="sxs-lookup"><span data-stu-id="37679-105">This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.</span></span>  
   
 > [!NOTE]
->  Para executar os exemplos, você deve ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalado no seu computador.  
+>  <span data-ttu-id="37679-106">Para executar os exemplos, você deve ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalado no seu computador.</span><span class="sxs-lookup"><span data-stu-id="37679-106">To run the examples, you must have Visual Studio 2012 or later and the .NET Framework 4.5 or later installed on your computer.</span></span>  
   
-## <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo de assincronia: bem ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046) e, em seguida, siga estas etapas.  
+## <a name="downloading-the-example"></a><span data-ttu-id="37679-107">Baixando o Exemplo</span><span class="sxs-lookup"><span data-stu-id="37679-107">Downloading the Example</span></span>  
+ <span data-ttu-id="37679-108">Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046) e, em seguida, seguir estas etapas.</span><span class="sxs-lookup"><span data-stu-id="37679-108">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) and then follow these steps.</span></span>  
   
-1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
+1.  <span data-ttu-id="37679-109">Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="37679-109">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-2.  Na barra de menus, escolha **arquivo**, **abrir**, **projeto/solução**.  
+2.  <span data-ttu-id="37679-110">Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.</span><span class="sxs-lookup"><span data-stu-id="37679-110">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo é descompactado e, em seguida, abra o arquivo de solução (. sln) para AsyncFineTuningVB.  
+3.  <span data-ttu-id="37679-111">No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo é descompactado e, em seguida, abra o arquivo de solução (. sln) AsyncFineTuningVB.</span><span class="sxs-lookup"><span data-stu-id="37679-111">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
   
-4.  Em **Solution Explorer**, abra o menu de atalho para o **CancelAfterTime** do projeto e escolha **Set as StartUp Project**.  
+4.  <span data-ttu-id="37679-112">No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterTime** e, em seguida, escolha **Definir como Projeto de Inicialização**.</span><span class="sxs-lookup"><span data-stu-id="37679-112">In **Solution Explorer**, open the shortcut menu for the **CancelAfterTime** project, and then choose **Set as StartUp Project**.</span></span>  
   
-5.  Escolha a tecla F5 para executar o projeto.  
+5.  <span data-ttu-id="37679-113">Escolha a tecla F5 para executar o projeto.</span><span class="sxs-lookup"><span data-stu-id="37679-113">Choose the F5 key to run the project.</span></span>  
   
-     Escolha as teclas Ctrl + F5 para executar o projeto sem depurá-lo.  
+     <span data-ttu-id="37679-114">Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.</span><span class="sxs-lookup"><span data-stu-id="37679-114">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
   
-6.  Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, não há sites ou alguns sites da web.  
+6.  <span data-ttu-id="37679-115">Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites.</span><span class="sxs-lookup"><span data-stu-id="37679-115">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span>  
   
- Se você não quiser baixar o projeto, você pode examinar o arquivo MainWindow.xaml.vb no final deste tópico.  
+ <span data-ttu-id="37679-116">Se você não quiser baixar o projeto, você pode examinar o arquivo MainWindow.xaml.vb no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="37679-116">If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.</span></span>  
   
-## <a name="building-the-example"></a>Compilando o Exemplo  
- O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface de usuário, embora o **Cancelar** botão não é usado explicitamente.  
+## <a name="building-the-example"></a><span data-ttu-id="37679-117">Compilando o Exemplo</span><span class="sxs-lookup"><span data-stu-id="37679-117">Building the Example</span></span>  
+ <span data-ttu-id="37679-118">O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas.</span><span class="sxs-lookup"><span data-stu-id="37679-118">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks.</span></span> <span data-ttu-id="37679-119">O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.</span><span class="sxs-lookup"><span data-stu-id="37679-119">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>  
   
- Para criar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixar o exemplo", mas escolha **CancelAListOfTasks** como o **projeto de inicialização**. Adicione as alterações neste tópico para o projeto.  
+ <span data-ttu-id="37679-120">Para compilar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAListOfTasks** como o **Projeto de Inicialização**.</span><span class="sxs-lookup"><span data-stu-id="37679-120">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="37679-121">Adicione as alterações deste tópico ao projeto.</span><span class="sxs-lookup"><span data-stu-id="37679-121">Add the changes in this topic to that project.</span></span>  
   
- Para especificar um tempo máximo antes que as tarefas são marcadas como canceladas, adicione uma chamada para `CancelAfter` para `startButton_Click`, como mostra o exemplo a seguir. A adição é marcada com asteriscos.  
+ <span data-ttu-id="37679-122">Para especificar um tempo máximo antes que as tarefas sejam marcadas como canceladas, adicione uma chamada para `CancelAfter` a `startButton_Click`, como o exemplo a seguir mostra.</span><span class="sxs-lookup"><span data-stu-id="37679-122">To specify a maximum time before the tasks are marked as canceled, add a call to `CancelAfter` to `startButton_Click`, as the following example shows.</span></span> <span data-ttu-id="37679-123">A adição é marcada com asteriscos.</span><span class="sxs-lookup"><span data-stu-id="37679-123">The addition is marked with asterisks.</span></span>  
   
 ```vb  
 Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -88,7 +80,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, não há sites ou alguns sites da web. A saída a seguir é um exemplo.  
+ <span data-ttu-id="37679-124">Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites.</span><span class="sxs-lookup"><span data-stu-id="37679-124">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span> <span data-ttu-id="37679-125">A saída a seguir é um exemplo.</span><span class="sxs-lookup"><span data-stu-id="37679-125">The following output is a sample.</span></span>  
   
 ```  
 Length of the downloaded string: 35990.  
@@ -100,12 +92,12 @@ Length of the downloaded string: 226091.
 Downloads canceled.  
 ```  
   
-## <a name="complete-example"></a>Exemplo completo  
- O código a seguir é o texto completo do arquivo MainWindow.xaml.vb no exemplo. Asteriscos marcam os elementos que foram adicionados para esse exemplo.  
+## <a name="complete-example"></a><span data-ttu-id="37679-126">Exemplo completo</span><span class="sxs-lookup"><span data-stu-id="37679-126">Complete Example</span></span>  
+ <span data-ttu-id="37679-127">O código a seguir é o texto completo do arquivo MainWindow.xaml.vb no exemplo.</span><span class="sxs-lookup"><span data-stu-id="37679-127">The following code is the complete text of the MainWindow.xaml.vb file for the example.</span></span> <span data-ttu-id="37679-128">Os asteriscos marcam os elementos que foram adicionados para esse exemplo.</span><span class="sxs-lookup"><span data-stu-id="37679-128">Asterisks mark the elements that were added for this example.</span></span>  
   
- Observe que você deve adicionar uma referência para <xref:System.Net.Http>.</xref:System.Net.Http>  
+ <span data-ttu-id="37679-129">Observe que você deve adicionar uma referência para <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="37679-129">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
- Você pode baixar o projeto de [exemplo de assincronia: bem ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ <span data-ttu-id="37679-130">Você pode baixar o projeto de [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046).</span><span class="sxs-lookup"><span data-stu-id="37679-130">You can download the project from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -206,9 +198,9 @@ End Class
 ' Downloads canceled.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Passo a passo: Acessando a Web usando o Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)   
- [Ajustando seu aplicativo Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Exemplo de assincronia: Ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046)
+## <a name="see-also"></a><span data-ttu-id="37679-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37679-131">See Also</span></span>  
+ [<span data-ttu-id="37679-132">Programação assíncrona com Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37679-132">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [<span data-ttu-id="37679-133">Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37679-133">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="37679-134">Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37679-134">Cancel an Async Task or a List of Tasks (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
+ [<span data-ttu-id="37679-135">Ajustando seu aplicativo assíncrono (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37679-135">Fine-Tuning Your Async Application (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [<span data-ttu-id="37679-136">Exemplo assíncrono: ajuste fino de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="37679-136">Async Sample: Fine Tuning Your Application</span></span>](http://go.microsoft.com/fwlink/?LinkId=255046)

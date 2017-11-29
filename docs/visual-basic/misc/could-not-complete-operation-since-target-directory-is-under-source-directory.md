@@ -1,44 +1,27 @@
 ---
-title: "Não foi possível concluir a operação pois o diretório de destino está sob o diretório de origem | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não foi possível concluir a operação porque o diretório de destino está no diretório de origem"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrIO_CyclicOperation
+f1_keywords: vbrIO_CyclicOperation
 ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27666d69cd60cb64edec329491408d0134fbfb89
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 429d679157d25655ca73afef14ecd642f7cac37f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Não foi possível concluir a operação pois o diretório de destino está sob o diretório de origem
-Uma operação cíclica falhou. Ciclo de operações cíclicas e, portanto, não é possível concluir. Por exemplo, um objeto pode tentar herdar do objeto B, que por sua vez herda do objeto A.  
+# <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a><span data-ttu-id="a02c6-102">Não foi possível concluir a operação porque o diretório de destino está no diretório de origem</span><span class="sxs-lookup"><span data-stu-id="a02c6-102">Could not complete operation since target directory is under source directory</span></span>
+<span data-ttu-id="a02c6-103">Uma operação cíclica falhou.</span><span class="sxs-lookup"><span data-stu-id="a02c6-103">A cyclic operation has failed.</span></span> <span data-ttu-id="a02c6-104">Ciclo de operações cíclicas e, portanto, não é possível concluir.</span><span class="sxs-lookup"><span data-stu-id="a02c6-104">Cyclic operations cycle and therefore cannot complete.</span></span> <span data-ttu-id="a02c6-105">Por exemplo, o objeto A pode tentar herdar do objeto B, que por sua vez, herda do objeto A.</span><span class="sxs-lookup"><span data-stu-id="a02c6-105">For example, Object A may attempt to inherit from Object B, which in turn inherits from Object A.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a02c6-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="a02c6-106">To correct this error</span></span>  
   
--   Quando herdar, certifique-se de que não há nenhuma referência cíclica.  
+-   <span data-ttu-id="a02c6-107">Ao herdar, certifique-se de que não há nenhuma referência cíclica.</span><span class="sxs-lookup"><span data-stu-id="a02c6-107">When inheriting, make sure that there are no cyclic references.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)   
- [Noções básicas de depuração: pontos de interrupção](http://msdn.microsoft.com/en-us/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)
+## <a name="see-also"></a><span data-ttu-id="a02c6-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a02c6-108">See Also</span></span>  
+ [<span data-ttu-id="a02c6-109">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="a02c6-109">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [<span data-ttu-id="a02c6-110">Noções básicas de depuração: pontos de interrupção</span><span class="sxs-lookup"><span data-stu-id="a02c6-110">Debugging Basics: Breakpoints</span></span>](http://msdn.microsoft.com/en-us/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)

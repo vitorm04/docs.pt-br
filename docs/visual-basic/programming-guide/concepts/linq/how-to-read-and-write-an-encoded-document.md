@@ -1,42 +1,34 @@
 ---
-title: 'Como: ler e gravar um documento codificado (Visual Basic) | Documentos do Microsoft'
+title: 'Como: ler e gravar um documento codificado (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3247af177066e9b50d5028766f99e7bf6589050f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7dd871b4ab58103897bd5884581bf2e1353a3c60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Como: ler e gravar um documento codificado (Visual Basic)
-Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration>à árvore XML, definindo a codificação para o nome da página de código desejada.</xref:System.Xml.Linq.XDeclaration>  
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="2e806-102">Como: ler e gravar um documento codificado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e806-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
+<span data-ttu-id="2e806-103">Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration> à árvore XML, definindo a codificação para o nome da página de código desejada.</span><span class="sxs-lookup"><span data-stu-id="2e806-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
   
- Qualquer valor retornado por <xref:System.Text.Encoding.WebName%2A>é um valor válido.</xref:System.Text.Encoding.WebName%2A>  
+ <span data-ttu-id="2e806-104">Qualquer valor retornado por <xref:System.Text.Encoding.WebName%2A> é um valor válido.</span><span class="sxs-lookup"><span data-stu-id="2e806-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
   
- Se você ler um documento codificado, o <xref:System.Xml.Linq.XDeclaration.Encoding%2A>propriedade será definida como o nome da página de código.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ <span data-ttu-id="2e806-105">Se você ler um documento codificado, a propriedade <xref:System.Xml.Linq.XDeclaration.Encoding%2A> será definida para o nome da página de código.</span><span class="sxs-lookup"><span data-stu-id="2e806-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
   
- Se você definir <xref:System.Xml.Linq.XDeclaration.Encoding%2A>para um nome de página de código válida, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] serializará com a codificação especificada.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ <span data-ttu-id="2e806-106">Se você definir <xref:System.Xml.Linq.XDeclaration.Encoding%2A> como um nome válido de página de código, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializará com a codificação especificada.</span><span class="sxs-lookup"><span data-stu-id="2e806-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir cria dois documentos, um com codificação utf-8 e um com codificação utf-16. Ele em seguida carrega os documentos e imprime a codificação para o console.  
+## <a name="example"></a><span data-ttu-id="2e806-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2e806-107">Example</span></span>  
+ <span data-ttu-id="2e806-108">O exemplo a seguir cria dois documentos, um com codificação utf-8 e um com codificação utf-16.</span><span class="sxs-lookup"><span data-stu-id="2e806-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="2e806-109">Ele em seguida carrega os documentos e imprime a codificação para o console.</span><span class="sxs-lookup"><span data-stu-id="2e806-109">It then loads the documents and prints the encoding to the console.</span></span>  
   
 ```vb  
 Console.WriteLine("Creating a document with utf-8 encoding")  
@@ -71,7 +63,7 @@ Console.WriteLine()
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding)  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ <span data-ttu-id="2e806-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="2e806-110">This example produces the following output:</span></span>  
   
 ```  
 Creating a document with utf-8 encoding  
@@ -93,6 +85,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
- [Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="2e806-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2e806-111">See Also</span></span>  
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="2e806-112">Avançada LINQ to XML programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e806-112">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
